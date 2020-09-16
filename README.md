@@ -1,4 +1,9 @@
 # Introduction 
+
+This is a copy of a repo that we have in DfE using Azure DevOps, this will fall behind the main repo, though is here as an open example of the code we're using. Feel free to get in touch if you have any questions, or indeed any suggestions of how we could do things better!
+
+---
+
 A shiny app to provider a user friendly way to QA data files using centralised code. This is deployed via the DfE visual studio and rsconnect subscriptions. There are three environments, all accessible to DfE AD:
 
 - Production - https://rsconnect/rsc/dfe-published-data-qa
