@@ -1,0 +1,259 @@
+{
+  "input": {
+    "datafile": {
+      "name": [
+        "fails_everything_ancillary.csv"
+      ],
+      "size": [
+        2206
+      ],
+      "type": [
+        "text/csv"
+      ],
+      "datapath": [
+        "0.csv"
+      ]
+    },
+    "metafile": {
+      "name": [
+        "fails_everything_ancillary.meta.csv"
+      ],
+      "size": [
+        386
+      ],
+      "type": [
+        "text/csv"
+      ],
+      "datapath": [
+        "0.csv"
+      ]
+    },
+    "resetbutton": 1,
+    "screenbutton": 1,
+    "shinyjs-resettable-datafile": {
+
+    },
+    "shinyjs-resettable-metafile": {
+
+    }
+  },
+  "output": {
+    "advisory_box": {
+      "message": "",
+      "call": "NULL",
+      "type": [
+        "shiny.silent.error",
+        "validation"
+      ]
+    },
+    "all_tests": {
+      "message": "",
+      "call": "NULL",
+      "type": [
+        "shiny.silent.error",
+        "validation"
+      ]
+    },
+    "ancillary_box": {
+      "message": "",
+      "call": "NULL",
+      "type": [
+        "shiny.silent.error",
+        "validation"
+      ]
+    },
+    "data_cols": {
+      "message": "",
+      "call": "NULL",
+      "type": [
+        "shiny.silent.error",
+        "validation"
+      ]
+    },
+    "data_rows": {
+      "message": "",
+      "call": "NULL",
+      "type": [
+        "shiny.silent.error",
+        "validation"
+      ]
+    },
+    "data_size": {
+      "message": "",
+      "call": "NULL",
+      "type": [
+        "shiny.silent.error",
+        "validation"
+      ]
+    },
+    "datafilename": {
+      "message": "",
+      "call": "NULL",
+      "type": [
+        "shiny.silent.error",
+        "validation"
+      ]
+    },
+    "failed_box": {
+      "message": "",
+      "call": "NULL",
+      "type": [
+        "shiny.silent.error",
+        "validation"
+      ]
+    },
+    "file_exists": false,
+    "meta_cols": {
+      "message": "",
+      "call": "NULL",
+      "type": [
+        "shiny.silent.error",
+        "validation"
+      ]
+    },
+    "meta_rows": {
+      "message": "",
+      "call": "NULL",
+      "type": [
+        "shiny.silent.error",
+        "validation"
+      ]
+    },
+    "meta_size": {
+      "message": "",
+      "call": "NULL",
+      "type": [
+        "shiny.silent.error",
+        "validation"
+      ]
+    },
+    "metafilename": {
+      "message": "",
+      "call": "NULL",
+      "type": [
+        "shiny.silent.error",
+        "validation"
+      ]
+    },
+    "num_advisory_tests": {
+      "message": "",
+      "call": "NULL",
+      "type": [
+        "shiny.silent.error",
+        "validation"
+      ]
+    },
+    "num_failed_tests": {
+      "message": "",
+      "call": "NULL",
+      "type": [
+        "shiny.silent.error",
+        "validation"
+      ]
+    },
+    "passed_box": {
+      "message": "",
+      "call": "NULL",
+      "type": [
+        "shiny.silent.error",
+        "validation"
+      ]
+    },
+    "progress_stage": {
+      "message": "",
+      "call": "NULL",
+      "type": [
+        "shiny.silent.error",
+        "validation"
+      ]
+    },
+    "showresults": false,
+    "sum_combined_tests": {
+      "message": "",
+      "call": "NULL",
+      "type": [
+        "shiny.silent.error",
+        "validation"
+      ]
+    },
+    "sum_failed_tests": {
+      "message": "",
+      "call": "NULL",
+      "type": [
+        "shiny.silent.error",
+        "validation"
+      ]
+    },
+    "sum_ignored_tests": {
+      "message": "",
+      "call": "NULL",
+      "type": [
+        "shiny.silent.error",
+        "validation"
+      ]
+    },
+    "sum_passed_tests": {
+      "message": "",
+      "call": "NULL",
+      "type": [
+        "shiny.silent.error",
+        "validation"
+      ]
+    },
+    "summary_text": {
+      "message": "",
+      "call": "NULL",
+      "type": [
+        "shiny.silent.error",
+        "validation"
+      ]
+    },
+    "table_advisory_tests": {
+      "message": "",
+      "call": "NULL",
+      "type": [
+        "shiny.silent.error",
+        "validation"
+      ]
+    },
+    "table_all_tests": {
+      "message": "",
+      "call": "NULL",
+      "type": [
+        "shiny.silent.error",
+        "validation"
+      ]
+    },
+    "table_failed_tests": {
+      "message": "",
+      "call": "NULL",
+      "type": [
+        "shiny.silent.error",
+        "validation"
+      ]
+    },
+    "testtime": {
+      "message": "",
+      "call": "NULL",
+      "type": [
+        "shiny.silent.error",
+        "validation"
+      ]
+    },
+    "uiResetButton": {
+      "html": "<button id=\"resetbutton\" style=\"width: 80%;\" type=\"button\" class=\"btn btn-default action-button\">Reset page<\/button>",
+      "deps": [
+
+      ]
+    },
+    "uiScreenButton": {
+      "html": "<button id=\"screenbutton\" style=\"width: 80%;\" type=\"button\" class=\"btn btn-default action-button\">Screen files<\/button>",
+      "deps": [
+
+      ]
+    }
+  },
+  "export": {
+
+  }
+}

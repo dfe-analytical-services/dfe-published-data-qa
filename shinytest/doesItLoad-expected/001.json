@@ -1,0 +1,13 @@
+{
+  "input": {
+    "datafile": null,
+    "metafile": null
+  },
+  "output": {
+    "file_exists": false,
+    "showresults": false
+  },
+  "export": {
+
+  }
+}
