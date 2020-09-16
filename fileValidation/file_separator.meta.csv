@@ -1,0 +1,29 @@
+col_name	col_type	label	indicator_grouping	indicator_unit	indicator_dp	filter_hint	filter_grouping_column
+institution_type	Filter	Institution group					institution_group
+characteristic	Filter	Student characteristics					characteristic_group
+data_type	Filter	Data type					
+inst_count	Indicator	Number of institutions					
+cohort	Indicator	Number of pupils completing key stage 4					
+overall	Indicator	"Sustained education, employment & apprenticeships"	Headline destination measure	%			
+education	Indicator	Sustained education destination	Destination	%			
+fe	Indicator	Further education	Education destination breakdown	%			
+ssf	Indicator	School sixth form	Education destination breakdown	%			
+sfc	Indicator	Sixth form college	Education destination breakdown	%			
+other_edu	Indicator	Other education destination	Education destination breakdown	%			
+ind	Indicator	Independent schools	Other education breakdown	%			
+appru	Indicator	Alternative provision	Other education breakdown	%			
+special	Indicator	Special school	Other education breakdown	%			
+spi	Indicator	Specialist post-16 institution	Other education breakdown	%			
+edu_combo	Indicator	Sustained education combination destination	Other education breakdown	%			
+he	Indicator	UK higher education institution	Other education breakdown	%			
+appren	Indicator	Sustained apprenticeships	Destination	%			
+appl3	Indicator	Advanced and Higher apprenticeships (level 3 and above)	Apprenticeship level breakdown	%			
+appl2	Indicator	Intermediate apprenticeships (level 2)	Apprenticeship level breakdown	%			
+all_work	Indicator	Sustained employment destination	Destination	%			
+all_notsust	Indicator	Not recorded as a sustained destination	Destination	%			
+notsust	Indicator	Education or employment not sustained	Not sustained breakdown	%			
+notsust_beneet	Indicator	Education or employment not sustained and known to be NEET	Not sustained breakdown	%			
+only_beneet	Indicator	No participation and known to be NEET	Not sustained breakdown	%			
+all_unknown	Indicator	Activity not captured	Destination	%			
+unknown_id	Indicator	Identified as DWP/HMRC customer	Activity not captured breakdown	%			
+unknown	Indicator	Not identified in any data	Activity not captured breakdown	%			
