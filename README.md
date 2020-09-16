@@ -1,6 +1,6 @@
 # Introduction 
 
-This is a copy of a repo that we have in DfE using Azure DevOps, this will fall behind the main repo, though is here as an open example of the code we're using. Feel free to get in touch if you have any questions, or indeed any suggestions of how we could do things better!
+This is a copy of a repo that we have in DfE using Azure DevOps, this will fall behind the main repo over time, though is here as an open example of the code we're using. Feel free to get in touch if you have any questions, or indeed any suggestions of how we could do things better!
 
 ---
 
