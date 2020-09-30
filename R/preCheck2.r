@@ -230,8 +230,8 @@ filter_level <- function(data, meta) {
 # check for invalidly encoded symbols (should be utf-8)
 
 utf8 <- function(data, meta) {
-  data_valid_result <- unlist(data, use.names = FALSE) %>% validUTF8()
-  meta_valid_result <- unlist(meta, use.names = FALSE) %>% validUTF8()
+  data_valid_result <- c(unlist(data, use.names = FALSE), names(data)) %>% validUTF8()
+  meta_valid_result <- c(unlist(meta, use.names = FALSE), names(meta)) %>% validUTF8()
 
   number_data_invalid <- sum(!data_valid_result)
   number_meta_invalid <- sum(!meta_valid_result)

@@ -88,7 +88,9 @@ time_identifier <- function(data) {
     }
   }
 
-  pre_result <- stack(sapply(unique(data$time_identifier), time_identifier_check))
+  identifiers_present <- as.character(unique(data$time_identifier))
+
+  pre_result <- stack(sapply(identifiers_present, time_identifier_check))
 
   if (all(pre_result$values == "PASS")) {
     output <- list(

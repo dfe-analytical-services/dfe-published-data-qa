@@ -10,10 +10,13 @@ mainTests <- function(data_character, meta_character, datafile, metafile) {
     null(data_character, meta_character), # active test
     suppression_symbols(datafile, metafile), # active test
     no_data_symbols(datafile), # active test
+    blanks_filters(data_character, meta_character), # active test
+    blanks_indicators(data_character, meta_character), # active test
     time_period(datafile), # active test
     time_period_six(datafile), # active test
     three_years(datafile), # active test
     region_for_la(datafile), # active test
+    region_for_lad(datafile), # active test
     geography_level_completed(datafile), # active test
     region_col_completed(datafile), # active test
     new_la_code(datafile), # active test
@@ -344,7 +347,7 @@ suppression_symbols <- function(data, meta) {
 # check for legacy symbols for missing data
 
 no_data_symbols <- function(data) {
-  old_no_data_symbols <- c("N/A", "n/a", ".", "..")
+  old_no_data_symbols <- c("N/A", "n/a", ".", "..", "-")
 
   pre_result <- as_tibble(cbind("symbol" = old_no_data_symbols, "found" = old_no_data_symbols %in% unlist(data, use.names = FALSE)))
 
@@ -367,6 +370,101 @@ no_data_symbols <- function(data) {
       output <- list(
         "message" = paste0("The following legacy symbols have been found in the data: '", paste0(present_legacy_symbols, collapse = "', '"), "'. <br> - Please check the ", "<a href='https://gss.civilservice.gov.uk/wp-content/uploads/2017/03/GSS-Website-Harmonised-Symbols-Supporting-Documentation.pdf' target='_blank'>GSS guidance</a>", " for advice on the symbols to use for no data."),
         "result" = "ADVISORY"
+      )
+    }
+  }
+
+  return(output)
+}
+
+# blanks_filters -------------------------------------
+# check for blank cells in filters and filter groups
+
+blanks_filters <- function(data, meta) {
+  if (meta %>% filter(col_type == "Filter") %>% nrow() == 0) {
+    output <- list(
+      "message" = "There are no filters in the data file.",
+      "result" = "IGNORE"
+    )
+  } else {
+    blanks_check <- function(i) {
+      if ("" %in% data[[i]]) {
+        return("FAIL")
+      } else {
+        return("PASS")
+      }
+    }
+
+    filters_groups <- c(
+      meta %>% filter(col_type == "Filter") %>% pull(col_name),
+      meta %>% filter(col_type == "Filter") %>% pull(filter_grouping_column)
+    ) %>%
+      unique() %>%
+      .[. != ""]
+
+    pre_result <- stack(sapply(filters_groups, blanks_check))
+
+    filters_with_blanks <- filter(pre_result, values == "FAIL") %>% pull(ind)
+
+    if (all(pre_result$values == "PASS")) {
+      output <- list(
+        "message" = "There are no blank values in any filters or filter groups.",
+        "result" = "PASS"
+      )
+    } else {
+      if (length(filters_with_blanks) == 1) {
+        output <- list(
+          "message" = paste0("There are blanks in the following filter or filter group: '", paste(filters_with_blanks, collapse = "', '"), "'. <br> - These cells must have a value. If they represent no specific breakdown, such as 'all genders' then you should use 'Total'."),
+          "result" = "FAIL"
+        )
+      } else {
+        output <- list(
+          "message" = paste0("There are blanks in the following filters or filter groups: '", paste(filters_with_blanks, collapse = "', '"), "'. <br> - These cells must have a value. If they represent no specific breakdown, such as 'all genders' then you should use 'Total'."),
+          "result" = "FAIL"
+        )
+      }
+    }
+  }
+
+  return(output)
+}
+
+# blanks_indicators -------------------------------------
+# check for blank cells in filters and filter groups
+
+blanks_indicators <- function(data, meta) {
+  blanks_check <- function(i) {
+    if ("" %in% data[[i]]) {
+      return("FAIL")
+    } else {
+      return("PASS")
+    }
+  }
+
+  indicators <- meta %>%
+    filter(col_type == "Indicator") %>%
+    pull(col_name) %>%
+    as.vector()
+
+  pre_result <- stack(sapply(indicators, blanks_check))
+
+  indicators_with_blanks <- filter(pre_result, values == "FAIL") %>% pull(ind)
+
+  if (all(pre_result$values == "PASS")) {
+    output <- list(
+      "message" = "There are no blank values in any indicators.",
+      "result" = "PASS"
+    )
+  } else {
+    if (length(indicators_with_blanks) == 1) {
+      output <- list(
+        "message" = paste0("There are blanks in the following indicator: '", paste(indicators_with_blanks, collapse = "', '"), "'. <br> - Blank cells are problematic and must be avoided. <br> - Please check the ", "<a href='https://gss.civilservice.gov.uk/wp-content/uploads/2017/03/GSS-Website-Harmonised-Symbols-Supporting-Documentation.pdf' target='_blank'>GSS guidance</a>", " for advice on the symbols to use for no data."),
+        "result" = "FAIL"
+      )
+    } else {
+      output <- list(
+        "message" = paste0("There are blanks in the following indicators: '", paste(indicators_with_blanks, collapse = "', '"), "'. <br> - Blank cells are problematic and must be avoided. <br> - Please check the ", "<a href='https://gss.civilservice.gov.uk/wp-content/uploads/2017/03/GSS-Website-Harmonised-Symbols-Supporting-Documentation.pdf' target='_blank'>GSS guidance</a>", " for advice on the symbols to use for no data."),
+        "result" = "FAIL"
       )
     }
   }
@@ -489,25 +587,76 @@ region_for_la <- function(data) {
       "result" = "IGNORE"
     )
   } else {
-    region_cols <- data %>%
-      filter(geographic_level == "Local authority") %>%
-      select(region_code, region_name)
-
-    missing_region_codes <- sum(is.na(select(region_cols, region_code)))
-    missing_region_names <- sum(is.na(select(region_cols, region_name)))
 
     # not testing for individual columns as region_col_completed covers that
 
-    if (missing_region_codes > 0 && missing_region_names > 0) {
+    if (!("region_code" %in% names(data)) | !("region_name" %in% names(data))) {
       output <- list(
-        "message" = "Both region_code and region_name have missing values for Local authority rows in the data file. <br> - It is recommended to include the information from these columns for Local authority level data.",
+        "message" = "Both region_code and region_name are missing from the data file. <br> - Regional information should ideally be given for all local authority level data.",
         "result" = "ADVISORY"
       )
     } else {
+      region_cols <- data %>%
+        filter(geographic_level == "Local authority") %>%
+        select(region_code, region_name)
+
+      missing_region_codes <- sum(is.na(select(region_cols, region_code)))
+      missing_region_names <- sum(is.na(select(region_cols, region_name)))
+
+      if (missing_region_codes > 0 && missing_region_names > 0) {
+        output <- list(
+          "message" = "Both region_code and region_name have missing values for local authority rows in the data file. <br> - It is recommended to include the information from these columns for local authority level data.",
+          "result" = "ADVISORY"
+        )
+      } else {
+        output <- list(
+          "message" = "Both region_code and region_name are completed for all local authority rows in the data file.",
+          "result" = "PASS"
+        )
+      }
+    }
+  }
+
+  return(output)
+}
+
+# region_for_lad -------------------------------------
+# check if there is LA level data, and if so, if regional columns are present and completed
+
+region_for_lad <- function(data) {
+  if (!"Local authority district" %in% unique(data$geographic_level)) {
+    output <- list(
+      "message" = "There is no Local authority district level data in the data file.",
+      "result" = "IGNORE"
+    )
+  } else {
+
+    # not testing for individual columns as region_col_completed covers that
+
+    if (!("region_code" %in% names(data)) | !("region_name" %in% names(data))) {
       output <- list(
-        "message" = "Both region_code and region_name are completed for all Local authority rows in the data file.",
-        "result" = "PASS"
+        "message" = "Both region_code and region_name are missing from the data file. <br> - Regional information should ideally be given for all local authority district level data.",
+        "result" = "ADVISORY"
       )
+    } else {
+      region_cols <- data %>%
+        filter(geographic_level == "Local authority district") %>%
+        select(region_code, region_name)
+
+      missing_region_codes <- sum(is.na(select(region_cols, region_code)))
+      missing_region_names <- sum(is.na(select(region_cols, region_name)))
+
+      if (missing_region_codes > 0 && missing_region_names > 0) {
+        output <- list(
+          "message" = "Both region_code and region_name have missing values for local authority district rows in the data file. <br> - It is recommended to include the information from these columns for local authority district level data.",
+          "result" = "ADVISORY"
+        )
+      } else {
+        output <- list(
+          "message" = "Both region_code and region_name are completed for all local authority district rows in the data file.",
+          "result" = "PASS"
+        )
+      }
     }
   }
 
