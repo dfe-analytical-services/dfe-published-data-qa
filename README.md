@@ -1,9 +1,4 @@
 # Introduction 
-
-This is a copy of a repo that we have in DfE using Azure DevOps, this will fall behind the main repo over time, though is here as an open example of the code we're using. Feel free to get in touch if you have any questions, or indeed any suggestions of how we could do things better!
-
----
-
 A shiny app to provider a user friendly way to QA data files using centralised code. This is deployed via the DfE visual studio and rsconnect subscriptions. There are three environments, all accessible to DfE AD:
 
 - Production - https://rsconnect/rsc/dfe-published-data-qa
@@ -28,3 +23,5 @@ The function `tidy_code()` is created in the Rprofile script and therefore is al
 R/profilingCode.r contains the outline of code to use when profiling the app. Use the lines in here to read in data when developing using the console.
 
 In general all .r files will have a usable outline, so make use of that for navigation if in RStudio: Ctrl-Shift-O.
+
+There is a debugging script (named as such) in the R folder. This uses some of the main functions (readFile() and screenFiles()) to allow you to debug what is happening if screening a particular file crashes the app in an unknown way.

@@ -1,5 +1,9 @@
 app <- ShinyDriver$new("../../")
-app$snapshotInit("screenButton", screenshot = FALSE)
+app$snapshotInit("UI_tests", screenshot = FALSE)
+
+# Does it load
+Sys.sleep(1)
+app$snapshot()
 
 # 1
 app$uploadFile(datafile = "test-data/passes_everything.csv") # <-- This should be the path to the file, relative to the app's tests/shinytest directory
@@ -8,6 +12,9 @@ app$setInputs(screenbutton = "click")
 app$snapshot(items = list(output = c("progress_stage", "table_all_tests")))
 
 app$setInputs(resetbutton = "click")
+
+# Reset button
+app$snapshot()
 
 # 2
 app$uploadFile(datafile = "test-data/passes_everything_advisory.csv") # <-- This should be the path to the file, relative to the app's tests/shinytest directory

@@ -123,7 +123,7 @@ naming_convention <- function(data, meta) {
           "message" = "The metadata file is not a CSV. Please save the file as a CSV and re-upload."
         )
       } else {
-        if (meta == str_replace(data, ".csv", ".meta.csv")) {
+        if (meta == str_replace(data, "\\.csv", "\\.meta.csv")) {
           output <- list(
             "result" = "PASS",
             "message" = "The names of the files follow the recommended naming convention."

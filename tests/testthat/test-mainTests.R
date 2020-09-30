@@ -44,6 +44,18 @@ test_that("no_data_symbols", {
   expect_equal(testIndividualTest(pathStart, "no_data_symbols"), "ADVISORY")
 })
 
+# blanks_filters -------------------------------------------------------------------------------------------------------
+
+test_that("blanks_filters", {
+  expect_equal(testIndividualTest(pathStart, "blanks_filters"), "FAIL")
+})
+
+# blanks_indicators -------------------------------------------------------------------------------------------------------
+
+test_that("blanks_indicators", {
+  expect_equal(testIndividualTest(pathStart, "blanks_indicators"), "FAIL")
+})
+
 # time_period -------------------------------------------------------------------------------------------------------
 
 test_that("time_period", {
@@ -66,6 +78,12 @@ test_that("three_years", {
 
 test_that("region_for_la", {
   expect_equal(testIndividualTest(pathStart, "region_for_la"), "ADVISORY")
+})
+
+# region_for_lad -------------------------------------------------------------------------------------------------------
+
+test_that("region_for_lad", {
+  expect_equal(testIndividualTest(pathStart, "region_for_lad"), "ADVISORY")
 })
 
 # geography_level_completed -------------------------------------------------------------------------------------------------------

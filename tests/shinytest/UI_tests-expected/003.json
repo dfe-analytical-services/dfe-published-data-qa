@@ -2,10 +2,10 @@
   "input": {
     "datafile": {
       "name": [
-        "fails_everything_ancillary.csv"
+        "passes_everything.csv"
       ],
       "size": [
-        2206
+        66969
       ],
       "type": [
         "text/csv"
@@ -16,10 +16,10 @@
     },
     "metafile": {
       "name": [
-        "fails_everything_ancillary.meta.csv"
+        "passes_everything.meta.csv"
       ],
       "size": [
-        386
+        728
       ],
       "type": [
         "text/csv"
@@ -135,22 +135,6 @@
         "validation"
       ]
     },
-    "num_advisory_tests": {
-      "message": "",
-      "call": "NULL",
-      "type": [
-        "shiny.silent.error",
-        "validation"
-      ]
-    },
-    "num_failed_tests": {
-      "message": "",
-      "call": "NULL",
-      "type": [
-        "shiny.silent.error",
-        "validation"
-      ]
-    },
     "passed_box": {
       "message": "",
       "call": "NULL",
@@ -208,23 +192,7 @@
         "validation"
       ]
     },
-    "table_advisory_tests": {
-      "message": "",
-      "call": "NULL",
-      "type": [
-        "shiny.silent.error",
-        "validation"
-      ]
-    },
     "table_all_tests": {
-      "message": "",
-      "call": "NULL",
-      "type": [
-        "shiny.silent.error",
-        "validation"
-      ]
-    },
-    "table_failed_tests": {
       "message": "",
       "call": "NULL",
       "type": [
