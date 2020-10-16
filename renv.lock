@@ -389,14 +389,14 @@
     },
     "renv": {
       "Package": "renv",
-      "Version": "0.9.3",
+      "Version": "0.12.0-27",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "rstudio",
       "RemoteRepo": "renv",
-      "RemoteRef": "0.9.3",
-      "RemoteSha": "5ddaa59a65ce04a088f17404ebfca475f83f958e"
+      "RemoteRef": "master",
+      "RemoteSha": "a7666bb5ddb2f618fd51fe71f00b94bf79fbde0e"
     },
     "rlang": {
       "Package": "rlang",
