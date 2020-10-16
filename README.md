@@ -16,11 +16,11 @@ Automated tests have been created using testthat and shinytest. All functions cr
 UI tests have been created using shinytest that test the app loads, that the reset button really does clear everything, and that files that we'd expect to hit each particular stage of the screening do so. More should be added over time as extra features are added.
 
 ## Helpful notes
-The function `run_tests()` is created in the Rprofile script and is available in the console at all times to run both the unit and ui tests.
+The function `run_tests()` is created in the Rprofile script and is available in the RStudio console at all times to run both the unit and ui tests.
 
-The function `tidy_code()` is created in the Rprofile script and therefore is always available in the console to tidy code according to tidyverse styling using the styler package.
+The function `tidy_code()` is created in the Rprofile script and therefore is always available in the RStudio console to tidy code according to tidyverse styling using the styler package.
 
-R/profilingCode.r contains the outline of code to use when profiling the app. Use the lines in here to read in data when developing using the console.
+R/profilingCode.r contains the outline of code to assist when profiling the app.
 
 In general all .r files will have a usable outline, so make use of that for navigation if in RStudio: Ctrl-Shift-O.
 
