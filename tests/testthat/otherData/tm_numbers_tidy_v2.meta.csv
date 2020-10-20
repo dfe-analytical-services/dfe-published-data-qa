@@ -1,0 +1,6 @@
+col_name,col_type,label,indicator_grouping,indicator_unit,indicator_dp,filter_hint,filter_grouping_column
+SUBJ,Filter,Subject,,,,Filter by subject,SUBLEVNO
+ASIZE,Filter,Size,,,,Filter by size,SUBLEVNO
+PRIOR_BAND,Filter,Average prior attainment at KS4,,,,Filter by average prior attainment at KS4,
+GRADE,Filter,Grade achieved at KS5,,,,Filter by KS5 grade,grade_concat
+COUNT,Indicator,Number of pupils who achieved grade at KS5,Total,,,,

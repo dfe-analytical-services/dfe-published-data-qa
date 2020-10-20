@@ -1,0 +1,6 @@
+time_identifier,time_period,geographic_level,country_name,country_code,SUBLEVNO,SUBJ,ASIZE,PRIOR_BAND,GRADE,COUNT,grade_concat
+Academic year,201819,National,England,E92000001,253,10002,0.5,2-<3,D,1,U_E_D_C_B_A_*_P_M_*A
+Academic year,201819,National,England,E92000001,253,10002,0.5,2-<3,P,2,U_E_D_C_B_A_*_P_M_*A
+Academic year,201819,National,England,E92000001,253,10002,0.5,2-<3,U,3,U_E_D_C_B_A_*_P_M_*A
+Academic year,201819,National,England,E92000001,253,10002,0.5,3-<4,M,4,U_E_D_C_B_A_*_P_M_*A
+Academic year,201819,National,England,E92000001,253,10002,0.5,3-<4,P,5,U_E_D_C_B_A_*_P_M_*A
