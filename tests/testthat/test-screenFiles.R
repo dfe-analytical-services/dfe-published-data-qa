@@ -2,13 +2,13 @@ context("screenFiles")
 
 test_that("noFiltersFinalStage", {
   screeningOutput <- testOther("../../tests/shinytest/test-data/noFilters.csv")
-  
+
   expect_equal(screeningOutput$progress_message, "Made it to the full screening checks and passed")
 })
 
 test_that("noFiltersPassEverything", {
   screeningOutput <- testOther("../../tests/shinytest/test-data/noFilters.csv")
-  
+
   expect_equal(screeningOutput$results %>% filter(result == "FAIL") %>% nrow(), 0)
 })
 

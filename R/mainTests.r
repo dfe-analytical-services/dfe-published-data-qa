@@ -969,7 +969,7 @@ old_la_code <- function(data) {
       select("old_la_code") %>%
       unique() %>%
       filter(!is.na(.)) %>%
-      filter(old_la_code != "") %>% 
+      filter(old_la_code != "") %>%
       filter(old_la_code != ":") %>%
       pull(old_la_code) %>%
       .[!grepl("^[0-9]{3}$", .)]
@@ -1011,7 +1011,7 @@ region_code <- function(data) {
       select("region_code") %>%
       unique() %>%
       filter(!is.na(.)) %>%
-      filter(region_code != "") %>% 
+      filter(region_code != "") %>%
       filter(region_code != ":") %>%
       pull(region_code) %>%
       .[!grepl("^[A-Z]{1}[0-9]{8}$", .)]
