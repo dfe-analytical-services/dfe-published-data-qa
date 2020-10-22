@@ -1029,7 +1029,7 @@ region_code <- function(data) {
         )
       } else {
         output <- list(
-          "message" = paste0("The following region_code values are invalid: '", paste0(invalid_values, collapse = "', '"), "'. <br> - region_code must always be a 9 digit code, with one letter followed by 8 numbers,: for not available, or blank."),
+          "message" = paste0("The following region_code values are invalid: '", paste0(invalid_values, collapse = "', '"), "'. <br> - region_code must always be a 9 digit code, with one letter followed by 8 numbers, : for not available, or blank."),
           "result" = "FAIL"
         )
       }
@@ -1306,7 +1306,6 @@ filter_group_match <- function(data, meta) {
 # Checking that filter groups have fewer levels than their filters
 
 filter_group_level <- function(data, meta) {
-
   meta_filters_and_groups <- meta %>%
     filter(col_type == "Filter", !is.na(filter_grouping_column)) %>%
     select(col_name, filter_grouping_column)
@@ -1332,7 +1331,7 @@ filter_group_level <- function(data, meta) {
 
     failed_pairs <- extended_meta %>%
       filter(pre_result == "FAIL")
-    
+
     number_of_failed_pairs <- failed_pairs %>%
       nrow()
 

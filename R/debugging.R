@@ -10,11 +10,12 @@ debugReadFile <- function(file) {
 }
 
 # Put the file paths of the problematic files in here
-datafile <- debugReadFile("C:/R_Projects/dataFiles/multiple_group_level_errors.csv")
-metafile <- debugReadFile("C:/R_Projects/dataFiles/multiple_group_level_errors.meta.csv")
+datafile <- debugReadFile("C:/R_Projects/dfe-published-data-qa-shinyapp/tests/testthat/otherData/quoted_blank_geographies.csv")
+metafile <- debugReadFile("C:/R_Projects/dfe-published-data-qa-shinyapp/tests/testthat/otherData/quoted_blank_geographies.meta.csv")
 
 results <- screenFiles(datafile$filename, metafile$filename, datafile$fileSeparator, metafile$fileSeparator, datafile$fileCharacter, metafile$fileCharacter, datafile$mainFile, metafile$mainFile)
 
+unlist(results$results$message)
 
 data <- datafile$mainFile
 meta <- metafile$mainFile
