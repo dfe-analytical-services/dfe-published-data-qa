@@ -14,6 +14,7 @@ library(tools)
 library(readr)
 library(testthat)
 library(shinytest)
+library(styler)
 
 # activeTestsInFile ---------------------------------------------------------------------------------
 # Extracting the active tests that are run against files

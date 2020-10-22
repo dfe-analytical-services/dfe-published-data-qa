@@ -1,8 +1,7 @@
 source("renv/activate.R")
 
 tidy_code <- function() {
-  install.packages("styler")
-  library(styler)
+  source("global.r")
   styler::style_dir(recursive = FALSE)
   styler::style_dir("R/")
   styler::style_dir("tests/shinytest/", recursive = FALSE)
