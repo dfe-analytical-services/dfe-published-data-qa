@@ -16,7 +16,7 @@ jobs:
         config:
           - {os: windows-latest, r: 'release'}
         #  - {os: macOS-latest, r: 'release'}
-        #  - {os: ubuntu-16.04, r: 'release', rspm: "https://packagemanager.rstudio.com/cran/__linux__/xenial/latest"}
+          - {os: ubuntu-16.04, r: 'release', rspm: "https://packagemanager.rstudio.com/cran/__linux__/xenial/latest"}
 
     env:
       R_REMOTES_NO_ERRORS_FROM_WARNINGS: true
@@ -80,6 +80,14 @@ jobs:
         run: |
           options(install.packages.check.source = "no")
           if (!shinytest::dependenciesInstalled()) shinytest::installDependencies()
+      - name: Tidy code
+        shell: Rscript {0}
+        run: |
+            styler::style_dir(recursive = FALSE)
+            styler::style_dir("R/")
+            styler::style_dir("tests/shinytest/", recursive = FALSE)
+            styler::style_dir("tests/testthat/", recursive = FALSE)
+            styler::style_dir("tests/", recursive = FALSE)
       - name: Run tests
         shell: Rscript {0}
         run: |

@@ -1,3 +1,5 @@
+![run-tests](https://github.com/dfe-analytical-services/dfe-published-data-qa-shinyapp/workflows/run-tests/badge.svg?branch=adding-CI)
+
 # Introduction 
 A shiny app to provider a user friendly way to QA data files using centralised code. This is deployed via the DfE visual studio and rsconnect subscriptions. There are three environments, all accessible to DfE AD:
 
