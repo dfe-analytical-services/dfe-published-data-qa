@@ -2,3 +2,9 @@ Title: dfe-published-data-qa-shinyapp
 Author: cjrace <cameron.race@education.gov.uk>
 License: MIT
 Type: Shiny
+Imports:
+    shiny
+Suggests:
+    shinytest,
+    testthat,
+    styler
