@@ -64,6 +64,12 @@ jobs:
         run: |
           remotes::install_deps(dependencies = TRUE)
         shell: Rscript {0}
+      
+      - name: Restore renv snapshot
+        shell: Rscript {0}
+        run: |
+          if (!require('renv')) install.packages('renv')
+          renv::restore()
 
       - name: Find PhantomJS path
         id: phantomjs
