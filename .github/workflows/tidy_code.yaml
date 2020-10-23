@@ -2,10 +2,10 @@ on:
   push:
   pull_request:
 
-name: automated-tests
+name: tidy-code
 
 jobs:
-  automated-tests:
+  tidy-code:
     runs-on: ${{ matrix.config.os }}
 
     name: ${{ matrix.config.os }} (${{ matrix.config.r }})
@@ -47,31 +47,17 @@ jobs:
           remotes::install_deps(dependencies = TRUE)
         shell: Rscript {0}
       
-      - name: Restore renv snapshot
+      
+      # NEED TO CHANGE THIS TO RUN SOMETHING THAT WILL FAIL IF ANY OF THE FILES ARE CHANGED
+      - name: Tidy code
         shell: Rscript {0}
         run: |
-          if (!require('renv')) install.packages('renv')
-          renv::restore()
+            styler::style_dir(recursive = FALSE)
+            styler::style_dir("R/")
+            styler::style_dir("tests/shinytest/", recursive = FALSE)
+            styler::style_dir("tests/testthat/", recursive = FALSE)
+            styler::style_dir("tests/", recursive = FALSE)
 
-      - name: Find PhantomJS path
-        id: phantomjs
-        run: |
-          echo "::set-output name=path::$(Rscript -e 'cat(shinytest:::phantom_paths()[[1]])')"
-      - name: Cache PhantomJS
-        uses: actions/cache@v1
-        with:
-          path: ${{ steps.phantomjs.outputs.path }}
-          key: ${{ runner.os }}-phantomjs
-          restore-keys: ${{ runner.os }}-phantomjs
-      - name: Install PhantomJS
-        shell: Rscript {0}
-        run: |
-          options(install.packages.check.source = "no")
-          if (!shinytest::dependenciesInstalled()) shinytest::installDependencies()
-      - name: Run tests
-        shell: Rscript {0}
-        run: |
-          shiny::runTests(".", assert = TRUE)
       - name: Upload test results
         if: failure()
         uses: actions/upload-artifact@master
