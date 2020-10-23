@@ -7,4 +7,13 @@ Imports:
 Suggests:
     shinytest,
     testthat,
-    styler
+    styler,
+    janitor,
+    data.table,
+    dplyr,
+    readr,
+    shinyjs,
+    stringr,
+    tools,
+    renv,
+    utils
