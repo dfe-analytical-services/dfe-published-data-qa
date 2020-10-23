@@ -86,6 +86,10 @@ fluidPage(
               shinyjs::hidden(div(
                 id = "reset_button",
                 uiOutput("uiResetButton")
+              )),
+              shinyjs::hidden(div(
+                id = "backToScreener",
+                actionButton("goback", "Back to screener results")
               ))
             )
           )
@@ -170,8 +174,38 @@ fluidPage(
             # End of column
           ))
           # End of summarised results div
-        )
+        ),
         # End of fluidRow
+        
+        # QA pages -----------------------------------------------------------------------------------
+        
+        shinyjs::hidden(div(
+          id = "qaResults",
+          
+          tabsetPanel(id = "navbar",
+                      tabPanel(title = "qa guidance",
+                               value = "qaGuidancePage",
+                               h2("GUIDANCE THINGS"),
+                               br(),
+                               actionButton("runQA", "Run QA on datafiles")
+                      ),
+                      # Summary stats / sense checking
+                      # Extreme values
+                      # Sums and comparisons (yoy etc)
+                      # Missing data and suppressed cells (+duplicates etc)
+                      # Scatter-plots
+                      tabPanel(title = "Summary stats",
+                               value = "tab2",
+                               h1("Summary stats")
+                      ),
+                      tabPanel(title = "Extreme values",
+                               value = "tab3",
+                               h1("Extreme values")
+                      )
+          )
+          # End of tabsetPanel
+        ))
+        # End of qaResults div
       )
       # End of verticalLayout
     )

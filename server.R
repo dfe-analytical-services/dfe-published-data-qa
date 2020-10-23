@@ -292,6 +292,7 @@ server <- function(input, output, session) {
     # Hide results
     shinyjs::hideElement(id = "results")
     shinyjs::showElement(id = "guidance")
+    shinyjs::hideElement(id = "qaResults")
 
     # clear files from input selection (does not fully reset fileInput, grr)
     reset("datafile")
@@ -337,7 +338,46 @@ server <- function(input, output, session) {
 
     shinyjs::hideElement(id = "reset_button")
   })
-
+  
+  
+  
+  # QA further page ----------------------------------------------------------------------------
+  
+  observeEvent(input$qaFurther, {
+    
+    shinyjs::hideElement(id = "results")
+    
+    shinyjs::hideElement(id = "reset_button")
+    
+    shinyjs::showElement(id = "qaResults")
+    
+    shinyjs::showElement(id = "backToScreener")
+    
+  })
+  
+  observe({
+    toggle(condition = input$runQA, 
+           selector = c("#navbar li a[data-value=tab2]",
+                        "#navbar li a[data-value=tab3]")
+    )
+  })
+  
+  observeEvent(input$goback, {
+    
+    shinyjs::hideElement(id = "backToScreener")
+    
+    shinyjs::showElement(id = "reset_button")
+    
+    shinyjs::showElement(id = "results")
+    
+  })
+  
+  
+  
+  
+  
+  
+  
   # showresults (shouldShow) ---------------------------------------------------------------------------------
   # Checking if results should show for when to show the screen button
 

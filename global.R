@@ -65,7 +65,8 @@ pass_results_box <- function() {
         style = "padding-left:27px",
         "Your files can now be uploaded to Explore Education Statistics, see our  ",
         a(href = "https://rsconnect/rsc/stats-production-guidance/ees.html", "guidance on using EES", target = "_blank"),
-        " for more information."
+        " for more information.",
+        actionButton("qaFurther", "QA data further")
       )
     )
   )
