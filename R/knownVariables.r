@@ -17,14 +17,16 @@ weeks <- c(
   "Week 51", "Week 52"
 )
 
+financial_qaurters <- c("Financial year Q1", "Financial year Q2", "Financial year Q3", "Financial year Q4")
+
 acceptable_time_identifiers <- c(
   "Autumn and spring term", "Calendar year", "Financial year", "Academic year", "Tax year", "Reporting year",
-  terms, weeks, months
+  terms, weeks, months, financial_qaurters
 )
 
 four_digit_identifiers <- c("Calendar year", "Reporting year", weeks, months)
 
-six_digit_identifiers <- c("Autumn and spring term", terms, "Financial year", "Academic year", "Tax year")
+six_digit_identifiers <- c("Autumn and spring term", terms, "Financial year", "Academic year", "Tax year", financial_qaurters)
 
 geography_matrix <- matrix(c(
   "National", "country_code", "country_name", NA, NA, NA,
