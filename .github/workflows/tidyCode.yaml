@@ -13,18 +13,18 @@ on:
 name: tidyCode
 
 jobs:
-    pre_job:
-      # continue-on-error: true # Uncomment once integration is finished
-      runs-on: ubuntu-latest
-      # Map a step output to a job output
-      outputs:
-        should_skip: ${{ steps.skip_check.outputs.should_skip }}
-      steps:
-        - id: skip_check
-          uses: fkirc/skip-duplicate-actions@master
-          with:
-            github_token: ${{ secrets.GITHUB_TOKEN }}
-            paths_ignore: '["**/README.md", "**/docs/**"]']
+  pre_job:
+    continue-on-error: true
+    runs-on: ubuntu-latest
+    # Map a step output to a job output
+    outputs:
+      should_skip: ${{ steps.skip_check.outputs.should_skip }}
+    steps:
+      - id: skip_check
+        uses: fkirc/skip-duplicate-actions@master
+        with:
+          github_token: ${{ github.token }}
+          paths_ignore: '["**/README.md", "**/docs/**"]']
             
   tidyCode:
     needs: pre_job
