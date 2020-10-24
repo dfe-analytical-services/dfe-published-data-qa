@@ -19,7 +19,8 @@ library(styler)
 # activeTestsInFile ---------------------------------------------------------------------------------
 # Extracting the active tests that are run against files
 
-activeTestsInFile <- function(file) {trimws(gsub("\\(.* # active test", "", grep("(# active test)$", read_lines(file), value = TRUE)))
+activeTestsInFile <- function(file) {
+  trimws(gsub("\\(.* # active test", "", grep("(# active test)$", read_lines(file), value = TRUE)))
 }
 
 activeTests <- sapply(c("R/fileValidation.r", "R/preCheck1.r", "R/preCheck2.r", "R/mainTests.r"), activeTestsInFile, simplify = FALSE)
