@@ -38,18 +38,18 @@ test_that("QuotedBlanks-region_code", {
 
 test_that("financialQuarterValid", {
   screeningOutput <- testOther("../../tests/testthat/otherData/financial_quarter.csv")
-  
+
   expect_equal(screeningOutput$results %>% filter(test == "time_identifier") %>% pull(result) %>% unlist(use.names = FALSE), "PASS")
 })
 
 test_that("financialQuarterMix", {
   screeningOutput <- testOther("../../tests/testthat/otherData/financial_quarter.csv")
-  
+
   expect_equal(screeningOutput$results %>% filter(test == "time_identifier_mix") %>% pull(result) %>% unlist(use.names = FALSE), "PASS")
 })
 
 test_that("financialQuarterDigits", {
   screeningOutput <- testOther("../../tests/testthat/otherData/financial_quarter.csv")
-  
+
   expect_equal(screeningOutput$results %>% filter(test == "time_period") %>% pull(result) %>% unlist(use.names = FALSE), "PASS")
 })
