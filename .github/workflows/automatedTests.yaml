@@ -1,15 +1,11 @@
 on:
   push:
     branches:
-      - development
       - master
-      - adding-CI
   pull_request:
     branches:
-      - development
       - master
-      - adding-CI
-
+      
 name: automatedTests
 
 jobs:
@@ -37,7 +33,7 @@ jobs:
       fail-fast: false
       matrix:
         config:
-        # Running this on windows, as that is the OS of both local dev machine and also the rsconnect server
+        # Running this on windows, as that is the OS of both local dev machines and also the rsconnect server
           - {os: windows-latest, r: 'release'}
 
     env:

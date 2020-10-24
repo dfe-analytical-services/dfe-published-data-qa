@@ -1,15 +1,11 @@
 on:
   push:
     branches:
-      - development
       - master
-      - adding-CI
   pull_request:
     branches:
-      - development
       - master
-      - adding-CI
-      
+
 name: tidyCode
 
 jobs:
