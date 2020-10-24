@@ -10,10 +10,10 @@ on:
       - master
       - adding-CI
       
-name: tidy-code
+name: tidyCode
 
 jobs:
-  tidy-code:
+  tidyCode:
     runs-on: ${{ matrix.config.os }}
 
     name: ${{ matrix.config.os }} (${{ matrix.config.r }})
@@ -58,8 +58,6 @@ jobs:
           remotes::install_deps(dependencies = TRUE)
         shell: Rscript {0}
       
-      
-      # NEED TO CHANGE THIS TO RUN SOMETHING THAT WILL FAIL IF ANY OF THE FILES ARE CHANGED
       - name: Tidy code
         shell: Rscript {0}
         run: |
@@ -75,7 +73,9 @@ jobs:
               if(TRUE %in% codeChecks) {
                 stop("The code is not styled correctly. Open the project in RStudio and use tidy_code() to restyle the code.")
               } else {
-                message("The code is beautiful")
+                message("----------------------------------------")
+                message("The code is beautiful, go you!")
+                message("----------------------------------------")
               }
             }
 
