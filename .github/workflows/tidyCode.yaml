@@ -53,7 +53,7 @@ jobs:
       - name: Tidy code
         shell: Rscript {0}
         run: |
-            global.R
+            source("global.R")
         
             codeChecks <- tidy_code_function()
             
