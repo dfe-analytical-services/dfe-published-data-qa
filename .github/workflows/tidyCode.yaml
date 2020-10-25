@@ -53,7 +53,9 @@ jobs:
       - name: Tidy code
         shell: Rscript {0}
         run: |
-            codeChecks <- tidy_code()
+            global.R
+        
+            codeChecks <- tidy_code_function()
             
             if(any(is.na(codeChecks))) {
               stop("There is a breaking error in the code.")
