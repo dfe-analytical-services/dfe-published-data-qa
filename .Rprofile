@@ -2,16 +2,7 @@ source("renv/activate.R")
 
 tidy_code <- function() {
   source("global.r")
-  message("----------------------------------------")
-  message("App scripts")
-  message("----------------------------------------")
-  styler::style_dir(recursive = FALSE)
-  message("R scripts")
-  message("----------------------------------------")
-  styler::style_dir("R/")
-  message("Test scripts")
-  message("----------------------------------------")
-  styler::style_dir("tests/", filetype = "r")
+  tidy_code_function()
 }
 
 run_tests_locally <- function() {

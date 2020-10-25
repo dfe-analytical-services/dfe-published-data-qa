@@ -27,6 +27,24 @@ activeTests <- sapply(c("R/fileValidation.r", "R/preCheck1.r", "R/preCheck2.r", 
 
 numberActiveTests <- length(unlist(activeTests, use.names = FALSE))
 
+# tidy_code_function -------------------------------------------------------------------------------
+
+tidy_code_function <- function() {
+  message("----------------------------------------")
+  message("App scripts")
+  message("----------------------------------------")
+  app_scripts <- eval(styler::style_dir(recursive = FALSE)$changed)
+  message("R scripts")
+  message("----------------------------------------")
+  r_scripts <- eval(styler::style_dir("R/")$changed)
+  message("Test scripts")
+  message("----------------------------------------")
+  test_scripts <- eval(styler::style_dir("tests/", filetype = "r")$changed)
+  script_changes <- c(app_scripts, r_scripts, test_scripts)
+  return(script_changes)
+}
+
+
 # Function scripts ---------------------------------------------------------------------------------
 
 source("R/knownVariables.r", encoding = "UTF-8")

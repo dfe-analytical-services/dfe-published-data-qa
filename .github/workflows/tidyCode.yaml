@@ -53,11 +53,9 @@ jobs:
       - name: Tidy code
         shell: Rscript {0}
         run: |
-            codeChecks <- c(
-              eval(styler::style_dir(recursive = FALSE)$changed),
-              eval(styler::style_dir("R/")$changed),
-              eval(styler::style_dir("tests/", filetype = "r")$changed)
-              ) 
+            source(global.R)
+            
+            codeChecks <- tidy_code_function()
             
             if(any(is.na(codeChecks))) {
               stop("There is a breaking error in the code.")

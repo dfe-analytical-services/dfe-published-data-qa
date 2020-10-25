@@ -1,5 +1,5 @@
 fluidPage(
-  #theme = "acalat_theme.css",
+  theme = "acalat_theme.css",
 
   useShinyjs(),
   # options(shiny.reactlog = TRUE),
