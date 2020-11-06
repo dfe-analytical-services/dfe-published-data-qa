@@ -19,3 +19,15 @@ testIndividualTestSeparate <- function(dataFilePath, metaFilePath, check) {
   meta <- readFile(inputMeta$datapath)
   return(screenFiles(inputData$name, inputMeta$name, data$fileSeparator, meta$fileSeparator, data$fileCharacter, meta$fileCharacter, data$mainFile, meta$mainFile)$results %>% filter(test == check) %>% pull(result) %>% unlist())
 }
+
+testOther <- function(dataFilePath) {
+  metaFilePath <- sub("\\.csv$", "\\.meta.csv", dataFilePath)
+
+  dataName <- basename(dataFilePath)
+  metaName <- basename(metaFilePath)
+
+  data <- readFile(dataFilePath)
+  meta <- readFile(metaFilePath)
+
+  return(screenFiles(dataName, metaName, data$fileSeparator, meta$fileSeparator, data$fileCharacter, meta$fileCharacter, data$mainFile, meta$mainFile))
+}

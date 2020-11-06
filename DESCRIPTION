@@ -1,0 +1,17 @@
+Title: dfe-published-data-qa-shinyapp
+Author: c(person(given = "Laura",
+                 family = "Selby",
+                 role = "aut",
+                 email = "laura.selby@education.gov.uk"),
+          person(given = "Cameron",
+                 family = "Race",
+                 role = c("cre", "aut"),
+                 email = "cameron.race@education.gov.uk"))
+License: MIT
+Type: Shiny
+Imports:
+    shiny
+Suggests:
+    shinytest,
+    testthat,
+    styler

@@ -1,0 +1,5 @@
+col_name,col_type,label,indicator_grouping,indicator_unit,indicator_dp,filter_hint,filter_grouping_column
+age_detailed,Filter,Age,,,,,
+gender,Filter,Gender,,,,,
+ethnicity_group,Filter,Ethnicity Group,,,,,
+q4_p_total,Indicator,Quarter 4 Total Learners by Participation,,,,,

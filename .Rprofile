@@ -1,15 +1,11 @@
 source("renv/activate.R")
 
 tidy_code <- function() {
-  install.packages("styler")
-  library(styler)
-  styler::style_dir(recursive = FALSE)
-  styler::style_dir("R/")
-  styler::style_dir("tests/shinytest/", recursive = FALSE)
-  styler::style_dir("tests/testthat/", recursive = FALSE)
+  source("global.r")
+  tidy_code_function()
 }
 
-run_tests <- function() {
+run_tests_locally <- function() {
   Sys.unsetenv("http_proxy")
   Sys.unsetenv("https_proxy")
   source("global.r")

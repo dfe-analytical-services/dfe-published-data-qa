@@ -1,6 +1,6 @@
 # Max file size ---------------------------------------------------------------------------------
 
-options(shiny.maxRequestSize = 150 * 1024^2)
+options(shiny.maxRequestSize = 500 * 1024^2)
 
 # Library calls ---------------------------------------------------------------------------------
 
@@ -14,6 +14,7 @@ library(tools)
 library(readr)
 library(testthat)
 library(shinytest)
+library(styler)
 
 # activeTestsInFile ---------------------------------------------------------------------------------
 # Extracting the active tests that are run against files
@@ -25,6 +26,24 @@ activeTestsInFile <- function(file) {
 activeTests <- sapply(c("R/fileValidation.r", "R/preCheck1.r", "R/preCheck2.r", "R/mainTests.r"), activeTestsInFile, simplify = FALSE)
 
 numberActiveTests <- length(unlist(activeTests, use.names = FALSE))
+
+# tidy_code_function -------------------------------------------------------------------------------
+
+tidy_code_function <- function() {
+  message("----------------------------------------")
+  message("App scripts")
+  message("----------------------------------------")
+  app_scripts <- eval(styler::style_dir(recursive = FALSE)$changed)
+  message("R scripts")
+  message("----------------------------------------")
+  r_scripts <- eval(styler::style_dir("R/")$changed)
+  message("Test scripts")
+  message("----------------------------------------")
+  test_scripts <- eval(styler::style_dir("tests/", filetype = "r")$changed)
+  script_changes <- c(app_scripts, r_scripts, test_scripts)
+  return(script_changes)
+}
+
 
 # Function scripts ---------------------------------------------------------------------------------
 
