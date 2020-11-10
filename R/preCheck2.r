@@ -9,7 +9,7 @@ preCheck2 <- function(data_character, meta_character, datafile, metafile) {
     ob_unit_meta(metafile), # active test
     filter_level(datafile, metafile), # active test
     utf8(data_character, meta_character), # active test
-    col_type(metafile) # active test
+    col_type(metafile), # active test
     time_validation(datafile) # active test
   ),
   "stage" = "preCheck2",
@@ -303,6 +303,32 @@ col_type <- function(meta) {
 # checking for any non-numeric characters in the time_period column
 
 time_validation <- function(data) {
-  
+  present_time_periods <- unique(data$time_period)
+
+  pre_result <- stack(suppressWarnings(sapply(present_time_periods, as.numeric)))
+
+  non_numeric_values <- pre_result %>%
+    filter(is.na(values)) %>%
+    pull(ind)
+
+  if (length(non_numeric_values) == 0) {
+    output <- list(
+      "message" = "The time_period column only contains numeric digits.",
+      "result" = "PASS"
+    )
+  } else {
+    if (length(non_numeric_values) == 1) {
+      output <- list(
+        "message" = paste0("The following invalid time_period value was found in the data file: '", paste0(non_numeric_values, collapse = "', '"), "'. <br> - time_period must always be either a 4 or 6 digit number."),
+        "result" = "FAIL"
+      )
+    } else {
+      output <- list(
+        "message" = paste0("The following invalid time_period values were found in the data file: '", paste0(non_numeric_values, collapse = "', '"), "'. <br> - time_period must always be either a 4 or 6 digit number."),
+        "result" = "FAIL"
+      )
+    }
+  }
+
   return(output)
 }

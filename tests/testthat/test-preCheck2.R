@@ -50,4 +50,3 @@ test_that("col_type", {
 test_that("time_validation", {
   expect_equal(testIndividualTest(pathStart, "time_validation"), "FAIL")
 })
-
