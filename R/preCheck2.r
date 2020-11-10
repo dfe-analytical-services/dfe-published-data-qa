@@ -10,6 +10,7 @@ preCheck2 <- function(data_character, meta_character, datafile, metafile) {
     filter_level(datafile, metafile), # active test
     utf8(data_character, meta_character), # active test
     col_type(metafile) # active test
+    time_validation(datafile) # active test
   ),
   "stage" = "preCheck2",
   "test" = c(activeTests$`R/preCheck2.r`)
@@ -295,5 +296,13 @@ col_type <- function(meta) {
     }
   }
 
+  return(output)
+}
+
+# time_validation -------------------------------------
+# checking for any non-numeric characters in the time_period column
+
+time_validation <- function(data) {
+  
   return(output)
 }

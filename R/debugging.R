@@ -10,8 +10,8 @@ debugReadFile <- function(file) {
 }
 
 # Put the file paths of the problematic files in here
-datafile <- debugReadFile("C:/R_Projects/dfe-published-data-qa-shinyapp/tests/testthat/otherData/quoted_blank_geographies.csv")
-metafile <- debugReadFile("C:/R_Projects/dfe-published-data-qa-shinyapp/tests/testthat/otherData/quoted_blank_geographies.meta.csv")
+datafile <- debugReadFile("C:/R_Projects/dfe-published-data-qa/tests/testthat/otherData/letters_in_time.csv")
+metafile <- debugReadFile("C:/R_Projects/dfe-published-data-qa/tests/testthat/otherData/letters_in_time.meta.csv")
 
 results <- screenFiles(datafile$filename, metafile$filename, datafile$fileSeparator, metafile$fileSeparator, datafile$fileCharacter, metafile$fileCharacter, datafile$mainFile, metafile$mainFile)
 

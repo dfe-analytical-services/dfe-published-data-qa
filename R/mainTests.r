@@ -473,7 +473,7 @@ blanks_indicators <- function(data, meta) {
 }
 
 # time_period -------------------------------------
-# checking that if the time_identifer is X, then the time_period is Y
+# checking that if the time_identifier is X, then the time_period is Y
 
 time_period <- function(data) {
   base_identifier <- data$time_identifier[1]
@@ -518,7 +518,7 @@ time_period_six <- function(data) {
   time_length <- data
   time_length$digits <- str_count(time_length$time_period)
   six_digit_years <- filter(time_length, digits == 6)
-
+  
   time_period_six_check <- function(i) {
     currentyearend <- as.numeric(substr(i, 3, 4))
     nextyearend <- as.numeric(substr(i, 5, 6))
