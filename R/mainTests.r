@@ -37,6 +37,8 @@ mainTests <- function(data_character, meta_character, datafile, metafile) {
     filter_group_not_filter(metafile), # active test
     filter_group_duplicate(metafile), # active test
     indicator_grouping(metafile), # active test
+    filter_group_stripped(data_character, meta_character), # active test
+    indicator_group_stripped(meta_character), # active test
     indicator_unit(metafile), # active test
     indicator_unit_validation(metafile), # active test
     indicator_dp(metafile), # active test
@@ -1446,6 +1448,89 @@ indicator_grouping <- function(meta) {
 
   return(output)
 }
+# filter_group_stripped -------------------------------------
+# filter groups - should have the same number of unique filter groups when stripped of non-alphanumeric characters
+
+filter_group_stripped <- function(data, meta) {
+  if (meta %>% filter(filter_grouping_column != "") %>% nrow() == 0) {
+    output <- list(
+      "message" = "There are no filter groups present.",
+      "result" = "IGNORE"
+    )
+  } else {
+    filter_group_columns <- meta %>%
+      filter(col_type == "Filter", filter_grouping_column != "") %>%
+      pull(filter_grouping_column)
+    
+    get_values <- function(column) {
+      return(unique(data[[column]]))
+    }
+    
+    raw_filter_groups <- lapply(filter_group_columns, get_values)
+  
+    stripped_filter_groups <- lapply(raw_filter_groups, gsub, pattern="[^[:alnum:]]", replacement="") %>% lapply(unique)
+    
+    comparison <- unlist(lapply(raw_filter_groups, length)) == unlist(lapply(stripped_filter_groups, length))
+    
+    failed_cols <- which(comparison %in% FALSE)
+    
+    if (length(failed_cols) = 1) {
+      output <- list(
+        "message" = paste0("The number of unique filter groups should not change when non-alphanumeric characters are stripped. <br> - please check this list for erroneous groups:", paste0(raw_filter_groups[failed_cols], collapse = "', '"),".")
+        "result" = "FAIL"
+      )
+    } else {
+      if(length(failed_cols) > 1) {
+        output <- list(
+          "message" = paste0("The number of unique filter groups should not change when non-alphanumeric characters are stripped. <br> - please check this list for erroneous groups:", paste0(raw_filter_groups[failed_cols], collapse = "', '"),".")
+          "result" = "FAIL"
+        )
+      } else {
+        output <- list(
+          "message" = "There are no issues when stripping alpha-numeric characters from filter groups.",
+          "result" = "PASS"
+        )
+      }
+    }
+  }
+  
+  return(output)
+}
+
+# indicator_group_stripped -------------------------------------
+# indicator grouping - should have the same number of unique indicator groups when stripped of non-alphanumeric characters
+
+indicator_group_stripped <- function(meta) {
+  if (meta %>% filter(indicator_grouping != "") %>% nrow() == 0) {
+    output <- list(
+      "message" = "There are no indicator groups present.",
+      "result" = "IGNORE"
+    )
+  } else {
+    raw_indicator_groups <- meta %>%
+      filter(col_type == "Indicator", indicator_grouping != "") %>%
+      pull(indicator_grouping) %>% 
+      unique()
+
+    stripped_indicator_groups <- lapply(raw_indicator_groups, gsub, pattern="[^[:alnum:]]", replacement="") %>% 
+      unique()
+    
+    if (length(raw_indicator_groups) != length(stripped_indicator_groups)) {
+      output <- list(
+        "message" = paste0("The number of unique indicator groups should not change when non-alphanumeric characters are stripped. <br> - please check this list for erroneous groups:", paste0(raw_indicator_groups, collapse = "', '"),".")
+        "result" = "FAIL"
+      )
+    } else {
+      output <- list(
+        "message" = "There are no issues when stripping alpha-numeric characters from indicator groups.",
+        "result" = "PASS"
+      )
+    }
+  }
+  
+  return(output)
+}
+
 
 # indicator_unit -------------------------------------
 # indicator unit should be blank for all filters
