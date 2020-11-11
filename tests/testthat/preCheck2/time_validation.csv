@@ -1,0 +1,19 @@
+time_period,time_identifier,geographic_level,country_code,country_name,gender,age,t_neet,t_unemployed,t_economically_inactive,t_population,pt_neet
+2001Q4,Financial year Q4,National,K02000001,United Kingdom,Total,Aged 16-24,34,97,25,30,95
+2002Q1,Financial year Q1,National,K02000001,United Kingdom,Total,Aged 16-24,99,62,43,5,49
+2001Q4,Financial year Q4,National,K02000001,United Kingdom,Total,Aged 16-17,56,12,95,6,75
+2002Q1,Financial year Q1,National,K02000001,United Kingdom,Total,Aged 16-17,45,54,64,82,99
+2001Q4,Financial year Q4,National,K02000001,United Kingdom,Total,Aged 18-24,78,18,21,51,36
+2002Q1,Financial year Q1,National,K02000001,United Kingdom,Total,Aged 18-24,32,78,37,55,10
+2001Q4,Financial year Q4,National,K02000001,United Kingdom,Male,Aged 16-24,54,32,56,29,33
+2002Q1,Financial year Q1,National,K02000001,United Kingdom,Male,Aged 16-24,17,83,98,53,65
+2001Q4,Financial year Q4,National,K02000001,United Kingdom,Male,Aged 16-17,90,15,46,96,83
+2002Q1,Financial year Q1,National,K02000001,United Kingdom,Male,Aged 16-17,87,13,17,58,50
+2001Q4,Financial year Q4,National,K02000001,United Kingdom,Male,Aged 18-24,79,78,54,82,92
+2002Q1,Financial year Q1,National,K02000001,United Kingdom,Male,Aged 18-24,51,20,93,27,8
+2001Q4,Financial year Q4,National,K02000001,United Kingdom,Female,Aged 16-24,77,64,26,57,57
+2002Q1,Financial year Q1,National,K02000001,United Kingdom,Female,Aged 16-24,75,76,92,11,95
+2001Q4,Financial year Q4,National,K02000001,United Kingdom,Female,Aged 16-17,93,73,48,57,42
+2002Q1,Financial year Q1,National,K02000001,United Kingdom,Female,Aged 16-17,19,77,90,30,89
+2001Q4,Financial year Q4,National,K02000001,United Kingdom,Female,Aged 18-24,77,33,50,85,55
+2002Q1,Financial year Q1,National,K02000001,United Kingdom,Female,Aged 18-24,38,21,79,72,44
