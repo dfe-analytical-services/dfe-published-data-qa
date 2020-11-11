@@ -15,6 +15,8 @@ library(readr)
 library(testthat)
 library(shinytest)
 library(styler)
+library(tidyr)
+library(ggplot2)
 
 # activeTestsInFile ---------------------------------------------------------------------------------
 # Extracting the active tests that are run against files
