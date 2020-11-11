@@ -9,7 +9,8 @@ preCheck2 <- function(data_character, meta_character, datafile, metafile) {
     ob_unit_meta(metafile), # active test
     filter_level(datafile, metafile), # active test
     utf8(data_character, meta_character), # active test
-    col_type(metafile) # active test
+    col_type(metafile), # active test
+    time_validation(datafile) # active test
   ),
   "stage" = "preCheck2",
   "test" = c(activeTests$`R/preCheck2.r`)
@@ -290,6 +291,42 @@ col_type <- function(meta) {
     } else {
       output <- list(
         "message" = paste0("The following invalid col_type values were found in the metadata file: '", paste0(invalid_types, collapse = "', '"), "'. <br> - col_type must always be either 'Filter' or 'Indicator', and cannot be blank."),
+        "result" = "FAIL"
+      )
+    }
+  }
+
+  return(output)
+}
+
+# time_validation -------------------------------------
+# checking for any non-numeric characters in the time_period column
+
+time_validation <- function(data) {
+  raw_time_periods <- unique(data$time_period)
+
+  numeric_only_time_periods <- lapply(raw_time_periods, gsub, pattern = "[^[:digit:]]", replacement = "") %>%
+    unlist() %>%
+    as.numeric()
+
+  comparison <- raw_time_periods == numeric_only_time_periods
+
+  non_numeric_values <- raw_time_periods[which(comparison %in% FALSE)]
+
+  if (length(non_numeric_values) == 0) {
+    output <- list(
+      "message" = "The time_period column only contains numeric digits.",
+      "result" = "PASS"
+    )
+  } else {
+    if (length(non_numeric_values) == 1) {
+      output <- list(
+        "message" = paste0("The following invalid time_period value was found in the data file: '", paste0(non_numeric_values, collapse = "', '"), "'. <br> - time_period must always be either a 4 or 6 digit number."),
+        "result" = "FAIL"
+      )
+    } else {
+      output <- list(
+        "message" = paste0("The following invalid time_period values were found in the data file: '", paste0(non_numeric_values, collapse = "', '"), "'. <br> - time_period must always be either a 4 or 6 digit number."),
         "result" = "FAIL"
       )
     }

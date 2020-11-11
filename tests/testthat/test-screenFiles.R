@@ -53,3 +53,9 @@ test_that("financialQuarterDigits", {
 
   expect_equal(screeningOutput$results %>% filter(test == "time_period") %>% pull(result) %>% unlist(use.names = FALSE), "PASS")
 })
+
+test_that("multipleFilterGroupStripped", {
+  screeningOutput <- testOther("../../tests/testthat/otherData/multiple_stripped_filter_groups.csv")
+
+  expect_equal(screeningOutput$results %>% filter(test == "filter_group_stripped") %>% pull(result) %>% unlist(use.names = FALSE), "FAIL")
+})

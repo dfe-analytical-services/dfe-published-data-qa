@@ -1,0 +1,5 @@
+col_name,col_type,label,indicator_unit,indicator_dp,indicator_grouping,filter_hint,filter_grouping_column
+school_type,Filter,school_type,,,,,school_phase
+year_group,Filter,year_group,,,,,key_stage
+maintained_detail,Filter,maintained_detail,,,,,maintained
+number_of_pupils,Indicator,Number of pupils,,,,,

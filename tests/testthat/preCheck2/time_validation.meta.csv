@@ -1,0 +1,8 @@
+col_name,col_type,label,indicator_grouping,indicator_unit,indicator_dp,filter_hint,filter_grouping_column
+gender,Filter,Gender,,,,,
+age,Filter,Age,,,,,
+t_neet,Indicator,t_neet,,,0,,
+t_unemployed,Indicator,t_unemployed,,,0,,
+t_economically_inactive,Indicator,t_economically_inactive,,,0,,
+t_population,Indicator,t_population,,,0,,
+pt_neet,Indicator,pt_neet,,,0,,
