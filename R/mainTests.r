@@ -1476,7 +1476,7 @@ filter_group_stripped <- function(data, meta) {
 
     if (length(failed_cols) > 0) {
       output <- list(
-        "message" = paste0("The number of unique filter groups should not change when non-alphanumeric characters are stripped. <br> - please check this list for erroneous filter group values:", paste0(unlist(raw_filter_groups[failed_cols]), collapse = "', '"), "."),
+        "message" = paste0("The number of unique filter groups should not change when non-alphanumeric characters are stripped. <br> - please check this list for erroneous filter group values: '", paste0(unlist(raw_filter_groups[failed_cols]), collapse = "', '"), "'."),
         "result" = "FAIL"
       )
     } else {
@@ -1510,7 +1510,7 @@ indicator_group_stripped <- function(meta) {
 
     if (length(raw_indicator_groups) != length(stripped_indicator_groups)) {
       output <- list(
-        "message" = paste0("The number of unique indicator groups should not change when non-alphanumeric characters are stripped. <br> - please check this list for erroneous groups:", paste0(raw_indicator_groups, collapse = "', '"), "."),
+        "message" = paste0("The number of unique indicator groups should not change when non-alphanumeric characters are stripped. <br> - please check this list for erroneous groups: '", paste0(raw_indicator_groups, collapse = "', '"), "'."),
         "result" = "FAIL"
       )
     } else {
