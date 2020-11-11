@@ -1,0 +1,122 @@
+time_period,time_identifier,country_code,country_name,geographic_level,school_phase,school_type,key_stage,year_group,maintained,maintained_detail,number_of_pupils
+2020,Calendar year,K02000001,United Kingdom,National,Primary,Nursery,One,Reception,LA,Locally maintained,75
+2020,Calendar year,K02000001,United Kingdom,National,Primary,Early years,One,Reception,LA,Locally maintained,44
+2020,Calendar year,K02000001,United Kingdom,National,Primary,Early  years,One,Reception,LA,Locally maintained,80
+2020,Calendar year,K02000001,United Kingdom,National,Secondary,Middle,One,Reception,LA,Locally maintained,62
+2020,Calendar year,K02000001,United Kingdom,National,Secondary,Secondary,One,Reception,LA,Locally maintained,89
+2020,Calendar year,K02000001,United Kingdom,National,Primary,Nursery,One,One to two,LA,Locally maintained,97
+2020,Calendar year,K02000001,United Kingdom,National,Primary,Early years,One,One to two,LA,Locally maintained,41
+2020,Calendar year,K02000001,United Kingdom,National,Prim  ary,Early years,One,One to two,LA,Locally maintained,17
+2020,Calendar year,K02000001,United Kingdom,National,Secondary,Middle,One,One to two,LA,Locally maintained,44
+2020,Calendar year,K02000001,United Kingdom,National,Second ary,Secondary,One,One to two,LA,Locally maintained,36
+2020,Calendar year,K02000001,United Kingdom,National,Primary,Nursery,Four,Ten,LA,Locally maintained,70
+2020,Calendar year,K02000001,United Kingdom,National,Primary,Early years,Four,Ten,LA,Locally maintained,17
+2020,Calendar year,K02000001,United Kingdom,National,Primary,Early  years,Four,Ten,LA,Locally maintained,79
+2020,Calendar year,K02000001,United Kingdom,National,Secondary,Middle,Four,Ten,LA,Locally maintained,34
+2020,Calendar year,K02000001,United Kingdom,National,Secondary,Secondary,Four,Ten,LA,Locally maintained,56
+2020,Calendar year,K02000001,United Kingdom,National,Primary,Nursery,Four,Eleven,LA,Locally maintained,57
+2020,Calendar year,K02000001,United Kingdom,National,Primary,Early years,Four,Eleven,LA,Locally  maintained,63
+2020,Calendar year,K02000001,United Kingdom,National,Primary,Early  years,Four,Eleven,LA,Locally maintained,59
+2020,Calendar year,K02000001,United Kingdom,National,Secondary,Middle,Four,Eleven,LA,Locally maintained,19
+2020,Calendar year,K02000001,United Kingdom,National,Secondary,Secondary,Four,Eleven,LA,Locally maintained,26
+2020,Calendar year,K02000001,United Kingdom,National,Primary,Nursery,One,Reception,LA,Regionally maintained,39
+2020,Calendar year,K02000001,United Kingdom,National,Primary,Early years,One,Reception,LA,Regionally  maintained,7
+2020,Calendar year,K02000001,United Kingdom,National,Primary,Early  years,One,Reception,LA,Regionally   maintained,13
+2020,Calendar year,K02000001,United Kingdom,National,Secondary,Middle,One,Reception,LA,Regionally maintained,12
+2020,Calendar year,K02000001,United Kingdom,National,Secondary,Secondary,One,Reception,LA,Regionally maintained,95
+2020,Calendar year,K02000001,United Kingdom,National,Primary,Nursery,On-e,One to two,LA,Regionally maintained,83
+2020,Calendar year,K02000001,United Kingdom,National,Primary,Early years,One,One to  two,L-A,Regionally maintained,32
+2020,Calendar year,K02000001,United Kingdom,National,Primary,Early  years,One,One to two,L  A,Regionally maintained,99
+2020,Calendar year,K02000001,United Kingdom,National,Secondary,Middle,One,One to two,LA,Regionally maintained,54
+2020,Calendar year,K02000001,United Kingdom,National,Secondary,Secondary,One,One to two,LA,Regionally maintained,14
+2020,Calendar year,K02000001,United Kingdom,National,Primary,Nursery,Four,Ten,LA,Regionally maintained,52
+2020,Calendar year,K02000001,United Kingdom,National,Primary,Early years,Four,Ten,LA,Regionally maintained,77
+2020,Calendar year,K02000001,United Kingdom,National,Primary,Early  years,Fo  ur,Ten,LA,Regionally maintained,5
+2020,Calendar year,K02000001,United Kingdom,National,Secondary,Middle,Fo  ur,Ten,LA,Regionally maintained,27
+2020,Calendar year,K02000001,United Kingdom,National,Secondary,Secondary,Four,Ten,LA,Regionally maintained,80
+2020,Calendar year,K02000001,United Kingdom,National,Primary,Nursery,Four,Eleven,LA,Regionally maintained,29
+2020,Calendar year,K02000001,United Kingdom,National,Primary,Early years,Four,Eleven,LA,Regionally maintained,95
+2020,Calendar year,K02000001,United Kingdom,National,Primary,Early  years,Four,Eleven,LA,Regionally maintained,19
+2020,Calendar year,K02000001,United Kingdom,National,Secondary,Middle,Four,Eleven,LA,Regionally maintained,70
+2020,Calendar year,K02000001,United Kingdom,National,Secondary,Secondary,Four,Eleven,LA,Regionally maintained,18
+2020,Calendar year,K02000001,United Kingdom,National,Primary,Nursery,One,Reception,Academy,MAT,84
+2020,Calendar year,K02000001,United Kingdom,National,Primary,Early years,One,Reception,Academy,MAT,63
+2020,Calendar year,K02000001,United Kingdom,National,Primary,Early  years,One,Reception,Academy,MAT,96
+2020,Calendar year,K02000001,United Kingdom,National,Secondary,Middle,One,Reception,Academy,MAT,95
+2020,Calendar year,K02000001,United Kingdom,National,Secondary,Secondary,One,Reception,Academy,MAT,1
+2020,Calendar year,K02000001,United Kingdom,National,Primary,Nursery,One,One to two,Academy,MAT,52
+2020,Calendar year,K02000001,United Kingdom,National,Primary,Early years,One,One to  two,Academy,MAT,1
+2020,Calendar year,K02000001,United Kingdom,National,Primary,Early  years,One,One to two,Academy,MAT,89
+2020,Calendar year,K02000001,United Kingdom,National,Secondary,Middle,One,One to two,Academy,MAT,25
+2020,Calendar year,K02000001,United Kingdom,National,Secondary,Secondary,One,One to two,Academy,MAT,47
+2020,Calendar year,K02000001,United Kingdom,National,Primary,Nursery,Four,Ten,Academy,MAT,41
+2020,Calendar year,K02000001,United Kingdom,National,Primary,Early years,Four,Ten,Academy,MAT,64
+2020,Calendar year,K02000001,United Kingdom,National,Primary,Early  years,Four,Ten,Academy,MAT,45
+2020,Calendar year,K02000001,United Kingdom,National,Secondary,Middle,Four,Ten,Academy,MAT,16
+2020,Calendar year,K02000001,United Kingdom,National,Secondary,Secondary,Four,Ten,Academy,MAT,2
+2020,Calendar year,K02000001,United Kingdom,National,Primary,Nursery,Four,Eleven,Academy,MAT,49
+2020,Calendar year,K02000001,United Kingdom,National,Primary,Early years,Four,Eleven,Academy,MAT,65
+2020,Calendar year,K02000001,United Kingdom,National,Primary,Early  years,Four,Eleven,Academy,MAT,59
+2020,Calendar year,K02000001,United Kingdom,National,Secondary,Middle,Four,Eleven,Academy,MAT,73
+2020,Calendar year,K02000001,United Kingdom,National,Secondary,Secondary,Four,Eleven,Academy,MAT,15
+2020,Calendar year,K02000001,United Kingdom,National,Primary,Nursery,One,Reception,Academy,MAT,26
+2020,Calendar year,K02000001,United Kingdom,National,Primary,Early years,One,Reception,Academy,MAT,8
+2020,Calendar year,K02000001,United Kingdom,National,Primary,Early  years,One,Reception,Academy,MAT,1
+2020,Calendar year,K02000001,United Kingdom,National,Secondary,Middle,One,Reception,Academy,MAT,39
+2020,Calendar year,K02000001,United Kingdom,National,Secondary,Secondary,One,Reception,Academy,MAT,72
+2020,Calendar year,K02000001,United Kingdom,National,Primary,Nursery,One,One to two,Academy,MAT,46
+2020,Calendar year,K02000001,United Kingdom,National,Primary,Early years,One,One to  two,Academy,MAT,98
+2020,Calendar year,K02000001,United Kingdom,National,Primary,Early  years,One,One to two,Academy,MAT,57
+2020,Calendar year,K02000001,United Kingdom,National,Secondary,Middle,One,One to two,Academy,MAT,70
+2020,Calendar year,K02000001,United Kingdom,National,Secondary,Secondary,One,One to two,Academy,MAT,43
+2020,Calendar year,K02000001,United Kingdom,National,Primary,Nursery,Four,Ten,Academy,MAT,95
+2020,Calendar year,K02000001,United Kingdom,National,Primary,Early years,Four,Ten,Academy,MAT,83
+2020,Calendar year,K02000001,United Kingdom,National,Primary,Early  years,Four,Ten,Academy,MAT,60
+2020,Calendar year,K02000001,United Kingdom,National,Secondary,Middle,Four,Ten,Academy,MAT,4
+2020,Calendar year,K02000001,United Kingdom,National,Secondary,Secondary,Four,Ten,Academy,MAT,92
+2020,Calendar year,K02000001,United Kingdom,National,Primary,Nursery,Four,Eleven,Academy,MAT,18
+2020,Calendar year,K02000001,United Kingdom,National,Primary,Early years,Four,Eleven,Academy,MAT,32
+2020,Calendar year,K02000001,United Kingdom,National,Primary,Early  years,Four,Eleven,Academy,MAT,56
+2020,Calendar year,K02000001,United Kingdom,National,Secondary,Middle,Four,Eleven,Academy,MAT,100
+2020,Calendar year,K02000001,United Kingdom,National,Secondary,Secondary,Four,Eleven,Academy,MAT,12
+2020,Calendar year,K02000001,United Kingdom,National,Primary,Nursery,One,Reception,Academy,Sponsor,38
+2020,Calendar year,K02000001,United Kingdom,National,Primary,Early years,One,Reception,Academy,Sponsor,51
+2020,Calendar year,K02000001,United Kingdom,National,Primary,Early  years,One,Reception,Academy,Sponsor,10
+2020,Calendar year,K02000001,United Kingdom,National,Secondary,Middle,One,Reception,Academy,Sponsor,12
+2020,Calendar year,K02000001,United Kingdom,National,Secondary,Secondary,One,Reception,Academy,Sponsor,34
+2020,Calendar year,K02000001,United Kingdom,National,Primary,Nursery,One,One to two,Academy,Sponsor,19
+2020,Calendar year,K02000001,United Kingdom,National,Primary,Early years,One,One to  two,Academy,Sponsor,86
+2020,Calendar year,K02000001,United Kingdom,National,Primary,Early  years,One,One to two,Academy,Sponsor,45
+2020,Calendar year,K02000001,United Kingdom,National,Secondary,Middle,One,One to two,Academy,Sponsor,40
+2020,Calendar year,K02000001,United Kingdom,National,Secondary,Secondary,One,One to two,Academy,Sponsor,67
+2020,Calendar year,K02000001,United Kingdom,National,Primary,Nursery,Four,Ten,Academy,Sponsor,36
+2020,Calendar year,K02000001,United Kingdom,National,Primary,Early years,Four,Ten,Academy,Sponsor,31
+2020,Calendar year,K02000001,United Kingdom,National,Primary,Early  years,Four,Ten,Academy,Sponsor,79
+2020,Calendar year,K02000001,United Kingdom,National,Secondary,Middle,Four,Ten,Academy,Sponsor,77
+2020,Calendar year,K02000001,United Kingdom,National,Secondary,Secondary,Four,Ten,Academy,Sponsor,56
+2020,Calendar year,K02000001,United Kingdom,National,Primary,Nursery,Four,Eleven,Academy,Sponsor,50
+2020,Calendar year,K02000001,United Kingdom,National,Primary,Early years,Four,Eleven,Academy,Sponsor,99
+2020,Calendar year,K02000001,United Kingdom,National,Primary,Early  years,Four,Eleven,Academy,Sponsor,8
+2020,Calendar year,K02000001,United Kingdom,National,Secondary,Middle,Four,Eleven,Academy,Sponsor,34
+2020,Calendar year,K02000001,United Kingdom,National,Secondary,Secondary,Four,Eleven,Academy,Sponsor,10
+2020,Calendar year,K02000001,United Kingdom,National,Primary,Nursery,One,Reception,Academy,Sponsor,25
+2020,Calendar year,K02000001,United Kingdom,National,Primary,Early years,One,Reception,Academy,Sponsor,20
+2020,Calendar year,K02000001,United Kingdom,National,Primary,Early  years,One,Reception,Academy,Sponsor,38
+2020,Calendar year,K02000001,United Kingdom,National,Secondary,Middle,One,Reception,Academy,Sponsor,78
+2020,Calendar year,K02000001,United Kingdom,National,Secondary,Secondary,One,Reception,Academy,Sponsor,47
+2020,Calendar year,K02000001,United Kingdom,National,Primary,Nursery,One,One to two,Academy,Sponsor,19
+2020,Calendar year,K02000001,United Kingdom,National,Primary,Early years,One,One to  two,Academy,Sponsor,94
+2020,Calendar year,K02000001,United Kingdom,National,Primary,Early  years,One,One to two,Academy,Sponsor,50
+2020,Calendar year,K02000001,United Kingdom,National,Secondary,Middle,One,One to two,Academy,Sponsor,15
+2020,Calendar year,K02000001,United Kingdom,National,Secondary,Secondary,One,One to two,Academy,Sponsor,30
+2020,Calendar year,K02000001,United Kingdom,National,Primary,Nursery,Four,Ten,Academy,Sponsor,24
+2020,Calendar year,K02000001,United Kingdom,National,Primary,Early years,Four,Ten,Academy,Sponsor,66
+2020,Calendar year,K02000001,United Kingdom,National,Primary,Early  years,Four,Ten,Academy,Sponsor,53
+2020,Calendar year,K02000001,United Kingdom,National,Secondary,Middle,Four,Ten,Academy,Sponsor,5
+2020,Calendar year,K02000001,United Kingdom,National,Secondary,Secondary,Four,Ten,Academy,Sponsor,5
+2020,Calendar year,K02000001,United Kingdom,National,Primary,Nursery,Four,Eleven,Academy,Sponsor,22
+2020,Calendar year,K02000001,United Kingdom,National,Primary,Early years,Four,Eleven,Academy,Sponsor,89
+2020,Calendar year,K02000001,United Kingdom,National,Primary,Early  years,Four,Eleven,Academy,Sponsor,66
+2020,Calendar year,K02000001,United Kingdom,National,Secondary,Middle,Four,Eleven,Academy,Sponsor,54
+2020,Calendar year,K02000001,United Kingdom,National,Secondary,Secondary,Four,Eleven,Academy,Sponsor,15
+2020,Calendar year,K02000001,United Kingdom,National,Total,Total,Total,Total,Total,Total,45
