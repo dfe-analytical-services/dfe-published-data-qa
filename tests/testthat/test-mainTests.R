@@ -182,7 +182,7 @@ test_that("filter_group", {
 # test_that("filter_group_match", {
 #   expect_equal(testIndividualTest(pathStart, "filter_group_match"), "FAIL")
 # })
-# Potentially a redundant check as I can't make a file that would fail this get to this stage
+# Potentially a redundant check as I can't make a file that would fail this, get to this stage
 
 # filter_group_level -------------------------------------------------------------------------------------------------------
 
@@ -207,6 +207,19 @@ test_that("filter_group_duplicate", {
 test_that("indicator_grouping", {
   expect_equal(testIndividualTest(pathStart, "indicator_grouping"), "FAIL")
 })
+
+# filter_group_stripped -------------------------------------------------------------------------------------------------------
+
+test_that("filter_group_stripped", {
+  expect_equal(testIndividualTest(pathStart, "filter_group_stripped"), "FAIL")
+})
+
+# indicator_group_stripped -------------------------------------------------------------------------------------------------------
+
+test_that("indicator_group_stripped", {
+  expect_equal(testIndividualTest(pathStart, "indicator_group_stripped"), "FAIL")
+})
+
 
 # indicator_unit -------------------------------------------------------------------------------------------------------
 

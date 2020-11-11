@@ -22,8 +22,7 @@ GitHub Actions provide CI by running the automated tests and checks for code sty
 
 ## Project functions
 
-The function `tidy_code()` is created in the Rprofile script and therefore is always available 
-in the RStudio console to tidy code according to tidyverse styling using the styler package.
+The function `tidy_code()` is created in the Rprofile script and therefore is always available in the RStudio console to tidy code according to tidyverse styling using the styler package. This function also helps to test the running of the code and for basic syntax errors such as missing commas and brackets.
 
 The function `run_tests_locally()` is created in the Rprofile script and is available in the RStudio console at all times to run both the unit and ui tests. Note that 003.json is currently failing locally. This is expected.
 

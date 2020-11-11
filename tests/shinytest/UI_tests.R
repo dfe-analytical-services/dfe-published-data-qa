@@ -72,4 +72,8 @@ app$snapshot(items = list(output = c("progress_stage", "table_all_tests", "fail_
 app$setInputs(resetbutton = "click")
 
 # 10 - Reset button -------------------------------------------------------------------------------------------------------------------
-app$snapshot()
+app$snapshot(items = list(
+  input = c("resetbutton", "screenbutton", "shinyjs-resettable-datafile", "shinyjs-resettable-metafile"),
+  output = TRUE,
+  export = TRUE
+))
