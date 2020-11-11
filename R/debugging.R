@@ -9,6 +9,9 @@ debugReadFile <- function(file) {
   return(output)
 }
 
+datafile <- debugReadFile("C:/R_Projects/dfe-published-data-qa/tests/shinytest/test-data/passes_everything.csv")
+metafile <- debugReadFile("C:/R_Projects/dfe-published-data-qa/tests/shinytest/test-data/passes_everything.meta.csv")
+
 # Put the file paths of the files in here
 datafile <- debugReadFile("C:/R_Projects/dfe-published-data-qa/tests/testthat/preCheck2/time_validation.csv")
 metafile <- debugReadFile("C:/R_Projects/dfe-published-data-qa/tests/testthat/preCheck2/time_validation.meta.csv")

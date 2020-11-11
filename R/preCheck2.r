@@ -303,13 +303,15 @@ col_type <- function(meta) {
 # checking for any non-numeric characters in the time_period column
 
 time_validation <- function(data) {
-  present_time_periods <- unique(data$time_period)
+  raw_time_periods <- unique(data$time_period)
 
-  pre_result <- stack(suppressWarnings(sapply(present_time_periods, as.numeric)))
+  numeric_only_time_periods <- lapply(raw_time_periods, gsub, pattern = "[^[:digit:]]", replacement = "") %>%
+    unlist() %>%
+    as.numeric()
 
-  non_numeric_values <- pre_result %>%
-    filter(is.na(values)) %>%
-    pull(ind)
+  comparison <- raw_time_periods == numeric_only_time_periods
+
+  non_numeric_values <- raw_time_periods[which(comparison %in% FALSE)]
 
   if (length(non_numeric_values) == 0) {
     output <- list(
