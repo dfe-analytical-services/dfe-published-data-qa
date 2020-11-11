@@ -1,33 +1,5 @@
 {
   "input": {
-    "datafile": {
-      "name": [
-        "fails_everything_ancillary.csv"
-      ],
-      "size": [
-        2206
-      ],
-      "type": [
-        "text/csv"
-      ],
-      "datapath": [
-        "0.csv"
-      ]
-    },
-    "metafile": {
-      "name": [
-        "fails_everything_ancillary.meta.csv"
-      ],
-      "size": [
-        386
-      ],
-      "type": [
-        "text/csv"
-      ],
-      "datapath": [
-        "0.csv"
-      ]
-    },
     "resetbutton": 8,
     "screenbutton": 1,
     "shinyjs-resettable-datafile": {
@@ -252,8 +224,5 @@
 
       ]
     }
-  },
-  "export": {
-
   }
 }
