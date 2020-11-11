@@ -44,3 +44,9 @@ test_that("utf8", {
 test_that("col_type", {
   expect_equal(testIndividualTest(pathStart, "col_type"), "FAIL")
 })
+
+# time_validation -------------------------------------------------------------------------------------------------------
+
+test_that("time_validation", {
+  expect_equal(testIndividualTest(pathStart, "time_validation"), "FAIL")
+})

@@ -475,7 +475,7 @@ blanks_indicators <- function(data, meta) {
 }
 
 # time_period -------------------------------------
-# checking that if the time_identifer is X, then the time_period is Y
+# checking that if the time_identifier is X, then the time_period is Y
 
 time_period <- function(data) {
   base_identifier <- data$time_identifier[1]

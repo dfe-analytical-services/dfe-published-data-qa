@@ -1,5 +1,5 @@
 # Debugging script
-# Use this script to manually read in and screen files for those occassions when the app breaks without a useul error
+# Use this script to manually read in and screen files for those occasions when the app breaks without a useful error
 
 source("global.r")
 
@@ -9,9 +9,9 @@ debugReadFile <- function(file) {
   return(output)
 }
 
-# Put the file paths of the problematic files in here
-datafile <- debugReadFile("C:/R_Projects/dfe-published-data-qa/tests/testthat/otherData/multiple_stripped_filter_groups.csv")
-metafile <- debugReadFile("C:/R_Projects/dfe-published-data-qa/tests/testthat/otherData/multiple_stripped_filter_groups.meta.csv")
+# Put the file paths of the files in here
+datafile <- debugReadFile("C:/R_Projects/dfe-published-data-qa/tests/testthat/preCheck2/time_validation.csv")
+metafile <- debugReadFile("C:/R_Projects/dfe-published-data-qa/tests/testthat/preCheck2/time_validation.meta.csv")
 
 results <- screenFiles(datafile$filename, metafile$filename, datafile$fileSeparator, metafile$fileSeparator, datafile$fileCharacter, metafile$fileCharacter, datafile$mainFile, metafile$mainFile)
 
