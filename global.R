@@ -164,7 +164,7 @@ ancillary_box <- function() {
         class = "panel-body",
         style = "padding-left:27px",
         "The data file only includes geographic levels that are going to be ignored by EES, see our  ",
-        a(href = "https://rsconnect/rsc/stats-production-guidance/ees.html", "guidance on uploading ancillary files", target = "_blank"),
+        a(href = "https://rsconnect/rsc/stats-production-guidance/ees.html#Ancillary_file_uploads", "guidance on uploading ancillary files", target = "_blank"),
         " for more information on how to upload as an ancillary file instead of via the normal data route."
       )
     )
