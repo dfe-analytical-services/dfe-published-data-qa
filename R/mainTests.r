@@ -1646,12 +1646,12 @@ indicator_dp_completed <- function(meta) {
   } else {
     if (length(blankIndicators) == 1) {
       output <- list(
-        "message" = paste0("The following indicator does not have a specified number of dp in the metadata file: '", paste(blankIndicators, collapse = "', '"), "', this should be explicity stated where possible."),
+        "message" = paste0(paste(blankIndicators, collapse = "', '")," does not have a specified number of dp in the metadata file, this should be explicity stated where possible."),
         "result" = "ADVISORY"
       )
     } else {
       output <- list(
-        "message" = paste0("The following indicators do not have a specified number of dp in the metadata file: '", paste(blankIndicators, collapse = "', '"), "', this should be explicity stated where possible."),
+        "message" = paste0("The following indicators do not have a specified number of decimal places in the indicator_dp column of metadata file: <br> - '", paste(blankIndicators, collapse = "', '"), "'. <br> - These should be explicity stated where possible."),
         "result" = "ADVISORY"
       )
     }
