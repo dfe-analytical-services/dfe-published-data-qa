@@ -9,18 +9,15 @@
 </h1>
 
 <p align="center">
-  [Introduction](#introduction) |
-  [Requirements](#requirements) |
-  [Notes](#notes) |
-  [How to use](#how-to-use) |
-  [Contact](#contact) 
+  <a href="#introduction">Introduction</a> |
+  <a href="#requirements">Requirements</a> |
+  <a href="#how-to-use">How to use</a> |
+  <a href="#contact">Contact</a>
 </p>
 
 ---
 
 ## Introduction 
-
----
 
 A shiny app to provider a user friendly way to QA data files using centralised code. This is deployed via the DfE visual studio and rsconnect subscriptions. There are three environments, all accessible to DfE AD:
 
@@ -34,7 +31,6 @@ Code used to create functions and variables called by the global, server, and UI
 
 ## Requirements
 
----
 
 ### i. Software requirements 
 
@@ -44,15 +40,14 @@ Code used to create functions and variables called by the global, server, and UI
 
 ### ii. Programming skills required (for editing or troubleshooting)
 
-- R at an intermediate level, [DfE R training guide](https://dfe-analytical-services.github.io/r-training-course/){target="_blank"}
+- R at an intermediate level, [DfE R training guide](https://dfe-analytical-services.github.io/r-training-course/)
 
-  - Particularly [R Shiny](https://shiny.rstudio.com/){target="_blank"}
+  - Particularly [R Shiny](https://shiny.rstudio.com/)
   
 ---
 
 ## How to use
 
----
 
 ### Packages
 
@@ -92,6 +87,5 @@ The function `tidy_code()` is created in the Rprofile script and therefore is al
 
 ## Contact
 
----
 
 statistics.development@education.gov.uk
