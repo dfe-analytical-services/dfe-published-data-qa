@@ -42,7 +42,8 @@ mainTests <- function(data_character, meta_character, datafile, metafile) {
     indicator_unit(metafile), # active test
     indicator_unit_validation(metafile), # active test
     indicator_dp(metafile), # active test
-    indicator_dp_validation(metafile) # active test
+    indicator_dp_validation(metafile), # active test
+    indicator_dp_completed(metafile) # active test
   ),
   "stage" = "mainTests",
   "test" = c(activeTests$`R/mainTests.r`)
@@ -1071,7 +1072,7 @@ country_code <- function(data) {
         )
       } else {
         output <- list(
-          "message" = paste0("The following country_code values are invalid: '", paste0(invalid_values, collapse = "', '"), "'. <br> - We do not expect any country codes outside of those on the <a href='https://geoportal.statistics.gov.uk/datasets/countries-december-2018-names-and-codes-in-the-united-kingdom/data' target='_blank'>ONS Open Geography Portal</a>, or : for not available.."),
+          "message" = paste0("The following country_code values are invalid: '", paste0(invalid_values, collapse = "', '"), "'. <br> - We do not expect any country codes outside of those on the <a href='https://geoportal.statistics.gov.uk/datasets/countries-december-2018-names-and-codes-in-the-united-kingdom/data' target='_blank'>ONS Open Geography Portal</a>, or : for not available."),
           "result" = "FAIL"
         )
       }
@@ -1565,12 +1566,12 @@ indicator_unit_validation <- function(meta) {
   } else {
     if (length(invalid_indicatorunits) == 1) {
       output <- list(
-        "message" = paste0("The following invalid indicator unit is present in the metadata file: '", paste(invalid_indicatorunits, sep = "', '"), "'."),
+        "message" = paste0("The following invalid indicator unit is present in the metadata file: '", paste0(invalid_indicatorunits, collapse = "', '"), "'."),
         "result" = "FAIL"
       )
     } else {
       output <- list(
-        "message" = paste0("The following invalid indicator units are present in the metadata file: '", paste(invalid_indicatorunits, sep = "', '"), "'."),
+        "message" = paste0("The following invalid indicator units are present in the metadata file: '", paste0(invalid_indicatorunits, collapse = "', '"), "'."),
         "result" = "FAIL"
       )
     }
@@ -1621,6 +1622,37 @@ indicator_dp_validation <- function(meta) {
       output <- list(
         "message" = "The indicator_dp column must only contain numeric values or blanks in the metadata file.", # The following value is invalid: '", paste(invalid_values), "'."),
         "result" = "FAIL"
+      )
+    }
+  }
+
+  return(output)
+}
+
+# indicator_dp_completed -------------------------------------
+# indicator_dp should be completed for indicators
+
+indicator_dp_completed <- function(meta) {
+  blankIndicators <- meta %>%
+    filter(col_type == "Indicator") %>%
+    filter(is.na(indicator_dp)) %>%
+    pull(col_name)
+
+  if (length(blankIndicators) == 0) {
+    output <- list(
+      "message" = "The indicator_dp column is completed for all indicators.",
+      "result" = "PASS"
+    )
+  } else {
+    if (length(blankIndicators) == 1) {
+      output <- list(
+        "message" = paste0("The following indicator does not have a specified number of dp in the metadata file: '", paste(blankIndicators, collapse = "', '"), "', this should be explicity stated where possible."),
+        "result" = "ADVISORY"
+      )
+    } else {
+      output <- list(
+        "message" = paste0("The following indicators do not have a specified number of dp in the metadata file: '", paste(blankIndicators, collapse = "', '"), "', this should be explicity stated where possible."),
+        "result" = "ADVISORY"
       )
     }
   }
