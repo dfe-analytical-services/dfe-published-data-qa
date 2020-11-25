@@ -12,7 +12,7 @@
   <a href="#introduction">Introduction</a> |
   <a href="#requirements">Requirements</a> |
   <a href="#how-to-use">How to use</a> |
-  <a href="#contact">Contact</a> |
+  <a href="#contact">Contact</a>
 </p>
 
 ---
@@ -40,9 +40,9 @@ Code used to create functions and variables called by the global, server, and UI
 
 ### ii. Programming skills required (for editing or troubleshooting)
 
-- R at an intermediate level, [DfE R training guide](https://dfe-analytical-services.github.io/r-training-course/){target="_blank"}
+- R at an intermediate level, [DfE R training guide](https://dfe-analytical-services.github.io/r-training-course/)
 
-  - Particularly [R Shiny](https://shiny.rstudio.com/){target="_blank"}
+  - Particularly [R Shiny](https://shiny.rstudio.com/)
   
 ---
 
