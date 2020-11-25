@@ -64,11 +64,9 @@ Automated tests have been created using testthat and shinytest. All functions cr
 
 UI tests have been created using shinytest that test the app loads, that the reset button really does clear everything, and that files that we'd expect to hit each particular stage of the screening do so. More should be added over time as extra features are added.
 
-GitHub Actions provide CI by running the automated tests and checks for code styling, with badges in this README referring to the latest state of the master branch. The yaml files for these workflows can be found in the .github/workflows folder.
+GitHub Actions provide CI by running the automated tests and checks for code styling, with badges in this README referring to the latest state of the master branch. The yaml files for these workflows can be found in the `.github/workflows` folder.
 
 The function `run_tests_locally()` is created in the Rprofile script and is available in the RStudio console at all times to run both the unit and ui tests.
-
-In the `.github` folder there are workflow files that run the automated tests for all pushes to master and PR's. The automated tests cover everything that is run locally in the 
 
 ### Deployment
 
