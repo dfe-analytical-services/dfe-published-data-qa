@@ -77,7 +77,7 @@ R/profilingCode.r contains the outline of code to assist when profiling the app.
 
 ### Debugging
 
-There is a debugging script (named as such) in the R folder. This uses some of the main functions (readFile() and screenFiles()) to allow you to debug what is happening by running the core screening functions in the console, useful if screening a particular file crashes the app in an unknown way. This also usually brings up the traceback in RStudio, which often helps to pin down the culprit line of code.
+There is a debugging script (named as such) in the R folder. This uses the functions `readFile()` and `screenFiles()` to allow you to debug what is happening by running the core screening functions in the console, useful if screening a particular file crashes the app in an unknown way. This also usually brings up the traceback in RStudio, which often helps to pin down the culprit line of code.
 
 ### Code styling
 
