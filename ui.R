@@ -34,6 +34,8 @@ fluidPage(
           br(),
           "The code for this app can be found on ",
           a(href = "https://github.com/dfe-analytical-services/dfe-published-data-qa", "GitHub", target = "_blank", rel = "noopener noreferrer"),
+          br(),
+          br(),
           strong("How to use the app"),
           br(),
           "1.  Upload your data and associated metadata (.csv) files.",
