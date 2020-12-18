@@ -32,6 +32,8 @@ fluidPage(
           "for Official and National statistical publications. You should make sure that any data files you intend to publish pass all of the data checks before uploading to Explore Education Statistics.",
           br(),
           br(),
+          "The code for this app can be found on ",
+          a(href = "https://github.com/dfe-analytical-services/dfe-published-data-qa", "GitHub", target = "_blank", rel = "noopener noreferrer"),
           strong("How to use the app"),
           br(),
           "1.  Upload your data and associated metadata (.csv) files.",
