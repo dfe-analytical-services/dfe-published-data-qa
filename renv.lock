@@ -455,6 +455,13 @@
       "Repository": "CRAN",
       "Hash": "ee4ed72d7a5047d9e73cf922ad66e9c9"
     },
+    "shinyFeedback": {
+      "Package": "shinyFeedback",
+      "Version": "0.3.0",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "6659e386a388a84ee2749e0d15e6934b"
+    },
     "shinyjs": {
       "Package": "shinyjs",
       "Version": "2.0.0",
