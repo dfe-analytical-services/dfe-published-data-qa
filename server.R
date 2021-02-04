@@ -16,27 +16,34 @@ server <- function(input, output, session) {
     dataUploaded = FALSE,
     metaUploaded = FALSE,
     screenfailed = FALSE,
-    showadvisory = FALSE
+    showadvisory = FALSE,
+    correctDataType = TRUE,
+    correctMetaType = TRUE
   )
 
   # File upload check ----------------------------------------------------------------------------
 
   observeEvent(input$datafile, {
-    
-    correct_type <- if_else(file_ext(input$datafile) == "csv", TRUE, FALSE)
-    shinyFeedback::feedbackDanger("datafile", !correct_type, "Data files must be in comma separated values format (.csv)")
-    req(correct_type, cancelOutput = TRUE)
-    
-    values$dataUploaded <- TRUE
+    values$correctDataType <- if_else(file_ext(input$datafile) == "csv", TRUE, FALSE)
+    if(tail(values$correctDataType, n = 1) == FALSE) {
+      values$dataUploaded <- FALSE
+      shinyFeedback::feedbackDanger("datafile", !values$correctDataType, "Data files must be in comma separated values format (.csv)")
+    } else {
+      hideFeedback("datafile")
+      values$dataUploaded <- TRUE
+    }
   })
 
   observeEvent(input$metafile, {
     
-    correct_type <- if_else(file_ext(input$metafile) == "csv", TRUE, FALSE)
-    shinyFeedback::feedbackDanger("metafile", !correct_type, "Metadata files must be in comma separated values format (.csv)")
-    req(correct_type, cancelOutput = TRUE)
-    
-    values$metaUploaded <- TRUE
+    values$correctMetaType <- if_else(file_ext(input$metafile) == "csv", TRUE, FALSE)
+    if(tail(values$correctMetaType, n = 1) == FALSE) {
+      shinyFeedback::feedbackDanger("metafile", !values$correctMetaType, "Metadata files must be in comma separated values format (.csv)")
+      values$metaUploaded <- FALSE
+    } else {
+      hideFeedback("metafile")
+      values$metaUploaded <- TRUE
+    }
   })
 
   output$file_exists <- reactive({
