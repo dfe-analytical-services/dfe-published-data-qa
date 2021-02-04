@@ -16,7 +16,7 @@ fluidPage(
   hidden(
     div(
       id = "app-content",
-      
+
       # Application title -----------------------------------------------------------------------------------
 
       titlePanel(div(HTML("DfE published data QA <h4>QA your data files before uploading to Explore Education Statistics for publication</h4>")), windowTitle = "DfE data QA"),

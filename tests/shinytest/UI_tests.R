@@ -77,3 +77,23 @@ app$snapshot(items = list(
   output = TRUE,
   export = TRUE
 ))
+
+# 11 - Upload invalid data file -------------------------------------------------------------------------------------------------------------------
+app$uploadFile(datafile = "test-data/passes_everything.xlsx")
+app$snapshot(screenshot = TRUE)
+
+# 12 - Upload invalid data file -------------------------------------------------------------------------------------------------------------------
+app$uploadFile(metafile = "test-data/passes_everything.meta.xlsx")
+app$snapshot(screenshot = TRUE)
+
+# 13 - Upload valid data file -------------------------------------------------------------------------------------------------------------------
+app$uploadFile(datafile = "test-data/passes_everything.csv")
+app$snapshot(screenshot = TRUE)
+
+# 14 - Upload valid data file -------------------------------------------------------------------------------------------------------------------
+app$uploadFile(metafile = "test-data/passes_everything.meta.csv")
+app$snapshot(screenshot = TRUE)
+
+# 15 - Screen the passes everything files
+app$setInputs(screenbutton = "click")
+app$snapshot(items = list(output = c("progress_stage", "table_all_tests")))

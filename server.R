@@ -25,7 +25,7 @@ server <- function(input, output, session) {
 
   observeEvent(input$datafile, {
     values$correctDataType <- if_else(file_ext(input$datafile) == "csv", TRUE, FALSE)
-    if(tail(values$correctDataType, n = 1) == FALSE) {
+    if (tail(values$correctDataType, n = 1) == FALSE) {
       values$dataUploaded <- FALSE
       shinyFeedback::feedbackDanger("datafile", !values$correctDataType, "Data files must be in comma separated values format (.csv)")
     } else {
@@ -35,9 +35,8 @@ server <- function(input, output, session) {
   })
 
   observeEvent(input$metafile, {
-    
     values$correctMetaType <- if_else(file_ext(input$metafile) == "csv", TRUE, FALSE)
-    if(tail(values$correctMetaType, n = 1) == FALSE) {
+    if (tail(values$correctMetaType, n = 1) == FALSE) {
       shinyFeedback::feedbackDanger("metafile", !values$correctMetaType, "Metadata files must be in comma separated values format (.csv)")
       values$metaUploaded <- FALSE
     } else {
