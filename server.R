@@ -22,10 +22,18 @@ server <- function(input, output, session) {
   # File upload check ----------------------------------------------------------------------------
 
   observeEvent(input$datafile, {
+    
+    correct_type <- if_else(file_ext(input$dataset) == "csv", TRUE, FALSE)
+    shinyFeedback::feedbackDanger("dataset", !correct_type, "Data files must be saved in ")
+    req(correct_type, cancelOutput = TRUE)
+    
     values$dataUploaded <- TRUE
   })
 
   observeEvent(input$metafile, {
+    
+    
+    
     values$metaUploaded <- TRUE
   })
 
