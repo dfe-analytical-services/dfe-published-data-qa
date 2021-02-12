@@ -126,184 +126,6 @@ server <- function(input, output, session) {
       output$meta_cols <- renderText({
         paste0("Columns - ", cs_num(meta$mainFile %>% ncol()))
       })
-      
-      
-      
-      
-      
-      # QA page stuff
-      # referring to meta and data only seem to work if the code is places in this isolate()
-      # should check if it ruins any of the fancy performance improvement stuff
-      
-      output$meta_table <- renderTable({
-        meta$mainFile
-      })
-      
-      output$data_preview <- renderTable({
-        head(data$mainFile)
-      })
-      
-      output$geog_coverage <- renderTable({
-        unique(data$mainFile$geographic_level)
-      })
-      
-      output$time_coverage <- renderTable({
-        unique(data$mainFile$time_period)
-      })
-      
-      output$filters <- renderTable({
-        meta$mainFile %>%
-        filter(col_type == "Filter") %>%
-        select(col_name)
-      })
-      
-      output$indicators <- renderTable({
-        meta$mainFile %>%
-          filter(col_type == "Indicator") %>%
-          select(col_name)
-      })
-      
-
-      output$geog_time_perms <- renderTable({
-        
-        data$mainFile  %>% 
-          count(time_period, geographic_level) %>%
-          mutate(n = replace(n, n >0, "Y")) %>%
-          pivot_wider(names_from = time_period, values_from = n, values_fill = "N")
-        
-      }) 
-      
-      
-      
-      # Checking if numbers add up
-      # This is just an example based on passes_everything and will need tons of work to make sure it's flexible enough for any data file
-      output$agg_check <- renderTable({ 
-        
-        data <- data$mainFile %>% 
-          group_by(geographic_level, time_period, school_phase, school_type) %>% 
-          summarise (aggregate_number = sum(enrolments)) %>% # sum(get(enrolments))) %>% 
-          filter(school_type == "State-funded primary" & school_phase == "Individual") %>%
-          pivot_wider(names_from = geographic_level, values_from = aggregate_number) #%>%
-          #spread(key = geographic_level, value = aggregate_number) %>%
-          #select(-school_type)
-        
-        check = function(dataset, id = "time_period"){
-          years = dataset[,id]
-          dataset[,id] = NULL
-          dataset$match = do.call(pmax,as.list(dataset)) == do.call(pmin,as.list(dataset))
-          dataset[,id] = years
-
-          dataset <- dataset %>%
-            select(time_period, everything()) %>%
-            mutate(match = ifelse(match == TRUE, "MATCH", "NO MATCH"))
-
-          return(dataset)
-        }
-
-        output_data <- check(data)
-
-        return(output_data)
-        
-      }) 
-      
-      
-      ## Scatter plot
-      
-      
-      output$testing <- renderTable({ 
-        
-        latest_year_data <- data$mainFile  %>% 
-          filter(geographic_level == "Local authority" & school_type == "State-funded primary" & school_phase == "Individual") %>%  
-          dplyr::select(time_period,la_name,enrolments) %>%
-          filter(time_period == 201718)
-        
-        var_column_title_latest <- colnames(latest_year_data)[1] 
-        
-        previous_year_data <- data$mainFile  %>% 
-          filter(geographic_level == "Local authority" & school_type == "State-funded primary" & school_phase == "Individual") %>%  
-          dplyr::select(time_period,la_name,enrolments) %>%
-          filter(time_period == 201617)
-        
-        
-        var_column_title_previous <- colnames(previous_year_data)[1]
-        
-       merge(x = latest_year_data , y =  previous_year_data , by = c("la_name"), all = TRUE)
-        
-        
-      })
-      
-      output$scatter <- renderPlot({ 
-        
-
-        latest_year_data <- data$mainFile  %>% 
-          filter(geographic_level == "Local authority") %>%  # & school_type == "State-funded primary" & school_phase == "Individual") %>%  
-          dplyr::select(time_period,la_name,enrolments, school_type) %>%
-          filter(time_period == 201718)
-        
-        var_column_title_latest <- colnames(latest_year_data)[1] 
-        
-        previous_year_data <- data$mainFile  %>% 
-          filter(geographic_level == "Local authority") %>%  # & school_type == "State-funded primary" & school_phase == "Individual") %>%  
-          dplyr::select(time_period,la_name,enrolments, school_type) %>%
-          filter(time_period == 201617)
-        
-        
-        var_column_title_previous <- colnames(previous_year_data)[1]
-        
-        multiple_year_data <- merge(x = latest_year_data , y =  previous_year_data , by = c("la_name", "school_type"), all = TRUE)
-        
-      
-        ggplot(multiple_year_data, aes(x= enrolments.x, #get(var_column_title_latest), 
-                                         y=enrolments.y, #get(var_column_title_previous), 
-                                         color=factor(school_type),
-                                         text = paste("LA name:", la_name, "<br>",
-                                                      "Latest year data:", enrolments.x, "<br>",
-                                                      "Previous year data:", enrolments.y, "<br>"))) +
-            # xlab(var_column_title_latest) +
-            # ylab(var_column_title_previous) +
-            geom_point()  +
-            geom_abline(intercept = 0, slope = 1,color="black",linetype = "dashed") +
-            scale_y_continuous(limits = c(0, max(multiple_year_data[, enrolments.y]))) +
-            scale_x_continuous(limits = c(0, max(multiple_year_data[, enrolments.x]))) +
-            theme_minimal() 
-          
-        
-      })
-      
-      
-      
-      # Geog
-      # Time
-      # Filters
-      # Indicators
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      output$data_cols3 <- renderText({
-        paste0("Columns - ", cs_num(meta$mainFile %>% ncol()))
-      })
-      
-      
-    }) # isolate
 
     # File validation ---------------------------------------------------------------------------------
 
@@ -531,88 +353,102 @@ server <- function(input, output, session) {
 
     shinyjs::hideElement(id = "reset_button")
   })
-  
-  
-  
-  # QA further page ----------------------------------------------------------------------------
-  
+
+  # QA page ----------------------------------------------------------------------------
+
   observeEvent(input$qaFurther, {
-    
     shinyjs::hideElement(id = "results")
-    
+
     shinyjs::hideElement(id = "reset_button")
-    
+
     shinyjs::showElement(id = "qaResults")
-    
+
     shinyjs::showElement(id = "backToScreener")
-    
   })
-  
+
   observe({
-    toggle(condition = input$runQA, 
-           selector = c("#navbar li a[data-value=tab2]",
-                        "#navbar li a[data-value=tab3]")
+    toggle(
+      condition = input$runQA,
+      selector = c(
+        "#navbar li a[data-value=tab2]",
+        "#navbar li a[data-value=tab3]"
+      )
     )
   })
-  
+
   observeEvent(input$goback, {
-    
     shinyjs::hideElement(id = "backToScreener")
-    
+
     shinyjs::showElement(id = "reset_button")
-    
+
     shinyjs::showElement(id = "results")
+  })
+
+  
+  ## QA code ------------------------------------------------------------------------------
+  # referring to meta and data only seem to work if the code is places in this isolate()
+  # should check if it ruins any of the fancy performance improvement stuff
+  
     
+  # File previews tab? ------------------
+  
+  # Metadata preview -------------------------------------------------------------------
+  output$meta_table <- renderTable({
+    meta$mainFile
   })
   
-  # Coverage of data 
-  # Need a better way of accessing the data than this, I tried just referring to meta/data and it couldn't find it
+  # Data preview -----------------------------------------------------------------------
+  output$data_preview <- renderTable({
+    head(data$mainFile)
+  })
   
-  # output$meta_table <- renderTable({
-  #   
-  #   req(input$metafile)
-  #   read.csv(input$metafile$datapath)
-  #   
-  # })
-  # 
-  # 
-  # output$data_preview <- renderTable({
-  #   
-  #   req(input$metafile)
-  #   head(read.csv(input$datafile$datapath))
-  #   
-  # })
-  # 
-  # # output$geog_coverage <- renderTable({
-  # #   
-  # #   req(input$metafile)
-  # #   data <- read.csv(input$datafile$datapath)
-  # #   
-  # # })
-  #   
-  # 
-  # output$geog_coverage <- renderTable({
-  #   distinct(meta$mainFile$indicator_dp)
-  # })
-  # 
-  # output$testing <- renderTable({
-  #   meta$mainFile %>% ncol()
-  # })
-  # 
-  # 
-  # output$data_cols2 <- renderText({
-  #   paste0("Columns - ", cs_num(data$mainFile %>% ncol()))
-  # })
-  # 
-  # 
-  # # Geog
-  # # Time
-  # # Filters
-  # # Indicators
+  # Locations by time ------------------------------------------------------------------
+  output$geog_coverage <- renderTable({
+    unique(data$mainFile$geographic_level)
+  })
   
+  # Geography overview table -----------------------------------------------------------
+  output$geog_time_perms <- renderTable({
+    data$mainFile %>%
+      count(time_period, geographic_level) %>%
+      mutate(n = replace(n, n > 0, "Y")) %>%
+      pivot_wider(names_from = time_period, values_from = n, values_fill = "N")
+  })
   
+  # Time covered in the file -----------------------------------------------------------
+  output$time_coverage <- renderTable({
+    unique(data$mainFile$time_period)
+  })
   
+  # Filters and their levels -----------------------------------------------------------
+  showFilterLevels <- function(data, meta) {
+    filters <- meta %>%
+      filter(col_type == "Filter") %>%
+      pull(col_name)
+    
+    levelsTable <- function(filter) {
+      return(eval(parse(text = paste0("data %>% select(", filter, ") %>% distinct()"))))
+    }
+    
+    output <- lapply(filters, levelsTable)
+    
+    return(output)
+  }
   
+  output$filters <- renderTable({
+    showFilterLevels(data$mainFile, meta$mainFile)
+  })
+  
+  # Indicators present and summary stats -----------------------------------------------
+  output$indicators <- renderTable({
+    meta$mainFile %>%
+      filter(col_type == "Indicator") %>%
+      select(col_name)
+  })
+
+  }) # isolate
+  
+
   # showresults (shouldShow) ---------------------------------------------------------------------------------
   # Checking if results should show for when to show the screen button
 

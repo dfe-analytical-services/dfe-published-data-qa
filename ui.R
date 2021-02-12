@@ -182,67 +182,59 @@ fluidPage(
           # End of summarised results div
         ),
         # End of fluidRow
-        
+
         # QA pages -----------------------------------------------------------------------------------
-        
+
         shinyjs::hidden(div(
           id = "qaResults",
-          
-          tabsetPanel(id = "navbar",
-                      tabPanel(title = "QA guidance",
-                               value = "qaGuidancePage",
-                               h2("ADD GUIDANCE THINGS HERE"),
-                               br(),
-                               actionButton("runQA", "Run QA on datafiles")
-                      ),
-                      
-                      # Summary stats / sense checking
-                      # Extreme values
-                      # Sums and comparisons (yoy etc)
-                      # Missing data and suppressed cells (+duplicates etc)
-                      # Scatter-plots
-                      tabPanel(title = "Overview",
-                               value = "tab2",
-                               h2("What's in this file"),
-                               
-                               "Geography coverage",
-                               tableOutput("geog_coverage"),
-                               "Time coverage",
-                               tableOutput("time_coverage"),
-                               
-                               "What geography/time combinations exist",
-                               tableOutput("geog_time_perms"),
-                               
-                               "Filters",
-                               tableOutput("filters"),
-                               "Indicators",
-                               tableOutput("indicators"),
-                               
-                               
-                               "View metadata",
-                               tableOutput("meta_table"),
-                               "Preview datafile",
-                               tableOutput("data_preview"),
-                               br()
-                      ),
-                      tabPanel(title = "Indicator info",
-                               value = "tab3",
-                               
-                               "Pick an indicator",
-                               br(),
-                               "dropdown goes here",
-                               br(),
-                               "Add some QA stuff",
-                               
-                               tableOutput("agg_check"),
-                               
-                               plotOutput("scatter"),
-                               
-                               #tableOutput("testing"),
-                               
-                               br(),
-                               h1("Extreme values")
-                      )
+
+          tabsetPanel(
+            id = "navbar",
+            tabPanel(
+              title = "QA guidance",
+              value = "qaGuidancePage",
+              h2("ADD GUIDANCE THINGS HERE"),
+              br(),
+              actionButton("runQA", "Run QA on datafiles")
+            ),
+            tabPanel(
+              title = "File previews",
+              value = "tab2",
+              "View metadata",
+              tableOutput("meta_table"),
+              "Preview datafile",
+              tableOutput("data_preview"),
+            ),
+            tabPanel(
+              title = "Observational units",
+              value = "tab3",
+              h2("What's in this file"),
+              
+              "Geography coverage",
+              tableOutput("geog_coverage"),
+              "Time coverage",
+              tableOutput("time_coverage"),
+              
+              "What geography/time combinations exist",
+              tableOutput("geog_time_perms")
+            ),
+            tabPanel(
+              "Filters present",
+              tableOutput("filters"),
+              br(),
+              "Filter levels",
+              br(),
+              "Filter combinations missing (on trello/github issue)"
+            ),
+            tabPanel(
+              title = "Indicator info",
+              value = "tab5",
+
+              "Indicators present",
+              tableOutput("indicators"),
+              "Indicator summary stats",
+              br()
+            )
           )
           # End of tabsetPanel
         ))
