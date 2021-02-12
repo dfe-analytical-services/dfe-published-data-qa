@@ -433,6 +433,11 @@ server <- function(input, output, session) {
 
     # Show reset button
     shinyjs::showElement(id = "reset_button", anim = TRUE, animType = "fade", time = 1.5)
+    
+    # Select the screening report tab panel
+    
+    updateTabsetPanel(session, "trendy_tabs", selected = "tab1")
+    
   })
 
   # Reset button ----------------------------------------------------------------------------
