@@ -469,6 +469,26 @@ server <- function(input, output, session) {
     })
 
     # Add summary stats
+    
+    
+    output$indicators <- renderTable({
+      meta$mainFile %>%
+        filter(col_type == "Indicator") %>%
+        select(col_name)
+    })
+    
+    output$indicator_summary_stats <- renderTable({
+      
+     indicators <- meta$mainFile %>% filter(col_type == "Indicator") %>% pull(col_name)
+     indicator_data <-  data$mainFile %>% select(all_of(indicators))
+     indicator_data %>%
+     summarise(across(everything(), list(min = min, max = max))) %>% 
+     pivot_longer(everything(), names_to = c("indicator", "measure"), names_pattern = "(.*)_(.*)") %>%  
+     pivot_wider(names_from = "measure")
+     
+    })
+
+    
   }) # isolate
 
   # showresults (shouldShow) ---------------------------------------------------------------------------------

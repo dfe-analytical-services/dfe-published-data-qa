@@ -225,6 +225,7 @@ fluidPage(
                           "Indicators present",
                           tableOutput("indicators"),
                           "Indicator summary stats",
+                          tableOutput("indicator_summary_stats"),
                           br()
                         )
                         
