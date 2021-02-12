@@ -192,14 +192,14 @@ fluidPage(
             id = "navbar",
             tabPanel(
               title = "QA guidance",
-              value = "qaGuidancePage",
+              value = "qaGuidanceTab",
               h2("ADD GUIDANCE THINGS HERE"),
               br(),
               actionButton("runQA", "Run QA on datafiles")
             ),
             tabPanel(
               title = "File previews",
-              value = "tab2",
+              value = "previewTab",
               "View metadata",
               tableOutput("meta_table"),
               "Preview datafile",
@@ -207,18 +207,20 @@ fluidPage(
             ),
             tabPanel(
               title = "Observational units",
-              value = "tab3",
+              value = "obUnitTab",
               h2("What's in this file"),
-              
+
               "Geography coverage",
               tableOutput("geog_coverage"),
               "Time coverage",
               tableOutput("time_coverage"),
-              
+
               "What geography/time combinations exist",
               tableOutput("geog_time_perms")
             ),
             tabPanel(
+              title = "Filter overview",
+              value = "filtersTab",
               "Filters present",
               tableOutput("filters"),
               br(),
@@ -228,7 +230,7 @@ fluidPage(
             ),
             tabPanel(
               title = "Indicator info",
-              value = "tab5",
+              value = "indicatorsTab",
 
               "Indicators present",
               tableOutput("indicators"),

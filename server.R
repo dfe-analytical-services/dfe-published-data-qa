@@ -127,327 +127,326 @@ server <- function(input, output, session) {
         paste0("Columns - ", cs_num(meta$mainFile %>% ncol()))
       })
 
-    # File validation ---------------------------------------------------------------------------------
+      # File validation ---------------------------------------------------------------------------------
 
-    screeningOutput <- screenFiles(inputData$name, inputMeta$name, data$fileSeparator, meta$fileSeparator, data$fileCharacter, meta$fileCharacter, data$mainFile, meta$mainFile)
+      screeningOutput <- screenFiles(inputData$name, inputMeta$name, data$fileSeparator, meta$fileSeparator, data$fileCharacter, meta$fileCharacter, data$mainFile, meta$mainFile)
 
-    all_results <- screeningOutput$results
+      all_results <- screeningOutput$results
 
-    output$progress_stage <- renderImage(
-      {
-        screeningOutput$progress_stage
-      },
-      deleteFile = FALSE
-    )
+      output$progress_stage <- renderImage(
+        {
+          screeningOutput$progress_stage
+        },
+        deleteFile = FALSE
+      )
 
-    output$progress_message <- renderText({
-      screeningOutput$progress_message
+      output$progress_message <- renderText({
+        screeningOutput$progress_message
+      })
+
+      # Summary stats ---------------------------------------------------------------------------------
+      # numberActiveTests created in global.r file
+
+      isolate({
+        run_tests <- all_results %>% nrow()
+
+        ignored_tests <- all_results %>%
+          filter(result == "IGNORE") %>%
+          nrow()
+
+        failed_tests <- all_results %>%
+          filter(result == "FAIL") %>%
+          nrow()
+
+        advisory_tests <- all_results %>%
+          filter(result == "ADVISORY") %>%
+          nrow()
+
+        ancillary_tests <- all_results %>%
+          filter(result == "ANCILLARY") %>%
+          nrow()
+
+        combined_tests <- advisory_tests + ancillary_tests
+
+        passed_tests <- all_results %>%
+          filter(result == "PASS") %>%
+          nrow()
+
+        leftover_tests <- numberActiveTests - run_tests
+
+        output$summary_text <- renderText({
+          paste0("Of all ", numberActiveTests, " tests, ", run_tests, " were successfully ran against the files, the results of these were:")
+        })
+
+        output$sum_failed_tests <- renderText({
+          summarise_stats(failed_tests, "failed")
+        })
+
+        output$sum_combined_tests <- renderText({
+          summarise_stats(combined_tests, "with advisory notes")
+        })
+
+        output$sum_passed_tests <- renderText({
+          summarise_stats(passed_tests, "passed")
+        })
+
+        output$sum_ignored_tests <- renderText({
+          summarise_stats(ignored_tests, "not applicable to the data")
+        })
+
+        # Top lines for results ---------------------------------------------------------------------------------
+
+        output$num_failed_tests <- renderText({
+          summarise_stats(failed_tests, "failed")
+        })
+
+        output$num_advisory_tests <- renderText({
+          summarise_stats(advisory_tests, "with recommendations")
+        })
+
+        output$all_tests <- renderText({
+          paste0("Full breakdown of the ", run_tests, " tests that were ran against the files")
+        })
+
+        # Main outputs for results ---------------------------------------------------------------------------------
+
+        output$table_failed_tests <- renderTable(
+          {
+            filter(all_results, result == "FAIL") %>% select(message)
+          },
+          sanitize.text.function = function(x) x,
+          include.colnames = FALSE
+        )
+
+        output$table_advisory_tests <- renderTable(
+          {
+            filter(all_results, result == "ADVISORY") %>% select(message)
+          },
+          sanitize.text.function = function(x) x,
+          include.colnames = FALSE
+        )
+
+        output$table_all_tests <- renderTable(
+          {
+            all_results %>% select(message, result)
+          },
+          sanitize.text.function = function(x) x,
+          include.colnames = FALSE
+        )
+
+        # UI blocks (result dependent) ---------------------------------------------------------------------------------
+
+        if (failed_tests != 0) {
+          output$failed_box <- renderUI({
+            fail_results_box(
+              message = "num_failed_tests",
+              table = "table_failed_tests"
+            )
+          })
+        }
+
+        if (failed_tests == 0) {
+          output$passed_box <- renderUI({
+            pass_results_box()
+          })
+        }
+
+        if (advisory_tests != 0) {
+          output$advisory_box <- renderUI({
+            advisory_results_box(
+              message = "num_advisory_tests",
+              table = "table_advisory_tests"
+            )
+          })
+        }
+
+        if (ancillary_tests != 0) {
+          output$ancillary_box <- renderUI({
+            ancillary_box()
+          })
+        }
+
+        # Download all results button ---------------------------------------------------------------------------------
+
+        output$download_results <- downloadHandler(
+          filename = function() {
+            paste0(
+              substr(basename(inputData$name), 1, nchar(inputData$name) - 4),
+              "_",
+              format(dateTime, "%H%M_%d%b%Y"),
+              ".csv"
+            )
+          },
+          content = function(fname) {
+            write.csv(apply(all_results %>% select(message, result), 2, as.character),
+              fname,
+              row.names = FALSE
+            )
+          }
+        )
+      }) # isolate
+
+      # Hide loading screen
+      shinyjs::hide(id = "loading")
+
+      # Show results
+      shinyjs::showElement(id = "results", anim = TRUE, animType = "fade", time = 1.5)
+
+      # Show reset button
+      shinyjs::showElement(id = "reset_button", anim = TRUE, animType = "fade", time = 1.5)
     })
 
-    # Summary stats ---------------------------------------------------------------------------------
-    # numberActiveTests created in global.r file
+    # Reset button ----------------------------------------------------------------------------
 
-    isolate({
-      run_tests <- all_results %>% nrow()
+    output$uiResetButton <- renderUI({
+      actionButton("resetbutton", "Reset page", width = "80%")
+    })
 
-      ignored_tests <- all_results %>%
-        filter(result == "IGNORE") %>%
-        nrow()
+    observeEvent(input$resetbutton, {
 
-      failed_tests <- all_results %>%
-        filter(result == "FAIL") %>%
-        nrow()
+      # Hide results
+      shinyjs::hideElement(id = "results")
+      shinyjs::showElement(id = "guidance")
+      shinyjs::hideElement(id = "qaResults")
 
-      advisory_tests <- all_results %>%
-        filter(result == "ADVISORY") %>%
-        nrow()
+      # clear files from input selection (does not fully reset fileInput, grr)
+      reset("datafile")
+      reset("metafile")
 
-      ancillary_tests <- all_results %>%
-        filter(result == "ANCILLARY") %>%
-        nrow()
+      # clear uploaded flags
+      values$dataUploaded <- FALSE
+      values$metaUploaded <- FALSE
 
-      combined_tests <- advisory_tests + ancillary_tests
+      # Clear values
+      values$shouldShow <- FALSE
 
-      passed_tests <- all_results %>%
-        filter(result == "PASS") %>%
-        nrow()
+      # enable the file upload buttons
+      enable(selector = "span[class='btn btn-default btn-file disabled']")
 
-      leftover_tests <- numberActiveTests - run_tests
+      # set all objects to NULL
+      output$datafilename <- NULL
+      output$metafilename <- NULL
+      output$testtime <- NULL
+      output$data_size <- NULL
+      output$data_rows <- NULL
+      output$data_cols <- NULL
+      output$meta_size <- NULL
+      output$meta_rows <- NULL
+      output$meta_cols <- NULL
+      output$progress_stage <- NULL
+      output$progress_message <- NULL
+      output$failed_box <- NULL
+      output$passed_box <- NULL
+      output$advisory_box <- NULL
+      output$ancillary_box <- NULL
+      output$summary_text <- NULL
+      output$sum_failed_tests <- NULL
+      output$sum_combined_tests <- NULL
+      output$sum_passed_tests <- NULL
+      output$sum_ignored_tests <- NULL
+      output$num_failed_tests <- NULL
+      output$num_advisory_tests <- NULL
+      output$all_tests <- NULL
+      output$table_failed_tests <- NULL
+      output$table_advisory_tests <- NULL
+      output$table_all_tests <- NULL
 
-      output$summary_text <- renderText({
-        paste0("Of all ", numberActiveTests, " tests, ", run_tests, " were successfully ran against the files, the results of these were:")
-      })
+      shinyjs::hideElement(id = "reset_button")
+    })
 
-      output$sum_failed_tests <- renderText({
-        summarise_stats(failed_tests, "failed")
-      })
+    # QA page ----------------------------------------------------------------------------
 
-      output$sum_combined_tests <- renderText({
-        summarise_stats(combined_tests, "with advisory notes")
-      })
+    observeEvent(input$qaFurther, {
+      shinyjs::hideElement(id = "results")
 
-      output$sum_passed_tests <- renderText({
-        summarise_stats(passed_tests, "passed")
-      })
+      shinyjs::hideElement(id = "reset_button")
 
-      output$sum_ignored_tests <- renderText({
-        summarise_stats(ignored_tests, "not applicable to the data")
-      })
+      shinyjs::showElement(id = "qaResults")
 
-      # Top lines for results ---------------------------------------------------------------------------------
+      shinyjs::showElement(id = "backToScreener")
+    })
 
-      output$num_failed_tests <- renderText({
-        summarise_stats(failed_tests, "failed")
-      })
-
-      output$num_advisory_tests <- renderText({
-        summarise_stats(advisory_tests, "with recommendations")
-      })
-
-      output$all_tests <- renderText({
-        paste0("Full breakdown of the ", run_tests, " tests that were ran against the files")
-      })
-
-      # Main outputs for results ---------------------------------------------------------------------------------
-
-      output$table_failed_tests <- renderTable(
-        {
-          filter(all_results, result == "FAIL") %>% select(message)
-        },
-        sanitize.text.function = function(x) x,
-        include.colnames = FALSE
+    observe({
+      toggle(
+        condition = input$runQA,
+        selector = c(
+          "#navbar li a[data-value=tab2]",
+          "#navbar li a[data-value=tab3]"
+        )
       )
+    })
 
-      output$table_advisory_tests <- renderTable(
-        {
-          filter(all_results, result == "ADVISORY") %>% select(message)
-        },
-        sanitize.text.function = function(x) x,
-        include.colnames = FALSE
-      )
+    observeEvent(input$goback, {
+      shinyjs::hideElement(id = "backToScreener")
 
-      output$table_all_tests <- renderTable(
-        {
-          all_results %>% select(message, result)
-        },
-        sanitize.text.function = function(x) x,
-        include.colnames = FALSE
-      )
+      shinyjs::showElement(id = "reset_button")
 
-      # UI blocks (result dependent) ---------------------------------------------------------------------------------
+      shinyjs::showElement(id = "results")
+    })
 
-      if (failed_tests != 0) {
-        output$failed_box <- renderUI({
-          fail_results_box(
-            message = "num_failed_tests",
-            table = "table_failed_tests"
-          )
-        })
+
+    ## QA code ------------------------------------------------------------------------------
+
+    # File previews ------------------------------------------------------------------------
+
+    # Metadata preview
+    output$meta_table <- renderTable({
+      meta$mainFile
+    })
+
+    # Data preview
+    output$data_preview <- renderTable({
+      head(data$mainFile)
+    })
+
+    # Observational units ------------------------------------------------------------------
+
+    # Time covered in the file
+    output$time_coverage <- renderTable({
+      unique(data$mainFile$time_period)
+    })
+
+    output$geog_coverage <- renderTable({
+      unique(data$mainFile$geographic_level)
+    })
+
+    # Geography overview table
+    output$geog_time_perms <- renderTable({
+      data$mainFile %>%
+        count(time_period, geographic_level) %>%
+        mutate(n = replace(n, n > 0, "Y")) %>%
+        pivot_wider(names_from = time_period, values_from = n, values_fill = "N")
+    })
+
+    # Filters --------------------------------------------------------------------------------
+    showFilterLevels <- function(data, meta) {
+      filters <- meta %>%
+        filter(col_type == "Filter") %>%
+        pull(col_name)
+
+      levelsTable <- function(filter) {
+        return(eval(parse(text = paste0("data %>% select(", filter, ") %>% distinct()"))))
       }
 
-      if (failed_tests == 0) {
-        output$passed_box <- renderUI({
-          pass_results_box()
-        })
-      }
+      output <- lapply(filters, levelsTable)
 
-      if (advisory_tests != 0) {
-        output$advisory_box <- renderUI({
-          advisory_results_box(
-            message = "num_advisory_tests",
-            table = "table_advisory_tests"
-          )
-        })
-      }
-
-      if (ancillary_tests != 0) {
-        output$ancillary_box <- renderUI({
-          ancillary_box()
-        })
-      }
-
-      # Download all results button ---------------------------------------------------------------------------------
-
-      output$download_results <- downloadHandler(
-        filename = function() {
-          paste0(
-            substr(basename(inputData$name), 1, nchar(inputData$name) - 4),
-            "_",
-            format(dateTime, "%H%M_%d%b%Y"),
-            ".csv"
-          )
-        },
-        content = function(fname) {
-          write.csv(apply(all_results %>% select(message, result), 2, as.character),
-            fname,
-            row.names = FALSE
-          )
-        }
-      )
-    }) # isolate
-
-    # Hide loading screen
-    shinyjs::hide(id = "loading")
-
-    # Show results
-    shinyjs::showElement(id = "results", anim = TRUE, animType = "fade", time = 1.5)
-
-    # Show reset button
-    shinyjs::showElement(id = "reset_button", anim = TRUE, animType = "fade", time = 1.5)
-  })
-
-  # Reset button ----------------------------------------------------------------------------
-
-  output$uiResetButton <- renderUI({
-    actionButton("resetbutton", "Reset page", width = "80%")
-  })
-
-  observeEvent(input$resetbutton, {
-
-    # Hide results
-    shinyjs::hideElement(id = "results")
-    shinyjs::showElement(id = "guidance")
-    shinyjs::hideElement(id = "qaResults")
-
-    # clear files from input selection (does not fully reset fileInput, grr)
-    reset("datafile")
-    reset("metafile")
-
-    # clear uploaded flags
-    values$dataUploaded <- FALSE
-    values$metaUploaded <- FALSE
-
-    # Clear values
-    values$shouldShow <- FALSE
-
-    # enable the file upload buttons
-    enable(selector = "span[class='btn btn-default btn-file disabled']")
-
-    # set all objects to NULL
-    output$datafilename <- NULL
-    output$metafilename <- NULL
-    output$testtime <- NULL
-    output$data_size <- NULL
-    output$data_rows <- NULL
-    output$data_cols <- NULL
-    output$meta_size <- NULL
-    output$meta_rows <- NULL
-    output$meta_cols <- NULL
-    output$progress_stage <- NULL
-    output$progress_message <- NULL
-    output$failed_box <- NULL
-    output$passed_box <- NULL
-    output$advisory_box <- NULL
-    output$ancillary_box <- NULL
-    output$summary_text <- NULL
-    output$sum_failed_tests <- NULL
-    output$sum_combined_tests <- NULL
-    output$sum_passed_tests <- NULL
-    output$sum_ignored_tests <- NULL
-    output$num_failed_tests <- NULL
-    output$num_advisory_tests <- NULL
-    output$all_tests <- NULL
-    output$table_failed_tests <- NULL
-    output$table_advisory_tests <- NULL
-    output$table_all_tests <- NULL
-
-    shinyjs::hideElement(id = "reset_button")
-  })
-
-  # QA page ----------------------------------------------------------------------------
-
-  observeEvent(input$qaFurther, {
-    shinyjs::hideElement(id = "results")
-
-    shinyjs::hideElement(id = "reset_button")
-
-    shinyjs::showElement(id = "qaResults")
-
-    shinyjs::showElement(id = "backToScreener")
-  })
-
-  observe({
-    toggle(
-      condition = input$runQA,
-      selector = c(
-        "#navbar li a[data-value=tab2]",
-        "#navbar li a[data-value=tab3]"
-      )
-    )
-  })
-
-  observeEvent(input$goback, {
-    shinyjs::hideElement(id = "backToScreener")
-
-    shinyjs::showElement(id = "reset_button")
-
-    shinyjs::showElement(id = "results")
-  })
-
-  
-  ## QA code ------------------------------------------------------------------------------
-  # referring to meta and data only seem to work if the code is places in this isolate()
-  # should check if it ruins any of the fancy performance improvement stuff
-  
-    
-  # File previews tab? ------------------
-  
-  # Metadata preview -------------------------------------------------------------------
-  output$meta_table <- renderTable({
-    meta$mainFile
-  })
-  
-  # Data preview -----------------------------------------------------------------------
-  output$data_preview <- renderTable({
-    head(data$mainFile)
-  })
-  
-  # Locations by time ------------------------------------------------------------------
-  output$geog_coverage <- renderTable({
-    unique(data$mainFile$geographic_level)
-  })
-  
-  # Geography overview table -----------------------------------------------------------
-  output$geog_time_perms <- renderTable({
-    data$mainFile %>%
-      count(time_period, geographic_level) %>%
-      mutate(n = replace(n, n > 0, "Y")) %>%
-      pivot_wider(names_from = time_period, values_from = n, values_fill = "N")
-  })
-  
-  # Time covered in the file -----------------------------------------------------------
-  output$time_coverage <- renderTable({
-    unique(data$mainFile$time_period)
-  })
-  
-  # Filters and their levels -----------------------------------------------------------
-  showFilterLevels <- function(data, meta) {
-    filters <- meta %>%
-      filter(col_type == "Filter") %>%
-      pull(col_name)
-    
-    levelsTable <- function(filter) {
-      return(eval(parse(text = paste0("data %>% select(", filter, ") %>% distinct()"))))
+      return(output)
     }
-    
-    output <- lapply(filters, levelsTable)
-    
-    return(output)
-  }
-  
-  output$filters <- renderTable({
-    showFilterLevels(data$mainFile, meta$mainFile)
-  })
-  
-  # Indicators present and summary stats -----------------------------------------------
-  output$indicators <- renderTable({
-    meta$mainFile %>%
-      filter(col_type == "Indicator") %>%
-      select(col_name)
-  })
 
+    output$filters <- renderTable({
+      showFilterLevels(data$mainFile, meta$mainFile)
+    })
+
+    # Indicators -----------------------------------------------------------------------------
+    output$indicators <- renderTable({
+      meta$mainFile %>%
+        filter(col_type == "Indicator") %>%
+        select(col_name)
+    })
+
+    # Add summary stats
   }) # isolate
-  
+
 
   # showresults (shouldShow) ---------------------------------------------------------------------------------
   # Checking if results should show for when to show the screen button

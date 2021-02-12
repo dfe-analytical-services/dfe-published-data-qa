@@ -10,22 +10,22 @@ output$agg_check <- renderTable({
     pivot_wider(names_from = geographic_level, values_from = aggregate_number) # %>%
   # spread(key = geographic_level, value = aggregate_number) %>%
   # select(-school_type)
-  
+
   check <- function(dataset, id = "time_period") {
     years <- dataset[, id]
     dataset[, id] <- NULL
     dataset$match <- do.call(pmax, as.list(dataset)) == do.call(pmin, as.list(dataset))
     dataset[, id] <- years
-    
+
     dataset <- dataset %>%
       select(time_period, everything()) %>%
       mutate(match = ifelse(match == TRUE, "MATCH", "NO MATCH"))
-    
+
     return(dataset)
   }
-  
+
   output_data <- check(data)
-  
+
   return(output_data)
 })
 
