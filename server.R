@@ -442,26 +442,14 @@ server <- function(input, output, session) {
         )
       }
       
-      # Dynamic trendy-tabs, doesn't work properly yet
-      if (failed_tests == 0) {
-        showTab(inputId = "trendy_tabs", target = "tab2")
-        showTab(inputId = "trendy_tabs", target = "tab3")
+      # Dynamic trendy-tabs,
+      if (failed_tests == 0){
+        shinyjs::show(selector = c("#trendy_tabs li a[data-value=tab2]",
+                                   "#trendy_tabs li a[data-value=tab3]"))}
+      else {
+        shinyjs::hide(selector = c("#trendy_tabs li a[data-value=tab2]",
+                                   "#trendy_tabs li a[data-value=tab3]"))}
 
-      }
-      
-      if (failed_tests >= 0) {
-        hideTab(inputId = "trendy_tabs", target = "tab2")
-        hideTab(inputId = "trendy_tabs", target = "tab3")
-      }
-      
-      # 
-      #       # show tabs if files pass
-      #       if (failed_tests == 0) {
-      #         toggle(condition = input$screenbutton,
-      #                selector = c("#trendy_tabs li a[data-value=tab2]",
-      #                             "#trendy_tabs li a[data-value=tab3]")
-      #         )
-      #       }
       
       if (advisory_tests != 0) {
         output$advisory_box <- renderUI({
