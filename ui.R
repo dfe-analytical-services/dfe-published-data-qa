@@ -195,13 +195,60 @@ fluidPage(
                                  value = "tab3",
                                  "QA tabs go here")
                         
+                                    tabPanel(
+              title = "QA guidance",
+              value = "qaGuidanceTab",
+              h2("ADD GUIDANCE THINGS HERE"),
+              br(),
+              actionButton("runQA", "Run QA on datafiles")
+            ),
+            tabPanel(
+              title = "File previews",
+              value = "previewTab",
+              "View metadata",
+              tableOutput("meta_table"),
+              "Preview datafile",
+              tableOutput("data_preview"),
+            ),
+            tabPanel(
+              title = "Observational units",
+              value = "obUnitTab",
+              h2("What's in this file"),
+
+              "Geography coverage",
+              tableOutput("geog_coverage"),
+              "Time coverage",
+              tableOutput("time_coverage"),
+
+              "Unique locations at each geographic level by time",
+              dataTableOutput("geog_time_perms")
+            ),
+            tabPanel(
+              title = "Filter overview",
+              value = "filtersTab",
+              "Filters present",
+              tableOutput("filters"),
+              br(),
+              "Filter levels",
+              br(),
+              "Filter combinations missing (on trello/github issue)"
+            ),
+            tabPanel(
+              title = "Indicator info",
+              value = "indicatorsTab",
+
+              "Indicators present",
+              tableOutput("indicators"),
+              "Indicator summary stats",
+              br()
+            )
+                        
             ) # End of tabsetpanel
           
           ))
           # End of summarised results div
         )
         # End of fluidRow
-        
       )
       # End of verticalLayout
     )
