@@ -10,22 +10,22 @@ output$agg_check <- renderTable({
     pivot_wider(names_from = geographic_level, values_from = aggregate_number) # %>%
   # spread(key = geographic_level, value = aggregate_number) %>%
   # select(-school_type)
-
+  
   check <- function(dataset, id = "time_period") {
     years <- dataset[, id]
     dataset[, id] <- NULL
     dataset$match <- do.call(pmax, as.list(dataset)) == do.call(pmin, as.list(dataset))
     dataset[, id] <- years
-
+    
     dataset <- dataset %>%
       select(time_period, everything()) %>%
       mutate(match = ifelse(match == TRUE, "MATCH", "NO MATCH"))
-
+    
     return(dataset)
   }
-
+  
   output_data <- check(data)
-
+  
   return(output_data)
 })
 
@@ -142,22 +142,6 @@ compareNationalAggregations <- function(data, qa, meta, indicator) {
 
   return(joinedSummaries)
 }
-
-#### Count of unique locations per year ----
-
-geographySummary <- rbind(
-  countriesPresent %>% rename(location_code = country_code) %>% select(-country_name) %>% mutate("geographic_level" = "National"),
-  regionsPresent %>% rename(location_code = region_code) %>% select(-region_name) %>% mutate("geographic_level" = "Regional"),
-  lasPresent %>% rename(location_code = new_la_code) %>% select(-c(old_la_code, la_name)) %>% mutate("geographic_level" = "Local authority")
-) %>%
-  group_by(time_period, geographic_level) %>%
-  tally() %>%
-  rename(unique_locations = n) %>%
-  arrange(desc(time_period), match(geographic_level, c("National", "Regional", "Local authority"))) %>%
-  pivot_wider(names_from = time_period, values_from = unique_locations)
-
-knitr::kable(geographySummary)
-
 
 #####################################################################################################################################################################################
 #### THIS BLOCK IS BEYOND HORRIFIC - CAN DEFINITELY BE REFACTORED AND IMPROVED. A LOT OF DUPLICATION ################################################################################

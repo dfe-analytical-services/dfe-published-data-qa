@@ -403,19 +403,30 @@ server <- function(input, output, session) {
 
     # Time covered in the file
     output$time_coverage <- renderTable({
-      unique(data$mainFile$time_period)
+      data$mainFile %>% 
+        select(time_period, time_identifier) %>% 
+        distinct()
     })
 
+    # Feel like this isn't doing much - maybe could we pull out the geog cols relevant to each level too?
     output$geog_coverage <- renderTable({
       unique(data$mainFile$geographic_level)
     })
 
     # Geography overview table
-    output$geog_time_perms <- renderTable({
-      data$mainFile %>%
-        count(time_period, geographic_level) %>%
-        mutate(n = replace(n, n > 0, "Y")) %>%
-        pivot_wider(names_from = time_period, values_from = n, values_fill = "N")
+    output$geog_time_perms <- renderDataTable({
+      
+      ### May need some time identifier ordering? - what happens if quarters or weeks?
+      
+      datafile$mainFile %>%
+        select(time_period, time_identifier, geographic_level) %>% 
+        group_by(time_period, time_identifier, geographic_level) %>%
+        tally() %>%
+        rename(unique_locations = n) %>%
+        arrange(desc(time_period), match(geographic_level, c(geography_matrix[,1]))) %>%
+        pivot_wider(names_from = geographic_level, values_from = unique_locations) %>% 
+        replace(is.na(.),0) %>% 
+        DT::datatable()
     })
 
     # Filters --------------------------------------------------------------------------------

@@ -215,8 +215,8 @@ fluidPage(
               "Time coverage",
               tableOutput("time_coverage"),
 
-              "What geography/time combinations exist",
-              tableOutput("geog_time_perms")
+              "Unique locations at each geographic level by time",
+              dataTableOutput("geog_time_perms")
             ),
             tabPanel(
               title = "Filter overview",
