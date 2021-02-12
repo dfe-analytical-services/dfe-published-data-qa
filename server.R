@@ -143,6 +143,7 @@ server <- function(input, output, session) {
       output$progress_message <- renderText({
         screeningOutput$progress_message
       })
+    })
 
       # Summary stats ---------------------------------------------------------------------------------
       # numberActiveTests created in global.r file
@@ -398,6 +399,7 @@ server <- function(input, output, session) {
 
     ## QA code ------------------------------------------------------------------------------
 
+    isolate({
     # File previews ------------------------------------------------------------------------
 
     # Metadata preview
