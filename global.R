@@ -18,6 +18,8 @@ library(styler)
 library(tidyr)
 library(ggplot2)
 library(shinyFeedback)
+library(DT)
+library(shinyWidgets)
 
 # activeTestsInFile ---------------------------------------------------------------------------------
 # Extracting the active tests that are run against files

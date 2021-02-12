@@ -187,21 +187,6 @@ fluidPage(
                                  # End of column
                         ),
                         
-                        tabPanel(title = "QA tab 1",
-                                 value = "tab2",
-                                 "QA tabs go here"),
-                        
-                        tabPanel(title = "QA tab 2",
-                                 value = "tab3",
-                                 "QA tabs go here"),
-                        
-                        tabPanel(
-                          title = "QA guidance",
-                          value = "qaGuidanceTab",
-                          h2("ADD GUIDANCE THINGS HERE"),
-                          br(),
-                          actionButton("runQA", "Run QA on datafiles")
-                        ),
                         tabPanel(
                           title = "File previews",
                           value = "previewTab",

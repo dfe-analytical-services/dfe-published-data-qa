@@ -272,11 +272,15 @@ server <- function(input, output, session) {
       
       # Dynamic trendy-tabs,
       if (failed_tests == 0){
-        shinyjs::show(selector = c("#trendy_tabs li a[data-value=tab2]",
-                                   "#trendy_tabs li a[data-value=tab3]"))}
+        shinyjs::show(selector = c("#trendy_tabs li a[data-value=previewTab]",
+                                   "#trendy_tabs li a[data-value=obUnitTab]",
+                                   "#trendy_tabs li a[data-value=filtersTab]",
+                                   "#trendy_tabs li a[data-value=indicatorsTab]"))}
       else {
-        shinyjs::hide(selector = c("#trendy_tabs li a[data-value=tab2]",
-                                   "#trendy_tabs li a[data-value=tab3]"))}
+        shinyjs::hide(selector = c("#trendy_tabs li a[data-value=previewTab]",
+                                   "#trendy_tabs li a[data-value=obUnitTab]",
+                                   "#trendy_tabs li a[data-value=filtersTab]",
+                                   "#trendy_tabs li a[data-value=indicatorsTab]"))}
 
       
       if (advisory_tests != 0) {
