@@ -251,7 +251,6 @@ server <- function(input, output, session) {
           })
         }
         
-        <<<<<<< qa-pages
       if (failed_tests == 0) {
         output$passed_box <- renderUI({
           pass_results_box()
@@ -426,7 +425,7 @@ server <- function(input, output, session) {
       
       ### May need some time identifier ordering? - what happens if quarters or weeks?
       
-      datafile$mainFile %>%
+      data$mainFile %>%
         select(time_period, time_identifier, geographic_level) %>% 
         group_by(time_period, time_identifier, geographic_level) %>%
         tally() %>%

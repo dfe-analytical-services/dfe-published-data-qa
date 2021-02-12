@@ -1,14 +1,14 @@
 fluidPage(
   theme = "acalat_theme.css",
-
+  
   useShinyjs(),
   shinyFeedback::useShinyFeedback(),
   # options(shiny.reactlog = TRUE),
-
+  
   inlineCSS(appLoadingCSS), # set in global.r
-
+  
   # Initial loading screen -------------------------------------------------------------------------------------------
-
+  
   div(
     id = "loading-content",
     h2("Loading...")
@@ -16,16 +16,16 @@ fluidPage(
   hidden(
     div(
       id = "app-content",
-
+      
       # Application title -----------------------------------------------------------------------------------
-
+      
       titlePanel(div(HTML("DfE published data QA <h4>QA your data files before uploading to Explore Education Statistics for publication</h4>")), windowTitle = "DfE data QA"),
-
+      
       # Initial guidance text -----------------------------------------------------------------------------------
-
+      
       verticalLayout(
         br(),
-
+        
         shinyjs::hidden(div(
           id = "guidance",
           "This app allows you to screen your data files against the Department’s ",
@@ -57,12 +57,12 @@ fluidPage(
           "This app is constantly being developed, please let us know if you have any suggestions to improve it. If you experience any issues, please take screenshots and email them to us with as much information as possible.",
           hr()
         )),
-
+        
         # Top panel for data uploads -----------------------------------------------------------------------------------
-
+        
         wellPanel(
           tags$style(".shiny-file-input-progress {max-width: 99.8%; padding-left: 1px}"),
-
+          
           fluidRow(
             column(
               5,
@@ -83,30 +83,30 @@ fluidPage(
               )
             ),
             column(2,
-              align = "center", style = "margin-top: 25px;",
-              # Only show buttons once files are added and remove button once results appear
-              conditionalPanel(
-                condition = "output.file_exists == true && output.showresults == false",
-                uiOutput("uiScreenButton")
-              ),
-              shinyjs::hidden(div(
-                id = "reset_button",
-                uiOutput("uiResetButton")
-              )),
-              shinyjs::hidden(div(
-                id = "backToScreener",
-                actionButton("goback", "Back to screener results")
-              ))
+                   align = "center", style = "margin-top: 25px;",
+                   # Only show buttons once files are added and remove button once results appear
+                   conditionalPanel(
+                     condition = "output.file_exists == true && output.showresults == false",
+                     uiOutput("uiScreenButton")
+                   ),
+                   shinyjs::hidden(div(
+                     id = "reset_button",
+                     uiOutput("uiResetButton")
+                   )),
+                   shinyjs::hidden(div(
+                     id = "backToScreener",
+                     actionButton("goback", "Back to screener results")
+                   ))
             )
           )
         ),
-
+        
         # Main panel showing results -----------------------------------------------------------------------------------
-
+        
         fluidRow(
-
+          
           # Loading screen that appears while tests are running -----------------------------------------------------------------------------------
-
+          
           shinyjs::hidden(div(
             id = "loading",
             h4("Tests are now running against the files, this may take a few minutes depending on the size of your data file.", align = "center"),
@@ -114,9 +114,9 @@ fluidPage(
             br(),
             HTML('<center><img src="duckWaddle.gif"></center>')
           )),
-
+          
           # Summarised results -----------------------------------------------------------------------------------
-
+          
           shinyjs::hidden(div(
             id = "results",
             
@@ -186,65 +186,65 @@ fluidPage(
                                  )
                                  # End of column
                         ),
-          
+                        
                         tabPanel(title = "QA tab 1",
                                  value = "tab2",
                                  "QA tabs go here"),
                         
                         tabPanel(title = "QA tab 2",
                                  value = "tab3",
-                                 "QA tabs go here")
+                                 "QA tabs go here"),
                         
-                                    tabPanel(
-              title = "QA guidance",
-              value = "qaGuidanceTab",
-              h2("ADD GUIDANCE THINGS HERE"),
-              br(),
-              actionButton("runQA", "Run QA on datafiles")
-            ),
-            tabPanel(
-              title = "File previews",
-              value = "previewTab",
-              "View metadata",
-              tableOutput("meta_table"),
-              "Preview datafile",
-              tableOutput("data_preview"),
-            ),
-            tabPanel(
-              title = "Observational units",
-              value = "obUnitTab",
-              h2("What's in this file"),
-
-              "Geography coverage",
-              tableOutput("geog_coverage"),
-              "Time coverage",
-              tableOutput("time_coverage"),
-
-              "Unique locations at each geographic level by time",
-              dataTableOutput("geog_time_perms")
-            ),
-            tabPanel(
-              title = "Filter overview",
-              value = "filtersTab",
-              "Filters present",
-              tableOutput("filters"),
-              br(),
-              "Filter levels",
-              br(),
-              "Filter combinations missing (on trello/github issue)"
-            ),
-            tabPanel(
-              title = "Indicator info",
-              value = "indicatorsTab",
-
-              "Indicators present",
-              tableOutput("indicators"),
-              "Indicator summary stats",
-              br()
-            )
+                        tabPanel(
+                          title = "QA guidance",
+                          value = "qaGuidanceTab",
+                          h2("ADD GUIDANCE THINGS HERE"),
+                          br(),
+                          actionButton("runQA", "Run QA on datafiles")
+                        ),
+                        tabPanel(
+                          title = "File previews",
+                          value = "previewTab",
+                          "View metadata",
+                          tableOutput("meta_table"),
+                          "Preview datafile",
+                          tableOutput("data_preview"),
+                        ),
+                        tabPanel(
+                          title = "Observational units",
+                          value = "obUnitTab",
+                          h2("What's in this file"),
+                          
+                          "Geography coverage",
+                          tableOutput("geog_coverage"),
+                          "Time coverage",
+                          tableOutput("time_coverage"),
+                          
+                          "Unique locations at each geographic level by time",
+                          dataTableOutput("geog_time_perms")
+                        ),
+                        tabPanel(
+                          title = "Filter overview",
+                          value = "filtersTab",
+                          "Filters present",
+                          tableOutput("filters"),
+                          br(),
+                          "Filter levels",
+                          br(),
+                          "Filter combinations missing (on trello/github issue)"
+                        ),
+                        tabPanel(
+                          title = "Indicator info",
+                          value = "indicatorsTab",
+                          
+                          "Indicators present",
+                          tableOutput("indicators"),
+                          "Indicator summary stats",
+                          br()
+                        )
                         
             ) # End of tabsetpanel
-          
+            
           ))
           # End of summarised results div
         )
