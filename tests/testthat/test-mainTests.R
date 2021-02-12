@@ -244,3 +244,9 @@ test_that("indicator_dp", {
 test_that("indicator_dp_validation", {
   expect_equal(testIndividualTest(pathStart, "indicator_dp_validation"), "FAIL")
 })
+
+# indicator_dp_completed -------------------------------------------------------------------------------------------------------
+
+test_that("indicator_dp_completed", {
+  expect_equal(testIndividualTest(pathStart, "indicator_dp_completed"), "ADVISORY")
+})

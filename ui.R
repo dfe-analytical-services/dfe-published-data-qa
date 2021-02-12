@@ -2,6 +2,7 @@ fluidPage(
   theme = "acalat_theme.css",
 
   useShinyjs(),
+  shinyFeedback::useShinyFeedback(),
   # options(shiny.reactlog = TRUE),
 
   inlineCSS(appLoadingCSS), # set in global.r
@@ -28,8 +29,13 @@ fluidPage(
         shinyjs::hidden(div(
           id = "guidance",
           "This app allows you to screen your data files against the Department’s ",
-          a(href = "https://rsconnect/rsc/stats-production-guidance/ud.html", "underlying data standards", target = "_blank"),
+          a(href = "https://rsconnect/rsc/stats-production-guidance/ud.html", "underlying data standards", target = "_blank", rel = "noopener noreferrer"),
           "for Official and National statistical publications. You should make sure that any data files you intend to publish pass all of the data checks before uploading to Explore Education Statistics.",
+          br(),
+          br(),
+          "The code for this app can be found on ",
+          a(href = "https://github.com/dfe-analytical-services/dfe-published-data-qa", "GitHub", target = "_blank", rel = "noopener noreferrer"),
+          ".",
           br(),
           br(),
           strong("How to use the app"),
