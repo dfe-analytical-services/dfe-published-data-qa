@@ -428,7 +428,41 @@ server <- function(input, output, session) {
           pass_results_box()
         })
       }
+      
+      # Fireworks go here
+      if (failed_tests == 0) {
+        show_alert(
+          title = "Success !!",
+          type = "success",
+          tags$span(
+            "Your files can now be uploaded to Explore Education Statistics, see our  ",
+            a(href = "https://rsconnect/rsc/stats-production-guidance/ees.html", "guidance on using EES", target = "_blank"),
+            " for more information."),
+          html = TRUE
+        )
+      }
+      
+      # Dynamic trendy-tabs, doesn't work properly yet
+      if (failed_tests == 0) {
+        showTab(inputId = "trendy_tabs", target = "tab2")
+        showTab(inputId = "trendy_tabs", target = "tab3")
 
+      }
+      
+      if (failed_tests >= 0) {
+        hideTab(inputId = "trendy_tabs", target = "tab2")
+        hideTab(inputId = "trendy_tabs", target = "tab3")
+      }
+      
+      # 
+      #       # show tabs if files pass
+      #       if (failed_tests == 0) {
+      #         toggle(condition = input$screenbutton,
+      #                selector = c("#trendy_tabs li a[data-value=tab2]",
+      #                             "#trendy_tabs li a[data-value=tab3]")
+      #         )
+      #       }
+      
       if (advisory_tests != 0) {
         output$advisory_box <- renderUI({
           advisory_results_box(
@@ -462,6 +496,7 @@ server <- function(input, output, session) {
           )
         }
       )
+
     }) # isolate
 
     # Hide loading screen
@@ -531,87 +566,6 @@ server <- function(input, output, session) {
 
     shinyjs::hideElement(id = "reset_button")
   })
-  
-  
-  
-  # QA further page ----------------------------------------------------------------------------
-  
-  observeEvent(input$qaFurther, {
-    
-    shinyjs::hideElement(id = "results")
-    
-    shinyjs::hideElement(id = "reset_button")
-    
-    shinyjs::showElement(id = "qaResults")
-    
-    shinyjs::showElement(id = "backToScreener")
-    
-  })
-  
-  observe({
-    toggle(condition = input$runQA, 
-           selector = c("#navbar li a[data-value=tab2]",
-                        "#navbar li a[data-value=tab3]")
-    )
-  })
-  
-  observeEvent(input$goback, {
-    
-    shinyjs::hideElement(id = "backToScreener")
-    
-    shinyjs::showElement(id = "reset_button")
-    
-    shinyjs::showElement(id = "results")
-    
-  })
-  
-  # Coverage of data 
-  # Need a better way of accessing the data than this, I tried just referring to meta/data and it couldn't find it
-  
-  # output$meta_table <- renderTable({
-  #   
-  #   req(input$metafile)
-  #   read.csv(input$metafile$datapath)
-  #   
-  # })
-  # 
-  # 
-  # output$data_preview <- renderTable({
-  #   
-  #   req(input$metafile)
-  #   head(read.csv(input$datafile$datapath))
-  #   
-  # })
-  # 
-  # # output$geog_coverage <- renderTable({
-  # #   
-  # #   req(input$metafile)
-  # #   data <- read.csv(input$datafile$datapath)
-  # #   
-  # # })
-  #   
-  # 
-  # output$geog_coverage <- renderTable({
-  #   distinct(meta$mainFile$indicator_dp)
-  # })
-  # 
-  # output$testing <- renderTable({
-  #   meta$mainFile %>% ncol()
-  # })
-  # 
-  # 
-  # output$data_cols2 <- renderText({
-  #   paste0("Columns - ", cs_num(data$mainFile %>% ncol()))
-  # })
-  # 
-  # 
-  # # Geog
-  # # Time
-  # # Filters
-  # # Indicators
-  
-  
-  
   
   # showresults (shouldShow) ---------------------------------------------------------------------------------
   # Checking if results should show for when to show the screen button

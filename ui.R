@@ -119,134 +119,89 @@ fluidPage(
 
           shinyjs::hidden(div(
             id = "results",
-
-            column(
-              5,
-              style = "padding-left:20px;",
-              h4("Screening progress"),
-              tags$style("#progress_stage img {max-width: 100%; max-height: 100%}"),
-              imageOutput("progress_stage", height = "100%"),
-              hr(),
-              textOutput("testtime"),
-              br(),
-              textOutput("summary_text"),
-              br(),
-              textOutput("sum_failed_tests"),
-              textOutput("sum_combined_tests"),
-              textOutput("sum_passed_tests"),
-              textOutput("sum_ignored_tests"),
-              hr(),
-              div(
-                style = "word-break: break-all;",
-                textOutput("datafilename"),
-                textOutput("metafilename")
-              ),
-              hr(),
-              column(
-                6,
-                style = "padding:0px",
-                "Data file",
-                br(),
-                br(),
-                textOutput("data_size"),
-                textOutput("data_rows"),
-                textOutput("data_cols")
-              ),
-              column(
-                6,
-                style = "padding:0px",
-                "Metadata file",
-                br(),
-                br(),
-                textOutput("meta_size"),
-                textOutput("meta_rows"),
-                textOutput("meta_cols")
-              ),
-            ),
-
-            # Individual check results tables -----------------------------------------------------------------------------------
-
-            column(
-              7,
-              uiOutput("ancillary_box"),
-              uiOutput("passed_box"),
-              uiOutput("failed_box"),
-              uiOutput("advisory_box"),
-              results_box(
-                message = "all_tests",
-                table = "table_all_tests"
-              )
-            )
-            # End of column
+            
+            tabsetPanel(id = "trendy_tabs",
+                        
+                        tabPanel(title = "Screener results",
+                                 value = "tab1",
+                                 
+                                 column(
+                                   5,
+                                   style = "padding-left:20px;",
+                                   h4("Screening progress"),
+                                   tags$style("#progress_stage img {max-width: 100%; max-height: 100%}"),
+                                   imageOutput("progress_stage", height = "100%"),
+                                   hr(),
+                                   textOutput("testtime"),
+                                   br(),
+                                   textOutput("summary_text"),
+                                   br(),
+                                   textOutput("sum_failed_tests"),
+                                   textOutput("sum_combined_tests"),
+                                   textOutput("sum_passed_tests"),
+                                   textOutput("sum_ignored_tests"),
+                                   hr(),
+                                   div(
+                                     style = "word-break: break-all;",
+                                     textOutput("datafilename"),
+                                     textOutput("metafilename")
+                                   ),
+                                   hr(),
+                                   column(
+                                     6,
+                                     style = "padding:0px",
+                                     "Data file",
+                                     br(),
+                                     br(),
+                                     textOutput("data_size"),
+                                     textOutput("data_rows"),
+                                     textOutput("data_cols")
+                                   ),
+                                   column(
+                                     6,
+                                     style = "padding:0px",
+                                     "Metadata file",
+                                     br(),
+                                     br(),
+                                     textOutput("meta_size"),
+                                     textOutput("meta_rows"),
+                                     textOutput("meta_cols")
+                                   )
+                                 ),
+                                 
+                                 
+                                 
+                                 # Individual check results tables -----------------------------------------------------------------------------------
+                                 
+                                 column(
+                                   7,
+                                   uiOutput("ancillary_box"),
+                                   uiOutput("passed_box"),
+                                   uiOutput("failed_box"),
+                                   uiOutput("advisory_box"),
+                                   results_box(
+                                     message = "all_tests",
+                                     table = "table_all_tests"
+                                   )
+                                 )
+                                 # End of column
+                        ),
+          
+                        tabPanel(title = "QA tab 1",
+                                 value = "tab2",
+                                 "QA tabs go here"),
+                        
+                        tabPanel(title = "QA tab 2",
+                                 value = "tab3",
+                                 "QA tabs go here")
+                        
+            ) # End of tabsetpanel
+          
           ))
           # End of summarised results div
-        ),
+        )
         # End of fluidRow
         
-        # QA pages -----------------------------------------------------------------------------------
-        
-        shinyjs::hidden(div(
-          id = "qaResults",
-          
-          tabsetPanel(id = "navbar",
-                      tabPanel(title = "QA guidance",
-                               value = "qaGuidancePage",
-                               h2("ADD GUIDANCE THINGS HERE"),
-                               br(),
-                               actionButton("runQA", "Run QA on datafiles")
-                      ),
-                      
-                      # Summary stats / sense checking
-                      # Extreme values
-                      # Sums and comparisons (yoy etc)
-                      # Missing data and suppressed cells (+duplicates etc)
-                      # Scatter-plots
-                      tabPanel(title = "Overview",
-                               value = "tab2",
-                               h2("What's in this file"),
-                               
-                               "Geography coverage",
-                               tableOutput("geog_coverage"),
-                               "Time coverage",
-                               tableOutput("time_coverage"),
-                               
-                               "What geography/time combinations exist",
-                               tableOutput("geog_time_perms"),
-                               
-                               "Filters",
-                               tableOutput("filters"),
-                               "Indicators",
-                               tableOutput("indicators"),
-                               
-                               
-                               "View metadata",
-                               tableOutput("meta_table"),
-                               "Preview datafile",
-                               tableOutput("data_preview"),
-                               br()
-                      ),
-                      tabPanel(title = "Indicator info",
-                               value = "tab3",
-                               
-                               "Pick an indicator",
-                               br(),
-                               "dropdown goes here",
-                               br(),
-                               "Add some QA stuff",
-                               
-                               tableOutput("agg_check"),
-                               
-                               plotOutput("scatter"),
-                               
-                               #tableOutput("testing"),
-                               
-                               br(),
-                               h1("Extreme values")
-                      )
-          )
-          # End of tabsetPanel
-        ))
-        # End of qaResults div
       )
       # End of verticalLayout
     )
