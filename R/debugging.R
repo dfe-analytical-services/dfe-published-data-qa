@@ -1,7 +1,7 @@
 # Debugging script
 # Use this script to manually read in and screen files for those occasions when the app breaks without a useful error
 
-source("global.r")
+source("global.R")
 
 debugReadFile <- function(file) {
   output <- readFile(file)
@@ -13,8 +13,8 @@ datafile <- debugReadFile("C:/R_Projects/dfe-published-data-qa/tests/shinytest/t
 metafile <- debugReadFile("C:/R_Projects/dfe-published-data-qa/tests/shinytest/test-data/passes_everything.meta.csv")
 
 # Put the file paths of the files in here
-datafile <- debugReadFile("C:/R_Projects/dfe-published-data-qa/tests/testthat/mainTests/indicator_dp_completed.csv")
-metafile <- debugReadFile("C:/R_Projects/dfe-published-data-qa/tests/testthat/mainTests/indicator_dp_completed.meta.csv")
+datafile <- debugReadFile("C:/R_Projects/dfe-published-data-qa/tests/testthat/preCheck2/col_type_blank.csv")
+metafile <- debugReadFile("C:/R_Projects/dfe-published-data-qa/tests/testthat/preCheck2/col_type_blank.meta.csv")
 
 results <- screenFiles(datafile$filename, metafile$filename, datafile$fileSeparator, metafile$fileSeparator, datafile$fileCharacter, metafile$fileCharacter, datafile$mainFile, metafile$mainFile)
 
