@@ -59,3 +59,9 @@ test_that("multipleFilterGroupStripped", {
 
   expect_equal(screeningOutput$results %>% filter(test == "filter_group_stripped") %>% pull(result) %>% unlist(use.names = FALSE), "FAIL")
 })
+
+test_that("zLocationCode", {
+  screeningOutput <- testOther("../../tests/testthat/otherData/adding_z_locationCode.csv")
+  
+  expect_equal(screeningOutput$results %>% filter(result != "PASS") %>% nrow(), 0)
+})
