@@ -280,9 +280,9 @@ col_type <- function(meta) {
     )
   } else {
     invalid_rows <- setdiff(meta, valid_rows)
-    
+
     invalid_types <- invalid_rows %>% distinct(col_type)
-    
+
     if (length(invalid_types) == 1) {
       output <- list(
         "message" = paste0("The following invalid col_type value was found in the metadata file: '", paste0(invalid_types, collapse = "', '"), "'. <br> - col_type must always be either 'Filter' or 'Indicator', and cannot be blank."),
