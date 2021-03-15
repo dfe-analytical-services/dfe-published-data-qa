@@ -45,6 +45,12 @@ test_that("col_type", {
   expect_equal(testIndividualTest(pathStart, "col_type"), "FAIL")
 })
 
+# col_type -------------------------------------------------------------------------------------------------------
+
+test_that("col_type_blank", {
+  expect_equal(testIndividualTestSeparate(paste0(pathStart, "col_type_blank.csv"), paste0(pathStart, "col_type_blank.meta.csv"), "col_type"), "FAIL")
+})
+
 # time_validation -------------------------------------------------------------------------------------------------------
 
 test_that("time_validation", {
