@@ -1,7 +1,7 @@
 # Debugging script
 # Use this script to manually read in and screen files for those occasions when the app breaks without a useful error
 
-source("global.r")
+source("global.R")
 
 debugReadFile <- function(file) {
   output <- readFile(file)
