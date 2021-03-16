@@ -1016,6 +1016,7 @@ region_code <- function(data) {
       filter(!is.na(.)) %>%
       filter(region_code != "") %>%
       filter(region_code != ":") %>%
+      filter(region_code != "z") %>%
       pull(region_code) %>%
       .[!grepl("^[A-Z]{1}[0-9]{8}$", .)]
 
@@ -1055,6 +1056,7 @@ country_code <- function(data) {
     invalid_values <- data %>%
       select("country_code") %>%
       filter(country_code != ":") %>%
+      filter(country_code != "z") %>%
       unique() %>%
       pull(country_code) %>%
       .[!(. %in% expected_country_codes)]
