@@ -1513,12 +1513,12 @@ indicator_group_stripped <- function(meta) {
 
     if (length(raw_indicator_groups) != length(stripped_indicator_groups)) {
       output <- list(
-        "message" = paste0("The number of unique indicator groups should not change when non-alphanumeric characters are stripped. <br> - please check this list for erroneous groups: '", paste0(raw_indicator_groups, collapse = "', '"), "'."),
+        "message" = paste0("The number of unique indicator groups should not change when non-alphanumeric characters and spaces are stripped. <br> - please check this list for erroneous groups: '", paste0(raw_indicator_groups, collapse = "', '"), "'."),
         "result" = "FAIL"
       )
     } else {
       output <- list(
-        "message" = "There are no issues when stripping alpha-numeric characters from indicator groups.",
+        "message" = "There are no issues when stripping alpha-numeric characters and spaces from indicator groups.",
         "result" = "PASS"
       )
     }
