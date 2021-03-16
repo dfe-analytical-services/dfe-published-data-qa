@@ -250,3 +250,15 @@ test_that("indicator_dp_validation", {
 test_that("indicator_dp_completed", {
   expect_equal(testIndividualTest(pathStart, "indicator_dp_completed"), "ADVISORY")
 })
+
+# indicator_dp_negative -------------------------------------------------------------------------------------------------------
+
+test_that("indicator_dp_negative", {
+  expect_equal(testIndividualTestSeparate(paste0(pathStart, "indicator_dp_negative.csv"), paste0(pathStart, "indicator_dp_negative.meta.csv"), "indicator_dp_validation"), "FAIL")
+})
+
+# indicator_dp_nonInteger -------------------------------------------------------------------------------------------------------
+
+test_that("indicator_dp_nonInteger", {
+  expect_equal(testIndividualTestSeparate(paste0(pathStart, "indicator_dp_nonInteger.csv"), paste0(pathStart, "indicator_dp_nonInteger.meta.csv"), "indicator_dp_validation"), "FAIL")
+})
