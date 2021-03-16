@@ -193,10 +193,10 @@
     },
     "dplyr": {
       "Package": "dplyr",
-      "Version": "1.0.2",
+      "Version": "1.0.5",
       "Source": "Repository",
       "Repository": "CRAN",
-      "Hash": "d0509913b27ea898189ee664b6030dc2"
+      "Hash": "d0d76c11ec807eb3f000eba4e3eb0f68"
     },
     "ellipsis": {
       "Package": "ellipsis",
@@ -466,14 +466,9 @@
     },
     "renv": {
       "Package": "renv",
-      "Version": "0.12.0-27",
-      "Source": "GitHub",
-      "RemoteType": "github",
-      "RemoteHost": "api.github.com",
-      "RemoteUsername": "rstudio",
-      "RemoteRepo": "renv",
-      "RemoteRef": "0.12.0-27",
-      "RemoteSha": "a7666bb5ddb2f618fd51fe71f00b94bf79fbde0e"
+      "Version": "0.13.0",
+      "Source": "Repository",
+      "Repository": "CRAN"
     },
     "rlang": {
       "Package": "rlang",
