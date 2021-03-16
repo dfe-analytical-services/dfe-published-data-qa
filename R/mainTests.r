@@ -1616,10 +1616,34 @@ indicator_dp_validation <- function(meta) {
     )
   } else {
     if (is.numeric(meta$indicator_dp)) {
-      output <- list(
-        "message" = "The indicator_dp column only contains blanks or numeric values.",
-        "result" = "PASS"
+      isInteger <- function(x) {
+        test <- all.equal(x, as.integer(x), check.attributes = FALSE)
+        if (test == TRUE) {
+          return(TRUE)
+        }
+        else {
+          return(FALSE)
+        }
+      }
+
+      meta$integer <- lapply(meta$indicator_dp, isInteger)
+      meta$notNegative <- lapply(meta$indicator_dp, function(x) x >= 0)
+      failed_rows <- rbind(
+        meta %>% filter(integer == FALSE),
+        meta %>% filter(notNegative == FALSE)
       )
+
+      if (nrow(failed_rows) != 0) {
+        output <- list(
+          "message" = "The indicator_dp column must only contain blanks or positive integer values.",
+          "result" = "FAIL"
+        )
+      } else {
+        output <- list(
+          "message" = "The indicator_dp column only contains blanks or positive integer values.",
+          "result" = "PASS"
+        )
+      }
     } else {
       output <- list(
         "message" = "The indicator_dp column must only contain numeric values or blanks in the metadata file.", # The following value is invalid: '", paste(invalid_values), "'."),
