@@ -36,7 +36,7 @@ geography_matrix <- matrix(c(
   "RSC region", "rsc_region_lead_name", NA, NA, NA, NA,
   "Parliamentary constituency", "pcon_code", "pcon_name", NA, NA, NA,
   "Local enterprise partnership", "local_enterprise_partnership_code", "local_enterprise_partnership_name", NA, NA, NA,
-  "Mayoral combined authority", "mayoral_combined_authority_code", "mayoral_combined_authority_name", NA, NA, NA,
+  "English devolved area", "english_devolved_area_code", "english_devolved_area_name", NA, NA, NA,
   "Opportunity area", "opportunity_area_code", "opportunity_area_name", NA, NA, NA,
   "Ward", "ward_code", "ward_name", NA, NA, NA,
   "MAT", "trust_id", "trust_name", NA, NA, NA,
