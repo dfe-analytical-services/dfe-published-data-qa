@@ -68,6 +68,6 @@ test_that("zLocationCode", {
 
 test_that("ladWithinLA", {
   screeningOutput <- testOther("../../tests/testthat/otherData/lad_within_la.csv")
-  
+
   expect_equal(screeningOutput$results %>% filter(result != "PASS") %>% nrow(), 0)
 })

@@ -836,20 +836,21 @@ new_la_code <- function(data) {
 
 overcompleted_cols <- function(data) {
 
-  # checking if region cols are in national rows
+  # ----------------------------------------------------------------------------------------------------------------------------------
+  # checking if region cols are completed in national rows
 
   overcomplete_regional_cols <- function(matrixRow) {
-    
+
     # Start by filtering the data down to remove the geographic level being tested and any lower levels we don't care about
-    
+
     level_rows <- data %>% filter(geographic_level != matrixRow[1], !geographic_level %in% geography_matrix[3:16, ])
 
     # Extract the columns for the geographic level that is being tested
-    
+
     cols <- matrixRow[2:6] %>% .[!is.na(.)]
 
     # Function used to check if each column for that geographic level has any cells that are not blank
-    
+
     col_completed <- function(x) {
       y <- x + 1
       col <- paste(matrixRow[y])
@@ -858,7 +859,7 @@ overcompleted_cols <- function(data) {
         return(col)
       }
     }
-    
+
     # Apply over every column in the matrixRow (geographic_level) being tested
 
     pre_output <- sapply(c(1:length(cols)), col_completed)
@@ -866,48 +867,81 @@ overcompleted_cols <- function(data) {
     return(pre_output)
   }
 
-  # checking if mid-geographies are completed for each other or for region, la or national cols
-  
-  overcomplete_mid_cols <- function(matrixRow) {
-    
-    # Start by filtering the data down to remove the geographic level being tested and any lower levels we don't care about
-    
-    level_rows <- data %>% filter(geographic_level != matrixRow[1], !geographic_level %in% geography_matrix[13:16, ])
-    
+  # ----------------------------------------------------------------------------------------------------------------------------------
+  # checking if local authority columns are completed for national, regional or mid-geography rows (ignoring LAD)
+
+  overcomplete_la_cols <- function(matrixRow) {
+
+    # Start by filtering the data down to remove the geographic level being tested, lad rows and any lower levels we don't care about
+
+    level_rows <- data %>% filter(geographic_level != matrixRow[1], !geographic_level %in% geography_matrix[13:16, ], geographic_level != "Local authority district")
+
     # Extract the columns for the geographic level that is being tested
-    
+
     cols <- matrixRow[2:6] %>% .[!is.na(.)]
-    
+
     # Function used to check if each column for that geographic level has any cells that are not blank
-    
+
     col_completed <- function(x) {
       y <- x + 1
       col <- paste(matrixRow[y])
-      
+
       if (any(!is.na(level_rows[[col]] %>% .[. != ""]))) {
         return(col)
       }
     }
-    
+
     # Apply over every column in the matrixRow (geographic_level) being tested
-    
+
     pre_output <- sapply(c(1:length(cols)), col_completed)
-    
+
     return(pre_output)
   }
 
+  # ----------------------------------------------------------------------------------------------------------------------------------
+  # checking if mid-geography cols (not National, Regional, LA, or School level) are completed for each other or for region, la or national rows
+
+  overcomplete_mid_cols <- function(matrixRow) {
+
+    # Start by filtering the data down to remove the geographic level being tested and any lower levels we don't care about
+
+    level_rows <- data %>% filter(geographic_level != matrixRow[1], !geographic_level %in% geography_matrix[13:16, ])
+
+    # Extract the columns for the geographic level that is being tested
+
+    cols <- matrixRow[2:6] %>% .[!is.na(.)]
+
+    # Function used to check if each column for that geographic level has any cells that are not blank
+
+    col_completed <- function(x) {
+      y <- x + 1
+      col <- paste(matrixRow[y])
+
+      if (any(!is.na(level_rows[[col]] %>% .[. != ""]))) {
+        return(col)
+      }
+    }
+
+    # Apply over every column in the matrixRow (geographic_level) being tested
+
+    pre_output <- sapply(c(1:length(cols)), col_completed)
+
+    return(pre_output)
+  }
+
+  # ----------------------------------------------------------------------------------------------------------------------------------
   # checking if low level geographies are completed for any rows other than their own
 
   overcomplete_low_cols <- function(matrixRow) {
 
     # Start by filtering the data down to remove the geographic level being tested and any lower levels we don't care about
-    
+
     level_rows <- data %>% filter(geographic_level != matrixRow[1])
-    
+
     # Extract the columns for the geographic level that is being tested
 
     cols <- matrixRow[2:6] %>% .[!is.na(.)]
-    
+
     # Function used to check if each column for that geographic level has any cells that are not blank
 
     col_completed <- function(x) {
@@ -918,7 +952,7 @@ overcompleted_cols <- function(data) {
         return(col)
       }
     }
-    
+
     # Apply over every column in the matrixRow (geographic_level) being tested
 
     pre_output <- sapply(c(1:length(cols)), col_completed)
@@ -926,12 +960,15 @@ overcompleted_cols <- function(data) {
     return(pre_output)
   }
 
-  # forcing this into a matrix, otherwise just calling that row returns a vector that breaks the apply function
+  # ----------------------------------------------------------------------------------------------------------------------------------
+  # forcing these into a matrix, otherwise just calling that row returns a vector that breaks the apply function
   regional_matrix <- matrix(geography_matrix[2, ], nrow = 1)
+  la_matrix <- matrix(geography_matrix[3, ], nrow = 1)
 
   overcomplete_geographies <- c(
     unlist(apply(regional_matrix, 1, overcomplete_regional_cols)),
-    unlist(apply(geography_matrix[3:12, ], 1, overcomplete_mid_cols)),
+    unlist(apply(la_matrix, 1, overcomplete_la_cols)),
+    unlist(apply(geography_matrix[4:12, ], 1, overcomplete_mid_cols)),
     unlist(apply(geography_matrix[13:16, ], 1, overcomplete_low_cols))
   )
 
