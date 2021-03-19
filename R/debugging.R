@@ -25,5 +25,3 @@ meta <- metafile$mainFile
 
 data <- datafile$fileCharacter
 meta <- metafile$fileCharacter
-
-# TEST CHANGE
