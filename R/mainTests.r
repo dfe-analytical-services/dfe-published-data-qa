@@ -1018,7 +1018,7 @@ region_code <- function(data) {
       filter(region_code != ":") %>%
       mutate(combo = paste(region_code, region_name)) %>%
       pull(combo) %>%
-      .[!(. %in% expected_region_codes)]
+      .[!(. %in% expected_region_combinations)]
     #.[!grepl("^[A-Z]{1}[0-9]{8}$", .)]
     
     if (length(invalid_values) == 0) {
@@ -1060,7 +1060,7 @@ country_code <- function(data) {
       unique() %>%
       mutate(combo = paste(country_code, country_name)) %>%
       pull(combo) %>%
-      .[!(. %in% expected_country_codes)]
+      .[!(. %in% expected_country_combinations)]
     
     if (length(invalid_values) == 0) {
       output <- list(
