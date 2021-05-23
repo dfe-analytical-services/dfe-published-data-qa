@@ -50,15 +50,17 @@ ncol = 6,
 byrow = TRUE
 )
 
-expected_country_codes <- c(
-  "E92000001", # England
-  "K02000001", # United Kingdom
-  "K03000001", # Great Britain
-  "K04000001", # England and Wales
-  "N92000002", # Northern Ireland
-  "S92000003", # Scotland
-  "W92000004" # Wales
-)
+countries <- read_csv("country.csv") # change this to database eventually
+regions <- read_csv("regions.csv") # change this to database eventually
+
+expected_country_codes <- countries$country_code
+
+expected_region_codes <- regions$region_code
+
+expected_country_combinations <- unique(paste(countries$country_code, countries$country_name))
+
+expected_region_combinations <- unique(paste(regions$region_code, regions$region_name)) 
+
 
 acceptable_levels <- c(
   geography_matrix[, 1] %>% .[!is.na(.)]
