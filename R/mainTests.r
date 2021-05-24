@@ -1080,18 +1080,12 @@ region_code <- function(data) {
       filter(!is.na(.)) %>%
       filter(region_code != "") %>%
       filter(region_code != ":") %>%
-<<<<<<< HEAD
+      filter(region_code != "z") %>%
       mutate(combo = paste(region_code, region_name)) %>%
       pull(combo) %>%
       .[!(. %in% expected_region_combinations)]
     #.[!grepl("^[A-Z]{1}[0-9]{8}$", .)]
     
-=======
-      filter(region_code != "z") %>%
-      pull(region_code) %>%
-      .[!grepl("^[A-Z]{1}[0-9]{8}$", .)]
-
->>>>>>> master
     if (length(invalid_values) == 0) {
       output <- list(
         "message" = "region_code is always a 9 digit code, with one letter followed by 8 numbers, : for not available, or blank.",
