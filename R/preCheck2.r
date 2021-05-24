@@ -270,19 +270,19 @@ utf8 <- function(data, meta) {
 # col_type - is this one of 'Filter' or 'Indicator'
 
 col_type <- function(meta) {
-  invalid_types <- meta %>%
-    filter(
-      col_type != "Filter",
-      col_type != "Indicator"
-    ) %>%
-    pull(col_type)
+  valid_rows <- meta %>%
+    filter(col_type == "Filter" | col_type == "Indicator")
 
-  if (length(invalid_types) == 0) {
+  if (nrow(valid_rows) == nrow(meta)) {
     output <- list(
       "message" = "col_type is always 'Filter' or 'Indicator'.",
       "result" = "PASS"
     )
   } else {
+    invalid_rows <- setdiff(meta, valid_rows)
+
+    invalid_types <- invalid_rows %>% distinct(col_type)
+
     if (length(invalid_types) == 1) {
       output <- list(
         "message" = paste0("The following invalid col_type value was found in the metadata file: '", paste0(invalid_types, collapse = "', '"), "'. <br> - col_type must always be either 'Filter' or 'Indicator', and cannot be blank."),

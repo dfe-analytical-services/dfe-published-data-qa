@@ -211,18 +211,6 @@
         "shiny.silent.error",
         "validation"
       ]
-    },
-    "uiResetButton": {
-      "html": "<button id=\"resetbutton\" style=\"width: 80%;\" type=\"button\" class=\"btn btn-default action-button\">Reset page<\/button>",
-      "deps": [
-
-      ]
-    },
-    "uiScreenButton": {
-      "html": "<button id=\"screenbutton\" style=\"width: 80%;\" type=\"button\" class=\"btn btn-default action-button\">Screen files<\/button>",
-      "deps": [
-
-      ]
     }
   },
   "export": {
