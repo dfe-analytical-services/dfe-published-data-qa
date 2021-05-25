@@ -198,7 +198,7 @@ fluidPage(
                 tableOutput("data_preview"),
               ),
               tabPanel(
-                title = "Observational units",
+                title = "File overview",
                 value = "obUnitTab",
                 h2("What's in this file"),
 
@@ -208,28 +208,43 @@ fluidPage(
                 tableOutput("time_coverage"),
 
                 "Unique locations at each geographic level by time",
-                dataTableOutput("geog_time_perms")
-              ),
-              tabPanel(
-                title = "Filter overview",
-                value = "filtersTab",
+                dataTableOutput("geog_time_perms"),
                 "Filters present",
                 tableOutput("filters"),
                 br(),
                 "Filter levels",
                 br(),
-                "Filter combinations missing (on trello/github issue)"
-              ),
-              tabPanel(
-                title = "Indicator info",
-                value = "indicatorsTab",
-
+                "Filter combinations missing (on trello/github issue)",
                 "Indicators present",
                 tableOutput("indicators"),
+                br()
+              ),
+              # tabPanel(
+              #   title = "Filter overview",
+              #   value = "filtersTab",
+              #   "Filters present",
+              #   tableOutput("filters"),
+              #   br(),
+              #   "Filter levels",
+              #   br(),
+              #   "Filter combinations missing (on trello/github issue)"
+              # ),
+              tabPanel(
+                title = "Data overview",
+                value = "indicatorsTab",
+
+                "Placeholder",
+                
                 "Indicator summary stats",
                 tableOutput("indicator_summary_stats"),
-                br()
+                # tableOutput("indicators"),
+                # "Indicator summary stats",
+                # tableOutput("indicator_summary_stats"),
+                # br()
               )
+              
+              
+              
             ) # End of tabsetpanel
           ))
           # End of summarised results div

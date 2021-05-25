@@ -276,7 +276,6 @@ server <- function(input, output, session) {
         shinyjs::show(selector = c(
           "#trendy_tabs li a[data-value=previewTab]",
           "#trendy_tabs li a[data-value=obUnitTab]",
-          "#trendy_tabs li a[data-value=filtersTab]",
           "#trendy_tabs li a[data-value=indicatorsTab]"
         ))
       }
@@ -284,7 +283,6 @@ server <- function(input, output, session) {
         shinyjs::hide(selector = c(
           "#trendy_tabs li a[data-value=previewTab]",
           "#trendy_tabs li a[data-value=obUnitTab]",
-          "#trendy_tabs li a[data-value=filtersTab]",
           "#trendy_tabs li a[data-value=indicatorsTab]"
         ))
       }
