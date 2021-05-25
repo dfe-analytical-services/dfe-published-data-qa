@@ -53,10 +53,6 @@ byrow = TRUE
 countries <- read_csv("country.csv") # change this to database eventually
 regions <- read_csv("regions.csv") # change this to database eventually
 
-expected_country_codes <- countries$country_code
-
-expected_region_codes <- regions$region_code
-
 expected_country_combinations <- unique(paste(countries$country_code, countries$country_name))
 
 expected_region_combinations <- unique(paste(regions$region_code, regions$region_name))
