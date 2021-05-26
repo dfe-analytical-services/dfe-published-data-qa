@@ -1065,7 +1065,8 @@ old_la_code <- function(data) {
 }
 
 # region_code -------------------------------------
-# Checking that region_code always matches the expected pattern
+# Checking that region_code and region_name combinations are valid
+## Need to update reference list in error message to whatever method we use for LAs as the portal list doesn't include inner/outer london (which we allow)
 
 region_code <- function(data) {
   if (!"region_code" %in% names(data)) {
@@ -1075,14 +1076,16 @@ region_code <- function(data) {
     )
   } else {
     invalid_values <- data %>%
-      select("region_code") %>%
+      select("region_code", "region_name") %>%
       unique() %>%
       filter(!is.na(.)) %>%
       filter(region_code != "") %>%
       filter(region_code != ":") %>%
       filter(region_code != "z") %>%
-      pull(region_code) %>%
-      .[!grepl("^[A-Z]{1}[0-9]{8}$", .)]
+      mutate(combo = paste(region_code, region_name)) %>%
+      pull(combo) %>%
+      .[!(. %in% expected_region_combinations)]
+    # .[!grepl("^[A-Z]{1}[0-9]{8}$", .)]
 
     if (length(invalid_values) == 0) {
       output <- list(
@@ -1092,12 +1095,12 @@ region_code <- function(data) {
     } else {
       if (length(invalid_values) == 1) {
         output <- list(
-          "message" = paste0("The following region_code value is invalid: '", paste0(invalid_values), "'. <br> - region_code must always be a 9 digit code, with one letter followed by 8 numbers,: for not available, or blank."),
+          "message" = paste0("The following region_code / region_name combination is invalid: '", paste0(invalid_values), "'. <br> - We do not expect any region outside of those on the <a href='https://geoportal.statistics.gov.uk/datasets/regions-december-2020-en-bgc/data?geometry=-22.223%2C50.522%2C17.877%2C55.161' target='_blank'>ONS Open Geography Portal</a> (case sensitive), or : for not available."),
           "result" = "FAIL"
         )
       } else {
         output <- list(
-          "message" = paste0("The following region_code values are invalid: '", paste0(invalid_values, collapse = "', '"), "'. <br> - region_code must always be a 9 digit code, with one letter followed by 8 numbers, : for not available, or blank."),
+          "message" = paste0("The following region_code / region_name cominations are invalid: '", paste0(invalid_values, collapse = "', '"), "'. <br> - We do not expect any regions outside of those on the <a href='https://geoportal.statistics.gov.uk/datasets/regions-december-2020-en-bgc/data?geometry=-22.223%2C50.522%2C17.877%2C55.161' target='_blank'>ONS Open Geography Portal</a> (case senstive), or : for not available."),
           "result" = "FAIL"
         )
       }
@@ -1108,7 +1111,7 @@ region_code <- function(data) {
 }
 
 # country_code -------------------------------------
-# checking that country_code is always as expected
+# checking that country_code and country_name combinations are valid
 
 country_code <- function(data) {
   if (!"country_code" %in% names(data)) {
@@ -1118,12 +1121,13 @@ country_code <- function(data) {
     )
   } else {
     invalid_values <- data %>%
-      select("country_code") %>%
+      select("country_code", "country_name") %>%
       filter(country_code != ":") %>%
       filter(country_code != "z") %>%
       unique() %>%
-      pull(country_code) %>%
-      .[!(. %in% expected_country_codes)]
+      mutate(combo = paste(country_code, country_name)) %>%
+      pull(combo) %>%
+      .[!(. %in% expected_country_combinations)]
 
     if (length(invalid_values) == 0) {
       output <- list(
@@ -1133,12 +1137,12 @@ country_code <- function(data) {
     } else {
       if (length(invalid_values) == 1) {
         output <- list(
-          "message" = paste0("The following country_code value is invalid: '", paste0(invalid_values), "'. <br> - We do not expect any country codes outside of those on the <a href='https://geoportal.statistics.gov.uk/datasets/countries-december-2018-names-and-codes-in-the-united-kingdom/data' target='_blank'>ONS Open Geography Portal</a>, or : for not available."),
+          "message" = paste0("The following country_code / country_name combination is invalid: '", paste0(invalid_values), "'. <br> - We do not expect any countries outside of those on the <a href='https://geoportal.statistics.gov.uk/datasets/countries-december-2018-names-and-codes-in-the-united-kingdom/data' target='_blank'>ONS Open Geography Portal</a> (case sensitive), or : for not available."),
           "result" = "FAIL"
         )
       } else {
         output <- list(
-          "message" = paste0("The following country_code values are invalid: '", paste0(invalid_values, collapse = "', '"), "'. <br> - We do not expect any country codes outside of those on the <a href='https://geoportal.statistics.gov.uk/datasets/countries-december-2018-names-and-codes-in-the-united-kingdom/data' target='_blank'>ONS Open Geography Portal</a>, or : for not available."),
+          "message" = paste0("The following country_code / country_name combinations are invalid: '", paste0(invalid_values, collapse = "', '"), "'. <br> - We do not expect any countries outside of those on the <a href='https://geoportal.statistics.gov.uk/datasets/countries-december-2018-names-and-codes-in-the-united-kingdom/data' target='_blank'>ONS Open Geography Portal</a>, (case sensitive) or : for not available."),
           "result" = "FAIL"
         )
       }
