@@ -388,6 +388,20 @@ server <- function(input, output, session) {
           select(col_name)
       })
 
+      
+
+     output$geogChoice <- renderUI({
+        selectInput(
+          inputId = "geog_parameter",
+          label = "Select Parameter(s):",
+          choices = data$mainFile %>% pull(geographic_level) %>% unique(),
+          multiple = TRUE
+        )
+      })
+      
+      
+      
+      
       showsumstats <- function(parameter, geog_parameter) {
         
         args <- expand.grid(meas = parameter, geog= geog_parameter, stringsAsFactors = FALSE)
@@ -430,7 +444,6 @@ server <- function(input, output, session) {
       })
       
       
-    #  observeEvent(input$submit, {
         
       output$table_list <- renderUI({
         req(theList())
@@ -444,7 +457,10 @@ server <- function(input, output, session) {
           tagList(t_list)
         })
         
-    output$suppressed_cell_count <- renderTable({
+    
+      
+      
+      output$suppressed_cell_count <- renderTable({
       
       filters <- meta$mainFile %>%
         dplyr::filter(col_type == "Filter") %>%

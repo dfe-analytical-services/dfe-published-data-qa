@@ -269,18 +269,13 @@ fluidPage(
                              selectInput(
                                inputId = "parameter",
                                label = "Select Parameter(s):",
-                               choices = c("min","max"), #param_choices(data$mainFile),
+                               choices = c("min","max"),
                                multiple = TRUE
                              )
                            ),
                            column(
                              4, 
-                             selectInput(
-                               inputId = "geog_parameter",
-                               label = "Select Parameter(s):",
-                               choices = c("National", "Local authority", "Regional"), #param_choices(data$mainFile),
-                               multiple = TRUE
-                             )
+                             uiOutput("geogChoice")
                            ),
                            
                            column(
