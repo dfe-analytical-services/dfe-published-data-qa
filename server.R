@@ -406,7 +406,10 @@ server <- function(input, output, session) {
 
         sumtable <- function(args) {
           return(eval(parse(text = paste0("data$mainFile %>% filter(geographic_level =='", args[2], "') %>% 
-          mutate(across(all_of(indicators), na_if, c('c','z',':'))) %>%
+          mutate(across(all_of(indicators), na_if, 'c')) %>%
+          mutate(across(all_of(indicators), na_if, 'z')) %>%
+          mutate(across(all_of(indicators), na_if, ':')) %>%
+          mutate(across(all_of(indicators), na_if, '~')) %>%
           mutate(across(all_of(indicators), as.numeric)) %>%
           select(time_period, all_of(indicators)) %>%
           group_by(time_period) %>%
@@ -432,7 +435,7 @@ server <- function(input, output, session) {
       observeEvent(input$submit, {
         req(theList())
 
-        purrr::iwalk(theList(), ~ {
+        purrr::iwalk(theList(), ~{
           names <- paste0("t_", .y)
           output[[names]] <- renderTable(.x)
         })
@@ -441,7 +444,7 @@ server <- function(input, output, session) {
       output$table_list <- renderUI({
         req(theList())
 
-        t_list <- purrr::imap(theList(), ~ {
+        t_list <- purrr::imap(theList(), ~{
           tagList(
             h4(.y),
             tableOutput(paste0("t_", .y))
