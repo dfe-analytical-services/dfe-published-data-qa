@@ -189,6 +189,12 @@ fluidPage(
                 # End of column
               ),
 
+              
+              
+              
+              ## QA stuff
+              
+              
               tabPanel(
                 title = "File previews",
                 value = "previewTab",
@@ -197,50 +203,142 @@ fluidPage(
                 "Preview datafile",
                 tableOutput("data_preview"),
               ),
+              
+              
+              
+              
               tabPanel(
                 title = "File overview",
                 value = "obUnitTab",
+                
                 h2("What's in this file"),
+                
+                # fluidRow(
+                #   column(3,
+                #          "Description goes here"
+                #          ),
+                #   column(8,
+                #          "Output goes here"
+                #          )
+                # ),
+                # 
+                # #hr(),
+                
+                fluidRow(
+                  column(3,
+                         tags$b("What geography / time combinations are in the data"),
+                         br(),
+                         "For any unexpected Ns, check the data",
+                         br(),
+                         "For any legitimate Ns, consider if publishing this data would be worth it"
+                  ),
+                  column(8,
+                         tableOutput("geog_time_perms2")
+                 )
+                ),
+                
+                hr(),
 
-                "Geography coverage",
-                tableOutput("geog_coverage"),
-                "Time coverage",
-                tableOutput("time_coverage"),
 
-                "Unique locations at each geographic level by time",
-                dataTableOutput("geog_time_perms"),
-                "Filters present",
-                tableOutput("filters"),
-                br(),
-                "Filter levels",
-                br(),
-                "Filter combinations missing (on trello/github issue)",
-                "Indicators present",
-                tableOutput("indicators"),
-                br()
+                fluidRow(
+                  column(3,
+                         tags$b("What filters are present in the data"),
+                         br(),
+                         "Check all levels are there",
+                         br(),
+                         "Check names are how you want them to look etc"
+                  ),
+                  column(8,
+                         uiOutput("tables"),
+                         # "Filter combinations missing (on trello/github issue)",
+                  )
+                ),
+
+                hr(),
+                
+                fluidRow(
+                  column(3,
+                         tags$b("Indicator summary"),
+                         br(),
+                         "Check for anything weird"
+                  ),
+                  column(8,
+                         fluidRow(
+                           column(
+                             4, 
+                             selectInput(
+                               inputId = "parameter",
+                               label = "Select Parameter(s):",
+                               choices = c("min","max"), #param_choices(data$mainFile),
+                               multiple = TRUE
+                             )
+                           ),
+                           column(
+                             4, 
+                             selectInput(
+                               inputId = "geog_parameter",
+                               label = "Select Parameter(s):",
+                               choices = c("National", "Local authority", "Regional"), #param_choices(data$mainFile),
+                               multiple = TRUE
+                             )
+                           ),
+                           
+                           column(
+                             4, 
+                             actionButton(
+                               inputId = "submit",
+                               label = "Apply Changes!",
+                               style = "margin:40px;"
+                             )
+                           )
+                         ),
+                         fluidRow(
+                           uiOutput("table_list")
+                         )
+                  )
+                ),
+                
+                hr(),
+
+                fluidRow(
+                  column(3,
+                         "Supressed cells",
+                         "Are you supressing too much?"
+                  ),
+                  column(8,
+                         "Count of supressed cells across all data",
+                         
+                         tableOutput("suppressed_cell_count")
+                  )
+                ),
+                
+                hr(),
+                
+                
+                fluidRow(
+                  column(3,
+                         "Description goes here"
+                  ),
+                  column(8,
+                         "Output goes here"
+                  )
+                ),
+
+                hr()
+                
               ),
-              # tabPanel(
-              #   title = "Filter overview",
-              #   value = "filtersTab",
-              #   "Filters present",
-              #   tableOutput("filters"),
-              #   br(),
-              #   "Filter levels",
-              #   br(),
-              #   "Filter combinations missing (on trello/github issue)"
-              # ),
+
+              
+              
+              
               tabPanel(
                 title = "Data overview",
                 value = "indicatorsTab",
 
                 "Placeholder",
                 
-                "Indicator summary stats",
-                tableOutput("indicator_summary_stats"),
-                # tableOutput("indicators"),
-                # "Indicator summary stats",
-                # tableOutput("indicator_summary_stats"),
-                # br()
+                
+                
               )
               
               

@@ -312,9 +312,10 @@ server <- function(input, output, session) {
         })
       }
 
-      ## QA code ------------------------------------------------------------------------------
+      
+      ## QA code -----------------------------------------------------------------------------
 
-      # File previews ------------------------------------------------------------------------
+      # File previews ----------------------------------------------------------------
 
       # Metadata preview
       output$meta_table <- renderTable({
@@ -326,84 +327,142 @@ server <- function(input, output, session) {
         head(data$mainFile)
       })
 
-      # Observational units ------------------------------------------------------------------
 
-      # Time covered in the file
-      output$time_coverage <- renderTable({
-        data$mainFile %>%
-          select(time_period, time_identifier) %>%
-          distinct()
-      })
-
-      # Feel like this isn't doing much - maybe could we pull out the geog cols relevant to each level too?
-      output$geog_coverage <- renderTable({
-        unique(data$mainFile$geographic_level)
-      })
-
-      # Geography overview table
-      output$geog_time_perms <- renderDataTable({
-
-        ### May need some time identifier ordering? - what happens if quarters or weeks?
-
-        data$mainFile %>%
-          select(time_period, time_identifier, geographic_level) %>%
-          group_by(time_period, time_identifier, geographic_level) %>%
-          tally() %>%
-          rename(unique_locations = n) %>%
-          arrange(desc(time_period), match(geographic_level, c(geography_matrix[, 1]))) %>%
-          pivot_wider(names_from = geographic_level, values_from = unique_locations) %>%
-          replace(is.na(.), 0) %>%
-          DT::datatable()
-      })
-
-      # Filters --------------------------------------------------------------------------------
-      showFilterLevels <- function(data, meta) {
+      # Geog / time ------------------------------------------------------------------
+      
+      output$geog_time_perms2 <- renderTable({
+        
+        data$mainFile  %>% 
+          count(time_period, geographic_level) %>%
+          mutate(n = replace(n, n >0, "Y")) %>%
+          pivot_wider(names_from = time_period, values_from = n, values_fill = "N")
+        
+      }) 
+      
+      
+      # Show filters and associated levels from the data -----------------------------
+      
+      # Function to create list of filter / filter level tables 
+      
+      showFilterLevels <- function(meta) {
         filters <- meta %>%
-          filter(col_type == "Filter") %>%
+          dplyr::filter(col_type == "Filter") %>%
           pull(col_name)
-
+        
         levelsTable <- function(filter) {
-          return(eval(parse(text = paste0("data %>% select(", filter, ") %>% distinct()"))))
+          return(eval(parse(text = paste0("data$mainFile %>% select(", filter, ") %>% distinct()"))))
         }
-
+        
         output <- lapply(filters, levelsTable)
-
+        
         return(output)
       }
+      
+      # Create output
 
-      output$filters <- renderTable({
-        showFilterLevels(data$mainFile, meta$mainFile)
+      output$tables <- renderUI({
+        
+        myList <- showFilterLevels(meta$mainFile)
+        
+        tableList <- purrr::imap(myList, ~ {
+          tagList(
+            h4(.y), # Note we can sprinkle in other UI elements
+            tableOutput(outputId = paste0("table_", .y))
+          )
+        })
+        
+        purrr::iwalk(myList, ~{
+          output_name <- paste0("table_", .y)
+          output[[output_name]] <- renderTable(.x)
+        })
+        
+        tagList(tableList)
       })
+      
+      
+      # Indicators -------------------------------------------------------------------
 
-      # Indicators -----------------------------------------------------------------------------
       output$indicators <- renderTable({
         meta$mainFile %>%
           filter(col_type == "Indicator") %>%
           select(col_name)
       })
 
-      # Add summary stats
-
-
-      output$indicators <- renderTable({
-        meta$mainFile %>%
-          filter(col_type == "Indicator") %>%
-          select(col_name)
-      })
-
-      output$indicator_summary_stats <- renderTable({
+      showsumstats <- function(parameter, geog_parameter) {
+        
+        args <- expand.grid(meas = parameter, geog= geog_parameter, stringsAsFactors = FALSE)
+        
         indicators <- meta$mainFile %>%
           filter(col_type == "Indicator") %>%
           pull(col_name)
-        indicator_data <- data$mainFile %>% select(all_of(indicators))
-        indicator_data %>%
+        
+        sumtable <- function(args) {
+          return(eval(parse(text = paste0("data$mainFile %>% filter(geographic_level =='", args[2], "') %>% 
+          select(time_period, all_of(indicators)) %>%
+          group_by(time_period) %>%
           summarise(across(everything(), list(min = min, max = max))) %>%
-          pivot_longer(everything(), names_to = c("indicator", "measure"), names_pattern = "(.*)_(.*)") %>%
-          pivot_wider(names_from = "measure")
+          pivot_longer(!time_period, names_to = c('indicator', 'measure'), names_pattern = '(.*)_(.*)') %>%
+          filter(measure =='", args[1], "') %>% 
+          pivot_wider(names_from = 'time_period') %>%
+          mutate(geographic_level ='", args[2], "', .before = indicator)"))))
+        }
+        
+        output <- apply(args, 1, sumtable) 
+        
+        return(output)
+      }
+      
+      # create a list of tables - with one for each parameter selected
+      theList <- eventReactive(input$submit, {
+        
+        return(showsumstats(input$parameter, input$geog_parameter))
+        
       })
+      
+      
+      observeEvent(input$submit, {
+        req(theList())
+        
+        purrr::iwalk(theList(), ~{
+          names <- paste0("t_", .y)
+          output[[names]] <- renderTable(.x)
+        })
+      })
+      
+      
+    #  observeEvent(input$submit, {
+        
+      output$table_list <- renderUI({
+        req(theList())
+
+          t_list <- purrr::imap(theList(), ~ {
+          tagList(
+            h4(.y), 
+            tableOutput(paste0("t_", .y))
+          )
+        })
+          tagList(t_list)
+        })
+        
+    output$suppressed_cell_count <- renderTable({
+      
+      filters <- meta$mainFile %>%
+        dplyr::filter(col_type == "Filter") %>%
+        pull(col_name)
+      
+      
+      data$mainFile %>%  
+        select(-all_of(filters)) %>%
+        unlist() %>% 
+        table() %>% 
+        as.data.frame() %>% 
+        filter(. %in% c("z","c",":","~"))
+    })
+      
     }) # end of isolate
 
-
+    
+    
     # Download all results button ---------------------------------------------------------------------------------
 
     output$download_results <- downloadHandler(
