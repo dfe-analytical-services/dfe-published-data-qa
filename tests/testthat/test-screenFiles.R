@@ -71,3 +71,10 @@ test_that("ladWithinLA", {
 
   expect_equal(screeningOutput$results %>% filter(result != "PASS") %>% nrow(), 0)
 })
+
+test_that("blankFilterGroupsMeta", {
+  screeningOutput <- testOther("../../tests/testthat/otherData/blankFilterGroups.csv")
+  
+  expect_equal(screeningOutput$results %>% filter(result == "FAIL") %>% nrow(), 0)
+})
+

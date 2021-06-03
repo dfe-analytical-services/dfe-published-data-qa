@@ -1,0 +1,13 @@
+time_identifier,time_period,geographic_level,country_code,country_name,year_breakdown,categorytype,order_type,count,region_code,region_name
+Calendar year,2008,National,E92000001,England,Q1,Application,Non-Molestation,4452,,
+Calendar year,2009,National,E92000001,England,Q1,Application,Non-Molestation,2038,,
+Calendar year,2010,National,E92000001,England,Q4,Application,Occupation,1066,,
+Calendar year,2011,National,E92000001,England,Q1,Application,Occupation,5648,,
+Calendar year,2012,National,E92000001,England,Q2,Application,Non-Molestation,6046,,
+Calendar year,2013,National,E92000001,England,Q3,Application,Non-Molestation,7237,,
+Calendar year,2014,National,E92000001,England,Q4,Application,Occupation,7577,,
+Calendar year,2015,National,E92000001,England,Q1,Order made,Occupation,5437,,
+Calendar year,2016,National,E92000001,England,Q1,Order made,Occupation,1247,,
+Calendar year,2017,National,E92000001,England,Q4,Order made,Non-Molestation,3889,,
+Calendar year,2018,National,E92000001,England,Q4,Order made,Occupation,22,,
+Calendar year,2019,Regional,E92000001,England,Total,Total,Total,25373,E12000001,North East
