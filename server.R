@@ -435,7 +435,7 @@ server <- function(input, output, session) {
       observeEvent(input$submit, {
         req(theList())
 
-        purrr::iwalk(theList(), ~{
+        purrr::iwalk(theList(), ~ {
           names <- paste0("t_", .y)
           output[[names]] <- renderTable(.x)
         })
@@ -444,7 +444,7 @@ server <- function(input, output, session) {
       output$table_list <- renderUI({
         req(theList())
 
-        t_list <- purrr::imap(theList(), ~{
+        t_list <- purrr::imap(theList(), ~ {
           tagList(
             h4(.y),
             tableOutput(paste0("t_", .y))

@@ -195,13 +195,16 @@ fluidPage(
               ## QA stuff
 
 
+
               tabPanel(
                 title = "File previews",
                 value = "previewTab",
+                style = "padding-left:20px;",
+
                 "View metadata",
                 tableOutput("meta_table"),
                 "Preview datafile",
-                tableOutput("data_preview"),
+                tableOutput("data_preview")
               ),
 
 
@@ -210,6 +213,7 @@ fluidPage(
               tabPanel(
                 title = "What's in this file",
                 value = "obUnitTab",
+                style = "padding-left:20px;",
 
                 h2("What's in this file"),
 
@@ -311,6 +315,7 @@ fluidPage(
               tabPanel(
                 title = "Explore data",
                 value = "indicatorsTab",
+                style = "padding-left:20px;",
 
                 fluidRow(
                   column(
