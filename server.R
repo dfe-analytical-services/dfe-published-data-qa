@@ -312,7 +312,7 @@ server <- function(input, output, session) {
         })
       }
 
-      
+
       ## QA code -----------------------------------------------------------------------------
 
       # File previews ----------------------------------------------------------------
@@ -328,59 +328,52 @@ server <- function(input, output, session) {
       })
 
 
-      # Geog / time ------------------------------------------------------------------
-      
+      # Geog / time permutations -----------------------------------------------------
+
       output$geog_time_perms2 <- renderTable({
-        
-        data$mainFile  %>% 
+        data$mainFile %>%
           count(time_period, geographic_level) %>%
-          mutate(n = replace(n, n >0, "Y")) %>%
+          mutate(n = replace(n, n > 0, "Y")) %>%
           pivot_wider(names_from = time_period, values_from = n, values_fill = "N")
-        
-      }) 
-      
-      
+      })
+
+
       # Show filters and associated levels from the data -----------------------------
-      
-      # Function to create list of filter / filter level tables 
-      
+
       showFilterLevels <- function(meta) {
         filters <- meta %>%
           dplyr::filter(col_type == "Filter") %>%
           pull(col_name)
-        
+
         levelsTable <- function(filter) {
           return(eval(parse(text = paste0("data$mainFile %>% select(", filter, ") %>% distinct()"))))
         }
-        
+
         output <- lapply(filters, levelsTable)
-        
+
         return(output)
       }
-      
-      # Create output
 
       output$tables <- renderUI({
-        
         myList <- showFilterLevels(meta$mainFile)
-        
+
         tableList <- purrr::imap(myList, ~ {
           tagList(
-            h4(.y), # Note we can sprinkle in other UI elements
+            h4(.y),
             tableOutput(outputId = paste0("table_", .y))
           )
         })
-        
-        purrr::iwalk(myList, ~{
+
+        purrr::iwalk(myList, ~ {
           output_name <- paste0("table_", .y)
           output[[output_name]] <- renderTable(.x)
         })
-        
+
         tagList(tableList)
       })
-      
-      
-      # Indicators -------------------------------------------------------------------
+
+
+      # Indicator summaries-------------------------------------------------------------
 
       output$indicators <- renderTable({
         meta$mainFile %>%
@@ -388,9 +381,10 @@ server <- function(input, output, session) {
           select(col_name)
       })
 
-      
 
-     output$geogChoice <- renderUI({
+      # Create geographic level choice depending on what's available
+
+      output$geogChoice <- renderUI({
         selectInput(
           inputId = "geog_parameter",
           label = "Select Parameter(s):",
@@ -398,18 +392,18 @@ server <- function(input, output, session) {
           multiple = TRUE
         )
       })
-      
-      
-      
-      
+
+
+      # Show summary stats table for an indicator
+
+
       showsumstats <- function(parameter, geog_parameter) {
-        
-        args <- expand.grid(meas = parameter, geog= geog_parameter, stringsAsFactors = FALSE)
-        
+        args <- expand.grid(meas = parameter, geog = geog_parameter, stringsAsFactors = FALSE)
+
         indicators <- meta$mainFile %>%
           filter(col_type == "Indicator") %>%
           pull(col_name)
-        
+
         sumtable <- function(args) {
           return(eval(parse(text = paste0("data$mainFile %>% filter(geographic_level =='", args[2], "') %>% 
           mutate(across(all_of(indicators), na_if, c('c','z',':'))) %>%
@@ -422,65 +416,60 @@ server <- function(input, output, session) {
           pivot_wider(names_from = 'time_period') %>%
           mutate(geographic_level ='", args[2], "', .before = indicator)"))))
         }
-        
-        output <- apply(args, 1, sumtable) 
-        
+
+        output <- apply(args, 1, sumtable)
+
         return(output)
       }
-      
-      # create a list of tables - with one for each parameter selected
+
+      # create a list of tables - with one for each indicator summary
       theList <- eventReactive(input$submit, {
-        
         return(showsumstats(input$parameter, input$geog_parameter))
-        
       })
-      
-      
+
+
+      # Create and then output the tables
       observeEvent(input$submit, {
         req(theList())
-        
-        purrr::iwalk(theList(), ~{
+
+        purrr::iwalk(theList(), ~ {
           names <- paste0("t_", .y)
           output[[names]] <- renderTable(.x)
         })
       })
-      
-      
-        
+
       output$table_list <- renderUI({
         req(theList())
 
-          t_list <- purrr::imap(theList(), ~ {
+        t_list <- purrr::imap(theList(), ~ {
           tagList(
-            h4(.y), 
+            h4(.y),
             tableOutput(paste0("t_", .y))
           )
         })
-          tagList(t_list)
-        })
-        
-    
-      
-      
+        tagList(t_list)
+      })
+
+
+      # supressed cells ---------------------------------------------------------------
+
       output$suppressed_cell_count <- renderTable({
-      
-      filters <- meta$mainFile %>%
-        dplyr::filter(col_type == "Filter") %>%
-        pull(col_name)
-      
-      
-      data$mainFile %>%  
-        select(-all_of(filters)) %>%
-        unlist() %>% 
-        table() %>% 
-        as.data.frame() %>% 
-        filter(. %in% c("z","c",":","~"))
-    })
-      
+        filters <- meta$mainFile %>%
+          dplyr::filter(col_type == "Filter") %>%
+          pull(col_name)
+
+
+        data$mainFile %>%
+          select(-all_of(filters)) %>%
+          unlist() %>%
+          table() %>%
+          as.data.frame() %>%
+          filter(. %in% c("z", "c", ":", "~"))
+      })
     }) # end of isolate
 
-    
-    
+
+
     # Download all results button ---------------------------------------------------------------------------------
 
     output$download_results <- downloadHandler(
@@ -508,11 +497,10 @@ server <- function(input, output, session) {
 
     # Show reset button
     shinyjs::showElement(id = "reset_button", anim = TRUE, animType = "fade", time = 1.5)
-    
+
     # Select the screening report tab panel
-    
+
     updateTabsetPanel(session, "trendy_tabs", selected = "tab1")
-    
   })
 
   # Reset button ----------------------------------------------------------------------------

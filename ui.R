@@ -189,12 +189,12 @@ fluidPage(
                 # End of column
               ),
 
-              
-              
-              
+
+
+
               ## QA stuff
-              
-              
+
+
               tabPanel(
                 title = "File previews",
                 value = "previewTab",
@@ -203,129 +203,156 @@ fluidPage(
                 "Preview datafile",
                 tableOutput("data_preview"),
               ),
-              
-              
-              
-              
+
+
+
+
               tabPanel(
                 title = "What's in this file",
                 value = "obUnitTab",
-                
+
                 h2("What's in this file"),
-                
+
 
                 fluidRow(
-                  column(3,
-                         tags$b("What geography / time combinations are in the data"),
-                         br(),
-                         "For any unexpected Ns, check the data",
-                         br(),
-                         "For any legitimate Ns, consider if publishing this data would be worth it"
+                  column(
+                    3,
+                    tags$b("What geography / time combinations are in the data"),
+                    br(),
+                    "For any unexpected Ns, check the data",
+                    br(),
+                    "For any legitimate Ns, consider if publishing this data would be worth it"
                   ),
-                  column(8,
-                         tableOutput("geog_time_perms2")
-                 )
+                  column(
+                    8,
+                    tableOutput("geog_time_perms2")
+                  )
                 ),
-                
+
                 hr(),
 
 
                 fluidRow(
-                  column(3,
-                         tags$b("What filters are present in the data"),
-                         br(),
-                         "Check all levels are there",
-                         br(),
-                         "Check names are how you want them to look etc"
+                  column(
+                    3,
+                    tags$b("What filters are present in the data"),
+                    br(),
+                    "Check all levels are there",
+                    br(),
+                    "Check names are how you want them to look etc"
                   ),
-                  column(8,
-                         uiOutput("tables"),
-                         # "Filter combinations missing (on trello/github issue)",
+                  column(
+                    8,
+                    uiOutput("tables")
+                    # "Filter combinations missing (on trello/github issue)",
                   )
                 ),
 
 
-                
+
                 hr(),
 
                 fluidRow(
-                  column(3,
-                         "Supressed cells",
-                         "Are you supressing too much?"
+                  column(
+                    3,
+                    tags$b("What indicators are present in the data"),
+                    br(),
+                    "Check all levels are there",
+                    br(),
+                    "Check names are how you want them to look etc",
+                    br(),
+                    "NOTE - Change this to the pretty names instead"
                   ),
-                  column(8,
-                         "Count of supressed cells across all data",
-                         
-                         tableOutput("suppressed_cell_count")
+                  column(
+                    8,
+                    tableOutput("indicators")
+                    # "Filter combinations missing (on trello/github issue)",
                   )
                 ),
-                
+
+
+
                 hr(),
-                
-                
+
                 fluidRow(
-                  column(3,
-                         "Description goes here"
+                  column(
+                    3,
+                    "Supressed cells",
+                    "Are you supressing too much?"
                   ),
-                  column(8,
-                         "Output goes here"
+                  column(
+                    8,
+                    "Count of supressed cells across all data",
+
+                    tableOutput("suppressed_cell_count")
+                  )
+                ),
+
+                hr(),
+
+
+                fluidRow(
+                  column(
+                    3,
+                    "Description goes here"
+                  ),
+                  column(
+                    8,
+                    "Output goes here"
                   )
                 ),
 
                 hr()
-                
               ),
 
-              
-              
-              
+
+
+
               tabPanel(
                 title = "Explore data",
                 value = "indicatorsTab",
 
                 fluidRow(
-                  column(3,
-                         tags$b("Indicator summary"),
-                         br(),
-                         "Check for anything weird"
+                  column(
+                    3,
+                    tags$b("Indicator summary"),
+                    br(),
+                    "Check for anything weird"
                   ),
-                  column(8,
-                         fluidRow(
-                           column(
-                             4, 
-                             selectInput(
-                               inputId = "parameter",
-                               label = "Select Parameter(s):",
-                               choices = c("min","max"),
-                               multiple = TRUE
-                             )
-                           ),
-                           column(
-                             4, 
-                             uiOutput("geogChoice")
-                           ),
-                           
-                           column(
-                             4, 
-                             actionButton(
-                               inputId = "submit",
-                               label = "Apply Changes!",
-                               style = "margin:40px;"
-                             )
-                           )
-                         ),
-                         fluidRow(
-                           uiOutput("table_list")
-                         )
+                  column(
+                    8,
+                    fluidRow(
+                      column(
+                        4,
+                        selectInput(
+                          inputId = "parameter",
+                          label = "Select Parameter(s):",
+                          choices = c("min", "max"),
+                          multiple = TRUE
+                        )
+                      ),
+                      column(
+                        4,
+                        uiOutput("geogChoice")
+                      ),
+
+                      column(
+                        4,
+                        actionButton(
+                          inputId = "submit",
+                          label = "Apply Changes!",
+                          style = "margin:40px;"
+                        )
+                      )
+                    ),
+                    fluidRow(
+                      uiOutput("table_list")
+                    )
                   )
                 ),
-                
+
                 hr()
-                
               )
-              
-              
-              
             ) # End of tabsetpanel
           ))
           # End of summarised results div
