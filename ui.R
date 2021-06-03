@@ -208,22 +208,12 @@ fluidPage(
               
               
               tabPanel(
-                title = "File overview",
+                title = "What's in this file",
                 value = "obUnitTab",
                 
                 h2("What's in this file"),
                 
-                # fluidRow(
-                #   column(3,
-                #          "Description goes here"
-                #          ),
-                #   column(8,
-                #          "Output goes here"
-                #          )
-                # ),
-                # 
-                # #hr(),
-                
+
                 fluidRow(
                   column(3,
                          tags$b("What geography / time combinations are in the data"),
@@ -254,8 +244,45 @@ fluidPage(
                   )
                 ),
 
+
+                
+                hr(),
+
+                fluidRow(
+                  column(3,
+                         "Supressed cells",
+                         "Are you supressing too much?"
+                  ),
+                  column(8,
+                         "Count of supressed cells across all data",
+                         
+                         tableOutput("suppressed_cell_count")
+                  )
+                ),
+                
                 hr(),
                 
+                
+                fluidRow(
+                  column(3,
+                         "Description goes here"
+                  ),
+                  column(8,
+                         "Output goes here"
+                  )
+                ),
+
+                hr()
+                
+              ),
+
+              
+              
+              
+              tabPanel(
+                title = "Explore data",
+                value = "indicatorsTab",
+
                 fluidRow(
                   column(3,
                          tags$b("Indicator summary"),
@@ -293,46 +320,7 @@ fluidPage(
                   )
                 ),
                 
-                hr(),
-
-                fluidRow(
-                  column(3,
-                         "Supressed cells",
-                         "Are you supressing too much?"
-                  ),
-                  column(8,
-                         "Count of supressed cells across all data",
-                         
-                         tableOutput("suppressed_cell_count")
-                  )
-                ),
-                
-                hr(),
-                
-                
-                fluidRow(
-                  column(3,
-                         "Description goes here"
-                  ),
-                  column(8,
-                         "Output goes here"
-                  )
-                ),
-
                 hr()
-                
-              ),
-
-              
-              
-              
-              tabPanel(
-                title = "Data overview",
-                value = "indicatorsTab",
-
-                "Placeholder",
-                
-                
                 
               )
               

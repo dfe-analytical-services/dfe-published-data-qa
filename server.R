@@ -412,9 +412,11 @@ server <- function(input, output, session) {
         
         sumtable <- function(args) {
           return(eval(parse(text = paste0("data$mainFile %>% filter(geographic_level =='", args[2], "') %>% 
+          mutate(across(all_of(indicators), na_if, c('c','z',':'))) %>%
+          mutate(across(all_of(indicators), as.numeric)) %>%
           select(time_period, all_of(indicators)) %>%
           group_by(time_period) %>%
-          summarise(across(everything(), list(min = min, max = max))) %>%
+          summarise(across(everything(), list(min = min, max = max), na.rm=TRUE)) %>%
           pivot_longer(!time_period, names_to = c('indicator', 'measure'), names_pattern = '(.*)_(.*)') %>%
           filter(measure =='", args[1], "') %>% 
           pivot_wider(names_from = 'time_period') %>%
