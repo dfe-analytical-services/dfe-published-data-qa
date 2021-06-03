@@ -74,7 +74,6 @@ test_that("ladWithinLA", {
 
 test_that("blankFilterGroupsMeta", {
   screeningOutput <- testOther("../../tests/testthat/otherData/blankFilterGroups.csv")
-  
+
   expect_equal(screeningOutput$results %>% filter(result == "FAIL") %>% nrow(), 0)
 })
-
