@@ -199,9 +199,9 @@ fluidPage(
                 title = "File previews",
                 value = "previewTab",
                 h3("View metadata"),
-                DTOutput("meta_table", width = 1400),
+                DTOutput("meta_table", width = 1400) %>% withSpinner(),
                 h3("Preview datafile"),
-                DTOutput("data_preview", width = 1400),
+                DTOutput("data_preview", width = 1400) %>% withSpinner(),
                 br()
               ),
 
@@ -226,7 +226,7 @@ fluidPage(
                   ),
                   column(
                     8,
-                    tableOutput("geog_time_perms2")
+                    tableOutput("geog_time_perms2") %>% withSpinner()
                   )
                 ),
 
@@ -246,7 +246,7 @@ fluidPage(
                   ),
                   column(
                     8,
-                    uiOutput("tables")
+                    uiOutput("tables") %>% withSpinner()
                     # "Filter combinations missing (on trello/github issue)",
                   )
                 ),
@@ -266,7 +266,7 @@ fluidPage(
                   ),
                   column(
                     8,
-                    tableOutput("indicators")
+                    tableOutput("indicators") %>% withSpinner()
                     # "Filter combinations missing (on trello/github issue)",
                   )
                 ),
@@ -285,7 +285,7 @@ fluidPage(
                   column(
                     8,
 
-                    uiOutput("suppressed_cell_count")
+                    uiOutput("suppressed_cell_count") %>% withSpinner()
                   )
                 ),
 
@@ -334,7 +334,7 @@ fluidPage(
                       ),
                       column(
                         4,
-                        uiOutput("geogChoice")
+                        uiOutput("geogChoice") %>% withSpinner()
                       ),
 
                       column(

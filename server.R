@@ -531,7 +531,7 @@ server <- function(input, output, session) {
           table() %>%
           as.data.frame() %>%
           filter(. %in% c("z", "c", ":", "~")) %>%
-          mutate(Perc = round(Freq / total_indicator_count * 100, 1))
+          mutate(Perc = roundFiveUp(Freq / total_indicator_count * 100, 1))
 
         names(suppress_count) <- c("Symbol", "Frequency", "% of total cell count")
 
