@@ -59,7 +59,7 @@ duplicate_rows <- function(data, meta) {
     pull(col_name)
 
   filter_groups <- meta %>%
-    filter(!is.na(filter_grouping_column)) %>%
+    filter(!is.na(filter_grouping_column) & filter_grouping_column != "") %>%
     pull(filter_grouping_column)
 
   present_obUnits_filters <- intersect(c(acceptable_observational_units, filters, filter_groups), names(data))
@@ -151,7 +151,7 @@ total <- function(data, meta) {
     pull(col_name)
 
   filter_groups <- meta %>%
-    filter(!is.na(filter_grouping_column)) %>%
+    filter(!is.na(filter_grouping_column) & filter_grouping_column != "") %>%
     pull(filter_grouping_column)
 
   filters_and_groups <- c(filters, filter_groups)
@@ -1319,7 +1319,7 @@ filter_hint <- function(meta) {
 
 filter_group <- function(meta) {
   filter_groups <- meta %>%
-    filter(col_type == "Indicator", !is.na(filter_grouping_column)) %>%
+    filter(col_type == "Indicator", !is.na(filter_grouping_column) & filter_grouping_column != "") %>%
     pull(filter_grouping_column)
 
   if (length(filter_groups) > 0) {
@@ -1341,7 +1341,7 @@ filter_group <- function(meta) {
 # filter groups should be in the vector for column names for the data file
 
 filter_group_match <- function(data, meta) {
-  meta_filter_groups <- meta %>% filter(!is.na(filter_grouping_column))
+  meta_filter_groups <- meta %>% filter(!is.na(filter_grouping_column) & filter_grouping_column != "")
 
   if (nrow(meta_filter_groups) == 0) {
     output <- list(
@@ -1380,7 +1380,7 @@ filter_group_match <- function(data, meta) {
 
 filter_group_level <- function(data, meta) {
   meta_filters_and_groups <- meta %>%
-    filter(col_type == "Filter", !is.na(filter_grouping_column)) %>%
+    filter(col_type == "Filter", !is.na(filter_grouping_column) & filter_grouping_column != "") %>%
     select(col_name, filter_grouping_column)
 
   if (nrow(meta_filters_and_groups) == 0) {
@@ -1435,7 +1435,7 @@ filter_group_level <- function(data, meta) {
 # Checking that filter groups are not filters
 
 filter_group_not_filter <- function(meta) {
-  if (meta %>% filter(!is.na(filter_grouping_column)) %>% nrow() == 0) {
+  if (meta %>% filter(!is.na(filter_grouping_column) & filter_grouping_column != "") %>% nrow() == 0) {
     output <- list(
       "message" = "There are no filter groups present.",
       "result" = "IGNORE"
@@ -1450,7 +1450,7 @@ filter_group_not_filter <- function(meta) {
     }
 
     pre_result <- stack(sapply(meta %>%
-      filter(!is.na(filter_grouping_column)) %>%
+      filter(!is.na(filter_grouping_column) & filter_grouping_column != "") %>%
       pull(filter_grouping_column), filter_group_not_filter_check))
 
     filter_groups_in_col_names <- filter(pre_result, values == "FAIL") %>% pull(ind)
@@ -1475,13 +1475,13 @@ filter_group_not_filter <- function(meta) {
 # Checking that filter groups are not duplicated
 
 filter_group_duplicate <- function(meta) {
-  if (meta %>% filter(!is.na(filter_grouping_column)) %>% nrow() == 0) {
+  if (meta %>% filter(!is.na(filter_grouping_column) & filter_grouping_column != "") %>% nrow() == 0) {
     output <- list(
       "message" = "There are no filter groups present.",
       "result" = "IGNORE"
     )
   } else {
-    if (suppressMessages(meta %>% filter(!is.na(filter_grouping_column)) %>% get_dupes(filter_grouping_column) %>% nrow()) != 0) {
+    if (suppressMessages(meta %>% filter(!is.na(filter_grouping_column) & filter_grouping_column != "") %>% get_dupes(filter_grouping_column) %>% nrow()) != 0) {
       output <- list(
         "message" = "There are duplicated filter_group values.",
         "result" = "FAIL"
