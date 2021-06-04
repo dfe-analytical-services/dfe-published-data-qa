@@ -278,14 +278,14 @@ fluidPage(
                 fluidRow(
                   column(
                     3,
-                    "Supressed cells",
+                    tags$b("Supressed cells"),
+                    br(),
                     "Are you supressing too much?"
                   ),
                   column(
                     8,
-                    "Count of supressed cells across all data",
 
-                    tableOutput("suppressed_cell_count")
+                    uiOutput("suppressed_cell_count")
                   )
                 ),
 

@@ -491,19 +491,50 @@ server <- function(input, output, session) {
 
       # supressed cells ---------------------------------------------------------------
 
-      output$suppressed_cell_count <- renderTable({
-        filters <- meta$mainFile %>%
-          dplyr::filter(col_type == "Filter") %>%
+      observe({
+        
+        indicators <- meta$mainFile %>%
+          dplyr::filter(col_type == "Indicator") %>%
           pull(col_name)
-
-
-        data$mainFile %>%
-          select(-all_of(filters)) %>%
+        
+        total_indicator_count <- data$mainFile %>% 
+          select(all_of(indicators)) %>% 
+          unlist()%>%
+          table() %>%
+          as.data.frame() %>% 
+          summarise(sum(Freq)) %>% 
+          as.numeric()
+        
+        
+        suppress_count<- data$mainFile %>%
+          select(all_of(indicators)) %>%
           unlist() %>%
           table() %>%
           as.data.frame() %>%
-          filter(. %in% c("z", "c", ":", "~"))
-      })
+          filter(. %in% c("z", "c", ":", "~")) %>% 
+          mutate(Perc = round(Freq/total_indicator_count*100,1)) 
+        
+        names(suppress_count) <- c("Symbol","Frequency","% of total cell count")
+        
+        
+        output$suppressed_cell_count <- renderUI({
+          if(nrow(suppress_count) == 0)
+            return(strong("No cells are suppressed"))
+          
+          tableOutput("suppressed_cell_count_table")
+        })
+        
+        output$suppressed_cell_count_table <- renderTable({
+          suppress_count
+        })
+        
+        
+      }) 
+      
+      
+      
+      
+      
     }) # end of isolate
 
 
