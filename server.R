@@ -316,15 +316,50 @@ server <- function(input, output, session) {
       ## QA code -----------------------------------------------------------------------------
 
       # File previews ----------------------------------------------------------------
+      
+      
+      #Set striping to be "off" for data tables
+      rowCallback <- c(
+        "function(row, data, num, index){",
+        "  var $row = $(row);",
+        "    $row.css('background-color', '#454b51');",
+        "    $row.hover(function(){",
+        "      $(this).css('background-color', '#6a737c');",
+        "     }, function(){",
+        "      $(this).css('background-color', '#454b51');",
+        "     }",
+        "    );",  
+        "}"  
+      )
 
       # Metadata preview
-      output$meta_table <- renderTable({
-        meta$mainFile
+      output$meta_table <- DT::renderDT({
+        datatable(meta$mainFile,
+                   rownames = FALSE,
+                  style = "bootstrap",
+                   options = list(
+                     dom = "pt",
+                     rowCallback = JS(rowCallback),
+                     initComplete = JS(
+                       "function(settings, json) {",
+                       "$(this.api().table().header()).css({'background-color': '#232628', 'color': '#c8c8c8'});",
+                       "}")
+                     ))
       })
 
       # Data preview
-      output$data_preview <- renderTable({
-        head(data$mainFile)
+      output$data_preview <- DT::renderDT({
+        datatable(data$mainFile,
+                   rownames = FALSE,
+                  style = "bootstrap",
+                   options = list(
+                     dom = "pt",
+                     rowCallback = JS(rowCallback),
+                     initComplete = JS(
+                       "function(settings, json) {",
+                       "$(this.api().table().header()).css({'background-color': '#232628', 'color': '#c8c8c8'});",
+                       "}"),
+                     scrollX = TRUE))
       })
 
 

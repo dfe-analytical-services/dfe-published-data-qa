@@ -198,10 +198,11 @@ fluidPage(
               tabPanel(
                 title = "File previews",
                 value = "previewTab",
-                "View metadata",
-                tableOutput("meta_table"),
-                "Preview datafile",
-                tableOutput("data_preview"),
+                h3("View metadata"),
+                DTOutput("meta_table",width = 1400),
+                h3("Preview datafile"),
+                DTOutput("data_preview",width = 1400),
+                br()
               ),
 
 
