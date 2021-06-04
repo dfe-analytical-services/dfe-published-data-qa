@@ -199,9 +199,9 @@ fluidPage(
                 title = "File previews",
                 value = "previewTab",
                 h3("View metadata"),
-                DTOutput("meta_table",width = 1400),
+                DTOutput("meta_table", width = 1400),
                 h3("Preview datafile"),
-                DTOutput("data_preview",width = 1400),
+                DTOutput("data_preview", width = 1400),
                 br()
               ),
 
@@ -240,7 +240,9 @@ fluidPage(
                     br(),
                     "Check all levels are there",
                     br(),
-                    "Check names are how you want them to look etc"
+                    "Shows matching filter groups where they are specified in metadata",
+                    br(),
+                    "Check names are how you want them to look etc",
                   ),
                   column(
                     8,

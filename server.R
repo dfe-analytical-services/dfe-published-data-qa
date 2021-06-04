@@ -316,9 +316,9 @@ server <- function(input, output, session) {
       ## QA code -----------------------------------------------------------------------------
 
       # File previews ----------------------------------------------------------------
-      
-      
-      #Set striping to be "off" for data tables
+
+
+      # Set striping to be "off" for data tables
       rowCallback <- c(
         "function(row, data, num, index){",
         "  var $row = $(row);",
@@ -328,38 +328,43 @@ server <- function(input, output, session) {
         "     }, function(){",
         "      $(this).css('background-color', '#454b51');",
         "     }",
-        "    );",  
-        "}"  
+        "    );",
+        "}"
       )
 
       # Metadata preview
       output$meta_table <- DT::renderDT({
         datatable(meta$mainFile,
-                   rownames = FALSE,
-                  style = "bootstrap",
-                   options = list(
-                     dom = "pt",
-                     rowCallback = JS(rowCallback),
-                     initComplete = JS(
-                       "function(settings, json) {",
-                       "$(this.api().table().header()).css({'background-color': '#232628', 'color': '#c8c8c8'});",
-                       "}")
-                     ))
+          rownames = FALSE,
+          style = "bootstrap",
+          options = list(
+            dom = "pt",
+            rowCallback = JS(rowCallback),
+            initComplete = JS(
+              "function(settings, json) {",
+              "$(this.api().table().header()).css({'background-color': '#232628', 'color': '#c8c8c8'});",
+              "}"
+            )
+          )
+        )
       })
 
       # Data preview
       output$data_preview <- DT::renderDT({
         datatable(data$mainFile,
-                   rownames = FALSE,
-                  style = "bootstrap",
-                   options = list(
-                     dom = "pt",
-                     rowCallback = JS(rowCallback),
-                     initComplete = JS(
-                       "function(settings, json) {",
-                       "$(this.api().table().header()).css({'background-color': '#232628', 'color': '#c8c8c8'});",
-                       "}"),
-                     scrollX = TRUE))
+          rownames = FALSE,
+          style = "bootstrap",
+          options = list(
+            dom = "pt",
+            rowCallback = JS(rowCallback),
+            initComplete = JS(
+              "function(settings, json) {",
+              "$(this.api().table().header()).css({'background-color': '#232628', 'color': '#c8c8c8'});",
+              "}"
+            ),
+            scrollX = TRUE
+          )
+        )
       })
 
 
@@ -380,9 +385,24 @@ server <- function(input, output, session) {
           dplyr::filter(col_type == "Filter") %>%
           pull(col_name)
 
+        filter_groups <- meta %>%
+          dplyr::filter(col_type == "Filter") %>%
+          select(col_name, filter_grouping_column)
+
+
         levelsTable <- function(filter) {
-          return(eval(parse(text = paste0("data$mainFile %>% select(", filter, ") %>% distinct()"))))
+          filter_group <- filter_groups %>%
+            dplyr::filter(col_name == filter) %>%
+            pull(filter_grouping_column)
+
+          if (!is.na(filter_group)) {
+            return(eval(parse(text = paste0("data$mainFile %>% select(", filter, ", ", filter_group, ") %>% distinct() %>% arrange(", filter, ", ", filter_group, ")"))))
+          }
+          else {
+            return(eval(parse(text = paste0("data$mainFile %>% select(", filter, ") %>% distinct() %>% arrange(", filter, ")"))))
+          }
         }
+
 
         output <- lapply(filters, levelsTable)
 
@@ -413,7 +433,7 @@ server <- function(input, output, session) {
       output$indicators <- renderTable({
         meta$mainFile %>%
           filter(col_type == "Indicator") %>%
-          select(col_name,label)
+          select(col_name, label)
       })
 
 
@@ -470,7 +490,7 @@ server <- function(input, output, session) {
       observeEvent(input$submit, {
         req(theList())
 
-        purrr::iwalk(theList(), ~{
+        purrr::iwalk(theList(), ~ {
           names <- paste0("t_", .y)
           output[[names]] <- renderTable(.x)
         })
@@ -479,7 +499,7 @@ server <- function(input, output, session) {
       output$table_list <- renderUI({
         req(theList())
 
-        t_list <- purrr::imap(theList(), ~{
+        t_list <- purrr::imap(theList(), ~ {
           tagList(
             h4(.y),
             tableOutput(paste0("t_", .y))
@@ -492,49 +512,42 @@ server <- function(input, output, session) {
       # supressed cells ---------------------------------------------------------------
 
       observe({
-        
         indicators <- meta$mainFile %>%
           dplyr::filter(col_type == "Indicator") %>%
           pull(col_name)
-        
-        total_indicator_count <- data$mainFile %>% 
-          select(all_of(indicators)) %>% 
-          unlist()%>%
-          table() %>%
-          as.data.frame() %>% 
-          summarise(sum(Freq)) %>% 
-          as.numeric()
-        
-        
-        suppress_count<- data$mainFile %>%
+
+        total_indicator_count <- data$mainFile %>%
           select(all_of(indicators)) %>%
           unlist() %>%
           table() %>%
           as.data.frame() %>%
-          filter(. %in% c("z", "c", ":", "~")) %>% 
-          mutate(Perc = round(Freq/total_indicator_count*100,1)) 
-        
-        names(suppress_count) <- c("Symbol","Frequency","% of total cell count")
-        
-        
+          summarise(sum(Freq)) %>%
+          as.numeric()
+
+
+        suppress_count <- data$mainFile %>%
+          select(all_of(indicators)) %>%
+          unlist() %>%
+          table() %>%
+          as.data.frame() %>%
+          filter(. %in% c("z", "c", ":", "~")) %>%
+          mutate(Perc = round(Freq / total_indicator_count * 100, 1))
+
+        names(suppress_count) <- c("Symbol", "Frequency", "% of total cell count")
+
+
         output$suppressed_cell_count <- renderUI({
-          if(nrow(suppress_count) == 0)
+          if (nrow(suppress_count) == 0) {
             return(strong("No cells are suppressed"))
-          
+          }
+
           tableOutput("suppressed_cell_count_table")
         })
-        
+
         output$suppressed_cell_count_table <- renderTable({
           suppress_count
         })
-        
-        
-      }) 
-      
-      
-      
-      
-      
+      })
     }) # end of isolate
 
 
