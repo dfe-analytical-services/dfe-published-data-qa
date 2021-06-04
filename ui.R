@@ -260,9 +260,7 @@ fluidPage(
                     br(),
                     "Check all levels are there",
                     br(),
-                    "Check names are how you want them to look etc",
-                    br(),
-                    "NOTE - Change this to the pretty names instead"
+                    "Check names are how you want them to look etc"
                   ),
                   column(
                     8,

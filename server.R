@@ -413,7 +413,7 @@ server <- function(input, output, session) {
       output$indicators <- renderTable({
         meta$mainFile %>%
           filter(col_type == "Indicator") %>%
-          select(col_name)
+          select(col_name,label)
       })
 
 
