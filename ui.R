@@ -357,7 +357,7 @@ fluidPage(
               tabPanel(
                 title = "Identify outliers",
                 value = "outliersTab",
-                
+
                 fluidRow(
                   column(
                     3,
@@ -368,7 +368,6 @@ fluidPage(
                   column(
                     8,
                     fluidRow(
-                      
                       column(
                         4,
                         uiOutput("outlier_indicator_choice") %>% withSpinner()
@@ -406,7 +405,7 @@ fluidPage(
                     )
                   )
                 ),
-                
+
                 hr()
               )
             ) # End of tabsetpanel
