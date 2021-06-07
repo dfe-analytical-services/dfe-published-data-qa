@@ -317,14 +317,54 @@ server <- function(input, output, session) {
 
       # File previews ----------------------------------------------------------------
 
+
+      # Set striping to be "off" for data tables
+      rowCallback <- c(
+        "function(row, data, num, index){",
+        "  var $row = $(row);",
+        "    $row.css('background-color', '#454b51');",
+        "    $row.hover(function(){",
+        "      $(this).css('background-color', '#6a737c');",
+        "     }, function(){",
+        "      $(this).css('background-color', '#454b51');",
+        "     }",
+        "    );",
+        "}"
+      )
+
       # Metadata preview
-      output$meta_table <- renderTable({
-        meta$mainFile
+      output$meta_table <- DT::renderDT({
+        datatable(meta$mainFile,
+          rownames = FALSE,
+          style = "bootstrap",
+          options = list(
+            dom = "pt",
+            rowCallback = JS(rowCallback),
+            initComplete = JS(
+              "function(settings, json) {",
+              "$(this.api().table().header()).css({'background-color': '#232628', 'color': '#c8c8c8'});",
+              "}"
+            )
+          )
+        )
       })
 
       # Data preview
-      output$data_preview <- renderTable({
-        head(data$mainFile)
+      output$data_preview <- DT::renderDT({
+        datatable(data$mainFile,
+          rownames = FALSE,
+          style = "bootstrap",
+          options = list(
+            dom = "pt",
+            rowCallback = JS(rowCallback),
+            initComplete = JS(
+              "function(settings, json) {",
+              "$(this.api().table().header()).css({'background-color': '#232628', 'color': '#c8c8c8'});",
+              "}"
+            ),
+            scrollX = TRUE
+          )
+        )
       })
 
 
@@ -345,9 +385,24 @@ server <- function(input, output, session) {
           dplyr::filter(col_type == "Filter") %>%
           pull(col_name)
 
+        filter_groups <- meta %>%
+          dplyr::filter(col_type == "Filter") %>%
+          select(col_name, filter_grouping_column)
+
+
         levelsTable <- function(filter) {
-          return(eval(parse(text = paste0("data$mainFile %>% select(", filter, ") %>% distinct()"))))
+          filter_group <- filter_groups %>%
+            dplyr::filter(col_name == filter) %>%
+            pull(filter_grouping_column)
+
+          if (!is.na(filter_group)) {
+            return(eval(parse(text = paste0("data$mainFile %>% select(", filter, ", ", filter_group, ") %>% distinct() %>% arrange(", filter, ", ", filter_group, ")"))))
+          }
+          else {
+            return(eval(parse(text = paste0("data$mainFile %>% select(", filter, ") %>% distinct() %>% arrange(", filter, ")"))))
+          }
         }
+
 
         output <- lapply(filters, levelsTable)
 
@@ -378,7 +433,7 @@ server <- function(input, output, session) {
       output$indicators <- renderTable({
         meta$mainFile %>%
           filter(col_type == "Indicator") %>%
-          select(col_name)
+          select(col_name, label)
       })
 
 
@@ -456,18 +511,42 @@ server <- function(input, output, session) {
 
       # supressed cells ---------------------------------------------------------------
 
-      output$suppressed_cell_count <- renderTable({
-        filters <- meta$mainFile %>%
-          dplyr::filter(col_type == "Filter") %>%
+      observe({
+        indicators <- meta$mainFile %>%
+          dplyr::filter(col_type == "Indicator") %>%
           pull(col_name)
 
-
-        data$mainFile %>%
-          select(-all_of(filters)) %>%
+        total_indicator_count <- data$mainFile %>%
+          select(all_of(indicators)) %>%
           unlist() %>%
           table() %>%
           as.data.frame() %>%
-          filter(. %in% c("z", "c", ":", "~"))
+          summarise(sum(Freq)) %>%
+          as.numeric()
+
+
+        suppress_count <- data$mainFile %>%
+          select(all_of(indicators)) %>%
+          unlist() %>%
+          table() %>%
+          as.data.frame() %>%
+          filter(. %in% c("z", "c", ":", "~")) %>%
+          mutate(Perc = roundFiveUp(Freq / total_indicator_count * 100, 1))
+
+        names(suppress_count) <- c("Symbol", "Frequency", "% of total cell count")
+
+
+        output$suppressed_cell_count <- renderUI({
+          if (nrow(suppress_count) == 0) {
+            return(strong("No cells are suppressed"))
+          }
+
+          tableOutput("suppressed_cell_count_table")
+        })
+
+        output$suppressed_cell_count_table <- renderTable({
+          suppress_count
+        })
       })
     }) # end of isolate
 

@@ -20,6 +20,7 @@ library(ggplot2)
 library(shinyFeedback)
 library(DT)
 library(shinyWidgets)
+library(shinycssloaders)
 
 # activeTestsInFile ---------------------------------------------------------------------------------
 # Extracting the active tests that are run against files
@@ -221,3 +222,9 @@ roundFiveUp <- function(x, n) {
   z <- z / 10^n
   return(z * positiveNegative)
 }
+
+
+# spinner options ---------------------------------------------------------
+options(spinner.type = 5)
+options(spinner.color = "#c8c8c8") # Grey '#C0C0C0') # Laura's blue #6294C6
+options(spinner.size = .5)

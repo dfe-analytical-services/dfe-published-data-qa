@@ -660,6 +660,13 @@
       "Repository": "CRAN",
       "Hash": "67f284ca3b12634dfabbbb5c247f5966"
     },
+    "shinycssloaders": {
+      "Package": "shinycssloaders",
+      "Version": "1.0.0",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "f39bb3c44a9b496723ec7e86f9a771d8"
+    },
     "shinyjs": {
       "Package": "shinyjs",
       "Version": "2.0.0",
@@ -765,19 +772,19 @@
       "Repository": "CRAN",
       "Hash": "5cf1957f93076c19fdc81d01409d240b"
     },
-    "waldo": {
-      "Package": "waldo",
-      "Version": "0.2.5",
-      "Source": "Repository",
-      "Repository": "CRAN",
-      "Hash": "20c45f1d511a3f730b7b469f4d11e104"
-    },
     "viridisLite": {
       "Package": "viridisLite",
       "Version": "0.3.0",
       "Source": "Repository",
       "Repository": "CRAN",
       "Hash": "ce4f6271baa94776db692f1cb2055bee"
+    },
+    "waldo": {
+      "Package": "waldo",
+      "Version": "0.2.5",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "20c45f1d511a3f730b7b469f4d11e104"
     },
     "webdriver": {
       "Package": "webdriver",

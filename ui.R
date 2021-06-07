@@ -201,10 +201,12 @@ fluidPage(
                 value = "previewTab",
                 style = "padding-left:20px;",
 
-                "View metadata",
-                tableOutput("meta_table"),
-                "Preview datafile",
-                tableOutput("data_preview")
+                h3("View metadata"),
+                DTOutput("meta_table", width = 1400) %>% withSpinner(),
+                h3("Preview datafile"),
+                DTOutput("data_preview", width = 1400) %>% withSpinner(),
+                br()
+
               ),
 
 
@@ -229,7 +231,7 @@ fluidPage(
                   ),
                   column(
                     8,
-                    tableOutput("geog_time_perms2")
+                    tableOutput("geog_time_perms2") %>% withSpinner()
                   )
                 ),
 
@@ -243,11 +245,13 @@ fluidPage(
                     br(),
                     "Check all levels are there",
                     br(),
-                    "Check names are how you want them to look etc"
+                    "Shows matching filter groups where they are specified in metadata",
+                    br(),
+                    "Check names are how you want them to look etc",
                   ),
                   column(
                     8,
-                    uiOutput("tables")
+                    uiOutput("tables") %>% withSpinner()
                     # "Filter combinations missing (on trello/github issue)",
                   )
                 ),
@@ -263,13 +267,11 @@ fluidPage(
                     br(),
                     "Check all levels are there",
                     br(),
-                    "Check names are how you want them to look etc",
-                    br(),
-                    "NOTE - Change this to the pretty names instead"
+                    "Check names are how you want them to look etc"
                   ),
                   column(
                     8,
-                    tableOutput("indicators")
+                    tableOutput("indicators") %>% withSpinner()
                     # "Filter combinations missing (on trello/github issue)",
                   )
                 ),
@@ -281,14 +283,14 @@ fluidPage(
                 fluidRow(
                   column(
                     3,
-                    "Supressed cells",
+                    tags$b("Supressed cells"),
+                    br(),
                     "Are you supressing too much?"
                   ),
                   column(
                     8,
-                    "Count of supressed cells across all data",
 
-                    tableOutput("suppressed_cell_count")
+                    uiOutput("suppressed_cell_count") %>% withSpinner()
                   )
                 ),
 
@@ -338,7 +340,7 @@ fluidPage(
                       ),
                       column(
                         4,
-                        uiOutput("geogChoice")
+                        uiOutput("geogChoice") %>% withSpinner()
                       ),
 
                       column(
