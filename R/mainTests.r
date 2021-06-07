@@ -1075,7 +1075,7 @@ region_code <- function(data) {
     )
   } else {
     invalid_values <- data %>%
-      select("region_code","region_name") %>%
+      select("region_code", "region_name") %>%
       unique() %>%
       filter(!is.na(.)) %>%
       filter(region_code != "") %>%
@@ -1084,8 +1084,8 @@ region_code <- function(data) {
       mutate(combo = paste(region_code, region_name)) %>%
       pull(combo) %>%
       .[!(. %in% expected_region_combinations)]
-    #.[!grepl("^[A-Z]{1}[0-9]{8}$", .)]
-    
+    # .[!grepl("^[A-Z]{1}[0-9]{8}$", .)]
+
     if (length(invalid_values) == 0) {
       output <- list(
         "message" = "region_code is always a 9 digit code, with one letter followed by 8 numbers, : for not available, or blank.",
@@ -1105,7 +1105,7 @@ region_code <- function(data) {
       }
     }
   }
-  
+
   return(output)
 }
 
@@ -1120,14 +1120,14 @@ country_code <- function(data) {
     )
   } else {
     invalid_values <- data %>%
-      select("country_code","country_name") %>%
+      select("country_code", "country_name") %>%
       filter(country_code != ":") %>%
       filter(country_code != "z") %>%
       unique() %>%
       mutate(combo = paste(country_code, country_name)) %>%
       pull(combo) %>%
       .[!(. %in% expected_country_combinations)]
-    
+
     if (length(invalid_values) == 0) {
       output <- list(
         "message" = "country_code is always one of the expected ONS codes or ':' for 'Not available'.",
@@ -1147,7 +1147,7 @@ country_code <- function(data) {
       }
     }
   }
-  
+
   return(output)
 }
 
