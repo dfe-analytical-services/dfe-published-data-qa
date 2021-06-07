@@ -276,14 +276,16 @@ server <- function(input, output, session) {
         shinyjs::show(selector = c(
           "#trendy_tabs li a[data-value=previewTab]",
           "#trendy_tabs li a[data-value=obUnitTab]",
-          "#trendy_tabs li a[data-value=indicatorsTab]"
+          "#trendy_tabs li a[data-value=indicatorsTab]",
+          "#trendy_tabs li a[data-value=outliersTab]"
         ))
       }
       else {
         shinyjs::hide(selector = c(
           "#trendy_tabs li a[data-value=previewTab]",
           "#trendy_tabs li a[data-value=obUnitTab]",
-          "#trendy_tabs li a[data-value=indicatorsTab]"
+          "#trendy_tabs li a[data-value=indicatorsTab]",
+          "#trendy_tabs li a[data-value=outliersTab]"
         ))
       }
 
@@ -450,8 +452,6 @@ server <- function(input, output, session) {
 
 
       # Show summary stats table for an indicator
-
-
       showsumstats <- function(parameter, geog_parameter) {
         args <- expand.grid(meas = parameter, geog = geog_parameter, stringsAsFactors = FALSE)
 
@@ -507,6 +507,131 @@ server <- function(input, output, session) {
         })
         tagList(t_list)
       })
+      
+      # Outliers ----------------------------------------------------------------------
+      
+      #Give users choice of indicators
+      output$outlier_indicator_choice <- renderUI({
+        selectInput(
+          inputId = "outlier_indicator_parameter",
+          label = "Select Indicator(s):",
+          choices =   meta$mainFile %>% filter(col_type == "Indicator")  %>% select(col_name),
+          multiple = TRUE
+        )
+      })
+      
+      #Select "current time"
+      output$current_time <- renderUI({
+        selectInput(
+          inputId = "ctime_parameter",
+          label = "Select Current Time Period:",
+          choices = data$mainFile %>% arrange(desc(time_period)) %>%  pull(time_period) %>% unique(),
+          multiple = FALSE
+        )
+      })
+      
+      #Select "comparison time"
+      output$comparison_time <- renderUI({
+        selectInput(
+          inputId = "comptime_parameter",
+          label = "Select Comparison Time Period:",
+          choices = data$mainFile %>% arrange(desc(time_period)) %>% pull(time_period) %>% unique(),
+          multiple = FALSE
+        )
+      })
+      
+      
+      #get outlier stats
+      
+      get_outliers <- function(outlier_indicator_parameter, threshold_setting, ctime_parameter,comptime_parameter){
+        
+        args <- expand.grid(meas = outlier_indicator_parameter, thresh = threshold_setting, current = ctime_parameter, comparison = comptime_parameter,stringsAsFactors = FALSE)
+        
+        
+        #Get list of indicators
+        indicators <-  meta$mainFile %>% 
+          filter(col_type == "Indicator") %>% 
+          pull(col_name)
+        
+        #Get list of filters
+        filters<- data$mainFile %>% 
+          select(-indicators) %>% 
+          names()
+
+        
+        outliertable <- function(args) {
+          return(eval(parse(text = paste0("data$mainFile %>% group_by(time_period,geographic_level) %>% 
+          mutate(", args[1],"== as.numeric(",args[1],")) %>% 
+          filter(time_period %in% c(",args[4],",",args[3],")) %>% 
+          select(all_of(filters),",args[1],") %>% 
+          spread(time_period,",args[1],") %>% 
+          mutate(thresh_indicator_big = as.numeric(`",args[4],"`) * (1+(",args[2],"/100)),
+                 thresh_indicator_small = as.numeric(`",args[4],"`) * (1-(",args[2],"/100)),
+                 outlier_large = as.numeric(`",args[3],"`) >= thresh_indicator_big,
+                 outlier_small = as.numeric(`",args[3],"`) <= thresh_indicator_small) %>%
+          select(-thresh_indicator_big,-thresh_indicator_small) %>%
+          filter(as.numeric(`",args[3],"`) >= 5 | as.numeric(`",args[4],"`) >= 5) %>%  
+          filter(outlier_large == TRUE | outlier_small ==TRUE)"
+          ))))
+    }
+        
+        output <- apply(args, 1, outliertable)
+        
+        
+        return(output)
+      }
+       
+      # create a list of tables - with one for each indicator summary
+      theOutlierList <- eventReactive(input$submit_outlier, {
+        return(get_outliers(input$outlier_indicator_parameter, input$threshold_setting, input$ctime_parameter,input$comptime_parameter))
+      })
+      
+      
+      # Create and then output the tables
+      observeEvent(input$submit_outlier, {
+        req(theOutlierList())
+        
+        purrr::iwalk(theOutlierList(), ~ {
+          names <- paste0("t_", .y)
+          output[[names]] <-  DT::renderDT(server=FALSE,{
+            datatable(.x,
+                      rownames = FALSE,
+                      style = "bootstrap",
+                      extensions = 'Buttons',
+                      options = list(
+                        dom = "Bptl",
+                        buttons = c("csv","copy","colvis"),
+                        rowCallback = JS(rowCallback),
+                        initComplete = JS(
+                          "function(settings, json) {",
+                          "$(this.api().table().header()).css({'background-color': '#232628', 'color': '#c8c8c8'});",
+                          "}"
+                        ),
+                        scrollX = TRUE
+                      )
+            )
+          })
+          
+          
+          
+        })
+      })
+      
+      output$table_outlier_list <- renderUI({
+        req(theOutlierList())
+        
+        to_list <- purrr::imap(theOutlierList(), ~ {
+          tagList(
+            h4(.y),
+            DTOutput(paste0("t_", .y),width = 1400) %>% withSpinner()
+          )
+        })
+        tagList(to_list)
+      })
+      
+      
+      
+      
 
 
       # supressed cells ---------------------------------------------------------------

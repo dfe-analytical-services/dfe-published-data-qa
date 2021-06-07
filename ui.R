@@ -353,6 +353,61 @@ fluidPage(
                 ),
 
                 hr()
+              ),
+              tabPanel(
+                title = "Identify outliers",
+                value = "outliersTab",
+                
+                fluidRow(
+                  column(
+                    3,
+                    tags$b("Outliers summary"),
+                    br(),
+                    "Check for any outliers"
+                  ),
+                  column(
+                    8,
+                    fluidRow(
+                      
+                      column(
+                        4,
+                        uiOutput("outlier_indicator_choice") %>% withSpinner()
+                      ),
+                      column(
+                        4,
+                        uiOutput("current_time") %>% withSpinner()
+                      ),
+                      column(
+                        4,
+                        uiOutput("comparison_time") %>% withSpinner()
+                      ),
+                      column(
+                        4,
+                        numericInputIcon(
+                          inputId = "threshold_setting",
+                          label = "Set percentage threshold for outlier:",
+                          min = 0,
+                          value = 20,
+                          icon = list(NULL, icon("percent"))
+                        )
+                      ),
+
+                      column(
+                        4,
+                        actionButton(
+                          inputId = "submit_outlier",
+                          label = "Apply Changes!",
+                          style = "margin:40px;"
+                        )
+                      )
+                    ),
+                    fluidRow(
+                      uiOutput("table_outlier_list")
+                    )
+                  )
+                ),
+                
+                hr()
               )
             ) # End of tabsetpanel
           ))
