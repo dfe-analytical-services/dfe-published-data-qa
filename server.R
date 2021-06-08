@@ -447,9 +447,9 @@ server <- function(input, output, session) {
           multiple = TRUE
         )
       })
-      
+
       # Create indicator choice depending on what's available
-      
+
       output$indicatorChoice <- renderUI({
         selectInput(
           inputId = "ind_parameter",
@@ -464,17 +464,16 @@ server <- function(input, output, session) {
 
 
       showsumstats <- function(parameter, geog_parameter) {
-        
         args <- expand.grid(ind = parameter, geog = geog_parameter, stringsAsFactors = FALSE)
 
         sumtable <- function(args) {
           return(eval(parse(text = paste0("data$mainFile %>% filter(geographic_level =='", args[2], "') %>% 
-          mutate(across(all_of('",args[1],"'), na_if, 'c')) %>%
-          mutate(across(all_of('",args[1],"'), na_if, 'z')) %>%
-          mutate(across(all_of('",args[1],"'), na_if, ':')) %>%
-          mutate(across(all_of('",args[1],"'), na_if, '~')) %>%
-          mutate(across(all_of('",args[1],"'), as.numeric)) %>%
-          select(time_period,'", args[1],"') %>%
+          mutate(across(all_of('", args[1], "'), na_if, 'c')) %>%
+          mutate(across(all_of('", args[1], "'), na_if, 'z')) %>%
+          mutate(across(all_of('", args[1], "'), na_if, ':')) %>%
+          mutate(across(all_of('", args[1], "'), na_if, '~')) %>%
+          mutate(across(all_of('", args[1], "'), as.numeric)) %>%
+          select(time_period,'", args[1], "') %>%
           group_by(time_period) %>%
           summarise(across(everything(), list(min = ~ min(.x, na.rm=TRUE), 
                                               max = ~ max(.x, na.rm=TRUE), 

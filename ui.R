@@ -206,7 +206,6 @@ fluidPage(
                 h3("Preview datafile"),
                 DTOutput("data_preview", width = 1400) %>% withSpinner(),
                 br()
-
               ),
 
 
@@ -328,7 +327,7 @@ fluidPage(
                   ),
                   column(
                     8,
-                    
+
                     fluidRow(
                       column(
                         4,
