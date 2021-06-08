@@ -290,6 +290,25 @@ fluidPage(
                 ),
 
                 hr(),
+                # 
+                # fluidRow(
+                #   column(
+                #     3,
+                #     tags$b("Filter combinations"),
+                #     br(),
+                #     "The following filter combinations have no relevant data",
+                #     br(),
+                #     "Are there any expected filter combinations that are missing data?"
+                #   ),
+                #   column(
+                #     8,
+                #     
+                #     tableOutput("filterperms") %>% withSpinner()
+                #   )
+                # ),
+                # 
+                # hr(),
+                
 
 
                 fluidRow(
@@ -406,6 +425,52 @@ fluidPage(
                   )
                 ),
 
+                hr()
+              ),
+              tabPanel(
+                title = "Check geography subtotals",
+                value = "geogTab",
+                
+                fluidRow(
+                  column(
+                    3,
+                    tags$b("Geography summary"),
+                    br(),
+                    "Check subtotals for geographies add up",
+                    br(),
+                    "Data appears in tables for geography totals that do not match the sum of subtotals"
+                  ),
+                  column(
+                    8,
+                    fluidRow(
+                      column(
+                        4,
+                        uiOutput("geog_indicator_choice") %>% withSpinner()
+                      ),
+                      column(
+                        4,
+                        uiOutput("geog_level_choice") %>% withSpinner()
+                      ),
+                      column(
+                        4,
+                        uiOutput("geog_sublevel_choice") %>% withSpinner()
+                      ),
+
+                      column(
+                        4,
+                        actionButton(
+                          inputId = "submit_geographies",
+                          label = "Apply Changes!",
+                          style = "margin:40px;"
+                        )
+                      )
+                    ),
+                    fluidRow(
+                      uiOutput("table_geography_list")
+                    )
+                  )
+                ),
+                
                 hr()
               )
             ) # End of tabsetpanel
