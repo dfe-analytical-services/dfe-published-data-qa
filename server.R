@@ -277,7 +277,8 @@ server <- function(input, output, session) {
           "#trendy_tabs li a[data-value=previewTab]",
           "#trendy_tabs li a[data-value=obUnitTab]",
           "#trendy_tabs li a[data-value=indicatorsTab]",
-          "#trendy_tabs li a[data-value=outliersTab]"
+          "#trendy_tabs li a[data-value=outliersTab]",
+          "#trendy_tabs li a[data-value=geogTab]"
         ))
       }
       else {
@@ -285,7 +286,8 @@ server <- function(input, output, session) {
           "#trendy_tabs li a[data-value=previewTab]",
           "#trendy_tabs li a[data-value=obUnitTab]",
           "#trendy_tabs li a[data-value=indicatorsTab]",
-          "#trendy_tabs li a[data-value=outliersTab]"
+          "#trendy_tabs li a[data-value=outliersTab]",
+          "#trendy_tabs li a[data-value=geogTab]"
         ))
       }
 
@@ -629,7 +631,7 @@ server <- function(input, output, session) {
         req(theOutlierList())
 
         purrr::iwalk(theOutlierList(), ~ {
-          names <- paste0("t_", .y)
+          names <- paste0("to_", .y)
           output[[names]] <- DT::renderDT(server = FALSE, {
             datatable(.x,
               rownames = FALSE,
@@ -657,7 +659,7 @@ server <- function(input, output, session) {
         to_list <- purrr::imap(theOutlierList(), ~ {
           tagList(
             h4(.y),
-            DTOutput(paste0("t_", .y), width = 1400) %>% withSpinner()
+            DTOutput(paste0("to_", .y), width = 1400) %>% withSpinner()
           )
         })
         tagList(to_list)
@@ -763,7 +765,7 @@ server <- function(input, output, session) {
         req(theGeographyList())
 
         purrr::iwalk(theGeographyList(), ~ {
-          names <- paste0("t_", .y)
+          names <- paste0("tg_", .y)
           output[[names]] <- DT::renderDT(server = FALSE, {
             datatable(.x,
               rownames = FALSE,
@@ -791,7 +793,7 @@ server <- function(input, output, session) {
         tg_list <- purrr::imap(theGeographyList(), ~ {
           tagList(
             h4(.y),
-            DTOutput(paste0("t_", .y), width = 1400) %>% withSpinner()
+            DTOutput(paste0("tg_", .y), width = 1400) %>% withSpinner()
           )
         })
         tagList(tg_list)

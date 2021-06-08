@@ -376,6 +376,7 @@ fluidPage(
               tabPanel(
                 title = "Identify outliers",
                 value = "outliersTab",
+                style = "padding-left:20px",
 
                 fluidRow(
                   column(
@@ -418,18 +419,19 @@ fluidPage(
                           style = "margin:40px;"
                         )
                       )
-                    ),
-                    fluidRow(
-                      uiOutput("table_outlier_list")
                     )
                   )
                 ),
 
-                hr()
+                hr(),
+                fluidRow(
+                  uiOutput("table_outlier_list")
+                )
               ),
               tabPanel(
                 title = "Check geography subtotals",
                 value = "geogTab",
+                style = "padding-left:20px",
 
                 fluidRow(
                   column(
@@ -464,14 +466,15 @@ fluidPage(
                           style = "margin:40px;"
                         )
                       )
-                    ),
-                    fluidRow(
-                      uiOutput("table_geography_list")
                     )
                   )
                 ),
 
-                hr()
+                hr(),
+                fluidRow(
+                  uiOutput("table_geography_list")
+                )
+                
               )
             ) # End of tabsetpanel
           ))
