@@ -195,9 +195,12 @@ fluidPage(
               ## QA stuff
 
 
+
               tabPanel(
                 title = "File previews",
                 value = "previewTab",
+                style = "padding-left:20px;",
+
                 h3("View metadata"),
                 DTOutput("meta_table", width = 1400) %>% withSpinner(),
                 h3("Preview datafile"),
@@ -211,6 +214,7 @@ fluidPage(
               tabPanel(
                 title = "What's in this file",
                 value = "obUnitTab",
+                style = "padding-left:20px;",
 
                 h2("What's in this file"),
 
@@ -331,6 +335,7 @@ fluidPage(
               tabPanel(
                 title = "Explore data",
                 value = "indicatorsTab",
+                style = "padding-left:20px;",
 
                 fluidRow(
                   column(
@@ -341,15 +346,11 @@ fluidPage(
                   ),
                   column(
                     8,
+
                     fluidRow(
                       column(
                         4,
-                        selectInput(
-                          inputId = "parameter",
-                          label = "Select Parameter(s):",
-                          choices = c("min", "max"),
-                          multiple = TRUE
-                        )
+                        uiOutput("indicatorChoice") %>% withSpinner(),
                       ),
                       column(
                         4,
