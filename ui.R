@@ -475,7 +475,6 @@ fluidPage(
                 fluidRow(
                   uiOutput("table_geography_list")
                 )
-                
               )
             ) # End of tabsetpanel
           ))
