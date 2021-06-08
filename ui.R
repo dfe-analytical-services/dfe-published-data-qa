@@ -290,7 +290,7 @@ fluidPage(
                 ),
 
                 hr(),
-                # 
+                #
                 # fluidRow(
                 #   column(
                 #     3,
@@ -302,13 +302,13 @@ fluidPage(
                 #   ),
                 #   column(
                 #     8,
-                #     
+                #
                 #     tableOutput("filterperms") %>% withSpinner()
                 #   )
                 # ),
-                # 
+                #
                 # hr(),
-                
+
 
 
                 fluidRow(
@@ -430,7 +430,7 @@ fluidPage(
               tabPanel(
                 title = "Check geography subtotals",
                 value = "geogTab",
-                
+
                 fluidRow(
                   column(
                     3,
@@ -470,7 +470,7 @@ fluidPage(
                     )
                   )
                 ),
-                
+
                 hr()
               )
             ) # End of tabsetpanel
