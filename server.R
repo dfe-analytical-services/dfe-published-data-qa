@@ -467,7 +467,6 @@ server <- function(input, output, session) {
         
         args <- expand.grid(ind = parameter, geog = geog_parameter, stringsAsFactors = FALSE)
 
-
         sumtable <- function(args) {
           return(eval(parse(text = paste0("data$mainFile %>% filter(geographic_level =='", args[2], "') %>% 
           mutate(across(all_of('",args[1],"'), na_if, 'c')) %>%
@@ -477,12 +476,15 @@ server <- function(input, output, session) {
           mutate(across(all_of('",args[1],"'), as.numeric)) %>%
           select(time_period,'", args[1],"') %>%
           group_by(time_period) %>%
-          summarise(across(everything(), list(min = min, max = max), na.rm=TRUE)) %>%
+          summarise(across(everything(), list(min = ~ min(.x, na.rm=TRUE), 
+                                              max = ~ max(.x, na.rm=TRUE), 
+                                              average = ~ mean(.x, na.rm=TRUE), 
+                                              count = ~ n(), 
+                                              suppressed = ~ sum(is.na(.x))))) %>%
           pivot_longer(!time_period, names_to = c('indicator', 'measure'), names_pattern = '(.*)_(.*)') %>%
           pivot_wider(names_from = 'time_period') %>%
           mutate(geographic_level ='", args[2], "', .before = indicator)"))))
         }
-
 
         output <- apply(args, 1, sumtable)
 
