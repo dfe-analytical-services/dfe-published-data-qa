@@ -442,8 +442,19 @@ server <- function(input, output, session) {
       output$geogChoice <- renderUI({
         selectInput(
           inputId = "geog_parameter",
-          label = "Select Parameter(s):",
+          label = "Choose geographic level(s):",
           choices = data$mainFile %>% pull(geographic_level) %>% unique(),
+          multiple = TRUE
+        )
+      })
+      
+      # Create indicator choice depending on what's available
+      
+      output$indicatorChoice <- renderUI({
+        selectInput(
+          inputId = "ind_parameter",
+          label = "Choose indicator(s):",
+          choices = meta$mainFile %>% filter(col_type == "Indicator") %>% pull(col_name),
           multiple = TRUE
         )
       })
@@ -453,27 +464,25 @@ server <- function(input, output, session) {
 
 
       showsumstats <- function(parameter, geog_parameter) {
-        args <- expand.grid(meas = parameter, geog = geog_parameter, stringsAsFactors = FALSE)
+        
+        args <- expand.grid(ind = parameter, geog = geog_parameter, stringsAsFactors = FALSE)
 
-        indicators <- meta$mainFile %>%
-          filter(col_type == "Indicator") %>%
-          pull(col_name)
 
         sumtable <- function(args) {
           return(eval(parse(text = paste0("data$mainFile %>% filter(geographic_level =='", args[2], "') %>% 
-          mutate(across(all_of(indicators), na_if, 'c')) %>%
-          mutate(across(all_of(indicators), na_if, 'z')) %>%
-          mutate(across(all_of(indicators), na_if, ':')) %>%
-          mutate(across(all_of(indicators), na_if, '~')) %>%
-          mutate(across(all_of(indicators), as.numeric)) %>%
-          select(time_period, all_of(indicators)) %>%
+          mutate(across(all_of('",args[1],"'), na_if, 'c')) %>%
+          mutate(across(all_of('",args[1],"'), na_if, 'z')) %>%
+          mutate(across(all_of('",args[1],"'), na_if, ':')) %>%
+          mutate(across(all_of('",args[1],"'), na_if, '~')) %>%
+          mutate(across(all_of('",args[1],"'), as.numeric)) %>%
+          select(time_period,'", args[1],"') %>%
           group_by(time_period) %>%
           summarise(across(everything(), list(min = min, max = max), na.rm=TRUE)) %>%
           pivot_longer(!time_period, names_to = c('indicator', 'measure'), names_pattern = '(.*)_(.*)') %>%
-          filter(measure =='", args[1], "') %>% 
           pivot_wider(names_from = 'time_period') %>%
           mutate(geographic_level ='", args[2], "', .before = indicator)"))))
         }
+
 
         output <- apply(args, 1, sumtable)
 
@@ -482,7 +491,7 @@ server <- function(input, output, session) {
 
       # create a list of tables - with one for each indicator summary
       theList <- eventReactive(input$submit, {
-        return(showsumstats(input$parameter, input$geog_parameter))
+        return(showsumstats(input$ind_parameter, input$geog_parameter))
       })
 
 

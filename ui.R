@@ -328,15 +328,11 @@ fluidPage(
                   ),
                   column(
                     8,
+                    
                     fluidRow(
                       column(
                         4,
-                        selectInput(
-                          inputId = "parameter",
-                          label = "Select Parameter(s):",
-                          choices = c("min", "max"),
-                          multiple = TRUE
-                        )
+                        uiOutput("indicatorChoice") %>% withSpinner(),
                       ),
                       column(
                         4,
