@@ -565,7 +565,7 @@ server <- function(input, output, session) {
       output$outlier_indicator_choice <- renderUI({
         selectInput(
           inputId = "outlier_indicator_parameter",
-          label = "Select Indicator(s):",
+          label = "Choose indicator(s):",
           choices = meta$mainFile %>% filter(col_type == "Indicator") %>% select(col_name),
           multiple = TRUE
         )
@@ -575,7 +575,7 @@ server <- function(input, output, session) {
       output$current_time <- renderUI({
         selectInput(
           inputId = "ctime_parameter",
-          label = "Select Current Time Period:",
+          label = "Choose current time period:",
           choices = data$mainFile %>% arrange(desc(time_period)) %>% pull(time_period) %>% unique(),
           multiple = FALSE
         )
@@ -585,7 +585,7 @@ server <- function(input, output, session) {
       output$comparison_time <- renderUI({
         selectInput(
           inputId = "comptime_parameter",
-          label = "Select Comparison Time Period:",
+          label = "Choose current time period:",
           choices = data$mainFile %>% arrange(desc(time_period)) %>% pull(time_period) %>% unique(),
           multiple = FALSE
         )
@@ -699,7 +699,7 @@ server <- function(input, output, session) {
       output$geog_indicator_choice <- renderUI({
         selectInput(
           inputId = "geog_indicator_parameter",
-          label = "Select Indicator(s):",
+          label = "Choose indicator(s):",
           choices = meta$mainFile %>% filter(col_type == "Indicator") %>% select(col_name),
           multiple = TRUE
         )
@@ -709,7 +709,7 @@ server <- function(input, output, session) {
       output$geog_level_choice <- renderUI({
         selectInput(
           inputId = "geog_level_parameter",
-          label = "Select Geographic Level (totals):",
+          label = "Choose geographic level (totals):",
           choices = data$mainFile %>% select(geographic_level) %>% distinct(),
           multiple = FALSE
         )
@@ -719,7 +719,7 @@ server <- function(input, output, session) {
       output$geog_sublevel_choice <- renderUI({
         selectInput(
           inputId = "geog_sublevel_parameter",
-          label = "Select Geographic Level (subtotals):",
+          label = "Choose geographic level (subtotals):",
           choices = data$mainFile %>% filter(geographic_level != "National") %>% select(geographic_level) %>% distinct(),
           multiple = FALSE
         )
