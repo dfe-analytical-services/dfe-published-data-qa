@@ -290,6 +290,13 @@ server <- function(input, output, session) {
           "#trendy_tabs li a[data-value=geogTab]"
         ))
       }
+      
+      if(data$mainFile %>% select(geographic_level) %>% distinct() %>% nrow() == 1){
+        shinyjs::hide(selector = c(
+          "#trendy_tabs li a[data-value=geogTab]"))}
+      else{
+        shinyjs::show(selector = c(
+          "#trendy_tabs li a[data-value=geogTab]"))}
 
 
       if (advisory_tests != 0) {
@@ -619,9 +626,9 @@ server <- function(input, output, session) {
                  thresh_indicator_small = as.numeric(`", args[4], "`) * (1-(", args[2], "/100)),
                  outlier_large = as.numeric(`", args[3], "`) >= thresh_indicator_big,
                  outlier_small = as.numeric(`", args[3], "`) <= thresh_indicator_small) %>%
-          select(-thresh_indicator_big,-thresh_indicator_small) %>%
           filter(as.numeric(`", args[3], "`) >= 5 | as.numeric(`", args[4], "`) >= 5) %>%  
-          filter(outlier_large == TRUE | outlier_small ==TRUE)"))))
+          filter(outlier_large == TRUE | outlier_small ==TRUE) %>% 
+          select(-thresh_indicator_big,-thresh_indicator_small,-time_identifier,-outlier_large,-outlier_small)"))))
         }
 
         output <- apply(args, 1, outliertable)
