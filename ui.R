@@ -199,12 +199,12 @@ fluidPage(
               tabPanel(
                 title = "File previews",
                 value = "previewTab",
-                style = "padding-left:20px;",
+                style = "padding-left:20px; padding-right:20px",
 
                 h3("View metadata"),
-                DTOutput("meta_table", width = 1400) %>% withSpinner(),
+                DTOutput("meta_table", width = "100%") %>% withSpinner(),
                 h3("Preview datafile"),
-                DTOutput("data_preview", width = 1400) %>% withSpinner(),
+                DTOutput("data_preview", width = "100%") %>% withSpinner(),
                 br()
               ),
 
@@ -230,7 +230,8 @@ fluidPage(
                   ),
                   column(
                     8,
-                    tableOutput("geog_time_perms2") %>% withSpinner()
+                    DTOutput("geog_time_perms2", width = "100%") %>% withSpinner()
+                   # tableOutput("geog_time_perms2") %>% withSpinner()
                   )
                 ),
 
@@ -270,7 +271,8 @@ fluidPage(
                   ),
                   column(
                     8,
-                    tableOutput("indicators") %>% withSpinner()
+                    DTOutput("indicators", width = "60%") %>% withSpinner()
+                    #tableOutput("indicators") %>% withSpinner()
                     # "Filter combinations missing (on trello/github issue)",
                   )
                 ),

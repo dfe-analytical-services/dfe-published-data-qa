@@ -348,8 +348,11 @@ server <- function(input, output, session) {
         datatable(meta$mainFile,
           rownames = FALSE,
           style = "bootstrap",
+          class = "table-bordered",
           options = list(
             dom = "pt",
+            ordering = F,
+            pageLength = 12,
             rowCallback = JS(rowCallback),
             initComplete = JS(
               "function(settings, json) {",
@@ -365,8 +368,10 @@ server <- function(input, output, session) {
         datatable(data$mainFile,
           rownames = FALSE,
           style = "bootstrap",
+          class = "table-bordered",
           options = list(
             dom = "pt",
+            pageLength = 12,
             rowCallback = JS(rowCallback),
             initComplete = JS(
               "function(settings, json) {",
@@ -381,11 +386,35 @@ server <- function(input, output, session) {
 
       # Geog / time permutations -----------------------------------------------------
 
-      output$geog_time_perms2 <- renderTable({
-        data$mainFile %>%
+      # output$geog_time_perms2 <- renderTable({
+      #   data$mainFile %>%
+      #     count(time_period, geographic_level) %>%
+      #     mutate(n = replace(n, n > 0, "Y")) %>%
+      #     pivot_wider(names_from = time_period, values_from = n, values_fill = "N")
+      # })
+      
+      output$geog_time_perms2 <- DT::renderDT({
+        
+        table <- data$mainFile %>%
           count(time_period, geographic_level) %>%
           mutate(n = replace(n, n > 0, "Y")) %>%
           pivot_wider(names_from = time_period, values_from = n, values_fill = "N")
+        
+        datatable(table,
+                  rownames = FALSE,
+                  style = "bootstrap",
+                  class = "table-bordered",
+                  options = list(
+                    dom = "t",
+                    ordering = F,
+                   # rowCallback = JS(rowCallback),
+                    initComplete = JS(
+                      "function(settings, json) {",
+                      "$(this.api().table().header()).css({'background-color': '#232628', 'color': '#c8c8c8'});",
+                      "}"
+                    )
+                  )
+        )
       })
       # Filter permutations -----------------------------------------------------
 
@@ -464,26 +493,61 @@ server <- function(input, output, session) {
 
         tableList <- purrr::imap(myList, ~ {
           tagList(
-            h4(.y),
-            tableOutput(outputId = paste0("table_", .y))
+            h4(paste("Filter ", .y)),
+           # tableOutput(outputId = paste0("table_", .y))
+            DTOutput(outputId = paste0("table_", .y), width = "60%") %>% withSpinner()
           )
         })
 
         purrr::iwalk(myList, ~ {
           output_name <- paste0("table_", .y)
-          output[[output_name]] <- renderTable(.x)
+          #output[[output_name]] <- renderTable(.x)
+          
+          output[[output_name]] <- DT::renderDT(datatable(.x,
+                                                          rownames = FALSE,
+                                                          style = "bootstrap",
+                                                          class = "table-bordered",
+                                                          options = list(
+                                                            dom = "t",
+                                                            ordering = F,
+                                                            # rowCallback = JS(rowCallback),
+                                                            initComplete = JS(
+                                                              "function(settings, json) {",
+                                                              "$(this.api().table().header()).css({'background-color': '#232628', 'color': '#c8c8c8'});",
+                                                              "}"
+                                                            )
+                                                          )))
         })
 
         tagList(tableList)
       })
 
+      
+    
 
       # Indicator summaries-------------------------------------------------------------
 
-      output$indicators <- renderTable({
-        meta$mainFile %>%
+      output$indicators <- DT::renderDT({
+        
+        table <- meta$mainFile %>%
           filter(col_type == "Indicator") %>%
           select(col_name, label)
+        
+        datatable(table,
+                  rownames = FALSE,
+                  style = "bootstrap",
+                  class = "table-bordered",
+                  options = list(
+                    dom = "t",
+                    ordering = F,
+                    # rowCallback = JS(rowCallback),
+                    initComplete = JS(
+                      "function(settings, json) {",
+                      "$(this.api().table().header()).css({'background-color': '#232628', 'color': '#c8c8c8'});",
+                      "}"
+                    )
+                  )
+        )
       })
 
 
@@ -551,6 +615,22 @@ server <- function(input, output, session) {
         purrr::iwalk(theList(), ~ {
           names <- paste0("t_", .y)
           output[[names]] <- renderTable(.x)
+          
+          output[[names]] <- DT::renderDT(datatable(.x,
+                                 rownames = FALSE,
+                                 style = "bootstrap",
+                                 class = "table-bordered",
+                                 options = list(
+                                   dom = "t",
+                                   ordering = F,
+                                   # rowCallback = JS(rowCallback),
+                                   initComplete = JS(
+                                     "function(settings, json) {",
+                                     "$(this.api().table().header()).css({'background-color': '#232628', 'color': '#c8c8c8'});",
+                                     "}"
+                                   )
+                                 )))
+          
         })
       })
 
@@ -560,7 +640,9 @@ server <- function(input, output, session) {
         t_list <- purrr::imap(theList(), ~ {
           tagList(
             h4(.y),
-            tableOutput(paste0("t_", .y))
+            #tableOutput(paste0("t_", .y))
+            
+            DTOutput(outputId = paste0("t_", .y), width = "100%") %>% withSpinner()
           )
         })
         tagList(t_list)
@@ -649,24 +731,40 @@ server <- function(input, output, session) {
 
         purrr::iwalk(theOutlierList(), ~ {
           names <- paste0("to_", .y)
-          output[[names]] <- DT::renderDT(server = FALSE, {
-            datatable(.x,
-              rownames = FALSE,
-              style = "bootstrap",
-              extensions = "Buttons",
-              options = list(
-                dom = "Bptl",
-                buttons = c("csv", "copy", "colvis"),
-                rowCallback = JS(rowCallback),
-                initComplete = JS(
-                  "function(settings, json) {",
-                  "$(this.api().table().header()).css({'background-color': '#232628', 'color': '#c8c8c8'});",
-                  "}"
-                ),
-                scrollX = TRUE
-              )
-            )
-          })
+          output[[names]] <- DT::renderDT(server = FALSE, {datatable(.x,
+                                                    rownames = FALSE,
+                                                    style = "bootstrap",
+                                                    extensions = "Buttons",
+                                                    class = "table-bordered",
+                                                        options = list(
+                                                          dom = "Bptl",
+                                                          buttons = c("csv", "copy", "colvis"),
+                                                          rowCallback = JS(rowCallback),
+                                                      initComplete = JS(
+                                                        "function(settings, json) {",
+                                                        "$(this.api().table().header()).css({'background-color': '#232628', 'color': '#c8c8c8'});",
+                                                        "}"
+                                                      ),
+                                                      scrollX = TRUE
+                                                    ))})
+          #   DT::renderDT(server = FALSE, {
+          #   datatable(.x,
+          #     rownames = FALSE,
+          #     style = "bootstrap",
+          #     extensions = "Buttons",
+          #     options = list(
+          #       dom = "Bptl",
+          #       buttons = c("csv", "copy", "colvis"),
+          #       rowCallback = JS(rowCallback),
+          #       initComplete = JS(
+          #         "function(settings, json) {",
+          #         "$(this.api().table().header()).css({'background-color': '#232628', 'color': '#c8c8c8'});",
+          #         "}"
+          #       ),
+          #       scrollX = TRUE
+          #     )
+          #   )
+          # })
         })
       })
 
@@ -676,7 +774,8 @@ server <- function(input, output, session) {
         to_list <- purrr::imap(theOutlierList(), ~ {
           tagList(
             h4(.y),
-            DTOutput(paste0("to_", .y), width = 1400) %>% withSpinner()
+            #DTOutput(paste0("to_", .y), width = 1400) %>% withSpinner()
+            DTOutput(outputId = paste0("to_", .y), width = "100%") %>% withSpinner()
           )
         })
         tagList(to_list)
@@ -783,24 +882,41 @@ server <- function(input, output, session) {
 
         purrr::iwalk(theGeographyList(), ~ {
           names <- paste0("tg_", .y)
-          output[[names]] <- DT::renderDT(server = FALSE, {
-            datatable(.x,
-              rownames = FALSE,
-              style = "bootstrap",
-              extensions = "Buttons",
-              options = list(
-                dom = "Bptl",
-                buttons = c("csv", "copy", "colvis"),
-                rowCallback = JS(rowCallback),
-                initComplete = JS(
-                  "function(settings, json) {",
-                  "$(this.api().table().header()).css({'background-color': '#232628', 'color': '#c8c8c8'});",
-                  "}"
-                ),
-                scrollX = TRUE
-              )
-            )
-          })
+          output[[names]] <- DT::renderDT(server = FALSE, { datatable(.x,
+                                                                      rownames = FALSE,
+                                                                      style = "bootstrap",
+                                                                      class = "table-bordered",
+                                                                      extensions = "Buttons",
+                                                                      options = list(
+                                                                        dom = "Bptl",
+                                                                        buttons = c("csv", "copy", "colvis"),
+                                                                        rowCallback = JS(rowCallback),
+                                                                        initComplete = JS(
+                                                                          "function(settings, json) {",
+                                                                          "$(this.api().table().header()).css({'background-color': '#232628', 'color': '#c8c8c8'});",
+                                                                          "}"
+                                                                        ),
+                                                                        scrollX = TRUE
+                                                                      ))})
+          
+          #   DT::renderDT(server = FALSE, {
+          #   datatable(.x,
+          #     rownames = FALSE,
+          #     style = "bootstrap",
+          #     extensions = "Buttons",
+          #     options = list(
+          #       dom = "Bptl",
+          #       buttons = c("csv", "copy", "colvis"),
+          #       rowCallback = JS(rowCallback),
+          #       initComplete = JS(
+          #         "function(settings, json) {",
+          #         "$(this.api().table().header()).css({'background-color': '#232628', 'color': '#c8c8c8'});",
+          #         "}"
+          #       ),
+          #       scrollX = TRUE
+          #     )
+          #   )
+          # })
         })
       })
 
@@ -810,7 +926,10 @@ server <- function(input, output, session) {
         tg_list <- purrr::imap(theGeographyList(), ~ {
           tagList(
             h4(.y),
-            DTOutput(paste0("tg_", .y), width = 1400) %>% withSpinner()
+           # DTOutput(paste0("tg_", .y), width = 1400) %>% withSpinner()
+            
+            DTOutput(outputId = paste0("tg_", .y), width = "100%") %>% withSpinner()
+            
           )
         })
         tagList(tg_list)
@@ -849,11 +968,25 @@ server <- function(input, output, session) {
             return(strong("No cells are suppressed"))
           }
 
-          tableOutput("suppressed_cell_count_table")
+          #tableOutput("suppressed_cell_count_table")
+          DTOutput("suppressed_cell_count_table", width = "60%") %>% withSpinner()
         })
 
-        output$suppressed_cell_count_table <- renderTable({
-          suppress_count
+        output$suppressed_cell_count_table <-  DT::renderDT({datatable(suppress_count,
+                                                                       rownames = FALSE,
+                                                                       style = "bootstrap",
+                                                                       class = "table-bordered",
+                                                                       options = list(
+                                                                         dom = "t",
+                                                                         ordering = F,
+                                                                         # rowCallback = JS(rowCallback),
+                                                                         initComplete = JS(
+                                                                           "function(settings, json) {",
+                                                                           "$(this.api().table().header()).css({'background-color': '#232628', 'color': '#c8c8c8'});",
+                                                                           "}"
+                                                                         )
+                                                                       )
+        )
         })
       })
     }) # end of isolate
