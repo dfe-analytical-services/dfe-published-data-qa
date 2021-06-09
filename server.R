@@ -441,7 +441,7 @@ server <- function(input, output, session) {
             pull(filter_grouping_column)
 
           if (!is.na(filter_group)) {
-            return(eval(parse(text = paste0("data$mainFile %>% select(", filter, ", ", filter_group, ") %>% distinct() %>% arrange(", filter, ", ", filter_group, ")"))))
+            return(eval(parse(text = paste0("data$mainFile %>% select(", filter_group, ", ", filter, ") %>% distinct() %>% arrange(", filter_group, ", ", filter, ")"))))
           }
           else {
             return(eval(parse(text = paste0("data$mainFile %>% select(", filter, ") %>% distinct() %>% arrange(", filter, ")"))))
