@@ -641,6 +641,10 @@ server <- function(input, output, session) {
 
       # create a list of tables - with one for each indicator summary
       theOutlierList <- eventReactive(input$submit_outlier, {
+        validate(
+          need(input$outlier_indicator_parameter != "", "Please select at least one indicator")
+        )
+        
         return(get_outliers(input$outlier_indicator_parameter, input$threshold_setting, input$ctime_parameter, input$comptime_parameter))
       })
 
