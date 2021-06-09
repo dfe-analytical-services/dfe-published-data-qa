@@ -92,10 +92,6 @@ fluidPage(
               shinyjs::hidden(div(
                 id = "reset_button",
                 uiOutput("uiResetButton")
-              )),
-              shinyjs::hidden(div(
-                id = "backToScreener",
-                actionButton("goback", "Back to screener results")
               ))
             )
           )
