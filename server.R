@@ -508,9 +508,9 @@ server <- function(input, output, session) {
       # Show summary stats table for an indicator
       showsumstats <- function(parameter, geog_parameter) {
         args <- expand.grid(ind = parameter, geog = geog_parameter, stringsAsFactors = FALSE)
-
-        sumtable <- function(args) {
-          return(eval(parse(text = paste0("data$mainFile %>% filter(geographic_level =='", args[2], "') %>% 
+            
+            sumtable <- function(args) {
+              return(eval(parse(text = paste0("data$mainFile %>% filter(geographic_level =='", args[2], "') %>% 
           mutate(across(all_of('", args[1], "'), na_if, 'c')) %>%
           mutate(across(all_of('", args[1], "'), na_if, 'z')) %>%
           mutate(across(all_of('", args[1], "'), na_if, ':')) %>%
@@ -526,15 +526,18 @@ server <- function(input, output, session) {
           pivot_longer(!time_period, names_to = c('indicator', 'measure'), names_pattern = '(.*)_(.*)') %>%
           pivot_wider(names_from = 'time_period') %>%
           mutate(geographic_level ='", args[2], "', .before = indicator)"))))
-        }
-
-        output <- apply(args, 1, sumtable)
-
+            }
+            
+            output <- apply(args, 1, sumtable)
+        
         return(output)
       }
 
       # create a list of tables - with one for each indicator summary
       theList <- eventReactive(input$submit, {
+        req(input$ind_parameter)
+        req(input$geog_parameter)
+        
         return(showsumstats(input$ind_parameter, input$geog_parameter))
       })
 
@@ -542,7 +545,7 @@ server <- function(input, output, session) {
       # Create and then output the tables
       observeEvent(input$submit, {
         req(theList())
-
+        
         purrr::iwalk(theList(), ~ {
           names <- paste0("t_", .y)
           output[[names]] <- renderTable(.x)
