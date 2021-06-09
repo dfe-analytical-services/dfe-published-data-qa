@@ -295,7 +295,7 @@ fluidPage(
                   )
                 ),
 
-                hr(),
+                hr()
                 #
                 # fluidRow(
                 #   column(
@@ -315,20 +315,6 @@ fluidPage(
                 #
                 # hr(),
 
-
-
-                fluidRow(
-                  column(
-                    3,
-                    "Description goes here"
-                  ),
-                  column(
-                    8,
-                    "Output goes here"
-                  )
-                ),
-
-                hr()
               ),
 
 
@@ -339,6 +325,8 @@ fluidPage(
                 value = "indicatorsTab",
                 style = "padding-left:20px;",
 
+                br(),
+                
                 fluidRow(
                   column(
                     3,
@@ -361,10 +349,10 @@ fluidPage(
 
                       column(
                         4,
+                        align = "center",  style = "margin-top: 25px;",
                         actionButton(
                           inputId = "submit",
-                          label = "Apply Changes!",
-                          style = "margin:40px;"
+                          label = "Generate tables"
                         )
                       )
                     ),
@@ -376,11 +364,13 @@ fluidPage(
 
                 hr()
               ),
+              
               tabPanel(
                 title = "Identify outliers",
                 value = "outliersTab",
                 style = "padding-left:20px",
-
+                
+                br(),
                 fluidRow(
                   column(
                     3,
@@ -397,14 +387,6 @@ fluidPage(
                       ),
                       column(
                         4,
-                        uiOutput("current_time") %>% withSpinner()
-                      ),
-                      column(
-                        4,
-                        uiOutput("comparison_time") %>% withSpinner()
-                      ),
-                      column(
-                        4,
                         numericInputIcon(
                           inputId = "threshold_setting",
                           label = "Set percentage threshold for outlier:",
@@ -413,29 +395,50 @@ fluidPage(
                           icon = list(NULL, icon("percent"))
                         )
                       ),
-
                       column(
                         4,
+                        
+                        align = "center", style = "margin-top: 25px;",
                         actionButton(
                           inputId = "submit_outlier",
-                          label = "Apply Changes!",
-                          style = "margin:40px;"
+                          label = "Generate tables"
                         )
                       )
+                    ),
+                    fluidRow(
+                      column(
+                        4,
+                        uiOutput("current_time") %>% withSpinner()
+                      ),
+                      column(
+                        4,
+                        uiOutput("comparison_time") %>% withSpinner()
+                      ),
+                      
+                      column(
+                        4,
+                        ''
+                      )
+                    ),
+                    
+                    
+                    
+                    hr(),
+                    fluidRow(
+                      uiOutput("table_outlier_list")
                     )
                   )
-                ),
-
-                hr(),
-                fluidRow(
-                  uiOutput("table_outlier_list")
                 )
               ),
+              
+              
+              
               tabPanel(
                 title = "Check geography subtotals",
                 value = "geogTab",
                 style = "padding-left:20px",
 
+                br(),
                 fluidRow(
                   column(
                     3,
@@ -454,28 +457,39 @@ fluidPage(
                       ),
                       column(
                         4,
+                        ''
+                      ),
+                      column(
+                        4,
+                        
+                        align = "center", style = "margin-top: 25px;",
+                        actionButton(
+                          inputId = "submit_geographies",
+                          label = "Generate tables"
+                        )
+                        
+                      )
+                      ),
+                    fluidRow(
+                      column(
+                        4,
                         uiOutput("geog_level_choice") %>% withSpinner()
                       ),
                       column(
                         4,
                         uiOutput("geog_sublevel_choice") %>% withSpinner()
                       ),
-
                       column(
                         4,
-                        actionButton(
-                          inputId = "submit_geographies",
-                          label = "Apply Changes!",
-                          style = "margin:40px;"
-                        )
+                        ''
                       )
-                    )
-                  )
-                ),
+                    ),
 
                 hr(),
                 fluidRow(
                   uiOutput("table_geography_list")
+                )
+              )
                 )
               )
             ) # End of tabsetpanel

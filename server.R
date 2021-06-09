@@ -632,6 +632,8 @@ server <- function(input, output, session) {
                                  )))
           
         })
+ 
+        
       })
 
       output$table_list <- renderUI({
