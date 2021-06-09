@@ -430,6 +430,8 @@ server <- function(input, output, session) {
 
         filter_groups <- meta %>%
           dplyr::filter(col_type == "Filter") %>%
+          dplyr::filter(filter_grouping_column != "") %>%
+          dplyr::filter(!is.na(filter_grouping_column)) %>%
           select(col_name, filter_grouping_column)
 
 
