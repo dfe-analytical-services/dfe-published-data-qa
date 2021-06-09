@@ -784,6 +784,10 @@ server <- function(input, output, session) {
 
       # create a list of tables - with one for each indicator summary
       theGeographyList <- eventReactive(input$submit_geographies, {
+        validate(
+          need(input$geog_indicator_parameter != "", "Please select at least one indicator"),
+        )
+        
         return(get_geog_comparison(input$geog_indicator_parameter, input$geog_level_parameter, input$geog_sublevel_parameter))
       })
 
@@ -920,8 +924,30 @@ server <- function(input, output, session) {
     shinyjs::hideElement(id = "qaResults")
 
     # clear files from input selection (does not fully reset fileInput, grr)
-    reset("datafile")
-    reset("metafile")
+    shinyjs::reset("datafile")
+    shinyjs::reset("metafile")
+
+    # attempt to clear some of the QA objects
+    shinyjs::reset("meta_table")
+    shinyjs::reset("data_preview")
+    shinyjs::reset("geog_time_perms2")
+    shinyjs::reset("tables")
+    shinyjs::reset("indicators")
+    shinyjs::reset("suppressed_cell_count")
+    shinyjs::reset("indicator_choice")
+    shinyjs::reset("geogChoice")
+    shinyjs::reset("table_list")
+    shinyjs::reset("outlier_indicator_choice")
+    shinyjs::reset("current_time")
+    shinyjs::reset("comparison_time")
+    shinyjs::reset("threshold_setting")
+    shinyjs::reset("submit_outlier")
+    shinyjs::reset("table_outlier_list")
+    shinyjs::reset("geog_indicator_choice")
+    shinyjs::reset("geog_level_choice")
+    shinyjs::reset("geog_sublevel_choice")
+    shinyjs::reset("submit_geographies")
+    shinyjs::reset("table_geography_list")
 
     # clear uploaded flags
     values$dataUploaded <- FALSE
