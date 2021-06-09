@@ -585,7 +585,7 @@ server <- function(input, output, session) {
       output$comparison_time <- renderUI({
         selectInput(
           inputId = "comptime_parameter",
-          label = "Choose current time period:",
+          label = "Choose comparison time period:",
           choices = data$mainFile %>% arrange(desc(time_period)) %>% pull(time_period) %>% unique(),
           multiple = FALSE
         )
