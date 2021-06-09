@@ -536,9 +536,7 @@ server <- function(input, output, session) {
       # create a list of tables - with one for each indicator summary
       theList <- eventReactive(input$submit, {
         validate(
-          need(input$ind_parameter != "", "Please select at least one indicator")
-        )
-        validate(
+          need(input$ind_parameter != "", "Please select at least one indicator"),
           need(input$geog_parameter != "", "Please select at least one geographic level")
         )
         
