@@ -321,7 +321,8 @@ server <- function(input, output, session) {
 
       # File previews ----------------------------------------------------------------
 
-
+      if(failed_tests == 0) {
+        
       # Set striping to be "off" for data tables
       rowCallback <- c(
         "function(row, data, num, index){",
@@ -866,10 +867,12 @@ server <- function(input, output, session) {
           suppress_count
         })
       })
+      } # end of if for QA stuff
+      
     }) # end of isolate
-
-
-
+    
+    
+    
     # Download all results button ---------------------------------------------------------------------------------
 
     output$download_results <- downloadHandler(
