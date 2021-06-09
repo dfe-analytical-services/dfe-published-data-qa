@@ -785,7 +785,7 @@ server <- function(input, output, session) {
       # create a list of tables - with one for each indicator summary
       theGeographyList <- eventReactive(input$submit_geographies, {
         validate(
-          need(input$geog_indicator_parameter != "", "Please select at least one indicator"),
+          need(input$geog_indicator_parameter != "", "Please select at least one indicator")
         )
         
         return(get_geog_comparison(input$geog_indicator_parameter, input$geog_level_parameter, input$geog_sublevel_parameter))
