@@ -457,6 +457,10 @@ server <- function(input, output, session) {
       output$tables <- renderUI({
         myList <- showFilterLevels(meta$mainFile)
 
+        if(length(myList) == 0){
+          "There are no filters in this file"
+        } else {
+        
         tableList <- purrr::imap(myList, ~ {
           tagList(
             h4(.y),
@@ -470,6 +474,7 @@ server <- function(input, output, session) {
         })
 
         tagList(tableList)
+        }
       })
 
 
