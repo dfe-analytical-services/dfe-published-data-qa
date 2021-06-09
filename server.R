@@ -535,8 +535,12 @@ server <- function(input, output, session) {
 
       # create a list of tables - with one for each indicator summary
       theList <- eventReactive(input$submit, {
-        req(input$ind_parameter)
-        req(input$geog_parameter)
+        validate(
+          need(input$ind_parameter != "", "Please select at least one indicator")
+        )
+        validate(
+          need(input$geog_parameter != "", "Please select at least one geographic level")
+        )
         
         return(showsumstats(input$ind_parameter, input$geog_parameter))
       })
