@@ -995,7 +995,9 @@ server <- function(input, output, session) {
         check = function(dataset, id = "time_period"){
           years = dataset[,id]
           dataset[,id] = NULL
-          dataset$match = do.call(pmax,as.list(dataset)) == do.call(pmin,as.list(dataset))
+          
+          dataset$match = do.call(pmin, c(as.list(dataset), na.rm = TRUE)) == do.call(pmax, c(as.list(dataset), na.rm = TRUE))
+          #dataset$match = do.call(pmax,as.list(dataset)) == do.call(pmin,as.list(dataset))
           dataset[,id] = years
           dataset <- dataset %>%
             select(time_period, everything()) %>%
