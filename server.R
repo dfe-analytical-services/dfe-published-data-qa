@@ -1059,14 +1059,17 @@ server <- function(input, output, session) {
           mutate(Perc = roundFiveUp(Freq / total_indicator_count * 100, 1))
 
         names(suppress_count) <- c("Symbol", "Frequency", "% of total cell count")
-
+        
+        Symbol <-(c("z", "c", ":", "~"))
+        
+        symbol_expected <- as.data.frame(Symbol)
+        
+        suppress_count<-symbol_expected %>% left_join(suppress_count) %>% 
+          mutate_all(~replace(., is.na(.), 0)) 
+        
 
         output$suppressed_cell_count <- renderUI({
-          if (nrow(suppress_count) == 0) {
-            return(strong("No cells are suppressed"))
-          }
 
-          #tableOutput("suppressed_cell_count_table")
           DTOutput("suppressed_cell_count_table", width = "60%") %>% withSpinner()
         })
 

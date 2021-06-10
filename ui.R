@@ -262,10 +262,10 @@ fluidPage(
                 fluidRow(
                   column(
                     3,
-                    tags$b("Supressed cells"),
+                    tags$b("Cells missing data"),
                     br(),
                     br(),
-                    "Are you supressing too much?"
+                    "How much of your data is unavailable, rounded to 0, not applicable or suppressed?"
                   ),
                   column(
                     9,
