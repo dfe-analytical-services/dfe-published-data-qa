@@ -336,10 +336,21 @@ fluidPage(
                           label = "Generate tables"
                         )
                       )
-                    ),
+                    )
+                    
+                  ),
+                  
+                  
+                  fluidRow(
+                  column(
+                    12,
+                    style = "padding-left:20px; padding-right:20px",
+                  
                     hr(),
                     uiOutput("table_list")
                   )
+                  )
+                  
                 )
               ),
               
@@ -396,12 +407,22 @@ fluidPage(
                         4,
                         ''
                       )
-                    ),
-                    hr(),
-                    fluidRow(
+                    )
+                    
+                  ),
+                  
+                  
+                  fluidRow(
+                    column(
+                      12,
+                      style = "padding-left:20px; padding-right:20px",
+                      
+                      hr(),
                       uiOutput("table_outlier_list")
                     )
                   )
+                   
+                  
                 )
               ),
               
@@ -440,7 +461,7 @@ fluidPage(
                           label = "Generate tables"
                         )
                       )
-                    ),
+                    )
                     # fluidRow(
                     #   column(
                     #     4,
@@ -455,13 +476,20 @@ fluidPage(
                     #     ''
                     #   )
                     # ),
-                    hr(),
-                    fluidRow(
-                      #uiOutput("table_geography_list")
-                    ),
-                    DTOutput("geog_agg2", width = "60%")
                     
+                    ),
+                  
+                  
+                  fluidRow(
+                    column(
+                      12,
+                      style = "padding-left:20px; padding-right:20px",
+                      
+                      hr(),
+                      DTOutput("geog_agg2", width = "100%")
+                    )
                   )
+                  
                 )
               )
               
