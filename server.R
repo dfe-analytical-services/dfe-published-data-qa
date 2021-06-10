@@ -473,11 +473,13 @@ server <- function(input, output, session) {
 
 
         levelsTable <- function(filter) {
-          filter_group <- filter_groups %>%
-            dplyr::filter(col_name == filter) %>%
-            pull(filter_grouping_column)
-
-          if (!is.na(filter_group)) {
+          
+          if (nrow(filter_groups)>0) {
+            
+            filter_group <- filter_groups %>%
+              dplyr::filter(col_name == filter) %>%
+              pull(filter_grouping_column)
+            
             return(eval(parse(text = paste0("data$mainFile %>% select(", filter_group, ", ", filter, ") %>% distinct() %>% arrange(", filter_group, ", ", filter, ")"))))
           }
           else {
