@@ -328,7 +328,8 @@ server <- function(input, output, session) {
 
       # File previews ----------------------------------------------------------------
 
-
+      if(failed_tests == 0) {
+        
       # Set striping to be "off" for data tables
       rowCallback <- c(
         "function(row, data, num, index){",
@@ -466,6 +467,8 @@ server <- function(input, output, session) {
 
         filter_groups <- meta %>%
           dplyr::filter(col_type == "Filter") %>%
+          dplyr::filter(filter_grouping_column != "") %>%
+          dplyr::filter(!is.na(filter_grouping_column)) %>%
           select(col_name, filter_grouping_column)
 
 
@@ -475,7 +478,7 @@ server <- function(input, output, session) {
             pull(filter_grouping_column)
 
           if (!is.na(filter_group)) {
-            return(eval(parse(text = paste0("data$mainFile %>% select(", filter, ", ", filter_group, ") %>% distinct() %>% arrange(", filter, ", ", filter_group, ")"))))
+            return(eval(parse(text = paste0("data$mainFile %>% select(", filter_group, ", ", filter, ") %>% distinct() %>% arrange(", filter_group, ", ", filter, ")"))))
           }
           else {
             return(eval(parse(text = paste0("data$mainFile %>% select(", filter, ") %>% distinct() %>% arrange(", filter, ")"))))
@@ -491,6 +494,10 @@ server <- function(input, output, session) {
       output$tables <- renderUI({
         myList <- showFilterLevels(meta$mainFile)
 
+        if(length(myList) == 0){
+          "There are no filters in this file"
+        } else {
+        
         tableList <- purrr::imap(myList, ~ {
           tagList(
             h4(paste("Filter ", .y)),
@@ -520,6 +527,7 @@ server <- function(input, output, session) {
         })
 
         tagList(tableList)
+        }
       })
 
       
@@ -577,9 +585,9 @@ server <- function(input, output, session) {
       # Show summary stats table for an indicator
       showsumstats <- function(parameter, geog_parameter) {
         args <- expand.grid(ind = parameter, geog = geog_parameter, stringsAsFactors = FALSE)
-
-        sumtable <- function(args) {
-          return(eval(parse(text = paste0("data$mainFile %>% filter(geographic_level =='", args[2], "') %>% 
+            
+            sumtable <- function(args) {
+              return(eval(parse(text = paste0("data$mainFile %>% filter(geographic_level =='", args[2], "') %>% 
           mutate(across(all_of('", args[1], "'), na_if, 'c')) %>%
           mutate(across(all_of('", args[1], "'), na_if, 'z')) %>%
           mutate(across(all_of('", args[1], "'), na_if, ':')) %>%
@@ -595,15 +603,20 @@ server <- function(input, output, session) {
           pivot_longer(!time_period, names_to = c('indicator', 'measure'), names_pattern = '(.*)_(.*)') %>%
           pivot_wider(names_from = 'time_period') %>%
           mutate(geographic_level ='", args[2], "', .before = indicator)"))))
-        }
-
-        output <- apply(args, 1, sumtable)
-
+            }
+            
+            output <- apply(args, 1, sumtable)
+        
         return(output)
       }
 
       # create a list of tables - with one for each indicator summary
       theList <- eventReactive(input$submit, {
+        validate(
+          need(input$ind_parameter != "", "Please select at least one indicator"),
+          need(input$geog_parameter != "", "Please select at least one geographic level")
+        )
+        
         return(showsumstats(input$ind_parameter, input$geog_parameter))
       })
 
@@ -611,7 +624,7 @@ server <- function(input, output, session) {
       # Create and then output the tables
       observeEvent(input$submit, {
         req(theList())
-
+        
         purrr::iwalk(theList(), ~ {
           names <- paste0("t_", .y)
           output[[names]] <- renderTable(.x)
@@ -723,6 +736,11 @@ server <- function(input, output, session) {
 
       # create a list of tables - with one for each indicator summary
       theOutlierList <- eventReactive(input$submit_outlier, {
+        validate(
+          need(input$outlier_indicator_parameter != "", "Please select at least one indicator"),
+          need(input$ctime_parameter != input$comptime_parameter, "Please select two different time periods for comparison")
+        )
+        
         return(get_outliers(input$outlier_indicator_parameter, input$threshold_setting, input$ctime_parameter, input$comptime_parameter))
       })
 
@@ -984,6 +1002,7 @@ server <- function(input, output, session) {
             mutate(match = ifelse(match == TRUE, "MATCH", "NO MATCH"))
           return(dataset)
         }
+
         
         ttt <- check(data)
         
@@ -1066,10 +1085,12 @@ server <- function(input, output, session) {
         )
         })
       })
+      } # end of if for QA stuff
+      
     }) # end of isolate
-
-
-
+    
+    
+    
     # Download all results button ---------------------------------------------------------------------------------
 
     output$download_results <- downloadHandler(
@@ -1117,8 +1138,30 @@ server <- function(input, output, session) {
     shinyjs::hideElement(id = "qaResults")
 
     # clear files from input selection (does not fully reset fileInput, grr)
-    reset("datafile")
-    reset("metafile")
+    shinyjs::reset("datafile")
+    shinyjs::reset("metafile")
+
+    # attempt to clear some of the QA objects
+    shinyjs::reset("meta_table")
+    shinyjs::reset("data_preview")
+    shinyjs::reset("geog_time_perms2")
+    shinyjs::reset("tables")
+    shinyjs::reset("indicators")
+    shinyjs::reset("suppressed_cell_count")
+    shinyjs::reset("indicator_choice")
+    shinyjs::reset("geogChoice")
+    shinyjs::reset("table_list")
+    shinyjs::reset("outlier_indicator_choice")
+    shinyjs::reset("current_time")
+    shinyjs::reset("comparison_time")
+    shinyjs::reset("threshold_setting")
+    shinyjs::reset("submit_outlier")
+    shinyjs::reset("table_outlier_list")
+    shinyjs::reset("geog_indicator_choice")
+    shinyjs::reset("geog_level_choice")
+    shinyjs::reset("geog_sublevel_choice")
+    shinyjs::reset("submit_geographies")
+    shinyjs::reset("table_geography_list")
 
     # clear uploaded flags
     values$dataUploaded <- FALSE

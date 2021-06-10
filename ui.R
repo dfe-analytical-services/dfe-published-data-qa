@@ -83,20 +83,16 @@ fluidPage(
               )
             ),
             column(2,
-                   align = "center", style = "margin-top: 25px;",
-                   # Only show buttons once files are added and remove button once results appear
-                   conditionalPanel(
-                     condition = "output.file_exists == true && output.showresults == false",
-                     uiOutput("uiScreenButton")
-                   ),
-                   shinyjs::hidden(div(
-                     id = "reset_button",
-                     uiOutput("uiResetButton")
-                   )),
-                   shinyjs::hidden(div(
-                     id = "backToScreener",
-                     actionButton("goback", "Back to screener results")
-                   ))
+              align = "center", style = "margin-top: 25px;",
+              # Only show buttons once files are added and remove button once results appear
+              conditionalPanel(
+                condition = "output.file_exists == true && output.showresults == false",
+                uiOutput("uiScreenButton")
+              ),
+              shinyjs::hidden(div(
+                id = "reset_button",
+                uiOutput("uiResetButton")
+              ))
             )
           )
         ),
