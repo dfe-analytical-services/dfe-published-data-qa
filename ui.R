@@ -1,14 +1,14 @@
 fluidPage(
   theme = "acalat_theme.css",
-  
+
   useShinyjs(),
   shinyFeedback::useShinyFeedback(),
   # options(shiny.reactlog = TRUE),
-  
+
   inlineCSS(appLoadingCSS), # set in global.r
-  
+
   # Initial loading screen -------------------------------------------------------------------------------------------
-  
+
   div(
     id = "loading-content",
     h2("Loading...")
@@ -16,16 +16,16 @@ fluidPage(
   hidden(
     div(
       id = "app-content",
-      
+
       # Application title -----------------------------------------------------------------------------------
-      
+
       titlePanel(div(HTML("DfE published data QA <h4>QA your data files before uploading to Explore Education Statistics for publication</h4>")), windowTitle = "DfE data QA"),
-      
+
       # Initial guidance text -----------------------------------------------------------------------------------
-      
+
       verticalLayout(
         br(),
-        
+
         shinyjs::hidden(div(
           id = "guidance",
           "This app allows you to screen your data files against the Department’s ",
@@ -57,12 +57,12 @@ fluidPage(
           "This app is constantly being developed, please let us know if you have any suggestions to improve it. If you experience any issues, please take screenshots and email them to us with as much information as possible.",
           hr()
         )),
-        
+
         # Top panel for data uploads -----------------------------------------------------------------------------------
-        
+
         wellPanel(
           tags$style(".shiny-file-input-progress {max-width: 99.8%; padding-left: 1px}"),
-          
+
           fluidRow(
             column(
               5,
@@ -96,13 +96,13 @@ fluidPage(
             )
           )
         ),
-        
+
         # Main panel showing results -----------------------------------------------------------------------------------
-        
+
         fluidRow(
-          
+
           # Loading screen that appears while tests are running -----------------------------------------------------------------------------------
-          
+
           shinyjs::hidden(div(
             id = "loading",
             h4("Tests are now running against the files, this may take a few minutes depending on the size of your data file.", align = "center"),
@@ -110,19 +110,19 @@ fluidPage(
             br(),
             HTML('<center><img src="duckWaddle.gif"></center>')
           )),
-          
+
           # Summarised results -----------------------------------------------------------------------------------
-          
+
           shinyjs::hidden(div(
             id = "results",
-            
+
             tabsetPanel(
               id = "trendy_tabs",
-              
+
               tabPanel(
                 title = "Screener results",
                 value = "tab1",
-                
+
                 column(
                   5,
                   style = "padding-left:20px;",
@@ -166,11 +166,11 @@ fluidPage(
                     textOutput("meta_cols")
                   )
                 ),
-                
-                
-                
+
+
+
                 # Individual check results tables -----------------------------------------------------------------------------------
-                
+
                 column(
                   7,
                   uiOutput("ancillary_box"),
@@ -184,14 +184,14 @@ fluidPage(
                 )
                 # End of column
               ),
-              
+
               # QA pages -----------------------------------------------------------------------------------
-              
+
               tabPanel(
                 title = "File previews",
                 value = "previewTab",
                 style = "padding-left:20px; padding-right:20px",
-                
+
                 br(),
                 tags$b("View metadata"),
                 DTOutput("meta_table", width = "100%") %>% withSpinner(),
@@ -199,17 +199,21 @@ fluidPage(
                 tags$b("Preview datafile"),
                 DTOutput("data_preview", width = "100%") %>% withSpinner()
               ),
-              
+
               tabPanel(
                 title = "What's in this file",
                 value = "obUnitTab",
                 style = "padding-left:20px; padding-right:20px",
-                
+
                 br(),
                 fluidRow(
                   column(
                     3,
                     tags$b("What combinations of geography and time are in the data"),
+                    br(),
+                    br(),
+                    "This table lists all the permutations of geographic_level and time_period where at least one row of data exists",
+                    br(),
                     br(),
                     "For any unexpected Ns, check the data",
                     br(),
@@ -227,13 +231,14 @@ fluidPage(
                     3,
                     tags$b("What filters are present in the data"),
                     br(),
-                    "Check all levels are there",
+                    br(),
+                    "This table lists all the filters and filter levels where at least one row of data exists",
                     br(),
                     br(),
-                    "Shows matching filter groups where they are specified in metadata",
+                    "Check all levels you expect to see are there",
                     br(),
                     br(),
-                    "Check names are how you want them to look etc",
+                    "Check the names are how you want them to look in EES",
                   ),
                   column(
                     9,
@@ -248,10 +253,13 @@ fluidPage(
                     tags$b("What indicators are present in the data"),
                     br(),
                     br(),
-                    "Check all levels are there",
+                    "This table lists all the indicators that exist within the data",
                     br(),
                     br(),
-                    "Check names are how you want them to look etc"
+                    "Check all the indicators you expect to see are there",
+                    br(),
+                    br(),
+                    "Check the names are how you want them to look in EES"
                   ),
                   column(
                     9,
@@ -262,10 +270,13 @@ fluidPage(
                 fluidRow(
                   column(
                     3,
-                    tags$b("Supressed cells"),
+                    tags$b("Cells missing data"),
                     br(),
                     br(),
-                    "Are you supressing too much?"
+                    "This table shows how many cells do not contain data",
+                    br(),
+                    br(),
+                    "How much of your data is unavailable, rounded to 0, not applicable or suppressed?"
                   ),
                   column(
                     9,
@@ -292,19 +303,23 @@ fluidPage(
                 #
                 # hr(),
               ),
-              
+
               tabPanel(
                 title = "Explore data",
                 value = "indicatorsTab",
                 style = "padding-left:20px; padding-right:20px",
-                
+
                 br(),
                 fluidRow(
                   column(
                     3,
                     tags$b("Indicator summary"),
                     br(),
-                    "Check for anything weird"
+                    br(),
+                    "Review indicator-level summaries of your data",
+                    br(), 
+                    br(),
+                    "Check to make sure values are sensible - are there any unexpected results when comparing to past time periods?"
                   ),
                   column(
                     9,
@@ -319,31 +334,46 @@ fluidPage(
                       ),
                       column(
                         4,
-                        align = "left",  style = "margin-top: 25px;",
+                        align = "left", style = "margin-top: 25px;",
                         actionButton(
                           inputId = "submit",
                           label = "Generate tables"
                         )
                       )
-                    ),
+                    )
+                    
+                  ),
+                  
+                  
+                  fluidRow(
+                  column(
+                    12,
+                    style = "padding-left:20px; padding-right:20px",
+                  
                     hr(),
                     uiOutput("table_list")
                   )
+                  )
+                  
                 )
               ),
-              
+
               tabPanel(
-                title = "Identify outliers",
+                title = "Year-on-year changes",
                 value = "outliersTab",
                 style = "padding-left:20px; padding-right:20px",
-                
+
                 br(),
                 fluidRow(
                   column(
                     3,
-                    tags$b("Outliers summary"),
+                    tags$b("Year-on-year summary"),
                     br(),
-                    "Check for any outliers"
+                    br(),
+                    "Check for any large differences in data from year-to-year",
+                    br(),
+                    br(),
+                    "Empty tables will appear for cases where there are no changes above your set threshold"
                   ),
                   column(
                     9,
@@ -364,7 +394,6 @@ fluidPage(
                       ),
                       column(
                         4,
-                        
                         align = "left", style = "margin-top: 25px;",
                         actionButton(
                           inputId = "submit_outlier",
@@ -383,32 +412,41 @@ fluidPage(
                       ),
                       column(
                         4,
-                        ''
+                        ""
                       )
-                    ),
-                    hr(),
-                    fluidRow(
+                    )
+                    
+                  ),
+                  
+                  
+                  fluidRow(
+                    column(
+                      12,
+                      style = "padding-left:20px; padding-right:20px",
+                      
+                      hr(),
                       uiOutput("table_outlier_list")
                     )
                   )
+                   
+                  
                 )
               ),
-              
+
               tabPanel(
                 title = "Check geography subtotals",
                 value = "geogTab",
                 style = "padding-left:20px; padding-right:20px",
-                
+
                 br(),
                 fluidRow(
                   column(
                     3,
                     tags$b("Geography summary"),
                     br(),
-                    "Check subtotals for geographies add up",
                     br(),
-                    "Data appears in tables for geography totals that do not match the sum of subtotals"
-                  ),
+                    "Check subtotals for geographies add up",
+                    ),
                   column(
                     9,
                     fluidRow(
@@ -418,42 +456,47 @@ fluidPage(
                       ),
                       column(
                         4,
-                        ''
+                        ""
                       ),
                       column(
                         4,
-                        
                         align = "left", style = "margin-top: 25px;",
                         actionButton(
                           inputId = "submit_geographies",
                           label = "Generate tables"
                         )
                       )
-                    ),
-                    fluidRow(
-                      column(
-                        4,
-                        uiOutput("geog_level_choice") %>% withSpinner()
-                      ),
-                      column(
-                        4,
-                        uiOutput("geog_sublevel_choice") %>% withSpinner()
-                      ),
-                      column(
-                        4,
-                        ''
-                      )
-                    ),
-                    hr(),
-                    fluidRow(
-                      #uiOutput("table_geography_list")
-                    ),
-                    DTOutput("geog_agg2", width = "60%") %>% withSpinner()
+                    )
+                    # fluidRow(
+                    #   column(
+                    #     4,
+                    #     uiOutput("geog_level_choice") %>% withSpinner()
+                    #   ),
+                    #   column(
+                    #     4,
+                    #     uiOutput("geog_sublevel_choice") %>% withSpinner()
+                    #   ),
+                    #   column(
+                    #     4,
+                    #     ''
+                    #   )
+                    # ),
                     
+                    ),
+                  
+                  
+                  fluidRow(
+                    column(
+                      12,
+                      style = "padding-left:20px; padding-right:20px",
+                      
+                      hr(),
+                      DTOutput("geog_agg2", width = "100%")
+                    )
                   )
+                  
                 )
               )
-              
             ) # End of tabsetpanel
           ))
           # End of summarised results div
