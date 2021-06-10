@@ -211,6 +211,10 @@ fluidPage(
                     3,
                     tags$b("What combinations of geography and time are in the data"),
                     br(),
+                    br(),
+                    "This table lists all the permutations of geographic_level and time_period where at least one row of data exists",
+                    br(),
+                    br(),
                     "For any unexpected Ns, check the data",
                     br(),
                     br(),
@@ -227,13 +231,14 @@ fluidPage(
                     3,
                     tags$b("What filters are present in the data"),
                     br(),
-                    "Check all levels are there",
+                    br(),
+                    "This table lists all the filters and filter levels where at least one row of data exists",
                     br(),
                     br(),
-                    "Shows matching filter groups where they are specified in metadata",
+                    "Check all levels you expect to see are there",
                     br(),
                     br(),
-                    "Check names are how you want them to look etc",
+                    "Check the names are how you want them to look in EES",
                   ),
                   column(
                     9,
@@ -248,10 +253,13 @@ fluidPage(
                     tags$b("What indicators are present in the data"),
                     br(),
                     br(),
-                    "Check all levels are there",
+                    "This table lists all the indicators that exist within the data",
                     br(),
                     br(),
-                    "Check names are how you want them to look etc"
+                    "Check all the indicators you expect to see are there",
+                    br(),
+                    br(),
+                    "Check the names are how you want them to look in EES"
                   ),
                   column(
                     9,
@@ -263,6 +271,9 @@ fluidPage(
                   column(
                     3,
                     tags$b("Cells missing data"),
+                    br(),
+                    br(),
+                    "This table shows how many cells do not contain data",
                     br(),
                     br(),
                     "How much of your data is unavailable, rounded to 0, not applicable or suppressed?"
@@ -327,10 +338,21 @@ fluidPage(
                           label = "Generate tables"
                         )
                       )
-                    ),
+                    )
+                    
+                  ),
+                  
+                  
+                  fluidRow(
+                  column(
+                    12,
+                    style = "padding-left:20px; padding-right:20px",
+                  
                     hr(),
                     uiOutput("table_list")
                   )
+                  )
+                  
                 )
               ),
 
@@ -388,12 +410,22 @@ fluidPage(
                         4,
                         ""
                       )
-                    ),
-                    hr(),
-                    fluidRow(
+                    )
+                    
+                  ),
+                  
+                  
+                  fluidRow(
+                    column(
+                      12,
+                      style = "padding-left:20px; padding-right:20px",
+                      
+                      hr(),
                       uiOutput("table_outlier_list")
                     )
                   )
+                   
+                  
                 )
               ),
 
@@ -431,27 +463,35 @@ fluidPage(
                           label = "Generate tables"
                         )
                       )
+                    )
+                    # fluidRow(
+                    #   column(
+                    #     4,
+                    #     uiOutput("geog_level_choice") %>% withSpinner()
+                    #   ),
+                    #   column(
+                    #     4,
+                    #     uiOutput("geog_sublevel_choice") %>% withSpinner()
+                    #   ),
+                    #   column(
+                    #     4,
+                    #     ''
+                    #   )
+                    # ),
+                    
                     ),
-                    fluidRow(
-                      column(
-                        4,
-                        uiOutput("geog_level_choice") %>% withSpinner()
-                      ),
-                      column(
-                        4,
-                        uiOutput("geog_sublevel_choice") %>% withSpinner()
-                      ),
-                      column(
-                        4,
-                        ""
-                      )
-                    ),
-                    hr(),
-                    fluidRow(
-                      # uiOutput("table_geography_list")
-                    ),
-                    DTOutput("geog_agg2", width = "60%") %>% withSpinner()
+                  
+                  
+                  fluidRow(
+                    column(
+                      12,
+                      style = "padding-left:20px; padding-right:20px",
+                      
+                      hr(),
+                      DTOutput("geog_agg2", width = "100%")
+                    )
                   )
+                  
                 )
               )
             ) # End of tabsetpanel
