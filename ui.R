@@ -317,7 +317,7 @@ fluidPage(
                     br(),
                     br(),
                     "Review indicator-level summaries of your data",
-                    br(), 
+                    br(),
                     br(),
                     "Check to make sure values are sensible - are there any unexpected results when comparing to past time periods?"
                   ),
@@ -341,20 +341,18 @@ fluidPage(
                         )
                       )
                     )
-                    
                   ),
-                  
-                  
+
+
                   fluidRow(
-                  column(
-                    12,
-                    style = "padding-left:20px; padding-right:20px",
-                  
-                    hr(),
-                    uiOutput("table_list")
+                    column(
+                      12,
+                      style = "padding-left:20px; padding-right:20px",
+
+                      hr(),
+                      uiOutput("table_list")
+                    )
                   )
-                  )
-                  
                 )
               ),
 
@@ -415,21 +413,18 @@ fluidPage(
                         ""
                       )
                     )
-                    
                   ),
-                  
-                  
+
+
                   fluidRow(
                     column(
                       12,
                       style = "padding-left:20px; padding-right:20px",
-                      
+
                       hr(),
                       uiOutput("table_outlier_list")
                     )
                   )
-                   
-                  
                 )
               ),
 
@@ -446,7 +441,7 @@ fluidPage(
                     br(),
                     br(),
                     "Check subtotals for geographies add up",
-                    ),
+                  ),
                   column(
                     9,
                     fluidRow(
@@ -481,20 +476,18 @@ fluidPage(
                     #     ''
                     #   )
                     # ),
-                    
-                    ),
-                  
-                  
+                  ),
+
+
                   fluidRow(
                     column(
                       12,
                       style = "padding-left:20px; padding-right:20px",
-                      
+
                       hr(),
                       DTOutput("geog_agg2", width = "100%")
                     )
                   )
-                  
                 )
               )
             ) # End of tabsetpanel

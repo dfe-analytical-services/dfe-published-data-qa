@@ -995,16 +995,18 @@ server <- function(input, output, session) {
                             summarise(aggregate_number = sum(", ii, ")) %>%
                             spread(key = geographic_level, value = aggregate_number)")))
 
-          check <- function(dataset, id = c("time_period",all_of(pf))) {
+          check <- function(dataset, id = c("time_period", all_of(pf))) {
             years <- dataset[, id]
             dataset[, id] <- NULL
             dataset$match <- do.call(pmax, as.list(dataset)) == do.call(pmin, as.list(dataset))
             dataset[, id] <- years
             dataset <- dataset %>%
-              select(time_period, all_of(pf),everything()) %>%
-              mutate(match = case_when(match == TRUE ~ "MATCH", 
-                                       match == FALSE ~ "NO MATCH",
-                                       TRUE ~ "MISSING TOTAL"))
+              select(time_period, all_of(pf), everything()) %>%
+              mutate(match = case_when(
+                match == TRUE ~ "MATCH",
+                match == FALSE ~ "NO MATCH",
+                TRUE ~ "MISSING TOTAL"
+              ))
             return(dataset)
           }
 
