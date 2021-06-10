@@ -450,8 +450,10 @@ fluidPage(
                     ),
                     hr(),
                     fluidRow(
-                      uiOutput("table_geography_list")
-                    )
+                      #uiOutput("table_geography_list")
+                    ),
+                    DTOutput("geog_agg2", width = "60%") %>% withSpinner()
+                    
                   )
                 )
               )
