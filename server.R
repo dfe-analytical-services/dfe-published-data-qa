@@ -290,13 +290,17 @@ server <- function(input, output, session) {
           "#trendy_tabs li a[data-value=geogTab]"
         ))
       }
-      
-      if(data$mainFile %>% select(geographic_level) %>% distinct() %>% nrow() == 1){
+
+      if (data$mainFile %>% select(geographic_level) %>% distinct() %>% nrow() == 1) {
         shinyjs::hide(selector = c(
-          "#trendy_tabs li a[data-value=geogTab]"))}
-      else{
+          "#trendy_tabs li a[data-value=geogTab]"
+        ))
+      }
+      else {
         shinyjs::show(selector = c(
-          "#trendy_tabs li a[data-value=geogTab]"))}
+          "#trendy_tabs li a[data-value=geogTab]"
+        ))
+      }
 
 
       if (advisory_tests != 0) {
@@ -328,268 +332,264 @@ server <- function(input, output, session) {
 
       # File previews ----------------------------------------------------------------
 
-      if(failed_tests == 0) {
-        
-      # Set striping to be "off" for data tables
-      rowCallback <- c(
-        "function(row, data, num, index){",
-        "  var $row = $(row);",
-        "    $row.css('background-color', '#454b51');",
-        "    $row.hover(function(){",
-        "      $(this).css('background-color', '#6a737c');",
-        "     }, function(){",
-        "      $(this).css('background-color', '#454b51');",
-        "     }",
-        "    );",
-        "}"
-      )
+      if (failed_tests == 0) {
 
-      # Metadata preview
-      output$meta_table <- DT::renderDT({
-        datatable(meta$mainFile,
-          rownames = FALSE,
-          style = "bootstrap",
-          class = "table-bordered",
-          options = list(
-            dom = "pt",
-            ordering = F,
-            pageLength = 12,
-            rowCallback = JS(rowCallback),
-            initComplete = JS(
-              "function(settings, json) {",
-              "$(this.api().table().header()).css({'background-color': '#232628', 'color': '#c8c8c8'});",
-              "}"
+        # Set striping to be "off" for data tables
+        rowCallback <- c(
+          "function(row, data, num, index){",
+          "  var $row = $(row);",
+          "    $row.css('background-color', '#454b51');",
+          "    $row.hover(function(){",
+          "      $(this).css('background-color', '#6a737c');",
+          "     }, function(){",
+          "      $(this).css('background-color', '#454b51');",
+          "     }",
+          "    );",
+          "}"
+        )
+
+        # Metadata preview
+        output$meta_table <- DT::renderDT({
+          datatable(meta$mainFile,
+            rownames = FALSE,
+            style = "bootstrap",
+            class = "table-bordered",
+            options = list(
+              dom = "pt",
+              ordering = F,
+              pageLength = 12,
+              rowCallback = JS(rowCallback),
+              initComplete = JS(
+                "function(settings, json) {",
+                "$(this.api().table().header()).css({'background-color': '#232628', 'color': '#c8c8c8'});",
+                "}"
+              )
             )
           )
-        )
-      })
+        })
 
-      # Data preview
-      output$data_preview <- DT::renderDT({
-        datatable(data$mainFile,
-          rownames = FALSE,
-          style = "bootstrap",
-          class = "table-bordered",
-          options = list(
-            dom = "pt",
-            pageLength = 12,
-            rowCallback = JS(rowCallback),
-            initComplete = JS(
-              "function(settings, json) {",
-              "$(this.api().table().header()).css({'background-color': '#232628', 'color': '#c8c8c8'});",
-              "}"
-            ),
-            scrollX = TRUE
-          )
-        )
-      })
-
-
-      # Geog / time permutations -----------------------------------------------------
-
-      # output$geog_time_perms2 <- renderTable({
-      #   data$mainFile %>%
-      #     count(time_period, geographic_level) %>%
-      #     mutate(n = replace(n, n > 0, "Y")) %>%
-      #     pivot_wider(names_from = time_period, values_from = n, values_fill = "N")
-      # })
-      
-      output$geog_time_perms2 <- DT::renderDT({
-        
-        table <- data$mainFile %>%
-          count(time_period, geographic_level) %>%
-          mutate(n = replace(n, n > 0, "Y")) %>%
-          pivot_wider(names_from = time_period, values_from = n, values_fill = "N")
-        
-        datatable(table,
-                  rownames = FALSE,
-                  style = "bootstrap",
-                  class = "table-bordered",
-                  options = list(
-                    dom = "t",
-                    ordering = F,
-                   # rowCallback = JS(rowCallback),
-                    initComplete = JS(
-                      "function(settings, json) {",
-                      "$(this.api().table().header()).css({'background-color': '#232628', 'color': '#c8c8c8'});",
-                      "}"
-                    )
-                  )
-        )
-      })
-      # Filter permutations -----------------------------------------------------
-
-      # output$filterperms <- renderTable({
-      #
-      #   filters <- meta$mainFile %>%
-      #     dplyr::filter(col_type == "Filter") %>%
-      #     pull(col_name)
-      #
-      #   total_info<-data.frame(filters)
-      #
-      #   for (filter in all_of(filters)) {
-      #     info <- data$mainFile %>%
-      #       select(filter) %>%
-      #       distinct()
-      #
-      #     total_info <- total_info %>%  merge(info)}
-      #
-      #
-      #   total_info <- total_info %>%
-      #     select(-filters) %>%
-      #     distinct()
-      #
-      #   #Get list of publication-specific filters
-      #   publication_filters <- meta$mainFile %>%
-      #     filter(col_type == "Filter") %>%
-      #     select(col_name) %>%
-      #     pull(col_name)
-      #
-      #   #Get filter group combos for publication-specific filters
-      #   distinct_filter_groups <- data$mainFile %>%
-      #     select(all_of(publication_filters)) %>%
-      #     distinct() %>% mutate(flag=1)
-      #
-      #   total_info %>% left_join(distinct_filter_groups) %>%
-      #     filter(is.na(flag)) %>%
-      #     select(-flag)
-      #
-      # })
-      #
-
-
-      # Show filters and associated levels from the data -----------------------------
-
-      showFilterLevels <- function(meta) {
-        filters <- meta %>%
-          dplyr::filter(col_type == "Filter") %>%
-          pull(col_name)
-
-        filter_groups <- meta %>%
-          dplyr::filter(col_type == "Filter") %>%
-          dplyr::filter(filter_grouping_column != "") %>%
-          dplyr::filter(!is.na(filter_grouping_column)) %>%
-          select(col_name, filter_grouping_column)
-
-
-        levelsTable <- function(filter) {
-          
-          if (nrow(filter_groups)>0) {
-            
-            filter_group <- filter_groups %>%
-              dplyr::filter(col_name == filter) %>%
-              pull(filter_grouping_column)
-            
-            return(eval(parse(text = paste0("data$mainFile %>% select(", filter_group, ", ", filter, ") %>% distinct() %>% arrange(", filter_group, ", ", filter, ")"))))
-          }
-          else {
-            return(eval(parse(text = paste0("data$mainFile %>% select(", filter, ") %>% distinct() %>% arrange(", filter, ")"))))
-          }
-        }
-
-
-        output <- lapply(filters, levelsTable)
-
-        return(output)
-      }
-
-      output$tables <- renderUI({
-        myList <- showFilterLevels(meta$mainFile)
-
-        if(length(myList) == 0){
-          "There are no filters in this file"
-        } else {
-        
-        tableList <- purrr::imap(myList, ~ {
-          tagList(
-            h4(paste("Filter ", .y)),
-           # tableOutput(outputId = paste0("table_", .y))
-            DTOutput(outputId = paste0("table_", .y), width = "60%") %>% withSpinner()
+        # Data preview
+        output$data_preview <- DT::renderDT({
+          datatable(data$mainFile,
+            rownames = FALSE,
+            style = "bootstrap",
+            class = "table-bordered",
+            options = list(
+              dom = "pt",
+              pageLength = 12,
+              rowCallback = JS(rowCallback),
+              initComplete = JS(
+                "function(settings, json) {",
+                "$(this.api().table().header()).css({'background-color': '#232628', 'color': '#c8c8c8'});",
+                "}"
+              ),
+              scrollX = TRUE
+            )
           )
         })
 
-        purrr::iwalk(myList, ~ {
-          output_name <- paste0("table_", .y)
-          #output[[output_name]] <- renderTable(.x)
-          
-          output[[output_name]] <- DT::renderDT(datatable(.x,
-                                                          rownames = FALSE,
-                                                          style = "bootstrap",
-                                                          class = "table-bordered",
-                                                          options = list(
-                                                            dom = "t",
-                                                            ordering = F,
-                                                            # rowCallback = JS(rowCallback),
-                                                            initComplete = JS(
-                                                              "function(settings, json) {",
-                                                              "$(this.api().table().header()).css({'background-color': '#232628', 'color': '#c8c8c8'});",
-                                                              "}"
-                                                            )
-                                                          )))
+
+        # Geog / time permutations -----------------------------------------------------
+
+        # output$geog_time_perms2 <- renderTable({
+        #   data$mainFile %>%
+        #     count(time_period, geographic_level) %>%
+        #     mutate(n = replace(n, n > 0, "Y")) %>%
+        #     pivot_wider(names_from = time_period, values_from = n, values_fill = "N")
+        # })
+
+        output$geog_time_perms2 <- DT::renderDT({
+          table <- data$mainFile %>%
+            count(time_period, geographic_level) %>%
+            mutate(n = replace(n, n > 0, "Y")) %>%
+            pivot_wider(names_from = time_period, values_from = n, values_fill = "N")
+
+          datatable(table,
+            rownames = FALSE,
+            style = "bootstrap",
+            class = "table-bordered",
+            options = list(
+              dom = "t",
+              ordering = F,
+              # rowCallback = JS(rowCallback),
+              initComplete = JS(
+                "function(settings, json) {",
+                "$(this.api().table().header()).css({'background-color': '#232628', 'color': '#c8c8c8'});",
+                "}"
+              )
+            )
+          )
+        })
+        # Filter permutations -----------------------------------------------------
+
+        # output$filterperms <- renderTable({
+        #
+        #   filters <- meta$mainFile %>%
+        #     dplyr::filter(col_type == "Filter") %>%
+        #     pull(col_name)
+        #
+        #   total_info<-data.frame(filters)
+        #
+        #   for (filter in all_of(filters)) {
+        #     info <- data$mainFile %>%
+        #       select(filter) %>%
+        #       distinct()
+        #
+        #     total_info <- total_info %>%  merge(info)}
+        #
+        #
+        #   total_info <- total_info %>%
+        #     select(-filters) %>%
+        #     distinct()
+        #
+        #   #Get list of publication-specific filters
+        #   publication_filters <- meta$mainFile %>%
+        #     filter(col_type == "Filter") %>%
+        #     select(col_name) %>%
+        #     pull(col_name)
+        #
+        #   #Get filter group combos for publication-specific filters
+        #   distinct_filter_groups <- data$mainFile %>%
+        #     select(all_of(publication_filters)) %>%
+        #     distinct() %>% mutate(flag=1)
+        #
+        #   total_info %>% left_join(distinct_filter_groups) %>%
+        #     filter(is.na(flag)) %>%
+        #     select(-flag)
+        #
+        # })
+        #
+
+
+        # Show filters and associated levels from the data -----------------------------
+
+        showFilterLevels <- function(meta) {
+          filters <- meta %>%
+            dplyr::filter(col_type == "Filter") %>%
+            pull(col_name)
+
+          filter_groups <- meta %>%
+            dplyr::filter(col_type == "Filter") %>%
+            dplyr::filter(filter_grouping_column != "") %>%
+            dplyr::filter(!is.na(filter_grouping_column)) %>%
+            select(col_name, filter_grouping_column)
+
+
+          levelsTable <- function(filter) {
+            if (nrow(filter_groups) > 0) {
+              filter_group <- filter_groups %>%
+                dplyr::filter(col_name == filter) %>%
+                pull(filter_grouping_column)
+
+              return(eval(parse(text = paste0("data$mainFile %>% select(", filter_group, ", ", filter, ") %>% distinct() %>% arrange(", filter_group, ", ", filter, ")"))))
+            }
+            else {
+              return(eval(parse(text = paste0("data$mainFile %>% select(", filter, ") %>% distinct() %>% arrange(", filter, ")"))))
+            }
+          }
+
+
+          output <- lapply(filters, levelsTable)
+
+          return(output)
+        }
+
+        output$tables <- renderUI({
+          myList <- showFilterLevels(meta$mainFile)
+
+          if (length(myList) == 0) {
+            "There are no filters in this file"
+          } else {
+            tableList <- purrr::imap(myList, ~ {
+              tagList(
+                h4(paste("Filter ", .y)),
+                # tableOutput(outputId = paste0("table_", .y))
+                DTOutput(outputId = paste0("table_", .y), width = "60%") %>% withSpinner()
+              )
+            })
+
+            purrr::iwalk(myList, ~ {
+              output_name <- paste0("table_", .y)
+              # output[[output_name]] <- renderTable(.x)
+
+              output[[output_name]] <- DT::renderDT(datatable(.x,
+                rownames = FALSE,
+                style = "bootstrap",
+                class = "table-bordered",
+                options = list(
+                  dom = "t",
+                  ordering = F,
+                  # rowCallback = JS(rowCallback),
+                  initComplete = JS(
+                    "function(settings, json) {",
+                    "$(this.api().table().header()).css({'background-color': '#232628', 'color': '#c8c8c8'});",
+                    "}"
+                  )
+                )
+              ))
+            })
+
+            tagList(tableList)
+          }
         })
 
-        tagList(tableList)
-        }
-      })
-
-      
-    
-
-      # Indicator summaries-------------------------------------------------------------
-
-      output$indicators <- DT::renderDT({
-        
-        table <- meta$mainFile %>%
-          filter(col_type == "Indicator") %>%
-          select(col_name, label)
-        
-        datatable(table,
-                  rownames = FALSE,
-                  style = "bootstrap",
-                  class = "table-bordered",
-                  options = list(
-                    dom = "t",
-                    ordering = F,
-                    # rowCallback = JS(rowCallback),
-                    initComplete = JS(
-                      "function(settings, json) {",
-                      "$(this.api().table().header()).css({'background-color': '#232628', 'color': '#c8c8c8'});",
-                      "}"
-                    )
-                  )
-        )
-      })
 
 
-      # Create geographic level choice depending on what's available
 
-      output$geogChoice <- renderUI({
-        selectInput(
-          inputId = "geog_parameter",
-          label = "Choose geographic level(s):",
-          choices = data$mainFile %>% pull(geographic_level) %>% unique(),
-          multiple = TRUE
-        )
-      })
+        # Indicator summaries-------------------------------------------------------------
 
-      # Create indicator choice depending on what's available
+        output$indicators <- DT::renderDT({
+          table <- meta$mainFile %>%
+            filter(col_type == "Indicator") %>%
+            select(col_name, label)
 
-      output$indicatorChoice <- renderUI({
-        selectInput(
-          inputId = "ind_parameter",
-          label = "Choose indicator(s):",
-          choices = meta$mainFile %>% filter(col_type == "Indicator") %>% pull(col_name),
-          multiple = TRUE
-        )
-      })
+          datatable(table,
+            rownames = FALSE,
+            style = "bootstrap",
+            class = "table-bordered",
+            options = list(
+              dom = "t",
+              ordering = F,
+              # rowCallback = JS(rowCallback),
+              initComplete = JS(
+                "function(settings, json) {",
+                "$(this.api().table().header()).css({'background-color': '#232628', 'color': '#c8c8c8'});",
+                "}"
+              )
+            )
+          )
+        })
 
 
-      # Show summary stats table for an indicator
-      showsumstats <- function(parameter, geog_parameter) {
-        args <- expand.grid(ind = parameter, geog = geog_parameter, stringsAsFactors = FALSE)
-            
-            sumtable <- function(args) {
-              return(eval(parse(text = paste0("data$mainFile %>% filter(geographic_level =='", args[2], "') %>% 
+        # Create geographic level choice depending on what's available
+
+        output$geogChoice <- renderUI({
+          selectInput(
+            inputId = "geog_parameter",
+            label = "Choose geographic level(s):",
+            choices = data$mainFile %>% pull(geographic_level) %>% unique(),
+            multiple = TRUE
+          )
+        })
+
+        # Create indicator choice depending on what's available
+
+        output$indicatorChoice <- renderUI({
+          selectInput(
+            inputId = "ind_parameter",
+            label = "Choose indicator(s):",
+            choices = meta$mainFile %>% filter(col_type == "Indicator") %>% pull(col_name),
+            multiple = TRUE
+          )
+        })
+
+
+        # Show summary stats table for an indicator
+        showsumstats <- function(parameter, geog_parameter) {
+          args <- expand.grid(ind = parameter, geog = geog_parameter, stringsAsFactors = FALSE)
+
+          sumtable <- function(args) {
+            return(eval(parse(text = paste0("data$mainFile %>% filter(geographic_level =='", args[2], "') %>% 
           mutate(across(all_of('", args[1], "'), na_if, 'c')) %>%
           mutate(across(all_of('", args[1], "'), na_if, 'z')) %>%
           mutate(across(all_of('", args[1], "'), na_if, ':')) %>%
@@ -605,118 +605,116 @@ server <- function(input, output, session) {
           pivot_longer(!time_period, names_to = c('indicator', 'measure'), names_pattern = '(.*)_(.*)') %>%
           pivot_wider(names_from = 'time_period') %>%
           mutate(geographic_level ='", args[2], "', .before = indicator)"))))
-            }
-            
-            output <- apply(args, 1, sumtable)
-        
-        return(output)
-      }
+          }
 
-      # create a list of tables - with one for each indicator summary
-      theList <- eventReactive(input$submit, {
-        validate(
-          need(input$ind_parameter != "", "Please select at least one indicator"),
-          need(input$geog_parameter != "", "Please select at least one geographic level")
-        )
-        
-        return(showsumstats(input$ind_parameter, input$geog_parameter))
-      })
+          output <- apply(args, 1, sumtable)
 
+          return(output)
+        }
 
-      # Create and then output the tables
-      observeEvent(input$submit, {
-        req(theList())
-        
-        purrr::iwalk(theList(), ~ {
-          names <- paste0("t_", .y)
-          output[[names]] <- renderTable(.x)
-          
-          output[[names]] <- DT::renderDT(datatable(.x,
-                                 rownames = FALSE,
-                                 style = "bootstrap",
-                                 class = "table-bordered",
-                                 options = list(
-                                   dom = "t",
-                                   ordering = F,
-                                   # rowCallback = JS(rowCallback),
-                                   initComplete = JS(
-                                     "function(settings, json) {",
-                                     "$(this.api().table().header()).css({'background-color': '#232628', 'color': '#c8c8c8'});",
-                                     "}"
-                                   )
-                                 )))
-          
+        # create a list of tables - with one for each indicator summary
+        theList <- eventReactive(input$submit, {
+          validate(
+            need(input$ind_parameter != "", "Please select at least one indicator"),
+            need(input$geog_parameter != "", "Please select at least one geographic level")
+          )
+
+          return(showsumstats(input$ind_parameter, input$geog_parameter))
         })
- 
-        
-      })
 
-      output$table_list <- renderUI({
-        req(theList())
 
-        t_list <- purrr::imap(theList(), ~ {
-          tagList(
-            h4(.y),
-            #tableOutput(paste0("t_", .y))
-            
-            DTOutput(outputId = paste0("t_", .y), width = "100%") %>% withSpinner()
+        # Create and then output the tables
+        observeEvent(input$submit, {
+          req(theList())
+
+          purrr::iwalk(theList(), ~ {
+            names <- paste0("t_", .y)
+            output[[names]] <- renderTable(.x)
+
+            output[[names]] <- DT::renderDT(datatable(.x,
+              rownames = FALSE,
+              style = "bootstrap",
+              class = "table-bordered",
+              options = list(
+                dom = "t",
+                ordering = F,
+                # rowCallback = JS(rowCallback),
+                initComplete = JS(
+                  "function(settings, json) {",
+                  "$(this.api().table().header()).css({'background-color': '#232628', 'color': '#c8c8c8'});",
+                  "}"
+                )
+              )
+            ))
+          })
+        })
+
+        output$table_list <- renderUI({
+          req(theList())
+
+          t_list <- purrr::imap(theList(), ~ {
+            tagList(
+              h4(.y),
+              # tableOutput(paste0("t_", .y))
+
+              DTOutput(outputId = paste0("t_", .y), width = "100%") %>% withSpinner()
+            )
+          })
+          tagList(t_list)
+        })
+
+        # Outliers ----------------------------------------------------------------------
+
+        # Give users choice of indicators
+        output$outlier_indicator_choice <- renderUI({
+          selectInput(
+            inputId = "outlier_indicator_parameter",
+            label = "Choose indicator(s):",
+            choices = meta$mainFile %>% filter(col_type == "Indicator") %>% select(col_name),
+            multiple = TRUE
           )
         })
-        tagList(t_list)
-      })
 
-      # Outliers ----------------------------------------------------------------------
+        # Select "current time"
+        output$current_time <- renderUI({
+          selectInput(
+            inputId = "ctime_parameter",
+            label = "Choose current time period:",
+            choices = data$mainFile %>% arrange(desc(time_period)) %>% pull(time_period) %>% unique(),
+            multiple = FALSE
+          )
+        })
 
-      # Give users choice of indicators
-      output$outlier_indicator_choice <- renderUI({
-        selectInput(
-          inputId = "outlier_indicator_parameter",
-          label = "Choose indicator(s):",
-          choices = meta$mainFile %>% filter(col_type == "Indicator") %>% select(col_name),
-          multiple = TRUE
-        )
-      })
-
-      # Select "current time"
-      output$current_time <- renderUI({
-        selectInput(
-          inputId = "ctime_parameter",
-          label = "Choose current time period:",
-          choices = data$mainFile %>% arrange(desc(time_period)) %>% pull(time_period) %>% unique(),
-          multiple = FALSE
-        )
-      })
-
-      # Select "comparison time"
-      output$comparison_time <- renderUI({
-        selectInput(
-          inputId = "comptime_parameter",
-          label = "Choose comparison time period:",
-          choices = data$mainFile %>% arrange(desc(time_period)) %>% pull(time_period) %>% unique(),
-          multiple = FALSE
-        )
-      })
+        # Select "comparison time"
+        output$comparison_time <- renderUI({
+          selectInput(
+            inputId = "comptime_parameter",
+            label = "Choose comparison time period:",
+            choices = data$mainFile %>% arrange(desc(time_period)) %>% pull(time_period) %>% unique(),
+            multiple = FALSE
+          )
+        })
 
 
-      # get outlier stats
+        # get outlier stats
 
-      get_outliers <- function(outlier_indicator_parameter, threshold_setting, ctime_parameter, comptime_parameter) {
-        args <- expand.grid(meas = outlier_indicator_parameter, thresh = threshold_setting, current = ctime_parameter, comparison = comptime_parameter, stringsAsFactors = FALSE)
-
-
-        # Get list of indicators
-        indicators <- meta$mainFile %>%
-          filter(col_type == "Indicator") %>%
-          pull(col_name)
-
-        # Get list of filters
-        filters <- data$mainFile %>%
-          select(-indicators) %>%
-          names()
+        get_outliers <- function(outlier_indicator_parameter, threshold_setting, ctime_parameter, comptime_parameter) {
+          args <- expand.grid(meas = outlier_indicator_parameter, thresh = threshold_setting, current = ctime_parameter, comparison = comptime_parameter, stringsAsFactors = FALSE)
 
 
-        outliertable <- function(args) {
-          return(eval(parse(text = paste0("data$mainFile %>% group_by(time_period,geographic_level) %>% 
+          # Get list of indicators
+          indicators <- meta$mainFile %>%
+            filter(col_type == "Indicator") %>%
+            pull(col_name)
+
+          # Get list of filters
+          filters <- data$mainFile %>%
+            select(-indicators) %>%
+            names()
+
+
+          outliertable <- function(args) {
+            return(eval(parse(text = paste0("data$mainFile %>% group_by(time_period,geographic_level) %>% 
           mutate(", args[1], "== as.numeric(", args[1], ")) %>% 
           filter(time_period %in% c(", args[4], ",", args[3], ")) %>% 
           select(all_of(filters),", args[1], ") %>% 
@@ -728,374 +726,376 @@ server <- function(input, output, session) {
           filter(as.numeric(`", args[3], "`) >= 5 | as.numeric(`", args[4], "`) >= 5) %>%  
           filter(outlier_large == TRUE | outlier_small ==TRUE) %>% 
           select(-thresh_indicator_big,-thresh_indicator_small,-time_identifier,-outlier_large,-outlier_small)"))))
+          }
+
+          output <- apply(args, 1, outliertable)
+
+
+          return(output)
         }
 
-        output <- apply(args, 1, outliertable)
+        # create a list of tables - with one for each indicator summary
+        theOutlierList <- eventReactive(input$submit_outlier, {
+          validate(
+            need(input$outlier_indicator_parameter != "", "Please select at least one indicator"),
+            need(input$ctime_parameter != input$comptime_parameter, "Please select two different time periods for comparison")
+          )
 
-
-        return(output)
-      }
-
-      # create a list of tables - with one for each indicator summary
-      theOutlierList <- eventReactive(input$submit_outlier, {
-        validate(
-          need(input$outlier_indicator_parameter != "", "Please select at least one indicator"),
-          need(input$ctime_parameter != input$comptime_parameter, "Please select two different time periods for comparison")
-        )
-        
-        return(get_outliers(input$outlier_indicator_parameter, input$threshold_setting, input$ctime_parameter, input$comptime_parameter))
-      })
-
-
-      # Create and then output the tables
-      observeEvent(input$submit_outlier, {
-        req(theOutlierList())
-
-        purrr::iwalk(theOutlierList(), ~ {
-          names <- paste0("to_", .y)
-          output[[names]] <- DT::renderDT(server = FALSE, {datatable(.x,
-                                                    rownames = FALSE,
-                                                    style = "bootstrap",
-                                                    extensions = "Buttons",
-                                                    class = "table-bordered",
-                                                        options = list(
-                                                          dom = "Bptl",
-                                                          buttons = c("csv", "copy", "colvis"),
-                                                          rowCallback = JS(rowCallback),
-                                                      initComplete = JS(
-                                                        "function(settings, json) {",
-                                                        "$(this.api().table().header()).css({'background-color': '#232628', 'color': '#c8c8c8'});",
-                                                        "}"
-                                                      ),
-                                                      scrollX = TRUE
-                                                    ))})
-          #   DT::renderDT(server = FALSE, {
-          #   datatable(.x,
-          #     rownames = FALSE,
-          #     style = "bootstrap",
-          #     extensions = "Buttons",
-          #     options = list(
-          #       dom = "Bptl",
-          #       buttons = c("csv", "copy", "colvis"),
-          #       rowCallback = JS(rowCallback),
-          #       initComplete = JS(
-          #         "function(settings, json) {",
-          #         "$(this.api().table().header()).css({'background-color': '#232628', 'color': '#c8c8c8'});",
-          #         "}"
-          #       ),
-          #       scrollX = TRUE
-          #     )
-          #   )
-          # })
+          return(get_outliers(input$outlier_indicator_parameter, input$threshold_setting, input$ctime_parameter, input$comptime_parameter))
         })
-      })
 
-      output$table_outlier_list <- renderUI({
-        req(theOutlierList())
 
-        to_list <- purrr::imap(theOutlierList(), ~ {
-          tagList(
-            h4(.y),
-            #DTOutput(paste0("to_", .y), width = 1400) %>% withSpinner()
-            DTOutput(outputId = paste0("to_", .y), width = "100%") %>% withSpinner()
+        # Create and then output the tables
+        observeEvent(input$submit_outlier, {
+          req(theOutlierList())
+
+          purrr::iwalk(theOutlierList(), ~ {
+            names <- paste0("to_", .y)
+            output[[names]] <- DT::renderDT(server = FALSE, {
+              datatable(.x,
+                rownames = FALSE,
+                style = "bootstrap",
+                extensions = "Buttons",
+                class = "table-bordered",
+                options = list(
+                  dom = "Bptl",
+                  buttons = c("csv", "copy", "colvis"),
+                  rowCallback = JS(rowCallback),
+                  initComplete = JS(
+                    "function(settings, json) {",
+                    "$(this.api().table().header()).css({'background-color': '#232628', 'color': '#c8c8c8'});",
+                    "}"
+                  ),
+                  scrollX = TRUE
+                )
+              )
+            })
+            #   DT::renderDT(server = FALSE, {
+            #   datatable(.x,
+            #     rownames = FALSE,
+            #     style = "bootstrap",
+            #     extensions = "Buttons",
+            #     options = list(
+            #       dom = "Bptl",
+            #       buttons = c("csv", "copy", "colvis"),
+            #       rowCallback = JS(rowCallback),
+            #       initComplete = JS(
+            #         "function(settings, json) {",
+            #         "$(this.api().table().header()).css({'background-color': '#232628', 'color': '#c8c8c8'});",
+            #         "}"
+            #       ),
+            #       scrollX = TRUE
+            #     )
+            #   )
+            # })
+          })
+        })
+
+        output$table_outlier_list <- renderUI({
+          req(theOutlierList())
+
+          to_list <- purrr::imap(theOutlierList(), ~ {
+            tagList(
+              h4(.y),
+              # DTOutput(paste0("to_", .y), width = 1400) %>% withSpinner()
+              DTOutput(outputId = paste0("to_", .y), width = "100%") %>% withSpinner()
+            )
+          })
+          tagList(to_list)
+        })
+
+
+
+        # check geog aggregations -------------------------------------------------------
+
+
+
+        #
+        #
+        #
+        #
+        #       # Create lookup for geographic level and corresponding filters in data
+        #
+        #       geog_level <- c(
+        #         "National", "Regional", "Local authority", "Local authority district",
+        #         "RSC region", "Parliamentary constituency", "Local enterprise partnership",
+        #         "English devolved area", "Opportunity area", "Ward"
+        #       )
+        #
+        #       geog_level_label <- c(
+        #         "country_name", "region_name", "la_name", "lad_name",
+        #         "rsc_region_lead_name", "pcon_name", "local_enterprise_partnership_name",
+        #         "english_devolved_area_name", "opportunity_area_name", "ward_name"
+        #       )
+        #
+        #
+        #       geog_lookup_labels <- data.frame(geog_level, geog_level_label)
+        #
+        #       # Give users choice of indicators
+        output$geog_indicator_choice <- renderUI({
+          selectInput(
+            inputId = "geog_indicator_parameter",
+            label = "Choose indicator(s):",
+            choices = meta$mainFile %>% filter(col_type == "Indicator") %>% select(col_name),
+            multiple = FALSE
           )
         })
-        tagList(to_list)
-      })
-
-
-      # check geog aggregations -------------------------------------------------------
-
-      
-      
-# 
-# 
-# 
-# 
-#       # Create lookup for geographic level and corresponding filters in data
-# 
-#       geog_level <- c(
-#         "National", "Regional", "Local authority", "Local authority district",
-#         "RSC region", "Parliamentary constituency", "Local enterprise partnership",
-#         "English devolved area", "Opportunity area", "Ward"
-#       )
-# 
-#       geog_level_label <- c(
-#         "country_name", "region_name", "la_name", "lad_name",
-#         "rsc_region_lead_name", "pcon_name", "local_enterprise_partnership_name",
-#         "english_devolved_area_name", "opportunity_area_name", "ward_name"
-#       )
-# 
-# 
-#       geog_lookup_labels <- data.frame(geog_level, geog_level_label)
-# 
-#       # Give users choice of indicators
-      output$geog_indicator_choice <- renderUI({
-        selectInput(
-          inputId = "geog_indicator_parameter",
-          label = "Choose indicator(s):",
-          choices = meta$mainFile %>% filter(col_type == "Indicator") %>% select(col_name),
-          multiple = FALSE
-        )
-      })
-# 
-#       # Give users choice of top level geog
-#       output$geog_level_choice <- renderUI({
-#         selectInput(
-#           inputId = "geog_level_parameter",
-#           label = "Choose geographic level (totals):",
-#           choices = data$mainFile %>% select(geographic_level) %>% distinct(),
-#           multiple = FALSE
-#         )
-#       })
-# 
-#       # Give users choice of sublevel geog
-#       output$geog_sublevel_choice <- renderUI({
-#         selectInput(
-#           inputId = "geog_sublevel_parameter",
-#           label = "Choose geographic level (subtotals):",
-#           choices = data$mainFile %>% filter(geographic_level != "National") %>% select(geographic_level) %>% distinct(),
-#           multiple = FALSE
-#         )
-#       })
-# 
-# 
-#       # get geog comparison
-# 
-#       get_geog_comparison <- function(geog_indicator_parameter, geog_level_parameter, geog_sublevel_parameter) {
-#         args <- expand.grid(meas = geog_indicator_parameter, geog_level = geog_level_parameter, geog_sublevel = geog_sublevel_parameter, stringsAsFactors = FALSE) %>%
-#           left_join(geog_lookup_labels)
-# 
-#         # Get list of publication - specific filters
-#         publication_filters <- meta$mainFile %>%
-#           filter(col_type == "Filter") %>%
-#           pull(col_name)
-# 
-#         geogtable <- function(args) {
-#           return(eval(parse(text = paste0("data$mainFile  %>%
-#           filter(geographic_level == '", args[2], "') %>%
-#           select(time_period,", args[4], ",all_of(publication_filters),", args[1], ") %>%
-#           mutate(", args[1], " = as.numeric(", args[1], ")) %>%
-#           arrange(time_period,get(publication_filters),", args[4], ")"))))
-#         }
-# 
-#         geogtable_sublevel <- function(args) {
-#           return(eval(parse(text = paste0("data$mainFile  %>%
-#           filter(geographic_level == '", args[3], "') %>%
-#           select(time_period,", args[4], ",all_of(publication_filters),", args[1], ") %>%
-#           group_by(across(-c(", args[1], "))) %>%
-#           summarise(", args[1], "= sum(as.numeric(", args[1], ",na.rm = TRUE))) %>%
-#           ungroup() %>%
-#           arrange(time_period,get(publication_filters),", args[4], ")"))))
-#         }
-# 
-#         output_total <- apply(args, 1, geogtable)
-# 
-#         output_subtotal <- apply(args, 1, geogtable_sublevel)
-# 
-#         output <- mapply(setdiff, output_total, output_subtotal, SIMPLIFY = FALSE)
-# 
-#         return(output)
-#       }
-# 
-#       # create a list of tables - with one for each indicator summary
-#       theGeographyList <- eventReactive(input$submit_geographies, {
-#         return(get_geog_comparison(input$geog_indicator_parameter, input$geog_level_parameter, input$geog_sublevel_parameter))
-#       })
-# 
-# 
-#       # Create and then output the tables
-#       observeEvent(input$submit_geographies, {
-#         req(theGeographyList())
-# 
-#         purrr::iwalk(theGeographyList(), ~ {
-#           names <- paste0("tg_", .y)
-#           output[[names]] <- DT::renderDT(server = FALSE, { datatable(.x,
-#                                                                       rownames = FALSE,
-#                                                                       style = "bootstrap",
-#                                                                       class = "table-bordered",
-#                                                                       extensions = "Buttons",
-#                                                                       options = list(
-#                                                                         dom = "Bptl",
-#                                                                         buttons = c("csv", "copy", "colvis"),
-#                                                                         rowCallback = JS(rowCallback),
-#                                                                         initComplete = JS(
-#                                                                           "function(settings, json) {",
-#                                                                           "$(this.api().table().header()).css({'background-color': '#232628', 'color': '#c8c8c8'});",
-#                                                                           "}"
-#                                                                         ),
-#                                                                         scrollX = TRUE
-#                                                                       ))})
-# 
-#           #   DT::renderDT(server = FALSE, {
-#           #   datatable(.x,
-#           #     rownames = FALSE,
-#           #     style = "bootstrap",
-#           #     extensions = "Buttons",
-#           #     options = list(
-#           #       dom = "Bptl",
-#           #       buttons = c("csv", "copy", "colvis"),
-#           #       rowCallback = JS(rowCallback),
-#           #       initComplete = JS(
-#           #         "function(settings, json) {",
-#           #         "$(this.api().table().header()).css({'background-color': '#232628', 'color': '#c8c8c8'});",
-#           #         "}"
-#           #       ),
-#           #       scrollX = TRUE
-#           #     )
-#           #   )
-#           # })
-#         })
-#       })
-# 
-#       output$table_geography_list <- renderUI({
-#         req(theGeographyList())
-# 
-#         tg_list <- purrr::imap(theGeographyList(), ~ {
-#           tagList(
-#             h4(.y),
-#            # DTOutput(paste0("tg_", .y), width = 1400) %>% withSpinner()
-# 
-#             DTOutput(outputId = paste0("tg_", .y), width = "100%") %>% withSpinner()
-# 
-#           )
-#         })
-#         tagList(tg_list)
-#       })
-
-
-      
-      
-      
-      
-      
-      
-      
-      observeEvent(input$submit_geographies, { 
-        
-        pf <- meta$mainFile %>%
-          filter(col_type == "Filter") %>%
-          pull(col_name)
-        
-        cf <- paste(pf, collapse = ', ')
-        
-        ii <- input$geog_indicator_parameter # "number_of_pupils"
-        
         #
-        #mutate(", ii, " = as.numeric(",ii,")) %>%
-        #        group_by(time_period,geographic_level,all_of(",pf,")) %>%
-        data <- eval(parse(text = paste0("data$mainFile %>%
+        #       # Give users choice of top level geog
+        #       output$geog_level_choice <- renderUI({
+        #         selectInput(
+        #           inputId = "geog_level_parameter",
+        #           label = "Choose geographic level (totals):",
+        #           choices = data$mainFile %>% select(geographic_level) %>% distinct(),
+        #           multiple = FALSE
+        #         )
+        #       })
+        #
+        #       # Give users choice of sublevel geog
+        #       output$geog_sublevel_choice <- renderUI({
+        #         selectInput(
+        #           inputId = "geog_sublevel_parameter",
+        #           label = "Choose geographic level (subtotals):",
+        #           choices = data$mainFile %>% filter(geographic_level != "National") %>% select(geographic_level) %>% distinct(),
+        #           multiple = FALSE
+        #         )
+        #       })
+        #
+        #
+        #       # get geog comparison
+        #
+        #       get_geog_comparison <- function(geog_indicator_parameter, geog_level_parameter, geog_sublevel_parameter) {
+        #         args <- expand.grid(meas = geog_indicator_parameter, geog_level = geog_level_parameter, geog_sublevel = geog_sublevel_parameter, stringsAsFactors = FALSE) %>%
+        #           left_join(geog_lookup_labels)
+        #
+        #         # Get list of publication - specific filters
+        #         publication_filters <- meta$mainFile %>%
+        #           filter(col_type == "Filter") %>%
+        #           pull(col_name)
+        #
+        #         geogtable <- function(args) {
+        #           return(eval(parse(text = paste0("data$mainFile  %>%
+        #           filter(geographic_level == '", args[2], "') %>%
+        #           select(time_period,", args[4], ",all_of(publication_filters),", args[1], ") %>%
+        #           mutate(", args[1], " = as.numeric(", args[1], ")) %>%
+        #           arrange(time_period,get(publication_filters),", args[4], ")"))))
+        #         }
+        #
+        #         geogtable_sublevel <- function(args) {
+        #           return(eval(parse(text = paste0("data$mainFile  %>%
+        #           filter(geographic_level == '", args[3], "') %>%
+        #           select(time_period,", args[4], ",all_of(publication_filters),", args[1], ") %>%
+        #           group_by(across(-c(", args[1], "))) %>%
+        #           summarise(", args[1], "= sum(as.numeric(", args[1], ",na.rm = TRUE))) %>%
+        #           ungroup() %>%
+        #           arrange(time_period,get(publication_filters),", args[4], ")"))))
+        #         }
+        #
+        #         output_total <- apply(args, 1, geogtable)
+        #
+        #         output_subtotal <- apply(args, 1, geogtable_sublevel)
+        #
+        #         output <- mapply(setdiff, output_total, output_subtotal, SIMPLIFY = FALSE)
+        #
+        #         return(output)
+        #       }
+        #
+        #       # create a list of tables - with one for each indicator summary
+        #       theGeographyList <- eventReactive(input$submit_geographies, {
+        #         return(get_geog_comparison(input$geog_indicator_parameter, input$geog_level_parameter, input$geog_sublevel_parameter))
+        #       })
+        #
+        #
+        #       # Create and then output the tables
+        #       observeEvent(input$submit_geographies, {
+        #         req(theGeographyList())
+        #
+        #         purrr::iwalk(theGeographyList(), ~ {
+        #           names <- paste0("tg_", .y)
+        #           output[[names]] <- DT::renderDT(server = FALSE, { datatable(.x,
+        #                                                                       rownames = FALSE,
+        #                                                                       style = "bootstrap",
+        #                                                                       class = "table-bordered",
+        #                                                                       extensions = "Buttons",
+        #                                                                       options = list(
+        #                                                                         dom = "Bptl",
+        #                                                                         buttons = c("csv", "copy", "colvis"),
+        #                                                                         rowCallback = JS(rowCallback),
+        #                                                                         initComplete = JS(
+        #                                                                           "function(settings, json) {",
+        #                                                                           "$(this.api().table().header()).css({'background-color': '#232628', 'color': '#c8c8c8'});",
+        #                                                                           "}"
+        #                                                                         ),
+        #                                                                         scrollX = TRUE
+        #                                                                       ))})
+        #
+        #           #   DT::renderDT(server = FALSE, {
+        #           #   datatable(.x,
+        #           #     rownames = FALSE,
+        #           #     style = "bootstrap",
+        #           #     extensions = "Buttons",
+        #           #     options = list(
+        #           #       dom = "Bptl",
+        #           #       buttons = c("csv", "copy", "colvis"),
+        #           #       rowCallback = JS(rowCallback),
+        #           #       initComplete = JS(
+        #           #         "function(settings, json) {",
+        #           #         "$(this.api().table().header()).css({'background-color': '#232628', 'color': '#c8c8c8'});",
+        #           #         "}"
+        #           #       ),
+        #           #       scrollX = TRUE
+        #           #     )
+        #           #   )
+        #           # })
+        #         })
+        #       })
+        #
+        #       output$table_geography_list <- renderUI({
+        #         req(theGeographyList())
+        #
+        #         tg_list <- purrr::imap(theGeographyList(), ~ {
+        #           tagList(
+        #             h4(.y),
+        #            # DTOutput(paste0("tg_", .y), width = 1400) %>% withSpinner()
+        #
+        #             DTOutput(outputId = paste0("tg_", .y), width = "100%") %>% withSpinner()
+        #
+        #           )
+        #         })
+        #         tagList(tg_list)
+        #       })
+
+
+
+
+
+
+
+
+
+        observeEvent(input$submit_geographies, {
+          pf <- meta$mainFile %>%
+            filter(col_type == "Filter") %>%
+            pull(col_name)
+
+          cf <- paste(pf, collapse = ", ")
+
+          ii <- input$geog_indicator_parameter # "number_of_pupils"
+
+          #
+          # mutate(", ii, " = as.numeric(",ii,")) %>%
+          #        group_by(time_period,geographic_level,all_of(",pf,")) %>%
+          data <- eval(parse(text = paste0("data$mainFile %>%
                             mutate(across(all_of('", ii, "'), na_if, 'c')) %>%
                             mutate(across(all_of('", ii, "'), na_if, 'z')) %>%
                             mutate(across(all_of('", ii, "'), na_if, ':')) %>%
                             mutate(across(all_of('", ii, "'), na_if, '~')) %>%
                             mutate(across(all_of('", ii, "'), as.numeric)) %>%
-                            group_by(time_period,geographic_level,",cf,") %>%
-                            summarise(aggregate_number = sum(",ii,")) %>%
+                            group_by(time_period,geographic_level,", cf, ") %>%
+                            summarise(aggregate_number = sum(", ii, ")) %>%
                             spread(key = geographic_level, value = aggregate_number)")))
-        
-        check = function(dataset, id = "time_period"){
-          years = dataset[,id]
-          dataset[,id] = NULL
-          dataset$match = do.call(pmax,as.list(dataset)) == do.call(pmin,as.list(dataset))
-          dataset[,id] = years
-          dataset <- dataset %>%
-            select(time_period, everything()) %>%
-            mutate(match = ifelse(match == TRUE, "MATCH", "NO MATCH"))
-          return(dataset)
-        }
 
-        
-        ttt <- check(data)
-        
-        
-        output$geog_agg2 <-  DT::renderDT(server = FALSE, {datatable(ttt,
-                       rownames = FALSE,
-                       style = "bootstrap",
-                       extensions = "Buttons",
-                       class = "table-bordered",
-                       options = list(
-                         dom = "Bptl",
-                         buttons = c("csv", "copy", "colvis"),
-                         rowCallback = JS(rowCallback),
-                         initComplete = JS(
-                           "function(settings, json) {",
-                           "$(this.api().table().header()).css({'background-color': '#232628', 'color': '#c8c8c8'});",
-                           "}"
-                         ),
-                         scrollX = TRUE
-                       ))
-        
-        
-      })
-      
-      })
-      
-      
-      
-      
-      # supressed cells ---------------------------------------------------------------
-
-      observe({
-        indicators <- meta$mainFile %>%
-          dplyr::filter(col_type == "Indicator") %>%
-          pull(col_name)
-
-        total_indicator_count <- data$mainFile %>%
-          select(all_of(indicators)) %>%
-          unlist() %>%
-          table() %>%
-          as.data.frame() %>%
-          summarise(sum(Freq)) %>%
-          as.numeric()
+          check <- function(dataset, id = "time_period") {
+            years <- dataset[, id]
+            dataset[, id] <- NULL
+            dataset$match <- do.call(pmax, as.list(dataset)) == do.call(pmin, as.list(dataset))
+            dataset[, id] <- years
+            dataset <- dataset %>%
+              select(time_period, everything()) %>%
+              mutate(match = ifelse(match == TRUE, "MATCH", "NO MATCH"))
+            return(dataset)
+          }
 
 
-        suppress_count <- data$mainFile %>%
-          select(all_of(indicators)) %>%
-          unlist() %>%
-          table() %>%
-          as.data.frame() %>%
-          filter(. %in% c("z", "c", ":", "~")) %>%
-          mutate(Perc = roundFiveUp(Freq / total_indicator_count * 100, 1))
+          ttt <- check(data)
 
-        names(suppress_count) <- c("Symbol", "Frequency", "% of total cell count")
-        
-        Symbol <-(c("z", "c", ":", "~"))
-        
-        symbol_expected <- as.data.frame(Symbol)
-        
-        suppress_count<-symbol_expected %>% left_join(suppress_count) %>% 
-          mutate_all(~replace(., is.na(.), 0)) 
-        
 
-        output$suppressed_cell_count <- renderUI({
-
-          DTOutput("suppressed_cell_count_table", width = "60%") %>% withSpinner()
+          output$geog_agg2 <- DT::renderDT(server = FALSE, {
+            datatable(ttt,
+              rownames = FALSE,
+              style = "bootstrap",
+              extensions = "Buttons",
+              class = "table-bordered",
+              options = list(
+                dom = "Bptl",
+                buttons = c("csv", "copy", "colvis"),
+                rowCallback = JS(rowCallback),
+                initComplete = JS(
+                  "function(settings, json) {",
+                  "$(this.api().table().header()).css({'background-color': '#232628', 'color': '#c8c8c8'});",
+                  "}"
+                ),
+                scrollX = TRUE
+              )
+            )
+          })
         })
 
-        output$suppressed_cell_count_table <-  DT::renderDT({datatable(suppress_count,
-                                                                       rownames = FALSE,
-                                                                       style = "bootstrap",
-                                                                       class = "table-bordered",
-                                                                       options = list(
-                                                                         dom = "t",
-                                                                         ordering = F,
-                                                                         # rowCallback = JS(rowCallback),
-                                                                         initComplete = JS(
-                                                                           "function(settings, json) {",
-                                                                           "$(this.api().table().header()).css({'background-color': '#232628', 'color': '#c8c8c8'});",
-                                                                           "}"
-                                                                         )
-                                                                       )
-        )
+
+
+
+        # supressed cells ---------------------------------------------------------------
+
+        observe({
+          indicators <- meta$mainFile %>%
+            dplyr::filter(col_type == "Indicator") %>%
+            pull(col_name)
+
+          total_indicator_count <- data$mainFile %>%
+            select(all_of(indicators)) %>%
+            unlist() %>%
+            table() %>%
+            as.data.frame() %>%
+            summarise(sum(Freq)) %>%
+            as.numeric()
+
+
+          suppress_count <- data$mainFile %>%
+            select(all_of(indicators)) %>%
+            unlist() %>%
+            table() %>%
+            as.data.frame() %>%
+            filter(. %in% c("z", "c", ":", "~")) %>%
+            mutate(Perc = roundFiveUp(Freq / total_indicator_count * 100, 1))
+
+          names(suppress_count) <- c("Symbol", "Frequency", "% of total cell count")
+
+          Symbol <- (c("z", "c", ":", "~"))
+
+          symbol_expected <- as.data.frame(Symbol)
+
+          suppress_count <- symbol_expected %>%
+            left_join(suppress_count) %>%
+            mutate_all(~ replace(., is.na(.), 0))
+
+
+          output$suppressed_cell_count <- renderUI({
+            DTOutput("suppressed_cell_count_table", width = "60%") %>% withSpinner()
+          })
+
+          output$suppressed_cell_count_table <- DT::renderDT({
+            datatable(suppress_count,
+              rownames = FALSE,
+              style = "bootstrap",
+              class = "table-bordered",
+              options = list(
+                dom = "t",
+                ordering = F,
+                # rowCallback = JS(rowCallback),
+                initComplete = JS(
+                  "function(settings, json) {",
+                  "$(this.api().table().header()).css({'background-color': '#232628', 'color': '#c8c8c8'});",
+                  "}"
+                )
+              )
+            )
+          })
         })
-      })
       } # end of if for QA stuff
-      
     }) # end of isolate
-    
-    
-    
+
+
+
     # Download all results button ---------------------------------------------------------------------------------
 
     output$download_results <- downloadHandler(
