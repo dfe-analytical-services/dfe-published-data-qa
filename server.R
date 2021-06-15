@@ -1210,6 +1210,11 @@ server <- function(input, output, session) {
     output$table_failed_tests <- NULL
     output$table_advisory_tests <- NULL
     output$table_all_tests <- NULL
+    
+    #set QA list objects to NULL
+    output$geog_agg2 <- NULL
+    output$table_outlier_list <- NULL
+    output$outlier_indicator_choice <- NULL
 
     shinyjs::hideElement(id = "reset_button")
   })
