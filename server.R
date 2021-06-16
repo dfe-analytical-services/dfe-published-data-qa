@@ -833,11 +833,14 @@ server <- function(input, output, session) {
         #
         #       # Give users choice of indicators
         output$geog_indicator_choice <- renderUI({
-          selectInput(
+          selectizeInput(
             inputId = "geog_indicator_parameter",
             label = "Choose indicator(s):",
             choices = meta$mainFile %>% filter(col_type == "Indicator") %>% select(col_name),
-            multiple = FALSE
+            options = list(
+              placeholder = 'Please select an indicator',
+              onInitialize = I('function() { this.setValue(""); }')
+            )
           )
         })
         #
@@ -970,10 +973,11 @@ server <- function(input, output, session) {
 
 
 
-
-
-
         observeEvent(input$submit_geographies, {
+          validate(
+            need(input$geog_indicator_parameter != "", "Please select an indicator")
+          )
+          
           pf <- meta$mainFile %>%
             filter(col_type == "Filter") %>%
             pull(col_name)
@@ -1167,8 +1171,8 @@ server <- function(input, output, session) {
     shinyjs::reset("submit_outlier")
     shinyjs::reset("table_outlier_list")
     shinyjs::reset("geog_indicator_choice")
-    shinyjs::reset("geog_level_choice")
-    shinyjs::reset("geog_sublevel_choice")
+    # shinyjs::reset("geog_level_choice")
+    # shinyjs::reset("geog_sublevel_choice")
     shinyjs::reset("submit_geographies")
     shinyjs::reset("table_geography_list")
 
@@ -1214,7 +1218,7 @@ server <- function(input, output, session) {
     #set QA list objects to NULL
     output$geog_agg2 <- NULL
     output$table_outlier_list <- NULL
-    output$outlier_indicator_choice <- NULL
+    output$table_list <- NULL
 
     shinyjs::hideElement(id = "reset_button")
   })
