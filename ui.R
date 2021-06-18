@@ -485,7 +485,8 @@ fluidPage(
                       style = "padding-left:20px; padding-right:20px",
 
                       hr(),
-                      DTOutput("geog_agg2", width = "100%")
+                      DTOutput("geog_agg2", width = "100%"),
+                      # verbatimTextOutput('file1')
                     )
                   )
                 )

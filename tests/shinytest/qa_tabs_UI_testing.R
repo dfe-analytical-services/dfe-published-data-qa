@@ -14,12 +14,12 @@ app$uploadFile(datafile = "test-data/passes_everything.csv") # <-- This should b
 app$uploadFile(metafile = "test-data/passes_everything.meta.csv") # <-- This should be the path to the file, relative to the app's tests/shinytest directory
 app$setInputs(screenbutton = "click")
 app$setInputs(trendy_tabs = "previewTab")
-app$snapshot(list(output = c("meta_table","data_preview")))
+app$snapshot(list(output = c("meta_table", "data_preview")))
 
 
 # 2. Do the file info tables populate as expected -------------------------
 app$setInputs(trendy_tabs = "obUnitTab")
-app$snapshot(list(output = c("geog_time_perms2","table_1","indicators","suppressed_cell_count_table")))
+app$snapshot(list(output = c("geog_time_perms2", "table_1", "indicators", "suppressed_cell_count_table")))
 
 
 # 3. Explore indicators doesn't break with no arguments -------------------
@@ -44,7 +44,7 @@ app$snapshot(list(output = "table_list"))
 app$setInputs(ind_parameter = c("num_schools", "enrolments"))
 app$setInputs(submit = "click")
 Sys.sleep(2)
-app$snapshot(list(output = c("t_1","t_2","t_3","t_4","t_5","t_6","t_7","t_8")))
+app$snapshot(list(output = c("t_1", "t_2", "t_3", "t_4", "t_5", "t_6", "t_7", "t_8")))
 
 
 # 7. Outlier check doesn't break with no arguments ------------------------
@@ -73,7 +73,7 @@ app$setInputs(outlier_indicator_parameter = c("num_schools", "enrolments"))
 app$setInputs(threshold_setting = 5)
 app$setInputs(submit_outlier = "click")
 Sys.sleep(2)
-app$snapshot(list(output = c("to_1","to_2")))
+app$snapshot(list(output = c("to_1", "to_2")))
 
 
 # 11. Geography check runs as expected ------------------------------------
