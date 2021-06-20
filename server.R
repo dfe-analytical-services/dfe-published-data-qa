@@ -18,32 +18,68 @@ server <- function(input, output, session) {
     screenfailed = FALSE,
     showadvisory = FALSE,
     correctDataType = TRUE,
-    correctMetaType = TRUE
+    correctMetaType = TRUE,
+    datafile = NULL,
+    metafile = NULL,
+    clear = FALSE
   )
+
+
 
   # File upload check ----------------------------------------------------------------------------
 
-  observeEvent(input$datafile, {
-    values$correctDataType <- if_else(file_ext(input$datafile) == "csv", TRUE, FALSE)
-    if (tail(values$correctDataType, n = 1) == FALSE) {
-      values$dataUploaded <- FALSE
-      shinyFeedback::feedbackWarning("datafile", !values$correctDataType, "Data files must be in comma separated values format (.csv)")
-    } else {
-      hideFeedback("datafile")
-      values$dataUploaded <- TRUE
-    }
+
+  observe({
+    req(input$datafile)
+    req(input$metafile)
+    req(!values$clear)
+
+    values$datafile <- input$datafile
+    values$metafile <- input$metafile
   })
 
-  observeEvent(input$metafile, {
-    values$correctMetaType <- if_else(file_ext(input$metafile) == "csv", TRUE, FALSE)
-    if (tail(values$correctMetaType, n = 1) == FALSE) {
-      shinyFeedback::feedbackWarning("metafile", !values$correctMetaType, "Metadata files must be in comma separated values format (.csv)")
-      values$metaUploaded <- FALSE
-    } else {
-      hideFeedback("metafile")
-      values$metaUploaded <- TRUE
-    }
-  })
+  # observeEvent(input$datafile, {
+  #   values$clear <- FALSE
+  # }, priority = 1000)
+  #
+  # observeEvent(input$metafile, {
+  #   values$clear <- FALSE
+  # }, priority = 1000)
+  #
+
+
+
+  observeEvent(input$datafile,
+    {
+      values$clear <- FALSE
+      values$correctDataType <- if_else(file_ext(input$datafile) == "csv", TRUE, FALSE)
+      if (tail(values$correctDataType, n = 1) == FALSE) {
+        values$dataUploaded <- FALSE
+        shinyFeedback::feedbackWarning("datafile", !values$correctDataType, "Data files must be in comma separated values format (.csv)")
+      } else {
+        hideFeedback("datafile")
+        values$dataUploaded <- TRUE
+      }
+    },
+    priority = 1000
+  )
+
+
+  observeEvent(input$metafile,
+    {
+      values$clear <- FALSE
+      values$correctMetaType <- if_else(file_ext(input$metafile) == "csv", TRUE, FALSE)
+      if (tail(values$correctMetaType, n = 1) == FALSE) {
+        shinyFeedback::feedbackWarning("metafile", !values$correctMetaType, "Metadata files must be in comma separated values format (.csv)")
+        values$metaUploaded <- FALSE
+      } else {
+        hideFeedback("metafile")
+        values$metaUploaded <- TRUE
+      }
+    },
+    priority = 1000
+  )
+
 
   output$file_exists <- reactive({
     return(values$dataUploaded && values$metaUploaded)
@@ -74,8 +110,8 @@ server <- function(input, output, session) {
 
     # Read in files ---------------------------------------------------------------------------------
 
-    inputData <- input$datafile
-    inputMeta <- input$metafile
+    inputData <- values$datafile
+    inputMeta <- values$metafile
 
     data <- readFile(inputData$datapath)
     meta <- readFile(inputMeta$datapath)
@@ -625,43 +661,42 @@ server <- function(input, output, session) {
 
         # Create and then output the tables
         observeEvent(input$submit, {
-          req(theList())
+          output$table_list <- renderUI({
+            req(theList())
 
-          purrr::iwalk(theList(), ~ {
-            names <- paste0("t_", .y)
-            output[[names]] <- renderTable(.x)
-
-            output[[names]] <- DT::renderDT(datatable(.x,
-              rownames = FALSE,
-              style = "bootstrap",
-              class = "table-bordered",
-              options = list(
-                dom = "t",
-                ordering = F,
-                # rowCallback = JS(rowCallback),
-                initComplete = JS(
-                  "function(settings, json) {",
-                  "$(this.api().table().header()).css({'background-color': '#232628', 'color': '#c8c8c8'});",
-                  "}"
-                )
+            t_list <- purrr::imap(theList(), ~ {
+              tagList(
+                h4(.y),
+                DTOutput(outputId = paste0("t_", .y), width = "100%") %>% withSpinner()
               )
-            ))
+            })
+
+
+            purrr::iwalk(theList(), ~ {
+              output_name <- paste0("t_", .y)
+              # output[[output_name]] <- renderTable(.x)
+
+              output[[output_name]] <- DT::renderDT(datatable(.x,
+                rownames = FALSE,
+                style = "bootstrap",
+                class = "table-bordered",
+                options = list(
+                  dom = "t",
+                  ordering = F,
+                  # rowCallback = JS(rowCallback),
+                  initComplete = JS(
+                    "function(settings, json) {",
+                    "$(this.api().table().header()).css({'background-color': '#232628', 'color': '#c8c8c8'});",
+                    "}"
+                  )
+                )
+              ))
+            })
+            tagList(t_list)
           })
         })
 
-        output$table_list <- renderUI({
-          req(theList())
 
-          t_list <- purrr::imap(theList(), ~ {
-            tagList(
-              h4(.y),
-              # tableOutput(paste0("t_", .y))
-
-              DTOutput(outputId = paste0("t_", .y), width = "100%") %>% withSpinner()
-            )
-          })
-          tagList(t_list)
-        })
 
         # Outliers ----------------------------------------------------------------------
 
@@ -747,228 +782,83 @@ server <- function(input, output, session) {
 
         # Create and then output the tables
         observeEvent(input$submit_outlier, {
-          req(theOutlierList())
+          output$table_outlier_list <- renderUI({
+            req(theOutlierList())
 
-          purrr::iwalk(theOutlierList(), ~ {
-            names <- paste0("to_", .y)
-            output[[names]] <- DT::renderDT(server = FALSE, {
-              datatable(.x,
-                rownames = FALSE,
-                style = "bootstrap",
-                extensions = "Buttons",
-                class = "table-bordered",
-                options = list(
-                  dom = "Bptl",
-                  buttons = c("csv", "copy", "colvis"),
-                  rowCallback = JS(rowCallback),
-                  initComplete = JS(
-                    "function(settings, json) {",
-                    "$(this.api().table().header()).css({'background-color': '#232628', 'color': '#c8c8c8'});",
-                    "}"
-                  ),
-                  scrollX = TRUE
-                )
+            to_list <- purrr::imap(theOutlierList(), ~ {
+              tagList(
+                h4(.y),
+                DTOutput(outputId = paste0("to_", .y), width = "100%") %>% withSpinner()
               )
             })
-            #   DT::renderDT(server = FALSE, {
-            #   datatable(.x,
-            #     rownames = FALSE,
-            #     style = "bootstrap",
-            #     extensions = "Buttons",
-            #     options = list(
-            #       dom = "Bptl",
-            #       buttons = c("csv", "copy", "colvis"),
-            #       rowCallback = JS(rowCallback),
-            #       initComplete = JS(
-            #         "function(settings, json) {",
-            #         "$(this.api().table().header()).css({'background-color': '#232628', 'color': '#c8c8c8'});",
-            #         "}"
-            #       ),
-            #       scrollX = TRUE
-            #     )
-            #   )
-            # })
+
+            purrr::iwalk(theOutlierList(), ~ {
+              names <- paste0("to_", .y)
+              output[[names]] <- DT::renderDT(server = FALSE, {
+                datatable(.x,
+                  rownames = FALSE,
+                  style = "bootstrap",
+                  extensions = "Buttons",
+                  class = "table-bordered",
+                  options = list(
+                    dom = "Bptl",
+                    buttons = c("csv", "copy", "colvis"),
+                    rowCallback = JS(rowCallback),
+                    initComplete = JS(
+                      "function(settings, json) {",
+                      "$(this.api().table().header()).css({'background-color': '#232628', 'color': '#c8c8c8'});",
+                      "}"
+                    ),
+                    scrollX = TRUE
+                  )
+                )
+              })
+            })
+            tagList(to_list)
           })
         })
 
-        output$table_outlier_list <- renderUI({
-          req(theOutlierList())
-
-          to_list <- purrr::imap(theOutlierList(), ~ {
-            tagList(
-              h4(.y),
-              # DTOutput(paste0("to_", .y), width = 1400) %>% withSpinner()
-              DTOutput(outputId = paste0("to_", .y), width = "100%") %>% withSpinner()
-            )
-          })
-          tagList(to_list)
-        })
 
 
 
         # check geog aggregations -------------------------------------------------------
 
-
-
-        #
-        #
-        #
-        #
-        #       # Create lookup for geographic level and corresponding filters in data
-        #
-        #       geog_level <- c(
-        #         "National", "Regional", "Local authority", "Local authority district",
-        #         "RSC region", "Parliamentary constituency", "Local enterprise partnership",
-        #         "English devolved area", "Opportunity area", "Ward"
-        #       )
-        #
-        #       geog_level_label <- c(
-        #         "country_name", "region_name", "la_name", "lad_name",
-        #         "rsc_region_lead_name", "pcon_name", "local_enterprise_partnership_name",
-        #         "english_devolved_area_name", "opportunity_area_name", "ward_name"
-        #       )
-        #
-        #
-        #       geog_lookup_labels <- data.frame(geog_level, geog_level_label)
-        #
         #       # Give users choice of indicators
         output$geog_indicator_choice <- renderUI({
-          selectInput(
+          selectizeInput(
             inputId = "geog_indicator_parameter",
             label = "Choose indicator(s):",
             choices = meta$mainFile %>% filter(col_type == "Indicator") %>% select(col_name),
-            multiple = FALSE
+            options = list(
+              placeholder = "Please select an indicator",
+              onInitialize = I('function() { this.setValue(""); }')
+            )
           )
         })
-        #
-        #       # Give users choice of top level geog
-        #       output$geog_level_choice <- renderUI({
-        #         selectInput(
-        #           inputId = "geog_level_parameter",
-        #           label = "Choose geographic level (totals):",
-        #           choices = data$mainFile %>% select(geographic_level) %>% distinct(),
-        #           multiple = FALSE
-        #         )
-        #       })
-        #
-        #       # Give users choice of sublevel geog
-        #       output$geog_sublevel_choice <- renderUI({
-        #         selectInput(
-        #           inputId = "geog_sublevel_parameter",
-        #           label = "Choose geographic level (subtotals):",
-        #           choices = data$mainFile %>% filter(geographic_level != "National") %>% select(geographic_level) %>% distinct(),
-        #           multiple = FALSE
-        #         )
-        #       })
-        #
-        #
-        #       # get geog comparison
-        #
-        #       get_geog_comparison <- function(geog_indicator_parameter, geog_level_parameter, geog_sublevel_parameter) {
-        #         args <- expand.grid(meas = geog_indicator_parameter, geog_level = geog_level_parameter, geog_sublevel = geog_sublevel_parameter, stringsAsFactors = FALSE) %>%
-        #           left_join(geog_lookup_labels)
-        #
-        #         # Get list of publication - specific filters
-        #         publication_filters <- meta$mainFile %>%
-        #           filter(col_type == "Filter") %>%
-        #           pull(col_name)
-        #
-        #         geogtable <- function(args) {
-        #           return(eval(parse(text = paste0("data$mainFile  %>%
-        #           filter(geographic_level == '", args[2], "') %>%
-        #           select(time_period,", args[4], ",all_of(publication_filters),", args[1], ") %>%
-        #           mutate(", args[1], " = as.numeric(", args[1], ")) %>%
-        #           arrange(time_period,get(publication_filters),", args[4], ")"))))
-        #         }
-        #
-        #         geogtable_sublevel <- function(args) {
-        #           return(eval(parse(text = paste0("data$mainFile  %>%
-        #           filter(geographic_level == '", args[3], "') %>%
-        #           select(time_period,", args[4], ",all_of(publication_filters),", args[1], ") %>%
-        #           group_by(across(-c(", args[1], "))) %>%
-        #           summarise(", args[1], "= sum(as.numeric(", args[1], ",na.rm = TRUE))) %>%
-        #           ungroup() %>%
-        #           arrange(time_period,get(publication_filters),", args[4], ")"))))
-        #         }
-        #
-        #         output_total <- apply(args, 1, geogtable)
-        #
-        #         output_subtotal <- apply(args, 1, geogtable_sublevel)
-        #
-        #         output <- mapply(setdiff, output_total, output_subtotal, SIMPLIFY = FALSE)
-        #
-        #         return(output)
-        #       }
-        #
-        #       # create a list of tables - with one for each indicator summary
-        #       theGeographyList <- eventReactive(input$submit_geographies, {
-        #         return(get_geog_comparison(input$geog_indicator_parameter, input$geog_level_parameter, input$geog_sublevel_parameter))
-        #       })
-        #
-        #
-        #       # Create and then output the tables
-        #       observeEvent(input$submit_geographies, {
-        #         req(theGeographyList())
-        #
-        #         purrr::iwalk(theGeographyList(), ~ {
-        #           names <- paste0("tg_", .y)
-        #           output[[names]] <- DT::renderDT(server = FALSE, { datatable(.x,
-        #                                                                       rownames = FALSE,
-        #                                                                       style = "bootstrap",
-        #                                                                       class = "table-bordered",
-        #                                                                       extensions = "Buttons",
-        #                                                                       options = list(
-        #                                                                         dom = "Bptl",
-        #                                                                         buttons = c("csv", "copy", "colvis"),
-        #                                                                         rowCallback = JS(rowCallback),
-        #                                                                         initComplete = JS(
-        #                                                                           "function(settings, json) {",
-        #                                                                           "$(this.api().table().header()).css({'background-color': '#232628', 'color': '#c8c8c8'});",
-        #                                                                           "}"
-        #                                                                         ),
-        #                                                                         scrollX = TRUE
-        #                                                                       ))})
-        #
-        #           #   DT::renderDT(server = FALSE, {
-        #           #   datatable(.x,
-        #           #     rownames = FALSE,
-        #           #     style = "bootstrap",
-        #           #     extensions = "Buttons",
-        #           #     options = list(
-        #           #       dom = "Bptl",
-        #           #       buttons = c("csv", "copy", "colvis"),
-        #           #       rowCallback = JS(rowCallback),
-        #           #       initComplete = JS(
-        #           #         "function(settings, json) {",
-        #           #         "$(this.api().table().header()).css({'background-color': '#232628', 'color': '#c8c8c8'});",
-        #           #         "}"
-        #           #       ),
-        #           #       scrollX = TRUE
-        #           #     )
-        #           #   )
-        #           # })
-        #         })
-        #       })
-        #
-        #       output$table_geography_list <- renderUI({
-        #         req(theGeographyList())
-        #
-        #         tg_list <- purrr::imap(theGeographyList(), ~ {
-        #           tagList(
-        #             h4(.y),
-        #            # DTOutput(paste0("tg_", .y), width = 1400) %>% withSpinner()
-        #
-        #             DTOutput(outputId = paste0("tg_", .y), width = "100%") %>% withSpinner()
-        #
-        #           )
-        #         })
-        #         tagList(tg_list)
-        #       })
 
+        data_geog <- eventReactive(input$submit_geographies, {
+          validate(
+            need(input$geog_indicator_parameter != "", "Please select an indicator")
+          )
 
+          pf <- meta$mainFile %>%
+            filter(col_type == "Filter") %>%
+            pull(col_name)
 
+          cf <- paste(pf, collapse = ", ")
 
+          ii <- input$geog_indicator_parameter # "number_of_pupils"
 
+          eval(parse(text = paste0("data$mainFile %>%
+                            mutate(across(all_of('", ii, "'), na_if, 'c')) %>%
+                            mutate(across(all_of('", ii, "'), na_if, 'z')) %>%
+                            mutate(across(all_of('", ii, "'), na_if, ':')) %>%
+                            mutate(across(all_of('", ii, "'), na_if, '~')) %>%
+                            mutate(across(all_of('", ii, "'), as.numeric)) %>%
+                            group_by(time_period,geographic_level,", cf, ") %>%
+                            summarise(aggregate_number = sum(", ii, ")) %>%
+                            spread(key = geographic_level, value = aggregate_number)")))
+        })
 
 
 
@@ -978,39 +868,28 @@ server <- function(input, output, session) {
             filter(col_type == "Filter") %>%
             pull(col_name)
 
-          cf <- paste(pf, collapse = ", ")
-
-          ii <- input$geog_indicator_parameter # "number_of_pupils"
-
-          #
-          # mutate(", ii, " = as.numeric(",ii,")) %>%
-          #        group_by(time_period,geographic_level,all_of(",pf,")) %>%
-          data <- eval(parse(text = paste0("data$mainFile %>%
-                            mutate(across(all_of('", ii, "'), na_if, 'c')) %>%
-                            mutate(across(all_of('", ii, "'), na_if, 'z')) %>%
-                            mutate(across(all_of('", ii, "'), na_if, ':')) %>%
-                            mutate(across(all_of('", ii, "'), na_if, '~')) %>%
-                            mutate(across(all_of('", ii, "'), as.numeric)) %>%
-                            group_by(time_period,geographic_level,", cf, ") %>%
-                            summarise(aggregate_number = sum(", ii, ")) %>%
-                            spread(key = geographic_level, value = aggregate_number)")))
-
-          check <- function(dataset, id = "time_period") {
+          check_geog <- function(dataset, id = c("time_period", all_of(pf))) {
             years <- dataset[, id]
             dataset[, id] <- NULL
             dataset$match <- do.call(pmax, as.list(dataset)) == do.call(pmin, as.list(dataset))
             dataset[, id] <- years
             dataset <- dataset %>%
-              select(time_period, everything()) %>%
-              mutate(match = ifelse(match == TRUE, "MATCH", "NO MATCH"))
+              select(time_period, all_of(pf), everything()) %>%
+              mutate(match = case_when(
+                match == TRUE ~ "MATCH",
+                match == FALSE ~ "NO MATCH",
+                TRUE ~ "MISSING TOTAL"
+              ))
             return(dataset)
           }
 
 
-          ttt <- check(data)
-
-
           output$geog_agg2 <- DT::renderDT(server = FALSE, {
+            req(data_geog())
+
+            ttt <- check_geog(data_geog()) %>% as.data.frame()
+
+
             datatable(ttt,
               rownames = FALSE,
               style = "bootstrap",
@@ -1029,6 +908,35 @@ server <- function(input, output, session) {
               )
             )
           })
+
+
+
+
+
+
+          #
+          # # ttt <- check(data_geog)
+          #
+          # output$geog_agg2 <- DT::renderDT(server = FALSE, {
+          #   datatable(check(data_geog),
+          #             rownames = FALSE,
+          #             style = "bootstrap",
+          #             extensions = "Buttons",
+          #             class = "table-bordered",
+          #             options = list(
+          #               dom = "Bptl",
+          #               buttons = c("csv", "copy", "colvis"),
+          #               rowCallback = JS(rowCallback),
+          #               initComplete = JS(
+          #                 "function(settings, json) {",
+          #                 "$(this.api().table().header()).css({'background-color': '#232628', 'color': '#c8c8c8'});",
+          #                 "}"
+          #               ),
+          #               scrollX = TRUE
+          #             )
+          #   )
+          #
+          # })
         })
 
 
@@ -1135,80 +1043,101 @@ server <- function(input, output, session) {
     actionButton("resetbutton", "Reset page", width = "80%")
   })
 
-  observeEvent(input$resetbutton, {
+  observeEvent(input$resetbutton,
+    {
 
-    # Hide results
-    shinyjs::hideElement(id = "results")
-    shinyjs::showElement(id = "guidance")
-    shinyjs::hideElement(id = "qaResults")
+      # Hide results
+      shinyjs::hideElement(id = "results")
+      shinyjs::showElement(id = "guidance")
+      shinyjs::hideElement(id = "qaResults")
 
-    # clear files from input selection (does not fully reset fileInput, grr)
-    shinyjs::reset("datafile")
-    shinyjs::reset("metafile")
+      # clear files from input selection (does not fully reset fileInput, grr)
+      shinyjs::reset("datafile")
+      shinyjs::reset("metafile")
 
-    # attempt to clear some of the QA objects
-    shinyjs::reset("meta_table")
-    shinyjs::reset("data_preview")
-    shinyjs::reset("geog_time_perms2")
-    shinyjs::reset("tables")
-    shinyjs::reset("indicators")
-    shinyjs::reset("suppressed_cell_count")
-    shinyjs::reset("indicator_choice")
-    shinyjs::reset("geogChoice")
-    shinyjs::reset("table_list")
-    shinyjs::reset("outlier_indicator_choice")
-    shinyjs::reset("current_time")
-    shinyjs::reset("comparison_time")
-    shinyjs::reset("threshold_setting")
-    shinyjs::reset("submit_outlier")
-    shinyjs::reset("table_outlier_list")
-    shinyjs::reset("geog_indicator_choice")
-    shinyjs::reset("geog_level_choice")
-    shinyjs::reset("geog_sublevel_choice")
-    shinyjs::reset("submit_geographies")
-    shinyjs::reset("table_geography_list")
-
-    # clear uploaded flags
-    values$dataUploaded <- FALSE
-    values$metaUploaded <- FALSE
+      # attempt to clear some of the QA objects
+      shinyjs::reset("meta_table")
+      shinyjs::reset("data_preview")
+      shinyjs::reset("geog_time_perms2")
+      shinyjs::reset("tables")
+      shinyjs::reset("indicators")
+      shinyjs::reset("submit")
+      shinyjs::reset("suppressed_cell_count")
+      shinyjs::reset("indicator_choice")
+      shinyjs::reset("geogChoice")
+      shinyjs::reset("table_list")
+      shinyjs::reset("outlier_indicator_choice")
+      shinyjs::reset("current_time")
+      shinyjs::reset("comparison_time")
+      shinyjs::reset("threshold_setting")
+      shinyjs::reset("submit_outlier")
+      shinyjs::reset("table_outlier_list")
+      shinyjs::reset("geog_indicator_choice")
+      # shinyjs::reset("geog_level_choice")
+      # shinyjs::reset("geog_sublevel_choice")
+      shinyjs::reset("submit_geographies")
+      shinyjs::reset("table_geography_list")
 
 
-    # Clear values
-    values$shouldShow <- FALSE
+      shinyjs::reset("screenbutton")
 
-    # enable the file upload buttons
-    enable(selector = "span[class='btn btn-default btn-file disabled']")
+      # clear uploaded flags
+      values$dataUploaded <- FALSE
+      values$metaUploaded <- FALSE
 
-    # set all objects to NULL
-    output$datafilename <- NULL
-    output$metafilename <- NULL
-    output$testtime <- NULL
-    output$data_size <- NULL
-    output$data_rows <- NULL
-    output$data_cols <- NULL
-    output$meta_size <- NULL
-    output$meta_rows <- NULL
-    output$meta_cols <- NULL
-    output$progress_stage <- NULL
-    output$progress_message <- NULL
-    output$failed_box <- NULL
-    output$passed_box <- NULL
-    output$advisory_box <- NULL
-    output$ancillary_box <- NULL
-    output$summary_text <- NULL
-    output$sum_failed_tests <- NULL
-    output$sum_combined_tests <- NULL
-    output$sum_passed_tests <- NULL
-    output$sum_ignored_tests <- NULL
-    output$num_failed_tests <- NULL
-    output$num_advisory_tests <- NULL
-    output$all_tests <- NULL
-    output$table_failed_tests <- NULL
-    output$table_advisory_tests <- NULL
-    output$table_all_tests <- NULL
 
-    shinyjs::hideElement(id = "reset_button")
-  })
+      # Clear values
+      values$shouldShow <- FALSE
+
+      # enable the file upload buttons
+      enable(selector = "span[class='btn btn-default btn-file disabled']")
+
+      # set all objects to NULL
+      output$datafilename <- NULL
+      output$metafilename <- NULL
+      output$testtime <- NULL
+      output$data_size <- NULL
+      output$data_rows <- NULL
+      output$data_cols <- NULL
+      output$meta_size <- NULL
+      output$meta_rows <- NULL
+      output$meta_cols <- NULL
+      output$progress_stage <- NULL
+      output$progress_message <- NULL
+      output$failed_box <- NULL
+      output$passed_box <- NULL
+      output$advisory_box <- NULL
+      output$ancillary_box <- NULL
+      output$summary_text <- NULL
+      output$sum_failed_tests <- NULL
+      output$sum_combined_tests <- NULL
+      output$sum_passed_tests <- NULL
+      output$sum_ignored_tests <- NULL
+      output$num_failed_tests <- NULL
+      output$num_advisory_tests <- NULL
+      output$all_tests <- NULL
+      output$table_failed_tests <- NULL
+      output$table_advisory_tests <- NULL
+      output$table_all_tests <- NULL
+
+      # set QA list objects to NULL
+      output$geog_agg2 <- NULL
+      output$table_outlier_list <- NULL
+      output$table_list <- NULL
+
+      values$datafile <- NULL
+      values$metafile <- NULL
+      values$clear <- TRUE
+      reset("datafile")
+      reset("metafile")
+
+
+
+      shinyjs::hideElement(id = "reset_button")
+    },
+    priority = 1000
+  )
+
 
   # showresults (shouldShow) ---------------------------------------------------------------------------------
   # Checking if results should show for when to show the screen button

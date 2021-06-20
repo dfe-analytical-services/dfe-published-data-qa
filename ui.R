@@ -315,8 +315,10 @@ fluidPage(
                     3,
                     tags$b("Indicator summary"),
                     br(),
+                    br(),
                     "Review indicator-level summaries of your data",
-                    br(), 
+                    br(),
+                    br(),
                     "Check to make sure values are sensible - are there any unexpected results when comparing to past time periods?"
                   ),
                   column(
@@ -339,20 +341,18 @@ fluidPage(
                         )
                       )
                     )
-                    
                   ),
-                  
-                  
+
+
                   fluidRow(
-                  column(
-                    12,
-                    style = "padding-left:20px; padding-right:20px",
-                  
-                    hr(),
-                    uiOutput("table_list")
+                    column(
+                      12,
+                      style = "padding-left:20px; padding-right:20px",
+
+                      hr(),
+                      uiOutput("table_list")
+                    )
                   )
-                  )
-                  
                 )
               ),
 
@@ -367,7 +367,9 @@ fluidPage(
                     3,
                     tags$b("Year-on-year summary"),
                     br(),
+                    br(),
                     "Check for any large differences in data from year-to-year",
+                    br(),
                     br(),
                     "Empty tables will appear for cases where there are no changes above your set threshold"
                   ),
@@ -411,21 +413,18 @@ fluidPage(
                         ""
                       )
                     )
-                    
                   ),
-                  
-                  
+
+
                   fluidRow(
                     column(
                       12,
                       style = "padding-left:20px; padding-right:20px",
-                      
+
                       hr(),
                       uiOutput("table_outlier_list")
                     )
                   )
-                   
-                  
                 )
               ),
 
@@ -440,9 +439,8 @@ fluidPage(
                     3,
                     tags$b("Geography summary"),
                     br(),
-                    "Check subtotals for geographies add up",
                     br(),
-                    "Data appears in tables for geography totals that do not match the sum of subtotals"
+                    "Check subtotals for geographies add up",
                   ),
                   column(
                     9,
@@ -478,20 +476,19 @@ fluidPage(
                     #     ''
                     #   )
                     # ),
-                    
-                    ),
-                  
-                  
+                  ),
+
+
                   fluidRow(
                     column(
                       12,
                       style = "padding-left:20px; padding-right:20px",
-                      
+
                       hr(),
-                      DTOutput("geog_agg2", width = "100%")
+                      DTOutput("geog_agg2", width = "100%"),
+                      # verbatimTextOutput('file1')
                     )
                   )
-                  
                 )
               )
             ) # End of tabsetpanel
