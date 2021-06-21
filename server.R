@@ -625,8 +625,7 @@ server <- function(input, output, session) {
           args <- expand.grid(ind = parameter, geog = geog_parameter, stringsAsFactors = FALSE)
 
           sumtable <- function(args) {
-            
-          y <- eval(parse(text = paste0("data$mainFile %>% filter(geographic_level =='", args[2], "') %>% 
+            y <- eval(parse(text = paste0("data$mainFile %>% filter(geographic_level =='", args[2], "') %>% 
           mutate(across(all_of('", args[1], "'), na_if, 'c')) %>%
           mutate(across(all_of('", args[1], "'), na_if, 'z')) %>%
           mutate(across(all_of('", args[1], "'), na_if, ':')) %>%
@@ -643,16 +642,15 @@ server <- function(input, output, session) {
           pivot_wider(names_from = 'time_period') %>%
           mutate(geographic_level ='", args[2], "', .before = indicator) %>% 
           mutate(Change = as.character(0))")))
-            
-            for (i in 1:nrow(table)){
-              y[i, ncol(y)] <- (paste(y[i, 4:(ncol(y)-1)], sep="", collapse = ","))
+
+            for (i in 1:nrow(table)) {
+              y[i, ncol(y)] <- (paste(y[i, 4:(ncol(y) - 1)], sep = "", collapse = ","))
             }
-          
+
             y$Change <- str_replace_all(y$Change, "x", "0")
 
             return(y)
-
-            }
+          }
 
           output <- apply(args, 1, sumtable)
 
@@ -674,43 +672,42 @@ server <- function(input, output, session) {
         observeEvent(input$submit, {
           output$table_list <- renderUI({
             req(theList())
-            
+
             t_list <- purrr::imap(theList(), ~ {
               tagList(
                 h4(.y),
                 DTOutput(outputId = paste0("t_", .y), width = "100%") %>% withSpinner()
               )
             })
-            
+
             purrr::iwalk(theList(), ~ {
               output_name <- paste0("t_", .y)
-              
+
               output[[output_name]] <- DT::renderDT(server = FALSE, {
-                
-                cd <- list(list(targets = ncol(.x)-1, render = JS("function(data, type, full){ return '<span class=sparkSamples>' + data + '</span>' }")))
-                
-                cb = JS(paste0("function (oSettings, json) {\n  $('.sparkSamples:not(:has(canvas))').sparkline('html', { type: 'line', lineColor: '#c8c8c8', fillColor: '#e87421', width: '200px', height: '40px'});\n}"), collapse = "")
-                
+                cd <- list(list(targets = ncol(.x) - 1, render = JS("function(data, type, full){ return '<span class=sparkSamples>' + data + '</span>' }")))
+
+                cb <- JS(paste0("function (oSettings, json) {\n  $('.sparkSamples:not(:has(canvas))').sparkline('html', { type: 'line', lineColor: '#c8c8c8', fillColor: '#e87421', width: '200px', height: '40px'});\n}"), collapse = "")
+
                 dt <- datatable(.x,
-                                rownames = FALSE,
-                                style = "bootstrap",
-                                class = "table-bordered",
-                                options = list(
-                                  columnDefs = cd,
-                                  fnDrawCallback = cb,
-                                  rowCallback = JS(rowCallback),
-                                  dom = "t",
-                                  ordering = F,
-                                  initComplete = JS(
-                                    "function(settings, json) {",
-                                    "$(this.api().table().header()).css({'background-color': '#232628', 'color': '#c8c8c8'});",
-                                    "}"
-                                  )
-                                )
+                  rownames = FALSE,
+                  style = "bootstrap",
+                  class = "table-bordered",
+                  options = list(
+                    columnDefs = cd,
+                    fnDrawCallback = cb,
+                    rowCallback = JS(rowCallback),
+                    dom = "t",
+                    ordering = F,
+                    initComplete = JS(
+                      "function(settings, json) {",
+                      "$(this.api().table().header()).css({'background-color': '#232628', 'color': '#c8c8c8'});",
+                      "}"
+                    )
+                  )
                 )
-                
+
                 dt$dependencies <- append(dt$dependencies, htmlwidgets:::getDependency("sparkline"))
-                 
+
                 dt
               })
             })
