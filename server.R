@@ -643,7 +643,7 @@ server <- function(input, output, session) {
           mutate(geographic_level ='", args[2], "', .before = indicator) %>% 
           mutate(Change = as.character(0))")))
 
-            for (i in 1:nrow(table)) {
+            for (i in 1:nrow(y)) {
               y[i, ncol(y)] <- (paste(y[i, 4:(ncol(y) - 1)], sep = "", collapse = ","))
             }
 
