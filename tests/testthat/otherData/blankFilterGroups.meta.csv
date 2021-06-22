@@ -1,0 +1,4 @@
+col_name,col_type,label,indicator_grouping,indicator_unit,indicator_dp,filter_hint,filter_grouping_column
+count,Indicator,Total Count,Counts,,0,,
+order_type,Filter,Order type,,,,,categorytype
+year_breakdown,Filter,Year breakdown,,,,,

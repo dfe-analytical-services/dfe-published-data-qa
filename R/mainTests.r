@@ -59,7 +59,7 @@ duplicate_rows <- function(data, meta) {
     pull(col_name)
 
   filter_groups <- meta %>%
-    filter(!is.na(filter_grouping_column)) %>%
+    filter(!is.na(filter_grouping_column) & filter_grouping_column != "") %>%
     pull(filter_grouping_column)
 
   present_obUnits_filters <- intersect(c(acceptable_observational_units, filters, filter_groups), names(data))
@@ -151,7 +151,7 @@ total <- function(data, meta) {
     pull(col_name)
 
   filter_groups <- meta %>%
-    filter(!is.na(filter_grouping_column)) %>%
+    filter(!is.na(filter_grouping_column) & filter_grouping_column != "") %>%
     pull(filter_grouping_column)
 
   filters_and_groups <- c(filters, filter_groups)
@@ -1066,6 +1066,8 @@ old_la_code <- function(data) {
 
 # region_code -------------------------------------
 # Checking that region_code and region_name combinations are valid
+## Need to update reference list in error message to whatever method we use for LAs as the portal list doesn't include inner/outer london (which we allow)
+
 
 region_code <- function(data) {
   if (!"region_code" %in% names(data)) {
@@ -1094,12 +1096,12 @@ region_code <- function(data) {
     } else {
       if (length(invalid_values) == 1) {
         output <- list(
-          "message" = paste0("The following region_code / region_name combination is invalid: '", paste0(invalid_values), "'. <br> - region_code must always be a 9 digit code, with one letter followed by 8 numbers,: for not available, or blank."),
+          "message" = paste0("The following region_code / region_name combination is invalid: '", paste0(invalid_values), "'. <br> - We do not expect any region outside of those on the <a href='https://geoportal.statistics.gov.uk/datasets/regions-december-2020-en-bgc/data?geometry=-22.223%2C50.522%2C17.877%2C55.161' target='_blank'>ONS Open Geography Portal</a> (case sensitive), or : for not available."),
           "result" = "FAIL"
         )
       } else {
         output <- list(
-          "message" = paste0("The following region_code / region_name cominations are invalid: '", paste0(invalid_values, collapse = "', '"), "'. <br> - region_code must always be a 9 digit code, with one letter followed by 8 numbers, : for not available, or blank."),
+          "message" = paste0("The following region_code / region_name cominations are invalid: '", paste0(invalid_values, collapse = "', '"), "'. <br> - We do not expect any regions outside of those on the <a href='https://geoportal.statistics.gov.uk/datasets/regions-december-2020-en-bgc/data?geometry=-22.223%2C50.522%2C17.877%2C55.161' target='_blank'>ONS Open Geography Portal</a> (case senstive), or : for not available."),
           "result" = "FAIL"
         )
       }
@@ -1136,12 +1138,12 @@ country_code <- function(data) {
     } else {
       if (length(invalid_values) == 1) {
         output <- list(
-          "message" = paste0("The following country_code / country_name combination is invalid: '", paste0(invalid_values), "'. <br> - We do not expect any country codes outside of those on the <a href='https://geoportal.statistics.gov.uk/datasets/countries-december-2018-names-and-codes-in-the-united-kingdom/data' target='_blank'>ONS Open Geography Portal</a>, or : for not available."),
+          "message" = paste0("The following country_code / country_name combination is invalid: '", paste0(invalid_values), "'. <br> - We do not expect any countries outside of those on the <a href='https://geoportal.statistics.gov.uk/datasets/countries-december-2018-names-and-codes-in-the-united-kingdom/data' target='_blank'>ONS Open Geography Portal</a> (case sensitive), or : for not available."),
           "result" = "FAIL"
         )
       } else {
         output <- list(
-          "message" = paste0("The following country_code / country_name combinations are invalid: '", paste0(invalid_values, collapse = "', '"), "'. <br> - We do not expect any country codes outside of those on the <a href='https://geoportal.statistics.gov.uk/datasets/countries-december-2018-names-and-codes-in-the-united-kingdom/data' target='_blank'>ONS Open Geography Portal</a>, or : for not available."),
+          "message" = paste0("The following country_code / country_name combinations are invalid: '", paste0(invalid_values, collapse = "', '"), "'. <br> - We do not expect any countries outside of those on the <a href='https://geoportal.statistics.gov.uk/datasets/countries-december-2018-names-and-codes-in-the-united-kingdom/data' target='_blank'>ONS Open Geography Portal</a>, (case sensitive) or : for not available."),
           "result" = "FAIL"
         )
       }
@@ -1318,7 +1320,7 @@ filter_hint <- function(meta) {
 
 filter_group <- function(meta) {
   filter_groups <- meta %>%
-    filter(col_type == "Indicator", !is.na(filter_grouping_column)) %>%
+    filter(col_type == "Indicator", !is.na(filter_grouping_column) & filter_grouping_column != "") %>%
     pull(filter_grouping_column)
 
   if (length(filter_groups) > 0) {
@@ -1340,7 +1342,7 @@ filter_group <- function(meta) {
 # filter groups should be in the vector for column names for the data file
 
 filter_group_match <- function(data, meta) {
-  meta_filter_groups <- meta %>% filter(!is.na(filter_grouping_column))
+  meta_filter_groups <- meta %>% filter(!is.na(filter_grouping_column) & filter_grouping_column != "")
 
   if (nrow(meta_filter_groups) == 0) {
     output <- list(
@@ -1379,7 +1381,7 @@ filter_group_match <- function(data, meta) {
 
 filter_group_level <- function(data, meta) {
   meta_filters_and_groups <- meta %>%
-    filter(col_type == "Filter", !is.na(filter_grouping_column)) %>%
+    filter(col_type == "Filter", !is.na(filter_grouping_column) & filter_grouping_column != "") %>%
     select(col_name, filter_grouping_column)
 
   if (nrow(meta_filters_and_groups) == 0) {
@@ -1434,7 +1436,7 @@ filter_group_level <- function(data, meta) {
 # Checking that filter groups are not filters
 
 filter_group_not_filter <- function(meta) {
-  if (meta %>% filter(!is.na(filter_grouping_column)) %>% nrow() == 0) {
+  if (meta %>% filter(!is.na(filter_grouping_column) & filter_grouping_column != "") %>% nrow() == 0) {
     output <- list(
       "message" = "There are no filter groups present.",
       "result" = "IGNORE"
@@ -1449,7 +1451,7 @@ filter_group_not_filter <- function(meta) {
     }
 
     pre_result <- stack(sapply(meta %>%
-      filter(!is.na(filter_grouping_column)) %>%
+      filter(!is.na(filter_grouping_column) & filter_grouping_column != "") %>%
       pull(filter_grouping_column), filter_group_not_filter_check))
 
     filter_groups_in_col_names <- filter(pre_result, values == "FAIL") %>% pull(ind)
@@ -1474,13 +1476,13 @@ filter_group_not_filter <- function(meta) {
 # Checking that filter groups are not duplicated
 
 filter_group_duplicate <- function(meta) {
-  if (meta %>% filter(!is.na(filter_grouping_column)) %>% nrow() == 0) {
+  if (meta %>% filter(!is.na(filter_grouping_column) & filter_grouping_column != "") %>% nrow() == 0) {
     output <- list(
       "message" = "There are no filter groups present.",
       "result" = "IGNORE"
     )
   } else {
-    if (suppressMessages(meta %>% filter(!is.na(filter_grouping_column)) %>% get_dupes(filter_grouping_column) %>% nrow()) != 0) {
+    if (suppressMessages(meta %>% filter(!is.na(filter_grouping_column) & filter_grouping_column != "") %>% get_dupes(filter_grouping_column) %>% nrow()) != 0) {
       output <- list(
         "message" = "There are duplicated filter_group values.",
         "result" = "FAIL"
