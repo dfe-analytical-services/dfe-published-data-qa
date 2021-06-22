@@ -1,7 +1,12 @@
 {
   "input": {
     "datafile": null,
-    "metafile": null
+    "metafile": null,
+    "submit": 0,
+    "submit_geographies": 0,
+    "submit_outlier": 0,
+    "threshold_setting": 20,
+    "trendy_tabs": "tab1"
   },
   "output": {
     "file_exists": false,

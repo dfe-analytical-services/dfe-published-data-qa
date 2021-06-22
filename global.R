@@ -15,7 +15,13 @@ library(readr)
 library(testthat)
 library(shinytest)
 library(styler)
+library(tidyr)
+library(ggplot2)
 library(shinyFeedback)
+library(DT)
+library(shinyWidgets)
+library(shinycssloaders)
+library(sparkline)
 
 # activeTestsInFile ---------------------------------------------------------------------------------
 # Extracting the active tests that are run against files
@@ -206,3 +212,20 @@ appLoadingCSS <- "
   color: #FFFFFF;
 }
 "
+
+# roundFiveUp ----------------------------------------------------------------------------
+# This function is used in place of round() which rounds 5's down
+roundFiveUp <- function(x, n) {
+  positiveNegative <- sign(x)
+  z <- abs(x) * 10^n
+  z <- z + 0.5 + sqrt(.Machine$double.eps)
+  z <- trunc(z)
+  z <- z / 10^n
+  return(z * positiveNegative)
+}
+
+
+# spinner options ---------------------------------------------------------
+options(spinner.type = 5)
+options(spinner.color = "#c8c8c8") # Grey '#C0C0C0') # Laura's blue #6294C6
+options(spinner.size = .5)

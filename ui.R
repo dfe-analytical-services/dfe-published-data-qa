@@ -116,64 +116,382 @@ fluidPage(
           shinyjs::hidden(div(
             id = "results",
 
-            column(
-              5,
-              style = "padding-left:20px;",
-              h4("Screening progress"),
-              tags$style("#progress_stage img {max-width: 100%; max-height: 100%}"),
-              imageOutput("progress_stage", height = "100%"),
-              hr(),
-              textOutput("testtime"),
-              br(),
-              textOutput("summary_text"),
-              br(),
-              textOutput("sum_failed_tests"),
-              textOutput("sum_combined_tests"),
-              textOutput("sum_passed_tests"),
-              textOutput("sum_ignored_tests"),
-              hr(),
-              div(
-                style = "word-break: break-all;",
-                textOutput("datafilename"),
-                textOutput("metafilename")
-              ),
-              hr(),
-              column(
-                6,
-                style = "padding:0px",
-                "Data file",
-                br(),
-                br(),
-                textOutput("data_size"),
-                textOutput("data_rows"),
-                textOutput("data_cols")
-              ),
-              column(
-                6,
-                style = "padding:0px",
-                "Metadata file",
-                br(),
-                br(),
-                textOutput("meta_size"),
-                textOutput("meta_rows"),
-                textOutput("meta_cols")
-              ),
-            ),
+            tabsetPanel(
+              id = "trendy_tabs",
 
-            # Individual check results tables -----------------------------------------------------------------------------------
+              tabPanel(
+                title = "Screener results",
+                value = "tab1",
 
-            column(
-              7,
-              uiOutput("ancillary_box"),
-              uiOutput("passed_box"),
-              uiOutput("failed_box"),
-              uiOutput("advisory_box"),
-              results_box(
-                message = "all_tests",
-                table = "table_all_tests"
+                column(
+                  5,
+                  style = "padding-left:20px;",
+                  h4("Screening progress"),
+                  tags$style("#progress_stage img {max-width: 100%; max-height: 100%}"),
+                  imageOutput("progress_stage", height = "100%"),
+                  hr(),
+                  textOutput("testtime"),
+                  br(),
+                  textOutput("summary_text"),
+                  br(),
+                  textOutput("sum_failed_tests"),
+                  textOutput("sum_combined_tests"),
+                  textOutput("sum_passed_tests"),
+                  textOutput("sum_ignored_tests"),
+                  hr(),
+                  div(
+                    style = "word-break: break-all;",
+                    textOutput("datafilename"),
+                    textOutput("metafilename")
+                  ),
+                  hr(),
+                  column(
+                    6,
+                    style = "padding:0px",
+                    "Data file",
+                    br(),
+                    br(),
+                    textOutput("data_size"),
+                    textOutput("data_rows"),
+                    textOutput("data_cols")
+                  ),
+                  column(
+                    6,
+                    style = "padding:0px",
+                    "Metadata file",
+                    br(),
+                    br(),
+                    textOutput("meta_size"),
+                    textOutput("meta_rows"),
+                    textOutput("meta_cols")
+                  )
+                ),
+
+
+
+                # Individual check results tables -----------------------------------------------------------------------------------
+
+                column(
+                  7,
+                  uiOutput("ancillary_box"),
+                  uiOutput("passed_box"),
+                  uiOutput("failed_box"),
+                  uiOutput("advisory_box"),
+                  results_box(
+                    message = "all_tests",
+                    table = "table_all_tests"
+                  )
+                )
+                # End of column
+              ),
+
+              # QA pages -----------------------------------------------------------------------------------
+
+              tabPanel(
+                title = "File previews",
+                value = "previewTab",
+                style = "padding-left:20px; padding-right:20px",
+
+                br(),
+                tags$b("View metadata"),
+                DTOutput("meta_table", width = "100%") %>% withSpinner(),
+                hr(),
+                tags$b("Preview datafile"),
+                DTOutput("data_preview", width = "100%") %>% withSpinner()
+              ),
+
+              tabPanel(
+                title = "What's in this file",
+                value = "obUnitTab",
+                style = "padding-left:20px; padding-right:20px",
+
+                br(),
+                fluidRow(
+                  column(
+                    3,
+                    tags$b("What combinations of geography and time are in the data"),
+                    br(),
+                    br(),
+                    "This table lists all the permutations of geographic_level and time_period where at least one row of data exists",
+                    br(),
+                    br(),
+                    "For any unexpected Ns, check the data",
+                    br(),
+                    br(),
+                    "For any legitimate Ns, consider if publishing this data would be worth it"
+                  ),
+                  column(
+                    9,
+                    DTOutput("geog_time_perms2", width = "100%") %>% withSpinner()
+                  )
+                ),
+                hr(),
+                fluidRow(
+                  column(
+                    3,
+                    tags$b("What filters are present in the data"),
+                    br(),
+                    br(),
+                    "This table lists all the filters and filter levels where at least one row of data exists",
+                    br(),
+                    br(),
+                    "Check all levels you expect to see are there",
+                    br(),
+                    br(),
+                    "Check the names are how you want them to look in EES",
+                  ),
+                  column(
+                    9,
+                    uiOutput("tables") %>% withSpinner()
+                    # "Filter combinations missing (on trello/github issue)",
+                  )
+                ),
+                hr(),
+                fluidRow(
+                  column(
+                    3,
+                    tags$b("What indicators are present in the data"),
+                    br(),
+                    br(),
+                    "This table lists all the indicators that exist within the data",
+                    br(),
+                    br(),
+                    "Check all the indicators you expect to see are there",
+                    br(),
+                    br(),
+                    "Check the names are how you want them to look in EES"
+                  ),
+                  column(
+                    9,
+                    DTOutput("indicators", width = "60%") %>% withSpinner()
+                  )
+                ),
+                hr(),
+                fluidRow(
+                  column(
+                    3,
+                    tags$b("Cells missing data"),
+                    br(),
+                    br(),
+                    "This table shows how many cells do not contain data",
+                    br(),
+                    br(),
+                    "How much of your data is unavailable, rounded to 0, not applicable or suppressed?"
+                  ),
+                  column(
+                    9,
+                    uiOutput("suppressed_cell_count") %>% withSpinner()
+                  )
+                ),
+                hr()
+                #
+                # fluidRow(
+                #   column(
+                #     3,
+                #     tags$b("Filter combinations"),
+                #     br(),
+                #     "The following filter combinations have no relevant data",
+                #     br(),
+                #     "Are there any expected filter combinations that are missing data?"
+                #   ),
+                #   column(
+                #     8,
+                #
+                #     tableOutput("filterperms") %>% withSpinner()
+                #   )
+                # ),
+                #
+                # hr(),
+              ),
+
+              tabPanel(
+                title = "Explore data",
+                value = "indicatorsTab",
+                style = "padding-left:20px; padding-right:20px",
+
+                br(),
+                fluidRow(
+                  column(
+                    3,
+                    tags$b("Indicator summary"),
+                    br(),
+                    br(),
+                    "Review indicator-level summaries of your data",
+                    br(),
+                    br(),
+                    "Check to make sure values are sensible - are there any unexpected results when comparing to past time periods?"
+                  ),
+                  column(
+                    9,
+                    fluidRow(
+                      column(
+                        4,
+                        uiOutput("indicatorChoice") %>% withSpinner(),
+                      ),
+                      column(
+                        4,
+                        uiOutput("geogChoice") %>% withSpinner()
+                      ),
+                      column(
+                        4,
+                        align = "left", style = "margin-top: 25px;",
+                        actionButton(
+                          inputId = "submit",
+                          label = "Generate tables"
+                        )
+                      )
+                    )
+                  ),
+
+
+                  fluidRow(
+                    column(
+                      12,
+                      style = "padding-left:20px; padding-right:20px",
+
+                      hr(),
+                      uiOutput("table_list")
+                    )
+                  )
+                )
+              ),
+
+              tabPanel(
+                title = "Year-on-year changes",
+                value = "outliersTab",
+                style = "padding-left:20px; padding-right:20px",
+
+                br(),
+                fluidRow(
+                  column(
+                    3,
+                    tags$b("Year-on-year summary"),
+                    br(),
+                    br(),
+                    "Check for any large differences in data from year-to-year",
+                    br(),
+                    br(),
+                    "Empty tables will appear for cases where there are no changes above your set threshold"
+                  ),
+                  column(
+                    9,
+                    fluidRow(
+                      column(
+                        4,
+                        uiOutput("outlier_indicator_choice") %>% withSpinner()
+                      ),
+                      column(
+                        4,
+                        numericInputIcon(
+                          inputId = "threshold_setting",
+                          label = "Set percentage threshold for outlier:",
+                          min = 0,
+                          value = 20,
+                          icon = list(NULL, icon("percent"))
+                        )
+                      ),
+                      column(
+                        4,
+                        align = "left", style = "margin-top: 25px;",
+                        actionButton(
+                          inputId = "submit_outlier",
+                          label = "Generate tables"
+                        )
+                      )
+                    ),
+                    fluidRow(
+                      column(
+                        4,
+                        uiOutput("current_time") %>% withSpinner()
+                      ),
+                      column(
+                        4,
+                        uiOutput("comparison_time") %>% withSpinner()
+                      ),
+                      column(
+                        4,
+                        ""
+                      )
+                    )
+                  ),
+
+
+                  fluidRow(
+                    column(
+                      12,
+                      style = "padding-left:20px; padding-right:20px",
+
+                      hr(),
+                      uiOutput("table_outlier_list")
+                    )
+                  )
+                )
+              ),
+
+              tabPanel(
+                title = "Check geography subtotals",
+                value = "geogTab",
+                style = "padding-left:20px; padding-right:20px",
+
+                br(),
+                fluidRow(
+                  column(
+                    3,
+                    tags$b("Geography summary"),
+                    br(),
+                    br(),
+                    "Check subtotals for geographies add up",
+                  ),
+                  column(
+                    9,
+                    fluidRow(
+                      column(
+                        4,
+                        uiOutput("geog_indicator_choice") %>% withSpinner()
+                      ),
+                      column(
+                        4,
+                        ""
+                      ),
+                      column(
+                        4,
+                        align = "left", style = "margin-top: 25px;",
+                        actionButton(
+                          inputId = "submit_geographies",
+                          label = "Generate tables"
+                        )
+                      )
+                    )
+                    # fluidRow(
+                    #   column(
+                    #     4,
+                    #     uiOutput("geog_level_choice") %>% withSpinner()
+                    #   ),
+                    #   column(
+                    #     4,
+                    #     uiOutput("geog_sublevel_choice") %>% withSpinner()
+                    #   ),
+                    #   column(
+                    #     4,
+                    #     ''
+                    #   )
+                    # ),
+                  ),
+
+
+                  fluidRow(
+                    column(
+                      12,
+                      style = "padding-left:20px; padding-right:20px",
+
+                      hr(),
+                      DTOutput("geog_agg2", width = "100%"),
+                      # verbatimTextOutput('file1')
+                    )
+                  )
+                )
               )
-            )
-            # End of column
+            ) # End of tabsetpanel
           ))
           # End of summarised results div
         )

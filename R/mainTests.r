@@ -1068,6 +1068,7 @@ old_la_code <- function(data) {
 # Checking that region_code and region_name combinations are valid
 ## Need to update reference list in error message to whatever method we use for LAs as the portal list doesn't include inner/outer london (which we allow)
 
+
 region_code <- function(data) {
   if (!"region_code" %in% names(data)) {
     output <- list(

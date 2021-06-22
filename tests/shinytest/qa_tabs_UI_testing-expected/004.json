@@ -1,0 +1,12 @@
+{
+  "output": {
+    "table_list": {
+      "message": "Please select at least one geographic level",
+      "call": "NULL",
+      "type": [
+        "shiny.silent.error",
+        "validation"
+      ]
+    }
+  }
+}
