@@ -28,6 +28,8 @@ fluidPage(
 
         shinyjs::hidden(div(
           id = "guidance",
+          paste0(config::get("environment")),
+          br(),
           "This app allows you to screen your data files against the Department’s ",
           a(href = "https://rsconnect/rsc/stats-production-guidance/ud.html", "underlying data standards", target = "_blank", rel = "noopener noreferrer"),
           "for Official and National statistical publications. You should make sure that any data files you intend to publish pass all of the data checks before uploading to Explore Education Statistics.",

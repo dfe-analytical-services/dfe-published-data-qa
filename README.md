@@ -34,9 +34,9 @@ Code used to create functions and variables called by the global, server, and UI
 
 ### i. Software requirements 
 
-- Installation of R 3.6.2 or higher from software centre
+- Installation of R 3.6.2 or higher
 
-- Installation of RTools40 or higher from software centre
+- Installation of RTools40 or higher
 
 ### ii. Programming skills required (for editing or troubleshooting)
 
