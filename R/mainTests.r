@@ -1169,6 +1169,11 @@ school_laestab_duplicates <- function(data) {
       "message" = "School-level data is not present in this data file.",
       "result" = "IGNORE"
     )
+  } else if ("school_name" %in% names(data) & !"school_laestab" %in% names(data)) {
+    output <- list(
+      "message" = "School LAESTAB data must be present when including school-level data.",
+      "result" = "FAIL"
+    )
   } else {
     multi_count_code <- data %>%
       select("school_laestab", "school_name") %>%
@@ -1200,45 +1205,45 @@ school_laestab_duplicates <- function(data) {
     } else {
       if (length(multi_count_code) == 1 & length(multi_count_name) == 0) {
         output <- list(
-          "message" = paste0("The following school_name has multiple laestabs ", paste0(multi_count_code), ". 
+          "message" = paste0("The following school_name has multiple laestabs: ", paste0(multi_count_code), ". 
                              <br> - Every school name should have only one laestab and vice versa."),
           "result" = "FAIL"
         )
       } else {
         if (length(multi_count_code) == 1 & length(multi_count_name) == 1) {
           output <- list(
-            "message" = paste0("The following school_name has multiple laestabs ", paste0(multi_count_code), ", 
-                              <br> and the following laestab has multiple names ", paste0(multi_count_name), ".
+            "message" = paste0("The following school_name has multiple laestabs: ", paste0(multi_count_code), ", 
+                              <br> and the following laestab has multiple names: ", paste0(multi_count_name), ".
                              <br> - Every school name should have only one laestab and vice versa."),
             "result" = "FAIL"
           )
         } else {
           if (length(multi_count_code) > 1 & length(multi_count_name) == 1) {
             output <- list(
-              "message" = paste0("The following school_names have multiple laestabs ", paste0(multi_count_code, collapse = ", "), ", 
-                             <br> and the following laestab has multiple names ", paste0(multi_count_name), ".
+              "message" = paste0("The following school_names have multiple laestabs: ", paste0(multi_count_code, collapse = ", "), ", 
+                             <br> and the following laestab has multiple names: ", paste0(multi_count_name), ".
                              <br> - Every school name should have only one laestab and vice versa."),
               "result" = "FAIL"
             )
           } else {
             if (length(multi_count_code) == 1 & length(multi_count_name) > 1) {
               output <- list(
-                "message" = paste0("The following school_name has multiple laestabs ", paste0(multi_count_code), ", 
-                              <br> and the following laestabs have multiple names ", paste0(multi_count_name, collapse = ", "), ".
+                "message" = paste0("The following school_name has multiple laestabs: ", paste0(multi_count_code), ", 
+                              <br> and the following laestabs have multiple names: ", paste0(multi_count_name, collapse = ", "), ".
                              <br> - Every school name should have only one laestab and vice versa."),
                 "result" = "FAIL"
               )
             } else {
               if (length(multi_count_code) == 0 & length(multi_count_name) > 1) {
                 output <- list(
-                  "message" = paste0("The following laestabs have multiple names ", paste0(multi_count_name, collapse = ", "), ".
+                  "message" = paste0("The following laestabs have multiple names: ", paste0(multi_count_name, collapse = ", "), ".
                              <br> - Every school name should have only one laestab and vice versa."),
                   "result" = "FAIL"
                 )
               } else {
                 output <- list(
-                  "message" = paste0("The following school_names have multiple laestabs ", paste0(multi_count_code, collapse = ", "), ", 
-                             <br> and the following laestabs have multiple names ", paste0(multi_count_name, collapse = ", "), ".
+                  "message" = paste0("The following school_names have multiple laestabs: ", paste0(multi_count_code, collapse = ", "), ", 
+                             <br> and the following laestabs have multiple names: ", paste0(multi_count_name, collapse = ", "), ".
                              <br> - Every school name should have only one laestab and vice versa."),
                   "result" = "FAIL"
                 )
@@ -1259,6 +1264,11 @@ school_urn_duplicates <- function(data) {
     output <- list(
       "message" = "School-level data is not present in this data file.",
       "result" = "IGNORE"
+    )
+  } else if ("school_name" %in% names(data) & !"school_urn" %in% names(data)) {
+    output <- list(
+      "message" = "School URN data must be present when including school-level data.",
+      "result" = "FAIL"
     )
   } else {
     multi_count_code <- data %>%
@@ -1291,45 +1301,45 @@ school_urn_duplicates <- function(data) {
     } else {
       if (length(multi_count_code) == 1 & length(multi_count_name) == 0) {
         output <- list(
-          "message" = paste0("The following school_name has multiple URNs ", paste0(multi_count_code), ". 
+          "message" = paste0("The following school_name has multiple URNs: ", paste0(multi_count_code), ". 
                              <br> - Every school name should have only one URN and vice versa."),
           "result" = "FAIL"
         )
       } else {
         if (length(multi_count_code) == 1 & length(multi_count_name) == 1) {
           output <- list(
-            "message" = paste0("The following school_name has multiple URNs ", paste0(multi_count_code), ", 
-                              <br> and the following URN has multiple names ", paste0(multi_count_name), ".
+            "message" = paste0("The following school_name has multiple URNs: ", paste0(multi_count_code), ", 
+                              <br> and the following URN has multiple names: ", paste0(multi_count_name), ".
                              <br> - Every school name should have only one URN and vice versa."),
             "result" = "FAIL"
           )
         } else {
           if (length(multi_count_code) > 1 & length(multi_count_name) == 1) {
             output <- list(
-              "message" = paste0("The following school_names have multiple URNs ", paste0(multi_count_code, collapse = ", "), ", 
-                              <br> and the following URN has multiple names ", paste0(multi_count_name), ".
+              "message" = paste0("The following school_names have multiple URNs: ", paste0(multi_count_code, collapse = ", "), ", 
+                              <br> and the following URN has multiple names: ", paste0(multi_count_name), ".
                              <br> - Every school name should have only one URN and vice versa."),
               "result" = "FAIL"
             )
           } else {
             if (length(multi_count_code) == 1 & length(multi_count_name) > 1) {
               output <- list(
-                "message" = paste0("The following school_name has multiple URNs ", paste0(multi_count_code), ", 
-                              <br> and the following URNs have multiple names ", paste0(multi_count_name, collapse = ", "), ".
+                "message" = paste0("The following school_name has multiple URNs: ", paste0(multi_count_code), ", 
+                              <br> and the following URNs have multiple names: ", paste0(multi_count_name, collapse = ", "), ".
                              <br> - Every school name should have only one URN and vice versa."),
                 "result" = "FAIL"
               )
             } else {
               if (length(multi_count_code) == 0 & length(multi_count_name) > 1) {
                 output <- list(
-                  "message" = paste0("The following URNs have multiple names ", paste0(multi_count_name, collapse = ", "), ".
+                  "message" = paste0("The following URNs have multiple names: ", paste0(multi_count_name, collapse = ", "), ".
                              <br> - Every school name should have only one URN and vice versa."),
                   "result" = "FAIL"
                 )
               } else {
                 output <- list(
-                  "message" = paste0("The following school_names have multiple codes ", paste0(multi_count_code, collapse = ", "), ", 
-                              <br> and the following URNs have multiple names ", paste0(multi_count_name, collapse = ", "), ".
+                  "message" = paste0("The following school_names have multiple codes: ", paste0(multi_count_code, collapse = ", "), ", 
+                              <br> and the following URNs have multiple names: ", paste0(multi_count_name, collapse = ", "), ".
                              <br> - Every school name should have only one URN and vice versa."),
                   "result" = "FAIL"
                 )
