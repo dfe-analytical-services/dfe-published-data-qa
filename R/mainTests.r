@@ -1346,12 +1346,11 @@ school_urn_duplicates <- function(data) {
 
 # other_geography_duplicates  ----------------------------------------
 # check that there is a 1:1 relationship between geography codes and names
+# ignore school
+lower_level_geog_names <- geography_matrix[c(7:12, 14:16), 2:3] %>% as.character()
+
 other_geography_duplicates <- function(data) {
-  if (!any(c(
-    "local_enterprise_partnership_code", "local_enterprise_partnership_name", "english_devolved_area_code", "english_devolved_area_name",
-    "opportunity_area_code", "opportunity_area_name", "ward_code", "ward_name", "trust_id", "trust_name", "sponsor_id", "sponsor_name",
-    "provider_name", "provider_ukprn"
-  ) %in% names(data))) {
+  if (!any(lower_level_geog_names %in% names(data))) {
     output <- list(
       "message" = "Lower-level geography data is not present in this data file.",
       "result" = "IGNORE"
@@ -1359,9 +1358,7 @@ other_geography_duplicates <- function(data) {
   } else {
     geog_data <- data %>%
       select(any_of(c(
-        "geographic_level", "local_enterprise_partnership_code", "local_enterprise_partnership_name", "english_devolved_area_code", "english_devolved_area_name",
-        "opportunity_area_code", "opportunity_area_name", "ward_code", "ward_name", "trust_id", "trust_name", "sponsor_id", "sponsor_name",
-        "provider_name", "provider_ukprn"
+        "geographic_level", lower_level_geog_names
       ))) %>%
       distinct() %>%
       mutate(ID = 1:n())
@@ -1422,12 +1419,11 @@ other_geography_duplicates <- function(data) {
 
 # other_geography_code_duplicates  ----------------------------------------
 # check that there is a 1:1 relationship between geography names and codes
+
+lower_level_geog_names <- geography_matrix[c(7:12, 14:16), 2:3] %>% as.character()
+
 other_geography_code_duplicates <- function(data) {
-  if (!any(c(
-    "local_enterprise_partnership_code", "local_enterprise_partnership_name", "english_devolved_area_code", "english_devolved_area_name",
-    "opportunity_area_code", "opportunity_area_name", "ward_code", "ward_name", "trust_id", "trust_name", "sponsor_id", "sponsor_name",
-    "provider_name", "provider_ukprn"
-  ) %in% names(data))) {
+  if (!any(lower_level_geog_names %in% names(data))) {
     output <- list(
       "message" = "Lower-level geography data is not present in this data file.",
       "result" = "IGNORE"
@@ -1435,9 +1431,7 @@ other_geography_code_duplicates <- function(data) {
   } else {
     geog_data <- data %>%
       select(any_of(c(
-        "geographic_level", "local_enterprise_partnership_code", "local_enterprise_partnership_name", "english_devolved_area_code", "english_devolved_area_name",
-        "opportunity_area_code", "opportunity_area_name", "ward_code", "ward_name", "trust_id", "trust_name", "sponsor_id", "sponsor_name",
-        "provider_name", "provider_ukprn"
+        "geographic_level", lower_level_geog_names
       ))) %>%
       distinct() %>%
       mutate(ID = 1:n())
@@ -1497,12 +1491,15 @@ other_geography_code_duplicates <- function(data) {
 # na_geography -------------------------------------
 # checking if location has code of ":", then name is "not available"
 
+geography_name_codes <- geography_matrix[, 2:3] %>% as.character()
+
+geography_name_codes <- geography_name_codes[!is.na(geography_name_codes)]
+
+
 na_geography <- function(data) {
   geog_data <- data %>%
     select(any_of(c(
-      "geographic_level", "country_code", "country_name", "region_code", "region_name", "pcon_code", "pcon_name", "lad_code", "lad_name", "local_enterprise_partnership_code", "local_enterprise_partnership_name", "english_devolved_area_code", "english_devolved_area_name",
-      "opportunity_area_code", "opportunity_area_name", "ward_code", "ward_name", "trust_id", "trust_name", "sponsor_id", "sponsor_name",
-      "provider_name", "provider_ukprn", "school_laestab", "school_name", "school_urn", "old_la_code", "new_la_code", "la_name"
+      "geographic_level", geography_name_codes
     ))) %>%
     distinct() %>%
     mutate(ID = 1:n())
@@ -1553,12 +1550,16 @@ na_geography <- function(data) {
 # na_geography_code -------------------------------------
 # checking if location has the name "not available" then its code is ":"
 
+geography_name_codes <- geography_matrix[, 2:3] %>% as.character()
+
+geography_name_codes <- geography_name_codes[!is.na(geography_name_codes)]
+
+
+
 na_geography_code <- function(data) {
   geog_data <- data %>%
     select(any_of(c(
-      "geographic_level", "country_code", "country_name", "region_code", "region_name", "pcon_code", "pcon_name", "lad_code", "lad_name", "local_enterprise_partnership_code", "local_enterprise_partnership_name", "english_devolved_area_code", "english_devolved_area_name",
-      "opportunity_area_code", "opportunity_area_name", "ward_code", "ward_name", "trust_id", "trust_name", "sponsor_id", "sponsor_name",
-      "provider_name", "provider_ukprn", "school_laestab", "school_name", "school_urn", "old_la_code", "new_la_code", "la_name"
+      "geographic_level", geography_name_codes
     ))) %>%
     distinct() %>%
     mutate(ID = 1:n())
@@ -1961,12 +1962,7 @@ whitespace_filters <- function(data, meta) {
     pull(col_name)
 
   test <- data %>%
-    select(all_of(filters), any_of(c(
-      "country_name", "region_name", "la_name", "rsc_region_lead_name",
-      "pcon_name", "lad_name", "local_enterprise_partnership_name",
-      "english_devolved_area_name", "opportunity_area_name",
-      "ward_name", "trust_name", "sponsor_name", "school_name", "provider_name"
-    ))) %>%
+    select(all_of(filters), any_of(as.character(geography_matrix[, 2]))) %>%
     gather(., "filter", "filter_label") %>%
     distinct()
 
