@@ -1369,11 +1369,13 @@ other_geography_duplicates <- function(data) {
 
     names <- geog_data %>%
       select(ID, geographic_level, contains("name")) %>%
+      mutate_if(is.numeric, as.character) %>%
       melt(id.vars = c("ID", "geographic_level"), na.rm = TRUE) %>%
       select(ID, geographic_level, name = value)
 
     codes <- geog_data %>%
       select(ID, geographic_level, !contains("name")) %>%
+      mutate_if(is.numeric, as.character) %>%
       melt(id.vars = c("ID", "geographic_level"), na.rm = TRUE) %>%
       select(ID, geographic_level, code = value)
 
