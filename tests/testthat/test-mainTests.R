@@ -134,6 +134,50 @@ test_that("country_code", {
   expect_equal(testIndividualTest(pathStart, "country_code"), "FAIL")
 })
 
+# country_code -------------------------------------------------------------------------------------------------------
+
+test_that("country_code", {
+  expect_equal(testIndividualTest(pathStart, "country_code"), "FAIL")
+})
+
+# school_urn_duplicates -------------------------------------------------------------------------------------------------------
+
+test_that("school_urn_duplicates", {
+  expect_equal(testIndividualTest(pathStart, "school_urn_duplicates"), "FAIL")
+})
+
+# school_laestab_duplicates -------------------------------------------------------------------------------------------------------
+
+test_that("school_laestab_duplicates", {
+  expect_equal(testIndividualTest(pathStart, "school_laestab_duplicates"), "FAIL")
+})
+
+# other_geography_duplicates -------------------------------------------------------------------------------------------------------
+
+test_that("other_geography_duplicates", {
+  expect_equal(testIndividualTest(pathStart, "other_geography_duplicates"), "FAIL")
+})
+
+
+# other_geography_code_duplicates -------------------------------------------------------------------------------------------------------
+
+test_that("other_geography_duplicates", {
+  expect_equal(testIndividualTest(pathStart, "other_geography_code_duplicates"), "FAIL")
+})
+
+# na_geography -------------------------------------------------------------------------------------------------------
+
+test_that("na_geography", {
+  expect_equal(testIndividualTest(pathStart, "na_geography"), "FAIL")
+})
+
+# na_geography_code -------------------------------------------------------------------------------------------------------
+
+test_that("na_geography_code", {
+  expect_equal(testIndividualTest(pathStart, "na_geography_code"), "FAIL")
+})
+
+
 # col_name_duplicate -------------------------------------------------------------------------------------------------------
 
 test_that("col_name_duplicate", {
@@ -201,6 +245,13 @@ test_that("filter_group_not_filter", {
 test_that("filter_group_duplicate", {
   expect_equal(testIndividualTest(pathStart, "filter_group_duplicate"), "FAIL")
 })
+
+# whitespace_filters -------------------------------------------------------------------------------------------------------
+
+test_that("whitespace_filters", {
+  expect_equal(testIndividualTest(pathStart, "whitespace_filters"), "FAIL")
+})
+
 
 # indicator_grouping -------------------------------------------------------------------------------------------------------
 
