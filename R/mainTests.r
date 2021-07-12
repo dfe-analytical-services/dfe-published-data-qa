@@ -1164,12 +1164,22 @@ country_code <- function(data) {
 # school_laestab_duplicates  ----------------------------------------
 # check that there is a 1:1 relationship between school laestab codes and names
 school_laestab_duplicates <- function(data) {
-  if (!"school_name" %in% names(data)) {
+  if (!"School" %in% unique(data$geographic_level)) {
     output <- list(
       "message" = "School-level data is not present in this data file.",
       "result" = "IGNORE"
     )
-  } else if ("school_name" %in% names(data) & !"school_laestab" %in% names(data)) {
+  } else if ("School" %in% unique(data$geographic_level) & !"school_laestab" %in% names(data)) {
+    output <- list(
+      "message" = "School LAESTAB data must be present when including school-level data.",
+      "result" = "FAIL"
+    )
+  } else if ("School" %in% unique(data$geographic_level) & !"school_name" %in% names(data)) {
+    output <- list(
+      "message" = "School name data must be present when including school-level data.",
+      "result" = "FAIL"
+    )
+  } else if ("School" %in% unique(data$geographic_level) & !"school_name" %in% names(data) & !"school_laestab" %in% names(data)) {
     output <- list(
       "message" = "School LAESTAB data must be present when including school-level data.",
       "result" = "FAIL"
@@ -1260,14 +1270,24 @@ school_laestab_duplicates <- function(data) {
 # school_urn_duplicates  ----------------------------------------
 # check that there is a 1:1 relationship between school urns and names
 school_urn_duplicates <- function(data) {
-  if (!"school_name" %in% names(data)) {
+  if (!"School" %in% unique(data$geographic_level)) {
     output <- list(
       "message" = "School-level data is not present in this data file.",
       "result" = "IGNORE"
     )
-  } else if ("school_name" %in% names(data) & !"school_urn" %in% names(data)) {
+  } else if ("School" %in% unique(data$geographic_level) & !"school_urn" %in% names(data)) {
     output <- list(
       "message" = "School URN data must be present when including school-level data.",
+      "result" = "FAIL"
+    )
+  } else if ("School" %in% unique(data$geographic_level) & !"school_name" %in% names(data)) {
+    output <- list(
+      "message" = "School name data must be present when including school-level data.",
+      "result" = "FAIL"
+    )
+  } else if ("School" %in% unique(data$geographic_level) & !"school_name" %in% names(data) & !"school_urn" %in% names(data)) {
+    output <- list(
+      "message" = "School name and URN data must be present when including school-level data.",
       "result" = "FAIL"
     )
   } else {
