@@ -25,6 +25,8 @@ server <- function(input, output, session) {
     environment = config::get("environment") # use "shinyapps" to test alternative behaviour locally
   )
 
+
+
   # File upload check ----------------------------------------------------------------------------
 
 
@@ -123,8 +125,6 @@ server <- function(input, output, session) {
       immediate = FALSE
     )
   })
-
-
 
   # Main screening button ------------------------------------------------------------------------
 
