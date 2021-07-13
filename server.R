@@ -103,7 +103,7 @@ server <- function(input, output, session) {
       shinyalert::shinyalert(
         title = "",
         text = "This is the external version of the DfE data screening app. We do not control the servers that this app runs on. You should only use this to screen published or dummy data. For sensitive files, you should clone the repository and screen files locally instead.",
-        type = "error",
+        type = "warning",
         closeOnEsc = FALSE,
         closeOnClickOutside = FALSE,
         html = FALSE,
@@ -1180,7 +1180,9 @@ server <- function(input, output, session) {
 
       session$reload()
 
-      #shinyjs::hideElement(id = "reset_button")
+      shinyjs::hideElement(id = "reset_button")
+      
+      # Could add a holding message if we stick with restarting the session for this?
     },
     priority = 1000
   )
