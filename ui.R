@@ -2,7 +2,6 @@ fluidPage(
   theme = "acalat_theme.css",
 
   useShinyjs(),
-  useShinyalert(),
   shinyFeedback::useShinyFeedback(),
   # options(shiny.reactlog = TRUE),
 
@@ -65,6 +64,7 @@ fluidPage(
           tags$style(".shiny-file-input-progress {max-width: 99.8%; padding-left: 1px}"),
 
           fluidRow(
+            uiOutput("environmentWarning"),
             column(
               5,
               fileInput(

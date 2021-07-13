@@ -24,7 +24,6 @@ library(shinycssloaders)
 library(sparkline)
 library(config)
 library(rsconnect)
-library(shinyalert)
 
 # activeTestsInFile ---------------------------------------------------------------------------------
 # Extracting the active tests that are run against files
