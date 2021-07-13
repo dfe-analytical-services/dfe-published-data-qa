@@ -760,6 +760,7 @@ server <- function(input, output, session) {
             inputId = "comptime_parameter",
             label = "Choose comparison time period:",
             choices = data$mainFile %>% arrange(desc(time_period)) %>% pull(time_period) %>% unique(),
+            selected = data$mainFile %>% select(time_period) %>% arrange(desc(time_period)) %>% distinct() %>% slice(2) %>% pull(time_period),
             multiple = FALSE
           )
         })
