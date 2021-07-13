@@ -24,13 +24,7 @@ server <- function(input, output, session) {
     clear = FALSE
   )
 
-  # Check environment and give warning -----------------------------------------------------------
-  
-  output$environmentWarning <- if(config::get("environment") == "shinyapps"){
-    renderText({"You should only use published and publicly accessible data when using this version of the tool."})
-    br()
-    br()
-  } 
+
 
   # File upload check ----------------------------------------------------------------------------
 
