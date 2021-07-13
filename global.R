@@ -22,7 +22,6 @@ library(DT)
 library(shinyWidgets)
 library(shinycssloaders)
 library(sparkline)
-library(config)
 
 # activeTestsInFile ---------------------------------------------------------------------------------
 # Extracting the active tests that are run against files
