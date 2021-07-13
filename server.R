@@ -121,13 +121,16 @@ server <- function(input, output, session) {
   
   
   
-  # Main screening button -------------------------------------------------------------------------
+  # Main screening button ------------------------------------------------------------------------
   
-  toListen <- reactive({
-    list(input$screenbutton, values$proceed_with_screening)
-  })
-  
-  observeEvent(toListen(),{
+  observeEvent(input$screenbutton | values$proceed_with_screening,{
+    
+    if(input$screenbutton == 0 && is.null(values$proceed_with_screening)) {
+      
+      # This ends it early
+      return()
+    }
+    
     shinyjs::hideElement(id = "guidance")
 
     # Show loading screen ---------------------------------------------------------------------------------
@@ -1080,7 +1083,7 @@ server <- function(input, output, session) {
     # Select the screening report tab panel
 
     updateTabsetPanel(session, "trendy_tabs", selected = "tab1")
-  })
+  }, ignoreInit = TRUE)
 
   # Reset button ----------------------------------------------------------------------------
 
