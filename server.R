@@ -123,10 +123,11 @@ server <- function(input, output, session) {
   
   # Main screening button -------------------------------------------------------------------------
   
-  observeEvent({
-    input$screenbutton
-    values$proceed_with_screening
-    },{
+  toListen <- reactive({
+    list(input$screenbutton, values$proceed_with_screening)
+  })
+  
+  observeEvent(toListen(),{
     shinyjs::hideElement(id = "guidance")
 
     # Show loading screen ---------------------------------------------------------------------------------
