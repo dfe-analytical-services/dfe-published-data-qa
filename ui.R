@@ -2,6 +2,7 @@ fluidPage(
   theme = "acalat_theme.css",
 
   useShinyjs(),
+  useShinyalert(),
   shinyFeedback::useShinyFeedback(),
   # options(shiny.reactlog = TRUE),
 

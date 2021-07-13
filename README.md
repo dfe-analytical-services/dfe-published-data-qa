@@ -19,11 +19,15 @@
 
 ## Introduction 
 
-A shiny app to provider a user friendly way to QA data files using centralised code. This is deployed via the DfE visual studio and rsconnect subscriptions. There are three environments, all accessible to DfE AD:
+A shiny app to provider a user friendly way to QA data files using centralised code. This is deployed via the DfE visual studio and rsconnect subscriptions. There are three environments only accessible to DfE AD:
 
 - Production - https://rsconnect/rsc/dfe-published-data-qa
 - Pre-production - https://rsconnect-pp/rsc/dfe-published-data-qa
 - Development - https://rsconnect-pp/rsc/dev-dfe-published-data-qa
+
+There is also an instance hosted on shinyapps.io, which is externally accessible:
+
+- External - http://department-for-education.shinyapps.io/dfe-published-data-qa
 
 Code used to create functions and variables called by the global, server, and UI scripts can be found in the 'R' folder.
 
@@ -34,9 +38,9 @@ Code used to create functions and variables called by the global, server, and UI
 
 ### i. Software requirements 
 
-- Installation of R 3.6.2 or higher from software centre
+- Installation of R 3.6.2 or higher
 
-- Installation of RTools40 or higher from software centre
+- Installation of RTools40 or higher
 
 ### ii. Programming skills required (for editing or troubleshooting)
 
