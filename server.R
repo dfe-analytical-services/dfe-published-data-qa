@@ -308,7 +308,10 @@ server <- function(input, output, session) {
       }
 
       # Dynamic trendy-tabs,
-      if (failed_tests == 0) {
+      if (failed_tests == 0 & data$mainFile %>%
+        select(geographic_level) %>%
+        distinct() %>%
+        nrow() > 1) {
         shinyjs::show(selector = c(
           "#trendy_tabs li a[data-value=previewTab]",
           "#trendy_tabs li a[data-value=obUnitTab]",
@@ -317,7 +320,21 @@ server <- function(input, output, session) {
           "#trendy_tabs li a[data-value=geogTab]"
         ))
       }
-      else {
+      else if (failed_tests == 0 & data$mainFile %>%
+        select(geographic_level) %>%
+        distinct() %>%
+        nrow() == 1) {
+        shinyjs::show(selector = c(
+          "#trendy_tabs li a[data-value=previewTab]",
+          "#trendy_tabs li a[data-value=obUnitTab]",
+          "#trendy_tabs li a[data-value=indicatorsTab]",
+          "#trendy_tabs li a[data-value=outliersTab]"
+        ))
+
+        shinyjs::hide(selector = c(
+          "#trendy_tabs li a[data-value=geogTab]"
+        ))
+      } else {
         shinyjs::hide(selector = c(
           "#trendy_tabs li a[data-value=previewTab]",
           "#trendy_tabs li a[data-value=obUnitTab]",
@@ -327,16 +344,16 @@ server <- function(input, output, session) {
         ))
       }
 
-      if (data$mainFile %>% select(geographic_level) %>% distinct() %>% nrow() == 1) {
-        shinyjs::hide(selector = c(
-          "#trendy_tabs li a[data-value=geogTab]"
-        ))
-      }
-      else {
-        shinyjs::show(selector = c(
-          "#trendy_tabs li a[data-value=geogTab]"
-        ))
-      }
+      # if (data$mainFile %>% select(geographic_level) %>% distinct() %>% nrow() == 1) {
+      #   shinyjs::hide(selector = c(
+      #     "#trendy_tabs li a[data-value=geogTab]"
+      #   ))
+      # }
+      # else {
+      #   shinyjs::show(selector = c(
+      #     "#trendy_tabs li a[data-value=geogTab]"
+      #   ))
+      # }
 
 
       if (advisory_tests != 0) {

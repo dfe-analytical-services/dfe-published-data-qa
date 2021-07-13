@@ -19,7 +19,7 @@ weeks <- c(
 
 financial_quarters <- c("Financial year Q1", "Financial year Q2", "Financial year Q3", "Financial year Q4")
 
-financial_halves <- c("Part 1 (April to September)","Part 2 (October to March)")
+financial_halves <- c("Part 1 (April to September)", "Part 2 (October to March)")
 
 acceptable_time_identifiers <- c(
   "Autumn and spring term", "Calendar year", "Financial year", "Academic year", "Tax year", "Reporting year",
