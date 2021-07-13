@@ -910,7 +910,9 @@ server <- function(input, output, session) {
                 match == TRUE ~ "MATCH",
                 match == FALSE ~ "NO MATCH",
                 TRUE ~ "MISSING TOTAL"
-              ))
+              )) %>%
+              arrange(match(match, c("NO MATCH", "MISSING TOTAL", "MATCH")))
+
             return(dataset)
           }
 
@@ -937,6 +939,9 @@ server <- function(input, output, session) {
                 ),
                 scrollX = TRUE
               )
+            ) %>% formatStyle(
+              "match",
+              backgroundColor = styleEqual(c("NO MATCH", "MISSING TOTAL", "MATCH"), c("#910000", "#e87421", "#30A104"))
             )
           })
 
