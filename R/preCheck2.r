@@ -23,7 +23,7 @@ preCheck2 <- function(data_character, meta_character, datafile, metafile) {
 time_identifier_mix <- function(data) {
   base_identifier <- data$time_identifier[1]
 
-  possible_levels <- list("Autumn and spring term", "Calendar year", "Financial year", "Academic year", "Tax year", "Reporting year", terms, weeks, months, financial_quarters)
+  possible_levels <- list("Autumn and spring term", "Calendar year", "Financial year", "Academic year", "Tax year", "Reporting year", terms, weeks, months, financial_quarters, financial_halves)
 
   baseLevelCheck <- function(possible_level) {
     if (base_identifier %in% possible_level) {

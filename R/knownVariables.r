@@ -19,14 +19,16 @@ weeks <- c(
 
 financial_quarters <- c("Financial year Q1", "Financial year Q2", "Financial year Q3", "Financial year Q4")
 
+financial_halves <- c("Part 1 (April to September)","Part 2 (October to March)")
+
 acceptable_time_identifiers <- c(
   "Autumn and spring term", "Calendar year", "Financial year", "Academic year", "Tax year", "Reporting year",
-  terms, weeks, months, financial_quarters
+  terms, weeks, months, financial_quarters, financial_halves
 )
 
 four_digit_identifiers <- c("Calendar year", "Reporting year", weeks, months)
 
-six_digit_identifiers <- c("Autumn and spring term", terms, "Financial year", "Academic year", "Tax year", financial_quarters)
+six_digit_identifiers <- c("Autumn and spring term", terms, "Financial year", "Academic year", "Tax year", financial_quarters, financial_halves)
 
 geography_matrix <- matrix(c(
   "National", "country_code", "country_name", NA, NA, NA,
