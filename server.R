@@ -21,8 +21,7 @@ server <- function(input, output, session) {
     correctMetaType = TRUE,
     datafile = NULL,
     metafile = NULL,
-    clear = FALSE,
-    proceed_with_screening = 0
+    clear = FALSE
   )
 
   # File upload check ----------------------------------------------------------------------------
@@ -90,7 +89,7 @@ server <- function(input, output, session) {
 
   output$uiScreenButton <- renderUI({
     if (values$dataUploaded && values$metaUploaded) {
-      if(config::get("environment") != "shinyapps"){
+      if(config::get("environment") == "shinyapps"){
         actionButton("external_screenbutton", "Screen files", width = "80%")
       } else {
         actionButton("screenbutton", "Screen files", width = "80%")
@@ -115,7 +114,7 @@ server <- function(input, output, session) {
         cancelButtonText = "Cancel screening",
         animation = TRUE,
         size = "s",
-        callbackR = function(x) {if (x == TRUE) {values$proceed_with_screening <- x + 1}},
+        callbackR = function(x) {if (x == TRUE) {values$proceed_with_screening <- x}},
         immediate = FALSE
       )
     })
@@ -126,7 +125,7 @@ server <- function(input, output, session) {
   
   observeEvent(input$screenbutton | values$proceed_with_screening,{
     
-    if(input$screenbutton == 0 && values$proceed_with_screening == 0) {
+    if(input$screenbutton == 0 && is.null(values$proceed_with_screening)) {
       
       # This ends it early
       return()
@@ -1094,98 +1093,100 @@ server <- function(input, output, session) {
 
   observeEvent(input$resetbutton,
     {
-
-      # Hide results
-      shinyjs::hideElement(id = "results")
-      shinyjs::showElement(id = "guidance")
-      shinyjs::hideElement(id = "qaResults")
-
-      # clear files from input selection (does not fully reset fileInput, grr)
-      shinyjs::reset("datafile")
-      shinyjs::reset("metafile")
-
-      # attempt to clear some of the QA objects
-      shinyjs::reset("meta_table")
-      shinyjs::reset("data_preview")
-      shinyjs::reset("geog_time_perms2")
-      shinyjs::reset("tables")
-      shinyjs::reset("indicators")
-      shinyjs::reset("submit")
-      shinyjs::reset("suppressed_cell_count")
-      shinyjs::reset("indicator_choice")
-      shinyjs::reset("geogChoice")
-      shinyjs::reset("table_list")
-      shinyjs::reset("outlier_indicator_choice")
-      shinyjs::reset("current_time")
-      shinyjs::reset("comparison_time")
-      shinyjs::reset("threshold_setting")
-      shinyjs::reset("submit_outlier")
-      shinyjs::reset("table_outlier_list")
-      shinyjs::reset("geog_indicator_choice")
-      # shinyjs::reset("geog_level_choice")
-      # shinyjs::reset("geog_sublevel_choice")
-      shinyjs::reset("submit_geographies")
-      shinyjs::reset("table_geography_list")
-
-
-      shinyjs::reset("screenbutton")
-
-      # clear uploaded flags
-      values$dataUploaded <- FALSE
-      values$metaUploaded <- FALSE
-      
-      # Clear values
-      values$shouldShow <- FALSE
-
-      # enable the file upload buttons
-      enable(selector = "span[class='btn btn-default btn-file disabled']")
-
-      # set all objects to NULL
-      output$datafilename <- NULL
-      output$metafilename <- NULL
-      output$testtime <- NULL
-      output$data_size <- NULL
-      output$data_rows <- NULL
-      output$data_cols <- NULL
-      output$meta_size <- NULL
-      output$meta_rows <- NULL
-      output$meta_cols <- NULL
-      output$progress_stage <- NULL
-      output$progress_message <- NULL
-      output$failed_box <- NULL
-      output$passed_box <- NULL
-      output$advisory_box <- NULL
-      output$ancillary_box <- NULL
-      output$summary_text <- NULL
-      output$sum_failed_tests <- NULL
-      output$sum_combined_tests <- NULL
-      output$sum_passed_tests <- NULL
-      output$sum_ignored_tests <- NULL
-      output$num_failed_tests <- NULL
-      output$num_advisory_tests <- NULL
-      output$all_tests <- NULL
-      output$table_failed_tests <- NULL
-      output$table_advisory_tests <- NULL
-      output$table_all_tests <- NULL
-
-      # set QA list objects to NULL
-      output$geog_agg2 <- NULL
-      output$table_outlier_list <- NULL
-      output$table_list <- NULL
-
-      values$datafile <- NULL
-      values$metafile <- NULL
-      values$clear <- TRUE
-      reset("datafile")
-      reset("metafile")
-
-      
-      ## Completely reset the session, reload the app. Locally this will just end the app
-      #session$reload()
-
-      shinyjs::hideElement(id = "reset_button")
-      
-      # Could add a holding message if we stick with restarting the session for this?
+      if(config::get("environment") == "shinyapps"){
+        
+        # Completely reset the session, reload the app. Locally this will just end the app
+        session$reload()
+        
+        # Could add a holding message if we stick with restarting the session for this?
+        
+        } else {
+          # Hide results
+          shinyjs::hideElement(id = "results")
+          shinyjs::showElement(id = "guidance")
+          shinyjs::hideElement(id = "qaResults")
+          
+          # clear files from input selection (does not fully reset fileInput, grr)
+          shinyjs::reset("datafile")
+          shinyjs::reset("metafile")
+          
+          # attempt to clear some of the QA objects
+          shinyjs::reset("meta_table")
+          shinyjs::reset("data_preview")
+          shinyjs::reset("geog_time_perms2")
+          shinyjs::reset("tables")
+          shinyjs::reset("indicators")
+          shinyjs::reset("submit")
+          shinyjs::reset("suppressed_cell_count")
+          shinyjs::reset("indicator_choice")
+          shinyjs::reset("geogChoice")
+          shinyjs::reset("table_list")
+          shinyjs::reset("outlier_indicator_choice")
+          shinyjs::reset("current_time")
+          shinyjs::reset("comparison_time")
+          shinyjs::reset("threshold_setting")
+          shinyjs::reset("submit_outlier")
+          shinyjs::reset("table_outlier_list")
+          shinyjs::reset("geog_indicator_choice")
+          # shinyjs::reset("geog_level_choice")
+          # shinyjs::reset("geog_sublevel_choice")
+          shinyjs::reset("submit_geographies")
+          shinyjs::reset("table_geography_list")
+          
+          
+          shinyjs::reset("screenbutton")
+          
+          # clear uploaded flags
+          values$dataUploaded <- FALSE
+          values$metaUploaded <- FALSE
+          
+          # Clear values
+          values$shouldShow <- FALSE
+          
+          # enable the file upload buttons
+          enable(selector = "span[class='btn btn-default btn-file disabled']")
+          
+          # set all objects to NULL
+          output$datafilename <- NULL
+          output$metafilename <- NULL
+          output$testtime <- NULL
+          output$data_size <- NULL
+          output$data_rows <- NULL
+          output$data_cols <- NULL
+          output$meta_size <- NULL
+          output$meta_rows <- NULL
+          output$meta_cols <- NULL
+          output$progress_stage <- NULL
+          output$progress_message <- NULL
+          output$failed_box <- NULL
+          output$passed_box <- NULL
+          output$advisory_box <- NULL
+          output$ancillary_box <- NULL
+          output$summary_text <- NULL
+          output$sum_failed_tests <- NULL
+          output$sum_combined_tests <- NULL
+          output$sum_passed_tests <- NULL
+          output$sum_ignored_tests <- NULL
+          output$num_failed_tests <- NULL
+          output$num_advisory_tests <- NULL
+          output$all_tests <- NULL
+          output$table_failed_tests <- NULL
+          output$table_advisory_tests <- NULL
+          output$table_all_tests <- NULL
+          
+          # set QA list objects to NULL
+          output$geog_agg2 <- NULL
+          output$table_outlier_list <- NULL
+          output$table_list <- NULL
+          
+          values$datafile <- NULL
+          values$metafile <- NULL
+          values$clear <- TRUE
+          reset("datafile")
+          reset("metafile")
+          
+          shinyjs::hideElement(id = "reset_button")
+          }
     },
     priority = 1000
   )
