@@ -25,8 +25,8 @@ mainTests <- function(data_character, meta_character, datafile, metafile) {
     old_la_code(datafile), # active test
     region_code(datafile), # active test
     country_code(datafile), # active test
-    #school_urn_duplicates(datafile),
-    #school_laestab_duplicates(datafile),
+    # school_urn_duplicates(datafile),
+    # school_laestab_duplicates(datafile),
     other_geography_duplicates(datafile), # active test
     other_geography_code_duplicates(datafile), # active test
     na_geography(datafile), # active test
