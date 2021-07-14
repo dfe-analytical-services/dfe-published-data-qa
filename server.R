@@ -98,11 +98,11 @@ server <- function(input, output, session) {
   observeEvent(input$external_screenbutton, {
     shinyalert::shinyalert(
       title = "",
-      text = "This is the external version of the DfE data screening app. We do not control the servers that this app runs on. You should only use this to screen published or dummy data. For sensitive files, you should clone the repository and screen files locally instead.",
+      text = "This is the external version of the DfE data screening app. We do not control the servers that this app runs on. <br><br><strong> You should only use this to screen published or dummy data. </strong><br><br> For sensitive files, you should clone the repository and screen files locally instead.",
       type = "warning",
       closeOnEsc = FALSE,
       closeOnClickOutside = FALSE,
-      html = FALSE,
+      html = TRUE,
       showConfirmButton = TRUE,
       showCancelButton = TRUE,
       confirmButtonText = "I understand, proceed with screening files",
