@@ -1,8 +1,8 @@
-﻿"time_period","time_identifier","geographic_level","country_code","country_name","age_detailed","gender","ethnicity_group","q4_p_total",region_code,region_name
+"time_period","time_identifier","geographic_level","country_code","country_name","age_detailed","gender","ethnicity_group","q4_p_total",region_code,region_name
 "201819","Financial year Q1","National","E92000001","England","35-44","Female","Mixed/ Multiple Ethnic Group","82.14",,
 "201819","Financial year Q1","National","E92000001","England","35-44","Male","Not Provided","82.14",,
 "201819","Financial year Q1","National","E92000001","England","19-24","Male","White","82.14",,
 "201819","Financial year Q2","National","E92000001","England","25-34","Male","White","82.14",,
 "201819","Financial year Q3","National","E92000001","England","45-59","Male","White","82.14",,
-"201819","Financial year Q3","National","E92000001","England","35-44","Female","Asian/ Asian British ","82.14",,
+"201819","Financial year Q3","National","E92000001","England","35-44","Female","Asian / Asian British","82.14",,
 "201819","Financial year Q4","Regional","E92000001","England","19-24","Female","White","82.14",E12000001,North East
