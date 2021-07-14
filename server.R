@@ -118,11 +118,11 @@ server <- function(input, output, session) {
             # Clear uploaded files (well, partly)
             shinyjs::reset("datafile")
             shinyjs::reset("metafile")
-            
+
             # clear uploaded flags
             values$dataUploaded <- FALSE
             values$metaUploaded <- FALSE
-            
+
             # Clearing something that looks like the right thing?
             values$datafile <- NULL
             values$metafile <- NULL
