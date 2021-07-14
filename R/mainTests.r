@@ -25,8 +25,8 @@ mainTests <- function(data_character, meta_character, datafile, metafile) {
     old_la_code(datafile), # active test
     region_code(datafile), # active test
     country_code(datafile), # active test
-    school_urn_duplicates(datafile), # active test
-    school_laestab_duplicates(datafile), # active test
+    #school_urn_duplicates(datafile),
+    #school_laestab_duplicates(datafile),
     other_geography_duplicates(datafile), # active test
     other_geography_code_duplicates(datafile), # active test
     na_geography(datafile), # active test
@@ -1171,12 +1171,12 @@ school_laestab_duplicates <- function(data) {
     )
   } else if ("School" %in% unique(data$geographic_level) & !"school_laestab" %in% names(data)) {
     output <- list(
-      "message" = "School LAESTAB data must be present when including school-level data.",
+      "message" = "school_laestab is missing from the data file. This column is required for school-level data.",
       "result" = "FAIL"
     )
   } else if ("School" %in% unique(data$geographic_level) & !"school_name" %in% names(data)) {
     output <- list(
-      "message" = "School name data must be present when including school-level data.",
+      "message" = "school_name is missing from the data file. This column is required for school-level data.",
       "result" = "FAIL"
     )
   } else if ("School" %in% unique(data$geographic_level) & !"school_name" %in% names(data) & !"school_laestab" %in% names(data)) {
@@ -1376,8 +1376,8 @@ school_urn_duplicates <- function(data) {
 
 # other_geography_duplicates  ----------------------------------------
 # check that there is a 1:1 relationship between geography codes and names
-# ignore school
-lower_level_geog_names <- geography_matrix[c(7:12, 14:16), 2:3] %>% as.character()
+
+lower_level_geog_names <- geography_matrix[7:12, 2:3] %>% as.character() # commented out 14:16 for now
 
 other_geography_duplicates <- function(data) {
   if (!any(lower_level_geog_names %in% names(data))) {
@@ -1450,7 +1450,7 @@ other_geography_duplicates <- function(data) {
 # other_geography_code_duplicates  ----------------------------------------
 # check that there is a 1:1 relationship between geography names and codes
 
-lower_level_geog_names <- geography_matrix[c(7:12, 14:16), 2:3] %>% as.character()
+lower_level_geog_names <- geography_matrix[7:12, 2:3] %>% as.character() # commented out 14:16 for now
 
 other_geography_code_duplicates <- function(data) {
   if (!any(lower_level_geog_names %in% names(data))) {
@@ -1521,7 +1521,7 @@ other_geography_code_duplicates <- function(data) {
 # na_geography -------------------------------------
 # checking if location has code of ":", then name is "not available"
 
-geography_name_codes <- geography_matrix[, 2:3] %>%
+geography_name_codes <- geography_matrix[1:12, 2:3] %>% # making only 1:12 for now
   as.character() %>%
   .[!is.na(.)]
 
@@ -1580,7 +1580,7 @@ na_geography <- function(data) {
 # na_geography_code -------------------------------------
 # checking if location has the name "not available" then its code is ":"
 
-geography_name_codes <- geography_matrix[, 2:3] %>%
+geography_name_codes <- geography_matrix[1:12, 2:3] %>% # making only 1:12 for now
   as.character() %>%
   .[!is.na(.)]
 
