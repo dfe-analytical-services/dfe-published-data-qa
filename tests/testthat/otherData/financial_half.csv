@@ -1,0 +1,26 @@
+time_period,time_identifier,geographic_level,country_code,country_name,sin_breakdown,category,number,percentage
+202021,Part 1 (April to September),National,E92000001,England,Total,Total,285,100
+202021,Part 1 (April to September),National,E92000001,England,Gender,Male,153,53.7
+202021,Part 1 (April to September),National,E92000001,England,Gender,Female,130,45.6
+202021,Part 1 (April to September),National,E92000001,England,Gender,Transgender,0,0
+202021,Part 1 (April to September),National,E92000001,England,Gender,Not known,2,0.7
+201920,Part 2 (October to March),National,E92000001,England,Total,Total,224,100
+201920,Part 2 (October to March),National,E92000001,England,Gender,Male,121,54
+201920,Part 2 (October to March),National,E92000001,England,Gender,Female,98,43.8
+201920,Part 2 (October to March),National,E92000001,England,Gender,Transgender,c,c
+201920,Part 2 (October to March),National,E92000001,England,Gender,Not known,c,c
+201920,Part 1 (April to September),National,E92000001,England,Total,Total,225,100
+201920,Part 1 (April to September),National,E92000001,England,Gender,Male,133,59.1
+201920,Part 1 (April to September),National,E92000001,England,Gender,Female,87,38.7
+201920,Part 1 (April to September),National,E92000001,England,Gender,Transgender,0,0
+201920,Part 1 (April to September),National,E92000001,England,Gender,Not known,5,2.2
+201819,Part 2 (October to March),National,E92000001,England,Total,Total,224,100
+201819,Part 2 (October to March),National,E92000001,England,Gender,Male,118,52.7
+201819,Part 2 (October to March),National,E92000001,England,Gender,Female,101,45.1
+201819,Part 2 (October to March),National,E92000001,England,Gender,Transgender,0,0
+201819,Part 2 (October to March),National,E92000001,England,Gender,Not known,5,2.2
+201819,Part 1 (April to September),National,E92000001,England,Total,Total,274,100
+201819,Part 1 (April to September),National,E92000001,England,Gender,Male,158,57.7
+201819,Part 1 (April to September),National,E92000001,England,Gender,Female,113,41.2
+201819,Part 1 (April to September),National,E92000001,England,Gender,Transgender,0,0
+201819,Part 1 (April to September),National,E92000001,England,Gender,Not known,3,1.1
