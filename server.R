@@ -355,42 +355,42 @@ server <- function(input, output, session) {
           )
         }
 
-      # Dynamic trendy-tabs,
-      if (failed_tests == 0 & data$mainFile %>%
-        select(geographic_level) %>%
-        distinct() %>%
-        nrow() > 1) {
-        shinyjs::show(selector = c(
-          "#trendy_tabs li a[data-value=previewTab]",
-          "#trendy_tabs li a[data-value=obUnitTab]",
-          "#trendy_tabs li a[data-value=indicatorsTab]",
-          "#trendy_tabs li a[data-value=outliersTab]",
-          "#trendy_tabs li a[data-value=geogTab]"
-        ))
-      }
-      else if (failed_tests == 0 & data$mainFile %>%
-        select(geographic_level) %>%
-        distinct() %>%
-        nrow() == 1) {
-        shinyjs::show(selector = c(
-          "#trendy_tabs li a[data-value=previewTab]",
-          "#trendy_tabs li a[data-value=obUnitTab]",
-          "#trendy_tabs li a[data-value=indicatorsTab]",
-          "#trendy_tabs li a[data-value=outliersTab]"
-        ))
+        # Dynamic trendy-tabs,
+        if (failed_tests == 0 & data$mainFile %>%
+          select(geographic_level) %>%
+          distinct() %>%
+          nrow() > 1) {
+          shinyjs::show(selector = c(
+            "#trendy_tabs li a[data-value=previewTab]",
+            "#trendy_tabs li a[data-value=obUnitTab]",
+            "#trendy_tabs li a[data-value=indicatorsTab]",
+            "#trendy_tabs li a[data-value=outliersTab]",
+            "#trendy_tabs li a[data-value=geogTab]"
+          ))
+        }
+        else if (failed_tests == 0 & data$mainFile %>%
+          select(geographic_level) %>%
+          distinct() %>%
+          nrow() == 1) {
+          shinyjs::show(selector = c(
+            "#trendy_tabs li a[data-value=previewTab]",
+            "#trendy_tabs li a[data-value=obUnitTab]",
+            "#trendy_tabs li a[data-value=indicatorsTab]",
+            "#trendy_tabs li a[data-value=outliersTab]"
+          ))
 
-        shinyjs::hide(selector = c(
-          "#trendy_tabs li a[data-value=geogTab]"
-        ))
-      } else {
-        shinyjs::hide(selector = c(
-          "#trendy_tabs li a[data-value=previewTab]",
-          "#trendy_tabs li a[data-value=obUnitTab]",
-          "#trendy_tabs li a[data-value=indicatorsTab]",
-          "#trendy_tabs li a[data-value=outliersTab]",
-          "#trendy_tabs li a[data-value=geogTab]"
-        ))
-      }
+          shinyjs::hide(selector = c(
+            "#trendy_tabs li a[data-value=geogTab]"
+          ))
+        } else {
+          shinyjs::hide(selector = c(
+            "#trendy_tabs li a[data-value=previewTab]",
+            "#trendy_tabs li a[data-value=obUnitTab]",
+            "#trendy_tabs li a[data-value=indicatorsTab]",
+            "#trendy_tabs li a[data-value=outliersTab]",
+            "#trendy_tabs li a[data-value=geogTab]"
+          ))
+        }
 
 
         if (advisory_tests != 0) {
@@ -791,16 +791,16 @@ server <- function(input, output, session) {
             )
           })
 
-        # Select "comparison time"
-        output$comparison_time <- renderUI({
-          selectInput(
-            inputId = "comptime_parameter",
-            label = "Choose comparison time period:",
-            choices = data$mainFile %>% arrange(desc(time_period)) %>% pull(time_period) %>% unique(),
-            selected = data$mainFile %>% select(time_period) %>% arrange(desc(time_period)) %>% distinct() %>% slice(2) %>% pull(time_period),
-            multiple = FALSE
-          )
-        })
+          # Select "comparison time"
+          output$comparison_time <- renderUI({
+            selectInput(
+              inputId = "comptime_parameter",
+              label = "Choose comparison time period:",
+              choices = data$mainFile %>% arrange(desc(time_period)) %>% pull(time_period) %>% unique(),
+              selected = data$mainFile %>% select(time_period) %>% arrange(desc(time_period)) %>% distinct() %>% slice(2) %>% pull(time_period),
+              multiple = FALSE
+            )
+          })
 
 
           # get outlier stats
@@ -937,22 +937,22 @@ server <- function(input, output, session) {
               filter(col_type == "Filter") %>%
               pull(col_name)
 
-          check_geog <- function(dataset, id = c("time_period", all_of(pf))) {
-            years <- dataset[, id]
-            dataset[, id] <- NULL
-            dataset$match <- do.call(pmax, as.list(dataset)) == do.call(pmin, as.list(dataset))
-            dataset[, id] <- years
-            dataset <- dataset %>%
-              select(time_period, all_of(pf), everything()) %>%
-              mutate(match = case_when(
-                match == TRUE ~ "MATCH",
-                match == FALSE ~ "NO MATCH",
-                TRUE ~ "MISSING TOTAL"
-              )) %>%
-              arrange(match(match, c("NO MATCH", "MISSING TOTAL", "MATCH")))
+            check_geog <- function(dataset, id = c("time_period", all_of(pf))) {
+              years <- dataset[, id]
+              dataset[, id] <- NULL
+              dataset$match <- do.call(pmax, as.list(dataset)) == do.call(pmin, as.list(dataset))
+              dataset[, id] <- years
+              dataset <- dataset %>%
+                select(time_period, all_of(pf), everything()) %>%
+                mutate(match = case_when(
+                  match == TRUE ~ "MATCH",
+                  match == FALSE ~ "NO MATCH",
+                  TRUE ~ "MISSING TOTAL"
+                )) %>%
+                arrange(match(match, c("NO MATCH", "MISSING TOTAL", "MATCH")))
 
-            return(dataset)
-          }
+              return(dataset)
+            }
 
             output$geog_agg2 <- DT::renderDT(server = FALSE, {
               req(data_geog())
@@ -976,12 +976,11 @@ server <- function(input, output, session) {
                   ),
                   scrollX = TRUE
                 )
+              ) %>% formatStyle(
+                "match",
+                backgroundColor = styleEqual(c("NO MATCH", "MISSING TOTAL", "MATCH"), c("#910000", "#e87421", "#30A104"))
               )
-            ) %>% formatStyle(
-              "match",
-              backgroundColor = styleEqual(c("NO MATCH", "MISSING TOTAL", "MATCH"), c("#910000", "#e87421", "#30A104"))
-            )
-          })
+            })
 
 
 
