@@ -25,10 +25,7 @@ server <- function(input, output, session) {
     environment = config::get("environment") # use "shinyapps" to test alternative behaviour locally
   )
 
-
-
   # File upload check ----------------------------------------------------------------------------
-
 
   observe({
     req(input$datafile)
@@ -48,8 +45,6 @@ server <- function(input, output, session) {
   # }, priority = 1000)
   #
 
-
-
   observeEvent(input$datafile,
     {
       values$clear <- FALSE
@@ -65,7 +60,6 @@ server <- function(input, output, session) {
     priority = 1000
   )
 
-
   observeEvent(input$metafile,
     {
       values$clear <- FALSE
@@ -80,7 +74,6 @@ server <- function(input, output, session) {
     },
     priority = 1000
   )
-
 
   output$file_exists <- reactive({
     return(values$dataUploaded && values$metaUploaded)
@@ -120,6 +113,20 @@ server <- function(input, output, session) {
       callbackR = function(x) {
         if (x == TRUE) {
           values$proceed_with_screening <- x
+        } else {
+          if (x == FALSE) {
+            # Clear uploaded files (well, partly)
+            shinyjs::reset("datafile")
+            shinyjs::reset("metafile")
+            
+            # clear uploaded flags
+            values$dataUploaded <- FALSE
+            values$metaUploaded <- FALSE
+            
+            # Clearing something that looks like the right thing?
+            values$datafile <- NULL
+            values$metafile <- NULL
+          }
         }
       },
       immediate = FALSE
