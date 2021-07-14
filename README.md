@@ -19,7 +19,7 @@
 
 ## Introduction 
 
-A shiny app to provider a user friendly way to QA data files using centralised code. This is deployed via the DfE visual studio and rsconnect subscriptions. There are three environments only accessible to DfE AD:
+A shiny app to provide a user friendly way to QA data files using centralised code. This is deployed via the DfE visual studio and rsconnect subscriptions. There are three environments only accessible to DfE AD:
 
 - Production - https://rsconnect/rsc/dfe-published-data-qa
 - Pre-production - https://rsconnect-pp/rsc/dfe-published-data-qa
