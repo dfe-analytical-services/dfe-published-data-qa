@@ -1050,18 +1050,18 @@ old_la_code <- function(data) {
 
     if (length(invalid_values) == 0) {
       output <- list(
-        "message" = "old_la_code is always a 3 digit numeric code, blank or : for not availale.",
+        "message" = "old_la_code is always a 3 digit numeric code, blank or : for not available.",
         "result" = "PASS"
       )
     } else {
       if (length(invalid_values) == 1) {
         output <- list(
-          "message" = paste0("The following old_la_code value is invalid: '", paste0(invalid_values), "'. <br> - old_la_code must always be a 3 digit numeric code, blank or : for not availale.."),
+          "message" = paste0("The following old_la_code value is invalid: '", paste0(invalid_values), "'. <br> - old_la_code must always be a 3 digit numeric code, blank or : for not available.."),
           "result" = "FAIL"
         )
       } else {
         output <- list(
-          "message" = paste0("The following old_la_code values are invalid: '", paste0(invalid_values, collapse = "', '"), "'. <br> - old_la_code must always be a 3 digit numeric code, blank or : for not availale.."),
+          "message" = paste0("The following old_la_code values are invalid: '", paste0(invalid_values, collapse = "', '"), "'. <br> - old_la_code must always be a 3 digit numeric code, blank or : for not available.."),
           "result" = "FAIL"
         )
       }

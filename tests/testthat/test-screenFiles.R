@@ -77,3 +77,10 @@ test_that("blankFilterGroupsMeta", {
 
   expect_equal(screeningOutput$results %>% filter(result == "FAIL") %>% nrow(), 0)
 })
+
+test_that("financialHalves", {
+  screeningOutput <- testOther("../../tests/testthat/otherData/financial_half.csv")
+  
+  expect_equal(screeningOutput$results %>% filter(result == "FAIL") %>% nrow(), 0)
+})
+
