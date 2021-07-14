@@ -49,6 +49,7 @@ app$snapshot(list(output = c("t_1", "t_2", "t_3", "t_4", "t_5", "t_6", "t_7", "t
 
 # 7. Outlier check doesn't break with no arguments ------------------------
 app$setInputs(trendy_tabs = "outliersTab")
+app$setInputs(comptime_parameter = "201718")
 app$setInputs(submit_outlier = "click")
 app$snapshot(list(output = "table_outlier_list"))
 
