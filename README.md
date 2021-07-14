@@ -19,11 +19,19 @@
 
 ## Introduction 
 
-A shiny app to provider a user friendly way to QA data files using centralised code. This is deployed via the DfE visual studio and rsconnect subscriptions. There are three environments, all accessible to DfE AD:
+A shiny app to provide a user friendly way to QA data files using centralised code. This is deployed via the DfE visual studio and rsconnect subscriptions. There are three environments only accessible to DfE AD:
 
 - Production - https://rsconnect/rsc/dfe-published-data-qa
 - Pre-production - https://rsconnect-pp/rsc/dfe-published-data-qa
 - Development - https://rsconnect-pp/rsc/dev-dfe-published-data-qa
+
+There is also an instance hosted on shinyapps.io, which is externally accessible:
+
+- External - http://department-for-education.shinyapps.io/dfe-published-data-qa
+
+**Note**
+
+Sensitive data should not be screened on the shinyapps.io version, as we do not have control over this hosting server. A warning modal will appear to double check this with you before screening any files. If you're external to DfE and want to screen sensitive files, you can run a version of the app locally, see the [software requirements](#requirements) and [how to use](#how-to-use) sections below.
 
 Code used to create functions and variables called by the global, server, and UI scripts can be found in the 'R' folder.
 
@@ -32,11 +40,13 @@ Code used to create functions and variables called by the global, server, and UI
 ## Requirements
 
 
-### i. Software requirements 
+### i. Software requirements (for running locally)
 
-- Installation of R 3.6.2 or higher from software centre
+- Installation of R Studio 1.2.5033 or higher
 
-- Installation of RTools40 or higher from software centre
+- Installation of R 3.6.2 or higher
+
+- Installation of RTools40 or higher
 
 ### ii. Programming skills required (for editing or troubleshooting)
 
@@ -48,10 +58,19 @@ Code used to create functions and variables called by the global, server, and UI
 
 ## How to use
 
+### Running the app locally
+
+1. Clone or download the repo. 
+
+2. Open the R project in R Studio.
+
+3. Run `renv::restore()` to install dependencies.
+
+4. Run `shiny::runApp()` to run the app locally.
 
 ### Packages
 
-Package control is handled using renv. You will likely need to run `renv::restore()` if this is your first time using the project.
+Package control is handled using renv. As in the steps above, you will need to run `renv::restore()` if this is your first time using the project.
 
 ### Tests
 
@@ -65,15 +84,17 @@ The function `run_tests_locally()` is created in the Rprofile script and is avai
 
 ### Deployment
 
-Deployment is handled via the dfe-gov-uk azure devops instance, and deployed to the DfE rsconnect servers.
+For the internal versions, deployment is handled via the dfe-gov-uk azure devops instance, and deployed to the DfE rsconnect servers.
+
+For the external instance, the app is deployed to the department's shinyapps.io subscription using GitHub actions. The yaml file for this can be found in the `.github/workflows` folder.
 
 ### Navigation
 
-In general all .r files will have a usable outline, so make use of that for navigation if in RStudio: Ctrl-Shift-O.
+In general all .r files will have a usable outline, so make use of that for navigation if in RStudio: `Ctrl-Shift-O`.
 
 ### Profiling
 
-R/profilingCode.r contains the outline of code to assist when profiling the app.
+`R/profilingCode.r` contains the outline of code to assist when profiling the app.
 
 ### Debugging
 

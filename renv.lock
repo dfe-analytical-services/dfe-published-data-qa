@@ -1,6 +1,6 @@
 {
   "R": {
-    "Version": "4.0.3",
+    "Version": "4.0.2",
     "Repositories": [
       {
         "Name": "CRAN",
@@ -169,6 +169,13 @@
       "Source": "Repository",
       "Repository": "CRAN",
       "Hash": "0f22be39ec1d141fd03683c06f3a6e67"
+    },
+    "config": {
+      "Package": "config",
+      "Version": "0.3.1",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "31d77b09f63550cee9ecb5a08bf76e8f"
     },
     "cpp11": {
       "Package": "cpp11",
@@ -478,6 +485,13 @@
       "Repository": "CRAN",
       "Hash": "a399e4773075fc2375b71f45fca186c4"
     },
+    "packrat": {
+      "Package": "packrat",
+      "Version": "0.6.0",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "0d6cc4c357e7602bb3eee299f4cfc2a5"
+    },
     "parsedate": {
       "Package": "parsedate",
       "Version": "1.2.0",
@@ -618,6 +632,13 @@
       "Repository": "CRAN",
       "Hash": "249d8cd1e74a8f6a26194a91b47f21d1"
     },
+    "rsconnect": {
+      "Package": "rsconnect",
+      "Version": "0.8.18",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "50b4e52011e335f7d3053cfde69893ba"
+    },
     "rstudioapi": {
       "Package": "rstudioapi",
       "Version": "0.13",
@@ -659,6 +680,13 @@
       "Source": "Repository",
       "Repository": "CRAN",
       "Hash": "67f284ca3b12634dfabbbb5c247f5966"
+    },
+    "shinyalert": {
+      "Package": "shinyalert",
+      "Version": "2.0.0",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "a130b62f6d5533fcc1cab6c8161358d9"
     },
     "shinycssloaders": {
       "Package": "shinycssloaders",
@@ -771,6 +799,13 @@
       "Source": "Repository",
       "Repository": "CRAN",
       "Hash": "c3ad47dc6da0751f18ed53c4613e3ac7"
+    },
+    "uuid": {
+      "Package": "uuid",
+      "Version": "0.1-4",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "e4169eb989a5d03ccb6b628cad1b1b50"
     },
     "vctrs": {
       "Package": "vctrs",
