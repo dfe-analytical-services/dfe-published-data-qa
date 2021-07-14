@@ -301,6 +301,7 @@ server <- function(input, output, session) {
           include.colnames = FALSE
         )
 
+
         output$table_advisory_tests <- renderTable(
           {
             filter(all_results, result == "ADVISORY") %>% select(message)
@@ -355,7 +356,10 @@ server <- function(input, output, session) {
         }
 
         # Dynamic trendy-tabs,
-        if (failed_tests == 0) {
+        if (failed_tests == 0 & data$mainFile %>%
+          select(geographic_level) %>%
+          distinct() %>%
+          nrow() > 1) {
           shinyjs::show(selector = c(
             "#trendy_tabs li a[data-value=previewTab]",
             "#trendy_tabs li a[data-value=obUnitTab]",
@@ -364,23 +368,26 @@ server <- function(input, output, session) {
             "#trendy_tabs li a[data-value=geogTab]"
           ))
         }
-        else {
-          shinyjs::hide(selector = c(
+        else if (failed_tests == 0 & data$mainFile %>%
+          select(geographic_level) %>%
+          distinct() %>%
+          nrow() == 1) {
+          shinyjs::show(selector = c(
             "#trendy_tabs li a[data-value=previewTab]",
             "#trendy_tabs li a[data-value=obUnitTab]",
             "#trendy_tabs li a[data-value=indicatorsTab]",
-            "#trendy_tabs li a[data-value=outliersTab]",
-            "#trendy_tabs li a[data-value=geogTab]"
+            "#trendy_tabs li a[data-value=outliersTab]"
           ))
-        }
 
-        if (data$mainFile %>% select(geographic_level) %>% distinct() %>% nrow() == 1) {
           shinyjs::hide(selector = c(
             "#trendy_tabs li a[data-value=geogTab]"
           ))
-        }
-        else {
-          shinyjs::show(selector = c(
+        } else {
+          shinyjs::hide(selector = c(
+            "#trendy_tabs li a[data-value=previewTab]",
+            "#trendy_tabs li a[data-value=obUnitTab]",
+            "#trendy_tabs li a[data-value=indicatorsTab]",
+            "#trendy_tabs li a[data-value=outliersTab]",
             "#trendy_tabs li a[data-value=geogTab]"
           ))
         }
@@ -790,9 +797,11 @@ server <- function(input, output, session) {
               inputId = "comptime_parameter",
               label = "Choose comparison time period:",
               choices = data$mainFile %>% arrange(desc(time_period)) %>% pull(time_period) %>% unique(),
+              selected = data$mainFile %>% select(time_period) %>% arrange(desc(time_period)) %>% distinct() %>% slice(2) %>% pull(time_period),
               multiple = FALSE
             )
           })
+
 
           # get outlier stats
 
@@ -939,10 +948,11 @@ server <- function(input, output, session) {
                   match == TRUE ~ "MATCH",
                   match == FALSE ~ "NO MATCH",
                   TRUE ~ "MISSING TOTAL"
-                ))
+                )) %>%
+                arrange(match(match, c("NO MATCH", "MISSING TOTAL", "MATCH")))
+
               return(dataset)
             }
-
 
             output$geog_agg2 <- DT::renderDT(server = FALSE, {
               req(data_geog())
@@ -966,8 +976,12 @@ server <- function(input, output, session) {
                   ),
                   scrollX = TRUE
                 )
+              ) %>% formatStyle(
+                "match",
+                backgroundColor = styleEqual(c("NO MATCH", "MISSING TOTAL", "MATCH"), c("#910000", "#e87421", "#30A104"))
               )
             })
+
 
 
 

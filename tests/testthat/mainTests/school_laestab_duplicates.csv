@@ -1,0 +1,24 @@
+time_period,time_identifier,geographic_level,country_code,country_name,school_urn,school_laestab,school_name,establishment_type,establishment_group,Total_st,Total_st_pc,Total_ehc,Total_ehc_pc,Total_all,Total_all_pc
+2021,Calendar year,School,E92000001,England,105135,2036905,St Paul's Academy,Total,Total,z,z,430697,100,430697,100
+2021,Calendar year,School,E92000001,England,129342,3346905,Grace Academy Solihull,Total,Special school,z,z,154017,35.7599,154017,35.75994
+2021,Calendar year,School,E92000001,England,130247,8706905,John Madejski Academy,Total,NEET,z,z,10794,2.50617,10794,2.50617
+2021,Calendar year,School,E92000001,England,130908,8066907,Macmillan Academy,Total,Mainstream school,z,z,172023,39.9406,172023,39.94061
+2021,Calendar year,School,E92000001,England,130909,3806905,Dixons City Academy,Total,Non-maintained early years,z,z,2219,0.51521,2219,0.51521
+2021,Calendar year,School,E92000001,England,130912,2136905,Paddington Academy,Total,Further education,z,z,71728,16.6539,71728,16.65394
+2020,Calendar year,School,E92000001,England,131062,2046906,Paddington Academy,Total,Other,z,z,2225,0.5166,2225,0.5166
+2020,Calendar year,School,E92000001,England,131065,3416906,North Liverpool Academy,Total,Educated elsewhere,z,z,14452,3.35549,14452,3.35549
+2020,Calendar year,School,E92000001,England,131262,2136906,Westminster Academy,Total,Alternative provision/Pupil referral unit,z,z,3239,0.75204,3239,0.75204
+2020,Calendar year,School,E92000001,England,131609,2046907,The Bridge Academy,Non-maintained early years,Non-maintained early years,z,z,2219,0.51521,2219,0.51521
+2020,Calendar year,School,E92000001,England,131610,2106907,Harris Academy Bermondsey,Mainstream - LA maintained,Mainstream school,z,z,74331,17.2583,74331,17.2583
+2020,Calendar year,School,E92000001,England,131611,3706905,Sheffield Park Academy,Mainstream - LA maintained - SEN unit,Mainstream school,z,z,3674,0.85304,3674,0.85304
+2020,Calendar year,School,E92000001,England,131612,2056905,Sheffield Springs Academy,Mainstream - LA maintained - Resourced provision,Mainstream school,z,z,6566,1.52451,6566,1.52451
+2020,Calendar year,School,E92000001,England,131613,3736905,Harris Academy Merton,Mainstream - Academy,Mainstream school,z,z,69667,16.1754,69667,16.17541
+2020,Calendar year,School,E92000001,England,131614,3736906,Harris Girls' Academy East Dulwich,Mainstream - Academy - SEN unit,Mainstream school,z,z,4219,0.97957,4219,0.97957
+2020,Calendar year,School,E92000001,England,131615,2106908,Walthamstow Academy,Mainstream - Academy - Resourced Provision,Mainstream school,z,z,5873,1.3636,5873,1.3636
+2019,Calendar year,School,E92000001,England,131616,2106908,The Gateway Academy,Mainstream - Free school,Mainstream school,z,z,3006,0.69794,3006,0.69794
+2019,Calendar year,School,E92000001,England,131617,3206905,Greig City Academy,Mainstream - Free school - SEN unit,Mainstream school,z,z,39,0.00906,39,0.00906
+2019,Calendar year,School,E92000001,England,131618,8836905,Walsall Academy,Mainstream - Free school - Resourced provision,Mainstream school,z,z,93,0.02159,93,0.02159
+2019,Calendar year,School,E92000001,England,131619,3096905,Unity City Academy,Mainstream - Independent,Mainstream school,z,z,4555,1.05759,4555,1.05759
+2019,Calendar year,School,E92000001,England,131620,3356905,St Mark's Church of England Academy,Special - LA maintained,Special school,z,z,84042,19.513,84042,19.51302
+2019,Calendar year,School,E92000001,England,131621,8066905,City of London Academy (Southwark),Special - Academy/free,Special school,z,z,48089,11.1654,48089,11.16539
+2019,Calendar year,School,E92000001,England,131622,3156906,The King's Academy,Special - Non-maintained,Special school,z,z,3907,0.90713,3907,0.90713
