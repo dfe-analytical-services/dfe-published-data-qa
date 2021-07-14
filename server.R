@@ -308,7 +308,10 @@ server <- function(input, output, session) {
       }
 
       # Dynamic trendy-tabs,
-      if (failed_tests == 0) {
+      if (failed_tests == 0 & data$mainFile %>%
+        select(geographic_level) %>%
+        distinct() %>%
+        nrow() > 1) {
         shinyjs::show(selector = c(
           "#trendy_tabs li a[data-value=previewTab]",
           "#trendy_tabs li a[data-value=obUnitTab]",
@@ -317,7 +320,21 @@ server <- function(input, output, session) {
           "#trendy_tabs li a[data-value=geogTab]"
         ))
       }
-      else {
+      else if (failed_tests == 0 & data$mainFile %>%
+        select(geographic_level) %>%
+        distinct() %>%
+        nrow() == 1) {
+        shinyjs::show(selector = c(
+          "#trendy_tabs li a[data-value=previewTab]",
+          "#trendy_tabs li a[data-value=obUnitTab]",
+          "#trendy_tabs li a[data-value=indicatorsTab]",
+          "#trendy_tabs li a[data-value=outliersTab]"
+        ))
+
+        shinyjs::hide(selector = c(
+          "#trendy_tabs li a[data-value=geogTab]"
+        ))
+      } else {
         shinyjs::hide(selector = c(
           "#trendy_tabs li a[data-value=previewTab]",
           "#trendy_tabs li a[data-value=obUnitTab]",
@@ -327,16 +344,16 @@ server <- function(input, output, session) {
         ))
       }
 
-      if (data$mainFile %>% select(geographic_level) %>% distinct() %>% nrow() == 1) {
-        shinyjs::hide(selector = c(
-          "#trendy_tabs li a[data-value=geogTab]"
-        ))
-      }
-      else {
-        shinyjs::show(selector = c(
-          "#trendy_tabs li a[data-value=geogTab]"
-        ))
-      }
+      # if (data$mainFile %>% select(geographic_level) %>% distinct() %>% nrow() == 1) {
+      #   shinyjs::hide(selector = c(
+      #     "#trendy_tabs li a[data-value=geogTab]"
+      #   ))
+      # }
+      # else {
+      #   shinyjs::show(selector = c(
+      #     "#trendy_tabs li a[data-value=geogTab]"
+      #   ))
+      # }
 
 
       if (advisory_tests != 0) {
@@ -743,6 +760,7 @@ server <- function(input, output, session) {
             inputId = "comptime_parameter",
             label = "Choose comparison time period:",
             choices = data$mainFile %>% arrange(desc(time_period)) %>% pull(time_period) %>% unique(),
+            selected = data$mainFile %>% select(time_period) %>% arrange(desc(time_period)) %>% distinct() %>% slice(2) %>% pull(time_period),
             multiple = FALSE
           )
         })
@@ -892,7 +910,9 @@ server <- function(input, output, session) {
                 match == TRUE ~ "MATCH",
                 match == FALSE ~ "NO MATCH",
                 TRUE ~ "MISSING TOTAL"
-              ))
+              )) %>%
+              arrange(match(match, c("NO MATCH", "MISSING TOTAL", "MATCH")))
+
             return(dataset)
           }
 
@@ -919,6 +939,9 @@ server <- function(input, output, session) {
                 ),
                 scrollX = TRUE
               )
+            ) %>% formatStyle(
+              "match",
+              backgroundColor = styleEqual(c("NO MATCH", "MISSING TOTAL", "MATCH"), c("#910000", "#e87421", "#30A104"))
             )
           })
 

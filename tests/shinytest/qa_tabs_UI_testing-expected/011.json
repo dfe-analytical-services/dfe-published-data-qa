@@ -27,9 +27,9 @@
             201718
           ],
           [
+            "State-funded secondary",
             "State-funded primary",
             "State-funded primary and secondary",
-            "State-funded secondary",
             "State-funded primary",
             "State-funded primary and secondary",
             "State-funded secondary",
@@ -45,9 +45,9 @@
             "Total"
           ],
           [
+            318,
             1695,
             2013,
-            318,
             1687,
             2007,
             320,
@@ -63,8 +63,6 @@
             null
           ],
           [
-            null,
-            null,
             -134,
             null,
             null,
@@ -78,12 +76,14 @@
             null,
             null,
             null,
+            null,
+            null,
             null
           ],
           [
+            352,
             413,
             116,
-            352,
             null,
             null,
             null,
@@ -99,9 +99,9 @@
             null
           ],
           [
+            3348,
             16705,
             20053,
-            3348,
             16723,
             20092,
             3369,
@@ -117,9 +117,9 @@
             20121
           ],
           [
+            3348,
             16705,
             20053,
-            3348,
             16723,
             20092,
             3369,
@@ -135,9 +135,9 @@
             null
           ],
           [
+            491,
             480,
             null,
-            491,
             null,
             null,
             null,
@@ -153,9 +153,9 @@
             null
           ],
           [
-            "MISSING TOTAL",
-            "MISSING TOTAL",
             "NO MATCH",
+            "MISSING TOTAL",
+            "MISSING TOTAL",
             "MISSING TOTAL",
             "MISSING TOTAL",
             "MISSING TOTAL",
@@ -179,7 +179,7 @@
             "copy",
             "colvis"
           ],
-          "rowCallback": "function(row, data, num, index){\n  var $row = $(row);\n    $row.css('background-color', '#454b51');\n    $row.hover(function(){\n      $(this).css('background-color', '#6a737c');\n     }, function(){\n      $(this).css('background-color', '#454b51');\n     }\n    );\n}",
+          "rowCallback": "function(row, data, num, index){\n  var $row = $(row);\n    $row.css('background-color', '#454b51');\n    $row.hover(function(){\n      $(this).css('background-color', '#6a737c');\n     }, function(){\n      $(this).css('background-color', '#454b51');\n     }\n    );\nvar value=data[8]; $(this.api().cell(row, 8).node()).css({'background-color':value == \"NO MATCH\" ? \"#910000\" : value == \"MISSING TOTAL\" ? \"#e87421\" : value == \"MATCH\" ? \"#30A104\" : null});\n}",
           "initComplete": "function(settings, json) {\n$(this.api().table().header()).css({'background-color': '#232628', 'color': '#c8c8c8'});\n}",
           "scrollX": true,
           "columnDefs": [
