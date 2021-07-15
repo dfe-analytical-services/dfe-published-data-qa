@@ -84,6 +84,13 @@ app$setInputs(submit_geographies = "click")
 Sys.sleep(2)
 app$snapshot(list(output = "geog_agg2"))
 
+# 12. Hyphen warning appears as expected -----------------------------------
+
+app$setInputs(resetbutton = "click")
+app$uploadFile(datafile = "test-data/hyphen.csv")
+app$uploadFile(metafile = "test-data/hyphen.meta.csv")
+app$setInputs(screenbutton = "click")
+app$snapshot(list(output = "geog_agg2"))
 
 # # 12. Correct tabs populate for single-level geography file ---------------
 # app$setInputs(trendy_tabs = "tab1")

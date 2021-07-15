@@ -571,13 +571,12 @@ server <- function(input, output, session) {
                   dplyr::filter(col_name == filter) %>%
                   pull(filter_grouping_column)
 
-                return(eval(parse(text = paste0("data$mainFile %>% select(", filter_group, ", ", filter, ") %>% distinct() %>% arrange(", filter_group, ", ", filter, ")"))))
+                return(data$mainFile %>% select(filter_group, filter) %>% distinct() %>% arrange(filter_group, filter))
               }
               else {
-                return(eval(parse(text = paste0("data$mainFile %>% select(", filter, ") %>% distinct() %>% arrange(", filter, ")"))))
+                return(data$mainFile %>% select(filter) %>% distinct() %>% arrange(filter))
               }
             }
-
 
             output <- lapply(filters, levelsTable)
 
@@ -907,7 +906,8 @@ server <- function(input, output, session) {
 
           data_geog <- eventReactive(input$submit_geographies, {
             validate(
-              need(input$geog_indicator_parameter != "", "Please select an indicator")
+              need(input$geog_indicator_parameter != "", "Please select an indicator"),
+              need(!any(grepl("-", names(data$mainFile))), "You have at least one hyphen in your variable names, you need to remove all hyphens from variable names to use this part of the app.")
             )
 
             pf <- meta$mainFile %>%
