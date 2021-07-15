@@ -1,0 +1,128 @@
+time_period,time_identifier,geographic_level,country_code,country_name,local_enterprise_partnership_code,local_enterprise_partnership_name,ward_code,ward_name,trust_id,trust_name,sponsor_id,sponsor_name,provider_ukprn,provider_name,english_devolved_area_code,english_devolved_area_name,establishment_type,establishment_group,Total_st,Total_st_pc,Total_ehc,Total_ehc_pc,Total_all,Total_all_pc
+2021,Calendar year,Local enterprise partnership,E92000001,England,E37000001,Black Country,,,,,,,,,,,Total,Total,z,z,430697,100,430697,100
+2021,Calendar year,Local enterprise partnership,E92000001,England,E37000001,Black Country,,,,,,,,,,,Total,Special school,z,z,154017,35.7599,154017,35.75994
+2021,Calendar year,Local enterprise partnership,E92000001,England,E37000007,Cheshire and Warrington,,,,,,,,,,,Total,NEET,z,z,10794,2.50617,10794,2.50617
+2021,Calendar year,Local enterprise partnership,E92000001,England,E37000006,Cheshire and Warrington,,,,,,,,,,,Total,Mainstream school,z,z,172023,39.9406,172023,39.94061
+2021,Calendar year,Local enterprise partnership,E92000001,England,E37000007,Cheshire and Warrington,,,,,,,,,,,Total,Non-maintained early years,z,z,2219,0.51521,2219,0.51521
+2021,Calendar year,Local enterprise partnership,E92000001,England,E37000008,Cumbria,,,,,,,,,,,Total,Further education,z,z,71728,16.6539,71728,16.65394
+2021,Calendar year,MAT,E92000001,England,,,,,TR00004,ABBOTS HALL PRIMARY ACADEMY,,,,,,,Total,Other,z,z,2225,0.5166,2225,0.5166
+2021,Calendar year,MAT,E92000001,England,,,,,TR01834,ABINGDON LEARNING TRUST,,,,,,,Total,Educated elsewhere,z,z,14452,3.35549,14452,3.35549
+2021,Calendar year,MAT,E92000001,England,,,,,TR03174,ABNEY TRUST,,,,,,,Total,Alternative provision/Pupil referral unit,z,z,3239,0.75204,3239,0.75204
+2021,Calendar year,MAT,E92000001,England,,,,,TR00008,ACADEMIES ENTERPRISE TRUST,,,,,,,Non-maintained early years,Non-maintained early years,z,z,2219,0.51521,2219,0.51521
+2021,Calendar year,MAT,E92000001,England,,,,,TR00010,ACADEMY @ WORDEN,,,,,,,Mainstream - LA maintained - SEN unit,Mainstream school,z,z,3674,0.85304,3674,0.85304
+2021,Calendar year,MAT,E92000001,England,,,,,TR03736,ACADEMY TRANSFORMATION TRUST,,,,,,,Mainstream - Academy,Mainstream school,z,z,69667,16.1754,69667,16.17541
+2021,Calendar year,MAT,E92000001,England,,,,,TR01579,ACCORD MULTI ACADEMY TRUST,,,,,,,Mainstream - Academy - SEN unit,Mainstream school,z,z,4219,0.97957,4219,0.97957
+2021,Calendar year,MAT,E92000001,England,,,,,TR00138,ACCORDIA ACADEMIES TRUST,,,,,,,Mainstream - Academy - Resourced Provision,Mainstream school,z,z,5873,1.3636,5873,1.3636
+2021,Calendar year,MAT,E92000001,England,,,,,TR00033,ALCESTER ACADEMY,,,,,,,Mainstream - Free school,Mainstream school,z,z,3006,0.69794,3006,0.69794
+2021,Calendar year,MAT,E92000001,England,,,,,TR00034,ALCESTER GRAMMAR SCHOOL,,,,,,,Mainstream - Free school - SEN unit,Mainstream school,z,z,39,0.00906,39,0.00906
+2021,Calendar year,MAT,E92000001,England,,,,,TR00035,ALDERBROOK SCHOOL,,,,,,,Mainstream - Free school - Resourced provision,Mainstream school,z,z,93,0.02159,93,0.02159
+2021,Calendar year,MAT,E92000001,England,,,,,TR00036,ALDERMAN JACOBS SCHOOL,,,,,,,Mainstream - Independent,Mainstream school,z,z,4555,1.05759,4555,1.05759
+2021,Calendar year,MAT,E92000001,England,,,,,TR00628,ALDRIDGE EDUCATION,,,,,,,Special - LA maintained,Special school,z,z,84042,19.513,84042,19.51302
+2021,Calendar year,MAT,E92000001,England,,,,,TR00273,Aldridge Education,,,,,,,Special - Academy/free,Special school,z,z,48089,11.1654,48089,11.16539
+2021,Calendar year,MAT,E92000001,England,,,,,TR00274,Alec Reed,,,,,,,Special - Non-maintained,Special school,z,z,3907,0.90713,3907,0.90713
+2021,Calendar year,MAT,E92000001,England,,,,,TR00275,ALETHEIA ANGLICAN ACADEMIES TRUST,,,,,,,Special - Independent,Special school,z,z,17839,4.14189,17839,4.14189
+2021,Calendar year,Sponsor,E92000001,England,,,,,,,SP01780,Lee Chapel Multi Academy Trust,,,,,AP/PRU - Academy,Alternative provision/Pupil referral unit,z,z,1004,0.23311,1004,0.23311
+2021,Calendar year,Sponsor,E92000001,England,,,,,,,SP00314,Leger Education Trust,,,,,AP/PRU - Free school,Alternative provision/Pupil referral unit,z,z,335,0.07778,335,0.07778
+2021,Calendar year,Sponsor,E92000001,England,,,,,,,SP01981,Leigh Academies Trust,,,,,Hospital School,Special school,z,z,140,0.03251,140,0.03251
+2021,Calendar year,Sponsor,E92000001,England,,,,,,,SP00316,Leigh Junior Infant & Nursery School,,,,,General FE and tertiary colleges/HE,Further education,z,z,57002,13.2348,57002,13.23483
+2021,Calendar year,Sponsor,E92000001,England,,,,,,,SP01014,Leo Academy Trust,,,,,Other FE,Further education,z,z,5243,1.21733,5243,1.21733
+2021,Calendar year,Sponsor,E92000001,England,,,,,,,SP01595,Leodis Academies Trust,,,,,Sixth form college,Further education,z,z,2706,0.62828,2706,0.62828
+2021,Calendar year,Sponsor,E92000001,England,,,,,,,SP01237,Lever Edge Primary Academy,,,,,Specialist post-16 institutions,Further education,z,z,6777,1.5735,6777,1.5735
+2021,Calendar year,Sponsor,E92000001,England,,,,,,,SP00320,Life Education Trust,,,,,NEET,NEET,z,z,10794,2.50617,10794,2.50617
+2021,Calendar year,Sponsor,E92000001,England,,,,,,,SP01793,LIFE Multi-Academy Trust,,,,,Other,Other,z,z,2225,0.5166,2225,0.5166
+2021,Calendar year,Sponsor,E92000001,England,,,,,,,SP01824,Lighthouse Schools Partnership,,,,,Awaiting provision - above compulsory school age and in education,Educated elsewhere,z,z,210,0.04876,210,0.04876
+2021,Calendar year,Sponsor,E92000001,England,,,,,,,SP00970,Lilac Sky Academy Trust,,,,,Awaiting provision - above compulsory school age and not in education,Educated elsewhere,z,z,2438,0.56606,2438,0.56606
+2021,Calendar year,Sponsor,E92000001,England,,,,,,,SP00323,Lime Trust,,,,,Awaiting provision - below compulsory school age and in education,Educated elsewhere,z,z,205,0.0476,205,0.0476
+2021,Calendar year,Sponsor,E92000001,England,,,,,,,SP01543,Lingfield Education Trust,,,,,Awaiting provision - below compulsory school age and not in education,Educated elsewhere,z,z,248,0.05758,248,0.05758
+2021,Calendar year,Sponsor,E92000001,England,,,,,,,SP01251,Link Education Trust,,,,,Awaiting provision - compulsory school age and in education,Educated elsewhere,z,z,1105,0.25656,1105,0.25656
+2021,Calendar year,Sponsor,E92000001,England,,,,,,,SP00685,Links Academy Trust,,,,,Awaiting provision - compulsory school age and not in education,Educated elsewhere,z,z,1460,0.33899,1460,0.33899
+2021,Calendar year,Sponsor,E92000001,England,,,,,,,SP02185,Lion Academy Trust,,,,,Elective home education,Educated elsewhere,z,z,3660,0.84979,3660,0.84979
+2021,Calendar year,Sponsor,E92000001,England,,,,,,,SP00695,Lion Academy Trust,,,,,Other arrangements by local authority,Educated elsewhere,z,z,4284,0.99467,4284,0.99467
+2021,Calendar year,Provider,E92000001,England,,,,,,,,,5606,2Schools Consortium,,,Other arrangements by parents,Educated elsewhere,z,z,771,0.17901,771,0.17901
+2021,Calendar year,Provider,E92000001,England,,,,,,,,,5697,AA Teamworks West Yorkshire SCITT,,,Permanently excluded,Educated elsewhere,z,z,71,0.01648,71,0.01648
+2021,Calendar year,Provider,E92000001,England,,,,,,,,,5697,AA Teamworks West Yorkshire SCITT,,,Total,Total,z,z,20295,100,20295,100
+2021,Calendar year,Provider,E92000001,England,,,,,,,,,5608,Alban Federation,,,Total,Total,z,z,42160,100,42160,100
+2021,Calendar year,English devolved area,E92000001,England,,,,,,,,,,,E12000003,West Midlands,Total,Non-maintained early years,z,z,123,0.26666,123,0.26666
+2021,Calendar year,English devolved area,E92000001,England,,,,,,,,,,,E12000004,West Midlands,Total,Further education,z,z,7426,16.099,7426,16.09903
+2021,Calendar year,English devolved area,E92000001,England,,,,,,,,,,,E12000005,East of England,Total,Alternative provision/Pupil referral unit,z,z,425,0.88499,425,0.88499
+2021,Calendar year,English devolved area,E92000001,England,,,,,,,,,,,E12000006,North East,Total,Mainstream school,z,z,6304,31.0618,6304,31.06184
+2021,Calendar year,English devolved area,E92000001,England,,,,,,,,,,,E12000007,South West,Total,Special school,z,z,12993,30.8183,12993,30.81831
+2021,Calendar year,English devolved area,E92000001,England,,,,,,,,,,,E12000008,East Midlands,Total,Other,z,z,69,0.22623,69,0.22623
+2021,Calendar year,English devolved area,E92000001,England,,,,,,,,,,,E12000009,West Midlands,Total,Mainstream school,z,z,15078,32.688,15078,32.68801
+2021,Calendar year,English devolved area,E92000001,England,,,,,,,,,,,E12000010,London,Total,Other,z,z,395,0.54714,395,0.54714
+2021,Calendar year,English devolved area,E92000001,England,,,,,,,,,,,E12000011,Yorkshire and The Humber,Total,Educated elsewhere,z,z,1086,2.82034,1086,2.82034
+2021,Calendar year,English devolved area,E92000001,England,,,,,,,,,,,E12000012,South East,Total,Alternative provision/Pupil referral unit,z,z,334,0.4487,334,0.4487
+2021,Calendar year,English devolved area,E92000001,England,,,,,,,,,,,E12000013,North West,Total,Alternative provision/Pupil referral unit,z,z,449,0.76811,449,0.76811
+2021,Calendar year,English devolved area,E92000001,England,,,,,,,,,,,E12000014,West Midlands,Total,Other,z,z,216,0.46827,216,0.46827
+2021,Calendar year,English devolved area,E92000001,England,,,,,,,,,,,E12000015,London,Total,NEET,z,z,1170,1.62066,1170,1.62066
+2021,Calendar year,English devolved area,E92000001,England,,,,,,,,,,,E12000016,West Midlands,Total,Educated elsewhere,z,z,1704,3.69415,1704,3.69415
+2021,Calendar year,English devolved area,E92000001,England,,,,,,,,,,,E12000017,South East,Total,Non-maintained early years,z,z,274,0.36809,274,0.36809
+2021,Calendar year,English devolved area,E92000001,England,,,,,,,,,,,E12000018,East Midlands,Total,Further education,z,z,4748,15.5672,4748,15.56721
+2021,Calendar year,English devolved area,E92000001,England,,,,,,,,,,,E12000019,North West,Total,Special school,z,z,22792,38.9907,22792,38.99068
+2021,Calendar year,English devolved area,E92000001,England,,,,,,,,,,,E12000020,South West,Total,Non-maintained early years,z,z,247,0.58586,247,0.58586
+2021,Calendar year,English devolved area,E92000001,England,,,,,,,,,,,E12000021,North East,Total,NEET,z,z,720,3.54767,720,3.54767
+2021,Calendar year,English devolved area,E92000001,England,,,,,,,,,,,E12000022,South West,Total,Other,z,z,156,0.37002,156,0.37002
+2021,Calendar year,English devolved area,E92000001,England,,,,,,,,,,,E12000023,East Midlands,Total,Special school,z,z,11895,39,11895,39
+2021,Calendar year,English devolved area,E92000001,England,,,,,,,,,,,E12000024,East Midlands,Total,Non-maintained early years,z,z,213,0.69836,213,0.69836
+2021,Calendar year,English devolved area,E92000001,England,,,,,,,,,,,E12000025,East of England,Total,Non-maintained early years,z,z,311,0.64761,311,0.64761
+2021,Calendar year,Ward,E92000001,England,,,E05000026,Abbey,,,,,,,,,Total,Further education,z,z,6907,16.3828,6907,16.38283
+2021,Calendar year,Ward,E92000001,England,,,E05000027,Alibon,,,,,,,,,Total,NEET,z,z,1056,2.74243,1056,2.74243
+2021,Calendar year,Ward,E92000001,England,,,E05000028,Becontree,,,,,,,,,Total,Mainstream school,z,z,11348,37.2066,11348,37.20656
+2021,Calendar year,Ward,E92000001,England,,,E05000029,Chadwell Heath,,,,,,,,,Total,Mainstream school,z,z,34729,48.1058,34729,48.10577
+2021,Calendar year,Ward,E92000001,England,,,E05000030,Eastbrook,,,,,,,,,Total,Educated elsewhere,z,z,411,2.02513,411,2.02513
+2021,Calendar year,Ward,E92000001,England,,,E05000031,Eastbury,,,,,,,,,Total,Other,z,z,47,0.23158,47,0.23158
+2021,Calendar year,Ward,E92000001,England,,,E05000032,Gascoigne,,,,,,,,,Total,Educated elsewhere,z,z,1901,2.63322,1901,2.63322
+2021,Calendar year,Ward,E92000001,England,,,E05000033,Goresbrook,,,,,,,,,Total,Alternative provision/Pupil referral unit,z,z,275,0.59618,275,0.59618
+2021,Calendar year,Ward,E92000001,England,,,E05000034,Heath,,,,,,,,,Total,Alternative provision/Pupil referral unit,z,z,114,0.37377,114,0.37377
+2021,Calendar year,Ward,E92000001,England,,,E05000035,Longbridge,,,,,,,,,Total,Special school,z,z,27682,37.188,27682,37.188
+2021,Calendar year,Ward,E92000001,England,,,E05000036,Mayesbrook,,,,,,,,,Total,Special school,z,z,14802,30.8227,14802,30.82273
+2021,Calendar year,Ward,E92000001,England,,,E05000037,Parsloes,,,,,,,,,Total,Alternative provision/Pupil referral unit,z,z,447,1.06025,447,1.06025
+2021,Calendar year,Ward,E92000001,England,,,E05000038,River,,,,,,,,,Total,Further education,z,z,3533,17.4082,3533,17.40823
+2021,Calendar year,Ward,E92000001,England,,,E05000039,Thames,,,,,,,,,Total,Total,z,z,58455,100,58455,100
+2021,Calendar year,Ward,E92000001,England,,,E05000040,Valence,,,,,,,,,Total,Total,z,z,38506,100,38506,100
+2021,Calendar year,Ward,E92000001,England,,,E05000041,Village,,,,,,,,,Total,Total,z,z,30500,100,30500,100
+2021,Calendar year,Ward,E92000001,England,,,E05000042,Whalebone,,,,,,,,,Total,Total,z,z,46127,100,46127,100
+2021,Calendar year,Ward,E92000001,England,,,E05000043,Brunswick Park,,,,,,,,,Total,Total,z,z,48023,100,48023,100
+2021,Calendar year,Ward,E92000001,England,,,E05000044,Burnt Oak,,,,,,,,,Total,Total,z,z,72193,100,72193,100
+2021,Calendar year,Ward,E92000001,England,,,E05000045,Childs Hill,,,,,,,,,Total,Total,z,z,74438,100,74438,100
+2021,Calendar year,Ward,E92000001,England,,,E05000046,Colindale,,,,,,,,,Total,Non-maintained early years,z,z,79,0.38926,79,0.38926
+2021,Calendar year,Ward,E92000001,England,,,E05000047,Coppetts,,,,,,,,,Total,Educated elsewhere,z,z,3159,4.2438,3159,4.2438
+2021,Calendar year,Ward,E92000001,England,,,E05000048,East Barnet,,,,,,,,,Total,Educated elsewhere,z,z,1585,3.3005,1585,3.3005
+2021,Calendar year,Ward,E92000001,England,,,E05000049,East Finchley,,,,,,,,,Total,Non-maintained early years,z,z,243,0.63107,243,0.63107
+2021,Calendar year,Ward,E92000001,England,,,E05000050,Edgware,,,,,,,,,Total,Special school,z,z,19592,42.474,19592,42.47404
+2021,Calendar year,Ward,E92000001,England,,,E05000051,Finchley Church End,,,,,,,,,Total,Special school,z,z,22480,31.1388,22480,31.13875
+2021,Calendar year,Ward,E92000001,England,,,E05000052,Garden Suburb,,,,,,,,,Total,NEET,z,z,1048,2.18229,1048,2.18229
+2021,Calendar year,Ward,E92000001,England,,,E05000053,Golders Green,,,,,,,,,Total,NEET,z,z,1659,3.93501,1659,3.93501
+2021,Calendar year,Ward,E92000001,England,,,E05000054,Hale,,,,,,,,,Total,Other,z,z,175,0.45447,175,0.45447
+2021,Calendar year,Ward,E92000001,England,,,E05000055,Hendon,,,,,,,,,Total,Non-maintained early years,z,z,359,0.49728,359,0.49728
+2021,Calendar year,Ward,E92000001,England,,,E05000056,High Barnet,,,,,,,,,Total,Non-maintained early years,z,z,370,0.63297,370,0.63297
+2021,Calendar year,Ward,E92000001,England,,,E05000057,Mill Hill,,,,,,,,,Total,Special school,z,z,9079,44.7352,9079,44.73516
+2021,Calendar year,Ward,E92000001,England,,,E05000058,Oakleigh,,,,,,,,,Total,Alternative provision/Pupil referral unit,z,z,122,0.60113,122,0.60113
+2021,Calendar year,Ward,E92000001,England,,,E05000059,Totteridge,,,,,,,,,Total,Further education,z,z,13263,17.8175,13263,17.81751
+2021,Calendar year,Ward,E92000001,England,,,E05000060,Underhill,,,,,,,,,Total,Further education,z,z,8986,18.7119,8986,18.71187
+2021,Calendar year,Ward,E92000001,England,,,E05000061,West Finchley,,,,,,,,,Total,Other,z,z,161,0.21629,161,0.21629
+2021,Calendar year,Ward,E92000001,England,,,E05000062,West Hendon,,,,,,,,,Total,Further education,z,z,7307,18.9763,7307,18.97626
+2021,Calendar year,Ward,E92000001,England,,,E05000063,Woodhouse,,,,,,,,,Total,NEET,z,z,1260,1.69268,1260,1.69268
+2021,Calendar year,Ward,E92000001,England,,,E05000085,Alperton,,,,,,,,,Total,NEET,z,z,1624,2.77821,1624,2.77821
+2021,Calendar year,Ward,E92000001,England,,,E05000086,Barnhill,,,,,,,,,Total,Other,z,z,814,1.39252,814,1.39252
+2021,Calendar year,Ward,E92000001,England,,,E05000087,Brondesbury Park,,,,,,,,,Total,Alternative provision/Pupil referral unit,z,z,576,1.49587,576,1.49587
+2021,Calendar year,Ward,E92000001,England,,,E05000088,Dollis Hill,,,,,,,,,Total,Mainstream school,z,z,18044,42.7989,18044,42.79886
+2021,Calendar year,Ward,E92000001,England,,,E05000089,Dudden Hill,,,,,,,,,Total,Mainstream school,z,z,15361,39.8925,15361,39.89248
+2021,Calendar year,Ward,E92000001,England,,,E05000090,Fryent,,,,,,,,,Total,Further education,z,z,10662,14.7687,10662,14.76874
+2021,Calendar year,Ward,E92000001,England,,,E05000091,Harlesden,,,,,,,,,Total,Other,z,z,192,0.39981,192,0.39981
+2021,Calendar year,Ward,E92000001,England,,,E05000092,Kensal Green,,,,,,,,,Total,Mainstream school,z,z,22180,37.9437,22180,37.94372
+2021,Calendar year,Ward,E92000001,England,,,E05000093,Kenton,,,,,,,,,Total,Special school,z,z,12702,32.9871,12702,32.98707
+2021,Calendar year,Ward,E92000001,England,,,E05000094,Kilburn,,,,,,,,,Total,NEET,z,z,544,1.78361,544,1.78361
+2021,Calendar year,Ward,E92000001,England,,,E05000095,Mapesbury,,,,,,,,,Total,Mainstream school,z,z,28305,38.0249,28305,38.02493
+2021,Calendar year,Ward,E92000001,England,,,E05000096,Northwick Park,,,,,,,,,Total,Educated elsewhere,z,z,1569,5.14426,1569,5.14426
+2021,Calendar year,Ward,E92000001,England,,,E05000097,Preston,,,,,,,,,Total,Alternative provision/Pupil referral unit,z,z,497,0.68843,497,0.68843
+2021,Calendar year,Ward,E92000001,England,,,E05000098,Queens Park,,,,,,,,,Total,Further education,z,z,8896,15.2185,8896,15.21854
+2021,Calendar year,Ward,E92000001,England,,,E05000099,Queensbury,,,,,,,,,Total,Educated elsewhere,z,z,1330,2.27525,1330,2.27525
+2021,Calendar year,Ward,E92000001,England,,,E05000100,Stonebridge,,,,,,,,,Total,NEET,z,z,1713,3.71366,1713,3.71366
+2021,Calendar year,Ward,E92000001,England,,,E05000101,Sudbury,,,,,,,,,Total,Mainstream school,z,z,20674,43.0502,20674,43.05021
+2021,Calendar year,Ward,E92000001,England,,,E05000102,Tokyngton,,,,,,,,,Total,Educated elsewhere,z,z,1707,4.04886,1707,4.04886
+2021,Calendar year,Ward,E92000001,England,,,E05000103,Welsh Harp,,,,,,,,,Non-maintained early years,Non-maintained early years,z,z,79,0.38926,79,0.38926
+2021,Calendar year,Ward,E92000001,England,,,E05000104,Welsh Harp,,,,,,,,,Non-maintained early years,Non-maintained early years,z,z,370,0.63297,370,0.63297
+2021,Calendar year,Ward,E92000001,England,,,E05000105,Welsh Harp,,,,,,,,,Non-maintained early years,Non-maintained early years,z,z,243,0.63107,243,0.63107
+2021,Calendar year,Ward,E92000001,England,,,E05000106,Bickley,,,,,,,,,Non-maintained early years,Non-maintained early years,z,z,213,0.69836,213,0.69836
+2021,Calendar year,Ward,E92000001,England,,,E05000107,Biggin Hill,,,,,,,,,Non-maintained early years,Non-maintained early years,z,z,123,0.26666,123,0.26666

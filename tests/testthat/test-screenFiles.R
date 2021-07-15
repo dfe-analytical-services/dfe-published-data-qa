@@ -63,17 +63,23 @@ test_that("multipleFilterGroupStripped", {
 test_that("zLocationCode", {
   screeningOutput <- testOther("../../tests/testthat/otherData/adding_z_locationCode.csv")
 
-  expect_equal(screeningOutput$results %>% filter(result != "PASS") %>% nrow(), 0)
+  expect_equal(screeningOutput$results %>% filter(result == "FAIL") %>% nrow(), 0)
 })
 
 test_that("ladWithinLA", {
   screeningOutput <- testOther("../../tests/testthat/otherData/lad_within_la.csv")
 
-  expect_equal(screeningOutput$results %>% filter(result != "PASS") %>% nrow(), 0)
+  expect_equal(screeningOutput$results %>% filter(result == "FAIL") %>% nrow(), 0)
 })
 
 test_that("blankFilterGroupsMeta", {
   screeningOutput <- testOther("../../tests/testthat/otherData/blankFilterGroups.csv")
+
+  expect_equal(screeningOutput$results %>% filter(result == "FAIL") %>% nrow(), 0)
+})
+
+test_that("financialHalves", {
+  screeningOutput <- testOther("../../tests/testthat/otherData/financial_half.csv")
 
   expect_equal(screeningOutput$results %>% filter(result == "FAIL") %>% nrow(), 0)
 })
