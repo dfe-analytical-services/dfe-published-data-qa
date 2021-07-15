@@ -1,6 +1,6 @@
-![automatedTests](https://github.com/dfe-analytical-services/dfe-published-data-qa-shinyapp/workflows/automatedTests/badge.svg)
-![tidyCode](https://github.com/dfe-analytical-services/dfe-published-data-qa-shinyapp/workflows/tidyCode/badge.svg)
-
+[![automatedTests](https://github.com/dfe-analytical-services/dfe-published-data-qa/actions/workflows/automatedTests.yaml/badge.svg?branch=master)](https://github.com/dfe-analytical-services/dfe-published-data-qa/actions/workflows/automatedTests.yaml)
+[![tidyCode](https://github.com/dfe-analytical-services/dfe-published-data-qa/actions/workflows/tidyCode.yaml/badge.svg?branch=master)](https://github.com/dfe-analytical-services/dfe-published-data-qa/actions/workflows/tidyCode.yaml)
+[![deploy-shiny](https://github.com/dfe-analytical-services/dfe-published-data-qa/actions/workflows/shinyappsDeploy.yaml/badge.svg?branch=master)](https://github.com/dfe-analytical-services/dfe-published-data-qa/actions/workflows/shinyappsDeploy.yaml)
 
 <h1 align="center">
   <br>
