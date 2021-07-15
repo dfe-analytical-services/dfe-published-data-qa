@@ -57,6 +57,44 @@ mainTests <- function(data_character, meta_character, datafile, metafile) {
   )))
 }
 
+# variable_snake_case -------------------------------------
+# Checking datafile for whether the variable names are following snake case
+
+variable_snake_case <- function(data) {
+  data_spaces_check <- function(i) {
+    if (any(grepl("\\s", i))) {
+      return("FAIL")
+    } else {
+      return("PASS")
+    }
+  }
+
+  pre_result <- stack(sapply(names(data), data_spaces_check))
+
+  if (all(pre_result$values == "PASS")) {
+    output <- list(
+      "message" = "There are no spaces in the variable names in the datafile.",
+      "result" = "PASS"
+    )
+  } else {
+    failed_cols <- filter(pre_result, values == "FAIL") %>% pull(ind)
+
+    if (length(failed_cols) == 1) {
+      output <- list(
+        "message" = paste0("The following variable name has at least one space that needs removing: '", paste(failed_cols), "'."),
+        "result" = "FAIL"
+      )
+    } else {
+      output <- list(
+        "message" = paste0("The following variable names each have at least one space that needs removing: '", paste(failed_cols, collapse = "', '"), "'."),
+        "result" = "FAIL"
+      )
+    }
+  }
+
+  return(output)
+}
+
 # duplicate_rows -------------------------------------
 # Checking datafile for duplicate rows across ob. units and filters
 
