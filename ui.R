@@ -1,13 +1,33 @@
 fluidPage(
+
+  # Global ui calls and settings ------------------------------------------------------------------------------------  
+  
   theme = "acalat_theme.css",
 
   useShinyjs(),
   useShinyalert(),
   shinyFeedback::useShinyFeedback(),
+  
   # options(shiny.reactlog = TRUE),
 
   inlineCSS(appLoadingCSS), # set in global.r
 
+  # Setting custom disconnect message --------------------------------------------------------------------------------
+  
+  shinydisconnect::disconnectMessage(
+    text = "Something went wrong! Try refreshing the page. If this persists, please contact statistics.development@education.gov.uk with details of what you were trying to do.",
+    refresh = "Refresh page",
+    background = "#000000",
+    colour = "#FFFFFF",
+    refreshColour = "#337AB7",
+    overlayColour = "#000000",
+    overlayOpacity = 0.6,
+    width = "full",
+    top = "center",
+    size = 24,
+    css = ""
+  ),
+  
   # Initial loading screen -------------------------------------------------------------------------------------------
 
   div(

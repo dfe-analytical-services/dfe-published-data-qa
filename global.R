@@ -25,6 +25,7 @@ library(sparkline)
 library(config)
 library(rsconnect)
 library(shinyalert)
+library(shinydisconnect)
 
 # activeTestsInFile ---------------------------------------------------------------------------------
 # Extracting the active tests that are run against files
