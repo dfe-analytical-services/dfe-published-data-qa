@@ -4,6 +4,7 @@
 mainTests <- function(data_character, meta_character, datafile, metafile) {
   as_tibble(t(rbind(cbind(
     variable_snake_case(datafile), # active test
+    variable_start_letter(datafile), # active test
     duplicate_rows(datafile, metafile), # active test
     data_to_meta_crosscheck(datafile, metafile), # active test
     total(datafile, metafile), # active test
@@ -82,17 +83,44 @@ variable_snake_case <- function(data) {
       )
     }
   }
-  
+
   return(output)
 }
 
 # variable_start_letter ----------------------------------
-# Checking that no variables start with an underscore or number
+# Checking that no variables start with a lowercase letter
 
-# if(any(grepl("^(_|[0-9])", names(data)))) {
-#  output <-
-# }
+variable_start_letter <- function(data) {
+  start_character_validation <- function(variable) {
+    return(grepl("^(a-z])", variable))
+  }
 
+  invalid_variables <- sapply(names(data), start_character_validation) %>%
+    stack() %>%
+    filter(values == TRUE) %>%
+    pull(ind)
+
+  if (length(invalid_variables) == 0) {
+    output <- list(
+      "message" = "All variables in the data file start with a lowercase letter.",
+      "result" = "PASS"
+    )
+  } else {
+    if (length(invalid_variables) == 1) {
+      output <- list(
+        "message" = paste0("The following variable name starts with a character that isn't a lowercase letter: '", paste0(invalid_variables), "'. <br> - All variable names should start with a lowercase letter."),
+        "result" = "ADVISORY"
+      )
+    } else {
+      output <- list(
+        "message" = paste0("The following variable names start with a character that isn't a lowercase letter: '", paste0(invalid_variables, collapse = "', '"), "'. <br> - All variable names should start with a lowercase letter."),
+        "result" = "ADVISORY"
+      )
+    }
+  }
+
+  return(output)
+}
 
 # duplicate_rows -------------------------------------
 # Checking datafile for duplicate rows across ob. units and filters
