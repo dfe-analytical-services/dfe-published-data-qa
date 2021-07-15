@@ -2,6 +2,12 @@ context("mainTests")
 
 pathStart <- "mainTests/"
 
+# variable_snake_case -------------------------------------------------------------------------------------------------------
+
+test_that("variable_snake_case", {
+  expect_equal(testIndividualTest(pathStart, "variable_snake_case"), "ADVISORY")
+})
+
 # duplicate_rows -------------------------------------------------------------------------------------------------------
 
 test_that("duplicate_rows", {

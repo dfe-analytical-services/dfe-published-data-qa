@@ -3,6 +3,7 @@
 
 mainTests <- function(data_character, meta_character, datafile, metafile) {
   as_tibble(t(rbind(cbind(
+    variable_snake_case(datafile), # active test
     duplicate_rows(datafile, metafile), # active test
     data_to_meta_crosscheck(datafile, metafile), # active test
     total(datafile, metafile), # active test
@@ -61,39 +62,37 @@ mainTests <- function(data_character, meta_character, datafile, metafile) {
 # Checking datafile for whether the variable names are following snake case
 
 variable_snake_case <- function(data) {
-  data_spaces_check <- function(i) {
-    if (any(grepl("\\s", i))) {
-      return("FAIL")
-    } else {
-      return("PASS")
-    }
-  }
+  present_special_characters <- unique(unlist(str_split(gsub("[a-z0-9]|_|\\s", "", names(data)), ""), use.names = FALSE))
 
-  pre_result <- stack(sapply(names(data), data_spaces_check))
-
-  if (all(pre_result$values == "PASS")) {
+  if (length(present_special_characters) == 0) {
     output <- list(
-      "message" = "There are no spaces in the variable names in the datafile.",
+      "message" = "The variable names in the data file follow the snake_case convention.",
       "result" = "PASS"
     )
   } else {
-    failed_cols <- filter(pre_result, values == "FAIL") %>% pull(ind)
-
-    if (length(failed_cols) == 1) {
+    if (length(present_special_characters) == 1) {
       output <- list(
-        "message" = paste0("The following variable name has at least one space that needs removing: '", paste(failed_cols), "'."),
-        "result" = "FAIL"
+        "message" = paste0("The following invalid character was found in the variable names of the data file: ", paste0("'", present_special_characters, collapse = "', '"), "'. <br> - Variable names should follow the snake_case convention and only contain lowercase letters, underscores or numbers."),
+        "result" = "ADVISORY"
       )
     } else {
       output <- list(
-        "message" = paste0("The following variable names each have at least one space that needs removing: '", paste(failed_cols, collapse = "', '"), "'."),
-        "result" = "FAIL"
+        "message" = paste0("The following invalid characters were found in the variable names of the data file: ", paste0("'", present_special_characters, collapse = "', '"), "'. <br> - Variable names should follow the snake_case convention and only contain lowercase letters, underscores or numbers."),
+        "result" = "ADVISORY"
       )
     }
   }
-
+  
   return(output)
 }
+
+# variable_start_letter ----------------------------------
+# Checking that no variables start with an underscore or number
+
+# if(any(grepl("^(_|[0-9])", names(data)))) {
+#  output <-
+# }
+
 
 # duplicate_rows -------------------------------------
 # Checking datafile for duplicate rows across ob. units and filters
