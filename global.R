@@ -2,6 +2,10 @@
 
 options(shiny.maxRequestSize = 500 * 1024^2)
 
+# Sanitising error messages (to avoid revealing anything untoward)
+
+options(shiny.sanitize.errors = TRUE)
+
 # Library calls ---------------------------------------------------------------------------------
 
 library(shiny)
