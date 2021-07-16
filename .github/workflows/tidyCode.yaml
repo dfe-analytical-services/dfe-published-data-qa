@@ -39,7 +39,7 @@ jobs:
           key: ${{ runner.os }}-${{ hashFiles('.github/R-version') }}-1-${{ hashFiles('.github/depends.Rds') }}
           restore-keys: ${{ runner.os }}-${{ hashFiles('.github/R-version') }}-1-
 
-      - name: Cache packages
+      - name: Cache renv packages
         uses: actions/cache@v1
         with:
           path: ${{ env.RENV_PATHS_ROOT }}
