@@ -1,0 +1,1576 @@
+{
+  "output": {
+    "t_1": {
+      "x": {
+        "style": "bootstrap",
+        "filter": "none",
+        "data": [
+          [
+            "National",
+            "National",
+            "National",
+            "National",
+            "National"
+          ],
+          [
+            "num_schools",
+            "num_schools",
+            "num_schools",
+            "num_schools",
+            "num_schools"
+          ],
+          [
+            "min",
+            "max",
+            "average",
+            "count",
+            "suppressed"
+          ],
+          [
+            3348,
+            20053,
+            13368.7,
+            3,
+            0
+          ],
+          [
+            3369,
+            20092,
+            13394.7,
+            3,
+            0
+          ],
+          [
+            3371,
+            20107,
+            13404.7,
+            3,
+            0
+          ],
+          [
+            3365,
+            20104,
+            13402.7,
+            3,
+            0
+          ],
+          [
+            3382,
+            20121,
+            13414,
+            3,
+            0
+          ],
+          [
+            "3348,3369,3371,3365,3382",
+            "20053,20092,20107,20104,20121",
+            "13368.7,13394.7,13404.7,13402.7,13414",
+            "3,3,3,3,3",
+            "0,0,0,0,0"
+          ]
+        ],
+        "container": "<table class=\"table table-bordered\">\n  <thead>\n    <tr>\n      <th>geographic_level<\/th>\n      <th>indicator<\/th>\n      <th>measure<\/th>\n      <th>201314<\/th>\n      <th>201415<\/th>\n      <th>201516<\/th>\n      <th>201617<\/th>\n      <th>201718<\/th>\n      <th>Change<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>",
+        "options": {
+          "columnDefs": [
+            {
+              "targets": 8,
+              "render": "function(data, type, full){ return '<span class=sparkSamples>' + data + '<\/span>' }"
+            },
+            {
+              "className": "dt-right",
+              "targets": [
+                3,
+                4,
+                5,
+                6,
+                7
+              ]
+            }
+          ],
+          "fnDrawCallback": "function (oSettings, json) {\n  $('.sparkSamples:not(:has(canvas))').sparkline('html', { type: 'line', lineColor: '#c8c8c8', fillColor: '#e87421', width: '200px', height: '40px'});\n}\n",
+          "rowCallback": "function(row, data, num, index){\n  var $row = $(row);\n    $row.css('background-color', '#454b51');\n    $row.hover(function(){\n      $(this).css('background-color', '#6a737c');\n     }, function(){\n      $(this).css('background-color', '#454b51');\n     }\n    );\n}",
+          "dom": "t",
+          "ordering": false,
+          "initComplete": "function(settings, json) {\n$(this.api().table().header()).css({'background-color': '#232628', 'color': '#c8c8c8'});\n}",
+          "order": [
+
+          ],
+          "autoWidth": false,
+          "orderClasses": false
+        },
+        "selection": {
+          "mode": "multiple",
+          "selected": null,
+          "target": "row",
+          "selectable": null
+        }
+      },
+      "evals": [
+        "options.columnDefs.0.render",
+        "options.fnDrawCallback",
+        "options.rowCallback",
+        "options.initComplete"
+      ],
+      "jsHooks": [
+
+      ],
+      "deps": [
+        {
+          "name": "dt-core-bootstrap",
+          "version": "1.10.20",
+          "src": {
+            "href": "dt-core-bootstrap-1.10.20"
+          },
+          "meta": null,
+          "script": [
+            "js/jquery.dataTables.min.js",
+            "js/dataTables.bootstrap.min.js"
+          ],
+          "stylesheet": [
+            "css/dataTables.bootstrap.min.css",
+            "css/dataTables.bootstrap.extra.css"
+          ],
+          "head": null,
+          "attachment": null,
+          "package": null,
+          "all_files": false
+        },
+        {
+          "name": "jquery",
+          "version": "3.5.1",
+          "src": {
+            "href": "jquery-3.5.1"
+          },
+          "meta": null,
+          "script": "jquery.min.js",
+          "stylesheet": null,
+          "head": null,
+          "attachment": null,
+          "all_files": true
+        },
+        {
+          "name": "crosstalk",
+          "version": "1.1.1",
+          "src": {
+            "href": "crosstalk-1.1.1"
+          },
+          "meta": null,
+          "script": "js/crosstalk.min.js",
+          "stylesheet": "css/crosstalk.css",
+          "head": null,
+          "attachment": null,
+          "all_files": true
+        },
+        {
+          "name": "htmlwidgets",
+          "version": "1.5.3",
+          "src": {
+            "href": "htmlwidgets-1.5.3"
+          },
+          "meta": null,
+          "script": "htmlwidgets.js",
+          "stylesheet": null,
+          "head": null,
+          "attachment": null,
+          "package": null,
+          "all_files": true
+        },
+        {
+          "name": "jquery-sparkline",
+          "version": "2.1.2",
+          "src": {
+            "href": "jquery-sparkline-2.1.2"
+          },
+          "meta": null,
+          "script": "jquery.sparkline.js",
+          "stylesheet": "jquery.sparkline.css",
+          "head": null,
+          "attachment": null,
+          "package": null,
+          "all_files": true
+        },
+        {
+          "name": "sparkline-binding",
+          "version": "2.0",
+          "src": {
+            "href": "sparkline-binding-2.0"
+          },
+          "meta": null,
+          "script": "sparkline.js",
+          "stylesheet": null,
+          "head": null,
+          "attachment": null,
+          "package": null,
+          "all_files": false
+        }
+      ]
+    },
+    "t_2": {
+      "x": {
+        "style": "bootstrap",
+        "filter": "none",
+        "data": [
+          [
+            "National",
+            "National",
+            "National",
+            "National",
+            "National"
+          ],
+          [
+            "enrolments",
+            "enrolments",
+            "enrolments",
+            "enrolments",
+            "enrolments"
+          ],
+          [
+            "min",
+            "max",
+            "average",
+            "count",
+            "suppressed"
+          ],
+          [
+            2757971,
+            6385956,
+            4257304,
+            3,
+            0
+          ],
+          [
+            2779710,
+            6493484,
+            4328989.3,
+            3,
+            0
+          ],
+          [
+            2817406,
+            6613548,
+            4409032,
+            3,
+            0
+          ],
+          [
+            2869418,
+            6727336,
+            4484890.7,
+            3,
+            0
+          ],
+          [
+            2949285,
+            6835059,
+            4556706,
+            3,
+            0
+          ],
+          [
+            "2757971,2779710,2817406,2869418,2949285",
+            "6385956,6493484,6613548,6727336,6835059",
+            "4257304,4328989.3,4409032,4484890.7,4556706",
+            "3,3,3,3,3",
+            "0,0,0,0,0"
+          ]
+        ],
+        "container": "<table class=\"table table-bordered\">\n  <thead>\n    <tr>\n      <th>geographic_level<\/th>\n      <th>indicator<\/th>\n      <th>measure<\/th>\n      <th>201314<\/th>\n      <th>201415<\/th>\n      <th>201516<\/th>\n      <th>201617<\/th>\n      <th>201718<\/th>\n      <th>Change<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>",
+        "options": {
+          "columnDefs": [
+            {
+              "targets": 8,
+              "render": "function(data, type, full){ return '<span class=sparkSamples>' + data + '<\/span>' }"
+            },
+            {
+              "className": "dt-right",
+              "targets": [
+                3,
+                4,
+                5,
+                6,
+                7
+              ]
+            }
+          ],
+          "fnDrawCallback": "function (oSettings, json) {\n  $('.sparkSamples:not(:has(canvas))').sparkline('html', { type: 'line', lineColor: '#c8c8c8', fillColor: '#e87421', width: '200px', height: '40px'});\n}\n",
+          "rowCallback": "function(row, data, num, index){\n  var $row = $(row);\n    $row.css('background-color', '#454b51');\n    $row.hover(function(){\n      $(this).css('background-color', '#6a737c');\n     }, function(){\n      $(this).css('background-color', '#454b51');\n     }\n    );\n}",
+          "dom": "t",
+          "ordering": false,
+          "initComplete": "function(settings, json) {\n$(this.api().table().header()).css({'background-color': '#232628', 'color': '#c8c8c8'});\n}",
+          "order": [
+
+          ],
+          "autoWidth": false,
+          "orderClasses": false
+        },
+        "selection": {
+          "mode": "multiple",
+          "selected": null,
+          "target": "row",
+          "selectable": null
+        }
+      },
+      "evals": [
+        "options.columnDefs.0.render",
+        "options.fnDrawCallback",
+        "options.rowCallback",
+        "options.initComplete"
+      ],
+      "jsHooks": [
+
+      ],
+      "deps": [
+        {
+          "name": "dt-core-bootstrap",
+          "version": "1.10.20",
+          "src": {
+            "href": "dt-core-bootstrap-1.10.20"
+          },
+          "meta": null,
+          "script": [
+            "js/jquery.dataTables.min.js",
+            "js/dataTables.bootstrap.min.js"
+          ],
+          "stylesheet": [
+            "css/dataTables.bootstrap.min.css",
+            "css/dataTables.bootstrap.extra.css"
+          ],
+          "head": null,
+          "attachment": null,
+          "package": null,
+          "all_files": false
+        },
+        {
+          "name": "jquery",
+          "version": "3.5.1",
+          "src": {
+            "href": "jquery-3.5.1"
+          },
+          "meta": null,
+          "script": "jquery.min.js",
+          "stylesheet": null,
+          "head": null,
+          "attachment": null,
+          "all_files": true
+        },
+        {
+          "name": "crosstalk",
+          "version": "1.1.1",
+          "src": {
+            "href": "crosstalk-1.1.1"
+          },
+          "meta": null,
+          "script": "js/crosstalk.min.js",
+          "stylesheet": "css/crosstalk.css",
+          "head": null,
+          "attachment": null,
+          "all_files": true
+        },
+        {
+          "name": "htmlwidgets",
+          "version": "1.5.3",
+          "src": {
+            "href": "htmlwidgets-1.5.3"
+          },
+          "meta": null,
+          "script": "htmlwidgets.js",
+          "stylesheet": null,
+          "head": null,
+          "attachment": null,
+          "package": null,
+          "all_files": true
+        },
+        {
+          "name": "jquery-sparkline",
+          "version": "2.1.2",
+          "src": {
+            "href": "jquery-sparkline-2.1.2"
+          },
+          "meta": null,
+          "script": "jquery.sparkline.js",
+          "stylesheet": "jquery.sparkline.css",
+          "head": null,
+          "attachment": null,
+          "package": null,
+          "all_files": true
+        },
+        {
+          "name": "sparkline-binding",
+          "version": "2.0",
+          "src": {
+            "href": "sparkline-binding-2.0"
+          },
+          "meta": null,
+          "script": "sparkline.js",
+          "stylesheet": null,
+          "head": null,
+          "attachment": null,
+          "package": null,
+          "all_files": false
+        }
+      ]
+    },
+    "t_3": {
+      "x": {
+        "style": "bootstrap",
+        "filter": "none",
+        "data": [
+          [
+            "Regional",
+            "Regional",
+            "Regional",
+            "Regional",
+            "Regional"
+          ],
+          [
+            "num_schools",
+            "num_schools",
+            "num_schools",
+            "num_schools",
+            "num_schools"
+          ],
+          [
+            "min",
+            "max",
+            "average",
+            "count",
+            "suppressed"
+          ],
+          [
+            172,
+            3087,
+            1336.9,
+            30,
+            0
+          ],
+          [
+            172,
+            3096,
+            1339.5,
+            30,
+            0
+          ],
+          [
+            177,
+            3095,
+            1340.5,
+            30,
+            0
+          ],
+          [
+            175,
+            3094,
+            1340.3,
+            30,
+            0
+          ],
+          [
+            175,
+            3097,
+            1341.4,
+            30,
+            0
+          ],
+          [
+            "172,172,177,175,175",
+            "3087,3096,3095,3094,3097",
+            "1336.9,1339.5,1340.5,1340.3,1341.4",
+            "30,30,30,30,30",
+            "0,0,0,0,0"
+          ]
+        ],
+        "container": "<table class=\"table table-bordered\">\n  <thead>\n    <tr>\n      <th>geographic_level<\/th>\n      <th>indicator<\/th>\n      <th>measure<\/th>\n      <th>201314<\/th>\n      <th>201415<\/th>\n      <th>201516<\/th>\n      <th>201617<\/th>\n      <th>201718<\/th>\n      <th>Change<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>",
+        "options": {
+          "columnDefs": [
+            {
+              "targets": 8,
+              "render": "function(data, type, full){ return '<span class=sparkSamples>' + data + '<\/span>' }"
+            },
+            {
+              "className": "dt-right",
+              "targets": [
+                3,
+                4,
+                5,
+                6,
+                7
+              ]
+            }
+          ],
+          "fnDrawCallback": "function (oSettings, json) {\n  $('.sparkSamples:not(:has(canvas))').sparkline('html', { type: 'line', lineColor: '#c8c8c8', fillColor: '#e87421', width: '200px', height: '40px'});\n}\n",
+          "rowCallback": "function(row, data, num, index){\n  var $row = $(row);\n    $row.css('background-color', '#454b51');\n    $row.hover(function(){\n      $(this).css('background-color', '#6a737c');\n     }, function(){\n      $(this).css('background-color', '#454b51');\n     }\n    );\n}",
+          "dom": "t",
+          "ordering": false,
+          "initComplete": "function(settings, json) {\n$(this.api().table().header()).css({'background-color': '#232628', 'color': '#c8c8c8'});\n}",
+          "order": [
+
+          ],
+          "autoWidth": false,
+          "orderClasses": false
+        },
+        "selection": {
+          "mode": "multiple",
+          "selected": null,
+          "target": "row",
+          "selectable": null
+        }
+      },
+      "evals": [
+        "options.columnDefs.0.render",
+        "options.fnDrawCallback",
+        "options.rowCallback",
+        "options.initComplete"
+      ],
+      "jsHooks": [
+
+      ],
+      "deps": [
+        {
+          "name": "dt-core-bootstrap",
+          "version": "1.10.20",
+          "src": {
+            "href": "dt-core-bootstrap-1.10.20"
+          },
+          "meta": null,
+          "script": [
+            "js/jquery.dataTables.min.js",
+            "js/dataTables.bootstrap.min.js"
+          ],
+          "stylesheet": [
+            "css/dataTables.bootstrap.min.css",
+            "css/dataTables.bootstrap.extra.css"
+          ],
+          "head": null,
+          "attachment": null,
+          "package": null,
+          "all_files": false
+        },
+        {
+          "name": "jquery",
+          "version": "3.5.1",
+          "src": {
+            "href": "jquery-3.5.1"
+          },
+          "meta": null,
+          "script": "jquery.min.js",
+          "stylesheet": null,
+          "head": null,
+          "attachment": null,
+          "all_files": true
+        },
+        {
+          "name": "crosstalk",
+          "version": "1.1.1",
+          "src": {
+            "href": "crosstalk-1.1.1"
+          },
+          "meta": null,
+          "script": "js/crosstalk.min.js",
+          "stylesheet": "css/crosstalk.css",
+          "head": null,
+          "attachment": null,
+          "all_files": true
+        },
+        {
+          "name": "htmlwidgets",
+          "version": "1.5.3",
+          "src": {
+            "href": "htmlwidgets-1.5.3"
+          },
+          "meta": null,
+          "script": "htmlwidgets.js",
+          "stylesheet": null,
+          "head": null,
+          "attachment": null,
+          "package": null,
+          "all_files": true
+        },
+        {
+          "name": "jquery-sparkline",
+          "version": "2.1.2",
+          "src": {
+            "href": "jquery-sparkline-2.1.2"
+          },
+          "meta": null,
+          "script": "jquery.sparkline.js",
+          "stylesheet": "jquery.sparkline.css",
+          "head": null,
+          "attachment": null,
+          "package": null,
+          "all_files": true
+        },
+        {
+          "name": "sparkline-binding",
+          "version": "2.0",
+          "src": {
+            "href": "sparkline-binding-2.0"
+          },
+          "meta": null,
+          "script": "sparkline.js",
+          "stylesheet": null,
+          "head": null,
+          "attachment": null,
+          "package": null,
+          "all_files": false
+        }
+      ]
+    },
+    "t_4": {
+      "x": {
+        "style": "bootstrap",
+        "filter": "none",
+        "data": [
+          [
+            "Regional",
+            "Regional",
+            "Regional",
+            "Regional",
+            "Regional"
+          ],
+          [
+            "enrolments",
+            "enrolments",
+            "enrolments",
+            "enrolments",
+            "enrolments"
+          ],
+          [
+            "min",
+            "max",
+            "average",
+            "count",
+            "suppressed"
+          ],
+          [
+            134301,
+            1009867,
+            425730.4,
+            30,
+            0
+          ],
+          [
+            137730,
+            1025288,
+            432898.9,
+            30,
+            0
+          ],
+          [
+            138277,
+            1045173,
+            440903.2,
+            30,
+            0
+          ],
+          [
+            140039,
+            1063153,
+            448489.1,
+            30,
+            0
+          ],
+          [
+            142537,
+            1081715,
+            455670.6,
+            30,
+            0
+          ],
+          [
+            "134301,137730,138277,140039,142537",
+            "1009867,1025288,1045173,1063153,1081715",
+            "425730.4,432898.9,440903.2,448489.1,455670.6",
+            "30,30,30,30,30",
+            "0,0,0,0,0"
+          ]
+        ],
+        "container": "<table class=\"table table-bordered\">\n  <thead>\n    <tr>\n      <th>geographic_level<\/th>\n      <th>indicator<\/th>\n      <th>measure<\/th>\n      <th>201314<\/th>\n      <th>201415<\/th>\n      <th>201516<\/th>\n      <th>201617<\/th>\n      <th>201718<\/th>\n      <th>Change<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>",
+        "options": {
+          "columnDefs": [
+            {
+              "targets": 8,
+              "render": "function(data, type, full){ return '<span class=sparkSamples>' + data + '<\/span>' }"
+            },
+            {
+              "className": "dt-right",
+              "targets": [
+                3,
+                4,
+                5,
+                6,
+                7
+              ]
+            }
+          ],
+          "fnDrawCallback": "function (oSettings, json) {\n  $('.sparkSamples:not(:has(canvas))').sparkline('html', { type: 'line', lineColor: '#c8c8c8', fillColor: '#e87421', width: '200px', height: '40px'});\n}\n",
+          "rowCallback": "function(row, data, num, index){\n  var $row = $(row);\n    $row.css('background-color', '#454b51');\n    $row.hover(function(){\n      $(this).css('background-color', '#6a737c');\n     }, function(){\n      $(this).css('background-color', '#454b51');\n     }\n    );\n}",
+          "dom": "t",
+          "ordering": false,
+          "initComplete": "function(settings, json) {\n$(this.api().table().header()).css({'background-color': '#232628', 'color': '#c8c8c8'});\n}",
+          "order": [
+
+          ],
+          "autoWidth": false,
+          "orderClasses": false
+        },
+        "selection": {
+          "mode": "multiple",
+          "selected": null,
+          "target": "row",
+          "selectable": null
+        }
+      },
+      "evals": [
+        "options.columnDefs.0.render",
+        "options.fnDrawCallback",
+        "options.rowCallback",
+        "options.initComplete"
+      ],
+      "jsHooks": [
+
+      ],
+      "deps": [
+        {
+          "name": "dt-core-bootstrap",
+          "version": "1.10.20",
+          "src": {
+            "href": "dt-core-bootstrap-1.10.20"
+          },
+          "meta": null,
+          "script": [
+            "js/jquery.dataTables.min.js",
+            "js/dataTables.bootstrap.min.js"
+          ],
+          "stylesheet": [
+            "css/dataTables.bootstrap.min.css",
+            "css/dataTables.bootstrap.extra.css"
+          ],
+          "head": null,
+          "attachment": null,
+          "package": null,
+          "all_files": false
+        },
+        {
+          "name": "jquery",
+          "version": "3.5.1",
+          "src": {
+            "href": "jquery-3.5.1"
+          },
+          "meta": null,
+          "script": "jquery.min.js",
+          "stylesheet": null,
+          "head": null,
+          "attachment": null,
+          "all_files": true
+        },
+        {
+          "name": "crosstalk",
+          "version": "1.1.1",
+          "src": {
+            "href": "crosstalk-1.1.1"
+          },
+          "meta": null,
+          "script": "js/crosstalk.min.js",
+          "stylesheet": "css/crosstalk.css",
+          "head": null,
+          "attachment": null,
+          "all_files": true
+        },
+        {
+          "name": "htmlwidgets",
+          "version": "1.5.3",
+          "src": {
+            "href": "htmlwidgets-1.5.3"
+          },
+          "meta": null,
+          "script": "htmlwidgets.js",
+          "stylesheet": null,
+          "head": null,
+          "attachment": null,
+          "package": null,
+          "all_files": true
+        },
+        {
+          "name": "jquery-sparkline",
+          "version": "2.1.2",
+          "src": {
+            "href": "jquery-sparkline-2.1.2"
+          },
+          "meta": null,
+          "script": "jquery.sparkline.js",
+          "stylesheet": "jquery.sparkline.css",
+          "head": null,
+          "attachment": null,
+          "package": null,
+          "all_files": true
+        },
+        {
+          "name": "sparkline-binding",
+          "version": "2.0",
+          "src": {
+            "href": "sparkline-binding-2.0"
+          },
+          "meta": null,
+          "script": "sparkline.js",
+          "stylesheet": null,
+          "head": null,
+          "attachment": null,
+          "package": null,
+          "all_files": false
+        }
+      ]
+    },
+    "t_5": {
+      "x": {
+        "style": "bootstrap",
+        "filter": "none",
+        "data": [
+          [
+            "Local authority",
+            "Local authority",
+            "Local authority",
+            "Local authority",
+            "Local authority"
+          ],
+          [
+            "num_schools",
+            "num_schools",
+            "num_schools",
+            "num_schools",
+            "num_schools"
+          ],
+          [
+            "min",
+            "max",
+            "average",
+            "count",
+            "suppressed"
+          ],
+          [
+            8,
+            528,
+            95.9,
+            42,
+            0
+          ],
+          [
+            9,
+            527,
+            95.6,
+            42,
+            0
+          ],
+          [
+            9,
+            526,
+            96,
+            42,
+            0
+          ],
+          [
+            9,
+            524,
+            96.2,
+            42,
+            0
+          ],
+          [
+            9,
+            523,
+            96.1,
+            42,
+            0
+          ],
+          [
+            "8,9,9,9,9",
+            "528,527,526,524,523",
+            "95.9,95.6,96,96.2,96.1",
+            "42,42,42,42,42",
+            "0,0,0,0,0"
+          ]
+        ],
+        "container": "<table class=\"table table-bordered\">\n  <thead>\n    <tr>\n      <th>geographic_level<\/th>\n      <th>indicator<\/th>\n      <th>measure<\/th>\n      <th>201314<\/th>\n      <th>201415<\/th>\n      <th>201516<\/th>\n      <th>201617<\/th>\n      <th>201718<\/th>\n      <th>Change<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>",
+        "options": {
+          "columnDefs": [
+            {
+              "targets": 8,
+              "render": "function(data, type, full){ return '<span class=sparkSamples>' + data + '<\/span>' }"
+            },
+            {
+              "className": "dt-right",
+              "targets": [
+                3,
+                4,
+                5,
+                6,
+                7
+              ]
+            }
+          ],
+          "fnDrawCallback": "function (oSettings, json) {\n  $('.sparkSamples:not(:has(canvas))').sparkline('html', { type: 'line', lineColor: '#c8c8c8', fillColor: '#e87421', width: '200px', height: '40px'});\n}\n",
+          "rowCallback": "function(row, data, num, index){\n  var $row = $(row);\n    $row.css('background-color', '#454b51');\n    $row.hover(function(){\n      $(this).css('background-color', '#6a737c');\n     }, function(){\n      $(this).css('background-color', '#454b51');\n     }\n    );\n}",
+          "dom": "t",
+          "ordering": false,
+          "initComplete": "function(settings, json) {\n$(this.api().table().header()).css({'background-color': '#232628', 'color': '#c8c8c8'});\n}",
+          "order": [
+
+          ],
+          "autoWidth": false,
+          "orderClasses": false
+        },
+        "selection": {
+          "mode": "multiple",
+          "selected": null,
+          "target": "row",
+          "selectable": null
+        }
+      },
+      "evals": [
+        "options.columnDefs.0.render",
+        "options.fnDrawCallback",
+        "options.rowCallback",
+        "options.initComplete"
+      ],
+      "jsHooks": [
+
+      ],
+      "deps": [
+        {
+          "name": "dt-core-bootstrap",
+          "version": "1.10.20",
+          "src": {
+            "href": "dt-core-bootstrap-1.10.20"
+          },
+          "meta": null,
+          "script": [
+            "js/jquery.dataTables.min.js",
+            "js/dataTables.bootstrap.min.js"
+          ],
+          "stylesheet": [
+            "css/dataTables.bootstrap.min.css",
+            "css/dataTables.bootstrap.extra.css"
+          ],
+          "head": null,
+          "attachment": null,
+          "package": null,
+          "all_files": false
+        },
+        {
+          "name": "jquery",
+          "version": "3.5.1",
+          "src": {
+            "href": "jquery-3.5.1"
+          },
+          "meta": null,
+          "script": "jquery.min.js",
+          "stylesheet": null,
+          "head": null,
+          "attachment": null,
+          "all_files": true
+        },
+        {
+          "name": "crosstalk",
+          "version": "1.1.1",
+          "src": {
+            "href": "crosstalk-1.1.1"
+          },
+          "meta": null,
+          "script": "js/crosstalk.min.js",
+          "stylesheet": "css/crosstalk.css",
+          "head": null,
+          "attachment": null,
+          "all_files": true
+        },
+        {
+          "name": "htmlwidgets",
+          "version": "1.5.3",
+          "src": {
+            "href": "htmlwidgets-1.5.3"
+          },
+          "meta": null,
+          "script": "htmlwidgets.js",
+          "stylesheet": null,
+          "head": null,
+          "attachment": null,
+          "package": null,
+          "all_files": true
+        },
+        {
+          "name": "jquery-sparkline",
+          "version": "2.1.2",
+          "src": {
+            "href": "jquery-sparkline-2.1.2"
+          },
+          "meta": null,
+          "script": "jquery.sparkline.js",
+          "stylesheet": "jquery.sparkline.css",
+          "head": null,
+          "attachment": null,
+          "package": null,
+          "all_files": true
+        },
+        {
+          "name": "sparkline-binding",
+          "version": "2.0",
+          "src": {
+            "href": "sparkline-binding-2.0"
+          },
+          "meta": null,
+          "script": "sparkline.js",
+          "stylesheet": null,
+          "head": null,
+          "attachment": null,
+          "package": null,
+          "all_files": false
+        }
+      ]
+    },
+    "t_6": {
+      "x": {
+        "style": "bootstrap",
+        "filter": "none",
+        "data": [
+          [
+            "Local authority",
+            "Local authority",
+            "Local authority",
+            "Local authority",
+            "Local authority"
+          ],
+          [
+            "enrolments",
+            "enrolments",
+            "enrolments",
+            "enrolments",
+            "enrolments"
+          ],
+          [
+            "min",
+            "max",
+            "average",
+            "count",
+            "suppressed"
+          ],
+          [
+            5512,
+            168486,
+            30195.8,
+            42,
+            0
+          ],
+          [
+            5702,
+            170657,
+            30612.5,
+            42,
+            0
+          ],
+          [
+            5816,
+            174054,
+            31171.3,
+            42,
+            0
+          ],
+          [
+            6097,
+            176066,
+            31627.5,
+            42,
+            0
+          ],
+          [
+            6457,
+            178460,
+            32049,
+            42,
+            0
+          ],
+          [
+            "5512,5702,5816,6097,6457",
+            "168486,170657,174054,176066,178460",
+            "30195.8,30612.5,31171.3,31627.5,32049",
+            "42,42,42,42,42",
+            "0,0,0,0,0"
+          ]
+        ],
+        "container": "<table class=\"table table-bordered\">\n  <thead>\n    <tr>\n      <th>geographic_level<\/th>\n      <th>indicator<\/th>\n      <th>measure<\/th>\n      <th>201314<\/th>\n      <th>201415<\/th>\n      <th>201516<\/th>\n      <th>201617<\/th>\n      <th>201718<\/th>\n      <th>Change<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>",
+        "options": {
+          "columnDefs": [
+            {
+              "targets": 8,
+              "render": "function(data, type, full){ return '<span class=sparkSamples>' + data + '<\/span>' }"
+            },
+            {
+              "className": "dt-right",
+              "targets": [
+                3,
+                4,
+                5,
+                6,
+                7
+              ]
+            }
+          ],
+          "fnDrawCallback": "function (oSettings, json) {\n  $('.sparkSamples:not(:has(canvas))').sparkline('html', { type: 'line', lineColor: '#c8c8c8', fillColor: '#e87421', width: '200px', height: '40px'});\n}\n",
+          "rowCallback": "function(row, data, num, index){\n  var $row = $(row);\n    $row.css('background-color', '#454b51');\n    $row.hover(function(){\n      $(this).css('background-color', '#6a737c');\n     }, function(){\n      $(this).css('background-color', '#454b51');\n     }\n    );\n}",
+          "dom": "t",
+          "ordering": false,
+          "initComplete": "function(settings, json) {\n$(this.api().table().header()).css({'background-color': '#232628', 'color': '#c8c8c8'});\n}",
+          "order": [
+
+          ],
+          "autoWidth": false,
+          "orderClasses": false
+        },
+        "selection": {
+          "mode": "multiple",
+          "selected": null,
+          "target": "row",
+          "selectable": null
+        }
+      },
+      "evals": [
+        "options.columnDefs.0.render",
+        "options.fnDrawCallback",
+        "options.rowCallback",
+        "options.initComplete"
+      ],
+      "jsHooks": [
+
+      ],
+      "deps": [
+        {
+          "name": "dt-core-bootstrap",
+          "version": "1.10.20",
+          "src": {
+            "href": "dt-core-bootstrap-1.10.20"
+          },
+          "meta": null,
+          "script": [
+            "js/jquery.dataTables.min.js",
+            "js/dataTables.bootstrap.min.js"
+          ],
+          "stylesheet": [
+            "css/dataTables.bootstrap.min.css",
+            "css/dataTables.bootstrap.extra.css"
+          ],
+          "head": null,
+          "attachment": null,
+          "package": null,
+          "all_files": false
+        },
+        {
+          "name": "jquery",
+          "version": "3.5.1",
+          "src": {
+            "href": "jquery-3.5.1"
+          },
+          "meta": null,
+          "script": "jquery.min.js",
+          "stylesheet": null,
+          "head": null,
+          "attachment": null,
+          "all_files": true
+        },
+        {
+          "name": "crosstalk",
+          "version": "1.1.1",
+          "src": {
+            "href": "crosstalk-1.1.1"
+          },
+          "meta": null,
+          "script": "js/crosstalk.min.js",
+          "stylesheet": "css/crosstalk.css",
+          "head": null,
+          "attachment": null,
+          "all_files": true
+        },
+        {
+          "name": "htmlwidgets",
+          "version": "1.5.3",
+          "src": {
+            "href": "htmlwidgets-1.5.3"
+          },
+          "meta": null,
+          "script": "htmlwidgets.js",
+          "stylesheet": null,
+          "head": null,
+          "attachment": null,
+          "package": null,
+          "all_files": true
+        },
+        {
+          "name": "jquery-sparkline",
+          "version": "2.1.2",
+          "src": {
+            "href": "jquery-sparkline-2.1.2"
+          },
+          "meta": null,
+          "script": "jquery.sparkline.js",
+          "stylesheet": "jquery.sparkline.css",
+          "head": null,
+          "attachment": null,
+          "package": null,
+          "all_files": true
+        },
+        {
+          "name": "sparkline-binding",
+          "version": "2.0",
+          "src": {
+            "href": "sparkline-binding-2.0"
+          },
+          "meta": null,
+          "script": "sparkline.js",
+          "stylesheet": null,
+          "head": null,
+          "attachment": null,
+          "package": null,
+          "all_files": false
+        }
+      ]
+    },
+    "t_7": {
+      "x": {
+        "style": "bootstrap",
+        "filter": "none",
+        "data": [
+          [
+            "Local authority district",
+            "Local authority district",
+            "Local authority district",
+            "Local authority district",
+            "Local authority district"
+          ],
+          [
+            "num_schools",
+            "num_schools",
+            "num_schools",
+            "num_schools",
+            "num_schools"
+          ],
+          [
+            "min",
+            "max",
+            "average",
+            "count",
+            "suppressed"
+          ],
+          [
+            -134,
+            -134,
+            -134,
+            1,
+            0
+          ],
+          [
+            "-134",
+            "-134",
+            "-134",
+            "1",
+            "0"
+          ]
+        ],
+        "container": "<table class=\"table table-bordered\">\n  <thead>\n    <tr>\n      <th>geographic_level<\/th>\n      <th>indicator<\/th>\n      <th>measure<\/th>\n      <th>201314<\/th>\n      <th>Change<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>",
+        "options": {
+          "columnDefs": [
+            {
+              "targets": 4,
+              "render": "function(data, type, full){ return '<span class=sparkSamples>' + data + '<\/span>' }"
+            },
+            {
+              "className": "dt-right",
+              "targets": 3
+            }
+          ],
+          "fnDrawCallback": "function (oSettings, json) {\n  $('.sparkSamples:not(:has(canvas))').sparkline('html', { type: 'line', lineColor: '#c8c8c8', fillColor: '#e87421', width: '200px', height: '40px'});\n}\n",
+          "rowCallback": "function(row, data, num, index){\n  var $row = $(row);\n    $row.css('background-color', '#454b51');\n    $row.hover(function(){\n      $(this).css('background-color', '#6a737c');\n     }, function(){\n      $(this).css('background-color', '#454b51');\n     }\n    );\n}",
+          "dom": "t",
+          "ordering": false,
+          "initComplete": "function(settings, json) {\n$(this.api().table().header()).css({'background-color': '#232628', 'color': '#c8c8c8'});\n}",
+          "order": [
+
+          ],
+          "autoWidth": false,
+          "orderClasses": false
+        },
+        "selection": {
+          "mode": "multiple",
+          "selected": null,
+          "target": "row",
+          "selectable": null
+        }
+      },
+      "evals": [
+        "options.columnDefs.0.render",
+        "options.fnDrawCallback",
+        "options.rowCallback",
+        "options.initComplete"
+      ],
+      "jsHooks": [
+
+      ],
+      "deps": [
+        {
+          "name": "dt-core-bootstrap",
+          "version": "1.10.20",
+          "src": {
+            "href": "dt-core-bootstrap-1.10.20"
+          },
+          "meta": null,
+          "script": [
+            "js/jquery.dataTables.min.js",
+            "js/dataTables.bootstrap.min.js"
+          ],
+          "stylesheet": [
+            "css/dataTables.bootstrap.min.css",
+            "css/dataTables.bootstrap.extra.css"
+          ],
+          "head": null,
+          "attachment": null,
+          "package": null,
+          "all_files": false
+        },
+        {
+          "name": "jquery",
+          "version": "3.5.1",
+          "src": {
+            "href": "jquery-3.5.1"
+          },
+          "meta": null,
+          "script": "jquery.min.js",
+          "stylesheet": null,
+          "head": null,
+          "attachment": null,
+          "all_files": true
+        },
+        {
+          "name": "crosstalk",
+          "version": "1.1.1",
+          "src": {
+            "href": "crosstalk-1.1.1"
+          },
+          "meta": null,
+          "script": "js/crosstalk.min.js",
+          "stylesheet": "css/crosstalk.css",
+          "head": null,
+          "attachment": null,
+          "all_files": true
+        },
+        {
+          "name": "htmlwidgets",
+          "version": "1.5.3",
+          "src": {
+            "href": "htmlwidgets-1.5.3"
+          },
+          "meta": null,
+          "script": "htmlwidgets.js",
+          "stylesheet": null,
+          "head": null,
+          "attachment": null,
+          "package": null,
+          "all_files": true
+        },
+        {
+          "name": "jquery-sparkline",
+          "version": "2.1.2",
+          "src": {
+            "href": "jquery-sparkline-2.1.2"
+          },
+          "meta": null,
+          "script": "jquery.sparkline.js",
+          "stylesheet": "jquery.sparkline.css",
+          "head": null,
+          "attachment": null,
+          "package": null,
+          "all_files": true
+        },
+        {
+          "name": "sparkline-binding",
+          "version": "2.0",
+          "src": {
+            "href": "sparkline-binding-2.0"
+          },
+          "meta": null,
+          "script": "sparkline.js",
+          "stylesheet": null,
+          "head": null,
+          "attachment": null,
+          "package": null,
+          "all_files": false
+        }
+      ]
+    },
+    "t_8": {
+      "x": {
+        "style": "bootstrap",
+        "filter": "none",
+        "data": [
+          [
+            "Local authority district",
+            "Local authority district",
+            "Local authority district",
+            "Local authority district",
+            "Local authority district"
+          ],
+          [
+            "enrolments",
+            "enrolments",
+            "enrolments",
+            "enrolments",
+            "enrolments"
+          ],
+          [
+            "min",
+            "max",
+            "average",
+            "count",
+            "suppressed"
+          ],
+          [
+            23787,
+            23787,
+            23787,
+            1,
+            0
+          ],
+          [
+            "23787",
+            "23787",
+            "23787",
+            "1",
+            "0"
+          ]
+        ],
+        "container": "<table class=\"table table-bordered\">\n  <thead>\n    <tr>\n      <th>geographic_level<\/th>\n      <th>indicator<\/th>\n      <th>measure<\/th>\n      <th>201314<\/th>\n      <th>Change<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>",
+        "options": {
+          "columnDefs": [
+            {
+              "targets": 4,
+              "render": "function(data, type, full){ return '<span class=sparkSamples>' + data + '<\/span>' }"
+            },
+            {
+              "className": "dt-right",
+              "targets": 3
+            }
+          ],
+          "fnDrawCallback": "function (oSettings, json) {\n  $('.sparkSamples:not(:has(canvas))').sparkline('html', { type: 'line', lineColor: '#c8c8c8', fillColor: '#e87421', width: '200px', height: '40px'});\n}\n",
+          "rowCallback": "function(row, data, num, index){\n  var $row = $(row);\n    $row.css('background-color', '#454b51');\n    $row.hover(function(){\n      $(this).css('background-color', '#6a737c');\n     }, function(){\n      $(this).css('background-color', '#454b51');\n     }\n    );\n}",
+          "dom": "t",
+          "ordering": false,
+          "initComplete": "function(settings, json) {\n$(this.api().table().header()).css({'background-color': '#232628', 'color': '#c8c8c8'});\n}",
+          "order": [
+
+          ],
+          "autoWidth": false,
+          "orderClasses": false
+        },
+        "selection": {
+          "mode": "multiple",
+          "selected": null,
+          "target": "row",
+          "selectable": null
+        }
+      },
+      "evals": [
+        "options.columnDefs.0.render",
+        "options.fnDrawCallback",
+        "options.rowCallback",
+        "options.initComplete"
+      ],
+      "jsHooks": [
+
+      ],
+      "deps": [
+        {
+          "name": "dt-core-bootstrap",
+          "version": "1.10.20",
+          "src": {
+            "href": "dt-core-bootstrap-1.10.20"
+          },
+          "meta": null,
+          "script": [
+            "js/jquery.dataTables.min.js",
+            "js/dataTables.bootstrap.min.js"
+          ],
+          "stylesheet": [
+            "css/dataTables.bootstrap.min.css",
+            "css/dataTables.bootstrap.extra.css"
+          ],
+          "head": null,
+          "attachment": null,
+          "package": null,
+          "all_files": false
+        },
+        {
+          "name": "jquery",
+          "version": "3.5.1",
+          "src": {
+            "href": "jquery-3.5.1"
+          },
+          "meta": null,
+          "script": "jquery.min.js",
+          "stylesheet": null,
+          "head": null,
+          "attachment": null,
+          "all_files": true
+        },
+        {
+          "name": "crosstalk",
+          "version": "1.1.1",
+          "src": {
+            "href": "crosstalk-1.1.1"
+          },
+          "meta": null,
+          "script": "js/crosstalk.min.js",
+          "stylesheet": "css/crosstalk.css",
+          "head": null,
+          "attachment": null,
+          "all_files": true
+        },
+        {
+          "name": "htmlwidgets",
+          "version": "1.5.3",
+          "src": {
+            "href": "htmlwidgets-1.5.3"
+          },
+          "meta": null,
+          "script": "htmlwidgets.js",
+          "stylesheet": null,
+          "head": null,
+          "attachment": null,
+          "package": null,
+          "all_files": true
+        },
+        {
+          "name": "jquery-sparkline",
+          "version": "2.1.2",
+          "src": {
+            "href": "jquery-sparkline-2.1.2"
+          },
+          "meta": null,
+          "script": "jquery.sparkline.js",
+          "stylesheet": "jquery.sparkline.css",
+          "head": null,
+          "attachment": null,
+          "package": null,
+          "all_files": true
+        },
+        {
+          "name": "sparkline-binding",
+          "version": "2.0",
+          "src": {
+            "href": "sparkline-binding-2.0"
+          },
+          "meta": null,
+          "script": "sparkline.js",
+          "stylesheet": null,
+          "head": null,
+          "attachment": null,
+          "package": null,
+          "all_files": false
+        }
+      ]
+    }
+  }
+}

@@ -22,6 +22,7 @@ jobs:
     env:
       R_REMOTES_NO_ERRORS_FROM_WARNINGS: true
       RSPM: ${{ matrix.config.rspm }}
+      RENV_PATHS_ROOT: ~/.local/share/renv
 
     steps:
       - uses: actions/checkout@v2
@@ -30,12 +31,6 @@ jobs:
         with:
           r-version: ${{ matrix.config.r }}
 
-      - name: Restore renv snapshot
-        shell: Rscript {0}
-        run: |
-          if (!require('renv')) install.packages('renv')
-          renv::restore()
-          
       - name: Cache R packages
         if: runner.os != 'Windows'
         uses: actions/cache@v1
@@ -43,6 +38,20 @@ jobs:
           path: ${{ env.R_LIBS_USER }}
           key: ${{ runner.os }}-${{ hashFiles('.github/R-version') }}-1-${{ hashFiles('.github/depends.Rds') }}
           restore-keys: ${{ runner.os }}-${{ hashFiles('.github/R-version') }}-1-
+
+      - name: Cache renv packages
+        uses: actions/cache@v1
+        with:
+          path: ${{ env.RENV_PATHS_ROOT }}
+          key: ${{ runner.os }}-renv-${{ hashFiles('**/renv.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-renv-
+        
+      - name: Restore renv snapshot
+        shell: Rscript {0}
+        run: |
+          if (!requireNamespace("renv", quietly = TRUE)) install.packages("renv")
+          renv::restore()
 
       - name: Find PhantomJS path
         id: phantomjs

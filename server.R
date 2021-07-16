@@ -1,7 +1,6 @@
 server <- function(input, output, session) {
 
   # Loading screen ----------------------------------------------------------------------------
-  # Call initial loading screen
 
   hide(id = "loading-content", anim = TRUE, animType = "fade")
   show("app-content")
@@ -9,7 +8,6 @@ server <- function(input, output, session) {
   shinyjs::showElement(id = "guidance")
 
   # Reactive values ----------------------------------------------------------------------------
-  # Buttons and reactive values used as triggers
 
   values <- reactiveValues(
     shouldShow = FALSE,
@@ -35,15 +33,6 @@ server <- function(input, output, session) {
     values$datafile <- input$datafile
     values$metafile <- input$metafile
   })
-
-  # observeEvent(input$datafile, {
-  #   values$clear <- FALSE
-  # }, priority = 1000)
-  #
-  # observeEvent(input$metafile, {
-  #   values$clear <- FALSE
-  # }, priority = 1000)
-  #
 
   observeEvent(input$datafile,
     {
@@ -115,6 +104,7 @@ server <- function(input, output, session) {
           values$proceed_with_screening <- x
         } else {
           if (x == FALSE) {
+
             # Clear uploaded files (well, partly)
             shinyjs::reset("datafile")
             shinyjs::reset("metafile")
@@ -123,7 +113,7 @@ server <- function(input, output, session) {
             values$dataUploaded <- FALSE
             values$metaUploaded <- FALSE
 
-            # Clearing something that looks like the right thing?
+            # Clearing the rest of the uploaded files
             values$datafile <- NULL
             values$metafile <- NULL
           }
@@ -139,7 +129,7 @@ server <- function(input, output, session) {
     {
       if (input$screenbutton == 0 && is.null(values$proceed_with_screening)) {
 
-        # This ends it early
+        # This prevents it running if no button was pressed to trigger it, required due to `ignoreInit = TRUE`
         return()
       }
 
@@ -571,13 +561,12 @@ server <- function(input, output, session) {
                   dplyr::filter(col_name == filter) %>%
                   pull(filter_grouping_column)
 
-                return(eval(parse(text = paste0("data$mainFile %>% select(", filter_group, ", ", filter, ") %>% distinct() %>% arrange(", filter_group, ", ", filter, ")"))))
+                return(data$mainFile %>% select(filter_group, filter) %>% distinct() %>% arrange(filter_group, filter))
               }
               else {
-                return(eval(parse(text = paste0("data$mainFile %>% select(", filter, ") %>% distinct() %>% arrange(", filter, ")"))))
+                return(data$mainFile %>% select(filter) %>% distinct() %>% arrange(filter))
               }
             }
-
 
             output <- lapply(filters, levelsTable)
 
@@ -623,9 +612,6 @@ server <- function(input, output, session) {
             }
           })
 
-
-
-
           # Indicator summaries-------------------------------------------------------------
 
           output$indicators <- DT::renderDT({
@@ -650,7 +636,6 @@ server <- function(input, output, session) {
             )
           })
 
-
           # Create geographic level choice depending on what's available
 
           output$geogChoice <- renderUI({
@@ -672,7 +657,6 @@ server <- function(input, output, session) {
               multiple = TRUE
             )
           })
-
 
           # Show summary stats table for an indicator
           showsumstats <- function(parameter, geog_parameter) {
@@ -720,7 +704,6 @@ server <- function(input, output, session) {
 
             return(showsumstats(input$ind_parameter, input$geog_parameter))
           })
-
 
           # Create and then output the tables
           observeEvent(input$submit, {
@@ -802,12 +785,10 @@ server <- function(input, output, session) {
             )
           })
 
-
           # get outlier stats
 
           get_outliers <- function(outlier_indicator_parameter, threshold_setting, ctime_parameter, comptime_parameter) {
             args <- expand.grid(meas = outlier_indicator_parameter, thresh = threshold_setting, current = ctime_parameter, comparison = comptime_parameter, stringsAsFactors = FALSE)
-
 
             # Get list of indicators
             indicators <- meta$mainFile %>%
@@ -818,7 +799,6 @@ server <- function(input, output, session) {
             filters <- data$mainFile %>%
               select(-indicators) %>%
               names()
-
 
             outliertable <- function(args) {
               return(eval(parse(text = paste0("data$mainFile %>% group_by(time_period,geographic_level) %>% 
@@ -836,8 +816,6 @@ server <- function(input, output, session) {
             }
 
             output <- apply(args, 1, outliertable)
-
-
             return(output)
           }
 
@@ -889,7 +867,6 @@ server <- function(input, output, session) {
             })
           })
 
-
           # check geog aggregations -------------------------------------------------------
 
           #       # Give users choice of indicators
@@ -907,7 +884,8 @@ server <- function(input, output, session) {
 
           data_geog <- eventReactive(input$submit_geographies, {
             validate(
-              need(input$geog_indicator_parameter != "", "Please select an indicator")
+              need(input$geog_indicator_parameter != "", "Please select an indicator"),
+              need(!any(grepl("-", names(data$mainFile))), "You have at least one hyphen in your variable names, you need to remove all hyphens from variable names to use this part of the app.")
             )
 
             pf <- meta$mainFile %>%
@@ -928,9 +906,6 @@ server <- function(input, output, session) {
                             summarise(aggregate_number = sum(", ii, ")) %>%
                             spread(key = geographic_level, value = aggregate_number)")))
           })
-
-
-
 
           observeEvent(input$submit_geographies, {
             pf <- meta$mainFile %>%
@@ -982,12 +957,6 @@ server <- function(input, output, session) {
               )
             })
 
-
-
-
-
-
-
             #
             # # ttt <- check(data_geog)
             #
@@ -1013,9 +982,6 @@ server <- function(input, output, session) {
             # })
           })
 
-
-
-
           # supressed cells ---------------------------------------------------------------
 
           observe({
@@ -1030,7 +996,6 @@ server <- function(input, output, session) {
               as.data.frame() %>%
               summarise(sum(Freq)) %>%
               as.numeric()
-
 
             suppress_count <- data$mainFile %>%
               select(all_of(indicators)) %>%
@@ -1049,7 +1014,6 @@ server <- function(input, output, session) {
             suppress_count <- symbol_expected %>%
               left_join(suppress_count) %>%
               mutate_all(~ replace(., is.na(.), 0))
-
 
             output$suppressed_cell_count <- renderUI({
               DTOutput("suppressed_cell_count_table", width = "60%") %>% withSpinner()
@@ -1075,8 +1039,6 @@ server <- function(input, output, session) {
           })
         } # end of if for QA stuff
       }) # end of isolate
-
-
 
       # Download all results button ---------------------------------------------------------------------------------
 
@@ -1123,10 +1085,9 @@ server <- function(input, output, session) {
     {
       if (values$environment == "shinyapps") {
 
-        # Completely reset the session, reload the app. Locally this will just end the app
+        # Completely reset the session, reload the app.
+        # Required as the warning modal stops working after a normal reset
         session$reload()
-
-        # Could add a holding message if we stick with restarting the session for this?
       } else {
         # Hide results
         shinyjs::hideElement(id = "results")
@@ -1155,12 +1116,10 @@ server <- function(input, output, session) {
         shinyjs::reset("submit_outlier")
         shinyjs::reset("table_outlier_list")
         shinyjs::reset("geog_indicator_choice")
-        # shinyjs::reset("geog_level_choice")
-        # shinyjs::reset("geog_sublevel_choice")
         shinyjs::reset("submit_geographies")
         shinyjs::reset("table_geography_list")
 
-
+        # reset the screening button
         shinyjs::reset("screenbutton")
 
         # clear uploaded flags
@@ -1206,18 +1165,19 @@ server <- function(input, output, session) {
         output$table_outlier_list <- NULL
         output$table_list <- NULL
 
+        # clearing the data files
         values$datafile <- NULL
         values$metafile <- NULL
         values$clear <- TRUE
         reset("datafile")
         reset("metafile")
 
+        # hide the reset button
         shinyjs::hideElement(id = "reset_button")
       }
     },
     priority = 1000
   )
-
 
   # showresults (shouldShow) ---------------------------------------------------------------------------------
   # Checking if results should show for when to show the screen button
@@ -1228,7 +1188,7 @@ server <- function(input, output, session) {
 
   outputOptions(output, "showresults", suspendWhenHidden = FALSE)
 
-  # Stop app ---------------------------------------------------------------------------------
+  # Stop app on session end ---------------------------------------------------------------------------------
 
   session$onSessionEnded(function() {
     stopApp()

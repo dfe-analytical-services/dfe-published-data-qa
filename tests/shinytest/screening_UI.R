@@ -1,7 +1,5 @@
-# Numbers correlate to expected/current json files
-
 app <- ShinyDriver$new("../../")
-app$snapshotInit("UI_tests", screenshot = FALSE)
+app$snapshotInit("screening_UI", screenshot = FALSE)
 
 # 1. Does it load  -------------------------------------------------------------------------------------------------------------------
 Sys.sleep(1)
