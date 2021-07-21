@@ -1617,14 +1617,14 @@ na_geography <- function(data) {
     distinct(geographic_level) %>%
     pull(geographic_level)
 
-  if(length(testable_levels_present) == 0){
+  if (length(testable_levels_present) == 0) {
     output <- list(
       "message" = paste0("No applicable locations to test."),
       "result" = "IGNORE"
     )
     return(output)
   }
-  
+
   singleLevelTidy <- function(value, level) {
     if (value == FALSE) {
       return()
@@ -1667,7 +1667,6 @@ na_geography <- function(data) {
 # checking if location has the name "not available" then its code is ":"
 
 na_geography_code <- function(data) {
-  
   geography_name_codes <- geography_matrix[1:12, 2:3] %>% # making only 1:12 for now
     as.character() %>%
     .[!is.na(.)]
@@ -1697,15 +1696,15 @@ na_geography_code <- function(data) {
     filter(geographic_level %in% c(geography_matrix[c(4, 6:12), 1])) %>% # Removing country, region, la, rsc region and school/below
     distinct(geographic_level) %>%
     pull(geographic_level)
-  
-  if(length(testable_levels_present) == 0){
+
+  if (length(testable_levels_present) == 0) {
     output <- list(
       "message" = paste0("No applicable locations to test."),
       "result" = "IGNORE"
     )
     return(output)
   }
-  
+
   singleLevelTidy <- function(value, level) {
     if (value == FALSE) {
       return()
@@ -1718,7 +1717,7 @@ na_geography_code <- function(data) {
     na_codes <- na_check(paste(testable_levels_present)) %>% singleLevelTidy(., testable_levels_present)
   } else {
     na_codes <- sapply(testable_levels_present, na_check) %>%
-      stack() %>% 
+      stack() %>%
       filter(values == TRUE) %>%
       pull(ind)
   }
