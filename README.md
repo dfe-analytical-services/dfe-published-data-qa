@@ -27,7 +27,7 @@ A shiny app to provide a user friendly way to QA data files using centralised co
 
 There is also an instance hosted on shinyapps.io, which is externally accessible:
 
-- External - http://department-for-education.shinyapps.io/dfe-published-data-qa
+- External - https://department-for-education.shinyapps.io/dfe-published-data-qa
 
 **Note**
 

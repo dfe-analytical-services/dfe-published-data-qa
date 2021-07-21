@@ -1586,54 +1586,75 @@ other_geography_code_duplicates <- function(data) {
 # na_geography -------------------------------------
 # checking if location has code of ":", then name is "not available"
 
-geography_name_codes <- geography_matrix[1:12, 2:3] %>% # making only 1:12 for now
-  as.character() %>%
-  .[!is.na(.)]
-
-
 na_geography <- function(data) {
+  geography_name_codes <- geography_matrix[1:12, 2:3] %>% # making only 1:12 for now
+    as.character() %>%
+    .[!is.na(.)]
+
   geog_data <- data %>%
     select(any_of(c(
       "geographic_level", geography_name_codes
     ))) %>%
-    distinct() %>%
-    mutate(ID = 1:n())
-
-  names <- geog_data %>%
-    select(ID, geographic_level, contains("name")) %>%
-    mutate_if(is.numeric, as.character) %>%
-    melt(id.vars = c("ID", "geographic_level"), na.rm = TRUE) %>%
-    select(ID, geographic_level, name = value)
-
-  codes <- geog_data %>%
-    select(ID, geographic_level, !contains("name")) %>%
-    mutate_if(is.numeric, as.character) %>%
-    melt(id.vars = c("ID", "geographic_level"), na.rm = TRUE) %>%
-    select(ID, geographic_level, code = value)
-
-  lookup <- names %>%
-    full_join(codes, by = c("ID", "geographic_level")) %>%
-    select(-ID, -geographic_level) %>%
     distinct()
 
-  check_nas <- lookup %>%
-    subset(code == ":" & !(name == "Not available"))
+  na_check <- function(level) {
+    code_col <- geography_matrix[which(geography_matrix[, 1] == level), 2]
+    name_col <- geography_matrix[which(geography_matrix[, 1] == level), 3]
 
+    na_locations <- eval(parse(text = paste0(
+      "geog_data %>% distinct(", code_col, ", ", name_col, ") %>% rename(code = ", code_col, ", name = ", name_col, ")"
+    ))) %>% subset(code == ":" & !(name == "Not available"))
 
-  if (nrow(lookup) == 0) {
+    if (nrow(na_locations) == 0) {
+      return(FALSE)
+    } else {
+      return(TRUE)
+    }
+  }
+
+  testable_levels_present <- data %>%
+    filter(geographic_level %in% c(geography_matrix[c(4, 6:12), 1])) %>% # Removing country, region, la, rsc region and school/below
+    distinct(geographic_level) %>%
+    pull(geographic_level)
+
+  if (length(testable_levels_present) == 0) {
     output <- list(
-      "message" = "No geographies have ':' as a code.",
+      "message" = paste0("No applicable locations to test."),
       "result" = "IGNORE"
     )
+    return(output)
+  }
+
+  singleLevelTidy <- function(value, level) {
+    if (value == FALSE) {
+      return()
+    } else {
+      return(level)
+    }
+  }
+
+  if (length(testable_levels_present) == 1) {
+    na_names <- na_check(paste(testable_levels_present)) %>% singleLevelTidy(., testable_levels_present)
   } else {
-    if (nrow(check_nas) == 0) {
+    na_names <- stack(sapply(testable_levels_present, na_check)) %>%
+      filter(values == TRUE) %>%
+      pull(ind)
+  }
+
+  if (length(na_names) == 0) {
+    output <- list(
+      "message" = paste0("No tested locations have a code of ':' without the corresponding name 'Not available'."),
+      "result" = "PASS"
+    )
+  } else {
+    if (length(na_names) == 1) {
       output <- list(
-        "message" = paste0("All location with a code of ':' have the corresponding name 'Not available'."),
-        "result" = "PASS"
+        "message" = paste0("The following geographic level has at least one location with a code of ':', but does not have the corresponding name 'Not available': '", paste0(na_names), ". <br> - The name for ':' should always be 'Not available'."),
+        "result" = "FAIL"
       )
     } else {
       output <- list(
-        "message" = paste0("At least one location has a code of ':', but does not have the corresponding name 'Not available'."),
+        "message" = paste0("The following geographic level has at least one location with a code of ':', but does not have the corresponding name 'Not available': '", paste0(na_names, collapse = "', '"), "'. <br> - The name for ':' should always be 'Not available'."),
         "result" = "FAIL"
       )
     }
@@ -1645,54 +1666,76 @@ na_geography <- function(data) {
 # na_geography_code -------------------------------------
 # checking if location has the name "not available" then its code is ":"
 
-geography_name_codes <- geography_matrix[1:12, 2:3] %>% # making only 1:12 for now
-  as.character() %>%
-  .[!is.na(.)]
-
-
 na_geography_code <- function(data) {
+  geography_name_codes <- geography_matrix[1:12, 2:3] %>% # making only 1:12 for now
+    as.character() %>%
+    .[!is.na(.)]
+
   geog_data <- data %>%
     select(any_of(c(
       "geographic_level", geography_name_codes
     ))) %>%
-    distinct() %>%
-    mutate(ID = 1:n())
-
-  names <- geog_data %>%
-    select(ID, geographic_level, contains("name")) %>%
-    mutate_if(is.numeric, as.character) %>%
-    melt(id.vars = c("ID", "geographic_level"), na.rm = TRUE) %>%
-    select(ID, geographic_level, name = value)
-
-  codes <- geog_data %>%
-    select(ID, geographic_level, !contains("name")) %>%
-    mutate_if(is.numeric, as.character) %>%
-    melt(id.vars = c("ID", "geographic_level"), na.rm = TRUE) %>%
-    select(ID, geographic_level, code = value)
-
-  lookup <- names %>%
-    full_join(codes, by = c("ID", "geographic_level")) %>%
-    select(-ID, -geographic_level) %>%
     distinct()
 
-  check_nas <- lookup %>%
-    subset(name == "Not available" & !(code == ":"))
+  na_check <- function(level) {
+    code_col <- geography_matrix[which(geography_matrix[, 1] == level), 2]
+    name_col <- geography_matrix[which(geography_matrix[, 1] == level), 3]
 
+    na_locations <- eval(parse(text = paste0(
+      "geog_data %>% distinct(", code_col, ", ", name_col, ") %>% rename(code = ", code_col, ", name = ", name_col, ")"
+    ))) %>% subset(name == "Not available" & !(code == ":"))
 
-  if (nrow(lookup) == 0) {
+    if (nrow(na_locations) == 0) {
+      return(FALSE)
+    } else {
+      return(TRUE)
+    }
+  }
+
+  testable_levels_present <- data %>%
+    filter(geographic_level %in% c(geography_matrix[c(4, 6:12), 1])) %>% # Removing country, region, la, rsc region and school/below
+    distinct(geographic_level) %>%
+    pull(geographic_level)
+
+  if (length(testable_levels_present) == 0) {
     output <- list(
-      "message" = "No geographies have 'Not available' as a name.",
+      "message" = paste0("No applicable locations to test."),
       "result" = "IGNORE"
     )
+    return(output)
+  }
+
+  singleLevelTidy <- function(value, level) {
+    if (value == FALSE) {
+      return()
+    } else {
+      return(level)
+    }
+  }
+
+  if (length(testable_levels_present) == 1) {
+    na_codes <- na_check(paste(testable_levels_present)) %>% singleLevelTidy(., testable_levels_present)
   } else {
-    if (nrow(check_nas) == 0) {
+    na_codes <- sapply(testable_levels_present, na_check) %>%
+      stack() %>%
+      filter(values == TRUE) %>%
+      pull(ind)
+  }
+
+  if (length(na_codes) == 0) {
+    output <- list(
+      "message" = paste0("No tested locations have a name of 'Not available' without the corresponding code ':'."),
+      "result" = "PASS"
+    )
+  } else {
+    if (length(na_codes) == 1) {
       output <- list(
-        "message" = paste0("All location with a code of ':' have the corresponding name 'Not available'."),
-        "result" = "PASS"
+        "message" = paste0("The following geographic level has at least one location with a name of 'Not available', that does not have the corresponding code ':': '", paste0(na_codes), ". <br> - The code for 'Not available' should always be ':'."),
+        "result" = "FAIL"
       )
     } else {
       output <- list(
-        "message" = paste0("A location has a code of ':', but does not have the corresponding name 'Not available'."),
+        "message" = paste0("The following geographic levels have at least one location with a a name of 'Not available', that does not have the corresponding code ':': '", paste0(na_codes, collapse = "', '"), "'. <br> - The code for 'Not available' should always be ':'."),
         "result" = "FAIL"
       )
     }
