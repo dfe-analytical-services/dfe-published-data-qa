@@ -18,7 +18,7 @@ metafile <- debugReadFile(file.choose())
 
 results <- screenFiles(datafile$filename, metafile$filename, datafile$fileSeparator, metafile$fileSeparator, datafile$fileCharacter, metafile$fileCharacter, datafile$mainFile, metafile$mainFile)
 
-unlist(results$results$message)
+data.table(results$results)
 
 data <- datafile$mainFile
 meta <- metafile$mainFile

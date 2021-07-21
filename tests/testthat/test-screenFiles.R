@@ -83,3 +83,9 @@ test_that("financialHalves", {
 
   expect_equal(screeningOutput$results %>% filter(result == "FAIL") %>% nrow(), 0)
 })
+
+test_that("passes_na_name", {
+  screeningOutput <- testOther("../../tests/testthat/otherData/passes_na_name.csv")
+
+  expect_equal(screeningOutput$results %>% filter(result == "FAIL") %>% nrow(), 0)
+})

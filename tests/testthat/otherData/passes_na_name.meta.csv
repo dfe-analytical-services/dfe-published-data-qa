@@ -1,0 +1,10 @@
+col_name,col_type,label,indicator_grouping,indicator_unit,indicator_dp,filter_hint,filter_grouping_column
+school_type,Filter,School Type,,,,"State-funded primary, secondary and special",
+num_schools,Indicator,Number of schools,,,0,,
+headcount,Indicator,Headcount,,,0,,
+perm_excl,Indicator,Permanent exclusions,,,0,,
+perm_excl_rate,Indicator,Permanent exclusions (rate),,,2,,
+suspension,Indicator,Suspensions,,,0,,
+susp_rate,Indicator,Suspension (rate),,,2,,
+one_plus_susp,Indicator,Pupil enrolments with one or more suspension,,,0,,
+one_plus_susp_rate,Indicator,Pupil enrolments with one or more suspension (rate),,,2,,
