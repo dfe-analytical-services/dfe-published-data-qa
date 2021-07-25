@@ -13,7 +13,8 @@ fluidPage(
 
   # Setting custom disconnect message --------------------------------------------------------------------------------
 
-  shinydisconnect::disconnectMessage(
+  #shinydisconnect::disconnectMessage(
+  disconnectMessage2(
     text = "Something went wrong! Try refreshing the page. If this persists, please contact statistics.development@education.gov.uk with details of what you were trying to do.",
     refresh = "Refresh page",
     background = "#000000",
