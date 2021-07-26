@@ -89,3 +89,9 @@ test_that("passes_na_name", {
 
   expect_equal(screeningOutput$results %>% filter(result == "FAIL") %>% nrow(), 0)
 })
+
+test_that("multipleLevelsName", {
+  screeningOutput <- testOther("../../tests/testthat/otherData/name_multiple_levels.csv")
+
+  expect_equal(screeningOutput$results %>% filter(result == "FAIL") %>% nrow(), 0)
+})
