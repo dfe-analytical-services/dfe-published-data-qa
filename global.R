@@ -240,7 +240,11 @@ options(spinner.size = .5)
 
 
 # disconnect duck ---------------------------------------------------------
- 
+
+isLocal <- function() {
+  Sys.getenv("SHINY_PORT", "") == ""
+}
+
 getLocalTags <- function() {
   # if (!isLocal()) {
   #   return(NULL)
@@ -256,17 +260,13 @@ getLocalTags <- function() {
       "});"
     )),
     htmltools::tags$div(id="ss-connect-dialog", 
-                        style="display: block !important;",
+                        style="display: none !important;",
                         htmltools::tags$img(id="ss-reload-image"),
                         htmltools::tags$p(id="ss-reload-text"),
                         htmltools::tags$a(id="ss-reload-link", href="#", onclick="window.location.reload(true);")
     ),
     htmltools::tags$div(id="ss-overlay", style="display: none;")
   )
-}
-
-isLocal <- function() {
-  Sys.getenv("SHINY_PORT", "") == ""
 }
 
 disconnectMessage3 <- function(
@@ -321,6 +321,7 @@ disconnectMessage3 <- function(
         glue::glue(
           .open = "{{", .close = "}}",
           
+          ## This hides the old message
           "#shiny-disconnected-overlay { display: none !important; }",
           
           "#ss-overlay {
@@ -377,7 +378,7 @@ disconnectMessage3 <- function(
           # color: #ffffff ;
           # }",
           
-          "#ss-connect-dialog label { display: none !important; }",
+ #         "#ss-connect-dialog label { display: none !important; }",
           
           "#ss-connect-dialog a {
              display: {{ if (refresh == '') 'none' else 'block' }} !important;
@@ -392,7 +393,7 @@ disconnectMessage3 <- function(
             font-size: {{size}}px;
           }",
           
-          "#ss-connect-dialog { {{ htmltools::HTML(css) }} }"
+ #         "#ss-connect-dialog { {{ htmltools::HTML(css) }} }"
         )
       )
     )
