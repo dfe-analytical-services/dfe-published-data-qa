@@ -299,7 +299,7 @@ options(spinner.size = .5)
 #   Sys.getenv("SHINY_PORT", "") == ""
 # }
 
-disconnectMessage2 <- function(
+disconnectMessage3 <- function(
   text = "An error occurred. Please refresh the page and try again.",
   refresh = "Refresh",
   width = 450,
