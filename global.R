@@ -246,6 +246,27 @@ getLocalTags <- function() {
     return(NULL)
   }
   
+  # htmltools::tagList(
+  #   htmltools::tags$script(paste0(
+  #     "$(function() {",
+  #     "  $(document).on('shiny:disconnected', function(event) {",
+  #     "    $('#ss-connect-dialog').show();",
+  #     "    $('#ss-overlay').show();",
+  #     "  })",
+  #     "});"
+  #   )),
+  #   htmltools::tags$div(
+  #     id="ss-connect-dialog", style="display: block !important;",
+  #     htmltools::tags$img(id="ss-reload-image"),
+  #     
+  #     htmltools::tags$p(id="ss-reload-text"),
+  #     
+  #     htmltools::tags$a(id="ss-reload-link", href="#", onclick="window.location.reload(true);")
+  #   ),
+  #   htmltools::tags$div(id="ss-overlay", style="display: none;")
+  # )
+  
+  
   htmltools::tagList(
     htmltools::tags$script(paste0(
       "$(function() {",
@@ -255,17 +276,24 @@ getLocalTags <- function() {
       "  })",
       "});"
     )),
-    htmltools::tags$div(
-      id="ss-connect-dialog", style="display: block !important;",
-      htmltools::tags$img(id="ss-reload-image"),
-      
-      htmltools::tags$p(id="ss-reload-text"),
-      
-      htmltools::tags$a(id="ss-reload-link", href="#", onclick="window.location.reload(true);")
-    ),
+    tags$div(id = "ss-connect-dialog",  style="display: none !important;",
+    tags$img(src= '/builder-duck.png'),
+    tags$p("An error occurred. Please refresh the page and try again."),
+    htmltools::tags$a(id="ss-reload-link", href="#", onclick="window.location.reload(true);"),
     htmltools::tags$div(id="ss-overlay", style="display: none;")
+    
+    )
   )
+      
+  
 }
+
+
+
+
+
+
+
 
 isLocal <- function() {
   Sys.getenv("SHINY_PORT", "") == ""
@@ -358,20 +386,25 @@ disconnectMessage2 <- function(
           }",
           
           
-          "#ss-connect-dialog img { content: url(/builder-duck.png)
-          }",
+  #        # "#ss-connect-dialog img { content: url(/builder-duck.png)
+          # }",
           
           
           # "#ss-connect-dialog::before { content: url(/builder-duck.png) ;
           # display: block !important; 
           # }",
           
-          "#ss-connect-dialog p {
-          content: '{{ text }}' ;
-          display: block ;
-          color: #ffffff ;
-          font-size: {{size}}px !important;
-          }",
+          # "#ss-connect-dialog p {
+          # content: '{{ text }}' ;
+          # display: block ;
+          # color: #ffffff ;
+          # font-size: {{size}}px !important;
+          # }",
+          # 
+          
+##          "#ss-connect-dialog p { {{ htmltools::HTML({{ text }}) }} }",
+          
+          
 
           # "#ss-connect-dialog a::before {
           # content: '{{ text }}' ;
