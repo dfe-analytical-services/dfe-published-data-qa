@@ -263,7 +263,7 @@ getLocalTags <- function() {
                         style="display: none !important;",
                         #htmltools::tags$img(id="ss-reload-image", src = "builder-duck.png"),
                         
-                        htmltools::tags$div(id="ss-reload-image", HTML("<img src='builder-duck.png'>")),
+                        htmltools::tags$div(id="ss-reload-image", HTML("<img src='builder-duck.PNG'>")),
                         
                      #   htmltools::tags$p(id="ss-reload-text"),
                         htmltools::tags$a(id="ss-reload-link", href="#", onclick="window.location.reload(true);")
