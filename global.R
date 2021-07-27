@@ -254,12 +254,12 @@ getLocalTags <- function() {
     htmltools::tags$script(paste0(
       "$(function() {",
       "  $(document).on('shiny:disconnected', function(event) {",
-      "    $('#ss-connect-dialog').show();",
+      "    $('#ss-connect-dialogAA').show();",
       "    $('#ss-overlay').show();",
       "  })",
       "});"
     )),
-    htmltools::tags$div(id="ss-connect-dialog", 
+    htmltools::tags$div(id="ss-connect-dialogAA", 
                         style="display: none !important;",
                         htmltools::tags$img(id="ss-reload-image", src = "builder-duck.png"),
                         htmltools::tags$img(id="ss-reload-image"),
@@ -338,7 +338,7 @@ disconnectMessage3 <- function(
              cursor: not-allowed !important;
           }",
           
-          "#ss-connect-dialog {
+          "#ss-connect-dialogAA {
              background: {{background}} !important;
              color: {{colour}} !important;
              width: {{width}} !important;
@@ -358,31 +358,31 @@ disconnectMessage3 <- function(
           }",
           
           
-          # "#ss-connect-dialog img { content: url(/builder-duck.png) ;
+          # "#ss-connect-dialogAA img { content: url(/builder-duck.png) ;
           # display: block !important; 
           # }",
 
           
-          # "#ss-connect-dialog::before { content: url(/builder-duck.png) ;
+          # "#ss-connect-dialogAA::before { content: url(/builder-duck.png) ;
           # display: block !important; 
           # }",
           
-          "#ss-connect-dialog p {
+          "#ss-connect-dialogAA::before {
           content: '{{ text }}' ;
           display: block ;
           color: #ffffff ;
           font-size: {{size}}px !important;
           }",
           
-          # "#ss-connect-dialog a::before {
+          # "#ss-connect-dialogAA a::before {
           # content: '{{ text }}' ;
           # display: {{ if (refresh == '') 'none' else 'block' }} !important;
           # color: #ffffff ;
           # }",
           
- #         "#ss-connect-dialog label { display: none !important; }",
+ #         "#ss-connect-dialogAA label { display: none !important; }",
           
-          "#ss-connect-dialog a {
+          "#ss-connect-dialogAA a {
              display: {{ if (refresh == '') 'none' else 'block' }} !important;
              color: {{refreshColour}} !important;
              font-size: {{size}}px !important;
@@ -390,12 +390,12 @@ disconnectMessage3 <- function(
              font-weight: normal !important;
           }",
           
-          "#ss-connect-dialog a::after {
+          "#ss-connect-dialogAA a::before {
             content: '{{refresh}}';
             font-size: {{size}}px;
           }",
           
- #         "#ss-connect-dialog { {{ htmltools::HTML(css) }} }"
+ #         "#ss-connect-dialogAA { {{ htmltools::HTML(css) }} }"
         )
       )
     )
