@@ -224,12 +224,12 @@ data_empty_rows <- function(data) {
     if (blank_rows == 1) {
       output <- list(
         "result" = "FAIL",
-        "message" = paste("There is", cs_num(blank_rows), "blank row in the data file.")
+        "message" = paste("There is", cs_num(blank_rows), "blank row in the data file. Try opening the csv in notepad if you're not sure where the blank rows are.")
       )
     } else {
       output <- list(
         "result" = "FAIL",
-        "message" = paste("There are", cs_num(blank_rows), "blank rows in the data file.")
+        "message" = paste("There are", cs_num(blank_rows), "blank rows in the data file. Try opening the csv in notepad if you're not sure where the blank rows are.")
       )
     }
   }
@@ -252,12 +252,12 @@ meta_empty_rows <- function(meta) {
     if (blank_rows == 1) {
       output <- list(
         "result" = "FAIL",
-        "message" = paste("There is", cs_num(blank_rows), "blank row in the metadata file.")
+        "message" = paste("There is", cs_num(blank_rows), "blank row in the metadata file. Try opening the csv in notepad if you're not sure where the blank rows are.")
       )
     } else {
       output <- list(
         "result" = "FAIL",
-        "message" = paste("There are", cs_num(blank_rows), "blank rows in the metadata file.")
+        "message" = paste("There are", cs_num(blank_rows), "blank rows in the metadata file. Try opening the csv in notepad if you're not sure where the blank rows are.")
       )
     }
   }
