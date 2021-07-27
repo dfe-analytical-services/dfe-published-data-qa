@@ -258,6 +258,9 @@ getLocalTags <- function() {
     htmltools::tags$div(
       id="ss-connect-dialog", style="display: block !important;",
       htmltools::tags$img(id="ss-reload-image"),
+      
+      htmltools::tags$p(id="ss-reload-text"),
+      
       htmltools::tags$a(id="ss-reload-link", href="#", onclick="window.location.reload(true);")
     ),
     htmltools::tags$div(id="ss-overlay", style="display: none;")
@@ -310,6 +313,9 @@ disconnectMessage2 <- function(
     stop("disconnectMessage: 'top' must be either an integer, or the string \"center\".", call. = FALSE)
   }
   
+  
+
+    
   htmltools::tagList(
     getLocalTags(),
     htmltools::tags$head(
@@ -352,21 +358,26 @@ disconnectMessage2 <- function(
           }",
           
           
-          "#ss-connect-dialog img { content: url(/builder-duck.png) ;
-          display: block !important; 
-          class= 'center'
+          "#ss-connect-dialog img { content: url(/builder-duck.png)
           }",
           
           
           # "#ss-connect-dialog::before { content: url(/builder-duck.png) ;
           # display: block !important; 
           # }",
-
-          "#ss-connect-dialog a::before {
+          
+          "#ss-connect-dialog p {
           content: '{{ text }}' ;
-          display: {{ if (refresh == '') 'none' else 'block' }} !important;
+          display: block ;
           color: #ffffff ;
+          font-size: {{size}}px !important;
           }",
+
+          # "#ss-connect-dialog a::before {
+          # content: '{{ text }}' ;
+          # display: {{ if (refresh == '') 'none' else 'block' }} !important;
+          # color: #ffffff ;
+          # }",
 
           "#ss-connect-dialog label { display: none !important; }",
 

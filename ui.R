@@ -117,7 +117,7 @@ fluidPage(
             )
           ),
           
-          actionButton("tempcloseapp", "close app")
+          actionButton("tempcloseapp", "stop app")
           
         ),
 
