@@ -256,7 +256,8 @@ getLocalTags <- function() {
       "});"
     )),
     htmltools::tags$div(
-      id="ss-connect-dialog", #style="display: none !important;",
+      id="ss-connect-dialog", # style="display: none !important;",
+      htmltools::tags$img(id="ss-reload-image"),
       htmltools::tags$a(id="ss-reload-link", href="#", onclick="window.location.reload(true);")
     ),
     htmltools::tags$div(id="ss-overlay", style="display: none;")
@@ -350,9 +351,16 @@ disconnectMessage2 <- function(
              box-shadow: rgba(0, 0, 0, 0.3) 3px 3px 10px !important;
           }",
           
-          "#ss-connect-dialog::before { content: url(/builder-duck.PNG) ;
+          
+          "#ss-connect-dialog img { content: url(/builder-duck.png) ;
           display: block !important; 
+          class= 'center'
           }",
+          
+          
+          # "#ss-connect-dialog::before { content: url(/builder-duck.png) ;
+          # display: block !important; 
+          # }",
 
           "#ss-connect-dialog a::before {
           content: '{{ text }}' ;
