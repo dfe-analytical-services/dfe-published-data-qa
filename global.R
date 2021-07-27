@@ -242,9 +242,9 @@ options(spinner.size = .5)
 # disconnect duck ---------------------------------------------------------
  
 getLocalTags <- function() {
-  if (!isLocal()) {
-    return(NULL)
-  }
+  # if (!isLocal()) {
+  #   return(NULL)
+  # }
   
   htmltools::tagList(
     htmltools::tags$script(paste0(
