@@ -242,9 +242,9 @@ options(spinner.size = .5)
 # disconnect duck ---------------------------------------------------------
 
 getLocalTags <- function() {
-  if (!isLocal()) {
-    return(NULL)
-  }
+  # if (!isLocal()) {
+  #   return(NULL)
+  # }
   
   # htmltools::tagList(
   #   htmltools::tags$script(paste0(
@@ -278,7 +278,7 @@ getLocalTags <- function() {
     )),
     tags$div(id = "ss-connect-dialog",  style="display: none !important;",
     tags$img(src= '/builder-duck.png'),
-    tags$p("An error occurred. Please refresh the page and try again."),
+    tags$p("Something went wrong! Try refreshing the page. If this persists, please contact statistics.development@education.gov.uk with details of what you were trying to do."),
     htmltools::tags$a(id="ss-reload-link", href="#", onclick="window.location.reload(true);"),
     htmltools::tags$div(id="ss-overlay", style="display: none;")
     
