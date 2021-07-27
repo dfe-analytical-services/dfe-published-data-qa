@@ -240,64 +240,64 @@ options(spinner.size = .5)
 
 
 # disconnect duck ---------------------------------------------------------
-
-getLocalTags <- function() {
-  # if (!isLocal()) {
-  #   return(NULL)
-  # }
-  
-  # htmltools::tagList(
-  #   htmltools::tags$script(paste0(
-  #     "$(function() {",
-  #     "  $(document).on('shiny:disconnected', function(event) {",
-  #     "    $('#ss-connect-dialog').show();",
-  #     "    $('#ss-overlay').show();",
-  #     "  })",
-  #     "});"
-  #   )),
-  #   htmltools::tags$div(
-  #     id="ss-connect-dialog", style="display: block !important;",
-  #     htmltools::tags$img(id="ss-reload-image"),
-  #     
-  #     htmltools::tags$p(id="ss-reload-text"),
-  #     
-  #     htmltools::tags$a(id="ss-reload-link", href="#", onclick="window.location.reload(true);")
-  #   ),
-  #   htmltools::tags$div(id="ss-overlay", style="display: none;")
-  # )
-  
-  
-  htmltools::tagList(
-    htmltools::tags$script(paste0(
-      "$(function() {",
-      "  $(document).on('shiny:disconnected', function(event) {",
-      "    $('#ss-connect-dialog').show();",
-      "    $('#ss-overlay').show();",
-      "  })",
-      "});"
-    )),
-    tags$div(id = "ss-connect-dialog",  style="display: none !important;",
-    tags$img(src= '/builder-duck.png'),
-    tags$p("Something went wrong! Try refreshing the page. If this persists, please contact statistics.development@education.gov.uk with details of what you were trying to do."),
-    htmltools::tags$a(id="ss-reload-link", href="#", onclick="window.location.reload(true);"),
-    htmltools::tags$div(id="ss-overlay", style="display: none;")
-    
-    )
-  )
-      
-  
-}
-
-
-
-
-
-
-
-
-isLocal <- function() {
-  Sys.getenv("SHINY_PORT", "") == ""
-}
+# 
+# getLocalTags <- function() {
+#   # if (!isLocal()) {
+#   #   return(NULL)
+#   # }
+#   
+#   # htmltools::tagList(
+#   #   htmltools::tags$script(paste0(
+#   #     "$(function() {",
+#   #     "  $(document).on('shiny:disconnected', function(event) {",
+#   #     "    $('#ss-connect-dialog').show();",
+#   #     "    $('#ss-overlay').show();",
+#   #     "  })",
+#   #     "});"
+#   #   )),
+#   #   htmltools::tags$div(
+#   #     id="ss-connect-dialog", style="display: block !important;",
+#   #     htmltools::tags$img(id="ss-reload-image"),
+#   #     
+#   #     htmltools::tags$p(id="ss-reload-text"),
+#   #     
+#   #     htmltools::tags$a(id="ss-reload-link", href="#", onclick="window.location.reload(true);")
+#   #   ),
+#   #   htmltools::tags$div(id="ss-overlay", style="display: none;")
+#   # )
+#   
+#   
+#   htmltools::tagList(
+#     htmltools::tags$script(paste0(
+#       "$(function() {",
+#       "  $(document).on('shiny:disconnected', function(event) {",
+#       "    $('#ss-connect-dialog').show();",
+#       "    $('#ss-overlay').show();",
+#       "  })",
+#       "});"
+#     )),
+#     tags$div(id = "ss-connect-dialog",  style="display: none !important;",
+#     tags$img(src= '/builder-duck.png'),
+#     tags$p("Something went wrong! Try refreshing the page. If this persists, please contact statistics.development@education.gov.uk with details of what you were trying to do."),
+#     htmltools::tags$a(id="ss-reload-link", href="#", onclick="window.location.reload(true);"),
+#     htmltools::tags$div(id="ss-overlay", style="display: none;")
+#     
+#     )
+#   )
+#       
+#   
+# }
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+# isLocal <- function() {
+#   Sys.getenv("SHINY_PORT", "") == ""
+# }
 
 disconnectMessage2 <- function(
   text = "An error occurred. Please refresh the page and try again.",
@@ -345,7 +345,26 @@ disconnectMessage2 <- function(
 
     
   htmltools::tagList(
-    getLocalTags(),
+ #   getLocalTags(),
+    
+    
+    htmltools::tags$script(paste0(
+      "$(function() {",
+      "  $(document).on('shiny:disconnected', function(event) {",
+      "    $('#ss-connect-dialog').show();",
+      "    $('#ss-overlay').show();",
+      "  })",
+      "});"
+    )),
+    tags$div(id = "ss-connect-dialog",  style="display: none !important;",
+             tags$img(src= '/builder-duck.png'),
+             tags$p("Something went wrong! Try refreshing the page. If this persists, please contact statistics.development@education.gov.uk with details of what you were trying to do."),
+             htmltools::tags$a(id="ss-reload-link", href="#", onclick="window.location.reload(true);"),
+             htmltools::tags$div(id="ss-overlay", style="display: none;")
+             
+    ),
+    
+    
     htmltools::tags$head(
       htmltools::tags$style(
         glue::glue(
