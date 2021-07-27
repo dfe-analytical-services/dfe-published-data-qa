@@ -115,7 +115,10 @@ fluidPage(
                 uiOutput("uiResetButton")
               ))
             )
-          )
+          ),
+          
+          actionButton("tempcloseapp", "close app")
+          
         ),
 
         # Main panel showing results -----------------------------------------------------------------------------------
