@@ -261,7 +261,10 @@ getLocalTags <- function() {
     )),
     htmltools::tags$div(id="ss-connect-dialogAA", 
                         style="display: none !important;",
-                        htmltools::tags$img(id="ss-reload-image", src = "builder-duck.png"),
+                        #htmltools::tags$img(id="ss-reload-image", src = "builder-duck.png"),
+                        
+                        htmltools::tags$div(id="ss-reload-image", HTML('<center><img src="builder-duck.png"></center>')),
+                        
                         htmltools::tags$p(id="ss-reload-text"),
                         htmltools::tags$a(id="ss-reload-link", href="#", onclick="window.location.reload(true);")
     ),
