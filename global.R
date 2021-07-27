@@ -256,7 +256,7 @@ getLocalTags <- function() {
       "});"
     )),
     htmltools::tags$div(
-      id="ss-connect-dialog", # style="display: none !important;",
+      id="ss-connect-dialog", style="display: block !important;",
       htmltools::tags$img(id="ss-reload-image"),
       htmltools::tags$a(id="ss-reload-link", href="#", onclick="window.location.reload(true);")
     ),
