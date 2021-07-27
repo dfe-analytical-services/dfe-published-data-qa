@@ -255,13 +255,11 @@ getLocalTags <- function() {
       "  })",
       "});"
     )),
-    htmltools::tags$div(
-      id="ss-connect-dialog", style="display: block !important;",
-      htmltools::tags$img(id="ss-reload-image"),
-      
-      htmltools::tags$p(id="ss-reload-text"),
-      
-      htmltools::tags$a(id="ss-reload-link", href="#", onclick="window.location.reload(true);")
+    htmltools::tags$div(id="ss-connect-dialog", 
+                        style="display: block !important;",
+                        htmltools::tags$img(id="ss-reload-image"),
+                        htmltools::tags$p(id="ss-reload-text"),
+                        htmltools::tags$a(id="ss-reload-link", href="#", onclick="window.location.reload(true);")
     ),
     htmltools::tags$div(id="ss-overlay", style="display: none;")
   )
@@ -271,7 +269,7 @@ isLocal <- function() {
   Sys.getenv("SHINY_PORT", "") == ""
 }
 
-disconnectMessage2 <- function(
+disconnectMessage3 <- function(
   text = "An error occurred. Please refresh the page and try again.",
   refresh = "Refresh",
   width = 450,
