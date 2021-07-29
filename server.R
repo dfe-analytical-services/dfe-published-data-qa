@@ -1194,8 +1194,4 @@ server <- function(input, output, session) {
     stopApp()
   })
   
-  observeEvent(input$tempcloseapp, {
-    stopApp()
-  })
-  
 }
