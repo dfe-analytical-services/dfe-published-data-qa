@@ -262,7 +262,7 @@ getLocalTags <- function() {
                         ),
                         
                         htmltools::tags$div(id="ss-connect-image", 
-                                            style="display: none !important;",
+                                            style="display: block !important;",
                                             
                                             htmltools::tags$img(id="ss-reload-image", src = "builder-duck.PNG"),
                                             
