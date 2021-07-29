@@ -44,7 +44,7 @@ geography_matrix <- matrix(c(
   "MAT", "trust_id", "trust_name", NA, NA, NA,
   "Sponsor", "sponsor_id", "sponsor_name", NA, NA, NA,
   "School", "school_laestab", "school_name", "school_urn", "school_estab", "school_postcode",
-  "Provider", "provider_urn", "provider_name", "provider_ukprn", "provider_upin", NA,
+  "Provider", "provider_ukprn", "provider_name", "provider_urn", "provider_upin", NA,
   "Institution", "institution_id", "institution_name", NA, NA, NA,
   "Planning area", "planning_area_name", "planning_area_code", NA, NA, NA
 ),

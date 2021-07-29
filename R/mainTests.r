@@ -27,8 +27,8 @@ mainTests <- function(data_character, meta_character, datafile, metafile) {
     old_la_code(datafile), # active test
     region_code(datafile), # active test
     country_code(datafile), # active test
-    # school_urn_duplicates(datafile),
-    # school_laestab_duplicates(datafile),
+    school_urn_duplicates(datafile), # active test
+    school_laestab_duplicates(datafile), # active test
     other_geography_duplicates(datafile), # active test
     other_geography_code_duplicates(datafile), # active test
     na_geography(datafile), # active test
@@ -1168,7 +1168,6 @@ old_la_code <- function(data) {
 # Checking that region_code and region_name combinations are valid
 ## Need to update reference list in error message to whatever method we use for LAs as the portal list doesn't include inner/outer london (which we allow)
 
-
 region_code <- function(data) {
   if (!"region_code" %in% names(data)) {
     output <- list(
@@ -1256,26 +1255,12 @@ country_code <- function(data) {
 
 # school_laestab_duplicates  ----------------------------------------
 # check that there is a 1:1 relationship between school laestab codes and names
+
 school_laestab_duplicates <- function(data) {
   if (!"School" %in% unique(data$geographic_level)) {
     output <- list(
       "message" = "School-level data is not present in this data file.",
       "result" = "IGNORE"
-    )
-  } else if ("School" %in% unique(data$geographic_level) & !"school_laestab" %in% names(data)) {
-    output <- list(
-      "message" = "school_laestab is missing from the data file. This column is required for school-level data.",
-      "result" = "FAIL"
-    )
-  } else if ("School" %in% unique(data$geographic_level) & !"school_name" %in% names(data)) {
-    output <- list(
-      "message" = "school_name is missing from the data file. This column is required for school-level data.",
-      "result" = "FAIL"
-    )
-  } else if ("School" %in% unique(data$geographic_level) & !"school_name" %in% names(data) & !"school_laestab" %in% names(data)) {
-    output <- list(
-      "message" = "School LAESTAB data must be present when including school-level data.",
-      "result" = "FAIL"
     )
   } else {
     multi_count_code <- data %>%
@@ -1362,26 +1347,12 @@ school_laestab_duplicates <- function(data) {
 
 # school_urn_duplicates  ----------------------------------------
 # check that there is a 1:1 relationship between school urns and names
+
 school_urn_duplicates <- function(data) {
   if (!"School" %in% unique(data$geographic_level)) {
     output <- list(
       "message" = "School-level data is not present in this data file.",
       "result" = "IGNORE"
-    )
-  } else if ("School" %in% unique(data$geographic_level) & !"school_urn" %in% names(data)) {
-    output <- list(
-      "message" = "School URN data must be present when including school-level data.",
-      "result" = "FAIL"
-    )
-  } else if ("School" %in% unique(data$geographic_level) & !"school_name" %in% names(data)) {
-    output <- list(
-      "message" = "School name data must be present when including school-level data.",
-      "result" = "FAIL"
-    )
-  } else if ("School" %in% unique(data$geographic_level) & !"school_name" %in% names(data) & !"school_urn" %in% names(data)) {
-    output <- list(
-      "message" = "School name and URN data must be present when including school-level data.",
-      "result" = "FAIL"
     )
   } else {
     multi_count_code <- data %>%
@@ -1470,7 +1441,7 @@ school_urn_duplicates <- function(data) {
 # other_geography_duplicates  ----------------------------------------
 # check that there is a 1:1 relationship between geography codes and names
 
-lower_level_geog_names <- geography_matrix[7:12, 2:3] %>% as.character() # commented out 14:16 for now
+lower_level_geog_names <- geography_matrix[c(7:12, 14), 2:3] %>% as.character() # skipping school as it has it's own tests
 
 other_geography_duplicates <- function(data) {
   if (!any(lower_level_geog_names %in% names(data))) {
@@ -1485,7 +1456,6 @@ other_geography_duplicates <- function(data) {
       ))) %>%
       distinct() %>%
       mutate(ID = 1:n())
-
 
     names <- geog_data %>%
       select(ID, geographic_level, contains("name")) %>%
@@ -1512,7 +1482,6 @@ other_geography_duplicates <- function(data) {
       select(combo) %>%
       distinct() %>%
       pull()
-
 
     if (length(multi_count_name) == 0) {
       output <- list(
@@ -1543,7 +1512,7 @@ other_geography_duplicates <- function(data) {
 # other_geography_code_duplicates  ----------------------------------------
 # check that there is a 1:1 relationship between geography names and codes
 
-lower_level_geog_names <- geography_matrix[7:12, 2:3] %>% as.character() # commented out 14:16 for now
+lower_level_geog_names <- geography_matrix[c(7:12, 14), 2:3] %>% as.character() # skipping school as it has it's own tests
 
 other_geography_code_duplicates <- function(data) {
   if (!any(lower_level_geog_names %in% names(data))) {
@@ -1615,7 +1584,7 @@ other_geography_code_duplicates <- function(data) {
 # checking if location has code of ":", then name is "not available"
 
 na_geography <- function(data) {
-  geography_name_codes <- geography_matrix[1:12, 2:3] %>% # making only 1:12 for now
+  geography_name_codes <- geography_matrix[1:14, 2:3] %>%
     as.character() %>%
     .[!is.na(.)]
 
@@ -1641,7 +1610,7 @@ na_geography <- function(data) {
   }
 
   testable_levels_present <- data %>%
-    filter(geographic_level %in% c(geography_matrix[c(4, 6:12), 1])) %>% # Removing country, region, la, rsc region and school/below
+    filter(geographic_level %in% c(geography_matrix[c(4, 6:14), 1])) %>% # Removing country, region, la, rsc region and planning area/institution
     distinct(geographic_level) %>%
     pull(geographic_level)
 
@@ -1695,7 +1664,7 @@ na_geography <- function(data) {
 # checking if location has the name "not available" then its code is ":"
 
 na_geography_code <- function(data) {
-  geography_name_codes <- geography_matrix[1:12, 2:3] %>% # making only 1:12 for now
+  geography_name_codes <- geography_matrix[1:14, 2:3] %>%
     as.character() %>%
     .[!is.na(.)]
 
@@ -1721,7 +1690,7 @@ na_geography_code <- function(data) {
   }
 
   testable_levels_present <- data %>%
-    filter(geographic_level %in% c(geography_matrix[c(4, 6:12), 1])) %>% # Removing country, region, la, rsc region and school/below
+    filter(geographic_level %in% c(geography_matrix[c(4, 6:14), 1])) %>% # Removing country, region, la, rsc region and planning area/institution
     distinct(geographic_level) %>%
     pull(geographic_level)
 
