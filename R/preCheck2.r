@@ -59,7 +59,7 @@ time_identifier_mix <- function(data) {
 # Do we have the right columns for the geographic level
 
 geography_level_present <- function(data) {
-  if (all(data$geographic_level == "National")) {
+  if (all(data$geographic_level == geography_matrix[1,1])) {
     output <- list(
       "message" = "There is only National level data in the file.",
       "result" = "IGNORE"

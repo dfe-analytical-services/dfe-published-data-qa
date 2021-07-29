@@ -21,10 +21,8 @@ mainTests <- function(data_character, meta_character, datafile, metafile) {
     region_for_lad(datafile), # active test
     geography_level_completed(datafile), # active test
     region_col_completed(datafile), # active test
-    new_la_code(datafile), # active test
     overcompleted_cols(datafile), # active test
     ignored_rows(datafile), # active test
-    old_la_code(datafile), # active test
     region_code(datafile), # active test
     country_code(datafile), # active test
     school_urn_duplicates(datafile), # active test
@@ -137,21 +135,21 @@ duplicate_rows <- function(data, meta) {
   present_obUnits_filters <- intersect(c(acceptable_observational_units, filters, filter_groups), names(data))
 
   dupes <- suppressMessages(data %>%
-    filter(geographic_level != "School") %>%
-    filter(geographic_level != "Institution") %>%
-    filter(geographic_level != "Planning area") %>%
-    filter(geographic_level != "Provider") %>%
+    filter(geographic_level != geography_matrix[13,1]) %>%
+    filter(geographic_level != geography_matrix[14,1]) %>%
+    filter(geographic_level != geography_matrix[15,1]) %>%
+    filter(geographic_level != geography_matrix[16,1]) %>%
     select(present_obUnits_filters) %>%
     get_dupes())
 
   if (nrow(dupes) > 0) {
     output <- list(
-      "message" = paste("There are", cs_num(nrow(dupes)), "duplicate rows in the data file. <br> - Note that school, provider, institution, and planning area level rows are not included in this test."),
+      "message" = paste("There are", cs_num(nrow(dupes)), "duplicate rows in the data file. <br> - Note that,", paste0(geography_matrix[13,1], ", ", geography_matrix[14,1], ", ", geography_matrix[15,1], " and ", geography_matrix[16,1]), "level rows are not included in this test."),
       "result" = "FAIL"
     )
   } else {
     output <- list(
-      "message" = "There are no duplicate rows in the data file. <br> - Note that school, provider, institution, and planning area level rows are not included in this test.",
+      "message" = paste("There are no duplicate rows in the data file. <br> - Note that", paste0(geography_matrix[13,1], ", ", geography_matrix[14,1], ", ", geography_matrix[15,1], " and ", geography_matrix[16,1]), "level rows are not included in this test."),
       "result" = "PASS"
     )
   }
@@ -656,36 +654,36 @@ three_years <- function(data) {
 # check if there is LA level data, and if so, if regional columns are present and completed
 
 region_for_la <- function(data) {
-  if (!"Local authority" %in% unique(data$geographic_level)) {
+  if (!geography_matrix[3,1] %in% unique(data$geographic_level)) {
     output <- list(
-      "message" = "There is no Local authority level data in the data file.",
+      "message" = paste("There is no", geography_matrix[3,1], "level data in the data file."),
       "result" = "IGNORE"
     )
   } else {
 
     # not testing for individual columns as region_col_completed covers that
 
-    if (!("region_code" %in% names(data)) | !("region_name" %in% names(data))) {
+    if (!(geography_matrix[2,2] %in% names(data)) | !(geography_matrix[2,3] %in% names(data))) {
       output <- list(
-        "message" = "Both region_code and region_name are missing from the data file. <br> - Regional information should ideally be given for all local authority level data.",
+        "message" = paste("Both",geography_matrix[2,2],"and", geography_matrix[2,3], "are missing from the data file. <br> -", geography_matrix[2,1], "information should ideally be given for all", geography_matrix[3,1], "level data."),
         "result" = "ADVISORY"
       )
     } else {
       region_cols <- data %>%
-        filter(geographic_level == "Local authority") %>%
-        select(region_code, region_name)
+        filter(geographic_level == geography_matrix[3,1]) %>%
+        select(geography_matrix[2,2], geography_matrix[2,3])
 
-      missing_region_codes <- sum(is.na(select(region_cols, region_code)))
-      missing_region_names <- sum(is.na(select(region_cols, region_name)))
+      missing_region_codes <- sum(is.na(select(region_cols, geography_matrix[2,2])))
+      missing_region_names <- sum(is.na(select(region_cols, geography_matrix[2,3])))
 
       if (missing_region_codes > 0 && missing_region_names > 0) {
         output <- list(
-          "message" = "Both region_code and region_name have missing values for local authority rows in the data file. <br> - It is recommended to include the information from these columns for local authority level data.",
+          "message" = paste("Both", geography_matrix[2,2], "and", geography_matrix[2,3], "have missing values for", geography_matrix[3,1], "rows in the data file. <br> - It is recommended to include the information from these columns for", geography_matrix[3,1],"level data."),
           "result" = "ADVISORY"
         )
       } else {
         output <- list(
-          "message" = "Both region_code and region_name are completed for all local authority rows in the data file.",
+          "message" = paste("Both", geography_matrix[2,2], "and", geography_matrix[2,3], "are completed for all", geography_matrix[3,1], "rows in the data file."),
           "result" = "PASS"
         )
       }
@@ -699,23 +697,23 @@ region_for_la <- function(data) {
 # check if there is LA level data, and if so, if regional columns are present and completed
 
 region_for_lad <- function(data) {
-  if (!"Local authority district" %in% unique(data$geographic_level)) {
+  if (!geography_matrix[4,1] %in% unique(data$geographic_level)) {
     output <- list(
-      "message" = "There is no Local authority district level data in the data file.",
+      "message" = paste("There is no", geography_matrix[4,1], "level data in the data file."),
       "result" = "IGNORE"
     )
   } else {
 
     # not testing for individual columns as region_col_completed covers that
 
-    if (!("region_code" %in% names(data)) | !("region_name" %in% names(data))) {
+    if (!(geography_matrix[2,2] %in% names(data)) | !(geography_matrix[2,3] %in% names(data))) {
       output <- list(
-        "message" = "Both region_code and region_name are missing from the data file. <br> - Regional information should ideally be given for all local authority district level data.",
+        "message" = paste("Both",geography_matrix[2,2],"and", geography_matrix[2,3], "are missing from the data file. <br> -", geography_matrix[2,1], "information should ideally be given for all", geography_matrix[4,1], "level data."),
         "result" = "ADVISORY"
       )
     } else {
       region_cols <- data %>%
-        filter(geographic_level == "Local authority district") %>%
+        filter(geographic_level == geography_matrix[4,1]) %>%
         select(region_code, region_name)
 
       missing_region_codes <- sum(is.na(select(region_cols, region_code)))
@@ -723,12 +721,12 @@ region_for_lad <- function(data) {
 
       if (missing_region_codes > 0 && missing_region_names > 0) {
         output <- list(
-          "message" = "Both region_code and region_name have missing values for local authority district rows in the data file. <br> - It is recommended to include the information from these columns for local authority district level data.",
+          "message" = paste("Both", geography_matrix[2,2], "and", geography_matrix[2,3], "have missing values for", geography_matrix[4,1], "rows in the data file. <br> - It is recommended to include the information from these columns for", geography_matrix[4,1],"level data."),
           "result" = "ADVISORY"
         )
       } else {
         output <- list(
-          "message" = "Both region_code and region_name are completed for all local authority district rows in the data file.",
+          "message" = paste("Both", geography_matrix[2,2], "and", geography_matrix[2,3], "are completed for all", geography_matrix[4,1], "rows in the data file."),
           "result" = "PASS"
         )
       }
@@ -799,12 +797,12 @@ geography_level_completed <- function(data) {
 # When one of region name and code is completed, is the other also?
 
 region_col_completed <- function(data) {
-  if (("region_code" %in% names(data)) && ("region_name" %in% names(data))) {
+  if ((geography_matrix[2,2] %in% names(data)) && (geography_matrix[2,3] %in% names(data))) {
     region_both_complete_check <- function(data) {
-      if (is.na(data[["region_code"]]) && !is.na(data[["region_name"]])) {
+      if (is.na(data[[geography_matrix[2,2]]]) && !is.na(data[[geography_matrix[2,3]]])) {
         return("code_missing")
       } else {
-        if (is.na(data[["region_name"]]) && !is.na(data[["region_code"]])) {
+        if (is.na(data[[geography_matrix[2,3]]]) && !is.na(data[[geography_matrix[2,2]]])) {
           return("name_missing")
         }
       }
@@ -814,87 +812,45 @@ region_col_completed <- function(data) {
 
     if (is.null(pre_result)) {
       output <- list(
-        "message" = "Where one of region_code or region_name is completed, the other column is also completed.",
+        "message" = paste("Where one of", geography_matrix[2,2], "or", geography_matrix[2,3], "is completed, the other column is also completed."),
         "result" = "PASS"
       )
     } else {
       if (all(c("code_missing", "name_missing") %in% pre_result)) {
         output <- list(
-          "message" = "Where one of region_code or region_name is completed, the other column should also be completed.",
+          "message" = paste("Where one of", geography_matrix[2,2], "or", geography_matrix[2,3], "is completed, the other column should also be completed."),
           "result" = "FAIL"
         )
       } else {
         if ("code_missing" %in% pre_result) {
           output <- list(
-            "message" = "Where region_name is completed, region_code should also be completed.",
+            "message" = paste("Where", geography_matrix[2,3], "is completed,", geography_matrix[2,2], "should also be completed."),
             "result" = "FAIL"
           )
         } else {
           output <- list(
-            "message" = "Where region_code is completed, region_name should also be completed.",
+            "message" = paste("Where", geography_matrix[2,2], "is completed,", geography_matrix[2,3], "should also be completed."),
             "result" = "FAIL"
           )
         }
       }
     }
   } else {
-    if ("region_name" %in% names(data)) {
+    if (geography_matrix[2,3] %in% names(data)) {
       output <- list(
-        "message" = "Where region_name is included in the data file, region_code should also be included.",
+        "message" = paste("Where", geography_matrix[2,3], "is included in the data file,", geography_matrix[2,2], "should also be included"),
         "result" = "FAIL"
       )
     } else {
-      if ("region_code" %in% names(data)) {
+      if (geography_matrix[2,2] %in% names(data)) {
         output <- list(
-          "message" = "Where region_code is included in the data file, region_name should also be included.",
+          "message" = paste("Where", geography_matrix[2,2], "is included in the data file,", geography_matrix[2,3], "should also be included"),
           "result" = "FAIL"
         )
       } else {
         output <- list(
-          "message" = "No recognised regional columns are present in this data file.",
+          "message" = paste("No recognised", geography_matrix[2,1], "columns are present in this data file."),
           "result" = "IGNORE"
-        )
-      }
-    }
-  }
-
-  return(output)
-}
-
-# new_la_code -------------------------------------
-# Is the new LA code always either 9 digits or blank?
-
-new_la_code <- function(data) {
-  if (!"new_la_code" %in% names(data)) {
-    output <- list(
-      "message" = "new_la_code is not present in this data file.",
-      "result" = "IGNORE"
-    )
-  } else {
-    invalid_values <- select(data, "new_la_code") %>%
-      unique() %>%
-      mutate("code_length" = str_count(new_la_code)) %>%
-      filter(new_la_code != ":") %>%
-      filter(code_length != 9, code_length != 0) %>%
-      pull(new_la_code) %>%
-      unique()
-    number_invalid_values <- length(invalid_values)
-
-    if (number_invalid_values == 0) {
-      output <- list(
-        "message" = "new_la_code is always a 9 digit code, : for not available, or blank.",
-        "result" = "PASS"
-      )
-    } else {
-      if (number_invalid_values == 1) {
-        output <- list(
-          "message" = paste0("The following new_la_code value is invalid: '", paste0(invalid_values), "'. <br> - new_la_code must always be a 9 digit code: for not available, or blank."),
-          "result" = "FAIL"
-        )
-      } else {
-        output <- list(
-          "message" = paste0("The following new_la_code values are invalid: '", paste0(invalid_values, collapse = "', '"), "'. <br> - new_la_code must always be a 9 digit code, : for not available, or blank."),
-          "result" = "FAIL"
         )
       }
     }
@@ -915,7 +871,9 @@ overcompleted_cols <- function(data) {
 
     # Start by filtering the data down to remove the geographic level being tested and any lower levels we don't care about
 
-    level_rows <- data %>% filter(geographic_level != matrixRow[1], !geographic_level %in% geography_matrix[3:16, ])
+    level_rows <- data %>% 
+      filter(geographic_level != matrixRow[1]) %>% 
+      filter(!geographic_level %in% geography_matrix[3:16, ])
 
     # Extract the columns for the geographic level that is being tested
 
@@ -946,7 +904,10 @@ overcompleted_cols <- function(data) {
 
     # Start by filtering the data down to remove the geographic level being tested, lad rows and any lower levels we don't care about
 
-    level_rows <- data %>% filter(geographic_level != matrixRow[1], !geographic_level %in% geography_matrix[13:16, ], geographic_level != "Local authority district")
+    level_rows <- data %>% 
+      filter(geographic_level != matrixRow[1]) %>% 
+      filter(!geographic_level %in% geography_matrix[13:16, ]) %>% 
+      filter(geographic_level != geography_matrix[4,1])
 
     # Extract the columns for the geographic level that is being tested
 
@@ -971,13 +932,15 @@ overcompleted_cols <- function(data) {
   }
 
   # ----------------------------------------------------------------------------------------------------------------------------------
-  # checking if mid-geography cols (not National, Regional, LA, or School level) are completed for each other or for region, la or national rows
+  # checking if mid-geography cols are completed for unexpected levels
 
   overcomplete_mid_cols <- function(matrixRow) {
 
     # Start by filtering the data down to remove the geographic level being tested and any lower levels we don't care about
 
-    level_rows <- data %>% filter(geographic_level != matrixRow[1], !geographic_level %in% geography_matrix[13:16, ])
+    level_rows <- data %>% 
+      filter(geographic_level != matrixRow[1]) %>% 
+      filter(!geographic_level %in% geography_matrix[13:16, ])
 
     # Extract the columns for the geographic level that is being tested
 
@@ -1034,6 +997,7 @@ overcompleted_cols <- function(data) {
 
   # ----------------------------------------------------------------------------------------------------------------------------------
   # forcing these into a matrix, otherwise just calling that row returns a vector that breaks the apply function
+  
   regional_matrix <- matrix(geography_matrix[2, ], nrow = 1)
   la_matrix <- matrix(geography_matrix[3, ], nrow = 1)
 
@@ -1071,8 +1035,8 @@ overcompleted_cols <- function(data) {
 
 ignored_rows <- function(data) {
   table_tool_rows <- data %>%
-    filter(geographic_level != "Institution") %>%
-    filter(geographic_level != "Planning area") %>%
+    filter(geographic_level != geography_matrix[15,1]) %>%
+    filter(geographic_level != geography_matrix[16,1]) %>%
     nrow()
 
   if (table_tool_rows == 0) {
@@ -1082,7 +1046,7 @@ ignored_rows <- function(data) {
     )
   } else {
     potential_ignored_rows <- data %>%
-      filter(geographic_level %in% c("Institution", "Planning area", "School", "Provider")) %>%
+      filter(geographic_level %in% geography_matrix[13:16,1]) %>%
       nrow()
 
     if (potential_ignored_rows == 0) {
@@ -1094,21 +1058,21 @@ ignored_rows <- function(data) {
       levels_present <- data %>%
         distinct(geographic_level)
 
-      if (nrow(levels_present) == 1 && data$geographic_level[1] %in% c("School", "Provider")) {
+      if (nrow(levels_present) == 1 && data$geographic_level[1] %in% geography_matrix[13:14,1]) {
         output <- list(
           "message" = "No rows in the file will be ignored by the EES table tool.",
           "result" = "PASS"
         )
       } else {
-        if ("School" %in% levels_present$geographic_level && "Provider" %in% levels_present$geographic_level) {
+        if (geography_matrix[13,1] %in% levels_present$geographic_level && geography_matrix[14,1] %in% levels_present$geographic_level) {
           output <- list(
-            "message" = "School and provider data has been mixed - please contact the Statistics Development Team.",
+            "message" = paste(geography_matrix[13,1], "and", geography_matrix[13,1], "data has been mixed - please contact the Statistics Development Team."),
             "result" = "FAIL"
           )
         } else {
           output <- list(
             "message" = paste0(
-              potential_ignored_rows, " rows of data will be ignored by the table tool. <br> - These will be at School, Provider, Planning area or Institution level. <br> - Please ",
+              potential_ignored_rows, " rows of data will be ignored by the table tool. <br> - These will be at ", geography_matrix[13,1], ", ", geography_matrix[14,1], ", ", geography_matrix[15,1], " and ", geography_matrix[16,1]," level. <br> - Please ",
               "<a href='mailto: explore.statistics@education.gov.uk'>contact us</a>", " or see our ",
               "<a href='https://dfe-analytical-services.github.io/stats-production-guidance-copy/ud.html#Allowable_geographic_levels' target='_blank'>guidance website</a>", # a message that we should add the option to see those rows in another tab at some point
               " for more information."
@@ -1122,61 +1086,19 @@ ignored_rows <- function(data) {
   return(output)
 }
 
-# old_la_code -------------------------------------
-# Checking if old_la_code is always only 3 numeric digits
-
-old_la_code <- function(data) {
-  if (!"old_la_code" %in% names(data)) {
-    output <- list(
-      "message" = "old_la_code is not present in this data file.",
-      "result" = "IGNORE"
-    )
-  } else {
-    invalid_values <- data %>%
-      select("old_la_code") %>%
-      unique() %>%
-      filter(!is.na(.)) %>%
-      filter(old_la_code != "") %>%
-      filter(old_la_code != ":") %>%
-      pull(old_la_code) %>%
-      .[!grepl("^[0-9]{3}$", .)]
-
-    if (length(invalid_values) == 0) {
-      output <- list(
-        "message" = "old_la_code is always a 3 digit numeric code, blank or : for not available.",
-        "result" = "PASS"
-      )
-    } else {
-      if (length(invalid_values) == 1) {
-        output <- list(
-          "message" = paste0("The following old_la_code value is invalid: '", paste0(invalid_values), "'. <br> - old_la_code must always be a 3 digit numeric code, blank or : for not available.."),
-          "result" = "FAIL"
-        )
-      } else {
-        output <- list(
-          "message" = paste0("The following old_la_code values are invalid: '", paste0(invalid_values, collapse = "', '"), "'. <br> - old_la_code must always be a 3 digit numeric code, blank or : for not available.."),
-          "result" = "FAIL"
-        )
-      }
-    }
-  }
-
-  return(output)
-}
-
 # region_code -------------------------------------
 # Checking that region_code and region_name combinations are valid
 ## Need to update reference list in error message to whatever method we use for LAs as the portal list doesn't include inner/outer london (which we allow)
 
 region_code <- function(data) {
-  if (!"region_code" %in% names(data)) {
+  if (!geography_matrix[2,2] %in% names(data)) {
     output <- list(
-      "message" = "region_code is not present in this data file.",
+      "message" = paste(geography_matrix[2,2], "is not present in this data file."),
       "result" = "IGNORE"
     )
   } else {
     invalid_values <- data %>%
-      select("region_code", "region_name") %>%
+      select(geography_matrix[2,2], geography_matrix[2,3]) %>%
       unique() %>%
       filter(!is.na(.)) %>%
       filter(region_code != "") %>%
@@ -1185,22 +1107,21 @@ region_code <- function(data) {
       mutate(combo = paste(region_code, region_name)) %>%
       pull(combo) %>%
       .[!(. %in% expected_region_combinations)]
-    # .[!grepl("^[A-Z]{1}[0-9]{8}$", .)]
 
     if (length(invalid_values) == 0) {
       output <- list(
-        "message" = "region_code is always a 9 digit code, with one letter followed by 8 numbers, : for not available, or blank.",
+        "message" = paste(geography_matrix[2,2], "is always a 9 digit code, with one letter followed by 8 numbers, : for not available, or blank."),
         "result" = "PASS"
       )
     } else {
       if (length(invalid_values) == 1) {
         output <- list(
-          "message" = paste0("The following region_code / region_name combination is invalid: '", paste0(invalid_values), "'. <br> - We do not expect any region outside of those on the <a href='https://geoportal.statistics.gov.uk/datasets/regions-december-2020-en-bgc/data?geometry=-22.223%2C50.522%2C17.877%2C55.161' target='_blank'>ONS Open Geography Portal</a> (case sensitive), or : for not available."),
+          "message" = paste0("The following ", geography_matrix[2,2], " /  ", geography_matrix[2,3], " combination is invalid: '", paste0(invalid_values), "'. <br> - We do not expect any region outside of those on the <a href='https://geoportal.statistics.gov.uk/datasets/regions-december-2020-en-bgc/data?geometry=-22.223%2C50.522%2C17.877%2C55.161' target='_blank'>ONS Open Geography Portal</a> (case sensitive), or : for not available."),
           "result" = "FAIL"
         )
       } else {
         output <- list(
-          "message" = paste0("The following region_code / region_name cominations are invalid: '", paste0(invalid_values, collapse = "', '"), "'. <br> - We do not expect any regions outside of those on the <a href='https://geoportal.statistics.gov.uk/datasets/regions-december-2020-en-bgc/data?geometry=-22.223%2C50.522%2C17.877%2C55.161' target='_blank'>ONS Open Geography Portal</a> (case senstive), or : for not available."),
+          "message" = paste0("The following ", geography_matrix[2,2], " /  ", geography_matrix[2,3], "  cominations are invalid: '", paste0(invalid_values, collapse = "', '"), "'. <br> - We do not expect any regions outside of those on the <a href='https://geoportal.statistics.gov.uk/datasets/regions-december-2020-en-bgc/data?geometry=-22.223%2C50.522%2C17.877%2C55.161' target='_blank'>ONS Open Geography Portal</a> (case senstive), or : for not available."),
           "result" = "FAIL"
         )
       }
@@ -1214,14 +1135,14 @@ region_code <- function(data) {
 # checking that country_code and country_name combinations are valid
 
 country_code <- function(data) {
-  if (!"country_code" %in% names(data)) {
+  if (!geography_matrix[1,2] %in% names(data)) {
     output <- list(
-      "message" = "country_code is not present in this data file.",
+      "message" = paste(geography_matrix[1,2], "is not present in this data file."),
       "result" = "IGNORE"
     )
   } else {
     invalid_values <- data %>%
-      select("country_code", "country_name") %>%
+      select(geography_matrix[1,2], geography_matrix[1,3]) %>%
       filter(country_code != ":") %>%
       filter(country_code != "z") %>%
       unique() %>%
@@ -1231,18 +1152,18 @@ country_code <- function(data) {
 
     if (length(invalid_values) == 0) {
       output <- list(
-        "message" = "country_code is always one of the expected ONS codes or ':' for 'Not available'.",
+        "message" = paste(geography_matrix[1,2], "is always one of the expected ONS codes or ':' for 'Not available'."),
         "result" = "PASS"
       )
     } else {
       if (length(invalid_values) == 1) {
         output <- list(
-          "message" = paste0("The following country_code / country_name combination is invalid: '", paste0(invalid_values), "'. <br> - We do not expect any countries outside of those on the <a href='https://geoportal.statistics.gov.uk/datasets/countries-december-2018-names-and-codes-in-the-united-kingdom/data' target='_blank'>ONS Open Geography Portal</a> (case sensitive), or : for not available."),
+          "message" = paste0("The following ", geography_matrix[1,2], " /  ", geography_matrix[1,3], " combination is invalid: '", paste0(invalid_values), "'. <br> - We do not expect any countries outside of those on the <a href='https://geoportal.statistics.gov.uk/datasets/countries-december-2018-names-and-codes-in-the-united-kingdom/data' target='_blank'>ONS Open Geography Portal</a> (case sensitive), or : for not available."),
           "result" = "FAIL"
         )
       } else {
         output <- list(
-          "message" = paste0("The following country_code / country_name combinations are invalid: '", paste0(invalid_values, collapse = "', '"), "'. <br> - We do not expect any countries outside of those on the <a href='https://geoportal.statistics.gov.uk/datasets/countries-december-2018-names-and-codes-in-the-united-kingdom/data' target='_blank'>ONS Open Geography Portal</a>, (case sensitive) or : for not available."),
+          "message" = paste0("The following ", geography_matrix[1,2], " /  ", geography_matrix[1,3], " combinations are invalid: '", paste0(invalid_values, collapse = "', '"), "'. <br> - We do not expect any countries outside of those on the <a href='https://geoportal.statistics.gov.uk/datasets/countries-december-2018-names-and-codes-in-the-united-kingdom/data' target='_blank'>ONS Open Geography Portal</a>, (case sensitive) or : for not available."),
           "result" = "FAIL"
         )
       }
@@ -1257,14 +1178,14 @@ country_code <- function(data) {
 # check that there is a 1:1 relationship between school laestab codes and names
 
 school_laestab_duplicates <- function(data) {
-  if (!"School" %in% unique(data$geographic_level)) {
+  if (!geography_matrix[13,1] %in% unique(data$geographic_level)) {
     output <- list(
-      "message" = "School-level data is not present in this data file.",
+      "message" = paste0(geography_matrix[13,1], "-level data is not present in this data file."),
       "result" = "IGNORE"
     )
   } else {
     multi_count_code <- data %>%
-      select("school_laestab", "school_name") %>%
+      select(geography_matrix[13,4], geography_matrix[13,3]) %>%
       distinct() %>%
       add_count(school_name, name = "school_name_n") %>%
       filter(school_name_n > 1) %>%
@@ -1274,7 +1195,7 @@ school_laestab_duplicates <- function(data) {
       pull()
 
     multi_count_name <- data %>%
-      select("school_laestab", "school_name") %>%
+      select(geography_matrix[13,4], geography_matrix[13,3]) %>%
       distinct() %>%
       add_count(school_laestab, name = "school_code_n") %>%
       filter(school_code_n > 1) %>%
@@ -1287,13 +1208,13 @@ school_laestab_duplicates <- function(data) {
 
     if (length(multi_count_code) == 0 & length(multi_count_name) == 0) {
       output <- list(
-        "message" = "Every school name has one laestab, and vice versa.",
+        "message" = paste("Every", geography_matrix[13,3], "value has one", geography_matrix[13,4], "value, and vice versa."),
         "result" = "PASS"
       )
     } else {
       if (length(multi_count_code) == 1 & length(multi_count_name) == 0) {
         output <- list(
-          "message" = paste0("The following school_name has multiple laestabs: ", paste0(multi_count_code), ". 
+          "message" = paste0("The following ", geography_matrix[13,3], "value has multuple", geography_matrix[13,4], " values: ", paste0(multi_count_code), ". 
                              <br> - Every school name should have only one laestab and vice versa."),
           "result" = "FAIL"
         )

@@ -111,12 +111,6 @@ test_that("region_col_completed", {
   expect_equal(testIndividualTest(pathStart, "region_col_completed"), "FAIL")
 })
 
-# new_la_code -------------------------------------------------------------------------------------------------------
-
-test_that("new_la_code", {
-  expect_equal(testIndividualTest(pathStart, "new_la_code"), "FAIL")
-})
-
 # overcompleted_cols -------------------------------------------------------------------------------------------------------
 
 test_that("overcompleted_cols", {
@@ -129,23 +123,10 @@ test_that("ignored_rows", {
   expect_equal(testIndividualTest(pathStart, "ignored_rows"), "PASS WITH NOTE")
 })
 
-
-# old_la_code -------------------------------------------------------------------------------------------------------
-
-test_that("old_la_code", {
-  expect_equal(testIndividualTest(pathStart, "old_la_code"), "FAIL")
-})
-
 # region_code -------------------------------------------------------------------------------------------------------
 
 test_that("region_code", {
   expect_equal(testIndividualTest(pathStart, "region_code"), "FAIL")
-})
-
-# country_code -------------------------------------------------------------------------------------------------------
-
-test_that("country_code", {
-  expect_equal(testIndividualTest(pathStart, "country_code"), "FAIL")
 })
 
 # country_code -------------------------------------------------------------------------------------------------------
@@ -172,7 +153,6 @@ test_that("other_geography_duplicates", {
   expect_equal(testIndividualTest(pathStart, "other_geography_duplicates"), "FAIL")
 })
 
-
 # other_geography_code_duplicates -------------------------------------------------------------------------------------------------------
 
 test_that("other_geography_duplicates", {
@@ -190,7 +170,6 @@ test_that("na_geography", {
 test_that("na_geography_code", {
   expect_equal(testIndividualTest(pathStart, "na_geography_code"), "FAIL")
 })
-
 
 # col_name_duplicate -------------------------------------------------------------------------------------------------------
 

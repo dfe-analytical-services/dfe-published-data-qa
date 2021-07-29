@@ -28,12 +28,6 @@ test_that("QuotedBlanks-overcompleted_cols", {
   expect_equal(screeningOutput$results %>% filter(test == "overcompleted_cols") %>% pull(result) %>% unlist(use.names = FALSE), "PASS")
 })
 
-test_that("QuotedBlanks-old_la_code", {
-  screeningOutput <- testOther("../../tests/testthat/otherData/quoted_blank_geographies.csv")
-
-  expect_equal(screeningOutput$results %>% filter(test == "old_la_code") %>% pull(result) %>% unlist(use.names = FALSE), "PASS")
-})
-
 test_that("QuotedBlanks-region_code", {
   screeningOutput <- testOther("../../tests/testthat/otherData/quoted_blank_geographies.csv")
 
