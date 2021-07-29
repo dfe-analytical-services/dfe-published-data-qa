@@ -52,14 +52,12 @@ ncol = 6,
 byrow = TRUE
 )
 
-countries <- read_csv("data/country.csv") # change this to database eventually
-regions <- read_csv("data/regions.csv") # change this to database eventually
-
+countries <- suppressMessages(read_csv("data/country.csv")) # change this to database eventually
+regions <- suppressMessages(read_csv("data/regions.csv")) # change this to database eventually
 
 expected_country_combinations <- unique(paste(countries$country_code, countries$country_name))
 
 expected_region_combinations <- unique(paste(regions$region_code, regions$region_name))
-
 
 acceptable_levels <- c(
   geography_matrix[, 1] %>% .[!is.na(.)]
@@ -69,7 +67,6 @@ acceptable_observational_units <- c(
   "time_period", "time_identifier", "geographic_level",
   unlist(geography_matrix[, 2:6]) %>% .[!is.na(.)]
 )
-
 
 potential_ob_units_regex <- "(^(sch|prov|inst|estab|reg|la|local|rsc|pcon|lep|mca|oa|ward|mat).*(name|code|urn|ukprn|number|upin|id)$)|(^(laestab|estab|sch|school|schools|prov|provider|providers|inst|institution|institutions|name|code|urn|ukprn|number|upin|id|region|la|lad|rsc|pcon|lep|mca|oa|ward|mat)$)"
 
