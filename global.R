@@ -279,7 +279,6 @@ getLocalTags <- function() {
 }
 
 customDisconnectMessage <- function(
-  text = "An error occurred. Please refresh the page and try again.",
   refresh = "Refresh",
   width = 450,
   top = 50,
@@ -292,7 +291,7 @@ customDisconnectMessage <- function(
   css = ""
 ) {
   
-  checkmate::assert_string(text, min.chars = 1)
+#  checkmate::assert_string(text, min.chars = 1)
   checkmate::assert_string(refresh)
   checkmate::assert_numeric(size, lower = 0)
   checkmate::assert_string(background)
@@ -321,7 +320,43 @@ customDisconnectMessage <- function(
   }
   
   htmltools::tagList(
-    getLocalTags(),
+    #getLocalTags(),
+    
+    
+    htmltools::tags$script(paste0(
+      "$(function() {",
+      "  $(document).on('shiny:disconnected', function(event) {",
+      "    $('#ss-connect-dialogAA').show();",
+      "    $('#ss-overlay').show();",
+      "  })",
+      "});"
+    )),
+    htmltools::tags$div(id="ss-connect-dialogAA", 
+                        style="display: none !important;",
+                        
+                        htmltools::tags$div(id="ss-connect-refresh", 
+                                            
+                                            htmltools::tags$p("Something went wrong! Try refreshing the page."),
+                                            
+                                            htmltools::tags$a(id="ss-reload-link", href="#", onclick="window.location.reload(true);")
+                        ),
+                        
+                        htmltools::tags$div(id="ss-connect-image", 
+                                            style="display: block !important;",
+                                            
+                                            htmltools::tags$img(id="ss-reload-image", src = "builder-duck.PNG"),
+                                            
+                                            htmltools::tags$p("If this persists, please contact statistics.development@education.gov.uk with details of what you were trying to do.")
+                        )
+                        
+                        
+    ),
+    
+    
+    
+    htmltools::tags$div(id="ss-overlay", style="display: none;"),
+    
+    
     htmltools::tags$head(
       htmltools::tags$style(
         glue::glue(
@@ -362,13 +397,6 @@ customDisconnectMessage <- function(
              border-radius: 3px !important;
              box-shadow: rgba(0, 0, 0, 0.3) 3px 3px 10px !important;
           }",
-          
-          # "#ss-connect-dialogAA::before {
-          # content: '{{ text }}' ;
-          # display: block ;
-          # color: #ffffff ;
-          # font-size: {{size}}px !important;
-          # }",
           
           "#ss-connect-dialogAA a {
              display: {{ if (refresh == '') 'none' else 'block' }} !important;
