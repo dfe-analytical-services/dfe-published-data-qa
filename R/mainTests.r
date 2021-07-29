@@ -24,9 +24,9 @@ mainTests <- function(data_character, meta_character, datafile, metafile) {
     new_la_code(datafile), # active test
     overcompleted_cols(datafile), # active test
     not_table_tool(datafile), # active test
-    old_la_code(datafile), # active test
-    region_code(datafile), # active test
-    country_code(datafile), # active test
+    la_combinations(datafile), # active test
+    region_combinations(datafile), # active test
+    country_combinations(datafile), # active test
     # school_urn_duplicates(datafile),
     # school_laestab_duplicates(datafile),
     other_geography_duplicates(datafile), # active test
@@ -1097,7 +1097,7 @@ not_table_tool <- function(data) {
 # old_la_code_code -------------------------------------
 # checking that la code and name combinations are valid
 
-old_la_code <- function(data) {
+la_combinations <- function(data) {
   if (!"new_la_code" %in% names(data)) {
     output <- list(
       "message" = "LA columns are not present in this data file.",
@@ -1144,7 +1144,7 @@ old_la_code <- function(data) {
 ## Need to update reference list in error message to whatever method we use for LAs as the portal list doesn't include inner/outer london (which we allow)
 
 
-region_code <- function(data) {
+region_combinations <- function(data) {
   if (!"region_code" %in% names(data)) {
     output <- list(
       "message" = "Region columns are not present in this data file.",
@@ -1189,7 +1189,7 @@ region_code <- function(data) {
 # country_code -------------------------------------
 # checking that country_code and country_name combinations are valid
 
-country_code <- function(data) {
+country_combinations <- function(data) {
   if (!"country_code" %in% names(data)) {
     output <- list(
       "message" = "Country columns are not present in this data file.",

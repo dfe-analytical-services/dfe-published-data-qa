@@ -129,28 +129,28 @@ test_that("not_table_tool", {
   expect_equal(testIndividualTest(pathStart, "not_table_tool"), "ANCILLARY")
 })
 
-# old_la_code -------------------------------------------------------------------------------------------------------
+# la_combinations -------------------------------------------------------------------------------------------------------
 
-test_that("old_la_code", {
-  expect_equal(testIndividualTest(pathStart, "old_la_code"), "FAIL")
+test_that("la_combinations", {
+  expect_equal(testIndividualTest(pathStart, "la_combinations"), "FAIL")
 })
 
-# region_code -------------------------------------------------------------------------------------------------------
+# region_combinations -------------------------------------------------------------------------------------------------------
 
-test_that("region_code", {
-  expect_equal(testIndividualTest(pathStart, "region_code"), "FAIL")
+test_that("region_combinations", {
+  expect_equal(testIndividualTest(pathStart, "region_combinations"), "FAIL")
 })
 
-# country_code -------------------------------------------------------------------------------------------------------
+# country_combinations -------------------------------------------------------------------------------------------------------
 
-test_that("country_code", {
-  expect_equal(testIndividualTest(pathStart, "country_code"), "FAIL")
+test_that("country_combinations", {
+  expect_equal(testIndividualTest(pathStart, "country_combinations"), "FAIL")
 })
 
-# country_code -------------------------------------------------------------------------------------------------------
+# country_combinations -------------------------------------------------------------------------------------------------------
 
-test_that("country_code", {
-  expect_equal(testIndividualTest(pathStart, "country_code"), "FAIL")
+test_that("country_combinations", {
+  expect_equal(testIndividualTest(pathStart, "country_combinations"), "FAIL")
 })
 
 # school_urn_duplicates -------------------------------------------------------------------------------------------------------
