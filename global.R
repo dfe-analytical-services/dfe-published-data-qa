@@ -323,6 +323,8 @@ disconnectMessage3 <- function(
           .open = "{{", .close = "}}",
           
           ## This hides the old message
+          "#ss-connect-dialog { display: none !important; }",
+          
           "#shiny-disconnected-overlay { display: none !important; }",
           
           "#ss-overlay {
