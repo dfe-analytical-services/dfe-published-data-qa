@@ -31,24 +31,24 @@ four_digit_identifiers <- c("Calendar year", "Reporting year", weeks, months)
 six_digit_identifiers <- c("Autumn and spring term", terms, "Financial year", "Academic year", "Tax year", financial_quarters, financial_halves)
 
 geography_matrix <- matrix(c(
-  "National", "country_code", "country_name", NA, NA, NA,
-  "Regional", "region_code", "region_name", NA, NA, NA,
-  "Local authority", "old_la_code", "la_name", "new_la_code", NA, NA,
-  "Local authority district", "lad_code", "lad_name", NA, NA, NA,
-  "RSC region", "rsc_region_lead_name", NA, NA, NA, NA,
-  "Parliamentary constituency", "pcon_code", "pcon_name", NA, NA, NA,
-  "Local enterprise partnership", "local_enterprise_partnership_code", "local_enterprise_partnership_name", NA, NA, NA,
-  "English devolved area", "english_devolved_area_code", "english_devolved_area_name", NA, NA, NA,
-  "Opportunity area", "opportunity_area_code", "opportunity_area_name", NA, NA, NA,
-  "Ward", "ward_code", "ward_name", NA, NA, NA,
-  "MAT", "trust_id", "trust_name", NA, NA, NA,
-  "Sponsor", "sponsor_id", "sponsor_name", NA, NA, NA,
-  "School", "school_laestab", "school_name", "school_urn", "school_estab", "school_postcode",
-  "Provider", "provider_ukprn", "provider_name", "provider_urn", "provider_upin", NA,
-  "Institution", "institution_id", "institution_name", NA, NA, NA,
-  "Planning area", "planning_area_name", "planning_area_code", NA, NA, NA
+  "National", "country_code", "country_name", NA,
+  "Regional", "region_code", "region_name", NA,
+  "Local authority", "old_la_code", "la_name", "new_la_code",
+  "Local authority district", "lad_code", "lad_name", NA,
+  "RSC region", "rsc_region_lead_name", NA, NA,
+  "Parliamentary constituency", "pcon_code", "pcon_name", NA,
+  "Local enterprise partnership", "local_enterprise_partnership_code", "local_enterprise_partnership_name", NA,
+  "English devolved area", "english_devolved_area_code", "english_devolved_area_name", NA,
+  "Opportunity area", "opportunity_area_code", "opportunity_area_name", NA,
+  "Ward", "ward_code", "ward_name", NA,
+  "MAT", "trust_id", "trust_name", NA,
+  "Sponsor", "sponsor_id", "sponsor_name", NA,
+  "School", "school_urn", "school_name", "school_laestab",
+  "Provider", "provider_ukprn", "provider_name", NA,
+  "Institution", "institution_id", "institution_name", NA,
+  "Planning area", "planning_area_name", "planning_area_code", NA
 ),
-ncol = 6,
+ncol = 4,
 byrow = TRUE
 )
 
@@ -65,7 +65,7 @@ acceptable_levels <- c(
 
 acceptable_observational_units <- c(
   "time_period", "time_identifier", "geographic_level",
-  unlist(geography_matrix[, 2:6]) %>% .[!is.na(.)]
+  unlist(geography_matrix[, 2:4]) %>% .[!is.na(.)]
 )
 
 potential_ob_units_regex <- "(^(sch|prov|inst|estab|reg|la|local|rsc|pcon|lep|mca|oa|ward|mat).*(name|code|urn|ukprn|number|upin|id)$)|(^(laestab|estab|sch|school|schools|prov|provider|providers|inst|institution|institutions|name|code|urn|ukprn|number|upin|id|region|la|lad|rsc|pcon|lep|mca|oa|ward|mat)$)"
@@ -73,9 +73,7 @@ potential_ob_units_regex <- "(^(sch|prov|inst|estab|reg|la|local|rsc|pcon|lep|mc
 col_to_level_lookup <- rbind(
   data.frame(levels = geography_matrix[, 1], cols = geography_matrix[, 2]),
   data.frame(levels = geography_matrix[, 1], cols = geography_matrix[, 3]),
-  data.frame(levels = geography_matrix[, 1], cols = geography_matrix[, 4]),
-  data.frame(levels = geography_matrix[, 1], cols = geography_matrix[, 5]),
-  data.frame(levels = geography_matrix[, 1], cols = geography_matrix[, 6])
+  data.frame(levels = geography_matrix[, 1], cols = geography_matrix[, 4])
 ) %>%
   filter(!is.na(cols))
 

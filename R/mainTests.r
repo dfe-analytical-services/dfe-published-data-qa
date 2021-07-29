@@ -766,7 +766,7 @@ geography_level_completed <- function(data) {
   }
 
   # filter out the non table tool rows / cols from geography matrix (also removed new_la_code as that can legitimately be blank)
-  geography_completed <- geography_matrix[1:12, 1:3]
+  geography_completed <- geography_matrix[1:14, 1:3]
 
   incomplete_geographies <- unlist(apply(geography_completed, 1, incomplete_cols))
 
@@ -919,7 +919,7 @@ overcompleted_cols <- function(data) {
 
     # Extract the columns for the geographic level that is being tested
 
-    cols <- matrixRow[2:6] %>% .[!is.na(.)]
+    cols <- matrixRow[2:4] %>% .[!is.na(.)]
 
     # Function used to check if each column for that geographic level has any cells that are not blank
 
@@ -950,7 +950,7 @@ overcompleted_cols <- function(data) {
 
     # Extract the columns for the geographic level that is being tested
 
-    cols <- matrixRow[2:6] %>% .[!is.na(.)]
+    cols <- matrixRow[2:4] %>% .[!is.na(.)]
 
     # Function used to check if each column for that geographic level has any cells that are not blank
 
@@ -981,7 +981,7 @@ overcompleted_cols <- function(data) {
 
     # Extract the columns for the geographic level that is being tested
 
-    cols <- matrixRow[2:6] %>% .[!is.na(.)]
+    cols <- matrixRow[2:4] %>% .[!is.na(.)]
 
     # Function used to check if each column for that geographic level has any cells that are not blank
 
@@ -1012,7 +1012,7 @@ overcompleted_cols <- function(data) {
 
     # Extract the columns for the geographic level that is being tested
 
-    cols <- matrixRow[2:6] %>% .[!is.na(.)]
+    cols <- matrixRow[2:4] %>% .[!is.na(.)]
 
     # Function used to check if each column for that geographic level has any cells that are not blank
 
@@ -2096,7 +2096,7 @@ whitespace_filters <- function(data, meta) {
     pull(col_name)
 
   test <- data %>%
-    select(all_of(filters), any_of(as.character(geography_matrix[, 2:6]) %>% .[!is.na(.)])) %>%
+    select(all_of(filters), any_of(as.character(geography_matrix[, 2:4]) %>% .[!is.na(.)])) %>%
     mutate_if(is.numeric, as.character) %>%
     pivot_longer(everything(), values_drop_na = TRUE, names_to = "filter", values_to = "filter_label") %>%
     # gather(., "filter", "filter_label") %>%
