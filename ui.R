@@ -113,9 +113,8 @@ fluidPage(
               ))
             )
           ),
-          
+
           actionButton("tempcloseapp", "stop app")
-          
         ),
 
         # Main panel showing results -----------------------------------------------------------------------------------

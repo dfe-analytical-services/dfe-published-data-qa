@@ -1193,9 +1193,8 @@ server <- function(input, output, session) {
   session$onSessionEnded(function() {
     stopApp()
   })
-  
+
   observeEvent(input$tempcloseapp, {
     stopApp()
   })
-  
 }

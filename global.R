@@ -242,17 +242,15 @@ options(spinner.size = .5)
 # disconnect duck ---------------------------------------------------------
 
 customDisconnectMessage <- function(
-  refresh = "Refresh",
-  width = 450,
-  top = 50,
-  size = 22,
-  background = "white",
-  colour = "#ffffff", #"#444444",
-  overlayColour = "black",
-  overlayOpacity = 0.6,
-  refreshColour = "#337ab7"
-) {
-  
+                                    refresh = "Refresh",
+                                    width = 450,
+                                    top = 50,
+                                    size = 22,
+                                    background = "white",
+                                    colour = "#ffffff", # "#444444",
+                                    overlayColour = "black",
+                                    overlayOpacity = 0.6,
+                                    refreshColour = "#337ab7") {
   checkmate::assert_string(refresh)
   checkmate::assert_numeric(size, lower = 0)
   checkmate::assert_string(background)
@@ -260,7 +258,7 @@ customDisconnectMessage <- function(
   checkmate::assert_string(overlayColour)
   checkmate::assert_number(overlayOpacity, lower = 0, upper = 1)
   checkmate::assert_string(refreshColour)
-  
+
   if (width == "full") {
     width <- "100%"
   } else if (is.numeric(width) && width >= 0) {
@@ -268,7 +266,7 @@ customDisconnectMessage <- function(
   } else {
     stop("disconnectMessage: 'width' must be either an integer, or the string \"full\".", call. = FALSE)
   }
-  
+
   if (top == "center") {
     top <- "50%"
     ytransform <- "-50%"
@@ -278,7 +276,7 @@ customDisconnectMessage <- function(
   } else {
     stop("disconnectMessage: 'top' must be either an integer, or the string \"center\".", call. = FALSE)
   }
-  
+
   htmltools::tagList(
     htmltools::tags$script(
       paste0(
@@ -293,31 +291,32 @@ customDisconnectMessage <- function(
     htmltools::tags$div(
       id = "custom-disconnect-dialog",
       style = "display: none !important;",
-      
+
       htmltools::tags$div(
         id = "ss-connect-refresh",
         htmltools::tags$p("Something went wrong! Try refreshing the page."),
-        htmltools::tags$a(id = "ss-reload-link", href ="#", onclick = "window.location.reload(true);")
+        htmltools::tags$a(id = "ss-reload-link", href = "#", onclick = "window.location.reload(true);")
       ),
-      
+
       htmltools::tags$div(
         id = "ss-connect-image",
         style = "display: block !important;",
-        
+
         htmltools::tags$img(id = "ss-reload-image", src = "builder-duck.PNG"),
         htmltools::tags$p("If this persists, please contact statistics.development@education.gov.uk with details of what you were trying to do.")
       )
     ),
-    
+
     htmltools::tags$div(id = "ss-overlay", style = "display: none;"),
-    
+
     htmltools::tags$head(htmltools::tags$style(
-      glue::glue(.open = "{{", .close = "}}",
-        
+      glue::glue(
+        .open = "{{", .close = "}}",
+
         ## This hides the old message
-        "#ss-connect-dialog { display: none !important; }", #rsconnect
-        "#shiny-disconnected-overlay { display: none !important; }", #local
-        
+        "#ss-connect-dialog { display: none !important; }", # rsconnect
+        "#shiny-disconnected-overlay { display: none !important; }", # local
+
         "#ss-overlay {
              background-color: {{overlayColour}} !important;
              opacity: {{overlayOpacity}} !important;
@@ -330,7 +329,7 @@ customDisconnectMessage <- function(
              overflow: hidden !important;
              cursor: not-allowed !important;
           }",
-        
+
         "#custom-disconnect-dialog {
              background: {{background}} !important;
              color: {{colour}} !important;
@@ -349,7 +348,7 @@ customDisconnectMessage <- function(
              border-radius: 3px !important;
              box-shadow: rgba(0, 0, 0, 0.3) 3px 3px 10px !important;
           }",
-        
+
         "#custom-disconnect-dialog a {
              display: {{ if (refresh == '') 'none' else 'block' }} !important;
              color: {{refreshColour}} !important;
@@ -357,7 +356,7 @@ customDisconnectMessage <- function(
              margin-top: {{size}}px !important;
              font-weight: normal !important;
           }",
-        
+
         "#custom-disconnect-dialog a::before {
             content: '{{refresh}}';
             font-size: {{size}}px;

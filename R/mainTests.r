@@ -1072,7 +1072,7 @@ la_combinations <- function(data) {
       pull(combo) %>%
       .[!(. %in% expected_la_combinations)]
     # .[!grepl("^[A-Z]{1}[0-9]{8}$", .)]
-    
+
     if (length(invalid_values) == 0) {
       output <- list(
         "message" = "All old_la_code, new_la_code and la_name comninations are valid.",
@@ -1092,7 +1092,7 @@ la_combinations <- function(data) {
       }
     }
   }
-  
+
   return(output)
 }
 
