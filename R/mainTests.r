@@ -21,7 +21,6 @@ mainTests <- function(data_character, meta_character, datafile, metafile) {
     region_for_lad(datafile), # active test
     geography_level_completed(datafile), # active test
     region_col_completed(datafile), # active test
-    new_la_code(datafile), # active test
     overcompleted_cols(datafile), # active test
     not_table_tool(datafile), # active test
     la_combinations(datafile), # active test
@@ -853,48 +852,6 @@ region_col_completed <- function(data) {
         output <- list(
           "message" = "No recognised regional columns are present in this data file.",
           "result" = "IGNORE"
-        )
-      }
-    }
-  }
-
-  return(output)
-}
-
-# new_la_code -------------------------------------
-# Is the new LA code always either 9 digits or blank?
-
-new_la_code <- function(data) {
-  if (!"new_la_code" %in% names(data)) {
-    output <- list(
-      "message" = "new_la_code is not present in this data file.",
-      "result" = "IGNORE"
-    )
-  } else {
-    invalid_values <- select(data, "new_la_code") %>%
-      unique() %>%
-      mutate("code_length" = str_count(new_la_code)) %>%
-      filter(new_la_code != ":") %>%
-      filter(code_length != 9, code_length != 0) %>%
-      pull(new_la_code) %>%
-      unique()
-    number_invalid_values <- length(invalid_values)
-
-    if (number_invalid_values == 0) {
-      output <- list(
-        "message" = "new_la_code is always a 9 digit code, : for not available, or blank.",
-        "result" = "PASS"
-      )
-    } else {
-      if (number_invalid_values == 1) {
-        output <- list(
-          "message" = paste0("The following new_la_code value is invalid: '", paste0(invalid_values), "'. <br> - new_la_code must always be a 9 digit code: for not available, or blank."),
-          "result" = "FAIL"
-        )
-      } else {
-        output <- list(
-          "message" = paste0("The following new_la_code values are invalid: '", paste0(invalid_values, collapse = "', '"), "'. <br> - new_la_code must always be a 9 digit code, : for not available, or blank."),
-          "result" = "FAIL"
         )
       }
     }
