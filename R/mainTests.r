@@ -1051,7 +1051,7 @@ not_table_tool <- function(data) {
   return(output)
 }
 
-# old_la_code_code -------------------------------------
+# la_combinations -------------------------------------
 # checking that la code and name combinations are valid
 
 la_combinations <- function(data) {
@@ -1071,7 +1071,6 @@ la_combinations <- function(data) {
       mutate(combo = paste(old_la_code, new_la_code, la_name)) %>%
       pull(combo) %>%
       .[!(. %in% expected_la_combinations)]
-    # .[!grepl("^[A-Z]{1}[0-9]{8}$", .)]
 
     if (length(invalid_values) == 0) {
       output <- list(
@@ -1118,7 +1117,6 @@ region_combinations <- function(data) {
       mutate(combo = paste(region_code, region_name)) %>%
       pull(combo) %>%
       .[!(. %in% expected_region_combinations)]
-    # .[!grepl("^[A-Z]{1}[0-9]{8}$", .)]
 
     if (length(invalid_values) == 0) {
       output <- list(
@@ -1143,7 +1141,7 @@ region_combinations <- function(data) {
   return(output)
 }
 
-# country_code -------------------------------------
+# country_combinations -------------------------------------
 # checking that country_code and country_name combinations are valid
 
 country_combinations <- function(data) {

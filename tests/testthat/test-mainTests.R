@@ -141,12 +141,6 @@ test_that("country_combinations", {
   expect_equal(testIndividualTest(pathStart, "country_combinations"), "FAIL")
 })
 
-# country_combinations -------------------------------------------------------------------------------------------------------
-
-test_that("country_combinations", {
-  expect_equal(testIndividualTest(pathStart, "country_combinations"), "FAIL")
-})
-
 # school_urn_duplicates -------------------------------------------------------------------------------------------------------
 
 # test_that("school_urn_duplicates", {
