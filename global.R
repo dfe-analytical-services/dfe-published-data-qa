@@ -185,6 +185,23 @@ ancillary_box <- function() {
   )
 }
 
+info_results_box <- function(message, table) {
+  div(
+    div(
+      class = "panel panel-info",
+      div(
+        class = "panel-heading",
+        style = "color: white;font-size: 18px;font-style: bold; ", # background-color: #e87421;
+        textOutput(message)
+      ),
+      div(
+        class = "panel-body",
+        tableOutput(table)
+      )
+    )
+  )
+}
+
 # cs_num ----------------------------------------------------------------------------
 # Comma separating function
 

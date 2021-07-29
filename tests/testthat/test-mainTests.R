@@ -123,11 +123,12 @@ test_that("overcompleted_cols", {
   expect_equal(testIndividualTest(pathStart, "overcompleted_cols"), "FAIL")
 })
 
-# not_table_tool -------------------------------------------------------------------------------------------------------
+# ignored_rows -------------------------------------------------------------------------------------------------------
 
-test_that("not_table_tool", {
-  expect_equal(testIndividualTest(pathStart, "not_table_tool"), "ANCILLARY")
+test_that("ignored_rows", {
+  expect_equal(testIndividualTest(pathStart, "ignored_rows"), "PASS WITH NOTE")
 })
+
 
 # old_la_code -------------------------------------------------------------------------------------------------------
 

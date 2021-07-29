@@ -23,7 +23,7 @@ mainTests <- function(data_character, meta_character, datafile, metafile) {
     region_col_completed(datafile), # active test
     new_la_code(datafile), # active test
     overcompleted_cols(datafile), # active test
-    not_table_tool(datafile), # active test
+    ignored_rows(datafile), # active test
     old_la_code(datafile), # active test
     region_code(datafile), # active test
     country_code(datafile), # active test
@@ -1066,17 +1066,13 @@ overcompleted_cols <- function(data) {
   return(output)
 }
 
-# not_table_tool -------------------------------------
-# Does the file only contain non table tool rows?
+# ignored_rows -------------------------------------
+# What rows will be ignored by the table tool
 
-not_table_tool <- function(data) {
+ignored_rows <- function(data) {
   table_tool_rows <- data %>%
-    filter(
-      geographic_level != "School",
-      geographic_level != "Institution",
-      geographic_level != "Planning area",
-      geographic_level != "Provider"
-    ) %>%
+    filter(geographic_level != "Institution") %>%
+    filter(geographic_level != "Planning area") %>%
     nrow()
 
   if (table_tool_rows == 0) {
@@ -1085,12 +1081,44 @@ not_table_tool <- function(data) {
       "result" = "ANCILLARY"
     )
   } else {
-    output <- list(
-      "message" = "This file contains rows that will be used in the table tool for EES.",
-      "result" = "PASS"
-    )
-  }
+    potential_ignored_rows <- data %>%
+      filter(geographic_level %in% c("Institution", "Planning area", "School", "Provider")) %>%
+      nrow()
 
+    if (potential_ignored_rows == 0) {
+      output <- list(
+        "message" = "No rows in the file will be ignored by the EES table tool.",
+        "result" = "PASS"
+      )
+    } else {
+      levels_present <- data %>%
+        distinct(geographic_level)
+
+      if (nrow(levels_present) == 1 && data$geographic_level[1] %in% c("School", "Provider")) {
+        output <- list(
+          "message" = "No rows in the file will be ignored by the EES table tool.",
+          "result" = "PASS"
+        )
+      } else {
+        if ("School" %in% levels_present$geographic_level && "Provider" %in% levels_present$geographic_level) {
+          output <- list(
+            "message" = "School and provider data has been mixed - please contact the Statistics Development Team.",
+            "result" = "FAIL"
+          )
+        } else {
+          output <- list(
+            "message" = paste0(
+              potential_ignored_rows, " rows of data will be ignored by the table tool. <br> - These will be at School, Provider, Planning area or Institution level. <br> - Please ",
+              "<a href='mailto: explore.statistics@education.gov.uk'>contact us</a>", " or see our ",
+              "<a href='https://dfe-analytical-services.github.io/stats-production-guidance-copy/ud.html#Allowable_geographic_levels' target='_blank'>guidance website</a>", # a message that we should add the option to see those rows in another tab at some point
+              " for more information."
+            ),
+            "result" = "PASS WITH NOTE"
+          )
+        }
+      }
+    }
+  }
   return(output)
 }
 

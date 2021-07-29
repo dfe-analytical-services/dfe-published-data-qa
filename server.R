@@ -239,10 +239,14 @@ server <- function(input, output, session) {
           filter(result == "ANCILLARY") %>%
           nrow()
 
-        combined_tests <- advisory_tests + ancillary_tests
+        info_tests <- all_results %>%
+          filter(result == "PASS WITH NOTE") %>%
+          nrow()
+
+        combined_tests <- advisory_tests + ancillary_tests + info_tests
 
         passed_tests <- all_results %>%
-          filter(result == "PASS") %>%
+          filter(result %in% c("PASS", "PASS WITH NOTE")) %>%
           nrow()
 
         leftover_tests <- numberActiveTests - run_tests
@@ -277,6 +281,10 @@ server <- function(input, output, session) {
           summarise_stats(advisory_tests, "with recommendations")
         })
 
+        output$num_info_tests <- renderText({
+          summarise_stats(info_tests, "with information to note")
+        })
+
         output$all_tests <- renderText({
           paste0("Full breakdown of the ", run_tests, " tests that were ran against the files")
         })
@@ -308,6 +316,14 @@ server <- function(input, output, session) {
           include.colnames = FALSE
         )
 
+        output$table_info_tests <- renderTable(
+          {
+            filter(all_results, result == "PASS WITH NOTE") %>% select(message, result)
+          },
+          sanitize.text.function = function(x) x,
+          include.colnames = FALSE
+        )
+
         # UI blocks (result dependent) ---------------------------------------------------------------------------------
 
         if (failed_tests != 0) {
@@ -316,12 +332,6 @@ server <- function(input, output, session) {
               message = "num_failed_tests",
               table = "table_failed_tests"
             )
-          })
-        }
-
-        if (failed_tests == 0) {
-          output$passed_box <- renderUI({
-            pass_results_box()
           })
         }
 
@@ -392,11 +402,11 @@ server <- function(input, output, session) {
           })
         }
 
-        if (advisory_tests != 0) {
-          output$advisory_box <- renderUI({
-            advisory_results_box(
-              message = "num_advisory_tests",
-              table = "table_advisory_tests"
+        if (info_tests != 0) {
+          output$info_box <- renderUI({
+            info_results_box(
+              message = "num_info_tests",
+              table = "table_info_tests"
             )
           })
         }

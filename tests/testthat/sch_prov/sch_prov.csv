@@ -1,0 +1,25 @@
+time_period,time_identifier,geographic_level,country_code,country_name,region_code,region_name,old_la_code,new_la_code,la_name,school_name,school_laestab,school_urn,provider_name,provider_ukprn,school_type,grade,gender,age_group,full_time_equivalent,headcount
+201920,Academic year,School,E92000001,England,E13000001,Inner London,201,E09000001,City of London,St Pauls,2013614,100000,,,LA maintained primary,Total,Total,Total,17.7,25
+201718,Academic year,School,E92000001,England,E13000001,Inner London,201,E09000001,City of London,St Pauls,2013614,100000,,,LA maintained primary,Head teacher,Total,Total,1,1
+201819,Academic year,School,E92000001,England,E13000001,Inner London,201,E09000001,City of London,St Pauls,2013614,100000,,,LA maintained primary,Deputy head teacher,Total,Total,1,1
+201920,Academic year,School,E92000001,England,E13000001,Inner London,201,E09000001,City of London,St Pauls,2013614,100000,,,LA maintained primary,Assistant head teacher,Total,Total,1.6,3
+201920,Academic year,School,E92000001,England,E13000001,Inner London,201,E09000001,City of London,St Pauls,2013614,100000,,,LA maintained primary,Classroom teacher,Total,Total,14.1,20
+201920,Academic year,School,E92000001,England,E13000001,Inner London,201,E09000001,City of London,St Pauls,2013614,100000,,,LA maintained primary,Total,Male,Total,4,5
+201920,Academic year,School,E92000001,England,E13000001,Inner London,201,E09000001,City of London,St Pauls,2013614,100000,,,LA maintained primary,Total,Female,Total,13.7,20
+201920,Academic year,School,E92000001,England,E13000001,Inner London,201,E09000001,City of London,St Pauls,2013614,100000,,,LA maintained primary,Total,Total,Under 25,1,1
+201920,Academic year,School,E92000001,England,E13000001,Inner London,201,E09000001,City of London,St Pauls,2013614,100000,,,LA maintained primary,Total,Total,25 to 29,2,2
+201920,Academic year,School,E92000001,England,E13000001,Inner London,201,E09000001,City of London,St Pauls,2013614,100000,,,LA maintained primary,Total,Total,30 to 39,6.2,8
+201920,Academic year,School,E92000001,England,E13000001,Inner London,201,E09000001,City of London,St Pauls,2013614,100000,,,LA maintained primary,Total,Total,40 to 49,5.08,9
+201920,Academic year,School,E92000001,England,E13000001,Inner London,201,E09000001,City of London,St Pauls,2013614,100000,,,LA maintained primary,Total,Total,50 to 59,0.42,1
+201920,Academic year,Provider,E92000001,England,E12000002,North West,342,E08000013,St. Helens,,,,Carmel College,10001201,16 plus,Total,Total,Total,2.364545455,3.681818182
+201718,Academic year,Provider,E92000001,England,E12000002,North West,342,E08000013,St. Helens,,,,Carmel College,10001201,16 plus,Head teacher,Total,Total,1.859090909,3.017482517
+201819,Academic year,Provider,E92000001,England,E12000002,North West,342,E08000013,St. Helens,,,,Carmel College,10001201,16 plus,Deputy head teacher,Total,Total,1.353636364,2.353146853
+201920,Academic year,Provider,E92000001,England,E12000002,North West,342,E08000013,St. Helens,,,,Carmel College,10001201,16 plus,Assistant head teacher,Total,Total,0.848181818,1.688811189
+201920,Academic year,Provider,E92000001,England,E12000002,North West,342,E08000013,St. Helens,,,,Carmel College,10001201,16 plus,Classroom teacher,Total,Total,0.342727273,1.024475524
+201920,Academic year,Provider,E92000001,England,E12000002,North West,342,E08000013,St. Helens,,,,Carmel College,10001201,16 plus,Total,Male,Total,-0.162727273,0.36013986
+201920,Academic year,Provider,E92000001,England,E12000002,North West,342,E08000013,St. Helens,,,,Carmel College,10001201,16 plus,Total,Female,Total,-0.668181818,-0.304195804
+201920,Academic year,Provider,E92000001,England,E12000002,North West,342,E08000013,St. Helens,,,,Carmel College,10001201,16 plus,Total,Total,Under 25,-1.173636364,-0.968531469
+201920,Academic year,Provider,E92000001,England,E12000002,North West,342,E08000013,St. Helens,,,,Carmel College,10001201,16 plus,Total,Total,25 to 29,-1.679090909,-1.632867133
+201920,Academic year,Provider,E92000001,England,E12000002,North West,342,E08000013,St. Helens,,,,Carmel College,10001201,16 plus,Total,Total,30 to 39,-2.184545455,-2.297202797
+201920,Academic year,Provider,E92000001,England,E12000002,North West,342,E08000013,St. Helens,,,,Carmel College,10001201,16 plus,Total,Total,40 to 49,-2.69,-2.961538462
+201920,Academic year,Provider,E92000001,England,E12000002,North West,342,E08000013,St. Helens,,,,Carmel College,10001201,16 plus,Total,Total,50 to 59,-3.195454545,-3.625874126

@@ -196,6 +196,7 @@ fluidPage(
                   7,
                   uiOutput("ancillary_box"),
                   uiOutput("passed_box"),
+                  uiOutput("info_box"),
                   uiOutput("failed_box"),
                   uiOutput("advisory_box"),
                   results_box(
