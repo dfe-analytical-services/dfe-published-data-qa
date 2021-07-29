@@ -59,7 +59,6 @@ tidy_code_function <- function() {
   return(script_changes)
 }
 
-
 # Function scripts ---------------------------------------------------------------------------------
 
 source("R/knownVariables.r", encoding = "UTF-8")
@@ -249,7 +248,7 @@ getLocalTags <- function() {
   # if (!isLocal()) {
   #   return(NULL)
   # }
-  
+
   htmltools::tagList(
     htmltools::tags$script(paste0(
       "$(function() {",
@@ -259,31 +258,30 @@ getLocalTags <- function() {
       "  })",
       "});"
     )),
-    htmltools::tags$div(id="ss-connect-dialogAA", 
-                        style="display: none !important;",
-                        htmltools::tags$img(id="ss-reload-image", src = "builder-duck.PNG"),
-                        
-                     #   htmltools::tags$p(id="ss-reload-text"),
-                        htmltools::tags$a(id="ss-reload-link", href="#", onclick="window.location.reload(true);")
+    htmltools::tags$div(
+      id = "ss-connect-dialogAA",
+      style = "display: none !important;",
+      htmltools::tags$img(id = "ss-reload-image", src = "builder-duck.PNG"),
+
+      #   htmltools::tags$p(id="ss-reload-text"),
+      htmltools::tags$a(id = "ss-reload-link", href = "#", onclick = "window.location.reload(true);")
     ),
-    htmltools::tags$div(id="ss-overlay", style="display: none;")
+    htmltools::tags$div(id = "ss-overlay", style = "display: none;")
   )
 }
 
 disconnectMessage3 <- function(
-  text = "An error occurred. Please refresh the page and try again.",
-  refresh = "Refresh",
-  width = 450,
-  top = 50,
-  size = 22,
-  background = "white",
-  colour = "#ffffff", #"#444444",
-  overlayColour = "black",
-  overlayOpacity = 0.6,
-  refreshColour = "#337ab7",
-  css = ""
-) {
-  
+                               text = "An error occurred. Please refresh the page and try again.",
+                               refresh = "Refresh",
+                               width = 450,
+                               top = 50,
+                               size = 22,
+                               background = "white",
+                               colour = "#ffffff", # "#444444",
+                               overlayColour = "black",
+                               overlayOpacity = 0.6,
+                               refreshColour = "#337ab7",
+                               css = "") {
   checkmate::assert_string(text, min.chars = 1)
   checkmate::assert_string(refresh)
   checkmate::assert_numeric(size, lower = 0)
@@ -293,7 +291,7 @@ disconnectMessage3 <- function(
   checkmate::assert_number(overlayOpacity, lower = 0, upper = 1)
   checkmate::assert_string(refreshColour)
   checkmate::assert_string(css)
-  
+
   if (width == "full") {
     width <- "100%"
   } else if (is.numeric(width) && width >= 0) {
@@ -301,7 +299,7 @@ disconnectMessage3 <- function(
   } else {
     stop("disconnectMessage: 'width' must be either an integer, or the string \"full\".", call. = FALSE)
   }
-  
+
   if (top == "center") {
     top <- "50%"
     ytransform <- "-50%"
@@ -311,20 +309,20 @@ disconnectMessage3 <- function(
   } else {
     stop("disconnectMessage: 'top' must be either an integer, or the string \"center\".", call. = FALSE)
   }
-  
-  
-  
-  
+
+
+
+
   htmltools::tagList(
     getLocalTags(),
     htmltools::tags$head(
       htmltools::tags$style(
         glue::glue(
           .open = "{{", .close = "}}",
-          
+
           ## This hides the old message
           "#shiny-disconnected-overlay { display: none !important; }",
-          
+
           "#ss-overlay {
              background-color: {{overlayColour}} !important;
              opacity: {{overlayOpacity}} !important;
@@ -337,7 +335,7 @@ disconnectMessage3 <- function(
              overflow: hidden !important;
              cursor: not-allowed !important;
           }",
-          
+
           "#ss-connect-dialogAA {
              background: {{background}} !important;
              color: {{colour}} !important;
@@ -356,32 +354,32 @@ disconnectMessage3 <- function(
              border-radius: 3px !important;
              box-shadow: rgba(0, 0, 0, 0.3) 3px 3px 10px !important;
           }",
-          
-          
+
+
           # "#ss-connect-dialogAA img { content: url(/builder-duck.png) ;
-          # display: block !important; 
+          # display: block !important;
           # }",
 
-          
+
           # "#ss-connect-dialogAA::before { content: url(/builder-duck.png) ;
-          # display: block !important; 
+          # display: block !important;
           # }",
-          
+
           "#ss-connect-dialogAA::before {
           content: '{{ text }}' ;
           display: block ;
           color: #ffffff ;
           font-size: {{size}}px !important;
           }",
-          
+
           # "#ss-connect-dialogAA a::before {
           # content: '{{ text }}' ;
           # display: {{ if (refresh == '') 'none' else 'block' }} !important;
           # color: #ffffff ;
           # }",
-          
- #         "#ss-connect-dialogAA label { display: none !important; }",
-          
+
+          #         "#ss-connect-dialogAA label { display: none !important; }",
+
           "#ss-connect-dialogAA a {
              display: {{ if (refresh == '') 'none' else 'block' }} !important;
              color: {{refreshColour}} !important;
@@ -389,13 +387,13 @@ disconnectMessage3 <- function(
              margin-top: {{size}}px !important;
              font-weight: normal !important;
           }",
-          
+
           "#ss-connect-dialogAA a::before {
             content: '{{refresh}}';
             font-size: {{size}}px;
           }",
-          
- #         "#ss-connect-dialogAA { {{ htmltools::HTML(css) }} }"
+
+          #         "#ss-connect-dialogAA { {{ htmltools::HTML(css) }} }"
         )
       )
     )

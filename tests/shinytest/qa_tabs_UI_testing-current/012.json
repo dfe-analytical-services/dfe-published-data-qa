@@ -1,9 +1,0 @@
-{
-  "output": {
-    "geog_agg2": [
-      "You have at least one hyphen in your variable names, you need to remove all hyphens from variable names to use this part of the app.",
-      "NULL",
-      "c(\"shiny.silent.error\", \"validation\")"
-    ]
-  }
-}

@@ -1,6 +1,7 @@
 ﻿col_name,col_type,label,indicator_grouping,indicator_unit,indicator_dp,filter_hint,filter_grouping_column
 grade,Filter,Grade,,,,Filter by grade,
 gender,Filter,Gender,,,,Filter by gender,
+school_type,Filter,School type,,,,,
 age_group,Filter,Age,,,,Filter by age_group,
 full_time_equivalent,Indicator,FTE,Pupils,%,0,,
 headcount,Indicator,Headcount,Pupils,,0,,
