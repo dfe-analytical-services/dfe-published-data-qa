@@ -1094,45 +1094,48 @@ not_table_tool <- function(data) {
   return(output)
 }
 
-# old_la_code -------------------------------------
-# Checking if old_la_code is always only 3 numeric digits
+# old_la_code_code -------------------------------------
+# checking that la code and name combinations are valid
 
 old_la_code <- function(data) {
-  if (!"old_la_code" %in% names(data)) {
+  if (!"new_la_code" %in% names(data)) {
     output <- list(
-      "message" = "old_la_code is not present in this data file.",
+      "message" = "LA columns are not present in this data file.",
       "result" = "IGNORE"
     )
   } else {
     invalid_values <- data %>%
-      select("old_la_code") %>%
+      select("old_la_code", "new_la_code", "la_name") %>%
       unique() %>%
       filter(!is.na(.)) %>%
-      filter(old_la_code != "") %>%
-      filter(old_la_code != ":") %>%
-      pull(old_la_code) %>%
-      .[!grepl("^[0-9]{3}$", .)]
-
+      filter(new_la_code != "") %>%
+      filter(new_la_code != ":") %>%
+      filter(new_la_code != "z") %>%
+      mutate(combo = paste(old_la_code, new_la_code, la_name)) %>%
+      pull(combo) %>%
+      .[!(. %in% expected_la_combinations)]
+    # .[!grepl("^[A-Z]{1}[0-9]{8}$", .)]
+    
     if (length(invalid_values) == 0) {
       output <- list(
-        "message" = "old_la_code is always a 3 digit numeric code, blank or : for not available.",
+        "message" = "All old_la_code, new_la_code and la_name comninations are valid.",
         "result" = "PASS"
       )
     } else {
       if (length(invalid_values) == 1) {
         output <- list(
-          "message" = paste0("The following old_la_code value is invalid: '", paste0(invalid_values), "'. <br> - old_la_code must always be a 3 digit numeric code, blank or : for not available.."),
+          "message" = paste0("The following old_la_code, new_la_code and la_name combination is invalid: '", paste0(invalid_values), "'. <br> - We do not expect any combinations outside of the <a href='https://github.com/dfe-analytical-services/dfe-published-data-qa/blob/master/data/las.csv' target='_blank'>standard geographies</a> (case sensitive), you can use our [guidance link TBC] for help creating local authority level data."),
           "result" = "FAIL"
         )
       } else {
         output <- list(
-          "message" = paste0("The following old_la_code values are invalid: '", paste0(invalid_values, collapse = "', '"), "'. <br> - old_la_code must always be a 3 digit numeric code, blank or : for not available.."),
+          "message" = paste0("The following old_la_code, new_la_code and la_name cominations are invalid: '", paste0(invalid_values, collapse = "', '"), "'. <br> - We do not expect any combinations outside of the <a href='https://github.com/dfe-analytical-services/dfe-published-data-qa/blob/master/data/las.csv' target='_blank'>standard geographies</a> (case sensitive), you can use our [guidance link TBC] for help creating local authority level data."),
           "result" = "FAIL"
         )
       }
     }
   }
-
+  
   return(output)
 }
 
@@ -1144,7 +1147,7 @@ old_la_code <- function(data) {
 region_code <- function(data) {
   if (!"region_code" %in% names(data)) {
     output <- list(
-      "message" = "region_code is not present in this data file.",
+      "message" = "Region columns are not present in this data file.",
       "result" = "IGNORE"
     )
   } else {
@@ -1162,18 +1165,18 @@ region_code <- function(data) {
 
     if (length(invalid_values) == 0) {
       output <- list(
-        "message" = "region_code is always a 9 digit code, with one letter followed by 8 numbers, : for not available, or blank.",
+        "message" = "All region_code and region_name comninations are valid.",
         "result" = "PASS"
       )
     } else {
       if (length(invalid_values) == 1) {
         output <- list(
-          "message" = paste0("The following region_code / region_name combination is invalid: '", paste0(invalid_values), "'. <br> - We do not expect any region outside of those on the <a href='https://geoportal.statistics.gov.uk/datasets/regions-december-2020-en-bgc/data?geometry=-22.223%2C50.522%2C17.877%2C55.161' target='_blank'>ONS Open Geography Portal</a> (case sensitive), or : for not available."),
+          "message" = paste0("The following region_code and region_name combination is invalid: '", paste0(invalid_values), "'. <br> - We do not expect any combinations outside of the <a href='https://github.com/dfe-analytical-services/dfe-published-data-qa/blob/master/data/regions.csv' target='_blank'>standard geographies</a> (case sensitive), you can use our [guidance link TBC] for help creating region level data."),
           "result" = "FAIL"
         )
       } else {
         output <- list(
-          "message" = paste0("The following region_code / region_name cominations are invalid: '", paste0(invalid_values, collapse = "', '"), "'. <br> - We do not expect any regions outside of those on the <a href='https://geoportal.statistics.gov.uk/datasets/regions-december-2020-en-bgc/data?geometry=-22.223%2C50.522%2C17.877%2C55.161' target='_blank'>ONS Open Geography Portal</a> (case senstive), or : for not available."),
+          "message" = paste0("The following region_code / region_name cominations are invalid: '", paste0(invalid_values, collapse = "', '"), "'. <br> - We do not expect any combinations outside of the <a href='https://github.com/dfe-analytical-services/dfe-published-data-qa/blob/master/data/regions.csv' target='_blank'>standard geographies</a> (case sensitive), you can use our [guidance link TBC] for help creating region level data."),
           "result" = "FAIL"
         )
       }
@@ -1189,7 +1192,7 @@ region_code <- function(data) {
 country_code <- function(data) {
   if (!"country_code" %in% names(data)) {
     output <- list(
-      "message" = "country_code is not present in this data file.",
+      "message" = "Country columns are not present in this data file.",
       "result" = "IGNORE"
     )
   } else {
@@ -1204,18 +1207,18 @@ country_code <- function(data) {
 
     if (length(invalid_values) == 0) {
       output <- list(
-        "message" = "country_code is always one of the expected ONS codes or ':' for 'Not available'.",
+        "message" = "All country_code and country_name comninations are valid.",
         "result" = "PASS"
       )
     } else {
       if (length(invalid_values) == 1) {
         output <- list(
-          "message" = paste0("The following country_code / country_name combination is invalid: '", paste0(invalid_values), "'. <br> - We do not expect any countries outside of those on the <a href='https://geoportal.statistics.gov.uk/datasets/countries-december-2018-names-and-codes-in-the-united-kingdom/data' target='_blank'>ONS Open Geography Portal</a> (case sensitive), or : for not available."),
+          "message" = paste0("The following country_code / country_name combination is invalid: '", paste0(invalid_values), "'. <br> - We do not expect any combinations outside of the <a href='https://github.com/dfe-analytical-services/dfe-published-data-qa/blob/master/data/country.csv' target='_blank'>standard geographies</a> (case sensitive), you can use our [guidance link TBC] for help creating country level data."),
           "result" = "FAIL"
         )
       } else {
         output <- list(
-          "message" = paste0("The following country_code / country_name combinations are invalid: '", paste0(invalid_values, collapse = "', '"), "'. <br> - We do not expect any countries outside of those on the <a href='https://geoportal.statistics.gov.uk/datasets/countries-december-2018-names-and-codes-in-the-united-kingdom/data' target='_blank'>ONS Open Geography Portal</a>, (case sensitive) or : for not available."),
+          "message" = paste0("The following country_code / country_name combinations are invalid: '", paste0(invalid_values, collapse = "', '"), "'. <br> - We do not expect any combinations outside of the <a href='https://github.com/dfe-analytical-services/dfe-published-data-qa/blob/master/data/country.csv' target='_blank'>standard geographies</a> (case sensitive), you can use our [guidance link TBC] for help creating country level data."),
           "result" = "FAIL"
         )
       }
