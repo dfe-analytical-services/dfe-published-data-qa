@@ -8,7 +8,7 @@ mainTests <- function(data_character, meta_character, datafile, metafile) {
     duplicate_rows(datafile, metafile), # active test
     data_to_meta_crosscheck(datafile, metafile), # active test
     total(datafile, metafile), # active test
-    observational_total(datafile), # active test
+    observational_total(datafile, metafile), # active test
     null(data_character, meta_character), # active test
     suppression_symbols(datafile, metafile), # active test
     no_data_symbols(datafile), # active test
@@ -286,7 +286,7 @@ total <- function(data, meta) {
 # observational_total -------------------------------------
 # Check if Total has been used erroneously in any observational units
 
-observational_total <- function(data) {
+observational_total <- function(data, meta) {
   observational_total_check <- function(i) {
     if ("Total" %in% data[[i]] || "total" %in% data[[i]] || "all" %in% data[[i]] || "All" %in% data[[i]]) {
       return("FAIL")
@@ -295,12 +295,18 @@ observational_total <- function(data) {
     }
   }
 
+  acceptable_ob_units_sch_prov_filter <- acceptable_observational_units[!acceptable_observational_units %in% c(geography_matrix[13, 3], geography_matrix[14, 3])]
+
   present_ob_units <- c(
-    intersect(acceptable_observational_units, names(data)),
+    intersect(acceptable_ob_units_sch_prov_filter, names(data)),
     names(data)[grepl(potential_ob_units_regex, names(data), ignore.case = TRUE)]
   ) %>%
     unique()
-
+  
+  if (nrow(meta %>% filter(col_type == "Filter")) == 1) {
+    present_ob_units <- present_ob_units[!present_ob_units %in% c(geography_matrix[13, 3], geography_matrix[14, 3])]
+  }
+  
   pre_result <- stack(sapply(present_ob_units, observational_total_check))
 
   ob_units_with_total <- filter(pre_result, values == "FAIL") %>% pull(ind)
