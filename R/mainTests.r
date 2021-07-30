@@ -1161,7 +1161,7 @@ la_combinations <- function(data) {
       mutate(combo = paste(old_la_code, new_la_code, la_name)) %>%
       pull(combo) %>%
       .[!(. %in% expected_la_combinations)]
-    
+
     if (length(invalid_values) == 0) {
       output <- list(
         "message" = "All old_la_code, new_la_code and la_name comninations are valid.",
@@ -1181,7 +1181,7 @@ la_combinations <- function(data) {
       }
     }
   }
-  
+
   return(output)
 }
 
