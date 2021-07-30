@@ -1777,8 +1777,18 @@ geographic_catch <- function(meta) {
   filters <- meta %>%
     filter(col_type == "Filter") %>%
     pull(col_name)
+  
+  filter_groups <- meta %>%
+    filter(col_type == "Indicator", !is.na(filter_grouping_column) & filter_grouping_column != "") %>%
+    pull(filter_grouping_column)
+  
+  if(length(filters) == 1){
+    filters_and_groups <- c(filters, filter_groups)[!c(filters, filter_groups) %in% c(geography_matrix[13, 3], geography_matrix[14, 3])]
+  } else {
+    filters_and_groups <- c(filters, filter_groups)
+  }
 
-  caught_filters <- filters[grepl(potential_ob_units_regex, filters, ignore.case = TRUE)]
+  caught_filters <- filters_and_groups[grepl(potential_ob_units_regex, filters_and_groups, ignore.case = TRUE)]
 
   if (length(caught_filters) == 0) {
     output <- list(
