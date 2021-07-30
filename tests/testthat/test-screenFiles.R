@@ -27,13 +27,13 @@ test_that("QuotedBlanks-overcompleted_cols", {
 test_that("QuotedBlanks-old_la_code", {
   screeningOutput <- testOther("../../tests/testthat/otherData/quoted_blank_geographies.csv")
 
-  expect_equal(screeningOutput$results %>% filter(test == "old_la_code") %>% pull(result) %>% unlist(use.names = FALSE), "PASS")
+  expect_equal(screeningOutput$results %>% filter(test == "la_combinations") %>% pull(result) %>% unlist(use.names = FALSE), "PASS")
 })
 
 test_that("QuotedBlanks-region_code", {
   screeningOutput <- testOther("../../tests/testthat/otherData/quoted_blank_geographies.csv")
 
-  expect_equal(screeningOutput$results %>% filter(test == "region_code") %>% pull(result) %>% unlist(use.names = FALSE), "PASS")
+  expect_equal(screeningOutput$results %>% filter(test == "region_combinations") %>% pull(result) %>% unlist(use.names = FALSE), "PASS")
 })
 
 test_that("financialQuarterValid", {
