@@ -125,3 +125,17 @@ test_that("sch_prov", {
 
   expect_equal(screeningOutput$results %>% filter(test == "ignored_rows") %>% pull(result) %>% unlist(use.names = FALSE), "FAIL")
 })
+
+test_that("sch_only_filter", {
+  screeningOutput <- testOther("../../tests/testthat/sch_prov/sch_only_filter.csv")
+
+  expect_equal(screeningOutput$results %>% filter(test == "ob_unit_meta") %>% pull(result) %>% unlist(use.names = FALSE), "PASS")
+  expect_equal(screeningOutput$results %>% filter(test == "geographic_catch") %>% pull(result) %>% unlist(use.names = FALSE), "PASS")
+  expect_equal(screeningOutput$results %>% filter(test == "overcompleted_cols") %>% pull(result) %>% unlist(use.names = FALSE), "PASS")
+})
+
+test_that("sch_many_filter", {
+  screeningOutput <- testOther("../../tests/testthat/sch_prov/sch_many_filter.csv")
+
+  expect_equal(screeningOutput$results %>% filter(test == "ob_unit_meta") %>% pull(result) %>% unlist(use.names = FALSE), "FAIL")
+})
