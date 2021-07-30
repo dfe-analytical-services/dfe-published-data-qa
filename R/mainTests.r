@@ -133,14 +133,24 @@ duplicate_rows <- function(data, meta) {
     pull(filter_grouping_column)
 
   present_obUnits_filters <- intersect(c(acceptable_observational_units, filters, filter_groups), names(data))
-
-  dupes <- suppressMessages(data %>%
-    filter(geographic_level != geography_matrix[13, 1]) %>%
-    filter(geographic_level != geography_matrix[14, 1]) %>%
-    filter(geographic_level != geography_matrix[15, 1]) %>%
-    filter(geographic_level != geography_matrix[16, 1]) %>%
-    select(present_obUnits_filters) %>%
-    get_dupes())
+  
+  if(nrow(data %>% distinct(geographic_level)) == 1 &&
+     data$geographic_level[1] %in% geography_matrix[13:14, 1]
+     ) {
+    dupes <- suppressMessages(data %>%
+                                filter(geographic_level != geography_matrix[15, 1]) %>%
+                                filter(geographic_level != geography_matrix[16, 1]) %>%
+                                select(present_obUnits_filters) %>%
+                                get_dupes())
+  } else{
+    dupes <- suppressMessages(data %>%
+                                filter(geographic_level != geography_matrix[13, 1]) %>%
+                                filter(geographic_level != geography_matrix[14, 1]) %>%
+                                filter(geographic_level != geography_matrix[15, 1]) %>%
+                                filter(geographic_level != geography_matrix[16, 1]) %>%
+                                select(present_obUnits_filters) %>%
+                                get_dupes())
+  }
 
   if (nrow(dupes) > 0) {
     output <- list(
