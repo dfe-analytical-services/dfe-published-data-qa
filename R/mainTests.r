@@ -21,7 +21,7 @@ mainTests <- function(data_character, meta_character, datafile, metafile) {
     region_for_lad(datafile), # active test
     geography_level_completed(datafile), # active test
     region_col_completed(datafile), # active test
-    overcompleted_cols(datafile), # active test
+    overcompleted_cols(datafile, metafile), # active test
     ignored_rows(datafile), # active test
     region_code(datafile), # active test
     country_code(datafile), # active test
@@ -862,7 +862,7 @@ region_col_completed <- function(data) {
 # overcompleted_cols -------------------------------------
 # Are any columns completed for unexpected rows
 
-overcompleted_cols <- function(data) {
+overcompleted_cols <- function(data, meta) {
 
   # ----------------------------------------------------------------------------------------------------------------------------------
   # checking if region cols are completed in national rows
@@ -901,6 +901,8 @@ overcompleted_cols <- function(data) {
   # checking if local authority columns are completed for national, regional or mid-geography rows (ignoring LAD)
 
   overcomplete_la_cols <- function(matrixRow) {
+
+    # This is a test that could benefit from more detail, and maybe a table in the error feedback
 
     # Start by filtering the data down to remove the geographic level being tested, lad rows and any lower levels we don't care about
 
@@ -969,12 +971,12 @@ overcompleted_cols <- function(data) {
 
   overcomplete_low_cols <- function(matrixRow) {
 
-    # Start by filtering the data down to remove the geographic level being tested and any lower levels we don't care about
+    # Filtering the data down to remove the geographic level being tested and any lower levels we don't care about
 
     level_rows <- data %>% filter(geographic_level != matrixRow[1])
-
+    
     # Extract the columns for the geographic level that is being tested
-
+    
     cols <- matrixRow[2:4] %>% .[!is.na(.)]
 
     # Function used to check if each column for that geographic level has any cells that are not blank
@@ -988,10 +990,27 @@ overcompleted_cols <- function(data) {
       }
     }
 
+    # flagging if sch or prov level and name is only filter
+    filters <- meta %>% filter(col_type == "Filter") %>% pull(col_name)
+    
+    if (
+      matrixRow[3] %in% geography_matrix[13:14, 3] &&
+      length(filters) == 1 &&
+      filters[1] %in% geography_matrix[13:14, 3]
+    ) {
+      sch_prov_only_filter <- TRUE
+    } else {
+      sch_prov_only_filter <- FALSE
+    }
+
     # Apply over every column in the matrixRow (geographic_level) being tested
-
-    pre_output <- sapply(c(1:length(cols)), col_completed)
-
+    
+    if(sch_prov_only_filter == TRUE){
+      pre_output <- sapply(c(1,3), col_completed)
+    } else {
+      pre_output <- sapply(c(1:length(cols)), col_completed)
+    }
+    
     return(pre_output)
   }
 
@@ -1777,12 +1796,12 @@ geographic_catch <- function(meta) {
   filters <- meta %>%
     filter(col_type == "Filter") %>%
     pull(col_name)
-  
+
   filter_groups <- meta %>%
     filter(col_type == "Indicator", !is.na(filter_grouping_column) & filter_grouping_column != "") %>%
     pull(filter_grouping_column)
-  
-  if(length(filters) == 1){
+
+  if (length(filters) == 1) {
     filters_and_groups <- c(filters, filter_groups)[!c(filters, filter_groups) %in% c(geography_matrix[13, 3], geography_matrix[14, 3])]
   } else {
     filters_and_groups <- c(filters, filter_groups)
