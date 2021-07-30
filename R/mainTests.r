@@ -133,23 +133,23 @@ duplicate_rows <- function(data, meta) {
     pull(filter_grouping_column)
 
   present_obUnits_filters <- intersect(c(acceptable_observational_units, filters, filter_groups), names(data))
-  
-  if(nrow(data %>% distinct(geographic_level)) == 1 &&
-     data$geographic_level[1] %in% geography_matrix[13:14, 1]
-     ) {
+
+  if (nrow(data %>% distinct(geographic_level)) == 1 &&
+    data$geographic_level[1] %in% geography_matrix[13:14, 1]
+  ) {
     dupes <- suppressMessages(data %>%
-                                filter(geographic_level != geography_matrix[15, 1]) %>%
-                                filter(geographic_level != geography_matrix[16, 1]) %>%
-                                select(present_obUnits_filters) %>%
-                                get_dupes())
-  } else{
+      filter(geographic_level != geography_matrix[15, 1]) %>%
+      filter(geographic_level != geography_matrix[16, 1]) %>%
+      select(present_obUnits_filters) %>%
+      get_dupes())
+  } else {
     dupes <- suppressMessages(data %>%
-                                filter(geographic_level != geography_matrix[13, 1]) %>%
-                                filter(geographic_level != geography_matrix[14, 1]) %>%
-                                filter(geographic_level != geography_matrix[15, 1]) %>%
-                                filter(geographic_level != geography_matrix[16, 1]) %>%
-                                select(present_obUnits_filters) %>%
-                                get_dupes())
+      filter(geographic_level != geography_matrix[13, 1]) %>%
+      filter(geographic_level != geography_matrix[14, 1]) %>%
+      filter(geographic_level != geography_matrix[15, 1]) %>%
+      filter(geographic_level != geography_matrix[16, 1]) %>%
+      select(present_obUnits_filters) %>%
+      get_dupes())
   }
 
   if (nrow(dupes) > 0) {
@@ -312,11 +312,23 @@ observational_total <- function(data, meta) {
     names(data)[grepl(potential_ob_units_regex, names(data), ignore.case = TRUE)]
   ) %>%
     unique()
-  
-  if (nrow(meta %>% filter(col_type == "Filter")) == 1) {
+
+  filters <- meta %>%
+    filter(col_type == "Filter") %>%
+    pull(col_name)
+
+  filter_groups <- meta %>%
+    filter(!is.na(filter_grouping_column)) %>%
+    filter(filter_grouping_column != "") %>%
+    pull(filter_grouping_column)
+
+  if (
+    length(filters) == 1 &&
+      any(filters[1] %in% geography_matrix[13:14, 3], filter_groups[1] %in% geography_matrix[13:14, 3])
+  ) {
     present_ob_units <- present_ob_units[!present_ob_units %in% c(geography_matrix[13, 3], geography_matrix[14, 3])]
   }
-  
+
   pre_result <- stack(sapply(present_ob_units, observational_total_check))
 
   ob_units_with_total <- filter(pre_result, values == "FAIL") %>% pull(ind)
@@ -990,9 +1002,9 @@ overcompleted_cols <- function(data, meta) {
     # Filtering the data down to remove the geographic level being tested and any lower levels we don't care about
 
     level_rows <- data %>% filter(geographic_level != matrixRow[1])
-    
+
     # Extract the columns for the geographic level that is being tested
-    
+
     cols <- matrixRow[2:4] %>% .[!is.na(.)]
 
     # Function used to check if each column for that geographic level has any cells that are not blank
@@ -1007,12 +1019,19 @@ overcompleted_cols <- function(data, meta) {
     }
 
     # flagging if sch or prov level and name is only filter
-    filters <- meta %>% filter(col_type == "Filter") %>% pull(col_name)
-    
+    filters <- meta %>%
+      filter(col_type == "Filter") %>%
+      pull(col_name)
+
+    filter_groups <- meta %>%
+      filter(!is.na(filter_grouping_column)) %>%
+      filter(filter_grouping_column != "") %>%
+      pull(filter_grouping_column)
+
     if (
       matrixRow[3] %in% geography_matrix[13:14, 3] &&
-      length(filters) == 1 &&
-      filters[1] %in% geography_matrix[13:14, 3]
+        length(filters) == 1 &&
+        any(filters[1] %in% geography_matrix[13:14, 3], filter_groups[1] %in% geography_matrix[13:14, 3])
     ) {
       sch_prov_only_filter <- TRUE
     } else {
@@ -1020,13 +1039,13 @@ overcompleted_cols <- function(data, meta) {
     }
 
     # Apply over every column in the matrixRow (geographic_level) being tested
-    
-    if(sch_prov_only_filter == TRUE){
-      pre_output <- sapply(c(1,3), col_completed)
+
+    if (sch_prov_only_filter == TRUE) {
+      pre_output <- sapply(c(1, 3), col_completed)
     } else {
       pre_output <- sapply(c(1:length(cols)), col_completed)
     }
-    
+
     return(pre_output)
   }
 
@@ -1814,10 +1833,14 @@ geographic_catch <- function(meta) {
     pull(col_name)
 
   filter_groups <- meta %>%
-    filter(col_type == "Indicator", !is.na(filter_grouping_column) & filter_grouping_column != "") %>%
+    filter(!is.na(filter_grouping_column)) %>%
+    filter(filter_grouping_column != "") %>%
     pull(filter_grouping_column)
 
-  if (length(filters) == 1) {
+  if (
+    length(filters) == 1 &&
+      any(filters[1] %in% geography_matrix[13:14, 3], filter_groups[1] %in% geography_matrix[13:14, 3])
+  ) {
     filters_and_groups <- c(filters, filter_groups)[!c(filters, filter_groups) %in% c(geography_matrix[13, 3], geography_matrix[14, 3])]
   } else {
     filters_and_groups <- c(filters, filter_groups)

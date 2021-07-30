@@ -106,18 +106,21 @@ test_that("prov_level_only", {
   screeningOutput <- testOther("../../tests/testthat/sch_prov/prov_level_only.csv")
 
   expect_equal(screeningOutput$results %>% filter(test == "ignored_rows") %>% pull(result) %>% unlist(use.names = FALSE), "PASS")
+  expect_equal(screeningOutput$results %>% filter(result == "FAIL") %>% nrow(), 0)
 })
 
 test_that("sch_level_only", {
   screeningOutput <- testOther("../../tests/testthat/sch_prov/sch_level_only.csv")
 
   expect_equal(screeningOutput$results %>% filter(test == "ignored_rows") %>% pull(result) %>% unlist(use.names = FALSE), "PASS")
+  expect_equal(screeningOutput$results %>% filter(result == "FAIL") %>% nrow(), 0)
 })
 
 test_that("sch_mixed_levels", {
   screeningOutput <- testOther("../../tests/testthat/sch_prov/sch_mixed_levels.csv")
 
   expect_equal(screeningOutput$results %>% filter(test == "ignored_rows") %>% pull(result) %>% unlist(use.names = FALSE), "PASS WITH NOTE")
+  expect_equal(screeningOutput$results %>% filter(result == "FAIL") %>% nrow(), 0)
 })
 
 test_that("sch_prov", {
@@ -143,24 +146,30 @@ test_that("sch_many_filter", {
 
 test_that("sch_filter_grouped", {
   screeningOutput <- testOther("../../tests/testthat/sch_prov/sch_filter_grouped.csv")
-  
+
   expect_equal(screeningOutput$results %>% filter(result == "FAIL") %>% nrow(), 0)
 })
 
 test_that("sch_filter_group", {
-  screeningOutput <- testOther("../../tests/testthat/sch_prov/sch_filter_grouped.csv")
-  
+  screeningOutput <- testOther("../../tests/testthat/sch_prov/sch_filter_group.csv")
+
   expect_equal(screeningOutput$results %>% filter(result == "FAIL") %>% nrow(), 0)
 })
 
 test_that("not_sch_but_one_filter", {
   screeningOutput <- testOther("../../tests/testthat/sch_prov/not_sch_but_one_filter.csv")
-  
+
   expect_equal(screeningOutput$results %>% filter(result == "FAIL") %>% nrow() > 0, TRUE)
 })
 
-test_that("prov_only_dupes", {
-  screeningOutput <- testOther("../../tests/testthat/sch_prov/prov_level_only_dupe.csv")
-  
+test_that("prov_level_only_dupes", {
+  screeningOutput <- testOther("../../tests/testthat/sch_prov/prov_level_only_dupes.csv")
+
   expect_equal(screeningOutput$results %>% filter(test == "duplicate_rows") %>% pull(result) %>% unlist(use.names = FALSE), "FAIL")
+})
+
+test_that("sch_level_missing_col", {
+  screeningOutput <- testOther("../../tests/testthat/sch_prov/sch_level_missing_col.csv")
+
+  expect_equal(screeningOutput$results %>% filter(result == "FAIL") %>% nrow() > 0, TRUE)
 })
