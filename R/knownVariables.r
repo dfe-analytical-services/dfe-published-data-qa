@@ -54,12 +54,13 @@ byrow = TRUE
 
 countries <- read_csv("data/country.csv") # change this to database eventually
 regions <- read_csv("data/regions.csv") # change this to database eventually
-
+las <- read_csv("data/las.csv") # change this to database eventually
 
 expected_country_combinations <- unique(paste(countries$country_code, countries$country_name))
 
 expected_region_combinations <- unique(paste(regions$region_code, regions$region_name))
 
+expected_la_combinations <- unique(paste(las$old_la_code, las$new_la_code, las$la_name))
 
 acceptable_levels <- c(
   geography_matrix[, 1] %>% .[!is.na(.)]

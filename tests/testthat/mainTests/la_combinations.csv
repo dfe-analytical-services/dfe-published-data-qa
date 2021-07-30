@@ -37,7 +37,7 @@ time_period,time_identifier,geographic_level,country_code,country_name,region_co
 201718,Academic year,Local authority,E92000001,England,E13000001,Inner London,204,E09000012,Hackney,State-funded secondary,16,12098,4.26132,2.94646,1.31486,1315,10.86957
 201718,Academic year,Local authority,E92000001,England,E13000001,Inner London,208,E09000022,Lambeth,State-funded primary and secondary,78,30492,3.96082,2.6899,1.27092,3076,10.08789
 201718,Academic year,Local authority,E92000001,England,E13000001,Inner London,208,E09000022,Lambeth,State-funded primary,60,17974,3.63709,2.46321,1.17388,1605,8.92956
-201718,Academic year,Local authority,E92000001,England,E13000001,Inner London,E09000022,E09000022,Lambeth,State-funded secondary,18,12518,4.44005,3.02546,1.41459,1471,11.75108
+201718,Academic year,Local authority,E92000001,England,E13000001,Inner London,208,E09000022,Lambeth,State-funded secondary,18,12518,4.44005,3.02546,1.41459,1471,11.75108
 201718,Academic year,Local authority,E92000001,England,E13000002,Outer London,303,E09000004,Bexley,State-funded primary and secondary,73,36195,4.05055,3.0241,1.02645,3643,10.06493
 201718,Academic year,Local authority,E92000001,England,E13000002,Outer London,303,E09000004,Bexley,State-funded primary,57,18927,3.61617,2.69105,0.92512,1627,8.59619
 201718,Academic year,Local authority,E92000001,England,E13000002,Outer London,.,E09000004,Bexley,State-funded secondary,16,17268,4.53415,3.39488,1.13926,2016,11.67477
@@ -65,9 +65,9 @@ time_period,time_identifier,geographic_level,country_code,country_name,region_co
 201718,Academic year,Local authority,E92000001,England,E12000008,South East,870,E06000038,Reading,State-funded primary and secondary,49,18337,3.93683,2.68024,1.25659,1851,10.09434
 201718,Academic year,Local authority,E92000001,England,E12000008,South East,870,E06000038,Reading,State-funded primary,39,11880,3.76109,2.66408,1.09701,1119,9.41919
 201718,Academic year,Local authority,E92000001,England,E12000008,South East,870,E06000038,Reading,State-funded secondary,10,6457,4.25589,2.70958,1.5463,732,11.33653
-201718,Academic year,Local authority,E92000001,England,E12000006,East of England,881,E10000012,Essex,State-funded primary and secondary,523,178460,4.20273,3.11568,1.08705,19069,10.68531
-201718,Academic year,Local authority,E92000001,England,E12000006,East of England,881,E10000012,Essex,State-funded primary,447,102579,3.74568,2.84482,0.90087,9708,9.46393
-201718,Academic year,Local authority,E92000001,England,E12000006,East of England,881,E10000012,Essex,State-funded secondary,76,75881,4.81819,3.48042,1.33777,9361,12.33642
+201718,Academic year,Local authority,E92000001,England,E12000006,East of England,881,E10000012,Not Essex,State-funded primary and secondary,523,178460,4.20273,3.11568,1.08705,19069,10.68531
+201718,Academic year,Local authority,E92000001,England,E12000006,East of England,881,E10000012,Not Essex,State-funded primary,447,102579,3.74568,2.84482,0.90087,9708,9.46393
+201718,Academic year,Local authority,E92000001,England,E12000006,East of England,881,E10000012,Not Essex,State-funded secondary,76,75881,4.81819,3.48042,1.33777,9361,12.33642
 201718,Academic year,Local authority,E92000001,England,E12000002,North West,895,E06000049,Cheshire East,State-funded primary and secondary,147,45385,4.02082,3.14309,0.87773,4414,9.72568
 201718,Academic year,Local authority,E92000001,England,E12000002,North West,895,E06000049,Cheshire East,State-funded primary,124,25720,3.37514,2.64818,0.72696,1999,7.77216
 201718,Academic year,Local authority,E92000001,England,E12000002,North West,895,E06000049,Cheshire East,State-funded secondary,23,19665,4.86878,3.79304,1.07573,2415,12.2807
