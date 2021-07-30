@@ -8,6 +8,7 @@ app$snapshot()
 # 2 Passes everything -------------------------------------------------------------------------------------------------------------------
 app$uploadFile(datafile = "test-data/passes_everything.csv")
 app$uploadFile(metafile = "test-data/passes_everything.meta.csv")
+Sys.sleep(2)
 app$setInputs(screenbutton = "click")
 app$snapshot(items = list(output = c("progress_stage", "table_all_tests")))
 

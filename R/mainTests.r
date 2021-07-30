@@ -23,8 +23,9 @@ mainTests <- function(data_character, meta_character, datafile, metafile) {
     region_col_completed(datafile), # active test
     overcompleted_cols(datafile, metafile), # active test
     ignored_rows(datafile), # active test
-    region_code(datafile), # active test
-    country_code(datafile), # active test
+    la_combinations(datafile), # active test
+    region_combinations(datafile), # active test
+    country_combinations(datafile), # active test
     school_urn_duplicates(datafile), # active test
     school_laestab_duplicates(datafile), # active test
     other_geography_duplicates(datafile), # active test
@@ -1140,14 +1141,58 @@ ignored_rows <- function(data) {
   return(output)
 }
 
-# region_code -------------------------------------
+# la_combinations -------------------------------------
+# checking that la code and name combinations are valid
+
+la_combinations <- function(data) {
+  if (!"new_la_code" %in% names(data)) {
+    output <- list(
+      "message" = "LA columns are not present in this data file.",
+      "result" = "IGNORE"
+    )
+  } else {
+    invalid_values <- data %>%
+      select("old_la_code", "new_la_code", "la_name") %>%
+      unique() %>%
+      filter(!is.na(.)) %>%
+      filter(new_la_code != "") %>%
+      filter(new_la_code != ":") %>%
+      filter(new_la_code != "z") %>%
+      mutate(combo = paste(old_la_code, new_la_code, la_name)) %>%
+      pull(combo) %>%
+      .[!(. %in% expected_la_combinations)]
+    
+    if (length(invalid_values) == 0) {
+      output <- list(
+        "message" = "All old_la_code, new_la_code and la_name comninations are valid.",
+        "result" = "PASS"
+      )
+    } else {
+      if (length(invalid_values) == 1) {
+        output <- list(
+          "message" = paste0("The following old_la_code, new_la_code and la_name combination is invalid: '", paste0(invalid_values), "'. <br> - We do not expect any combinations outside of the <a href='https://github.com/dfe-analytical-services/dfe-published-data-qa/blob/master/data/las.csv' target='_blank'>standard geographies</a> (case sensitive), you can use our [guidance link TBC] for help creating local authority level data."),
+          "result" = "FAIL"
+        )
+      } else {
+        output <- list(
+          "message" = paste0("The following old_la_code, new_la_code and la_name combinations are invalid: '", paste0(invalid_values, collapse = "', '"), "'. <br> - We do not expect any combinations outside of the <a href='https://github.com/dfe-analytical-services/dfe-published-data-qa/blob/master/data/las.csv' target='_blank'>standard geographies</a> (case sensitive), you can use our [guidance link TBC] for help creating local authority level data."),
+          "result" = "FAIL"
+        )
+      }
+    }
+  }
+  
+  return(output)
+}
+
+# region_combinations -------------------------------------
 # Checking that region_code and region_name combinations are valid
 ## Need to update reference list in error message to whatever method we use for LAs as the portal list doesn't include inner/outer london (which we allow)
 
-region_code <- function(data) {
+region_combinations <- function(data) {
   if (!geography_matrix[2, 2] %in% names(data)) {
     output <- list(
-      "message" = paste(geography_matrix[2, 2], "is not present in this data file."),
+      "message" =  paste(geography_matrix[2, 2], "columns are not present in this data file."),
       "result" = "IGNORE"
     )
   } else {
@@ -1164,18 +1209,18 @@ region_code <- function(data) {
 
     if (length(invalid_values) == 0) {
       output <- list(
-        "message" = paste(geography_matrix[2, 2], "is always a 9 digit code, with one letter followed by 8 numbers, : for not available, or blank."),
+        "message" = "All region_code and region_name combinations are valid.",
         "result" = "PASS"
       )
     } else {
       if (length(invalid_values) == 1) {
         output <- list(
-          "message" = paste0("The following ", geography_matrix[2, 2], " /  ", geography_matrix[2, 3], " combination is invalid: '", paste0(invalid_values), "'. <br> - We do not expect any region outside of those on the <a href='https://geoportal.statistics.gov.uk/datasets/regions-december-2020-en-bgc/data?geometry=-22.223%2C50.522%2C17.877%2C55.161' target='_blank'>ONS Open Geography Portal</a> (case sensitive), or : for not available."),
+          "message" = paste0("The following region_code and region_name combination is invalid: '", paste0(invalid_values), "'. <br> - We do not expect any combinations outside of the <a href='https://github.com/dfe-analytical-services/dfe-published-data-qa/blob/master/data/regions.csv' target='_blank'>standard geographies</a> (case sensitive), you can use our [guidance link TBC] for help creating region level data."),
           "result" = "FAIL"
         )
       } else {
         output <- list(
-          "message" = paste0("The following ", geography_matrix[2, 2], " /  ", geography_matrix[2, 3], "  cominations are invalid: '", paste0(invalid_values, collapse = "', '"), "'. <br> - We do not expect any regions outside of those on the <a href='https://geoportal.statistics.gov.uk/datasets/regions-december-2020-en-bgc/data?geometry=-22.223%2C50.522%2C17.877%2C55.161' target='_blank'>ONS Open Geography Portal</a> (case senstive), or : for not available."),
+          "message" = paste0("The following region_code / region_name combinations are invalid: '", paste0(invalid_values, collapse = "', '"), "'. <br> - We do not expect any combinations outside of the <a href='https://github.com/dfe-analytical-services/dfe-published-data-qa/blob/master/data/regions.csv' target='_blank'>standard geographies</a> (case sensitive), you can use our [guidance link TBC] for help creating region level data."),
           "result" = "FAIL"
         )
       }
@@ -1185,18 +1230,18 @@ region_code <- function(data) {
   return(output)
 }
 
-# country_code -------------------------------------
+# country_combinations -------------------------------------
 # checking that country_code and country_name combinations are valid
 
-country_code <- function(data) {
-  if (!geography_matrix[1, 2] %in% names(data)) {
+country_combinations <- function(data) {
+  if (!"country_code" %in% names(data)) {
     output <- list(
-      "message" = paste(geography_matrix[1, 2], "is not present in this data file."),
+      "message" = "Country columns are not present in this data file.",
       "result" = "IGNORE"
     )
   } else {
     invalid_values <- data %>%
-      select(geography_matrix[1, 2], geography_matrix[1, 3]) %>%
+      select("country_code", "country_name") %>%
       filter(country_code != ":") %>%
       filter(country_code != "z") %>%
       unique() %>%
@@ -1206,18 +1251,18 @@ country_code <- function(data) {
 
     if (length(invalid_values) == 0) {
       output <- list(
-        "message" = paste(geography_matrix[1, 2], "is always one of the expected ONS codes or ':' for 'Not available'."),
+        "message" = "All country_code and country_name combinations are valid.",
         "result" = "PASS"
       )
     } else {
       if (length(invalid_values) == 1) {
         output <- list(
-          "message" = paste0("The following ", geography_matrix[1, 2], " /  ", geography_matrix[1, 3], " combination is invalid: '", paste0(invalid_values), "'. <br> - We do not expect any countries outside of those on the <a href='https://geoportal.statistics.gov.uk/datasets/countries-december-2018-names-and-codes-in-the-united-kingdom/data' target='_blank'>ONS Open Geography Portal</a> (case sensitive), or : for not available."),
+          "message" = paste0("The following country_code / country_name combination is invalid: '", paste0(invalid_values), "'. <br> - We do not expect any combinations outside of the <a href='https://github.com/dfe-analytical-services/dfe-published-data-qa/blob/master/data/country.csv' target='_blank'>standard geographies</a> (case sensitive), you can use our [guidance link TBC] for help creating country level data."),
           "result" = "FAIL"
         )
       } else {
         output <- list(
-          "message" = paste0("The following ", geography_matrix[1, 2], " /  ", geography_matrix[1, 3], " combinations are invalid: '", paste0(invalid_values, collapse = "', '"), "'. <br> - We do not expect any countries outside of those on the <a href='https://geoportal.statistics.gov.uk/datasets/countries-december-2018-names-and-codes-in-the-united-kingdom/data' target='_blank'>ONS Open Geography Portal</a>, (case sensitive) or : for not available."),
+          "message" = paste0("The following country_code / country_name combinations are invalid: '", paste0(invalid_values, collapse = "', '"), "'. <br> - We do not expect any combinations outside of the <a href='https://github.com/dfe-analytical-services/dfe-published-data-qa/blob/master/data/country.csv' target='_blank'>standard geographies</a> (case sensitive), you can use our [guidance link TBC] for help creating country level data."),
           "result" = "FAIL"
         )
       }
@@ -1226,7 +1271,6 @@ country_code <- function(data) {
 
   return(output)
 }
-
 
 # school_laestab_duplicates  ----------------------------------------
 # check that there is a 1:1 relationship between school laestab codes and names

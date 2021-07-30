@@ -257,49 +257,16 @@ options(spinner.size = .5)
 
 # disconnect duck ---------------------------------------------------------
 
-isLocal <- function() {
-  Sys.getenv("SHINY_PORT", "") == ""
-}
-
-getLocalTags <- function() {
-  # if (!isLocal()) {
-  #   return(NULL)
-  # }
-
-  htmltools::tagList(
-    htmltools::tags$script(paste0(
-      "$(function() {",
-      "  $(document).on('shiny:disconnected', function(event) {",
-      "    $('#ss-connect-dialogAA').show();",
-      "    $('#ss-overlay').show();",
-      "  })",
-      "});"
-    )),
-    htmltools::tags$div(
-      id = "ss-connect-dialogAA",
-      style = "display: none !important;",
-      htmltools::tags$img(id = "ss-reload-image", src = "builder-duck.PNG"),
-
-      #   htmltools::tags$p(id="ss-reload-text"),
-      htmltools::tags$a(id = "ss-reload-link", href = "#", onclick = "window.location.reload(true);")
-    ),
-    htmltools::tags$div(id = "ss-overlay", style = "display: none;")
-  )
-}
-
-disconnectMessage3 <- function(
-                               text = "An error occurred. Please refresh the page and try again.",
-                               refresh = "Refresh",
-                               width = 450,
-                               top = 50,
-                               size = 22,
-                               background = "white",
-                               colour = "#ffffff", # "#444444",
-                               overlayColour = "black",
-                               overlayOpacity = 0.6,
-                               refreshColour = "#337ab7",
-                               css = "") {
-  checkmate::assert_string(text, min.chars = 1)
+customDisconnectMessage <- function(
+                                    refresh = "Refresh",
+                                    width = 450,
+                                    top = 50,
+                                    size = 22,
+                                    background = "white",
+                                    colour = "#ffffff", # "#444444",
+                                    overlayColour = "black",
+                                    overlayOpacity = 0.6,
+                                    refreshColour = "#337ab7") {
   checkmate::assert_string(refresh)
   checkmate::assert_numeric(size, lower = 0)
   checkmate::assert_string(background)
@@ -307,7 +274,6 @@ disconnectMessage3 <- function(
   checkmate::assert_string(overlayColour)
   checkmate::assert_number(overlayOpacity, lower = 0, upper = 1)
   checkmate::assert_string(refreshColour)
-  checkmate::assert_string(css)
 
   if (width == "full") {
     width <- "100%"
@@ -327,20 +293,47 @@ disconnectMessage3 <- function(
     stop("disconnectMessage: 'top' must be either an integer, or the string \"center\".", call. = FALSE)
   }
 
-
-
-
   htmltools::tagList(
-    getLocalTags(),
-    htmltools::tags$head(
-      htmltools::tags$style(
-        glue::glue(
-          .open = "{{", .close = "}}",
+    htmltools::tags$script(
+      paste0(
+        "$(function() {",
+        "  $(document).on('shiny:disconnected', function(event) {",
+        "    $('#custom-disconnect-dialog').show();",
+        "    $('#ss-overlay').show();",
+        "  })",
+        "});"
+      )
+    ),
+    htmltools::tags$div(
+      id = "custom-disconnect-dialog",
+      style = "display: none !important;",
 
-          ## This hides the old message
-          "#shiny-disconnected-overlay { display: none !important; }",
+      htmltools::tags$div(
+        id = "ss-connect-refresh",
+        htmltools::tags$p("Something went wrong! Try refreshing the page."),
+        htmltools::tags$a(id = "ss-reload-link", href = "#", onclick = "window.location.reload(true);")
+      ),
 
-          "#ss-overlay {
+      htmltools::tags$div(
+        id = "ss-connect-image",
+        style = "display: block !important;",
+
+        htmltools::tags$img(id = "ss-reload-image", src = "builder-duck.PNG"),
+        htmltools::tags$p("If this persists, please contact statistics.development@education.gov.uk with details of what you were trying to do.")
+      )
+    ),
+
+    htmltools::tags$div(id = "ss-overlay", style = "display: none;"),
+
+    htmltools::tags$head(htmltools::tags$style(
+      glue::glue(
+        .open = "{{", .close = "}}",
+
+        ## This hides the old message
+        "#ss-connect-dialog { display: none !important; }", # rsconnect
+        "#shiny-disconnected-overlay { display: none !important; }", # local
+
+        "#ss-overlay {
              background-color: {{overlayColour}} !important;
              opacity: {{overlayOpacity}} !important;
              position: fixed !important;
@@ -353,7 +346,7 @@ disconnectMessage3 <- function(
              cursor: not-allowed !important;
           }",
 
-          "#ss-connect-dialogAA {
+        "#custom-disconnect-dialog {
              background: {{background}} !important;
              color: {{colour}} !important;
              width: {{width}} !important;
@@ -372,32 +365,7 @@ disconnectMessage3 <- function(
              box-shadow: rgba(0, 0, 0, 0.3) 3px 3px 10px !important;
           }",
 
-
-          # "#ss-connect-dialogAA img { content: url(/builder-duck.png) ;
-          # display: block !important;
-          # }",
-
-
-          # "#ss-connect-dialogAA::before { content: url(/builder-duck.png) ;
-          # display: block !important;
-          # }",
-
-          "#ss-connect-dialogAA::before {
-          content: '{{ text }}' ;
-          display: block ;
-          color: #ffffff ;
-          font-size: {{size}}px !important;
-          }",
-
-          # "#ss-connect-dialogAA a::before {
-          # content: '{{ text }}' ;
-          # display: {{ if (refresh == '') 'none' else 'block' }} !important;
-          # color: #ffffff ;
-          # }",
-
-          #         "#ss-connect-dialogAA label { display: none !important; }",
-
-          "#ss-connect-dialogAA a {
+        "#custom-disconnect-dialog a {
              display: {{ if (refresh == '') 'none' else 'block' }} !important;
              color: {{refreshColour}} !important;
              font-size: {{size}}px !important;
@@ -405,14 +373,11 @@ disconnectMessage3 <- function(
              font-weight: normal !important;
           }",
 
-          "#ss-connect-dialogAA a::before {
+        "#custom-disconnect-dialog a::before {
             content: '{{refresh}}';
             font-size: {{size}}px;
-          }",
-
-          #         "#ss-connect-dialogAA { {{ htmltools::HTML(css) }} }"
-        )
+          }"
       )
-    )
+    ))
   )
 }

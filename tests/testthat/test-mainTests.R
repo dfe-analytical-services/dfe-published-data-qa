@@ -123,16 +123,22 @@ test_that("ignored_rows", {
   expect_equal(testIndividualTest(pathStart, "ignored_rows"), "PASS WITH NOTE")
 })
 
-# region_code -------------------------------------------------------------------------------------------------------
+# la_combinations -------------------------------------------------------------------------------------------------------
 
-test_that("region_code", {
-  expect_equal(testIndividualTest(pathStart, "region_code"), "FAIL")
+test_that("la_combinations", {
+  expect_equal(testIndividualTest(pathStart, "la_combinations"), "FAIL")
 })
 
-# country_code -------------------------------------------------------------------------------------------------------
+# region_combinations -------------------------------------------------------------------------------------------------------
 
-test_that("country_code", {
-  expect_equal(testIndividualTest(pathStart, "country_code"), "FAIL")
+test_that("region_combinations", {
+  expect_equal(testIndividualTest(pathStart, "region_combinations"), "FAIL")
+})
+
+# country_combinations -------------------------------------------------------------------------------------------------------
+
+test_that("country_combinations", {
+  expect_equal(testIndividualTest(pathStart, "country_combinations"), "FAIL")
 })
 
 # school_urn_duplicates -------------------------------------------------------------------------------------------------------
