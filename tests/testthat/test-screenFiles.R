@@ -158,3 +158,9 @@ test_that("not_sch_but_one_filter", {
   
   expect_equal(screeningOutput$results %>% filter(result == "FAIL") %>% nrow() > 0, TRUE)
 })
+
+test_that("prov_only_dupes", {
+  screeningOutput <- testOther("../../tests/testthat/sch_prov/prov_level_only_dupe.csv")
+  
+  expect_equal(screeningOutput$results %>% filter(test == "duplicate_rows") %>% pull(result) %>% unlist(use.names = FALSE), "FAIL")
+})
