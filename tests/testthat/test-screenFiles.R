@@ -152,3 +152,9 @@ test_that("sch_filter_group", {
   
   expect_equal(screeningOutput$results %>% filter(result == "FAIL") %>% nrow(), 0)
 })
+
+test_that("not_sch_but_one_filter", {
+  screeningOutput <- testOther("../../tests/testthat/sch_prov/not_sch_but_one_filter.csv")
+  
+  expect_equal(screeningOutput$results %>% filter(result == "FAIL") %>% nrow() > 0, TRUE)
+})

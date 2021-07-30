@@ -1,0 +1,3 @@
+col_name,col_type,label,indicator_grouping,indicator_unit,indicator_dp,filter_hint,filter_grouping_column
+enrolments,Indicator,Number of pupil enrolments,Absence fields,,0,,
+colour,Filter,Colour,,,,,
