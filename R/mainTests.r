@@ -1085,7 +1085,7 @@ la_combinations <- function(data) {
         )
       } else {
         output <- list(
-          "message" = paste0("The following old_la_code, new_la_code and la_name cominations are invalid: '", paste0(invalid_values, collapse = "', '"), "'. <br> - We do not expect any combinations outside of the <a href='https://github.com/dfe-analytical-services/dfe-published-data-qa/blob/master/data/las.csv' target='_blank'>standard geographies</a> (case sensitive), you can use our [guidance link TBC] for help creating local authority level data."),
+          "message" = paste0("The following old_la_code, new_la_code and la_name combinations are invalid: '", paste0(invalid_values, collapse = "', '"), "'. <br> - We do not expect any combinations outside of the <a href='https://github.com/dfe-analytical-services/dfe-published-data-qa/blob/master/data/las.csv' target='_blank'>standard geographies</a> (case sensitive), you can use our [guidance link TBC] for help creating local authority level data."),
           "result" = "FAIL"
         )
       }
@@ -1120,7 +1120,7 @@ region_combinations <- function(data) {
 
     if (length(invalid_values) == 0) {
       output <- list(
-        "message" = "All region_code and region_name comninations are valid.",
+        "message" = "All region_code and region_name combinations are valid.",
         "result" = "PASS"
       )
     } else {
@@ -1131,7 +1131,7 @@ region_combinations <- function(data) {
         )
       } else {
         output <- list(
-          "message" = paste0("The following region_code / region_name cominations are invalid: '", paste0(invalid_values, collapse = "', '"), "'. <br> - We do not expect any combinations outside of the <a href='https://github.com/dfe-analytical-services/dfe-published-data-qa/blob/master/data/regions.csv' target='_blank'>standard geographies</a> (case sensitive), you can use our [guidance link TBC] for help creating region level data."),
+          "message" = paste0("The following region_code / region_name combinations are invalid: '", paste0(invalid_values, collapse = "', '"), "'. <br> - We do not expect any combinations outside of the <a href='https://github.com/dfe-analytical-services/dfe-published-data-qa/blob/master/data/regions.csv' target='_blank'>standard geographies</a> (case sensitive), you can use our [guidance link TBC] for help creating region level data."),
           "result" = "FAIL"
         )
       }
@@ -1162,7 +1162,7 @@ country_combinations <- function(data) {
 
     if (length(invalid_values) == 0) {
       output <- list(
-        "message" = "All country_code and country_name comninations are valid.",
+        "message" = "All country_code and country_name combinations are valid.",
         "result" = "PASS"
       )
     } else {
