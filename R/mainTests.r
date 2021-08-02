@@ -1121,7 +1121,7 @@ ignored_rows <- function(data) {
       } else {
         if (geography_matrix[13, 1] %in% levels_present$geographic_level && geography_matrix[14, 1] %in% levels_present$geographic_level) {
           output <- list(
-            "message" = paste(geography_matrix[13, 1], "and", geography_matrix[13, 1], "data has been mixed - please contact the Statistics Development Team."),
+            "message" = paste(geography_matrix[13, 1], "and", geography_matrix[14, 1], "data has been mixed - please contact the Statistics Development Team."),
             "result" = "FAIL"
           )
         } else {
