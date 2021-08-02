@@ -46,7 +46,7 @@ geography_matrix <- matrix(c(
   "School", "school_urn", "school_name", "school_laestab",
   "Provider", "provider_ukprn", "provider_name", NA,
   "Institution", "institution_id", "institution_name", NA,
-  "Planning area", "planning_area_name", "planning_area_code", NA
+  "Planning area", "planning_area_code", "planning_area_name", NA
 ),
 ncol = 4,
 byrow = TRUE
