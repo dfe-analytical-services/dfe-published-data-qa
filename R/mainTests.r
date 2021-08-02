@@ -1386,6 +1386,50 @@ school_urn_duplicates <- function(data) {
       "result" = "IGNORE"
     )
   } else {
+    multi_count_name <- data %>%
+      select("school_urn", "school_name") %>%
+      distinct() %>%
+      add_count(school_urn, name = "school_code_n") %>%
+      filter(school_code_n > 1) %>%
+      mutate(combo = paste(school_urn, " - has ", school_code_n, " different school names")) %>%
+      filter(school_code_n > 1) %>%
+      select(combo) %>%
+      distinct() %>%
+      pull()
+    
+    if (length(multi_count_code) == 0) {
+      output <- list(
+        "message" = "Every geography code has one assigned geography.",
+        "result" = "PASS"
+      )
+    } else {
+      if (length(multi_count_code) == 1) {
+        output <- list(
+          "message" = paste0("The following geography code has multiple assigned geographies: ", paste0(multi_count_code), ". 
+                             <br> - Each geography code should have only one assigned geography."),
+          "result" = "FAIL"
+        )
+      } else {
+        if (length(multi_count_code) > 1) {
+          output <- list(
+            "message" = paste0("The following geography codes have multiple assigned geographies: ", paste0(multi_count_code, collapse = ", "), ".
+                             <br> - Each geography code should have only one assigned geography."),
+            "result" = "FAIL"
+          )
+        }
+      }
+    }
+  }
+  return(output)
+}
+
+school_urn_duplicates <- function(data) {
+  if (!"School" %in% unique(data$geographic_level)) {
+    output <- list(
+      "message" = "School-level data is not present in this data file.",
+      "result" = "IGNORE"
+    )
+  } else {
     multi_count_code <- data %>%
       select("school_urn", "school_name") %>%
       distinct() %>%
@@ -1472,7 +1516,7 @@ school_urn_duplicates <- function(data) {
 # other_geography_duplicates  ----------------------------------------
 # check that there is a 1:1 relationship between geography codes and names
 
-lower_level_geog_names <- geography_matrix[c(7:12, 14), 2:3] %>% as.character() # skipping school as it has it's own tests
+lower_level_geog_names <- geography_matrix[c(7:12, 14), 2:3] %>% as.character() # skipping school as it has its own tests
 
 other_geography_duplicates <- function(data) {
   if (!any(lower_level_geog_names %in% names(data))) {
@@ -1543,7 +1587,7 @@ other_geography_duplicates <- function(data) {
 # other_geography_code_duplicates  ----------------------------------------
 # check that there is a 1:1 relationship between geography names and codes
 
-lower_level_geog_names <- geography_matrix[c(7:12, 14), 2:3] %>% as.character() # skipping school as it has it's own tests
+lower_level_geog_names <- geography_matrix[c(7:12, 14), 2:3] %>% as.character() # skipping school as it has its own tests
 
 other_geography_code_duplicates <- function(data) {
   if (!any(lower_level_geog_names %in% names(data))) {
