@@ -713,8 +713,8 @@ server <- function(input, output, session) {
             } else {
               shinyFeedback::hideFeedback("geog_parameter")
             }
-            
-            if(!is.null(input$ind_parameter) && !is.null(input$geog_parameter)){
+
+            if (!is.null(input$ind_parameter) && !is.null(input$geog_parameter)) {
               return(showsumstats(input$ind_parameter, input$geog_parameter))
             }
           })
@@ -849,7 +849,6 @@ server <- function(input, output, session) {
                 )
               } else {
                 return(get_outliers(input$outlier_indicator_parameter, input$threshold_setting, input$ctime_parameter, input$comptime_parameter))
-                
               }
             }
           })
@@ -906,7 +905,7 @@ server <- function(input, output, session) {
               )
             )
           })
-          
+
           data_geog <- eventReactive(input$submit_geographies, {
             if (input$geog_indicator_parameter == "") {
               shinyFeedback::showFeedbackDanger(
@@ -914,23 +913,23 @@ server <- function(input, output, session) {
                 text = "An indicator must be selected"
               )
             } else {
-            shinyFeedback::hideFeedback("geog_indicator_parameter") # would rather this was reactive, but can't get it to work other than on the click of the button
-            if (any(grepl("-", names(data$mainFile)))) {
-              shinyWidgets::show_alert(
-                title = "Hyphen found in variable name",
-                text = "You have at least one hyphen in your variable names, you need to remove all hyphens from variable names to use this part of the app."
-              )
-            }
-            
-            pf <- meta$mainFile %>%
-              filter(col_type == "Filter") %>%
-              pull(col_name)
+              shinyFeedback::hideFeedback("geog_indicator_parameter") # would rather this was reactive, but can't get it to work other than on the click of the button
+              if (any(grepl("-", names(data$mainFile)))) {
+                shinyWidgets::show_alert(
+                  title = "Hyphen found in variable name",
+                  text = "You have at least one hyphen in your variable names, you need to remove all hyphens from variable names to use this part of the app."
+                )
+              }
 
-            cf <- paste(pf, collapse = ", ")
+              pf <- meta$mainFile %>%
+                filter(col_type == "Filter") %>%
+                pull(col_name)
 
-            ii <- input$geog_indicator_parameter # "number_of_pupils"
+              cf <- paste(pf, collapse = ", ")
 
-            eval(parse(text = paste0("data$mainFile %>%
+              ii <- input$geog_indicator_parameter # "number_of_pupils"
+
+              eval(parse(text = paste0("data$mainFile %>%
                             mutate(across(all_of('", ii, "'), na_if, 'c')) %>%
                             mutate(across(all_of('", ii, "'), na_if, 'z')) %>%
                             mutate(across(all_of('", ii, "'), na_if, ':')) %>%
