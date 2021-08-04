@@ -895,7 +895,7 @@ la_col_completed <- function(data) {
 
     # collate matrix of whether every col is completed or not per row
 
-    pre_pre_result <- matrix(unlist(apply(data, 1, la_all_complete_gathering)), ncol = 3)
+    pre_pre_result <- t(matrix(unlist(apply(data, 1, la_all_complete_gathering)), nrow = 3))
 
     # check using the matrix if all data rows are either fully completed or fully blank
 
@@ -916,7 +916,7 @@ la_col_completed <- function(data) {
       )
     } else {
       output <- list(
-        "message" = "Where one of the three columns have values for a row, the other two columns should also be filled in.",
+        "message" = "Where any of the three local authority columns have values for a row, all columns should be filled in.", # not sure how to word best
         "result" = "FAIL"
       )
     }
