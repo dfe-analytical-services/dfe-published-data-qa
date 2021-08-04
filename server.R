@@ -697,12 +697,26 @@ server <- function(input, output, session) {
 
           # create a list of tables - with one for each indicator summary
           theList <- eventReactive(input$submit, {
-            validate(
-              need(input$ind_parameter != "", "Please select at least one indicator"),
-              need(input$geog_parameter != "", "Please select at least one geographic level")
-            )
-
-            return(showsumstats(input$ind_parameter, input$geog_parameter))
+            if (is.null(input$ind_parameter)) {
+              shinyFeedback::showFeedbackDanger(
+                inputId = "ind_parameter",
+                text = "At least one indicator must be selected"
+              )
+            } else {
+              shinyFeedback::hideFeedback("ind_parameter")
+            }
+            if (is.null(input$geog_parameter)) {
+              shinyFeedback::showFeedbackDanger(
+                inputId = "geog_parameter",
+                text = "At least one geographic level must be selected"
+              )
+            } else {
+              shinyFeedback::hideFeedback("geog_parameter")
+            }
+            
+            if(!is.null(input$ind_parameter) && !is.null(input$geog_parameter)){
+              return(showsumstats(input$ind_parameter, input$geog_parameter))
+            }
           })
 
           # Create and then output the tables
@@ -821,12 +835,23 @@ server <- function(input, output, session) {
 
           # create a list of tables - with one for each indicator summary
           theOutlierList <- eventReactive(input$submit_outlier, {
-            validate(
-              need(input$outlier_indicator_parameter != "", "Please select at least one indicator"),
-              need(input$ctime_parameter != input$comptime_parameter, "Please select two different time periods for comparison")
-            )
-
-            return(get_outliers(input$outlier_indicator_parameter, input$threshold_setting, input$ctime_parameter, input$comptime_parameter))
+            if (is.null(input$outlier_indicator_parameter)) {
+              shinyFeedback::showFeedbackDanger(
+                inputId = "outlier_indicator_parameter",
+                text = "At least one indicator must be selected"
+              )
+            } else {
+              shinyFeedback::hideFeedback("outlier_indicator_parameter")
+              if (input$ctime_parameter == input$comptime_parameter) {
+                shinyWidgets::show_alert(
+                  title = "No comparison possible",
+                  text = "Please select two different time periods for comparison"
+                )
+              } else {
+                return(get_outliers(input$outlier_indicator_parameter, input$threshold_setting, input$ctime_parameter, input$comptime_parameter))
+                
+              }
+            }
           })
 
           # Create and then output the tables
@@ -881,12 +906,21 @@ server <- function(input, output, session) {
               )
             )
           })
-
+          
           data_geog <- eventReactive(input$submit_geographies, {
-            validate(
-              need(input$geog_indicator_parameter != "", "Please select an indicator"),
-              need(!any(grepl("-", names(data$mainFile))), "You have at least one hyphen in your variable names, you need to remove all hyphens from variable names to use this part of the app.")
-            )
+            if (input$geog_indicator_parameter == "") {
+              shinyFeedback::showFeedbackDanger(
+                inputId = "geog_indicator_parameter",
+                text = "An indicator must be selected"
+              )
+            } else {
+            shinyFeedback::hideFeedback("geog_indicator_parameter") # would rather this was reactive, but can't get it to work other than on the click of the button
+            if (any(grepl("-", names(data$mainFile)))) {
+              shinyWidgets::show_alert(
+                title = "Hyphen found in variable name",
+                text = "You have at least one hyphen in your variable names, you need to remove all hyphens from variable names to use this part of the app."
+              )
+            }
             
             pf <- meta$mainFile %>%
               filter(col_type == "Filter") %>%
@@ -905,6 +939,7 @@ server <- function(input, output, session) {
                             group_by(time_period,geographic_level,", cf, ") %>%
                             summarise(aggregate_number = sum(", ii, ")) %>%
                             spread(key = geographic_level, value = aggregate_number)")))
+            }
           })
 
           observeEvent(input$submit_geographies, {
