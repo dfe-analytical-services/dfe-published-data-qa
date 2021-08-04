@@ -6023,3 +6023,10 @@ a.list-group-item-danger.active:hover,a.list-group-item-danger.active:focus{
 .panel-primary .panel-heading,.panel-success .panel-heading,.panel-danger .panel-heading,.panel-warning .panel-heading,.panel-info .panel-heading{
     border-color:#363b40
 }
+.shiny-output-error{
+    visibility: hidden !important
+}
+.shiny-output-error:after{
+    content: 'An error has occurred. Please contact the Statistics Development Team.';
+    visibility: visible
+}
