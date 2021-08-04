@@ -887,7 +887,7 @@ server <- function(input, output, session) {
               need(input$geog_indicator_parameter != "", "Please select an indicator"),
               need(!any(grepl("-", names(data$mainFile))), "You have at least one hyphen in your variable names, you need to remove all hyphens from variable names to use this part of the app.")
             )
-
+            
             pf <- meta$mainFile %>%
               filter(col_type == "Filter") %>%
               pull(col_name)
