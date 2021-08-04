@@ -111,6 +111,12 @@ test_that("region_col_completed", {
   expect_equal(testIndividualTest(pathStart, "region_col_completed"), "FAIL")
 })
 
+# la_col_completed -------------------------------------------------------------------------------------------------------
+
+test_that("la_col_completed", {
+  expect_equal(testIndividualTest(pathStart, "la_col_completed"), "FAIL")
+})
+
 # overcompleted_cols -------------------------------------------------------------------------------------------------------
 
 test_that("overcompleted_cols", {
