@@ -1,9 +1,0 @@
-col_name,col_type,label,indicator_grouping,indicator_unit,indicator_dp,filter_hint,filter_grouping_column
-establishment_group,Filter,Establishment group,,,,Filter by type of establishment group,
-establishment_type,Filter,Establishment type,,,,Filter by type of establishment,
-Total_all,Indicator,Number of statements and EHC plans combined,SEN statistics,,0,,
-Total_all_pc,Indicator,Percentage of statements and EHC plans combined,SEN statistics,%,1,,
-Total_ehc,Indicator,Number of EHC plans,SEN statistics,,0,,
-Total_ehc_pc,Indicator,Percentage of EHC plans,SEN statistics,%,1,,
-Total_st,Indicator,Number of statements,SEN statistics,,0,,
-Total_st_pc,Indicator,Percentage of statements,SEN statistics,%,1,,

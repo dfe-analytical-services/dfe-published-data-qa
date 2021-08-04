@@ -26,8 +26,6 @@ mainTests <- function(data_character, meta_character, datafile, metafile) {
     la_combinations(datafile), # active test
     region_combinations(datafile), # active test
     country_combinations(datafile), # active test
-    school_urn_duplicates(datafile), # active test
-    school_laestab_duplicates(datafile), # active test
     other_geography_duplicates(datafile), # active test
     other_geography_code_duplicates(datafile), # active test
     na_geography(datafile), # active test
@@ -1284,239 +1282,10 @@ country_combinations <- function(data) {
   return(output)
 }
 
-# school_laestab_duplicates  ----------------------------------------
-# check that there is a 1:1 relationship between school laestab codes and names
-
-school_laestab_duplicates <- function(data) {
-  if (!geography_matrix[13, 1] %in% unique(data$geographic_level)) {
-    output <- list(
-      "message" = paste0(geography_matrix[13, 1], "-level data is not present in this data file."),
-      "result" = "IGNORE"
-    )
-  } else {
-    multi_count_code <- data %>%
-      select(geography_matrix[13, 4], geography_matrix[13, 3]) %>%
-      distinct() %>%
-      add_count(school_name, name = "school_name_n") %>%
-      filter(school_name_n > 1) %>%
-      mutate(combo = paste0(school_name, " - has ", school_name_n, " different laestabs")) %>%
-      select(combo) %>%
-      distinct() %>%
-      pull()
-
-    multi_count_name <- data %>%
-      select(geography_matrix[13, 4], geography_matrix[13, 3]) %>%
-      distinct() %>%
-      add_count(school_laestab, name = "school_code_n") %>%
-      filter(school_code_n > 1) %>%
-      mutate(combo = paste(school_laestab, " - has ", school_code_n, " different school names")) %>%
-      filter(school_code_n > 1) %>%
-      select(combo) %>%
-      distinct() %>%
-      pull()
-
-
-    if (length(multi_count_code) == 0 & length(multi_count_name) == 0) {
-      output <- list(
-        "message" = paste("Every", geography_matrix[13, 3], "value has one", geography_matrix[13, 4], "value, and vice versa."),
-        "result" = "PASS"
-      )
-    } else {
-      if (length(multi_count_code) == 1 & length(multi_count_name) == 0) {
-        output <- list(
-          "message" = paste0("The following ", geography_matrix[13, 3], "value has multuple", geography_matrix[13, 4], " values: ", paste0(multi_count_code), ". 
-                             <br> - Every school name should have only one laestab and vice versa."),
-          "result" = "FAIL"
-        )
-      } else {
-        if (length(multi_count_code) == 1 & length(multi_count_name) == 1) {
-          output <- list(
-            "message" = paste0("The following school_name has multiple laestabs: ", paste0(multi_count_code), ", 
-                              <br> and the following laestab has multiple names: ", paste0(multi_count_name), ".
-                             <br> - Every school name should have only one laestab and vice versa."),
-            "result" = "FAIL"
-          )
-        } else {
-          if (length(multi_count_code) > 1 & length(multi_count_name) == 1) {
-            output <- list(
-              "message" = paste0("The following school_names have multiple laestabs: ", paste0(multi_count_code, collapse = ", "), ", 
-                             <br> and the following laestab has multiple names: ", paste0(multi_count_name), ".
-                             <br> - Every school name should have only one laestab and vice versa."),
-              "result" = "FAIL"
-            )
-          } else {
-            if (length(multi_count_code) == 1 & length(multi_count_name) > 1) {
-              output <- list(
-                "message" = paste0("The following school_name has multiple laestabs: ", paste0(multi_count_code), ", 
-                              <br> and the following laestabs have multiple names: ", paste0(multi_count_name, collapse = ", "), ".
-                             <br> - Every school name should have only one laestab and vice versa."),
-                "result" = "FAIL"
-              )
-            } else {
-              if (length(multi_count_code) == 0 & length(multi_count_name) > 1) {
-                output <- list(
-                  "message" = paste0("The following laestabs have multiple names: ", paste0(multi_count_name, collapse = ", "), ".
-                             <br> - Every school name should have only one laestab and vice versa."),
-                  "result" = "FAIL"
-                )
-              } else {
-                output <- list(
-                  "message" = paste0("The following school_names have multiple laestabs: ", paste0(multi_count_code, collapse = ", "), ", 
-                             <br> and the following laestabs have multiple names: ", paste0(multi_count_name, collapse = ", "), ".
-                             <br> - Every school name should have only one laestab and vice versa."),
-                  "result" = "FAIL"
-                )
-              }
-            }
-          }
-        }
-      }
-    }
-  }
-  return(output)
-}
-
-# school_urn_duplicates  ----------------------------------------
-# check that there is a 1:1 relationship between school urns and names
-
-school_urn_duplicates <- function(data) {
-  if (!"School" %in% unique(data$geographic_level)) {
-    output <- list(
-      "message" = "School-level data is not present in this data file.",
-      "result" = "IGNORE"
-    )
-  } else {
-    multi_count_name <- data %>%
-      select("school_urn", "school_name") %>%
-      distinct() %>%
-      add_count(school_urn, name = "school_code_n") %>%
-      filter(school_code_n > 1) %>%
-      mutate(combo = paste(school_urn, " - has ", school_code_n, " different school names")) %>%
-      filter(school_code_n > 1) %>%
-      select(combo) %>%
-      distinct() %>%
-      pull()
-    
-    if (length(multi_count_code) == 0) {
-      output <- list(
-        "message" = "Every geography code has one assigned geography.",
-        "result" = "PASS"
-      )
-    } else {
-      if (length(multi_count_code) == 1) {
-        output <- list(
-          "message" = paste0("The following geography code has multiple assigned geographies: ", paste0(multi_count_code), ". 
-                             <br> - Each geography code should have only one assigned geography."),
-          "result" = "FAIL"
-        )
-      } else {
-        if (length(multi_count_code) > 1) {
-          output <- list(
-            "message" = paste0("The following geography codes have multiple assigned geographies: ", paste0(multi_count_code, collapse = ", "), ".
-                             <br> - Each geography code should have only one assigned geography."),
-            "result" = "FAIL"
-          )
-        }
-      }
-    }
-  }
-  return(output)
-}
-
-school_urn_duplicates <- function(data) {
-  if (!"School" %in% unique(data$geographic_level)) {
-    output <- list(
-      "message" = "School-level data is not present in this data file.",
-      "result" = "IGNORE"
-    )
-  } else {
-    multi_count_code <- data %>%
-      select("school_urn", "school_name") %>%
-      distinct() %>%
-      add_count(school_name, name = "school_name_n") %>%
-      filter(school_name_n > 1) %>%
-      mutate(combo = paste0(school_name, " - has ", school_name_n, " different URNs")) %>%
-      select(combo) %>%
-      distinct() %>%
-      pull()
-
-    multi_count_name <- data %>%
-      select("school_urn", "school_name") %>%
-      distinct() %>%
-      add_count(school_urn, name = "school_code_n") %>%
-      filter(school_code_n > 1) %>%
-      mutate(combo = paste(school_urn, " - has ", school_code_n, " different school names")) %>%
-      filter(school_code_n > 1) %>%
-      select(combo) %>%
-      distinct() %>%
-      pull()
-
-
-    if (length(multi_count_code) == 0 & length(multi_count_name) == 0) {
-      output <- list(
-        "message" = "Every school name has one URN, and vice versa.",
-        "result" = "PASS"
-      )
-    } else {
-      if (length(multi_count_code) == 1 & length(multi_count_name) == 0) {
-        output <- list(
-          "message" = paste0("The following school_name has multiple URNs: ", paste0(multi_count_code), ". 
-                             <br> - Every school name should have only one URN and vice versa."),
-          "result" = "FAIL"
-        )
-      } else {
-        if (length(multi_count_code) == 1 & length(multi_count_name) == 1) {
-          output <- list(
-            "message" = paste0("The following school_name has multiple URNs: ", paste0(multi_count_code), ", 
-                              <br> and the following URN has multiple names: ", paste0(multi_count_name), ".
-                             <br> - Every school name should have only one URN and vice versa."),
-            "result" = "FAIL"
-          )
-        } else {
-          if (length(multi_count_code) > 1 & length(multi_count_name) == 1) {
-            output <- list(
-              "message" = paste0("The following school_names have multiple URNs: ", paste0(multi_count_code, collapse = ", "), ", 
-                              <br> and the following URN has multiple names: ", paste0(multi_count_name), ".
-                             <br> - Every school name should have only one URN and vice versa."),
-              "result" = "FAIL"
-            )
-          } else {
-            if (length(multi_count_code) == 1 & length(multi_count_name) > 1) {
-              output <- list(
-                "message" = paste0("The following school_name has multiple URNs: ", paste0(multi_count_code), ", 
-                              <br> and the following URNs have multiple names: ", paste0(multi_count_name, collapse = ", "), ".
-                             <br> - Every school name should have only one URN and vice versa."),
-                "result" = "FAIL"
-              )
-            } else {
-              if (length(multi_count_code) == 0 & length(multi_count_name) > 1) {
-                output <- list(
-                  "message" = paste0("The following URNs have multiple names: ", paste0(multi_count_name, collapse = ", "), ".
-                             <br> - Every school name should have only one URN and vice versa."),
-                  "result" = "FAIL"
-                )
-              } else {
-                output <- list(
-                  "message" = paste0("The following school_names have multiple codes: ", paste0(multi_count_code, collapse = ", "), ", 
-                              <br> and the following URNs have multiple names: ", paste0(multi_count_name, collapse = ", "), ".
-                             <br> - Every school name should have only one URN and vice versa."),
-                  "result" = "FAIL"
-                )
-              }
-            }
-          }
-        }
-      }
-    }
-  }
-  return(output)
-}
-
-
 # other_geography_duplicates  ----------------------------------------
 # check that there is a 1:1 relationship between geography codes and names
 
-lower_level_geog_names <- geography_matrix[c(7:12, 14), 2:3] %>% as.character() # skipping school as it has its own tests
+lower_level_geog_names <- geography_matrix[7:12, 2:3] %>% as.character() # skipping school/prov as they have legit duplicates
 
 other_geography_duplicates <- function(data) {
   if (!any(lower_level_geog_names %in% names(data))) {
@@ -1587,7 +1356,7 @@ other_geography_duplicates <- function(data) {
 # other_geography_code_duplicates  ----------------------------------------
 # check that there is a 1:1 relationship between geography names and codes
 
-lower_level_geog_names <- geography_matrix[c(7:12, 14), 2:3] %>% as.character() # skipping school as it has its own tests
+lower_level_geog_names <- geography_matrix[7:12, 2:3] %>% as.character() # skipping school/prov as they have legit duplicates
 
 other_geography_code_duplicates <- function(data) {
   if (!any(lower_level_geog_names %in% names(data))) {
@@ -1659,7 +1428,7 @@ other_geography_code_duplicates <- function(data) {
 # checking if location has code of ":", then name is "not available"
 
 na_geography <- function(data) {
-  geography_name_codes <- geography_matrix[1:14, 2:3] %>%
+  geography_name_codes <- geography_matrix[1:14, 2:3] %>% # leaving school and provider in as we want to catch if anyone is using these
     as.character() %>%
     .[!is.na(.)]
 
@@ -1685,7 +1454,8 @@ na_geography <- function(data) {
   }
 
   testable_levels_present <- data %>%
-    filter(geographic_level %in% c(geography_matrix[c(4, 6:14), 1])) %>% # Removing country, region, la, rsc region and planning area/institution
+    # Removing country, region, la (specific lookups), rsc region (only name) and planning area/institution (ignored in EES)
+    filter(geographic_level %in% c(geography_matrix[c(4, 6:14), 1])) %>%
     distinct(geographic_level) %>%
     pull(geographic_level)
 
@@ -1739,7 +1509,7 @@ na_geography <- function(data) {
 # checking if location has the name "not available" then its code is ":"
 
 na_geography_code <- function(data) {
-  geography_name_codes <- geography_matrix[1:14, 2:3] %>%
+  geography_name_codes <- geography_matrix[1:14, 2:3] %>% # leaving school and provider in as we want to catch if anyone is using these
     as.character() %>%
     .[!is.na(.)]
 
@@ -1765,7 +1535,8 @@ na_geography_code <- function(data) {
   }
 
   testable_levels_present <- data %>%
-    filter(geographic_level %in% c(geography_matrix[c(4, 6:14), 1])) %>% # Removing country, region, la, rsc region and planning area/institution
+    # Removing country, region, la (specific lookups), rsc region (only name) and planning area/institution (ignored in EES)
+    filter(geographic_level %in% c(geography_matrix[c(4, 6:14), 1])) %>%
     distinct(geographic_level) %>%
     pull(geographic_level)
 
