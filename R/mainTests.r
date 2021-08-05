@@ -22,6 +22,7 @@ mainTests <- function(data_character, meta_character, datafile, metafile) {
     geography_level_completed(datafile), # active test
     region_col_completed(datafile), # active test
     overcompleted_cols(datafile, metafile), # active test
+    la_col_completed(datafile), # active test
     ignored_rows(datafile), # active test
     la_combinations(datafile), # active test
     region_combinations(datafile), # active test
@@ -892,6 +893,120 @@ region_col_completed <- function(data) {
           "result" = "IGNORE"
         )
       }
+    }
+  }
+
+  return(output)
+}
+
+# la_col_completed -------------------------------------
+# When one of the la cols is present or completed, are the others also?
+
+la_col_completed <- function(data) {
+  if (all(c("old_la_code", "la_name", "new_la_code") %in% names(data))) {
+
+    # Check to see all columns are completed for rows where at least one is completed
+
+    la_all_complete_gathering <- function(data) {
+      if (is.na(data[["old_la_code"]])) {
+        old_completed <- FALSE
+      } else {
+        old_completed <- TRUE
+      }
+
+      if (is.na(data[["la_name"]])) {
+        name_completed <- FALSE
+      } else {
+        name_completed <- TRUE
+      }
+
+      if (is.na(data[["new_la_code"]])) {
+        new_completed <- FALSE
+      } else {
+        new_completed <- TRUE
+      }
+
+      la_completed_row <- list(old_completed, name_completed, new_completed)
+
+      return(la_completed_row)
+    }
+
+    # collate matrix of whether every col is completed or not per row
+
+    pre_pre_result <- t(matrix(unlist(apply(data, 1, la_all_complete_gathering)), nrow = 3))
+
+    # check using the matrix if all data rows are either fully completed or fully blank
+
+    la_all_complete_check <- function(results_row) {
+      if (all(results_row == TRUE) | all(results_row == FALSE)) {
+        return(TRUE)
+      } else {
+        return(FALSE)
+      }
+    }
+
+    pre_result <- apply(pre_pre_result, 1, la_all_complete_check)
+
+    if (all(pre_result == TRUE)) {
+      output <- list(
+        "message" = "Where one of the local authority columns is completed, the other two columns are also completed.",
+        "result" = "PASS"
+      )
+    } else {
+      output <- list(
+        "message" = "Where any of the three local authority columns have values for a row, all columns should be filled in.", # not sure how to word best
+        "result" = "FAIL"
+      )
+    }
+  } else {
+    if (any(c("old_la_code", "la_name", "new_la_code") %in% names(data))) {
+
+      # list of permutations for columns missing where at least one is present
+
+      if (!("la_name" %in% names(data)) && !("new_la_code" %in% names(data))) {
+        output <- list(
+          "message" = "Where old_la_code is included in the data file, la_name and new_la_code should also be included.",
+          "result" = "FAIL"
+        )
+      } else {
+        if (!("la_name" %in% names(data)) && !("old_la_code" %in% names(data))) {
+          output <- list(
+            "message" = "Where new_la_code is included in the data file, la_name and old_la_code should also be included.",
+            "result" = "FAIL"
+          )
+        } else {
+          if (!("new_la_code" %in% names(data)) && !("old_la_code" %in% names(data))) {
+            output <- list(
+              "message" = "Where la_name is included in the data file, new_la_code and old_la_code should also be included.",
+              "result" = "FAIL"
+            )
+          } else {
+            if (!("new_la_code" %in% names(data))) {
+              output <- list(
+                "message" = "Where la_name and old_la_code are included in the data file, new_la_code should also be included.",
+                "result" = "FAIL"
+              )
+            } else {
+              if (!("old_la_code" %in% names(data))) {
+                output <- list(
+                  "message" = "Where la_name and new_la_code are included in the data file, old_la_code should also be included.",
+                  "result" = "FAIL"
+                )
+              } else {
+                output <- list(
+                  "message" = "Where new_la_code and old_la_code are included in the data file, la_name should also be included.",
+                  "result" = "FAIL"
+                )
+              }
+            }
+          }
+        }
+      }
+    } else {
+      output <- list(
+        "message" = "No recognised la columns are present in this data file.",
+        "result" = "IGNORE"
+      )
     }
   }
 
