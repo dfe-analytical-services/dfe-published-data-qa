@@ -855,7 +855,7 @@ server <- function(input, output, session) {
               if (input$ctime_parameter == input$comptime_parameter) {
                 shinyWidgets::show_alert(
                   title = "No comparison possible",
-                  text = "Please select two different time periods for comparison"
+                  text = "Please select two different time periods for comparison."
                 )
               } else {
                 return(get_outliers(input$outlier_indicator_parameter, input$threshold_setting, input$ctime_parameter, input$comptime_parameter))
