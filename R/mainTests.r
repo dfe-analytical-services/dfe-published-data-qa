@@ -20,9 +20,9 @@ mainTests <- function(data_character, meta_character, datafile, metafile) {
     region_for_la(datafile), # active test
     region_for_lad(datafile), # active test
     geography_level_completed(datafile), # active test
-    region_col_completed(datafile), # active test
+    region_col_present(datafile), # active test
+    la_col_present(datafile), # active test
     overcompleted_cols(datafile, metafile), # active test
-    la_col_completed(datafile), # active test
     ignored_rows(datafile), # active test
     la_combinations(datafile), # active test
     region_combinations(datafile), # active test
@@ -833,58 +833,25 @@ geography_level_completed <- function(data) {
   return(output)
 }
 
-# region_col_completed -------------------------------------
+# region_col_present -------------------------------------
 # When one of region name and code is completed, is the other also?
 
-region_col_completed <- function(data) {
+region_col_present <- function(data) {
   if ((geography_matrix[2, 2] %in% names(data)) && (geography_matrix[2, 3] %in% names(data))) {
-    region_both_complete_check <- function(data) {
-      if (is.na(data[[geography_matrix[2, 2]]]) && !is.na(data[[geography_matrix[2, 3]]])) {
-        return("code_missing")
-      } else {
-        if (is.na(data[[geography_matrix[2, 3]]]) && !is.na(data[[geography_matrix[2, 2]]])) {
-          return("name_missing")
-        }
-      }
-    }
-
-    pre_result <- apply(data, 1, region_both_complete_check)
-
-    if (is.null(pre_result)) {
-      output <- list(
-        "message" = paste("Where one of", geography_matrix[2, 2], "or", geography_matrix[2, 3], "is completed, the other column is also completed."),
-        "result" = "PASS"
-      )
-    } else {
-      if (all(c("code_missing", "name_missing") %in% pre_result)) {
-        output <- list(
-          "message" = paste("Where one of", geography_matrix[2, 2], "or", geography_matrix[2, 3], "is completed, the other column should also be completed."),
-          "result" = "FAIL"
-        )
-      } else {
-        if ("code_missing" %in% pre_result) {
-          output <- list(
-            "message" = paste("Where", geography_matrix[2, 3], "is completed,", geography_matrix[2, 2], "should also be completed."),
-            "result" = "FAIL"
-          )
-        } else {
-          output <- list(
-            "message" = paste("Where", geography_matrix[2, 2], "is completed,", geography_matrix[2, 3], "should also be completed."),
-            "result" = "FAIL"
-          )
-        }
-      }
-    }
+    output <- list(
+      "message" = paste("Where one of", geography_matrix[2, 2], "or", geography_matrix[2, 3], "is present, the other column is also present."),
+      "result" = "PASS"
+    )
   } else {
     if (geography_matrix[2, 3] %in% names(data)) {
       output <- list(
-        "message" = paste("Where", geography_matrix[2, 3], "is included in the data file,", geography_matrix[2, 2], "should also be included"),
+        "message" = paste("Where", geography_matrix[2, 3], "is included in the data file,", geography_matrix[2, 2], "should also be included."),
         "result" = "FAIL"
       )
     } else {
       if (geography_matrix[2, 2] %in% names(data)) {
         output <- list(
-          "message" = paste("Where", geography_matrix[2, 2], "is included in the data file,", geography_matrix[2, 3], "should also be included"),
+          "message" = paste("Where", geography_matrix[2, 2], "is included in the data file,", geography_matrix[2, 3], "should also be included."),
           "result" = "FAIL"
         )
       } else {
@@ -899,70 +866,17 @@ region_col_completed <- function(data) {
   return(output)
 }
 
-# la_col_completed -------------------------------------
+# la_col_present -------------------------------------
 # When one of the la cols is present or completed, are the others also?
 
-la_col_completed <- function(data) {
+la_col_present <- function(data) {
   if (all(c("old_la_code", "la_name", "new_la_code") %in% names(data))) {
-
-    # Check to see all columns are completed for rows where at least one is completed
-
-    la_all_complete_gathering <- function(data) {
-      if (is.na(data[["old_la_code"]])) {
-        old_completed <- FALSE
-      } else {
-        old_completed <- TRUE
-      }
-
-      if (is.na(data[["la_name"]])) {
-        name_completed <- FALSE
-      } else {
-        name_completed <- TRUE
-      }
-
-      if (is.na(data[["new_la_code"]])) {
-        new_completed <- FALSE
-      } else {
-        new_completed <- TRUE
-      }
-
-      la_completed_row <- list(old_completed, name_completed, new_completed)
-
-      return(la_completed_row)
-    }
-
-    # collate matrix of whether every col is completed or not per row
-
-    pre_pre_result <- t(matrix(unlist(apply(data, 1, la_all_complete_gathering)), nrow = 3))
-
-    # check using the matrix if all data rows are either fully completed or fully blank
-
-    la_all_complete_check <- function(results_row) {
-      if (all(results_row == TRUE) | all(results_row == FALSE)) {
-        return(TRUE)
-      } else {
-        return(FALSE)
-      }
-    }
-
-    pre_result <- apply(pre_pre_result, 1, la_all_complete_check)
-
-    if (all(pre_result == TRUE)) {
-      output <- list(
-        "message" = "Where one of the local authority columns is completed, the other two columns are also completed.",
-        "result" = "PASS"
-      )
-    } else {
-      output <- list(
-        "message" = "Where any of the three local authority columns have values for a row, all columns should be filled in.", # not sure how to word best
-        "result" = "FAIL"
-      )
-    }
+    output <- list(
+      "message" = "Where one of the local authority columns is present, the other two columns are also present.",
+      "result" = "PASS"
+    )
   } else {
     if (any(c("old_la_code", "la_name", "new_la_code") %in% names(data))) {
-
-      # list of permutations for columns missing where at least one is present
-
       if (!("la_name" %in% names(data)) && !("new_la_code" %in% names(data))) {
         output <- list(
           "message" = "Where old_la_code is included in the data file, la_name and new_la_code should also be included.",
@@ -1270,9 +1184,9 @@ ignored_rows <- function(data) {
 # checking that la code and name combinations are valid
 
 la_combinations <- function(data) {
-  if (!"new_la_code" %in% names(data)) {
+  if (!all(c("old_la_code", "la_name", "new_la_code") %in% names(data))) {
     output <- list(
-      "message" = "LA columns are not present in this data file.",
+      "message" = "This data file does not contain all three local authority columns.",
       "result" = "IGNORE"
     )
   } else {

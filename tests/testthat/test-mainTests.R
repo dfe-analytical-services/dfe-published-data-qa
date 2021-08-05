@@ -105,16 +105,16 @@ test_that("geography_level_completed", {
   expect_equal(testIndividualTest(pathStart, "geography_level_completed"), "FAIL")
 })
 
-# region_col_completed -------------------------------------------------------------------------------------------------------
+# region_col_present -------------------------------------------------------------------------------------------------------
 
-test_that("region_col_completed", {
-  expect_equal(testIndividualTest(pathStart, "region_col_completed"), "FAIL")
+test_that("region_col_present", {
+  expect_equal(testIndividualTest(pathStart, "region_col_present"), "FAIL")
 })
 
-# la_col_completed -------------------------------------------------------------------------------------------------------
+# la_col_present -------------------------------------------------------------------------------------------------------
 
-test_that("la_col_completed", {
-  expect_equal(testIndividualTest(pathStart, "la_col_completed"), "FAIL")
+test_that("la_col_present", {
+  expect_equal(testIndividualTest(pathStart, "la_col_present"), "FAIL")
 })
 
 # overcompleted_cols -------------------------------------------------------------------------------------------------------
