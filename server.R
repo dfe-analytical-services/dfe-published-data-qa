@@ -723,7 +723,7 @@ server <- function(input, output, session) {
             } else {
               shinyFeedback::hideFeedback("geog_parameter")
             }
-            
+
             if (!is.null(input$ind_parameter) && !is.null(input$geog_parameter)) {
               return(showsumstats(input$ind_parameter, input$geog_parameter))
             }
@@ -860,7 +860,8 @@ server <- function(input, output, session) {
               } else {
                 return(get_outliers(input$outlier_indicator_parameter, input$threshold_setting, input$ctime_parameter, input$comptime_parameter))
               }
-            } })
+            }
+          })
 
           # Create and then output the tables
           observeEvent(input$submit_outlier, {
@@ -930,15 +931,15 @@ server <- function(input, output, session) {
                 )
               }
 
-            pf <- meta$mainFile %>%
-              filter(col_type == "Filter") %>%
-              pull(col_name)
+              pf <- meta$mainFile %>%
+                filter(col_type == "Filter") %>%
+                pull(col_name)
 
-            cf <- paste(pf, collapse = ", ")
+              cf <- paste(pf, collapse = ", ")
 
-            ii <- input$geog_indicator_parameter # "number_of_pupils"
+              ii <- input$geog_indicator_parameter # "number_of_pupils"
 
-            eval(parse(text = paste0("data$mainFile %>%
+              eval(parse(text = paste0("data$mainFile %>%
                             mutate(across(all_of('", ii, "'), na_if, 'c')) %>%
                             mutate(across(all_of('", ii, "'), na_if, 'z')) %>%
                             mutate(across(all_of('", ii, "'), na_if, ':')) %>%
@@ -948,7 +949,7 @@ server <- function(input, output, session) {
                             summarise(aggregate_number = sum(", ii, ")) %>%
                             spread(key = geographic_level, value = aggregate_number)")))
             }
-            })
+          })
 
           observeEvent(input$submit_geographies, {
             pf <- meta$mainFile %>%

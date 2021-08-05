@@ -1,7 +1,7 @@
 {
   "output": {
     "table_outlier_list": {
-      "message": "Please select two different time periods for comparison",
+      "message": "",
       "call": "NULL",
       "type": [
         "shiny.silent.error",

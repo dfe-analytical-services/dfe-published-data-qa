@@ -1,7 +1,7 @@
 {
   "output": {
     "table_list": {
-      "message": "Please select at least one indicator\nPlease select at least one geographic level",
+      "message": "",
       "call": "NULL",
       "type": [
         "shiny.silent.error",
