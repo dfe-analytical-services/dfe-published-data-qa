@@ -1,0 +1,15 @@
+time_period,time_identifier,geographic_level,country_code,country_name,region_code,region_name,old_la_code,new_la_code,la_name,school_name,enrolments
+201314,Academic year,National,E92000001,England,,,,,,Total,3627985
+201314,Academic year,Regional,E92000001,England,E12000001,North East,,,,Total,163779
+201314,Academic year,Regional,E92000001,England,E12000002,North West,,,,Total,498856
+201314,Academic year,Regional,E92000001,England,E12000003,Yorkshire and The Humber,,,,Total,372952
+201314,Academic year,Regional,E92000001,England,E12000004,East Midlands,,,,Total,309033
+201314,Academic year,Regional,E92000001,England,E12000005,West Midlands,,,,Total,400495
+201314,Academic year,Regional,E92000001,England,E12000006,East of England,,,,Total,398353
+201314,Academic year,Regional,E92000001,England,E12000008,South East,,,,Total,579631
+201314,Academic year,Regional,E92000001,England,E12000009,South West,,,,Total,330043
+201314,Academic year,Regional,E92000001,England,E13000001,Inner London,,,,Total,199028
+201314,Academic year,Regional,E92000001,England,E13000002,Outer London,,,,Total,375815
+201314,Academic year,Local authority,E92000001,England,E13000001,Inner London,204,E09000012,Hackney,The Boxing Academy (141516),15854
+201314,Academic year,Local authority,E92000001,England,E12000002,North West,342,E08000013,St. Helens,Bleak Hil Primary School (104773),12279
+201314,Academic year,Local authority,E92000001,England,E12000001,North East,390,E08000020,Gateshead,Barley Mow Primary School (108373),12435

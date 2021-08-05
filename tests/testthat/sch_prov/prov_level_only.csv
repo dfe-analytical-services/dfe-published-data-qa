@@ -1,0 +1,8 @@
+time_period,time_identifier,geographic_level,country_code,country_name,provider_name,provider_ukprn,apps_level,ssa,starts,achievements
+201920,Academic year,Provider,E92000001,England,AWE PLC,10008081,Advanced Apprenticeship,"Construction, Planning and the Built Environment",30,~
+201920,Academic year,Provider,E92000001,England,AWE PLC,10008081,Total,Total,80,50
+201920,Academic year,Provider,E92000001,England,AWE PLC,10008081,Higher Apprenticeship,Total,~,~
+201920,Academic year,Provider,E92000001,England,AWE PLC,10008081,Advanced Apprenticeship,Total,80,50
+201920,Academic year,Provider,E92000001,England,CHELSEA AND WESTMINSTER HOSPITAL NHS FOUNDATION TRUST,10030534,Intermediate Apprenticeship,"Health, Public Services and Care",20,~
+201920,Academic year,Provider,E92000001,England,CHELSEA AND WESTMINSTER HOSPITAL NHS FOUNDATION TRUST,10030534,Total,Total,20,~
+201920,Academic year,Provider,E92000001,England,CHELSEA AND WESTMINSTER HOSPITAL NHS FOUNDATION TRUST,10030534,Intermediate Apprenticeship,Total,20,~
