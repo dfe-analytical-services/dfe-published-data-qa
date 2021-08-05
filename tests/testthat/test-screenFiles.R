@@ -66,7 +66,7 @@ test_that("financialHalves", {
   expect_equal(screeningOutput$results %>% filter(result == "FAIL") %>% nrow(), 0)
 })
 
-context("Multiple filter groups")
+context("Filter group edge cases")
 
 test_that("multipleFilterGroupStripped", {
   screeningOutput <- testOther("../../tests/testthat/otherData/multiple_stripped_filter_groups.csv")
@@ -74,7 +74,13 @@ test_that("multipleFilterGroupStripped", {
   expect_equal(screeningOutput$results %>% filter(test == "filter_group_stripped") %>% pull(result) %>% unlist(use.names = FALSE), "FAIL")
 })
 
-context("z location")
+test_that("blankFilterGroupsMeta", {
+  screeningOutput <- testOther("../../tests/testthat/otherData/blankFilterGroups.csv")
+
+  expect_equal(screeningOutput$results %>% filter(result == "FAIL") %>% nrow(), 0)
+})
+
+context("Geography edge cases")
 
 test_that("zLocationCode", {
   screeningOutput <- testOther("../../tests/testthat/otherData/adding_z_locationCode.csv")
@@ -82,23 +88,17 @@ test_that("zLocationCode", {
   expect_equal(screeningOutput$results %>% filter(result == "FAIL") %>% nrow(), 0)
 })
 
-context("LAD within LA")
-
 test_that("ladWithinLA", {
   screeningOutput <- testOther("../../tests/testthat/otherData/lad_within_la.csv")
 
   expect_equal(screeningOutput$results %>% filter(result == "FAIL") %>% nrow(), 0)
 })
 
-context("Blank filter groups")
-
-test_that("blankFilterGroupsMeta", {
-  screeningOutput <- testOther("../../tests/testthat/otherData/blankFilterGroups.csv")
+test_that("multipleLevelsName", {
+  screeningOutput <- testOther("../../tests/testthat/otherData/name_multiple_levels.csv")
 
   expect_equal(screeningOutput$results %>% filter(result == "FAIL") %>% nrow(), 0)
 })
-
-context("Passes na name")
 
 test_that("passes_na_name", {
   screeningOutput <- testOther("../../tests/testthat/otherData/passes_na_name.csv")

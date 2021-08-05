@@ -1344,10 +1344,12 @@ other_geography_duplicates <- function(data) {
 
     lookup_creator <- names %>%
       full_join(codes, by = c("ID", "geographic_level")) %>%
-      select(-ID, -geographic_level) %>%
+      select(-ID) %>%
       distinct() %>%
+      group_by(geographic_level) %>%
       add_count(name, name = "name_n") %>%
-      add_count(code, name = "code_n")
+      add_count(code, name = "code_n") %>%
+      ungroup()
 
     multi_count_name <- lookup_creator %>%
       filter(name_n > 1) %>%
@@ -1415,7 +1417,7 @@ other_geography_code_duplicates <- function(data) {
 
     lookup_creator <- names %>%
       full_join(codes, by = c("ID", "geographic_level")) %>%
-      select(-ID, -geographic_level) %>%
+      select(-c(ID, geographic_level)) %>%
       distinct() %>%
       add_count(name, name = "name_n") %>%
       add_count(code, name = "code_n")
