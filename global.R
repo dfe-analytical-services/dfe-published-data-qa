@@ -59,7 +59,6 @@ tidy_code_function <- function() {
   return(script_changes)
 }
 
-
 # Function scripts ---------------------------------------------------------------------------------
 
 source("R/knownVariables.r", encoding = "UTF-8")
@@ -181,6 +180,23 @@ ancillary_box <- function() {
         "The data file only includes geographic levels that are going to be ignored by EES, see our  ",
         a(href = "https://rsconnect/rsc/stats-production-guidance/ees.html#Ancillary_file_uploads", "guidance on uploading ancillary files", target = "_blank"),
         " for more information on how to upload as an ancillary file instead of via the normal data route."
+      )
+    )
+  )
+}
+
+info_results_box <- function(message, table) {
+  div(
+    div(
+      class = "panel panel-info",
+      div(
+        class = "panel-heading",
+        style = "color: white;font-size: 18px;font-style: bold; ", # background-color: #e87421;
+        textOutput(message)
+      ),
+      div(
+        class = "panel-body",
+        tableOutput(table)
       )
     )
   )

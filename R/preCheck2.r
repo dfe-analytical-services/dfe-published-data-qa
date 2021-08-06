@@ -59,7 +59,7 @@ time_identifier_mix <- function(data) {
 # Do we have the right columns for the geographic level
 
 geography_level_present <- function(data) {
-  if (all(data$geographic_level == "National")) {
+  if (all(data$geographic_level == geography_matrix[1, 1])) {
     output <- list(
       "message" = "There is only National level data in the file.",
       "result" = "IGNORE"
@@ -74,7 +74,7 @@ geography_level_present <- function(data) {
     }
 
     # filter out the non table tool rows / cols from geography matrix
-    geography_present <- geography_matrix[1:12, 1:4]
+    geography_present <- geography_matrix[1:14, ]
 
     missing_cols <- unlist(apply(geography_present, 1, expected_cols)) %>%
       .[!is.na(.)] %>%
@@ -146,14 +146,21 @@ data_variable_spaces <- function(data) {
 
 ob_unit_meta <- function(meta) {
   ob_unit_meta_check <- function(i) {
-    if (i %in% meta$col_name) {
+    if (i %in% c(meta$col_name, meta$filter_grouping_column)) {
       return("FAIL")
     } else {
       return("PASS")
     }
   }
 
-  pre_result <- stack(sapply(acceptable_observational_units, ob_unit_meta_check))
+  acceptable_ob_units_sch_prov_filter <- acceptable_observational_units[!acceptable_observational_units %in% c(geography_matrix[13, 3], geography_matrix[14, 3])]
+
+  if (nrow(meta %>% filter(col_type == "Filter")) == 1) {
+    # We could consider adding more detail around this check for if it fails because the data has provider_name or school_name mixed with other filters
+    pre_result <- stack(sapply(acceptable_ob_units_sch_prov_filter, ob_unit_meta_check))
+  } else {
+    pre_result <- stack(sapply(acceptable_observational_units, ob_unit_meta_check))
+  }
 
   if (all(pre_result$values == "PASS")) {
     output <- list(

@@ -1,0 +1,14 @@
+time_period,time_identifier,geographic_level,country_code,country_name,region_name,old_la_code,new_la_code,la_name,school_phase,school_type,num_schools,enrolments,sess_overall_percent,sess_authorised_percent,sess_unauthorised_percent,enrolments_pa_10_exact,enrolments_pa_10_exact_percent
+201718,Academic year,Local authority,E92000001,England,Inner London,204,E09000012,Hackney,Combined,State-funded primary and secondary,74,28313,3.74661,2.6291,1.11751,2626,9.27489
+201718,Academic year,Local authority,E92000001,England,Inner London,204,E09000012,Hackney,Individual,State-funded primary,58,16215,3.36691,2.39498,0.97193,1311,8.08511
+201718,Academic year,Local authority,E92000001,England,Inner London,204,E09000012,Hackney,Individual,State-funded secondary,16,12098,4.26132,2.94646,1.31486,1315,10.86957
+201718,Academic year,Local authority,E92000001,England,Inner London,208,E09000022,Lambeth,Combined,State-funded primary and secondary,78,30492,3.96082,2.6899,1.27092,3076,10.08789
+201718,Academic year,Local authority,E92000001,England,Inner London,208,E09000022,Lambeth,Individual,State-funded primary,60,17974,3.63709,2.46321,1.17388,1605,8.92956
+201718,Academic year,Local authority,E92000001,England,Inner London,208,E09000022,Lambeth,Individual,State-funded secondary,18,12518,4.44005,3.02546,1.41459,1471,11.75108
+201718,Academic year,Local authority,E92000001,England,Outer London,303,E09000004,Bexley,Combined,State-funded primary and secondary,73,36195,4.05055,3.0241,1.02645,3643,10.06493
+201718,Academic year,Local authority,E92000001,England,Outer London,303,E09000004,Bexley,Individual,State-funded primary,57,18927,3.61617,2.69105,0.92512,1627,8.59619
+201718,Academic year,Local authority,E92000001,England,Outer London,303,E09000004,Bexley,Individual,State-funded secondary,16,17268,4.53415,3.39488,1.13926,2016,11.67477
+201718,Academic year,Local authority,E92000001,England,Outer London,310,E09000015,Harrow,Combined,State-funded primary and secondary,55,31309,3.73945,3.02676,0.71269,2702,8.63011
+201718,Academic year,Local authority,E92000001,England,Outer London,310,E09000015,Harrow,Individual,State-funded primary,42,18680,3.5151,2.90583,0.60927,1500,8.02998
+201718,Academic year,Local authority,E92000001,England,Outer London,310,E09000015,Harrow,Individual,State-funded secondary,13,12629,4.07819,3.20936,0.86883,1202,9.51778
+201718,Academic year,Local authority,E92000001,England,Outer London,317,E09000026,Redbridge,Combined,State-funded primary and secondary,71,45729,3.93118,2.84067,1.09051,4447,9.72468

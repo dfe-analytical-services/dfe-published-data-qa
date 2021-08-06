@@ -14,7 +14,6 @@ test_that("variable_start_letter", {
   expect_equal(testIndividualTest(pathStart, "variable_snake_case"), "ADVISORY") # intentionally sharing test data with the above test
 })
 
-
 # duplicate_rows -------------------------------------------------------------------------------------------------------
 
 test_that("duplicate_rows", {
@@ -105,10 +104,16 @@ test_that("geography_level_completed", {
   expect_equal(testIndividualTest(pathStart, "geography_level_completed"), "FAIL")
 })
 
-# region_col_completed -------------------------------------------------------------------------------------------------------
+# region_col_present -------------------------------------------------------------------------------------------------------
 
-test_that("region_col_completed", {
-  expect_equal(testIndividualTest(pathStart, "region_col_completed"), "FAIL")
+test_that("region_col_present", {
+  expect_equal(testIndividualTest(pathStart, "region_col_present"), "FAIL")
+})
+
+# la_col_present -------------------------------------------------------------------------------------------------------
+
+test_that("la_col_present", {
+  expect_equal(testIndividualTest(pathStart, "la_col_present"), "FAIL")
 })
 
 # overcompleted_cols -------------------------------------------------------------------------------------------------------
@@ -117,10 +122,10 @@ test_that("overcompleted_cols", {
   expect_equal(testIndividualTest(pathStart, "overcompleted_cols"), "FAIL")
 })
 
-# not_table_tool -------------------------------------------------------------------------------------------------------
+# ignored_rows -------------------------------------------------------------------------------------------------------
 
-test_that("not_table_tool", {
-  expect_equal(testIndividualTest(pathStart, "not_table_tool"), "ANCILLARY")
+test_that("ignored_rows", {
+  expect_equal(testIndividualTest(pathStart, "ignored_rows"), "PASS WITH NOTE")
 })
 
 # la_combinations -------------------------------------------------------------------------------------------------------
@@ -141,29 +146,22 @@ test_that("country_combinations", {
   expect_equal(testIndividualTest(pathStart, "country_combinations"), "FAIL")
 })
 
-# school_urn_duplicates -------------------------------------------------------------------------------------------------------
-
-# test_that("school_urn_duplicates", {
-#   expect_equal(testIndividualTest(pathStart, "school_urn_duplicates"), "FAIL")
-# })
-
-# school_laestab_duplicates -------------------------------------------------------------------------------------------------------
-
-# test_that("school_laestab_duplicates", {
-#   expect_equal(testIndividualTest(pathStart, "school_laestab_duplicates"), "FAIL")
-# })
-
 # other_geography_duplicates -------------------------------------------------------------------------------------------------------
 
 test_that("other_geography_duplicates", {
   expect_equal(testIndividualTest(pathStart, "other_geography_duplicates"), "FAIL")
 })
 
-
 # other_geography_code_duplicates -------------------------------------------------------------------------------------------------------
 
 test_that("other_geography_duplicates", {
   expect_equal(testIndividualTest(pathStart, "other_geography_code_duplicates"), "FAIL")
+})
+
+# sch_prov_duplicates -------------------------------------------------------------------------------------------------------
+
+test_that("sch_prov_duplicates", {
+  expect_equal(testIndividualTest(pathStart, "sch_prov_duplicates"), "FAIL")
 })
 
 # na_geography -------------------------------------------------------------------------------------------------------
@@ -177,7 +175,6 @@ test_that("na_geography", {
 test_that("na_geography_code", {
   expect_equal(testIndividualTest(pathStart, "na_geography_code"), "FAIL")
 })
-
 
 # col_name_duplicate -------------------------------------------------------------------------------------------------------
 

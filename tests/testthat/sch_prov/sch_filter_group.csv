@@ -1,0 +1,18 @@
+time_period,time_identifier,geographic_level,country_code,country_name,region_code,region_name,old_la_code,new_la_code,la_name,school_name,colour,enrolments
+201314,Academic year,National,E92000001,England,,,,,,Total,Orange,3627985
+201314,Academic year,Regional,E92000001,England,E12000001,North East,,,,Total,Orange,163779
+201314,Academic year,Regional,E92000001,England,E12000002,North West,,,,Total,Orange,498856
+201314,Academic year,Regional,E92000001,England,E12000003,Yorkshire and The Humber,,,,Total,Orange,372952
+201314,Academic year,Regional,E92000001,England,E12000004,East Midlands,,,,Total,Orange,309033
+201314,Academic year,Regional,E92000001,England,E12000005,West Midlands,,,,Total,Orange,400495
+201314,Academic year,Regional,E92000001,England,E12000006,East of England,,,,Total,Orange,398353
+201314,Academic year,Regional,E92000001,England,E12000008,South East,,,,Total,Orange,579631
+201314,Academic year,Regional,E92000001,England,E12000009,South West,,,,Total,Orange,330043
+201314,Academic year,Regional,E92000001,England,E13000001,Inner London,,,,Total,Orange,199028
+201314,Academic year,Regional,E92000001,England,E13000002,Outer London,,,,Total,Orange,375815
+201314,Academic year,Local authority,E92000001,England,E13000001,Inner London,204,E09000012,Hackney,The Boxing Academy (141516),Orange,15854
+201314,Academic year,Local authority,E92000001,England,E12000002,North West,342,E08000013,St. Helens,Bleak Hil Primary School (104773),Red,12279
+201314,Academic year,Local authority,E92000001,England,E12000001,North East,390,E08000020,Gateshead,Barley Mow Primary School (108373),Blue,12435
+201314,Academic year,Local authority,E92000001,England,E13000001,Inner London,204,E09000012,Hackney,The Boxing Academy (141516),Green,15854
+201314,Academic year,Local authority,E92000001,England,E12000002,North West,342,E08000013,St. Helens,Bleak Hil Primary School (104773),Blue,12279
+201314,Academic year,Local authority,E92000001,England,E12000001,North East,390,E08000020,Gateshead,Barley Mow Primary School (108373),Red,12435

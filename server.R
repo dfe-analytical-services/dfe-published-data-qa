@@ -239,10 +239,14 @@ server <- function(input, output, session) {
           filter(result == "ANCILLARY") %>%
           nrow()
 
-        combined_tests <- advisory_tests + ancillary_tests
+        info_tests <- all_results %>%
+          filter(result == "PASS WITH NOTE") %>%
+          nrow()
+
+        combined_tests <- advisory_tests + ancillary_tests + info_tests
 
         passed_tests <- all_results %>%
-          filter(result == "PASS") %>%
+          filter(result %in% c("PASS", "PASS WITH NOTE")) %>%
           nrow()
 
         leftover_tests <- numberActiveTests - run_tests
@@ -277,6 +281,10 @@ server <- function(input, output, session) {
           summarise_stats(advisory_tests, "with recommendations")
         })
 
+        output$num_info_tests <- renderText({
+          summarise_stats(info_tests, "with information to note")
+        })
+
         output$all_tests <- renderText({
           paste0("Full breakdown of the ", run_tests, " tests that were ran against the files")
         })
@@ -308,6 +316,14 @@ server <- function(input, output, session) {
           include.colnames = FALSE
         )
 
+        output$table_info_tests <- renderTable(
+          {
+            filter(all_results, result == "PASS WITH NOTE") %>% select(message, result)
+          },
+          sanitize.text.function = function(x) x,
+          include.colnames = FALSE
+        )
+
         # UI blocks (result dependent) ---------------------------------------------------------------------------------
 
         if (failed_tests != 0) {
@@ -316,12 +332,6 @@ server <- function(input, output, session) {
               message = "num_failed_tests",
               table = "table_failed_tests"
             )
-          })
-        }
-
-        if (failed_tests == 0) {
-          output$passed_box <- renderUI({
-            pass_results_box()
           })
         }
 
@@ -392,11 +402,11 @@ server <- function(input, output, session) {
           })
         }
 
-        if (advisory_tests != 0) {
-          output$advisory_box <- renderUI({
-            advisory_results_box(
-              message = "num_advisory_tests",
-              table = "table_advisory_tests"
+        if (info_tests != 0) {
+          output$info_box <- renderUI({
+            info_results_box(
+              message = "num_info_tests",
+              table = "table_info_tests"
             )
           })
         }
@@ -697,12 +707,26 @@ server <- function(input, output, session) {
 
           # create a list of tables - with one for each indicator summary
           theList <- eventReactive(input$submit, {
-            validate(
-              need(input$ind_parameter != "", "Please select at least one indicator"),
-              need(input$geog_parameter != "", "Please select at least one geographic level")
-            )
+            if (is.null(input$ind_parameter)) {
+              shinyFeedback::showFeedbackDanger(
+                inputId = "ind_parameter",
+                text = "At least one indicator must be selected"
+              )
+            } else {
+              shinyFeedback::hideFeedback("ind_parameter")
+            }
+            if (is.null(input$geog_parameter)) {
+              shinyFeedback::showFeedbackDanger(
+                inputId = "geog_parameter",
+                text = "At least one geographic level must be selected"
+              )
+            } else {
+              shinyFeedback::hideFeedback("geog_parameter")
+            }
 
-            return(showsumstats(input$ind_parameter, input$geog_parameter))
+            if (!is.null(input$ind_parameter) && !is.null(input$geog_parameter)) {
+              return(showsumstats(input$ind_parameter, input$geog_parameter))
+            }
           })
 
           # Create and then output the tables
@@ -821,12 +845,22 @@ server <- function(input, output, session) {
 
           # create a list of tables - with one for each indicator summary
           theOutlierList <- eventReactive(input$submit_outlier, {
-            validate(
-              need(input$outlier_indicator_parameter != "", "Please select at least one indicator"),
-              need(input$ctime_parameter != input$comptime_parameter, "Please select two different time periods for comparison")
-            )
-
-            return(get_outliers(input$outlier_indicator_parameter, input$threshold_setting, input$ctime_parameter, input$comptime_parameter))
+            if (is.null(input$outlier_indicator_parameter)) {
+              shinyFeedback::showFeedbackDanger(
+                inputId = "outlier_indicator_parameter",
+                text = "At least one indicator must be selected"
+              )
+            } else {
+              shinyFeedback::hideFeedback("outlier_indicator_parameter")
+              if (input$ctime_parameter == input$comptime_parameter) {
+                shinyWidgets::show_alert(
+                  title = "No comparison possible",
+                  text = "Please select two different time periods for comparison."
+                )
+              } else {
+                return(get_outliers(input$outlier_indicator_parameter, input$threshold_setting, input$ctime_parameter, input$comptime_parameter))
+              }
+            }
           })
 
           # Create and then output the tables
@@ -883,20 +917,29 @@ server <- function(input, output, session) {
           })
 
           data_geog <- eventReactive(input$submit_geographies, {
-            validate(
-              need(input$geog_indicator_parameter != "", "Please select an indicator"),
-              need(!any(grepl("-", names(data$mainFile))), "You have at least one hyphen in your variable names, you need to remove all hyphens from variable names to use this part of the app.")
-            )
+            if (input$geog_indicator_parameter == "") {
+              shinyFeedback::showFeedbackDanger(
+                inputId = "geog_indicator_parameter",
+                text = "An indicator must be selected"
+              )
+            } else {
+              shinyFeedback::hideFeedback("geog_indicator_parameter") # would rather this was reactive, but can't get it to work other than on the click of the button
+              if (any(grepl("-", names(data$mainFile)))) {
+                shinyWidgets::show_alert(
+                  title = "Hyphen found in variable name",
+                  text = "You have at least one hyphen in your variable names, you need to remove all hyphens from variable names to use this part of the app."
+                )
+              }
 
-            pf <- meta$mainFile %>%
-              filter(col_type == "Filter") %>%
-              pull(col_name)
+              pf <- meta$mainFile %>%
+                filter(col_type == "Filter") %>%
+                pull(col_name)
 
-            cf <- paste(pf, collapse = ", ")
+              cf <- paste(pf, collapse = ", ")
 
-            ii <- input$geog_indicator_parameter # "number_of_pupils"
+              ii <- input$geog_indicator_parameter # "number_of_pupils"
 
-            eval(parse(text = paste0("data$mainFile %>%
+              eval(parse(text = paste0("data$mainFile %>%
                             mutate(across(all_of('", ii, "'), na_if, 'c')) %>%
                             mutate(across(all_of('", ii, "'), na_if, 'z')) %>%
                             mutate(across(all_of('", ii, "'), na_if, ':')) %>%
@@ -905,6 +948,7 @@ server <- function(input, output, session) {
                             group_by(time_period,geographic_level,", cf, ") %>%
                             summarise(aggregate_number = sum(", ii, ")) %>%
                             spread(key = geographic_level, value = aggregate_number)")))
+            }
           })
 
           observeEvent(input$submit_geographies, {
