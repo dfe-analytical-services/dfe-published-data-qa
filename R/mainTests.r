@@ -29,6 +29,7 @@ mainTests <- function(data_character, meta_character, datafile, metafile) {
     country_combinations(datafile), # active test
     other_geography_duplicates(datafile), # active test
     other_geography_code_duplicates(datafile), # active test
+    sch_prov_duplicates(datafile), # active test
     na_geography(datafile), # active test
     na_geography_code(datafile), # active test
     col_name_duplicate(metafile), # active test
@@ -1417,10 +1418,12 @@ other_geography_code_duplicates <- function(data) {
 
     lookup_creator <- names %>%
       full_join(codes, by = c("ID", "geographic_level")) %>%
-      select(-c(ID, geographic_level)) %>%
+      select(-c(ID)) %>%
       distinct() %>%
+      group_by(geographic_level) %>%
       add_count(name, name = "name_n") %>%
-      add_count(code, name = "code_n")
+      add_count(code, name = "code_n") %>%
+      ungroup()
 
     multi_count_code <- lookup_creator %>%
       filter(code_n > 1) %>%
@@ -1446,6 +1449,77 @@ other_geography_code_duplicates <- function(data) {
           output <- list(
             "message" = paste0("The following geography codes have multiple assigned geographies: ", paste0(multi_count_code, collapse = ", "), ".
                              <br> - Each geography code should have only one assigned geography."),
+            "result" = "FAIL"
+          )
+        }
+      }
+    }
+  }
+  return(output)
+}
+
+# sch_prov_duplicates  ----------------------------------------
+# check that there is a 1:1 relationship between geography names and codes
+
+sch_prov_duplicates <- function(data) {
+  if (!"School" %in% unique(data$geographic_level) && !"Provider" %in% unique(data$geographic_level)) {
+    output <- list(
+      "message" = "School or provider geography data is not present in this data file.",
+      "result" = "IGNORE"
+    )
+  } else {
+    geog_data <- data %>%
+      select(any_of(c(
+        "geographic_level", geography_matrix[13:14, 2:3]
+      ))) %>%
+      distinct() %>%
+      mutate(ID = 1:n())
+
+    names <- geog_data %>%
+      select(ID, geographic_level, contains("name")) %>%
+      mutate_if(is.numeric, as.character) %>%
+      melt(id.vars = c("ID", "geographic_level"), na.rm = TRUE) %>%
+      select(ID, geographic_level, name = value)
+
+    codes <- geog_data %>%
+      select(ID, geographic_level, !contains("name")) %>%
+      mutate_if(is.numeric, as.character) %>%
+      melt(id.vars = c("ID", "geographic_level"), na.rm = TRUE) %>%
+      select(ID, geographic_level, code = value)
+
+    lookup_creator <- names %>%
+      full_join(codes, by = c("ID", "geographic_level")) %>%
+      select(-c(ID)) %>%
+      distinct() %>%
+      group_by(geographic_level) %>%
+      add_count(name, name = "name_n") %>%
+      add_count(code, name = "code_n") %>%
+      ungroup()
+
+    multi_count_code <- lookup_creator %>%
+      filter(code_n > 1) %>%
+      mutate(combo = paste0(code, " - ", code_n, " different names")) %>%
+      select(combo) %>%
+      distinct() %>%
+      pull()
+
+    if (length(multi_count_code) == 0) {
+      output <- list(
+        "message" = "Every geography code has only one assigned name.",
+        "result" = "PASS"
+      )
+    } else {
+      if (length(multi_count_code) == 1) {
+        output <- list(
+          "message" = paste0("The following school or provider code has multiple assigned names: ", paste0(multi_count_code), ". 
+                             <br> - We are working on a fix in EES, though for the time being this will cause problems, please contact us if this is an issue."),
+          "result" = "FAIL"
+        )
+      } else {
+        if (length(multi_count_code) > 1) {
+          output <- list(
+            "message" = paste0("The following school or provider codes have multiple assigned names: ", paste0(multi_count_code, collapse = ", "), ".
+                              <br> - We are working on a fix in EES, though for the time being this will cause problems, please contact us if this is an issue."),
             "result" = "FAIL"
           )
         }
