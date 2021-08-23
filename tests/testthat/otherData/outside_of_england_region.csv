@@ -1,0 +1,23 @@
+﻿time_period,time_identifier,geographic_level,country_code,country_name,region_code,region_name,school_phase,num_schools,enrolments,sess_overall_percent,sess_authorised_percent,sess_unauthorised_percent,enrolments_pa_10_exact,enrolments_pa_10_exact_percent
+201718,Academic year,National,E92000001,England,,,Total,20121,6835059,4.20821,3.01996,1.18824,731047,10.69555
+201718,Academic year,National,E92000001,England,,,Individual,3382,2949285,4.89899,3.45364,1.44535,373305,12.65747
+201718,Academic year,Regional,E92000001,England,z,Outside of England and unknown,Combined,1033,317616,4.62038,3.12503,1.49536,39300,12.37343
+201718,Academic year,Regional,E92000001,England,z,Outside of England and unknown,Individual,858,175079,3.90145,2.7663,1.13516,18073,10.32277
+201718,Academic year,Regional,E92000001,England,E12000002,North West,Combined,2905,931181,4.19093,2.89117,1.29976,99903,10.72863
+201718,Academic year,Regional,E92000001,England,E12000002,North West,Individual,462,399189,4.91411,3.31328,1.60083,50877,12.74509
+201718,Academic year,Regional,E92000001,England,E12000003,Yorkshire and The Humber,Combined,2088,693768,4.45385,2.93793,1.51592,82336,11.86794
+201718,Academic year,Regional,E92000001,England,E12000003,Yorkshire and The Humber,Individual,317,298801,5.26744,3.32858,1.93886,41997,14.05517
+201718,Academic year,Regional,E92000001,England,E12000004,East Midlands,Combined,1921,592559,4.15794,3.00161,1.15633,62888,10.61295
+201718,Academic year,Regional,E92000001,England,E12000004,East Midlands,Individual,288,254494,4.85183,3.45806,1.39377,31863,12.52014
+201718,Academic year,Regional,E92000001,England,E12000005,West Midlands,Combined,2185,767407,4.20781,2.97631,1.2315,82604,10.76404
+201718,Academic year,Regional,E92000001,England,E12000005,West Midlands,Individual,415,337208,4.82122,3.39174,1.42947,42257,12.53143
+201718,Academic year,Regional,E92000001,England,E12000006,East of England,Combined,2370,766161,4.18822,3.15333,1.03489,80416,10.49597
+201718,Academic year,Regional,E92000001,England,E12000006,East of England,Individual,382,331375,4.7813,3.57655,1.20475,40100,12.10109
+201718,Academic year,Regional,E92000001,England,E12000008,South East,Combined,3097,1081715,4.14945,3.12358,1.02586,111669,10.32333
+201718,Academic year,Regional,E92000001,England,E12000008,South East,Individual,504,460609,4.93607,3.65379,1.28227,58438,12.68712
+201718,Academic year,Regional,E92000001,England,E12000009,South West,Combined,2210,637090,4.39996,3.37439,1.02557,70819,11.11601
+201718,Academic year,Regional,E92000001,England,E12000009,South West,Individual,339,280443,5.21712,3.96038,1.25674,38191,13.6181
+201718,Academic year,Regional,E92000001,England,E13000001,Inner London,Combined,886,353789,3.93532,2.72482,1.2105,34850,9.8505
+201718,Academic year,Regional,E92000001,England,E13000001,Inner London,Individual,179,150394,4.32174,2.9484,1.37334,16210,10.77836
+201718,Academic year,Regional,E92000001,England,E13000002,Outer London,Combined,1426,693773,3.90748,2.81189,1.09559,66262,9.55096
+201718,Academic year,Regional,E92000001,England,E13000002,Outer London,Individual,321,294235,4.38667,3.10528,1.28139,32145,10.92494
