@@ -108,7 +108,7 @@ test_that("passes_na_name", {
 
 test_that("outside_of_england_region", {
   screeningOutput <- testOther("../../tests/testthat/otherData/outside_of_england_region.csv")
-  
+
   expect_equal(screeningOutput$results %>% filter(result == "FAIL") %>% nrow(), 0)
 })
 
