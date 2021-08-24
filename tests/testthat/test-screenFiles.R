@@ -106,6 +106,12 @@ test_that("passes_na_name", {
   expect_equal(screeningOutput$results %>% filter(result == "FAIL") %>% nrow(), 0)
 })
 
+test_that("outside_of_england_region", {
+  screeningOutput <- testOther("../../tests/testthat/otherData/outside_of_england_region.csv")
+
+  expect_equal(screeningOutput$results %>% filter(result == "FAIL") %>% nrow(), 0)
+})
+
 context("School and provider scenarios")
 
 test_that("prov_level_only", {
