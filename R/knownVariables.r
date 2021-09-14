@@ -80,4 +80,4 @@ col_to_level_lookup <- rbind(
 ) %>%
   filter(!is.na(cols))
 
-acceptable_indicatorunits <- c( "%", "pp", "£", "£m")
+acceptable_indicatorunits <- c("%", "pp", "£", "£m")
