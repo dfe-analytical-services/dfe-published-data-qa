@@ -112,6 +112,13 @@ test_that("outside_of_england_region", {
   expect_equal(screeningOutput$results %>% filter(result == "FAIL") %>% nrow(), 0)
 })
 
+test_that("regional_blanks", {
+  screeningOutput <- testOther("../../tests/testthat/otherData/regional_blanks.csv")
+  
+  expect_equal(screeningOutput$results %>% filter(test == "region_combinations") %>% pull(result) %>% unlist(use.names = FALSE), "FAIL")
+  expect_equal(screeningOutput$results %>% filter(result == "FAIL") %>% nrow() > 0, TRUE)
+})
+
 context("School and provider scenarios")
 
 test_that("prov_level_only", {

@@ -1204,18 +1204,18 @@ la_combinations <- function(data) {
 
     if (length(invalid_values) == 0) {
       output <- list(
-        "message" = "All old_la_code, new_la_code and la_name comninations are valid.",
+        "message" = "All old_la_code, new_la_code and la_name combinations are valid.",
         "result" = "PASS"
       )
     } else {
       if (length(invalid_values) == 1) {
         output <- list(
-          "message" = paste0("The following old_la_code, new_la_code and la_name combination is invalid: '", paste0(invalid_values), "'. <br> - We do not expect any combinations outside of the <a href='https://github.com/dfe-analytical-services/dfe-published-data-qa/blob/master/data/las.csv' target='_blank'>standard geographies</a> (case sensitive), you can use our [guidance link TBC] for help creating local authority level data."),
+          "message" = paste0("The following old_la_code, new_la_code and la_name combination is invalid: '", paste0(invalid_values), "'. <br> - We do not expect any combinations outside of the <a href='https://github.com/dfe-analytical-services/dfe-published-data-qa/blob/master/data/las.csv' target='_blank'>standard geographies lookup</a> (case sensitive), please check your name and code combinations against this lookup."),
           "result" = "FAIL"
         )
       } else {
         output <- list(
-          "message" = paste0("The following old_la_code, new_la_code and la_name combinations are invalid: '", paste0(invalid_values, collapse = "', '"), "'. <br> - We do not expect any combinations outside of the <a href='https://github.com/dfe-analytical-services/dfe-published-data-qa/blob/master/data/las.csv' target='_blank'>standard geographies</a> (case sensitive), you can use our [guidance link TBC] for help creating local authority level data."),
+          "message" = paste0("The following old_la_code, new_la_code and la_name combinations are invalid: '", paste0(invalid_values, collapse = "', '"), "'. <br> - We do not expect any combinations outside of the <a href='https://github.com/dfe-analytical-services/dfe-published-data-qa/blob/master/data/las.csv' target='_blank'>standard geographies lookup</a> (case sensitive), please check your name and code combinations against this lookup."),
           "result" = "FAIL"
         )
       }
@@ -1236,13 +1236,25 @@ region_combinations <- function(data) {
       "result" = "IGNORE"
     )
   } else {
-    invalid_values <- data %>%
-      select(geography_matrix[2, 2], geography_matrix[2, 3]) %>%
-      unique() %>%
-      filter(!is.na(.)) %>%
-      filter(region_code != "") %>%
-      filter(region_code != ":") %>%
-      filter(region_code != "z") %>%
+    invalid_values <- rbind(
+      # Not allowing blanks for regional rows
+      data %>%
+        filter(geographic_level == geography_matrix[2, 1]) %>% 
+        select(geography_matrix[2, 2], geography_matrix[2, 3]) %>%
+        unique() %>%
+        filter(!is.na(.)) %>%
+        filter(region_code != ":") %>%
+        filter(region_code != "z"),
+      
+      data %>%
+        filter(geographic_level != geography_matrix[2, 1]) %>% 
+        select(geography_matrix[2, 2], geography_matrix[2, 3]) %>%
+        unique() %>%
+        filter(!is.na(.)) %>%
+        filter(region_code != "") %>%
+        filter(region_code != ":") %>%
+        filter(region_code != "z")
+      ) %>%
       mutate(combo = paste(region_code, region_name)) %>%
       pull(combo) %>%
       .[!(. %in% expected_region_combinations)]
@@ -1255,12 +1267,12 @@ region_combinations <- function(data) {
     } else {
       if (length(invalid_values) == 1) {
         output <- list(
-          "message" = paste0("The following region_code and region_name combination is invalid: '", paste0(invalid_values), "'. <br> - We do not expect any combinations outside of the <a href='https://github.com/dfe-analytical-services/dfe-published-data-qa/blob/master/data/regions.csv' target='_blank'>standard geographies</a> (case sensitive), you can use our [guidance link TBC] for help creating region level data."),
+          "message" = paste0("The following region_code and region_name combination is invalid: '", paste0(invalid_values), "'. <br> - We do not expect any combinations outside of the <a href='https://github.com/dfe-analytical-services/dfe-published-data-qa/blob/master/data/regions.csv' target='_blank'>standard geographies lookup</a> (case sensitive), please check your name and code combinations against this lookup."),
           "result" = "FAIL"
         )
       } else {
         output <- list(
-          "message" = paste0("The following region_code / region_name combinations are invalid: '", paste0(invalid_values, collapse = "', '"), "'. <br> - We do not expect any combinations outside of the <a href='https://github.com/dfe-analytical-services/dfe-published-data-qa/blob/master/data/regions.csv' target='_blank'>standard geographies</a> (case sensitive), you can use our [guidance link TBC] for help creating region level data."),
+          "message" = paste0("The following region_code / region_name combinations are invalid: '", paste0(invalid_values, collapse = "', '"), "'. <br> - We do not expect any combinations outside of the <a href='https://github.com/dfe-analytical-services/dfe-published-data-qa/blob/master/data/regions.csv' target='_blank'>standard geographies lookup</a> (case sensitive), please check your name and code combinations against this lookup."),
           "result" = "FAIL"
         )
       }
@@ -1297,12 +1309,12 @@ country_combinations <- function(data) {
     } else {
       if (length(invalid_values) == 1) {
         output <- list(
-          "message" = paste0("The following country_code / country_name combination is invalid: '", paste0(invalid_values), "'. <br> - We do not expect any combinations outside of the <a href='https://github.com/dfe-analytical-services/dfe-published-data-qa/blob/master/data/country.csv' target='_blank'>standard geographies</a> (case sensitive), you can use our [guidance link TBC] for help creating country level data."),
+          "message" = paste0("The following country_code / country_name combination is invalid: '", paste0(invalid_values), "'. <br> - We do not expect any combinations outside of the <a href='https://github.com/dfe-analytical-services/dfe-published-data-qa/blob/master/data/country.csv' target='_blank'>standard geographies lookup</a> (case sensitive), please check your name and code combinations against this lookup."),
           "result" = "FAIL"
         )
       } else {
         output <- list(
-          "message" = paste0("The following country_code / country_name combinations are invalid: '", paste0(invalid_values, collapse = "', '"), "'. <br> - We do not expect any combinations outside of the <a href='https://github.com/dfe-analytical-services/dfe-published-data-qa/blob/master/data/country.csv' target='_blank'>standard geographies</a> (case sensitive), you can use our [guidance link TBC] for help creating country level data."),
+          "message" = paste0("The following country_code / country_name combinations are invalid: '", paste0(invalid_values, collapse = "', '"), "'. <br> - We do not expect any combinations outside of the <a href='https://github.com/dfe-analytical-services/dfe-published-data-qa/blob/master/data/country.csv' target='_blank'>standard geographies lookup</a> (case sensitive), please check your name and code combinations against this lookup."),
           "result" = "FAIL"
         )
       }
