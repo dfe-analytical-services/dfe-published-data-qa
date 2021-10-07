@@ -1239,22 +1239,21 @@ region_combinations <- function(data) {
     invalid_values <- rbind(
       # Not allowing blanks for regional rows
       data %>%
-        filter(geographic_level == geography_matrix[2, 1]) %>% 
+        filter(geographic_level == geography_matrix[2, 1]) %>%
         select(geography_matrix[2, 2], geography_matrix[2, 3]) %>%
         unique() %>%
-        filter(!is.na(.)) %>%
-        filter(region_code != ":") %>%
-        filter(region_code != "z"),
-      
+        filter(region_code != ":" && !is.na(region_code)) %>%
+        filter(region_code != "z" && !is.na(region_code)),
+
       data %>%
-        filter(geographic_level != geography_matrix[2, 1]) %>% 
+        filter(geographic_level != geography_matrix[2, 1]) %>%
         select(geography_matrix[2, 2], geography_matrix[2, 3]) %>%
         unique() %>%
         filter(!is.na(.)) %>%
         filter(region_code != "") %>%
         filter(region_code != ":") %>%
         filter(region_code != "z")
-      ) %>%
+    ) %>%
       mutate(combo = paste(region_code, region_name)) %>%
       pull(combo) %>%
       .[!(. %in% expected_region_combinations)]
