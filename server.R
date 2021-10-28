@@ -356,7 +356,17 @@ server <- function(input, output, session) {
         }
 
         # Dynamic trendy-tabs,
-        if (failed_tests == 0 & data$mainFile %>%
+        if(failed_tests >0){
+          shinyjs::hide(selector = c(
+            "#trendy_tabs li a[data-value=previewTab]",
+            "#trendy_tabs li a[data-value=obUnitTab]",
+            "#trendy_tabs li a[data-value=indicatorsTab]",
+            "#trendy_tabs li a[data-value=outliersTab]",
+            "#trendy_tabs li a[data-value=geogTab]"
+          ))
+          
+        }
+        else if (failed_tests == 0 & data$mainFile %>%
           select(geographic_level) %>%
           distinct() %>%
           nrow() > 1) {
@@ -382,15 +392,15 @@ server <- function(input, output, session) {
           shinyjs::hide(selector = c(
             "#trendy_tabs li a[data-value=geogTab]"
           ))
-        } else {
-          shinyjs::hide(selector = c(
-            "#trendy_tabs li a[data-value=previewTab]",
-            "#trendy_tabs li a[data-value=obUnitTab]",
-            "#trendy_tabs li a[data-value=indicatorsTab]",
-            "#trendy_tabs li a[data-value=outliersTab]",
-            "#trendy_tabs li a[data-value=geogTab]"
-          ))
-        }
+        } #else {
+        #   shinyjs::hide(selector = c(
+        #     "#trendy_tabs li a[data-value=previewTab]",
+        #     "#trendy_tabs li a[data-value=obUnitTab]",
+        #     "#trendy_tabs li a[data-value=indicatorsTab]",
+        #     "#trendy_tabs li a[data-value=outliersTab]",
+        #     "#trendy_tabs li a[data-value=geogTab]"
+        #   ))
+        # }
 
 
         if (advisory_tests != 0) {
