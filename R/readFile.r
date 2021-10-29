@@ -1,8 +1,7 @@
 # readFiles --------------------------------------------------
 
 readFile <- function(filePath) {
-  fileSeparator <- capture.output(mainFile <- fread(filePath, encoding = "UTF-8", na.strings = "", verbose = TRUE, strip.white = FALSE)  %>% 
-                                    mutate_if(is.Date,as.character)) %>%
+  fileSeparator <- capture.output(mainFile <- fread(filePath, encoding = "UTF-8", na.strings = "", verbose = TRUE, strip.white = FALSE)) %>%
     .[grepl("sep=.* with", .)] %>%
     sub("with.*$", "", x = .) %>%
     trimws(.) %>%
@@ -12,7 +11,7 @@ readFile <- function(filePath) {
   output <- list(
     "mainFile" = mainFile,
     "fileSeparator" = fileSeparator,
-    "fileCharacter" = fread(filePath, encoding = "UTF-8", colClasses = c("character"), na.strings = NULL) 
+    "fileCharacter" = fread(filePath, encoding = "UTF-8", colClasses = c("character"), na.strings = NULL)
   )
 
   return(output)
