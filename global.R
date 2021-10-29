@@ -7,7 +7,7 @@ options(shiny.maxRequestSize = 500 * 1024^2)
 options(shiny.sanitize.errors = TRUE)
 
 # Library calls ---------------------------------------------------------------------------------
-
+library(lubridate)
 library(shiny)
 library(janitor)
 library(dplyr)
@@ -30,6 +30,7 @@ library(config)
 library(rsconnect)
 library(shinyalert)
 library(shinydisconnect)
+
 
 # activeTestsInFile ---------------------------------------------------------------------------------
 # Extracting the active tests that are run against files

@@ -2072,6 +2072,7 @@ whitespace_filters <- function(data, meta) {
     pull(col_name)
 
   test <- data %>%
+    mutate_if(is.Date, as.character) %>%
     select(all_of(filters), any_of(as.character(geography_matrix[, 2:4]) %>% .[!is.na(.)])) %>%
     mutate_if(is.numeric, as.character) %>%
     pivot_longer(everything(), values_drop_na = TRUE, names_to = "filter", values_to = "filter_label") %>%
