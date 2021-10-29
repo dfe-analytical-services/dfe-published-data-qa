@@ -386,7 +386,7 @@ server <- function(input, output, session) {
           nrow() == 1 &
           data$mainFile %>%
             select(time_identifier) %>%
-            filter(!time_identifier %in% four_digit_identifiers[1:2]) %>%
+            filter(!time_identifier %in% c(six_digit_identifiers[5:7], four_digit_identifiers[1:2])) %>%
             nrow() >= 1
         ) {
           shinyjs::show(selector = c(
@@ -419,7 +419,7 @@ server <- function(input, output, session) {
         # hide yoy changes if data is not split by year
         else if (failed_tests == 0 & data$mainFile %>%
           select(time_identifier) %>%
-          filter(!time_identifier %in% four_digit_identifiers[1:2]) %>%
+          filter(!time_identifier %in% c(six_digit_identifiers[5:7], four_digit_identifiers[1:2])) %>%
           nrow() >= 1) {
           shinyjs::show(selector = c(
             "#trendy_tabs li a[data-value=previewTab]",
