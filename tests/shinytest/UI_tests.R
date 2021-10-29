@@ -160,3 +160,21 @@ app$snapshot(list(output = "geog_agg2"))
 
 app$setInputs(trendy_tabs = "obUnitTab")
 app$snapshot(list(output = c("table_1", "table_2")))
+
+app$setInputs(resetbutton = "click")
+
+# 24 - YYYY-MM-DD dates do not crash the app  -------------------------------------
+app$uploadFile(datafile = "test-data/date_format.csv")
+app$uploadFile(metafile = "test-data/date_format.meta.csv")
+app$setInputs(screenbutton = "click")
+app$snapshot(items = list(output = c("progress_stage", "table_all_tests")))
+
+app$setInputs(resetbutton = "click")
+
+# 25 - Missing geographies do not crash the app  -------------------------------------
+app$uploadFile(datafile = "test-data/data_mandatory_cols.csv")
+app$uploadFile(metafile = "test-data/data_mandatory_cols.meta.csv")
+app$setInputs(screenbutton = "click")
+app$snapshot(items = list(output = c("progress_stage", "table_all_tests")))
+
+app$setInputs(resetbutton = "click")
