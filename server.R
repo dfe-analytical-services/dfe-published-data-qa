@@ -356,6 +356,7 @@ server <- function(input, output, session) {
         }
 
         # Dynamic trendy-tabs,
+        #Hide all QA tabs if any test fails
         if(failed_tests >0){
           shinyjs::hide(selector = c(
             "#trendy_tabs li a[data-value=previewTab]",
@@ -366,6 +367,7 @@ server <- function(input, output, session) {
           ))
           
         }
+        
         else if (failed_tests == 0 & data$mainFile %>%
           select(geographic_level) %>%
           distinct() %>%
@@ -378,6 +380,28 @@ server <- function(input, output, session) {
             "#trendy_tabs li a[data-value=geogTab]"
           ))
         }
+        #Hide geography and YoY tabs if one geog level and data not split by year
+        else if (failed_tests == 0 & data$mainFile %>%
+                 select(geographic_level) %>%
+                 distinct() %>%
+                 nrow() == 1 &
+                 data$mainFile %>%
+                 select(time_identifier) %>%
+                 filter(!time_identifier %in% four_digit_identifiers[1:2]) %>%
+                 nrow() >= 1
+                 ) {
+          shinyjs::show(selector = c(
+            "#trendy_tabs li a[data-value=previewTab]",
+            "#trendy_tabs li a[data-value=obUnitTab]",
+            "#trendy_tabs li a[data-value=indicatorsTab]"
+          ))
+          
+          shinyjs::hide(selector = c(
+            "#trendy_tabs li a[data-value=geogTab]",
+            "#trendy_tabs li a[data-value=outliersTab]"
+          ))
+        } 
+        #Hide geography tab if only one geography level
         else if (failed_tests == 0 & data$mainFile %>%
           select(geographic_level) %>%
           distinct() %>%
@@ -392,7 +416,23 @@ server <- function(input, output, session) {
           shinyjs::hide(selector = c(
             "#trendy_tabs li a[data-value=geogTab]"
           ))
-        } #else {
+        } 
+        #hide yoy changes if data is not split by year
+        else if (failed_tests == 0 & data$mainFile %>%
+                 select(time_identifier) %>%
+                 filter(!time_identifier %in% four_digit_identifiers[1:2]) %>%
+                 nrow() >= 1) {
+          shinyjs::show(selector = c(
+            "#trendy_tabs li a[data-value=previewTab]",
+            "#trendy_tabs li a[data-value=obUnitTab]",
+            "#trendy_tabs li a[data-value=indicatorsTab]",
+            "#trendy_tabs li a[data-value=geogTab]"
+          ))
+          
+          shinyjs::hide(selector = c(
+            "#trendy_tabs li a[data-value=outliersTab]"
+          ))
+        }#else {
         #   shinyjs::hide(selector = c(
         #     "#trendy_tabs li a[data-value=previewTab]",
         #     "#trendy_tabs li a[data-value=obUnitTab]",
