@@ -615,12 +615,12 @@ server <- function(input, output, session) {
 
 
             levelsTable <- function(filter) {
-              if (nrow(filter_groups) > 0) {
+              if (nrow(filter_groups) > 0 & filter %in% filter_groups$col_name) {
                 filter_group <- filter_groups %>%
                   dplyr::filter(col_name == filter) %>%
                   pull(filter_grouping_column)
 
-                return(data$mainFile %>% select(filter_group, filter) %>% distinct() %>% arrange(filter_group, filter))
+                return(data$mainFile %>% select(filter_group, filter) %>% distinct() %>% arrange(!!sym(filter_group), !!sym(filter)))
               }
               else {
                 return(data$mainFile %>% select(filter) %>% distinct() %>% arrange(filter))
