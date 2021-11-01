@@ -655,7 +655,7 @@ server <- function(input, output, session) {
                   style = "bootstrap",
                   class = "table-bordered",
                   options = list(
-                    dom = "t",
+                    dom = "pt",
                     ordering = F,
                     # rowCallback = JS(rowCallback),
                     initComplete = JS(

@@ -267,7 +267,7 @@
         "filter": "none",
         "container": "<table class=\"table table-bordered\">\n  <thead>\n    <tr>\n      <th>school_phase<\/th>\n      <th>school_type<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>",
         "options": {
-          "dom": "t",
+          "dom": "pt",
           "ordering": false,
           "initComplete": "function(settings, json) {\n$(this.api().table().header()).css({'background-color': '#232628', 'color': '#c8c8c8'});\n}",
           "order": [
