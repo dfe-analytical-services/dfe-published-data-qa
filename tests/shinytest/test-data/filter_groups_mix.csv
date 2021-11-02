@@ -1,0 +1,55 @@
+time_period,time_identifier,geographic_level,country_code,country_name,institution_group,institution_type,cohort_level_group,cohort_level,characteristic_group,characteristic,data_type,version,cohort
+201819,Academic year,National,E92000001,England,State-funded mainstream schools & colleges,Total,Level 2,Level 2 approved,Disadvantage Y11 Status and Ethnicity Major,Disadvantaged White,Number of pupils,Revised,21367
+201819,Academic year,National,E92000001,England,State-funded mainstream schools & colleges,Total,Level 3,Level 3 other,Prior Attainment,Prior Attainment KS2 above L4,Number of pupils,Revised,14258
+201819,Academic year,National,E92000001,England,State-funded mainstream schools & colleges,Total,All other qualifications,Level 1 and entry level,Ethnicity Minor,White Irish,Number of pupils,Revised,84
+201819,Academic year,National,E92000001,England,Total,Total,All other qualifications,Level 1 and entry level,Total,Total,Number of pupils,Revised,48216
+201819,Academic year,National,E92000001,England,State-funded mainstream schools & colleges,Total,Level 2,Level 2 other,Disadvantage Y11 Status and Ethnicity Major,Disadvantaged Any other ethnic group,Number of pupils,Revised,162
+201819,Academic year,National,E92000001,England,State-funded mainstream schools & colleges,Total,All other qualifications,Other qualifications,Prior Attainment,Prior Attainment KS2 below L4,Number of pupils,Revised,5226
+201819,Academic year,National,E92000001,England,State-funded mainstream colleges,Total,Level 2,Level 2 approved,Ethnicity Minor,White and Black Caribbean,Number of pupils,Revised,1048
+201819,Academic year,National,E92000001,England,State-funded mainstream colleges,Total,All other qualifications,Other qualifications,Gender,Female,Number of pupils,Revised,11922
+201819,Academic year,National,E92000001,England,State-funded mainstream schools & colleges,Total,All other qualifications,Other qualifications,Ethnicity Minor,White Irish,Number of pupils,Revised,92
+201819,Academic year,National,E92000001,England,State-funded mainstream schools,Total,Level 3,Level 3 approved,Ethnicity Major,Unclassified,Number of pupils,Revised,100
+201819,Academic year,National,E92000001,England,State-funded mainstream colleges,Total,Level 2,Level 2 approved,Ethnicity Minor,Gypsy Roma,Number of pupils,Revised,160
+201819,Academic year,National,E92000001,England,State-funded mainstream colleges,Total,Level 3,Level 3 other,FSM Y11 Status,FSM eligible,Number of pupils,Revised,7311
+201819,Academic year,National,E92000001,England,State-funded mainstream schools & colleges,Total,Level 3,Level 3 approved,Disadvantage Y11 Status and Prior Attainment,Disadvantaged Prior Attainment KS2 above L4,Number of pupils,Revised,15409
+201819,Academic year,National,E92000001,England,State-funded mainstream schools,Other non-selective school,Level 2,Level 2 other,Disadvantage Y11 Status,Disadvantaged,Number of pupils,Revised,1782
+201819,Academic year,National,E92000001,England,State-funded mainstream schools,Academy 16-19 Converter,Level 3,Level 3 other,Total,Total,Number of pupils,Revised,1535
+201819,Academic year,National,E92000001,England,State-funded mainstream schools & colleges,Total,All other qualifications,Other qualifications,Ethnicity Minor,Indian,Number of pupils,Revised,293
+201819,Academic year,National,E92000001,England,State-funded mainstream schools,Other non-selective school,Level 3,Level 3 approved,Disadvantage Y11 Status,Disadvantaged,Number of pupils,Revised,25281
+201819,Academic year,National,E92000001,England,State-funded mainstream colleges,Total,All other qualifications,Level 1 and entry level,Ethnicity Minor,Unclassified,Number of pupils,Revised,4421
+201819,Academic year,National,E92000001,England,State-funded mainstream colleges,Total,Level 2,Level 2 other,Ethnicity Minor,Any other white background,Number of pupils,Revised,459
+201819,Academic year,National,E92000001,England,State-funded mainstream colleges,Total,Level 3,Level 3 other,Ethnicity Minor,White and Asian,Number of pupils,Revised,515
+201819,Academic year,National,E92000001,England,State-funded mainstream schools,Total,All other qualifications,Other qualifications,Ethnicity Minor,White British,Number of pupils,Revised,2929
+201819,Academic year,National,E92000001,England,State-funded mainstream schools,Total,All other qualifications,Other qualifications,FSM Y11 Status,FSM eligible,Number of pupils,Revised,638
+201819,Academic year,National,E92000001,England,State-funded mainstream schools & colleges,Total,Level 2,Level 2 other,Disadvantage Y11 Status and Ethnicity Major,Not Disadvantaged Asian or Asian British,Number of pupils,Revised,841
+201819,Academic year,National,E92000001,England,State-funded mainstream schools,Total,Total,Total,Total,Total,Number of pupils,Revised,211648
+201819,Academic year,National,E92000001,England,Mainstream schools and colleges,Total,Total,Total,Total,Total,Number of pupils,Revised,566439
+201819,Academic year,National,E92000001,England,State-funded mainstream schools,Other non-selective school,Total,Total,Total,Total,Number of pupils,Revised,173089
+201819,Academic year,National,E92000001,England,State-funded mainstream schools,Free 16-19,Total,Total,Total,Total,Number of pupils,Revised,2382
+201819,Academic year,National,E92000001,England,State-funded mainstream colleges,Total,Level 3,Total,Ethnicity Minor,Pakistani,Percentage,Revised,5444
+201819,Academic year,National,E92000001,England,State-funded mainstream schools & colleges,Total,All other qualifications,Total,FSM Y11 Status,FSM not eligible,Percentage,Revised,60661
+201819,Academic year,National,E92000001,England,State-funded mainstream schools & colleges,Total,Level 3,Total,Ethnicity Minor,White and Asian,Percentage,Revised,3903
+201819,Academic year,National,E92000001,England,State-funded mainstream schools & colleges,Total,Level 3,Total,Disadvantage Y11 Status and Ethnicity Major,Not Disadvantaged Unclassified,Percentage,Revised,2085
+201819,Academic year,National,E92000001,England,State-funded mainstream schools & colleges,Total,Level 3,Total,Ethnicity Minor,White British,Percentage,Revised,248475
+201819,Academic year,National,E92000001,England,State-funded mainstream schools & colleges,Total,All other qualifications,Total,Prior Attainment,Prior Attainment KS2 at L4,Percentage,Revised,27990
+201819,Academic year,National,E92000001,England,State-funded mainstream schools & colleges,Total,All other qualifications,Total,Disadvantage Y11 Status and Ethnicity Major,Disadvantaged Asian or Asian British,Percentage,Revised,1810
+201819,Academic year,National,E92000001,England,State-funded mainstream colleges,Total FE sector,Level 3,Total,Total,Total,Percentage,Revised,151669
+201819,Academic year,National,E92000001,England,State-funded mainstream colleges,Total,Level 2,Total,FSM Y11 Status,FSM eligible,Percentage,Revised,14347
+201819,Academic year,National,E92000001,England,State-funded mainstream colleges,Total,Level 2,Total,LLDD Provision,No identified LLDD,Percentage,Revised,72613
+201819,Academic year,National,E92000001,England,State-funded mainstream schools & colleges,Total,All other qualifications,Total,Disadvantage Y11 Status and Gender,Not Disadvantaged Female,Percentage,Revised,16427
+201819,Academic year,National,E92000001,England,State-funded mainstream schools,Academy 16-19 Sponsor Led,Level 2,Total,Total,Total,Percentage,Revised,6
+201819,Academic year,National,E92000001,England,State-funded mainstream colleges,Total,Level 2,Total,FSM Y11 Status,FSM not eligible,Percentage,Revised,79369
+201819,Academic year,National,E92000001,England,State-funded mainstream schools,Total,Level 2,Total,Disadvantage Y11 Status,Disadvantaged,Percentage,Revised,3133
+201819,Academic year,National,E92000001,England,State-funded mainstream colleges,Total,Level 3,Total,Disadvantage Y11 Status,Disadvantaged,Percentage,Revised,31842
+201819,Academic year,National,E92000001,England,State-funded mainstream schools,Total,All other qualifications,Total,Ethnicity Minor,Black Caribbean,Percentage,Revised,72
+201819,Academic year,National,E92000001,England,State-funded mainstream schools,Non-selective school in highly selective area,All other qualifications,Total,Disadvantage Y11 Status,Disadvantaged,Percentage,Revised,164
+201819,Academic year,National,E92000001,England,State-funded mainstream colleges,Total,Level 3,Total,Ethnicity Minor,Any other Black background,Percentage,Revised,1011
+201819,Academic year,National,E92000001,England,State-funded mainstream schools,Free 16-19,All other qualifications,Total,Total,Total,Percentage,Revised,88
+201819,Academic year,National,E92000001,England,State-funded mainstream schools & colleges,Total,Level 3,Total,Ethnicity Minor,White and Black Caribbean,Percentage,Revised,3958
+201819,Academic year,National,E92000001,England,State-funded mainstream schools & colleges,Total,Level 3,Total,Ethnicity Minor,Pakistani,Percentage,Revised,13890
+201819,Academic year,National,E92000001,England,State-funded mainstream schools & colleges,Total,Level 3,Total,Prior Attainment,Prior Attainment KS4 E&M A*-C not achieved,Percentage,Revised,64282
+201819,Academic year,National,E92000001,England,State-funded mainstream schools & colleges,Total,Level 2,Total,Disadvantage Y11 Status and Prior Attainment,Not Disadvantaged Prior Attainment KS2 below L4,Percentage,Revised,18631
+201819,Academic year,National,E92000001,England,State-funded mainstream colleges,Total,Level 2,Total,Ethnicity Minor,Any other white background,Percentage,Revised,4020
+201819,Academic year,National,E92000001,England,State-funded mainstream schools,Total,Level 3,Total,Ethnicity Major,Asian or Asian British,Percentage,Revised,25469
+201819,Academic year,National,E92000001,England,State-funded mainstream schools & colleges,Total,Level 3,Total,Gender,Male,Percentage,Revised,161887
+201819,Academic year,National,E92000001,England,State-funded mainstream schools,University Technical College,Level 2,Total,Total,Total,Percentage,Revised,230

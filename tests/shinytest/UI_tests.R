@@ -178,3 +178,12 @@ app$setInputs(screenbutton = "click")
 app$snapshot(items = list(output = c("progress_stage", "table_all_tests")))
 
 app$setInputs(resetbutton = "click")
+
+# 26 - Mix of filter groups -------------------------------------
+app$uploadFile(datafile = "test-data/data_mandatory_cols.csv")
+app$uploadFile(metafile = "test-data/data_mandatory_cols.meta.csv")
+app$setInputs(screenbutton = "click")
+app$setInputs(trendy_tabs = "obUnitTab")
+app$snapshot(list(output = c("table_1", "table_2", "table_3", "table_4")))
+
+app$setInputs(resetbutton = "click")
