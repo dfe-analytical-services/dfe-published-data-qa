@@ -1,6 +1,6 @@
 # Max file size ---------------------------------------------------------------------------------
 
-options(shiny.maxRequestSize = 500 * 1024^2)
+options(shiny.maxRequestSize = 800 * 1024^2)
 
 # Sanitising error messages (to avoid revealing anything untoward)
 
