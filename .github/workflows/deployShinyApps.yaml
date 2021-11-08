@@ -15,12 +15,15 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - uses: r-lib/actions/setup-r@master
+        with: 
+         r-version: '4.1.1'
       - name: Install Curl
         run: sudo apt install libcurl4-openssl-dev libssl-dev
         
       - name: Cache renv packages
         uses: actions/cache@v1
         with:
+          r-version: '4.1.1'
           path: ${{ env.RENV_PATHS_ROOT }}
           key: ${{ runner.os }}-renv-${{ hashFiles('**/renv.lock') }}
           restore-keys: |
