@@ -119,6 +119,13 @@ test_that("regional_blanks", {
   expect_equal(screeningOutput$results %>% filter(result == "FAIL") %>% nrow() > 0, TRUE)
 })
 
+test_that("multiple_geography_with_LA", {
+  screeningOutput <- testOther("../../tests/testthat/otherData/multiple_geography_with_LA.csv")
+
+  expect_equal(screeningOutput$results %>% filter(result == "FAIL") %>% nrow() == 0, TRUE)
+})
+
+
 context("School and provider scenarios")
 
 test_that("prov_level_only", {

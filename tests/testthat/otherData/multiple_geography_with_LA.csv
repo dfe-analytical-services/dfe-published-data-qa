@@ -1,0 +1,543 @@
+time_period,time_identifier,geographic_level,country_code,country_name,local_enterprise_partnership_code,local_enterprise_partnership_name,english_devolved_area_code,english_devolved_area_name,ethnicity_group,apps_level,age_summary,gender,ssa_t1_desc,starts,achievements
+201617,Academic year,English devolved area,E92000001,England,,,E47000008,Cambridgeshire and Peterborough,Asian/ Asian British,Advanced Apprenticeship,19-24,Female,"Agriculture, Horticulture and Animal Care",~,~
+201617,Academic year,English devolved area,E92000001,England,,,E47000008,Cambridgeshire and Peterborough,Asian/ Asian British,Advanced Apprenticeship,19-24,Female,"Construction, Planning and the Built Environment",~,~
+201617,Academic year,English devolved area,E92000001,England,,,E47000008,Cambridgeshire and Peterborough,Asian/ Asian British,Advanced Apprenticeship,19-24,Female,Education and Training,~,~
+201617,Academic year,English devolved area,E92000001,England,,,E47000008,Cambridgeshire and Peterborough,Asian/ Asian British,Advanced Apprenticeship,19-24,Female,"Business, Administration and Law",10,~
+201617,Academic year,English devolved area,E92000001,England,,,E47000008,Cambridgeshire and Peterborough,Asian/ Asian British,Advanced Apprenticeship,19-24,Female,Total,10,~
+201617,Academic year,English devolved area,E92000001,England,,,E47000008,Cambridgeshire and Peterborough,Asian/ Asian British,Advanced Apprenticeship,19-24,Female,Retail and Commercial Enterprise,~,~
+201617,Academic year,English devolved area,E92000001,England,,,E47000008,Cambridgeshire and Peterborough,Asian/ Asian British,Advanced Apprenticeship,19-24,Female,"Leisure, Travel and Tourism",~,~
+201617,Academic year,English devolved area,E92000001,England,,,E47000008,Cambridgeshire and Peterborough,Asian/ Asian British,Advanced Apprenticeship,19-24,Female,Information and Communication Technology,~,~
+201617,Academic year,English devolved area,E92000001,England,,,E47000008,Cambridgeshire and Peterborough,Asian/ Asian British,Advanced Apprenticeship,19-24,Female,"Arts, Media and Publishing",~,~
+201617,Academic year,English devolved area,E92000001,England,,,E47000008,Cambridgeshire and Peterborough,Asian/ Asian British,Advanced Apprenticeship,19-24,Female,Engineering and Manufacturing Technologies,~,~
+201617,Academic year,English devolved area,E92000001,England,,,E47000008,Cambridgeshire and Peterborough,Asian/ Asian British,Advanced Apprenticeship,19-24,Female,"Health, Public Services and Care",~,~
+201617,Academic year,English devolved area,E92000001,England,,,E47000008,Cambridgeshire and Peterborough,Asian/ Asian British,Advanced Apprenticeship,19-24,Female,Science and Mathematics,~,~
+201617,Academic year,English devolved area,E92000001,England,,,E47000008,Cambridgeshire and Peterborough,Asian/ Asian British,Advanced Apprenticeship,19-24,Male,"Leisure, Travel and Tourism",~,~
+201617,Academic year,English devolved area,E92000001,England,,,E47000008,Cambridgeshire and Peterborough,Asian/ Asian British,Advanced Apprenticeship,19-24,Male,Retail and Commercial Enterprise,~,~
+201617,Academic year,English devolved area,E92000001,England,,,E47000008,Cambridgeshire and Peterborough,Asian/ Asian British,Advanced Apprenticeship,19-24,Male,Education and Training,~,~
+201617,Academic year,English devolved area,E92000001,England,,,E47000008,Cambridgeshire and Peterborough,Asian/ Asian British,Advanced Apprenticeship,19-24,Male,Information and Communication Technology,~,~
+201617,Academic year,English devolved area,E92000001,England,,,E47000008,Cambridgeshire and Peterborough,Asian/ Asian British,Advanced Apprenticeship,19-24,Male,"Business, Administration and Law",~,~
+201617,Academic year,English devolved area,E92000001,England,,,E47000008,Cambridgeshire and Peterborough,Asian/ Asian British,Advanced Apprenticeship,19-24,Male,Engineering and Manufacturing Technologies,~,~
+201617,Academic year,English devolved area,E92000001,England,,,E47000008,Cambridgeshire and Peterborough,Asian/ Asian British,Advanced Apprenticeship,19-24,Male,"Agriculture, Horticulture and Animal Care",~,~
+201617,Academic year,English devolved area,E92000001,England,,,E47000008,Cambridgeshire and Peterborough,Asian/ Asian British,Advanced Apprenticeship,19-24,Male,"Construction, Planning and the Built Environment",~,~
+201617,Academic year,English devolved area,E92000001,England,,,E47000008,Cambridgeshire and Peterborough,Asian/ Asian British,Advanced Apprenticeship,19-24,Male,Science and Mathematics,~,~
+201617,Academic year,English devolved area,E92000001,England,,,E47000008,Cambridgeshire and Peterborough,Asian/ Asian British,Advanced Apprenticeship,19-24,Male,"Arts, Media and Publishing",~,~
+201617,Academic year,English devolved area,E92000001,England,,,E47000008,Cambridgeshire and Peterborough,Asian/ Asian British,Advanced Apprenticeship,19-24,Male,"Health, Public Services and Care",~,~
+201617,Academic year,English devolved area,E92000001,England,,,E47000008,Cambridgeshire and Peterborough,Asian/ Asian British,Advanced Apprenticeship,19-24,Male,Total,10,~
+201617,Academic year,English devolved area,E92000001,England,,,E47000008,Cambridgeshire and Peterborough,Asian/ Asian British,Advanced Apprenticeship,19-24,Total,"Agriculture, Horticulture and Animal Care",~,~
+201617,Academic year,English devolved area,E92000001,England,,,E47000008,Cambridgeshire and Peterborough,Asian/ Asian British,Advanced Apprenticeship,19-24,Total,"Arts, Media and Publishing",~,~
+201617,Academic year,English devolved area,E92000001,England,,,E47000008,Cambridgeshire and Peterborough,Asian/ Asian British,Advanced Apprenticeship,19-24,Total,"Business, Administration and Law",10,~
+201617,Academic year,English devolved area,E92000001,England,,,E47000008,Cambridgeshire and Peterborough,Asian/ Asian British,Advanced Apprenticeship,19-24,Total,"Construction, Planning and the Built Environment",~,~
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Higher Apprenticeship,Total,Female,Total,2180,510
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Higher Apprenticeship,Total,Female,"Arts, Media and Publishing",~,~
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Higher Apprenticeship,Total,Female,"Business, Administration and Law",1110,290
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Higher Apprenticeship,Total,Female,Social Sciences,~,~
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Higher Apprenticeship,Total,Female,Engineering and Manufacturing Technologies,30,~
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Higher Apprenticeship,Total,Female,Science and Mathematics,~,~
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Higher Apprenticeship,Total,Female,"Health, Public Services and Care",770,170
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Higher Apprenticeship,Total,Female,Information and Communication Technology,70,20
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Higher Apprenticeship,Total,Female,"Leisure, Travel and Tourism",~,~
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Higher Apprenticeship,Total,Female,Retail and Commercial Enterprise,60,20
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Higher Apprenticeship,Total,Male,Science and Mathematics,~,~
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Higher Apprenticeship,Total,Male,Social Sciences,~,~
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Higher Apprenticeship,Total,Male,Retail and Commercial Enterprise,50,10
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Higher Apprenticeship,Total,Male,"Agriculture, Horticulture and Animal Care",~,~
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Higher Apprenticeship,Total,Male,"Leisure, Travel and Tourism",~,~
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Higher Apprenticeship,Total,Male,"Health, Public Services and Care",230,40
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Higher Apprenticeship,Total,Male,"Arts, Media and Publishing",~,~
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Higher Apprenticeship,Total,Male,Information and Communication Technology,240,70
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Higher Apprenticeship,Total,Male,Total,1940,450
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Higher Apprenticeship,Total,Male,Engineering and Manufacturing Technologies,120,10
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Higher Apprenticeship,Total,Male,Education and Training,40,~
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Higher Apprenticeship,Total,Male,"Construction, Planning and the Built Environment",300,90
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Higher Apprenticeship,Total,Male,"Business, Administration and Law",980,220
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Higher Apprenticeship,Total,Total,Social Sciences,~,~
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Higher Apprenticeship,Total,Total,Science and Mathematics,10,~
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Higher Apprenticeship,Total,Total,Retail and Commercial Enterprise,110,30
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Higher Apprenticeship,Total,Total,"Leisure, Travel and Tourism",~,~
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Higher Apprenticeship,Total,Total,Information and Communication Technology,310,80
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Higher Apprenticeship,Total,Total,"Health, Public Services and Care",990,220
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Higher Apprenticeship,Total,Total,Engineering and Manufacturing Technologies,140,20
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Higher Apprenticeship,Total,Total,Education and Training,120,~
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Higher Apprenticeship,Total,Total,"Construction, Planning and the Built Environment",350,100
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Higher Apprenticeship,Total,Total,"Business, Administration and Law",2080,510
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Higher Apprenticeship,Total,Total,"Arts, Media and Publishing",~,~
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Higher Apprenticeship,Total,Total,"Agriculture, Horticulture and Animal Care",~,~
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Higher Apprenticeship,Total,Total,Total,4120,960
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Higher Apprenticeship,Under 19,Female,Education and Training,~,~
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Higher Apprenticeship,Under 19,Female,Total,60,20
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Higher Apprenticeship,Under 19,Female,"Construction, Planning and the Built Environment",10,~
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Higher Apprenticeship,Under 19,Female,Information and Communication Technology,~,~
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Higher Apprenticeship,Under 19,Female,Social Sciences,~,~
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Higher Apprenticeship,Under 19,Female,"Arts, Media and Publishing",~,~
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Higher Apprenticeship,Under 19,Female,Science and Mathematics,~,~
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Higher Apprenticeship,Under 19,Female,"Agriculture, Horticulture and Animal Care",~,~
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Higher Apprenticeship,Under 19,Female,Engineering and Manufacturing Technologies,10,~
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Higher Apprenticeship,Under 19,Female,Retail and Commercial Enterprise,~,~
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Higher Apprenticeship,Under 19,Female,"Business, Administration and Law",30,10
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Higher Apprenticeship,Under 19,Female,"Health, Public Services and Care",~,~
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Higher Apprenticeship,Under 19,Female,"Leisure, Travel and Tourism",~,~
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Higher Apprenticeship,Under 19,Male,Engineering and Manufacturing Technologies,20,~
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Higher Apprenticeship,Under 19,Male,"Construction, Planning and the Built Environment",50,10
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Higher Apprenticeship,Under 19,Male,"Arts, Media and Publishing",~,~
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Higher Apprenticeship,Under 19,Male,Retail and Commercial Enterprise,~,~
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Higher Apprenticeship,Under 19,Male,Total,160,30
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Higher Apprenticeship,Under 19,Male,Education and Training,~,~
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Higher Apprenticeship,Under 19,Male,Science and Mathematics,~,~
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Higher Apprenticeship,Under 19,Male,"Business, Administration and Law",50,10
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Higher Apprenticeship,Under 19,Male,"Leisure, Travel and Tourism",~,~
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Higher Apprenticeship,Under 19,Male,"Health, Public Services and Care",~,~
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Higher Apprenticeship,Under 19,Male,Information and Communication Technology,30,10
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Higher Apprenticeship,Under 19,Male,"Agriculture, Horticulture and Animal Care",~,~
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Higher Apprenticeship,Under 19,Male,Social Sciences,~,~
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Higher Apprenticeship,Under 19,Total,Total,220,50
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Higher Apprenticeship,Under 19,Total,Information and Communication Technology,30,10
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Higher Apprenticeship,Under 19,Total,Science and Mathematics,~,~
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Higher Apprenticeship,Under 19,Total,Education and Training,~,~
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Higher Apprenticeship,Under 19,Total,Social Sciences,~,~
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Higher Apprenticeship,Under 19,Total,"Construction, Planning and the Built Environment",60,10
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Higher Apprenticeship,Under 19,Total,"Health, Public Services and Care",10,~
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Higher Apprenticeship,Under 19,Total,"Business, Administration and Law",90,20
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Higher Apprenticeship,Under 19,Total,"Leisure, Travel and Tourism",~,~
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Higher Apprenticeship,Under 19,Total,"Agriculture, Horticulture and Animal Care",~,~
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Higher Apprenticeship,Under 19,Total,Retail and Commercial Enterprise,10,~
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Higher Apprenticeship,Under 19,Total,Engineering and Manufacturing Technologies,30,~
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Higher Apprenticeship,Under 19,Total,"Arts, Media and Publishing",~,~
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Intermediate Apprenticeship,19-24,Female,Total,670,400
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Intermediate Apprenticeship,19-24,Female,"Health, Public Services and Care",330,190
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Intermediate Apprenticeship,19-24,Female,Social Sciences,~,~
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Intermediate Apprenticeship,19-24,Female,Retail and Commercial Enterprise,110,40
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Intermediate Apprenticeship,19-24,Female,"Business, Administration and Law",150,140
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Intermediate Apprenticeship,19-24,Female,Information and Communication Technology,~,~
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Intermediate Apprenticeship,19-24,Female,"Agriculture, Horticulture and Animal Care",10,10
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Intermediate Apprenticeship,19-24,Female,"Arts, Media and Publishing",~,~
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Intermediate Apprenticeship,19-24,Female,"Leisure, Travel and Tourism",~,~
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Intermediate Apprenticeship,19-24,Female,Engineering and Manufacturing Technologies,30,10
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Intermediate Apprenticeship,19-24,Female,"Construction, Planning and the Built Environment",~,~
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Intermediate Apprenticeship,19-24,Female,Science and Mathematics,~,~
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Intermediate Apprenticeship,19-24,Female,Education and Training,30,10
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Intermediate Apprenticeship,19-24,Male,Total,770,470
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Intermediate Apprenticeship,19-24,Male,Science and Mathematics,~,~
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Intermediate Apprenticeship,19-24,Male,Information and Communication Technology,20,30
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Intermediate Apprenticeship,19-24,Male,"Agriculture, Horticulture and Animal Care",20,10
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Intermediate Apprenticeship,19-24,Male,Social Sciences,~,~
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Intermediate Apprenticeship,19-24,Male,"Construction, Planning and the Built Environment",170,110
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Intermediate Apprenticeship,19-24,Male,"Arts, Media and Publishing",~,~
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Intermediate Apprenticeship,19-24,Male,Retail and Commercial Enterprise,160,60
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Intermediate Apprenticeship,19-24,Male,Engineering and Manufacturing Technologies,190,110
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Intermediate Apprenticeship,19-24,Male,"Health, Public Services and Care",70,30
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Intermediate Apprenticeship,19-24,Male,"Business, Administration and Law",110,100
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Intermediate Apprenticeship,19-24,Male,"Leisure, Travel and Tourism",10,10
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Intermediate Apprenticeship,19-24,Male,Education and Training,10,10
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Intermediate Apprenticeship,19-24,Total,Education and Training,40,20
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Intermediate Apprenticeship,19-24,Total,Engineering and Manufacturing Technologies,220,120
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Intermediate Apprenticeship,19-24,Total,Social Sciences,~,~
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Intermediate Apprenticeship,19-24,Total,Science and Mathematics,~,~
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Intermediate Apprenticeship,19-24,Total,Retail and Commercial Enterprise,270,100
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Intermediate Apprenticeship,19-24,Total,Total,1440,870
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Intermediate Apprenticeship,19-24,Total,"Construction, Planning and the Built Environment",170,110
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Intermediate Apprenticeship,19-24,Total,"Leisure, Travel and Tourism",20,10
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Intermediate Apprenticeship,19-24,Total,Information and Communication Technology,30,30
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Intermediate Apprenticeship,19-24,Total,"Health, Public Services and Care",400,210
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Intermediate Apprenticeship,19-24,Total,"Agriculture, Horticulture and Animal Care",40,10
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Intermediate Apprenticeship,19-24,Total,"Arts, Media and Publishing",~,~
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Intermediate Apprenticeship,19-24,Total,"Business, Administration and Law",260,240
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Intermediate Apprenticeship,25+,Female,"Arts, Media and Publishing",~,~
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Intermediate Apprenticeship,25+,Female,Social Sciences,~,~
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Intermediate Apprenticeship,25+,Female,"Business, Administration and Law",130,80
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Intermediate Apprenticeship,25+,Female,Information and Communication Technology,10,~
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Intermediate Apprenticeship,25+,Female,"Leisure, Travel and Tourism",10,~
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Intermediate Apprenticeship,25+,Female,Retail and Commercial Enterprise,140,80
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Intermediate Apprenticeship,25+,Female,"Agriculture, Horticulture and Animal Care",10,~
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Intermediate Apprenticeship,25+,Female,Science and Mathematics,~,~
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Intermediate Apprenticeship,25+,Female,"Construction, Planning and the Built Environment",~,~
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Intermediate Apprenticeship,25+,Female,Engineering and Manufacturing Technologies,120,30
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Intermediate Apprenticeship,25+,Female,"Health, Public Services and Care",570,260
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Intermediate Apprenticeship,25+,Female,Total,1010,470
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Intermediate Apprenticeship,25+,Female,Education and Training,20,10
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Intermediate Apprenticeship,25+,Male,Information and Communication Technology,60,50
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Intermediate Apprenticeship,25+,Male,Science and Mathematics,~,~
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Intermediate Apprenticeship,25+,Male,Total,790,400
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Intermediate Apprenticeship,25+,Male,"Agriculture, Horticulture and Animal Care",20,10
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Intermediate Apprenticeship,25+,Male,Education and Training,~,~
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Intermediate Apprenticeship,25+,Male,"Business, Administration and Law",70,40
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Intermediate Apprenticeship,25+,Male,"Construction, Planning and the Built Environment",70,40
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Intermediate Apprenticeship,25+,Male,Social Sciences,~,~
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Intermediate Apprenticeship,25+,Male,Retail and Commercial Enterprise,120,50
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Intermediate Apprenticeship,25+,Male,"Health, Public Services and Care",110,60
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Intermediate Apprenticeship,25+,Male,Engineering and Manufacturing Technologies,330,150
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Intermediate Apprenticeship,25+,Male,"Leisure, Travel and Tourism",30,~
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Intermediate Apprenticeship,25+,Male,"Arts, Media and Publishing",~,~
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Intermediate Apprenticeship,25+,Total,Science and Mathematics,~,~
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Intermediate Apprenticeship,25+,Total,"Arts, Media and Publishing",~,~
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Intermediate Apprenticeship,25+,Total,Engineering and Manufacturing Technologies,450,180
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Intermediate Apprenticeship,25+,Total,"Health, Public Services and Care",670,320
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Intermediate Apprenticeship,25+,Total,Education and Training,20,10
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Intermediate Apprenticeship,25+,Total,Information and Communication Technology,70,50
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Intermediate Apprenticeship,25+,Total,Social Sciences,~,~
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Intermediate Apprenticeship,25+,Total,Total,1800,880
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Intermediate Apprenticeship,25+,Total,"Leisure, Travel and Tourism",30,~
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Intermediate Apprenticeship,25+,Total,"Agriculture, Horticulture and Animal Care",30,10
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Intermediate Apprenticeship,25+,Total,"Construction, Planning and the Built Environment",70,40
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Intermediate Apprenticeship,25+,Total,Retail and Commercial Enterprise,260,140
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Intermediate Apprenticeship,25+,Total,"Business, Administration and Law",200,120
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Intermediate Apprenticeship,Total,Female,Science and Mathematics,~,~
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Intermediate Apprenticeship,Total,Female,Social Sciences,~,~
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Intermediate Apprenticeship,Total,Female,Total,2630,1530
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Intermediate Apprenticeship,Total,Female,Retail and Commercial Enterprise,580,280
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Intermediate Apprenticeship,Total,Female,"Leisure, Travel and Tourism",20,10
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Intermediate Apprenticeship,Total,Female,Information and Communication Technology,20,~
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Intermediate Apprenticeship,Total,Female,"Agriculture, Horticulture and Animal Care",40,20
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Intermediate Apprenticeship,Total,Female,"Health, Public Services and Care",1190,680
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Intermediate Apprenticeship,Total,Female,"Arts, Media and Publishing",~,~
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Intermediate Apprenticeship,Total,Female,Engineering and Manufacturing Technologies,160,40
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Intermediate Apprenticeship,Total,Female,"Business, Administration and Law",530,440
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Intermediate Apprenticeship,Total,Female,Education and Training,70,30
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Intermediate Apprenticeship,Total,Female,"Construction, Planning and the Built Environment",10,10
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Intermediate Apprenticeship,Total,Male,Engineering and Manufacturing Technologies,840,460
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Intermediate Apprenticeship,Total,Male,Social Sciences,~,~
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Intermediate Apprenticeship,Total,Male,"Leisure, Travel and Tourism",60,20
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Intermediate Apprenticeship,Total,Male,Retail and Commercial Enterprise,450,200
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Intermediate Apprenticeship,Total,Male,Education and Training,20,10
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Intermediate Apprenticeship,Total,Male,Information and Communication Technology,90,90
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Intermediate Apprenticeship,Total,Male,Science and Mathematics,~,~
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Intermediate Apprenticeship,Total,Male,Total,2790,1600
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Intermediate Apprenticeship,Total,Male,"Construction, Planning and the Built Environment",710,410
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Intermediate Apprenticeship,Total,Male,"Business, Administration and Law",290,270
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Intermediate Apprenticeship,Total,Male,"Health, Public Services and Care",230,100
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Intermediate Apprenticeship,Total,Male,"Agriculture, Horticulture and Animal Care",110,30
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Intermediate Apprenticeship,Total,Male,"Arts, Media and Publishing",~,~
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Intermediate Apprenticeship,Total,Total,Total,5420,3130
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Intermediate Apprenticeship,Total,Total,Retail and Commercial Enterprise,1040,480
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Intermediate Apprenticeship,Total,Total,"Leisure, Travel and Tourism",70,30
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Intermediate Apprenticeship,Total,Total,Information and Communication Technology,110,90
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Intermediate Apprenticeship,Total,Total,Science and Mathematics,~,~
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Intermediate Apprenticeship,Total,Total,"Health, Public Services and Care",1420,780
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Intermediate Apprenticeship,Total,Total,Social Sciences,~,~
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Intermediate Apprenticeship,Total,Total,Engineering and Manufacturing Technologies,1000,500
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Intermediate Apprenticeship,Total,Total,Education and Training,90,50
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Intermediate Apprenticeship,Total,Total,"Construction, Planning and the Built Environment",720,420
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Intermediate Apprenticeship,Total,Total,"Business, Administration and Law",820,710
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Intermediate Apprenticeship,Total,Total,"Arts, Media and Publishing",10,~
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Intermediate Apprenticeship,Total,Total,"Agriculture, Horticulture and Animal Care",150,60
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Intermediate Apprenticeship,Under 19,Female,Education and Training,20,10
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Intermediate Apprenticeship,Under 19,Female,"Agriculture, Horticulture and Animal Care",20,10
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Intermediate Apprenticeship,Under 19,Female,Total,950,660
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Intermediate Apprenticeship,Under 19,Female,Engineering and Manufacturing Technologies,10,10
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Intermediate Apprenticeship,Under 19,Female,"Construction, Planning and the Built Environment",10,10
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Intermediate Apprenticeship,Under 19,Female,"Leisure, Travel and Tourism",10,10
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Intermediate Apprenticeship,Under 19,Female,Information and Communication Technology,~,~
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Intermediate Apprenticeship,Under 19,Female,"Health, Public Services and Care",300,230
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Intermediate Apprenticeship,Under 19,Female,Retail and Commercial Enterprise,330,160
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Intermediate Apprenticeship,Under 19,Female,"Arts, Media and Publishing",~,~
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Intermediate Apprenticeship,Under 19,Female,Social Sciences,~,~
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Intermediate Apprenticeship,Under 19,Female,"Business, Administration and Law",250,220
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Intermediate Apprenticeship,Under 19,Female,Science and Mathematics,~,~
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Intermediate Apprenticeship,Under 19,Male,Total,1230,730
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Intermediate Apprenticeship,Under 19,Male,Engineering and Manufacturing Technologies,320,200
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Intermediate Apprenticeship,Under 19,Male,"Construction, Planning and the Built Environment",470,260
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Intermediate Apprenticeship,Under 19,Male,Education and Training,10,~
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Intermediate Apprenticeship,Under 19,Male,"Health, Public Services and Care",50,20
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Intermediate Apprenticeship,Under 19,Male,"Leisure, Travel and Tourism",20,10
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Intermediate Apprenticeship,Under 19,Male,"Business, Administration and Law",120,130
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Intermediate Apprenticeship,Under 19,Male,"Agriculture, Horticulture and Animal Care",60,20
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Intermediate Apprenticeship,Under 19,Male,Retail and Commercial Enterprise,180,90
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Intermediate Apprenticeship,Under 19,Male,"Arts, Media and Publishing",~,~
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Intermediate Apprenticeship,Under 19,Male,Science and Mathematics,~,~
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Intermediate Apprenticeship,Under 19,Male,Information and Communication Technology,~,10
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Intermediate Apprenticeship,Under 19,Male,Social Sciences,~,~
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Intermediate Apprenticeship,Under 19,Total,Retail and Commercial Enterprise,510,250
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Intermediate Apprenticeship,Under 19,Total,Science and Mathematics,~,~
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Intermediate Apprenticeship,Under 19,Total,"Leisure, Travel and Tourism",20,20
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Intermediate Apprenticeship,Under 19,Total,"Business, Administration and Law",370,350
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Intermediate Apprenticeship,Under 19,Total,Information and Communication Technology,~,10
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Intermediate Apprenticeship,Under 19,Total,"Construction, Planning and the Built Environment",480,260
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Intermediate Apprenticeship,Under 19,Total,"Health, Public Services and Care",350,250
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Intermediate Apprenticeship,Under 19,Total,Social Sciences,~,~
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Intermediate Apprenticeship,Under 19,Total,"Agriculture, Horticulture and Animal Care",80,30
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Intermediate Apprenticeship,Under 19,Total,Total,2180,1390
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Intermediate Apprenticeship,Under 19,Total,Education and Training,30,10
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Intermediate Apprenticeship,Under 19,Total,Engineering and Manufacturing Technologies,330,210
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Intermediate Apprenticeship,Under 19,Total,"Arts, Media and Publishing",~,~
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Total,19-24,Female,Social Sciences,~,~
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Total,19-24,Female,Science and Mathematics,~,~
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Total,19-24,Female,Retail and Commercial Enterprise,220,110
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Total,19-24,Female,Total,2120,1140
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Total,19-24,Female,Education and Training,70,30
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Total,19-24,Female,"Agriculture, Horticulture and Animal Care",30,20
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Total,19-24,Female,Information and Communication Technology,60,40
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Total,19-24,Female,"Arts, Media and Publishing",10,~
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Total,19-24,Female,Engineering and Manufacturing Technologies,60,20
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Total,19-24,Female,"Health, Public Services and Care",900,470
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Total,19-24,Female,"Construction, Planning and the Built Environment",40,10
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Total,19-24,Female,"Leisure, Travel and Tourism",20,20
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Total,19-24,Female,"Business, Administration and Law",710,420
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Total,19-24,Male,Information and Communication Technology,210,160
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Total,19-24,Male,"Agriculture, Horticulture and Animal Care",40,20
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Total,19-24,Male,"Health, Public Services and Care",220,70
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Total,19-24,Male,Education and Training,30,20
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Total,19-24,Male,"Leisure, Travel and Tourism",40,20
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Total,19-24,Male,Retail and Commercial Enterprise,230,100
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Total,19-24,Male,"Arts, Media and Publishing",10,~
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Total,19-24,Male,Total,2770,1330
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Total,19-24,Male,Engineering and Manufacturing Technologies,860,380
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Total,19-24,Male,Science and Mathematics,~,~
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Total,19-24,Male,"Business, Administration and Law",590,300
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Total,19-24,Male,"Construction, Planning and the Built Environment",530,270
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Total,19-24,Male,Social Sciences,~,~
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Total,19-24,Total,Engineering and Manufacturing Technologies,920,400
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Total,19-24,Total,"Arts, Media and Publishing",20,10
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Total,19-24,Total,"Construction, Planning and the Built Environment",570,280
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Total,19-24,Total,"Leisure, Travel and Tourism",60,40
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Total,19-24,Total,Retail and Commercial Enterprise,450,200
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Total,19-24,Total,Science and Mathematics,~,~
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Total,19-24,Total,Information and Communication Technology,280,200
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Total,19-24,Total,Education and Training,100,50
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Total,19-24,Total,Total,4890,2470
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Total,19-24,Total,Social Sciences,~,~
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Total,19-24,Total,"Business, Administration and Law",1300,720
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Total,19-24,Total,"Health, Public Services and Care",1120,540
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Total,19-24,Total,"Agriculture, Horticulture and Animal Care",70,30
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Total,25+,Female,Science and Mathematics,~,~
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Total,25+,Female,"Business, Administration and Law",1650,610
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Total,25+,Female,Retail and Commercial Enterprise,330,170
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Total,25+,Female,Total,4560,1750
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Total,25+,Female,"Arts, Media and Publishing",10,~
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Total,25+,Female,"Health, Public Services and Care",2060,810
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Total,25+,Female,Social Sciences,~,~
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Total,25+,Female,Information and Communication Technology,90,20
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Total,25+,Female,"Agriculture, Horticulture and Animal Care",30,10
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Total,25+,Female,Engineering and Manufacturing Technologies,160,30
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Total,25+,Female,"Leisure, Travel and Tourism",20,10
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Total,25+,Female,Education and Training,180,60
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Total,25+,Female,"Construction, Planning and the Built Environment",40,10
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Total,25+,Male,"Business, Administration and Law",1190,420
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Total,25+,Male,"Construction, Planning and the Built Environment",220,90
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Total,25+,Male,Social Sciences,~,~
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Total,25+,Male,Science and Mathematics,~,~
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Total,25+,Male,Education and Training,50,10
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Total,25+,Male,Engineering and Manufacturing Technologies,640,230
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Total,25+,Male,"Arts, Media and Publishing",~,~
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Total,25+,Male,Retail and Commercial Enterprise,250,110
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Total,25+,Male,Total,3220,1180
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Total,25+,Male,"Leisure, Travel and Tourism",40,~
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Total,25+,Male,"Agriculture, Horticulture and Animal Care",40,20
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Total,25+,Male,"Health, Public Services and Care",560,200
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Total,25+,Male,Information and Communication Technology,230,110
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Total,25+,Total,"Leisure, Travel and Tourism",60,10
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Total,25+,Total,"Business, Administration and Law",2840,1030
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Total,25+,Total,Social Sciences,~,~
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Total,25+,Total,"Agriculture, Horticulture and Animal Care",70,30
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Total,25+,Total,Total,7770,2930
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Total,25+,Total,"Health, Public Services and Care",2620,1010
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Total,25+,Total,"Construction, Planning and the Built Environment",260,100
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Total,25+,Total,Retail and Commercial Enterprise,580,280
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Total,25+,Total,Education and Training,220,70
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Total,25+,Total,"Arts, Media and Publishing",10,~
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Total,25+,Total,Science and Mathematics,10,~
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Total,25+,Total,Engineering and Manufacturing Technologies,800,260
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Total,25+,Total,Information and Communication Technology,310,130
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Total,Total,Female,Total,8450,4020
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Total,Total,Female,"Leisure, Travel and Tourism",60,40
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Total,Total,Female,Information and Communication Technology,180,80
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Total,Total,Female,"Agriculture, Horticulture and Animal Care",100,50
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Total,Total,Female,Social Sciences,~,~
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Total,Total,Female,"Arts, Media and Publishing",20,10
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Total,Total,Female,"Business, Administration and Law",2870,1410
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Total,Total,Female,Science and Mathematics,~,~
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Total,Total,Female,"Health, Public Services and Care",3520,1680
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Total,Total,Female,"Construction, Planning and the Built Environment",100,40
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Total,Total,Female,Education and Training,280,120
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Total,Total,Female,Retail and Commercial Enterprise,1020,530
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Total,Total,Female,Engineering and Manufacturing Technologies,290,80
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Total,Total,Male,Retail and Commercial Enterprise,690,300
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Total,Total,Male,Total,8790,3860
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Total,Total,Male,"Leisure, Travel and Tourism",140,70
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Total,Total,Male,"Health, Public Services and Care",850,290
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Total,Total,Male,"Business, Administration and Law",2120,920
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Total,Total,Male,Social Sciences,~,~
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Total,Total,Male,Engineering and Manufacturing Technologies,2690,1080
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Total,Total,Male,"Agriculture, Horticulture and Animal Care",150,60
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Total,Total,Male,"Construction, Planning and the Built Environment",1490,730
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Total,Total,Male,Education and Training,90,30
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Total,Total,Male,"Arts, Media and Publishing",10,10
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Total,Total,Male,Information and Communication Technology,570,370
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Total,Total,Male,Science and Mathematics,~,~
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Total,Total,Total,"Health, Public Services and Care",4370,1960
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Total,Total,Total,Engineering and Manufacturing Technologies,2980,1160
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Total,Total,Total,Information and Communication Technology,740,450
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Total,Total,Total,Retail and Commercial Enterprise,1710,830
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Total,Total,Total,Science and Mathematics,10,~
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Total,Total,Total,Education and Training,370,150
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Total,Total,Total,"Business, Administration and Law",4980,2330
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Total,Total,Total,"Construction, Planning and the Built Environment",1590,770
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Total,Total,Total,Total,17240,7880
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Total,Total,Total,"Agriculture, Horticulture and Animal Care",250,100
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Total,Total,Total,"Leisure, Travel and Tourism",200,120
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Total,Total,Total,"Arts, Media and Publishing",30,10
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Total,Total,Total,Social Sciences,~,~
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Total,Under 19,Female,Education and Training,40,20
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Total,Under 19,Female,"Construction, Planning and the Built Environment",20,20
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Total,Under 19,Female,Engineering and Manufacturing Technologies,60,20
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Total,Under 19,Female,Social Sciences,~,~
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Total,Under 19,Female,"Leisure, Travel and Tourism",30,20
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Total,Under 19,Female,"Business, Administration and Law",510,370
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Total,Under 19,Female,Total,1770,1130
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Total,Under 19,Female,Science and Mathematics,~,~
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Total,Under 19,Female,Retail and Commercial Enterprise,470,250
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Total,Under 19,Female,"Arts, Media and Publishing",10,~
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Total,Under 19,Female,"Health, Public Services and Care",550,390
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Total,Under 19,Female,"Agriculture, Horticulture and Animal Care",40,20
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Total,Under 19,Female,Information and Communication Technology,30,20
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Total,Under 19,Male,"Construction, Planning and the Built Environment",730,370
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Total,Under 19,Male,Science and Mathematics,~,~
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Total,Under 19,Male,Social Sciences,~,~
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Total,Under 19,Male,Education and Training,10,~
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Total,Under 19,Male,"Arts, Media and Publishing",~,~
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Total,Under 19,Male,"Business, Administration and Law",330,210
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Total,Under 19,Male,Retail and Commercial Enterprise,210,100
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Total,Under 19,Male,Total,2810,1350
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Total,Under 19,Male,Information and Communication Technology,130,110
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Total,Under 19,Male,Engineering and Manufacturing Technologies,1190,470
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Total,Under 19,Male,"Leisure, Travel and Tourism",50,50
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Total,Under 19,Male,"Agriculture, Horticulture and Animal Care",70,20
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Total,Under 19,Male,"Health, Public Services and Care",80,20
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Total,Under 19,Total,"Leisure, Travel and Tourism",80,70
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Total,Under 19,Total,"Agriculture, Horticulture and Animal Care",110,40
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Total,Under 19,Total,Retail and Commercial Enterprise,680,350
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Total,Under 19,Total,Information and Communication Technology,160,130
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Total,Under 19,Total,Science and Mathematics,~,~
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Total,Under 19,Total,"Arts, Media and Publishing",10,~
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Total,Under 19,Total,"Health, Public Services and Care",630,410
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Total,Under 19,Total,Social Sciences,~,~
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Total,Under 19,Total,"Business, Administration and Law",840,580
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Total,Under 19,Total,Engineering and Manufacturing Technologies,1250,490
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Total,Under 19,Total,Education and Training,50,30
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Total,Under 19,Total,"Construction, Planning and the Built Environment",750,390
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000050,Leeds City Region,,,Total,Total,Under 19,Total,Total,4580,2480
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000021,Leicester and Leicestershire,,,Total,Advanced Apprenticeship,19-24,Female,"Agriculture, Horticulture and Animal Care",20,~
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000021,Leicester and Leicestershire,,,Total,Advanced Apprenticeship,19-24,Female,Social Sciences,~,~
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000021,Leicester and Leicestershire,,,Total,Advanced Apprenticeship,19-24,Female,Retail and Commercial Enterprise,30,20
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000021,Leicester and Leicestershire,,,Total,Advanced Apprenticeship,19-24,Female,"Business, Administration and Law",70,40
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000021,Leicester and Leicestershire,,,Total,Advanced Apprenticeship,19-24,Female,Science and Mathematics,~,~
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000021,Leicester and Leicestershire,,,Total,Advanced Apprenticeship,19-24,Female,"Leisure, Travel and Tourism",10,10
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000021,Leicester and Leicestershire,,,Total,Advanced Apprenticeship,19-24,Female,Information and Communication Technology,10,10
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000021,Leicester and Leicestershire,,,Total,Advanced Apprenticeship,19-24,Female,Total,330,210
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000021,Leicester and Leicestershire,,,Total,Advanced Apprenticeship,19-24,Female,"Construction, Planning and the Built Environment",10,~
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000021,Leicester and Leicestershire,,,Total,Advanced Apprenticeship,19-24,Female,"Arts, Media and Publishing",~,~
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000021,Leicester and Leicestershire,,,Total,Advanced Apprenticeship,19-24,Female,Engineering and Manufacturing Technologies,20,10
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000021,Leicester and Leicestershire,,,Total,Advanced Apprenticeship,19-24,Female,"Health, Public Services and Care",150,100
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000021,Leicester and Leicestershire,,,Total,Advanced Apprenticeship,19-24,Female,Education and Training,10,10
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000021,Leicester and Leicestershire,,,Total,Advanced Apprenticeship,19-24,Male,"Health, Public Services and Care",20,10
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000021,Leicester and Leicestershire,,,Total,Advanced Apprenticeship,19-24,Male,Education and Training,~,~
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000021,Leicester and Leicestershire,,,Total,Advanced Apprenticeship,19-24,Male,"Business, Administration and Law",80,50
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000021,Leicester and Leicestershire,,,Total,Advanced Apprenticeship,19-24,Male,Social Sciences,~,~
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000021,Leicester and Leicestershire,,,Total,Advanced Apprenticeship,19-24,Male,"Leisure, Travel and Tourism",20,20
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000021,Leicester and Leicestershire,,,Total,Advanced Apprenticeship,19-24,Male,"Construction, Planning and the Built Environment",70,20
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000021,Leicester and Leicestershire,,,Total,Advanced Apprenticeship,19-24,Male,Engineering and Manufacturing Technologies,210,110
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000021,Leicester and Leicestershire,,,Total,Advanced Apprenticeship,19-24,Male,Science and Mathematics,~,~
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000021,Leicester and Leicestershire,,,Total,Advanced Apprenticeship,19-24,Male,Retail and Commercial Enterprise,20,10
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000021,Leicester and Leicestershire,,,Total,Advanced Apprenticeship,19-24,Male,Information and Communication Technology,40,30
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000021,Leicester and Leicestershire,,,Total,Advanced Apprenticeship,19-24,Male,Total,450,250
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000021,Leicester and Leicestershire,,,Total,Advanced Apprenticeship,19-24,Male,"Agriculture, Horticulture and Animal Care",10,~
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000021,Leicester and Leicestershire,,,Total,Advanced Apprenticeship,19-24,Male,"Arts, Media and Publishing",~,~
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000021,Leicester and Leicestershire,,,Total,Advanced Apprenticeship,19-24,Total,Total,780,450
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000021,Leicester and Leicestershire,,,Total,Advanced Apprenticeship,19-24,Total,Social Sciences,~,~
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000021,Leicester and Leicestershire,,,Total,Advanced Apprenticeship,19-24,Total,Science and Mathematics,~,~
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000021,Leicester and Leicestershire,,,Total,Advanced Apprenticeship,19-24,Total,"Leisure, Travel and Tourism",20,20
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000021,Leicester and Leicestershire,,,Total,Advanced Apprenticeship,19-24,Total,Information and Communication Technology,50,40
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000021,Leicester and Leicestershire,,,Total,Advanced Apprenticeship,19-24,Total,Retail and Commercial Enterprise,50,30
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000021,Leicester and Leicestershire,,,Total,Advanced Apprenticeship,19-24,Total,"Health, Public Services and Care",170,120
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000021,Leicester and Leicestershire,,,Total,Advanced Apprenticeship,19-24,Total,"Agriculture, Horticulture and Animal Care",30,10
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000021,Leicester and Leicestershire,,,Total,Advanced Apprenticeship,19-24,Total,Engineering and Manufacturing Technologies,220,110
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000021,Leicester and Leicestershire,,,Total,Advanced Apprenticeship,19-24,Total,Education and Training,20,10
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000021,Leicester and Leicestershire,,,Total,Advanced Apprenticeship,19-24,Total,"Arts, Media and Publishing",10,~
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000021,Leicester and Leicestershire,,,Total,Advanced Apprenticeship,19-24,Total,"Construction, Planning and the Built Environment",70,20
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000021,Leicester and Leicestershire,,,Total,Advanced Apprenticeship,19-24,Total,"Business, Administration and Law",140,90
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000021,Leicester and Leicestershire,,,Total,Advanced Apprenticeship,25+,Female,Retail and Commercial Enterprise,50,30
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000021,Leicester and Leicestershire,,,Total,Advanced Apprenticeship,25+,Female,Total,640,310
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000021,Leicester and Leicestershire,,,Total,Advanced Apprenticeship,25+,Female,Science and Mathematics,~,~
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000021,Leicester and Leicestershire,,,Total,Advanced Apprenticeship,25+,Female,"Business, Administration and Law",230,120
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000021,Leicester and Leicestershire,,,Total,Advanced Apprenticeship,25+,Female,"Agriculture, Horticulture and Animal Care",~,~
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000021,Leicester and Leicestershire,,,Total,Advanced Apprenticeship,25+,Female,"Health, Public Services and Care",260,120
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000021,Leicester and Leicestershire,,,Total,Advanced Apprenticeship,25+,Female,Education and Training,60,30
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000021,Leicester and Leicestershire,,,Total,Advanced Apprenticeship,25+,Female,"Arts, Media and Publishing",10,~
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000021,Leicester and Leicestershire,,,Total,Advanced Apprenticeship,25+,Female,Social Sciences,~,~
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000021,Leicester and Leicestershire,,,Total,Advanced Apprenticeship,25+,Female,Engineering and Manufacturing Technologies,10,10
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000021,Leicester and Leicestershire,,,Total,Advanced Apprenticeship,25+,Female,"Construction, Planning and the Built Environment",10,~
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000021,Leicester and Leicestershire,,,Total,Advanced Apprenticeship,25+,Female,Information and Communication Technology,10,~
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000021,Leicester and Leicestershire,,,Total,Advanced Apprenticeship,25+,Female,"Leisure, Travel and Tourism",10,~
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000021,Leicester and Leicestershire,,,Total,Advanced Apprenticeship,25+,Male,"Health, Public Services and Care",70,20
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000021,Leicester and Leicestershire,,,Total,Advanced Apprenticeship,25+,Male,"Leisure, Travel and Tourism",10,~
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000021,Leicester and Leicestershire,,,Total,Advanced Apprenticeship,25+,Male,Engineering and Manufacturing Technologies,90,30
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000021,Leicester and Leicestershire,,,Total,Advanced Apprenticeship,25+,Male,"Business, Administration and Law",200,90
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000021,Leicester and Leicestershire,,,Total,Advanced Apprenticeship,25+,Male,"Arts, Media and Publishing",~,~
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000021,Leicester and Leicestershire,,,Total,Advanced Apprenticeship,25+,Male,"Agriculture, Horticulture and Animal Care",~,~
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000021,Leicester and Leicestershire,,,Total,Advanced Apprenticeship,25+,Male,"Construction, Planning and the Built Environment",20,10
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000021,Leicester and Leicestershire,,,Total,Advanced Apprenticeship,25+,Male,Retail and Commercial Enterprise,50,10
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000021,Leicester and Leicestershire,,,Total,Advanced Apprenticeship,25+,Male,Education and Training,10,~
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000021,Leicester and Leicestershire,,,Total,Advanced Apprenticeship,25+,Male,Social Sciences,~,~
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000021,Leicester and Leicestershire,,,Total,Advanced Apprenticeship,25+,Male,Science and Mathematics,~,~
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000021,Leicester and Leicestershire,,,Total,Advanced Apprenticeship,25+,Male,Information and Communication Technology,10,20
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000021,Leicester and Leicestershire,,,Total,Advanced Apprenticeship,25+,Male,Total,450,180
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000021,Leicester and Leicestershire,,,Total,Advanced Apprenticeship,25+,Total,Retail and Commercial Enterprise,100,50
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000021,Leicester and Leicestershire,,,Total,Advanced Apprenticeship,25+,Total,"Leisure, Travel and Tourism",10,10
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000021,Leicester and Leicestershire,,,Total,Advanced Apprenticeship,25+,Total,Information and Communication Technology,20,20
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000021,Leicester and Leicestershire,,,Total,Advanced Apprenticeship,25+,Total,Science and Mathematics,~,~
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000021,Leicester and Leicestershire,,,Total,Advanced Apprenticeship,25+,Total,"Agriculture, Horticulture and Animal Care",10,~
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000021,Leicester and Leicestershire,,,Total,Advanced Apprenticeship,25+,Total,Social Sciences,~,~
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000021,Leicester and Leicestershire,,,Total,Advanced Apprenticeship,25+,Total,Total,1090,500
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000021,Leicester and Leicestershire,,,Total,Advanced Apprenticeship,25+,Total,"Health, Public Services and Care",320,140
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000021,Leicester and Leicestershire,,,Total,Advanced Apprenticeship,25+,Total,Engineering and Manufacturing Technologies,100,50
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000021,Leicester and Leicestershire,,,Total,Advanced Apprenticeship,25+,Total,Education and Training,60,30
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000021,Leicester and Leicestershire,,,Total,Advanced Apprenticeship,25+,Total,"Construction, Planning and the Built Environment",30,10
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000021,Leicester and Leicestershire,,,Total,Advanced Apprenticeship,25+,Total,"Arts, Media and Publishing",10,~
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000021,Leicester and Leicestershire,,,Total,Advanced Apprenticeship,25+,Total,"Business, Administration and Law",430,210
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000021,Leicester and Leicestershire,,,Total,Advanced Apprenticeship,Total,Female,Total,1210,680
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000021,Leicester and Leicestershire,,,Total,Advanced Apprenticeship,Total,Female,Engineering and Manufacturing Technologies,40,20
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000021,Leicester and Leicestershire,,,Total,Advanced Apprenticeship,Total,Female,Education and Training,80,40
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000021,Leicester and Leicestershire,,,Total,Advanced Apprenticeship,Total,Female,"Construction, Planning and the Built Environment",20,10
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000021,Leicester and Leicestershire,,,Total,Advanced Apprenticeship,Total,Female,"Business, Administration and Law",350,200
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000021,Leicester and Leicestershire,,,Total,Advanced Apprenticeship,Total,Female,Social Sciences,~,~
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000021,Leicester and Leicestershire,,,Total,Advanced Apprenticeship,Total,Female,Science and Mathematics,~,~
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000021,Leicester and Leicestershire,,,Total,Advanced Apprenticeship,Total,Female,"Arts, Media and Publishing",10,~
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000021,Leicester and Leicestershire,,,Total,Advanced Apprenticeship,Total,Female,"Agriculture, Horticulture and Animal Care",20,10
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000021,Leicester and Leicestershire,,,Total,Advanced Apprenticeship,Total,Female,Retail and Commercial Enterprise,100,80
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000021,Leicester and Leicestershire,,,Total,Advanced Apprenticeship,Total,Female,"Health, Public Services and Care",520,290
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000021,Leicester and Leicestershire,,,Total,Advanced Apprenticeship,Total,Female,"Leisure, Travel and Tourism",30,10
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000021,Leicester and Leicestershire,,,Total,Advanced Apprenticeship,Total,Female,Information and Communication Technology,30,20
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000021,Leicester and Leicestershire,,,Total,Advanced Apprenticeship,Total,Male,"Business, Administration and Law",310,170
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000021,Leicester and Leicestershire,,,Total,Advanced Apprenticeship,Total,Male,"Leisure, Travel and Tourism",40,50
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000021,Leicester and Leicestershire,,,Total,Advanced Apprenticeship,Total,Male,Education and Training,10,~
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000021,Leicester and Leicestershire,,,Total,Advanced Apprenticeship,Total,Male,Retail and Commercial Enterprise,70,20
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000021,Leicester and Leicestershire,,,Total,Advanced Apprenticeship,Total,Male,Information and Communication Technology,70,60
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000021,Leicester and Leicestershire,,,Total,Advanced Apprenticeship,Total,Male,"Construction, Planning and the Built Environment",180,50
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000021,Leicester and Leicestershire,,,Total,Advanced Apprenticeship,Total,Male,Engineering and Manufacturing Technologies,560,230
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000021,Leicester and Leicestershire,,,Total,Advanced Apprenticeship,Total,Male,"Arts, Media and Publishing",10,~
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000021,Leicester and Leicestershire,,,Total,Advanced Apprenticeship,Total,Male,"Agriculture, Horticulture and Animal Care",30,10
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000021,Leicester and Leicestershire,,,Total,Advanced Apprenticeship,Total,Male,Social Sciences,~,~
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000021,Leicester and Leicestershire,,,Total,Advanced Apprenticeship,Total,Male,Science and Mathematics,~,~
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000021,Leicester and Leicestershire,,,Total,Advanced Apprenticeship,Total,Male,Total,1380,630
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000021,Leicester and Leicestershire,,,Total,Advanced Apprenticeship,Total,Male,"Health, Public Services and Care",90,30
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000021,Leicester and Leicestershire,,,Total,Advanced Apprenticeship,Total,Total,Total,2600,1310
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000021,Leicester and Leicestershire,,,Total,Advanced Apprenticeship,Total,Total,"Agriculture, Horticulture and Animal Care",60,20
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000021,Leicester and Leicestershire,,,Total,Advanced Apprenticeship,Total,Total,"Arts, Media and Publishing",20,10
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000021,Leicester and Leicestershire,,,Total,Advanced Apprenticeship,Total,Total,"Business, Administration and Law",670,380
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000021,Leicester and Leicestershire,,,Total,Advanced Apprenticeship,Total,Total,"Construction, Planning and the Built Environment",200,50
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000021,Leicester and Leicestershire,,,Total,Advanced Apprenticeship,Total,Total,Education and Training,90,40
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000021,Leicester and Leicestershire,,,Total,Advanced Apprenticeship,Total,Total,Engineering and Manufacturing Technologies,600,250
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000021,Leicester and Leicestershire,,,Total,Advanced Apprenticeship,Total,Total,Social Sciences,~,~
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000021,Leicester and Leicestershire,,,Total,Advanced Apprenticeship,Total,Total,Science and Mathematics,~,~
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000021,Leicester and Leicestershire,,,Total,Advanced Apprenticeship,Total,Total,Retail and Commercial Enterprise,170,110
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000021,Leicester and Leicestershire,,,Total,Advanced Apprenticeship,Total,Total,"Health, Public Services and Care",620,320
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000021,Leicester and Leicestershire,,,Total,Advanced Apprenticeship,Total,Total,"Leisure, Travel and Tourism",70,70
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000021,Leicester and Leicestershire,,,Total,Advanced Apprenticeship,Total,Total,Information and Communication Technology,110,80
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000021,Leicester and Leicestershire,,,Total,Advanced Apprenticeship,Under 19,Female,Engineering and Manufacturing Technologies,10,~
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000021,Leicester and Leicestershire,,,Total,Advanced Apprenticeship,Under 19,Female,Retail and Commercial Enterprise,20,30
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000021,Leicester and Leicestershire,,,Total,Advanced Apprenticeship,Under 19,Female,"Arts, Media and Publishing",~,~
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000021,Leicester and Leicestershire,,,Total,Advanced Apprenticeship,Under 19,Female,Social Sciences,~,~
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000021,Leicester and Leicestershire,,,Total,Advanced Apprenticeship,Under 19,Female,Education and Training,10,~
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000021,Leicester and Leicestershire,,,Total,Advanced Apprenticeship,Under 19,Female,"Health, Public Services and Care",110,60
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000021,Leicester and Leicestershire,,,Total,Advanced Apprenticeship,Under 19,Female,"Business, Administration and Law",60,50
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000021,Leicester and Leicestershire,,,Total,Advanced Apprenticeship,Under 19,Female,"Construction, Planning and the Built Environment",10,~
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000021,Leicester and Leicestershire,,,Total,Advanced Apprenticeship,Under 19,Female,"Agriculture, Horticulture and Animal Care",~,~
+201920,Academic year,Local enterprise partnership,E92000001,England,E37000021,Leicester and Leicestershire,,,Total,Advanced Apprenticeship,Under 19,Female,Science and Mathematics,~,~
