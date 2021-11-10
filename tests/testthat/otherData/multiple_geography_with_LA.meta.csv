@@ -1,8 +1,0 @@
-col_name,col_type,label,indicator_grouping,indicator_unit,indicator_dp,filter_hint,filter_grouping_column
-ethnicity_group,Filter,Ethnic group,,,,,
-apps_level,Filter,Apprenticeship Level,,,,,
-age_summary,Filter,Age -group,,,,,
-gender,Filter,Gender -group,,,,,
-ssa_t1_desc,Filter,Sector Subject Area (tier 1),,,,,
-starts,Indicator,Starts,,,0,,
-achievements,Indicator,Achievements,,,0,,
