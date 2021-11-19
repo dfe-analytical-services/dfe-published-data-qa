@@ -192,3 +192,9 @@ test_that("sch_level_missing_col", {
 
   expect_equal(screeningOutput$results %>% filter(result == "FAIL") %>% nrow() > 0, TRUE)
 })
+
+test_that("prov_level_diff_codes", {
+  screeningOutput <- testOther("../../tests/testthat/sch_prov/prov_level_diff_codes.csv")
+
+  expect_equal(screeningOutput$results %>% filter(result == "FAIL") %>% nrow(), 0)
+})

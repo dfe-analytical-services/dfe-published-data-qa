@@ -1613,60 +1613,67 @@ sch_prov_duplicates <- function(data) {
       "result" = "IGNORE"
     )
   } else {
-    geog_data <- data %>%
-      select(any_of(c(
-        "geographic_level", geography_matrix[13:14, 2:3]
-      ))) %>%
-      distinct() %>%
-      mutate(ID = 1:n())
-
-    names <- geog_data %>%
-      select(ID, geographic_level, contains("name")) %>%
-      mutate_if(is.numeric, as.character) %>%
-      melt(id.vars = c("ID", "geographic_level"), na.rm = TRUE) %>%
-      select(ID, geographic_level, name = value)
-
-    codes <- geog_data %>%
-      select(ID, geographic_level, !contains("name")) %>%
-      mutate_if(is.numeric, as.character) %>%
-      melt(id.vars = c("ID", "geographic_level"), na.rm = TRUE) %>%
-      select(ID, geographic_level, code = value)
-
-    lookup_creator <- names %>%
-      full_join(codes, by = c("ID", "geographic_level")) %>%
-      select(-c(ID)) %>%
-      distinct() %>%
-      group_by(geographic_level) %>%
-      add_count(name, name = "name_n") %>%
-      add_count(code, name = "code_n") %>%
-      ungroup()
-
-    multi_count_code <- lookup_creator %>%
-      filter(code_n > 1) %>%
-      mutate(combo = paste0(code, " - ", code_n, " different names")) %>%
-      select(combo) %>%
-      distinct() %>%
-      pull()
-
-    if (length(multi_count_code) == 0) {
+    if (length(unique(data$geographic_level)) == 1 & "Provider" %in% unique(data$geographic_level)) {
       output <- list(
-        "message" = "Every geography code has only one assigned name.",
-        "result" = "PASS"
+        "message" = "Provider is the only geography level in this file. Providers sharing codes are permitted in EES.",
+        "result" = "IGNORE"
       )
     } else {
-      if (length(multi_count_code) == 1) {
+      geog_data <- data %>%
+        select(any_of(c(
+          "geographic_level", geography_matrix[13:14, 2:3]
+        ))) %>%
+        distinct() %>%
+        mutate(ID = 1:n())
+
+      names <- geog_data %>%
+        select(ID, geographic_level, contains("name")) %>%
+        mutate_if(is.numeric, as.character) %>%
+        melt(id.vars = c("ID", "geographic_level"), na.rm = TRUE) %>%
+        select(ID, geographic_level, name = value)
+
+      codes <- geog_data %>%
+        select(ID, geographic_level, !contains("name")) %>%
+        mutate_if(is.numeric, as.character) %>%
+        melt(id.vars = c("ID", "geographic_level"), na.rm = TRUE) %>%
+        select(ID, geographic_level, code = value)
+
+      lookup_creator <- names %>%
+        full_join(codes, by = c("ID", "geographic_level")) %>%
+        select(-c(ID)) %>%
+        distinct() %>%
+        group_by(geographic_level) %>%
+        add_count(name, name = "name_n") %>%
+        add_count(code, name = "code_n") %>%
+        ungroup()
+
+      multi_count_code <- lookup_creator %>%
+        filter(code_n > 1) %>%
+        mutate(combo = paste0(code, " - ", code_n, " different names")) %>%
+        select(combo) %>%
+        distinct() %>%
+        pull()
+
+      if (length(multi_count_code) == 0) {
         output <- list(
-          "message" = paste0("The following school or provider code has multiple assigned names: ", paste0(multi_count_code), ". 
-                             <br> - We are working on a fix in EES, though for the time being this will cause problems, please contact us if this is an issue."),
-          "result" = "FAIL"
+          "message" = "Every geography code has only one assigned name.",
+          "result" = "PASS"
         )
       } else {
-        if (length(multi_count_code) > 1) {
+        if (length(multi_count_code) == 1) {
           output <- list(
-            "message" = paste0("The following school or provider codes have multiple assigned names: ", paste0(multi_count_code, collapse = ", "), ".
-                              <br> - We are working on a fix in EES, though for the time being this will cause problems, please contact us if this is an issue."),
+            "message" = paste0("The following school or provider code has multiple assigned names: ", paste0(multi_count_code), ". 
+                             <br> - We are working on a fix in EES, though for the time being this will cause problems, please contact us if this is an issue."),
             "result" = "FAIL"
           )
+        } else {
+          if (length(multi_count_code) > 1) {
+            output <- list(
+              "message" = paste0("The following school or provider codes have multiple assigned names: ", paste0(multi_count_code, collapse = ", "), ".
+                              <br> - We are working on a fix in EES, though for the time being this will cause problems, please contact us if this is an issue."),
+              "result" = "FAIL"
+            )
+          }
         }
       }
     }
