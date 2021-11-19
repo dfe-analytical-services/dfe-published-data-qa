@@ -128,12 +128,17 @@ test_that("ignored_rows", {
   expect_equal(testIndividualTest(pathStart, "ignored_rows"), "PASS WITH NOTE")
 })
 
-# lad_combinations -------------------------------------------------------------------------------------------------------
+# lep_combinations -------------------------------------------------------------------------------------------------------
+
+test_that("lep_combinations", {
+  expect_equal(testIndividualTest(pathStart, "lep_combinations"), "FAIL")
+})
+
+# pcon_combinations -------------------------------------------------------------------------------------------------------
 
 test_that("pcon_combinations", {
   expect_equal(testIndividualTest(pathStart, "pcon_combinations"), "FAIL")
 })
-
 
 # lad_combinations -------------------------------------------------------------------------------------------------------
 
