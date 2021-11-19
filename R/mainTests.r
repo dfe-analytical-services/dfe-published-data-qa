@@ -24,6 +24,7 @@ mainTests <- function(data_character, meta_character, datafile, metafile) {
     la_col_present(datafile), # active test
     overcompleted_cols(datafile, metafile), # active test
     ignored_rows(datafile), # active test
+    pcon_combinations(datafile), # active test
     lad_combinations(datafile), # active test
     la_combinations(datafile), # active test
     region_combinations(datafile), # active test
@@ -1182,8 +1183,52 @@ ignored_rows <- function(data) {
   return(output)
 }
 
+# pcon_combinations -------------------------------------
+# checking that pcon code and name combinations are valid
+
+pcon_combinations <- function(data) {
+  if (!all(c("pcon_name", "pcon_code") %in% names(data))) {
+    output <- list(
+      "message" = "This data file does not contain both local authority district columns.",
+      "result" = "IGNORE"
+    )
+  } else {
+    invalid_values <- data %>%
+      select("pcon_name", "pcon_code") %>%
+      unique() %>%
+      filter(!is.na(.)) %>%
+      filter(pcon_code != "") %>%
+      filter(pcon_code != ":") %>%
+      filter(pcon_code != "z") %>%
+      mutate(combo = paste(pcon_code, pcon_name)) %>%
+      pull(combo) %>%
+      .[!(. %in% expected_pcon_combinations)]
+
+    if (length(invalid_values) == 0) {
+      output <- list(
+        "message" = "All pcon_code and pcon_name combinations are valid.",
+        "result" = "PASS"
+      )
+    } else {
+      if (length(invalid_values) == 1) {
+        output <- list(
+          "message" = paste0("The following pcon_code and pcon_name combination is invalid: '", paste0(invalid_values), "'. <br> - We do not expect any combinations outside of the <a href='https://github.com/dfe-analytical-services/dfe-published-data-qa/blob/master/data/pcons.csv' target='_blank'>standard geographies lookup</a> (case sensitive), please check your name and code combinations against this lookup."),
+          "result" = "FAIL"
+        )
+      } else {
+        output <- list(
+          "message" = paste0("The following pcon_code and pcon_name combinations are invalid: '", paste0(invalid_values, collapse = "', '"), "'. <br> - We do not expect any combinations outside of the <a href='https://github.com/dfe-analytical-services/dfe-published-data-qa/blob/master/data/pcons.csv' target='_blank'>standard geographies lookup</a> (case sensitive), please check your name and code combinations against this lookup."),
+          "result" = "FAIL"
+        )
+      }
+    }
+  }
+
+  return(output)
+}
+
 # lad_combinations -------------------------------------
-# checking that la code and name combinations are valid
+# checking that lad code and name combinations are valid
 
 lad_combinations <- function(data) {
   if (!all(c("lad_name", "lad_code") %in% names(data))) {
@@ -1196,13 +1241,13 @@ lad_combinations <- function(data) {
       select("lad_name", "lad_code") %>%
       unique() %>%
       filter(!is.na(.)) %>%
-      filter(lad_name != "") %>%
-      filter(lad_name != ":") %>%
-      filter(lad_name != "z") %>%
+      filter(lad_code != "") %>%
+      filter(lad_code != ":") %>%
+      filter(lad_code != "z") %>%
       mutate(combo = paste(lad_code, lad_name)) %>%
       pull(combo) %>%
       .[!(. %in% expected_lad_combinations)]
-    
+
     if (length(invalid_values) == 0) {
       output <- list(
         "message" = "All lad_code and lad_name combinations are valid.",
@@ -1211,18 +1256,18 @@ lad_combinations <- function(data) {
     } else {
       if (length(invalid_values) == 1) {
         output <- list(
-          "message" = paste0("The following lad_code and lad_name combination is invalid: '", paste0(invalid_values), "'. <br> - We do not expect any combinations outside of the <a href='https://github.com/dfe-analytical-services/dfe-published-data-qa/blob/master/data/las.csv' target='_blank'>standard geographies lookup</a> (case sensitive), please check your name and code combinations against this lookup."),
+          "message" = paste0("The following lad_code and lad_name combination is invalid: '", paste0(invalid_values), "'. <br> - We do not expect any combinations outside of the <a href='https://github.com/dfe-analytical-services/dfe-published-data-qa/blob/master/data/lads.csv' target='_blank'>standard geographies lookup</a> (case sensitive), please check your name and code combinations against this lookup."),
           "result" = "FAIL"
         )
       } else {
         output <- list(
-          "message" = paste0("The following lad_code and lad_name combinations are invalid: '", paste0(invalid_values, collapse = "', '"), "'. <br> - We do not expect any combinations outside of the <a href='https://github.com/dfe-analytical-services/dfe-published-data-qa/blob/master/data/las.csv' target='_blank'>standard geographies lookup</a> (case sensitive), please check your name and code combinations against this lookup."),
+          "message" = paste0("The following lad_code and lad_name combinations are invalid: '", paste0(invalid_values, collapse = "', '"), "'. <br> - We do not expect any combinations outside of the <a href='https://github.com/dfe-analytical-services/dfe-published-data-qa/blob/master/data/lads.csv' target='_blank'>standard geographies lookup</a> (case sensitive), please check your name and code combinations against this lookup."),
           "result" = "FAIL"
         )
       }
     }
   }
-  
+
   return(output)
 }
 
