@@ -1189,7 +1189,7 @@ ignored_rows <- function(data) {
 lep_combinations <- function(data) {
   if (!all(c("local_enterprise_partnership_name", "local_enterprise_partnership_code") %in% names(data))) {
     output <- list(
-      "message" = "This data file does not contain both local authority district columns.",
+      "message" = "This data file does not contain both local enterprise partnership columns.",
       "result" = "IGNORE"
     )
   } else {
@@ -1233,7 +1233,7 @@ lep_combinations <- function(data) {
 pcon_combinations <- function(data) {
   if (!all(c("pcon_name", "pcon_code") %in% names(data))) {
     output <- list(
-      "message" = "This data file does not contain both local authority district columns.",
+      "message" = "This data file does not contain both parliamentary constituency columns.",
       "result" = "IGNORE"
     )
   } else {
