@@ -198,3 +198,10 @@ test_that("prov_level_diff_codes", {
 
   expect_equal(screeningOutput$results %>% filter(result == "FAIL") %>% nrow(), 0)
 })
+
+
+test_that("prov_level_diff_names", {
+  screeningOutput <- testOther("../../tests/testthat/sch_prov/prov_level_diff_names.csv")
+  
+  expect_equal(screeningOutput$results %>% filter(result == "FAIL") %>% nrow(), 0)
+})
