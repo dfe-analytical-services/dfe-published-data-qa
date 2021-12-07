@@ -1,0 +1,342 @@
+lad_code,lad_name,date_of_introduction,date_of_termination,status,new_la_code,la_name,old_la_code
+E07000223,Adur,,,live,E10000032,West Sussex,938
+E07000026,Allerdale,,,live,E10000006,Cumbria,909
+E07000032,Amber Valley,,,live,E10000007,Derbyshire,830
+E07000224,Arun,,,live,E10000032,West Sussex,938
+E07000170,Ashfield,,,live,E10000024,Nottinghamshire,891
+E07000105,Ashford,,,live,E10000016,Kent,886
+E07000004,Aylesbury Vale,,2019-12-01,terminated,E10000002,Buckinghamshire,825
+E07000200,Babergh,,,live,E10000029,Suffolk,935
+E09000002,Barking and Dagenham,,,live,E09000002,Barking and Dagenham,301
+E09000003,Barnet,,,live,E09000003,Barnet,302
+E08000016,Barnsley,,,live,E08000016,Barnsley,370
+E07000027,Barrow-in-Furness,,,live,E10000006,Cumbria,909
+E07000066,Basildon,,,live,E10000012,Essex,881
+E07000084,Basingstoke and Deane,,,live,E10000014,Hampshire,850
+E07000171,Bassetlaw,,,live,E10000024,Nottinghamshire,891
+E06000022,Bath and North East Somerset,,,live,E06000022,Bath and North East Somerset,800
+E06000055,Bedford,,,live,E06000055,Bedford,822
+E09000004,Bexley,,,live,E09000004,Bexley,303
+E08000025,Birmingham,,,live,E08000025,Birmingham,330
+E07000129,Blaby,,,live,E10000018,Leicestershire,855
+E06000008,Blackburn with Darwen,,,live,E06000008,Blackburn with Darwen,889
+E06000009,Blackpool,,,live,E06000009,Blackpool,890
+E07000033,Bolsover,,,live,E10000007,Derbyshire,830
+E08000001,Bolton,,,live,E08000001,Bolton,350
+E07000136,Boston,,,live,E10000019,Lincolnshire,925
+E06000028,Bournemouth,,2018-12-01,terminated,E06000028,Bournemouth,837
+E06000058,"Bournemouth, Christchurch and Poole",2019-04-01,,live,E06000058,"Bournemouth, Christchurch and Poole",839
+E06000036,Bracknell Forest,,,live,E06000036,Bracknell Forest,867
+E08000032,Bradford,,,live,E08000032,Bradford,380
+E07000067,Braintree,,,live,E10000012,Essex,881
+E07000143,Breckland,,,live,E10000020,Norfolk,926
+E09000005,Brent,,,live,E09000005,Brent,304
+E07000068,Brentwood,,,live,E10000012,Essex,881
+E06000043,Brighton and Hove,,,live,E06000043,Brighton and Hove,846
+E06000023,"Bristol, City of",,,live,E06000023,"Bristol, City of",801
+E07000144,Broadland,,,live,E10000020,Norfolk,926
+E09000006,Bromley,,,live,E09000006,Bromley,305
+E07000234,Bromsgrove,,,live,E10000034,Worcestershire,885
+E07000095,Broxbourne,,,live,E10000015,Hertfordshire,919
+E07000172,Broxtowe,,,live,E10000024,Nottinghamshire,891
+E06000060,Buckinghamshire,2020-04-01,,live,E06000060,Buckinghamshire,825
+E07000117,Burnley,,,live,E10000017,Lancashire,888
+E08000002,Bury,,,live,E08000002,Bury,351
+E08000033,Calderdale,,,live,E08000033,Calderdale,381
+E07000008,Cambridge,,,live,E10000003,Cambridgeshire,873
+E09000007,Camden,,,live,E09000007,Camden,202
+E07000192,Cannock Chase,,,live,E10000028,Staffordshire,860
+E07000106,Canterbury,,,live,E10000016,Kent,886
+E07000028,Carlisle,,,live,E10000006,Cumbria,909
+E07000069,Castle Point,,,live,E10000012,Essex,881
+E06000056,Central Bedfordshire,,,live,E06000056,Central Bedfordshire,823
+E07000130,Charnwood,,,live,E10000018,Leicestershire,855
+E07000070,Chelmsford,,,live,E10000012,Essex,881
+E07000078,Cheltenham,,,live,E10000013,Gloucestershire,916
+E07000177,Cherwell,,,live,E10000025,Oxfordshire,931
+E06000049,Cheshire East,,,live,E06000049,Cheshire East,895
+E06000050,Cheshire West and Chester,,,live,E06000050,Cheshire West and Chester,896
+E07000034,Chesterfield,,,live,E10000007,Derbyshire,830
+E07000225,Chichester,,,live,E10000032,West Sussex,938
+E07000005,Chiltern,,2019-12-01,terminated,E10000002,Buckinghamshire,825
+E07000118,Chorley,,,live,E10000017,Lancashire,888
+E07000048,Christchurch,,2018-12-01,terminated,E10000009,Dorset,835
+E09000001,City of London,,,live,E09000001,City of London,201
+E07000071,Colchester,,,live,E10000012,Essex,881
+E07000029,Copeland,,,live,E10000006,Cumbria,909
+E07000150,Corby,,2020-04-01,terminated,E10000021,Northamptonshire,928
+E06000052,Cornwall,,,live,E06000052,Cornwall,908
+E07000079,Cotswold,,,live,E10000013,Gloucestershire,916
+E06000047,County Durham,,,live,E06000047,County Durham,840
+E08000026,Coventry,,,live,E08000026,Coventry,331
+E07000163,Craven,,,live,E10000023,North Yorkshire,815
+E07000226,Crawley,,,live,E10000032,West Sussex,938
+E09000008,Croydon,,,live,E09000008,Croydon,306
+E07000096,Dacorum,,,live,E10000015,Hertfordshire,919
+E06000005,Darlington,,,live,E06000005,Darlington,841
+E07000107,Dartford,,,live,E10000016,Kent,886
+E07000151,Daventry,,2020-04-01,terminated,E10000021,Northamptonshire,928
+E06000015,Derby,,,live,E06000015,Derby,831
+E07000035,Derbyshire Dales,,,live,E10000007,Derbyshire,830
+E08000017,Doncaster,,,live,E08000017,Doncaster,371
+E06000059,Dorset,2019-04-01,,live,E06000059,Dorset,838
+E07000108,Dover,,,live,E10000016,Kent,886
+E08000027,Dudley,,,live,E08000027,Dudley,332
+E09000009,Ealing,,,live,E09000009,Ealing,307
+E07000009,East Cambridgeshire,,,live,E10000003,Cambridgeshire,873
+E07000040,East Devon,,,live,E10000008,Devon,878
+E07000049,East Dorset,,2018-12-01,terminated,E10000009,Dorset,835
+E07000085,East Hampshire,,,live,E10000014,Hampshire,850
+E07000242,East Hertfordshire,,,live,E10000015,Hertfordshire,919
+E07000097,East Hertfordshire,,2011-12-01,terminated,E10000015,Hertfordshire,919
+E07000137,East Lindsey,,,live,E10000019,Lincolnshire,925
+E07000152,East Northamptonshire,,2020-04-01,terminated,E10000021,Northamptonshire,928
+E06000011,East Riding of Yorkshire,,,live,E06000011,East Riding of Yorkshire,811
+E07000193,East Staffordshire,,,live,E10000028,Staffordshire,860
+E07000244,East Suffolk,2019-12-01,,live,E10000029,Suffolk,935
+E07000061,Eastbourne,,,live,E10000011,East Sussex,845
+E07000086,Eastleigh,,,live,E10000014,Hampshire,850
+E07000030,Eden,,,live,E10000006,Cumbria,909
+E07000207,Elmbridge,,,live,E10000030,Surrey,936
+E09000010,Enfield,,,live,E09000010,Enfield,308
+E07000072,Epping Forest,,,live,E10000012,Essex,881
+E07000208,Epsom and Ewell,,,live,E10000030,Surrey,936
+E07000036,Erewash,,,live,E10000007,Derbyshire,830
+E07000041,Exeter,,,live,E10000008,Devon,878
+E07000087,Fareham,,,live,E10000014,Hampshire,850
+E07000010,Fenland,,,live,E10000003,Cambridgeshire,873
+E07000112,Folkestone and Hythe,2018-12-01,,live,E10000016,Kent,886
+E07000201,Forest Heath,,2018-12-01,terminated,E10000029,Suffolk,935
+E07000080,Forest of Dean,,,live,E10000013,Gloucestershire,916
+E07000119,Fylde,,,live,E10000017,Lancashire,888
+E08000037,Gateshead,,,live,E08000037,Gateshead,390
+E08000020,Gateshead,,2011-12-01,terminated,E08000020,Gateshead,390
+E07000173,Gedling,,,live,E10000024,Nottinghamshire,891
+E07000081,Gloucester,,,live,E10000013,Gloucestershire,916
+E07000088,Gosport,,,live,E10000014,Hampshire,850
+E07000109,Gravesham,,,live,E10000016,Kent,886
+E07000145,Great Yarmouth,,,live,E10000020,Norfolk,926
+E09000011,Greenwich,,,live,E09000011,Greenwich,203
+E07000209,Guildford,,,live,E10000030,Surrey,936
+E09000012,Hackney,,,live,E09000012,Hackney,204
+E06000006,Halton,,,live,E06000006,Halton,876
+E07000164,Hambleton,,,live,E10000023,North Yorkshire,815
+E09000013,Hammersmith and Fulham,,,live,E09000013,Hammersmith and Fulham,205
+E07000131,Harborough,,,live,E10000018,Leicestershire,855
+E09000014,Haringey,,,live,E09000014,Haringey,309
+E07000073,Harlow,,,live,E10000012,Essex,881
+E07000165,Harrogate,,,live,E10000023,North Yorkshire,815
+E09000015,Harrow,,,live,E09000015,Harrow,310
+E07000089,Hart,,,live,E10000014,Hampshire,850
+E06000001,Hartlepool,,,live,E06000001,Hartlepool,805
+E07000062,Hastings,,,live,E10000011,East Sussex,845
+E07000090,Havant,,,live,E10000014,Hampshire,850
+E09000016,Havering,,,live,E09000016,Havering,311
+E06000019,"Herefordshire, County of",,,live,E06000019,"Herefordshire, County of",884
+E07000098,Hertsmere,,,live,E10000015,Hertfordshire,919
+E07000037,High Peak,,,live,E10000007,Derbyshire,830
+E09000017,Hillingdon,,,live,E09000017,Hillingdon,312
+E07000132,Hinckley and Bosworth,,,live,E10000018,Leicestershire,855
+E07000227,Horsham,,,live,E10000032,West Sussex,938
+E09000018,Hounslow,,,live,E09000018,Hounslow,313
+E07000011,Huntingdonshire,,,live,E10000003,Cambridgeshire,873
+E07000120,Hyndburn,,,live,E10000017,Lancashire,888
+E07000202,Ipswich,,,live,E10000029,Suffolk,935
+E06000046,Isle of Wight,,,live,E06000046,Isle of Wight,921
+E06000053,Isles of Scilly,,,live,E06000053,Isles of Scilly,420
+E09000019,Islington,,,live,E09000019,Islington,206
+E09000020,Kensington and Chelsea,,,live,E09000020,Kensington and Chelsea,207
+E07000153,Kettering,,2020-04-01,terminated,E10000021,Northamptonshire,928
+E07000146,King's Lynn and West Norfolk,,,live,E10000020,Norfolk,926
+E06000010,"Kingston upon Hull, City of",,,live,E06000010,"Kingston upon Hull, City of",810
+E09000021,Kingston upon Thames,,,live,E09000021,Kingston upon Thames,314
+E08000034,Kirklees,,,live,E08000034,Kirklees,382
+E08000011,Knowsley,,,live,E08000011,Knowsley,340
+E09000022,Lambeth,,,live,E09000022,Lambeth,208
+E07000121,Lancaster,,,live,E10000017,Lancashire,888
+E08000035,Leeds,,,live,E08000035,Leeds,383
+E06000016,Leicester,,,live,E06000016,Leicester,856
+E07000063,Lewes,,,live,E10000011,East Sussex,845
+E09000023,Lewisham,,,live,E09000023,Lewisham,209
+E07000194,Lichfield,,,live,E10000028,Staffordshire,860
+E07000138,Lincoln,,,live,E10000019,Lincolnshire,925
+E08000012,Liverpool,,,live,E08000012,Liverpool,341
+E06000032,Luton,,,live,E06000032,Luton,821
+E07000110,Maidstone,,,live,E10000016,Kent,886
+E07000074,Maldon,,,live,E10000012,Essex,881
+E07000235,Malvern Hills,,,live,E10000034,Worcestershire,885
+E08000003,Manchester,,,live,E08000003,Manchester,352
+E07000174,Mansfield,,,live,E10000024,Nottinghamshire,891
+E06000035,Medway,,,live,E06000035,Medway,887
+E07000133,Melton,,,live,E10000018,Leicestershire,855
+E07000187,Mendip,,,live,E10000027,Somerset,933
+E09000024,Merton,,,live,E09000024,Merton,315
+E07000042,Mid Devon,,,live,E10000008,Devon,878
+E07000203,Mid Suffolk,,,live,E10000029,Suffolk,935
+E07000228,Mid Sussex,,,live,E10000032,West Sussex,938
+E06000002,Middlesbrough,,,live,E06000002,Middlesbrough,806
+E06000042,Milton Keynes,,,live,E06000042,Milton Keynes,826
+E07000210,Mole Valley,,,live,E10000030,Surrey,936
+E07000091,New Forest,,,live,E10000014,Hampshire,850
+E07000175,Newark and Sherwood,,,live,E10000024,Nottinghamshire,891
+E07000195,Newcastle-under-Lyme,,,live,E10000028,Staffordshire,860
+E08000021,Newcastle upon Tyne,,,live,E08000021,Newcastle upon Tyne,391
+E09000025,Newham,,,live,E09000025,Newham,316
+E07000043,North Devon,,,live,E10000008,Devon,878
+E07000050,North Dorset,,2018-12-01,terminated,E10000009,Dorset,835
+E07000038,North East Derbyshire,,,live,E10000007,Derbyshire,830
+E06000012,North East Lincolnshire,,,live,E06000012,North East Lincolnshire,812
+E07000099,North Hertfordshire,,,live,E10000015,Hertfordshire,919
+E07000139,North Kesteven,,,live,E10000019,Lincolnshire,925
+E06000013,North Lincolnshire,,,live,E06000013,North Lincolnshire,813
+E07000147,North Norfolk,,,live,E10000020,Norfolk,926
+E06000061,North Northamptonshire,2021-04-01,,live,E06000061,North Northamptonshire,940
+E06000024,North Somerset,,,live,E06000024,North Somerset,802
+E08000022,North Tyneside,,,live,E08000022,North Tyneside,392
+E07000218,North Warwickshire,,,live,E10000031,Warwickshire,937
+E07000134,North West Leicestershire,,,live,E10000018,Leicestershire,855
+E07000154,Northampton,,2020-04-01,terminated,E10000021,Northamptonshire,928
+E06000057,Northumberland,2015-04-01,,live,E06000057,Northumberland,929
+E06000048,Northumberland,,2011-12-01,terminated,E06000048,Northumberland,929
+E07000148,Norwich,,,live,E10000020,Norfolk,926
+E06000018,Nottingham,,,live,E06000018,Nottingham,892
+E07000219,Nuneaton and Bedworth,,,live,E10000031,Warwickshire,937
+E07000135,Oadby and Wigston,,,live,E10000018,Leicestershire,855
+E08000004,Oldham,,,live,E08000004,Oldham,353
+E07000178,Oxford,,,live,E10000025,Oxfordshire,931
+E07000122,Pendle,,,live,E10000017,Lancashire,888
+E06000031,Peterborough,,,live,E06000031,Peterborough,874
+E06000026,Plymouth,,,live,E06000026,Plymouth,879
+E06000029,Poole,,2018-12-01,terminated,E06000029,Poole,836
+E06000044,Portsmouth,,,live,E06000044,Portsmouth,851
+E07000123,Preston,,,live,E10000017,Lancashire,888
+E07000051,Purbeck,,2018-12-01,terminated,E10000009,Dorset,835
+E06000038,Reading,,,live,E06000038,Reading,870
+E09000026,Redbridge,,,live,E09000026,Redbridge,317
+E06000003,Redcar and Cleveland,,,live,E06000003,Redcar and Cleveland,807
+E07000236,Redditch,,,live,E10000034,Worcestershire,885
+E07000211,Reigate and Banstead,,,live,E10000030,Surrey,936
+E07000124,Ribble Valley,,,live,E10000017,Lancashire,888
+E09000027,Richmond upon Thames,,,live,E09000027,Richmond upon Thames,318
+E07000166,Richmondshire,,,live,E10000023,North Yorkshire,815
+E08000005,Rochdale,,,live,E08000005,Rochdale,354
+E07000075,Rochford,,,live,E10000012,Essex,881
+E07000125,Rossendale,,,live,E10000017,Lancashire,888
+E07000064,Rother,,,live,E10000011,East Sussex,845
+E08000018,Rotherham,,,live,E08000018,Rotherham,372
+E07000220,Rugby,,,live,E10000031,Warwickshire,937
+E07000212,Runnymede,,,live,E10000030,Surrey,936
+E07000176,Rushcliffe,,,live,E10000024,Nottinghamshire,891
+E07000092,Rushmoor,,,live,E10000014,Hampshire,850
+E06000017,Rutland,,,live,E06000017,Rutland,857
+E07000167,Ryedale,,,live,E10000023,North Yorkshire,815
+E08000006,Salford,,,live,E08000006,Salford,355
+E08000028,Sandwell,,,live,E08000028,Sandwell,333
+E07000168,Scarborough,,,live,E10000023,North Yorkshire,815
+E07000188,Sedgemoor,,,live,E10000027,Somerset,933
+E08000014,Sefton,,,live,E08000014,Sefton,343
+E07000169,Selby,,,live,E10000023,North Yorkshire,815
+E07000111,Sevenoaks,,,live,E10000016,Kent,886
+E08000019,Sheffield,,,live,E08000019,Sheffield,373
+E07000112,Shepway,,2017-12-01,terminated,E10000016,Kent,886
+E06000051,Shropshire,,,live,E06000051,Shropshire,893
+E06000039,Slough,,,live,E06000039,Slough,871
+E08000029,Solihull,,,live,E08000029,Solihull,334
+E07000246,Somerset West and Taunton,2019-12-01,,live,E10000027,Somerset,933
+E07000006,South Bucks,,2019-12-01,terminated,E10000002,Buckinghamshire,825
+E07000012,South Cambridgeshire,,,live,E10000003,Cambridgeshire,873
+E07000039,South Derbyshire,,,live,E10000007,Derbyshire,830
+E06000025,South Gloucestershire,,,live,E06000025,South Gloucestershire,803
+E07000044,South Hams,,,live,E10000008,Devon,878
+E07000140,South Holland,,,live,E10000019,Lincolnshire,925
+E07000141,South Kesteven,,,live,E10000019,Lincolnshire,925
+E07000031,South Lakeland,,,live,E10000006,Cumbria,909
+E07000149,South Norfolk,,,live,E10000020,Norfolk,926
+E07000155,South Northamptonshire,,2020-04-01,terminated,E10000021,Northamptonshire,928
+E07000179,South Oxfordshire,,,live,E10000025,Oxfordshire,931
+E07000126,South Ribble,,,live,E10000017,Lancashire,888
+E07000189,South Somerset,,,live,E10000027,Somerset,933
+E07000196,South Staffordshire,,,live,E10000028,Staffordshire,860
+E08000023,South Tyneside,,,live,E08000023,South Tyneside,393
+E06000045,Southampton,,,live,E06000045,Southampton,852
+E06000033,Southend-on-Sea,,,live,E06000033,Southend-on-Sea,882
+E09000028,Southwark,,,live,E09000028,Southwark,210
+E07000213,Spelthorne,,,live,E10000030,Surrey,936
+E07000240,St Albans,,,live,E10000015,Hertfordshire,919
+E07000100,St Albans,,2011-12-01,terminated,E10000015,Hertfordshire,919
+E07000204,St Edmundsbury,,2018-12-01,terminated,E10000029,Suffolk,935
+E08000013,St. Helens,,,live,E08000013,St. Helens,342
+E07000197,Stafford,,,live,E10000028,Staffordshire,860
+E07000198,Staffordshire Moorlands,,,live,E10000028,Staffordshire,860
+E07000243,Stevenage,,,live,E10000015,Hertfordshire,919
+E07000101,Stevenage,,2011-12-01,terminated,E10000015,Hertfordshire,919
+E08000007,Stockport,,,live,E08000007,Stockport,356
+E06000004,Stockton-on-Tees,,,live,E06000004,Stockton-on-Tees,808
+E06000021,Stoke-on-Trent,,,live,E06000021,Stoke-on-Trent,861
+E07000221,Stratford-on-Avon,,,live,E10000031,Warwickshire,937
+E07000082,Stroud,,,live,E10000013,Gloucestershire,916
+E07000205,Suffolk Coastal,,2018-12-01,terminated,E10000029,Suffolk,935
+E08000024,Sunderland,,,live,E08000024,Sunderland,394
+E07000214,Surrey Heath,,,live,E10000030,Surrey,936
+E09000029,Sutton,,,live,E09000029,Sutton,319
+E07000113,Swale,,,live,E10000016,Kent,886
+E06000030,Swindon,,,live,E06000030,Swindon,866
+E08000008,Tameside,,,live,E08000008,Tameside,357
+E07000199,Tamworth,,,live,E10000028,Staffordshire,860
+E07000215,Tandridge,,,live,E10000030,Surrey,936
+E07000190,Taunton Deane,,2018-12-01,terminated,E10000027,Somerset,933
+E07000045,Teignbridge,,,live,E10000008,Devon,878
+E06000020,Telford and Wrekin,,,live,E06000020,Telford and Wrekin,894
+E07000076,Tendring,,,live,E10000012,Essex,881
+E07000093,Test Valley,,,live,E10000014,Hampshire,850
+E07000083,Tewkesbury,,,live,E10000013,Gloucestershire,916
+E07000114,Thanet,,,live,E10000016,Kent,886
+E07000102,Three Rivers,,,live,E10000015,Hertfordshire,919
+E06000034,Thurrock,,,live,E06000034,Thurrock,883
+E07000115,Tonbridge and Malling,,,live,E10000016,Kent,886
+E06000027,Torbay,,,live,E06000027,Torbay,880
+E07000046,Torridge,,,live,E10000008,Devon,878
+E09000030,Tower Hamlets,,,live,E09000030,Tower Hamlets,211
+E08000009,Trafford,,,live,E08000009,Trafford,358
+E07000116,Tunbridge Wells,,,live,E10000016,Kent,886
+E07000077,Uttlesford,,,live,E10000012,Essex,881
+E07000180,Vale of White Horse,,,live,E10000025,Oxfordshire,931
+E08000036,Wakefield,,,live,E08000036,Wakefield,384
+E08000030,Walsall,,,live,E08000030,Walsall,335
+E09000031,Waltham Forest,,,live,E09000031,Waltham Forest,320
+E09000032,Wandsworth,,,live,E09000032,Wandsworth,212
+E06000007,Warrington,,,live,E06000007,Warrington,877
+E07000222,Warwick,,,live,E10000031,Warwickshire,937
+E07000103,Watford,,,live,E10000015,Hertfordshire,919
+E07000206,Waveney,,2018-12-01,terminated,E10000029,Suffolk,935
+E07000216,Waverley,,,live,E10000030,Surrey,936
+E07000065,Wealden,,,live,E10000011,East Sussex,845
+E07000156,Wellingborough,,2020-04-01,terminated,E10000021,Northamptonshire,928
+E07000241,Welwyn Hatfield,,,live,E10000015,Hertfordshire,919
+E07000104,Welwyn Hatfield,,2011-12-01,terminated,E10000015,Hertfordshire,919
+E06000037,West Berkshire,,,live,E06000037,West Berkshire,869
+E07000047,West Devon,,,live,E10000008,Devon,878
+E07000052,West Dorset,,2018-12-01,terminated,E10000009,Dorset,835
+E07000127,West Lancashire,,,live,E10000017,Lancashire,888
+E07000142,West Lindsey,,,live,E10000019,Lincolnshire,925
+E06000062,West Northamptonshire,2021-04-01,,live,E06000062,West Northamptonshire,941
+E07000181,West Oxfordshire,,,live,E10000025,Oxfordshire,931
+E07000191,West Somerset,,2018-12-01,terminated,E10000027,Somerset,933
+E07000245,West Suffolk,2019-12-01,,live,E10000029,Suffolk,935
+E09000033,Westminster,,,live,E09000033,Westminster,213
+E07000053,Weymouth and Portland,,2018-12-01,terminated,E10000009,Dorset,835
+E08000010,Wigan,,,live,E08000010,Wigan,359
+E06000054,Wiltshire,,,live,E06000054,Wiltshire,865
+E07000094,Winchester,,,live,E10000014,Hampshire,850
+E06000040,Windsor and Maidenhead,,,live,E06000040,Windsor and Maidenhead,868
+E08000015,Wirral,,,live,E08000015,Wirral,344
+E07000217,Woking,,,live,E10000030,Surrey,936
+E06000041,Wokingham,,,live,E06000041,Wokingham,872
+E08000031,Wolverhampton,,,live,E08000031,Wolverhampton,336
+E07000237,Worcester,,,live,E10000034,Worcestershire,885
+E07000229,Worthing,,,live,E10000032,West Sussex,938
+E07000238,Wychavon,,,live,E10000034,Worcestershire,885
+E07000007,Wycombe,,2019-12-01,terminated,E10000002,Buckinghamshire,825
+E07000128,Wyre,,,live,E10000017,Lancashire,888
+E07000239,Wyre Forest,,,live,E10000034,Worcestershire,885
+E06000014,York,,,live,E06000014,York,816

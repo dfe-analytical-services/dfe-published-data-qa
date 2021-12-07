@@ -24,6 +24,9 @@ mainTests <- function(data_character, meta_character, datafile, metafile) {
     la_col_present(datafile), # active test
     overcompleted_cols(datafile, metafile), # active test
     ignored_rows(datafile), # active test
+    lep_combinations(datafile), # active test
+    pcon_combinations(datafile), # active test
+    lad_combinations(datafile), # active test
     la_combinations(datafile), # active test
     region_combinations(datafile), # active test
     country_combinations(datafile), # active test
@@ -1180,6 +1183,137 @@ ignored_rows <- function(data) {
   }
   return(output)
 }
+# lep_combinations -------------------------------------
+# checking that pcon code and name combinations are valid
+
+lep_combinations <- function(data) {
+  if (!all(c("local_enterprise_partnership_name", "local_enterprise_partnership_code") %in% names(data))) {
+    output <- list(
+      "message" = "This data file does not contain both local enterprise partnership columns.",
+      "result" = "IGNORE"
+    )
+  } else {
+    invalid_values <- data %>%
+      select("local_enterprise_partnership_name", "local_enterprise_partnership_code") %>%
+      unique() %>%
+      filter(!is.na(.)) %>%
+      filter(local_enterprise_partnership_code != "") %>%
+      filter(local_enterprise_partnership_code != ":") %>%
+      filter(local_enterprise_partnership_code != "z") %>%
+      mutate(combo = paste(local_enterprise_partnership_code, local_enterprise_partnership_name)) %>%
+      pull(combo) %>%
+      .[!(. %in% expected_lep_combinations)]
+
+    if (length(invalid_values) == 0) {
+      output <- list(
+        "message" = "All local_enterprise_partnership_code and local_enterprise_partnership_name combinations are valid.",
+        "result" = "PASS"
+      )
+    } else {
+      if (length(invalid_values) == 1) {
+        output <- list(
+          "message" = paste0("The following local_enterprise_partnership_code and local_enterprise_partnership_name combination is invalid: '", paste0(invalid_values), "'. <br> - We do not expect any combinations outside of the <a href='https://github.com/dfe-analytical-services/dfe-published-data-qa/blob/master/data/leps.csv' target='_blank'>standard geographies lookup</a> (case sensitive), please check your name and code combinations against this lookup."),
+          "result" = "FAIL"
+        )
+      } else {
+        output <- list(
+          "message" = paste0("The following local_enterprise_partnership_code and local_enterprise_partnership_name combinations are invalid: '", paste0(invalid_values, collapse = "', '"), "'. <br> - We do not expect any combinations outside of the <a href='https://github.com/dfe-analytical-services/dfe-published-data-qa/blob/master/data/leps.csv' target='_blank'>standard geographies lookup</a> (case sensitive), please check your name and code combinations against this lookup."),
+          "result" = "FAIL"
+        )
+      }
+    }
+  }
+
+  return(output)
+}
+
+# pcon_combinations -------------------------------------
+# checking that pcon code and name combinations are valid
+
+pcon_combinations <- function(data) {
+  if (!all(c("pcon_name", "pcon_code") %in% names(data))) {
+    output <- list(
+      "message" = "This data file does not contain both parliamentary constituency columns.",
+      "result" = "IGNORE"
+    )
+  } else {
+    invalid_values <- data %>%
+      select("pcon_name", "pcon_code") %>%
+      unique() %>%
+      filter(!is.na(.)) %>%
+      filter(pcon_code != "") %>%
+      filter(pcon_code != ":") %>%
+      filter(pcon_code != "z") %>%
+      mutate(combo = paste(pcon_code, pcon_name)) %>%
+      pull(combo) %>%
+      .[!(. %in% expected_pcon_combinations)]
+
+    if (length(invalid_values) == 0) {
+      output <- list(
+        "message" = "All pcon_code and pcon_name combinations are valid.",
+        "result" = "PASS"
+      )
+    } else {
+      if (length(invalid_values) == 1) {
+        output <- list(
+          "message" = paste0("The following pcon_code and pcon_name combination is invalid: '", paste0(invalid_values), "'. <br> - We do not expect any combinations outside of the <a href='https://github.com/dfe-analytical-services/dfe-published-data-qa/blob/master/data/pcons.csv' target='_blank'>standard geographies lookup</a> (case sensitive), please check your name and code combinations against this lookup."),
+          "result" = "FAIL"
+        )
+      } else {
+        output <- list(
+          "message" = paste0("The following pcon_code and pcon_name combinations are invalid: '", paste0(invalid_values, collapse = "', '"), "'. <br> - We do not expect any combinations outside of the <a href='https://github.com/dfe-analytical-services/dfe-published-data-qa/blob/master/data/pcons.csv' target='_blank'>standard geographies lookup</a> (case sensitive), please check your name and code combinations against this lookup."),
+          "result" = "FAIL"
+        )
+      }
+    }
+  }
+
+  return(output)
+}
+
+# lad_combinations -------------------------------------
+# checking that lad code and name combinations are valid
+
+lad_combinations <- function(data) {
+  if (!all(c("lad_name", "lad_code") %in% names(data))) {
+    output <- list(
+      "message" = "This data file does not contain both local authority district columns.",
+      "result" = "IGNORE"
+    )
+  } else {
+    invalid_values <- data %>%
+      select("lad_name", "lad_code") %>%
+      unique() %>%
+      filter(!is.na(.)) %>%
+      filter(lad_code != "") %>%
+      filter(lad_code != ":") %>%
+      filter(lad_code != "z") %>%
+      mutate(combo = paste(lad_code, lad_name)) %>%
+      pull(combo) %>%
+      .[!(. %in% expected_lad_combinations)]
+
+    if (length(invalid_values) == 0) {
+      output <- list(
+        "message" = "All lad_code and lad_name combinations are valid.",
+        "result" = "PASS"
+      )
+    } else {
+      if (length(invalid_values) == 1) {
+        output <- list(
+          "message" = paste0("The following lad_code and lad_name combination is invalid: '", paste0(invalid_values), "'. <br> - We do not expect any combinations outside of the <a href='https://github.com/dfe-analytical-services/dfe-published-data-qa/blob/master/data/lads.csv' target='_blank'>standard geographies lookup</a> (case sensitive), please check your name and code combinations against this lookup."),
+          "result" = "FAIL"
+        )
+      } else {
+        output <- list(
+          "message" = paste0("The following lad_code and lad_name combinations are invalid: '", paste0(invalid_values, collapse = "', '"), "'. <br> - We do not expect any combinations outside of the <a href='https://github.com/dfe-analytical-services/dfe-published-data-qa/blob/master/data/lads.csv' target='_blank'>standard geographies lookup</a> (case sensitive), please check your name and code combinations against this lookup."),
+          "result" = "FAIL"
+        )
+      }
+    }
+  }
+
+  return(output)
+}
 
 # la_combinations -------------------------------------
 # checking that la code and name combinations are valid
@@ -1326,7 +1460,7 @@ country_combinations <- function(data) {
 # other_geography_duplicates  ----------------------------------------
 # check that there is a 1:1 relationship between geography codes and names
 
-lower_level_geog_names <- geography_matrix[7:12, 2:3] %>% as.character() # skipping school/prov as they have legit duplicates
+lower_level_geog_names <- geography_matrix[8:12, 2:3] %>% as.character() # skipping school/prov as they have legit duplicates
 
 other_geography_duplicates <- function(data) {
   if (!any(lower_level_geog_names %in% names(data))) {
@@ -1399,7 +1533,7 @@ other_geography_duplicates <- function(data) {
 # other_geography_code_duplicates  ----------------------------------------
 # check that there is a 1:1 relationship between geography names and codes
 
-lower_level_geog_names <- geography_matrix[7:12, 2:3] %>% as.character() # skipping school/prov as they have legit duplicates
+lower_level_geog_names <- geography_matrix[8:12, 2:3] %>% as.character() # skipping school/prov as they have legit duplicates
 
 other_geography_code_duplicates <- function(data) {
   if (!any(lower_level_geog_names %in% names(data))) {
@@ -1479,60 +1613,67 @@ sch_prov_duplicates <- function(data) {
       "result" = "IGNORE"
     )
   } else {
-    geog_data <- data %>%
-      select(any_of(c(
-        "geographic_level", geography_matrix[13:14, 2:3]
-      ))) %>%
-      distinct() %>%
-      mutate(ID = 1:n())
-
-    names <- geog_data %>%
-      select(ID, geographic_level, contains("name")) %>%
-      mutate_if(is.numeric, as.character) %>%
-      melt(id.vars = c("ID", "geographic_level"), na.rm = TRUE) %>%
-      select(ID, geographic_level, name = value)
-
-    codes <- geog_data %>%
-      select(ID, geographic_level, !contains("name")) %>%
-      mutate_if(is.numeric, as.character) %>%
-      melt(id.vars = c("ID", "geographic_level"), na.rm = TRUE) %>%
-      select(ID, geographic_level, code = value)
-
-    lookup_creator <- names %>%
-      full_join(codes, by = c("ID", "geographic_level")) %>%
-      select(-c(ID)) %>%
-      distinct() %>%
-      group_by(geographic_level) %>%
-      add_count(name, name = "name_n") %>%
-      add_count(code, name = "code_n") %>%
-      ungroup()
-
-    multi_count_code <- lookup_creator %>%
-      filter(code_n > 1) %>%
-      mutate(combo = paste0(code, " - ", code_n, " different names")) %>%
-      select(combo) %>%
-      distinct() %>%
-      pull()
-
-    if (length(multi_count_code) == 0) {
+    if (length(unique(data$geographic_level)) == 1 & "Provider" %in% unique(data$geographic_level)) {
       output <- list(
-        "message" = "Every geography code has only one assigned name.",
-        "result" = "PASS"
+        "message" = "Provider is the only geography level in this file. Providers sharing codes are permitted in EES.",
+        "result" = "IGNORE"
       )
     } else {
-      if (length(multi_count_code) == 1) {
+      geog_data <- data %>%
+        select(any_of(c(
+          "geographic_level", geography_matrix[13:14, 2:3]
+        ))) %>%
+        distinct() %>%
+        mutate(ID = 1:n())
+
+      names <- geog_data %>%
+        select(ID, geographic_level, contains("name")) %>%
+        mutate_if(is.numeric, as.character) %>%
+        melt(id.vars = c("ID", "geographic_level"), na.rm = TRUE) %>%
+        select(ID, geographic_level, name = value)
+
+      codes <- geog_data %>%
+        select(ID, geographic_level, !contains("name")) %>%
+        mutate_if(is.numeric, as.character) %>%
+        melt(id.vars = c("ID", "geographic_level"), na.rm = TRUE) %>%
+        select(ID, geographic_level, code = value)
+
+      lookup_creator <- names %>%
+        full_join(codes, by = c("ID", "geographic_level")) %>%
+        select(-c(ID)) %>%
+        distinct() %>%
+        group_by(geographic_level) %>%
+        add_count(name, name = "name_n") %>%
+        add_count(code, name = "code_n") %>%
+        ungroup()
+
+      multi_count_code <- lookup_creator %>%
+        filter(code_n > 1) %>%
+        mutate(combo = paste0(code, " - ", code_n, " different names")) %>%
+        select(combo) %>%
+        distinct() %>%
+        pull()
+
+      if (length(multi_count_code) == 0) {
         output <- list(
-          "message" = paste0("The following school or provider code has multiple assigned names: ", paste0(multi_count_code), ". 
-                             <br> - We are working on a fix in EES, though for the time being this will cause problems, please contact us if this is an issue."),
-          "result" = "FAIL"
+          "message" = "Every geography code has only one assigned name.",
+          "result" = "PASS"
         )
       } else {
-        if (length(multi_count_code) > 1) {
+        if (length(multi_count_code) == 1) {
           output <- list(
-            "message" = paste0("The following school or provider codes have multiple assigned names: ", paste0(multi_count_code, collapse = ", "), ".
-                              <br> - We are working on a fix in EES, though for the time being this will cause problems, please contact us if this is an issue."),
+            "message" = paste0("The following school or provider code has multiple assigned names: ", paste0(multi_count_code), ". 
+                             <br> - We are working on a fix in EES, though for the time being this will cause problems, please contact us if this is an issue."),
             "result" = "FAIL"
           )
+        } else {
+          if (length(multi_count_code) > 1) {
+            output <- list(
+              "message" = paste0("The following school or provider codes have multiple assigned names: ", paste0(multi_count_code, collapse = ", "), ".
+                              <br> - We are working on a fix in EES, though for the time being this will cause problems, please contact us if this is an issue."),
+              "result" = "FAIL"
+            )
+          }
         }
       }
     }

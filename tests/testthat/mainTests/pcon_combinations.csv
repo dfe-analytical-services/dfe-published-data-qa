@@ -1,0 +1,106 @@
+time_period,time_identifier,geographic_level,country_code,country_name,region_code,region_name,old_la_code,new_la_code,la_name,pcon_code,pcon_name,school_type,num_schools,enrolments,sess_overall_percent,sess_authorised_percent,sess_unauthorised_percent,enrolments_pa_10_exact,enrolments_pa_10_exact_percent
+201718,Academic year,National,E92000001,England,,,,,,,,Total,20121,6835059,4.20821,3.01996,1.18824,731047,10.69555
+201718,Academic year,National,E92000001,England,,,,,,,,State-funded primary,16739,3885774,3.68934,2.69421,0.99512,357742,9.20645
+201718,Academic year,National,E92000001,England,,,,,,,,State-funded secondary,3382,2949285,4.89899,3.45364,1.44535,373305,12.65747
+201718,Academic year,Regional,E92000001,England,E12000001,North East,,,,,,State-funded primary and secondary,1033,317616,4.62038,3.12503,1.49536,39300,12.37343
+201718,Academic year,Regional,E92000001,England,E12000001,North East,,,,,,State-funded primary,858,175079,3.90145,2.7663,1.13516,18073,10.32277
+201718,Academic year,Regional,E92000001,England,E12000001,North East,,,,,,State-funded secondary,175,142537,5.51279,3.57032,1.94247,21227,14.89227
+201718,Academic year,Regional,E92000001,England,E12000002,North West,,,,,,State-funded primary and secondary,2905,931181,4.19093,2.89117,1.29976,99903,10.72863
+201718,Academic year,Regional,E92000001,England,E12000002,North West,,,,,,State-funded primary,2443,531992,3.65441,2.57801,1.0764,49026,9.21555
+201718,Academic year,Regional,E92000001,England,E12000002,North West,,,,,,State-funded secondary,462,399189,4.91411,3.31328,1.60083,50877,12.74509
+201718,Academic year,Regional,E92000001,England,E12000003,Yorkshire and the Humber,,,,,,State-funded primary and secondary,2088,693768,4.45385,2.93793,1.51592,82336,11.86794
+201718,Academic year,Regional,E92000001,England,E12000003,Yorkshire and the Humber,,,,,,State-funded primary,1771,394967,3.85078,2.64836,1.20243,40339,10.21326
+201718,Academic year,Regional,E92000001,England,E12000003,Yorkshire and the Humber,,,,,,State-funded secondary,317,298801,5.26744,3.32858,1.93886,41997,14.05517
+201718,Academic year,Regional,E92000001,England,E12000004,East Midlands,,,,,,State-funded primary and secondary,1921,592559,4.15794,3.00161,1.15633,62888,10.61295
+201718,Academic year,Regional,E92000001,England,E12000004,East Midlands,,,,,,State-funded primary,1633,338065,3.63591,2.65821,0.9777,31025,9.17723
+201718,Academic year,Regional,E92000001,England,E12000004,East Midlands,,,,,,State-funded secondary,288,254494,4.85183,3.45806,1.39377,31863,12.52014
+201718,Academic year,Regional,E92000001,England,E12000005,West Midlands,,,,,,State-funded primary and secondary,2185,767407,4.20781,2.97631,1.2315,82604,10.76404
+201718,Academic year,Regional,E92000001,England,E12000005,West Midlands,,,,,,State-funded primary,1770,430199,3.73406,2.65545,1.07861,40347,9.37868
+201718,Academic year,Regional,E92000001,England,E12000005,West Midlands,,,,,,State-funded secondary,415,337208,4.82122,3.39174,1.42947,42257,12.53143
+201718,Academic year,Regional,E92000001,England,E12000006,East of England,,,,,,State-funded primary and secondary,2370,766161,4.18822,3.15333,1.03489,80416,10.49597
+201718,Academic year,Regional,E92000001,England,E12000006,East of England,,,,,,State-funded primary,1988,434786,3.73296,2.82846,0.9045,40316,9.27261
+201718,Academic year,Regional,E92000001,England,E12000006,East of England,,,,,,State-funded secondary,382,331375,4.7813,3.57655,1.20475,40100,12.10109
+201718,Academic year,Regional,E92000001,England,E12000008,South East,,,,,,State-funded primary and secondary,3097,1081715,4.14945,3.12358,1.02586,111669,10.32333
+201718,Academic year,Regional,E92000001,England,E12000008,South East,,,,,,State-funded primary,2593,621106,3.57223,2.73452,0.83771,53231,8.57036
+201718,Academic year,Regional,E92000001,England,E12000008,South East,,,,,,State-funded secondary,504,460609,4.93607,3.65379,1.28227,58438,12.68712
+201718,Academic year,Regional,E92000001,England,E12000009,South West,,,,,,State-funded primary and secondary,2210,637090,4.39996,3.37439,1.02557,70819,11.11601
+201718,Academic year,Regional,E92000001,England,E12000009,South West,,,,,,State-funded primary,1871,356647,3.76448,2.91868,0.8458,32628,9.14854
+201718,Academic year,Regional,E92000001,England,E12000009,South West,,,,,,State-funded secondary,339,280443,5.21712,3.96038,1.25674,38191,13.6181
+201718,Academic year,Regional,E92000001,England,E13000001,Inner London,,,,,,State-funded primary and secondary,886,353789,3.93532,2.72482,1.2105,34850,9.8505
+201718,Academic year,Regional,E92000001,England,E13000001,Inner London,,,,,,State-funded primary,707,203395,3.65471,2.56246,1.09225,18640,9.16443
+201718,Academic year,Regional,E92000001,England,E13000001,Inner London,,,,,,State-funded secondary,179,150394,4.32174,2.9484,1.37334,16210,10.77836
+201718,Academic year,Regional,E92000001,England,E13000002,Outer London,,,,,,State-funded primary and secondary,1426,693773,3.90748,2.81189,1.09559,66262,9.55096
+201718,Academic year,Regional,E92000001,England,E13000002,Outer London,,,,,,State-funded primary,1105,399538,3.5609,2.59969,0.96121,34117,8.53911
+201718,Academic year,Regional,E92000001,England,E13000002,Outer London,,,,,,State-funded secondary,321,294235,4.38667,3.10528,1.28139,32145,10.92494
+201718,Academic year,Local authority,E92000001,England,E13000001,Inner London,204,E09000012,Hackney,,,State-funded primary and secondary,74,28313,3.74661,2.6291,1.11751,2626,9.27489
+201718,Academic year,Local authority,E92000001,England,E13000001,Inner London,E09000012,E09000012,Hackney,,,State-funded primary,58,16215,3.36691,2.39498,0.97193,1311,8.08511
+201718,Academic year,Local authority,E92000001,England,E13000001,Inner London,204,E09000012,Hackney,,,State-funded secondary,16,12098,4.26132,2.94646,1.31486,1315,10.86957
+201718,Academic year,Local authority,E92000001,England,E13000001,Inner London,208,E09000022,Lambeth,,,State-funded primary and secondary,78,30492,3.96082,2.6899,1.27092,3076,10.08789
+201718,Academic year,Local authority,E92000001,England,E13000001,Inner London,208,E09000022,Lambeth,,,State-funded primary,60,17974,3.63709,2.46321,1.17388,1605,8.92956
+201718,Academic year,Local authority,E92000001,England,E13000001,Inner London,208,E09000022,Lambeth,,,State-funded secondary,18,12518,4.44005,3.02546,1.41459,1471,11.75108
+201718,Academic year,Local authority,E92000001,England,E13000002,Outer London,303,E09000004,Bexley,,,State-funded primary and secondary,73,36195,4.05055,3.0241,1.02645,3643,10.06493
+201718,Academic year,Local authority,E92000001,England,E13000002,Outer London,303,E09000004,Bexley,,,State-funded primary,57,18927,3.61617,2.69105,0.92512,1627,8.59619
+201718,Academic year,Local authority,E92000001,England,E13000002,Outer London,.,E09000004,Bexley,,,State-funded secondary,16,17268,4.53415,3.39488,1.13926,2016,11.67477
+201718,Academic year,Local authority,E92000001,England,E13000002,Outer London,310,E09000015,Harrow,,,State-funded primary and secondary,55,31309,3.73945,3.02676,0.71269,2702,8.63011
+201718,Academic year,Local authority,E92000001,England,E13000002,Outer London,310,E09000015,Harrow,,,State-funded primary,42,18680,3.5151,2.90583,0.60927,1500,8.02998
+201718,Academic year,Local authority,E92000001,England,E13000002,Outer London,310,E09000015,Harrow,,,State-funded secondary,13,12629,4.07819,3.20936,0.86883,1202,9.51778
+201718,Academic year,Local authority,E92000001,England,E13000002,Outer London,317,E09000026,Redbridge,,,State-funded primary and secondary,71,45729,3.93118,2.84067,1.09051,4447,9.72468
+201718,Academic year,Local authority,E92000001,England,E13000002,Outer London,317,E09000026,Redbridge,,,State-funded primary,52,24627,3.66992,2.61618,1.05374,2257,9.16474
+201718,Academic year,Local authority,E92000001,England,E13000002,Outer London,317,E09000026,Redbridge,,,State-funded secondary,19,21102,4.23328,3.10025,1.13303,2190,10.37816
+201718,Academic year,Local authority,E92000001,England,E12000005,West Midlands,335,E08000030,Walsall,,,State-funded primary and secondary,104,40793,4.39533,2.73021,1.66512,4618,11.32057
+201718,Academic year,Local authority,E92000001,England,E12000005,West Midlands,x,E08000030,Walsall,,,State-funded primary,85,22776,3.8543,2.40559,1.44871,2207,9.69002
+201718,Academic year,Local authority,E92000001,England,E12000005,West Midlands,335,E08000030,Walsall,,,State-funded secondary,19,18017,5.08931,3.14661,1.94271,2411,13.38181
+201718,Academic year,Local authority,E92000001,England,E12000002,North West,342,E08000013,St. Helens,,,State-funded primary and secondary,63,22260,4.19956,2.81242,1.38714,2333,10.48068
+201718,Academic year,Local authority,E92000001,England,E12000002,North West,342,E08000013,St. Helens,,,State-funded primary,54,12882,3.72884,2.5386,1.19024,1162,9.02034
+201718,Academic year,Local authority,E92000001,England,E12000002,North West,55,E08000013,St. Helens,,,State-funded secondary,9,9378,4.85859,3.19579,1.6628,1171,12.48667
+201718,Academic year,Local authority,E92000001,England,E12000001,North East,390,E08000020,Gateshead,,,State-funded primary and secondary,77,23100,4.37675,3.07242,1.30433,2765,11.9697
+201718,Academic year,Local authority,E92000001,England,E12000001,North East,390,E08000020,Gateshead,,,State-funded primary,67,13066,3.59538,2.55073,1.04466,1228,9.39844
+201718,Academic year,Local authority,E92000001,England,E12000001,North East,390,E08000020,Gateshead,,,State-funded secondary,10,10034,5.41948,3.76862,1.65086,1537,15.31792
+201718,Academic year,Local authority,E92000001,England,E12000003,Yorkshire and the Humber,7777,E06000012,North East Lincolnshire,,,State-funded primary and secondary,57,20346,4.53452,2.71476,1.81976,2547,12.51843
+201718,Academic year,Local authority,E92000001,England,E12000003,Yorkshire and the Humber,812,E06000012,North East Lincolnshire,,,State-funded primary,47,12020,3.97833,2.56868,1.40965,1306,10.86522
+201718,Academic year,Local authority,E92000001,England,E12000003,Yorkshire and the Humber,812,E06000012,North East Lincolnshire,,,State-funded secondary,10,8326,5.34822,2.92848,2.41974,1241,14.90512
+201718,Academic year,Local authority,E92000001,England,E12000004,East Midlands,830,E10000007,Derbyshire,,,State-funded primary and secondary,394,90686,4.20495,3.18467,1.02028,9410,10.37646
+201718,Academic year,Local authority,E92000001,England,E12000004,East Midlands,830,E10000007,Derbyshire,,,State-funded primary,349,52093,3.59481,2.85395,0.74086,4556,8.7459
+201718,Academic year,Local authority,E92000001,England,E12000004,East Midlands,830,E10000007,Derbyshire,,,State-funded secondary,45,38593,5.03314,3.63358,1.39955,4854,12.57741
+201718,Academic year,Local authority,E92000001,England,E12000008,South East,870,E06000038,Reading,,,State-funded primary and secondary,49,18337,3.93683,2.68024,1.25659,1851,10.09434
+201718,Academic year,Local authority,E92000001,England,E12000008,South East,870,E06000038,Reading,,,State-funded primary,39,11880,3.76109,2.66408,1.09701,1119,9.41919
+201718,Academic year,Local authority,E92000001,England,E12000008,South East,870,E06000038,Reading,,,State-funded secondary,10,6457,4.25589,2.70958,1.5463,732,11.33653
+201718,Academic year,Local authority,E92000001,England,E12000006,East of England,881,E10000012,Not Essex,,,State-funded primary and secondary,523,178460,4.20273,3.11568,1.08705,19069,10.68531
+201718,Academic year,Local authority,E92000001,England,E12000006,East of England,881,E10000012,Not Essex,,,State-funded primary,447,102579,3.74568,2.84482,0.90087,9708,9.46393
+201718,Academic year,Local authority,E92000001,England,E12000006,East of England,881,E10000012,Not Essex,,,State-funded secondary,76,75881,4.81819,3.48042,1.33777,9361,12.33642
+201718,Academic year,Local authority,E92000001,England,E12000002,North West,895,E06000049,Cheshire East,,,State-funded primary and secondary,147,45385,4.02082,3.14309,0.87773,4414,9.72568
+201718,Academic year,Local authority,E92000001,England,E12000002,North West,895,E06000049,Cheshire East,,,State-funded primary,124,25720,3.37514,2.64818,0.72696,1999,7.77216
+201718,Academic year,Local authority,E92000001,England,E12000002,North West,895,E06000049,Cheshire East,,,State-funded secondary,23,19665,4.86878,3.79304,1.07573,2415,12.2807
+201718,Academic year,Local authority,E92000001,England,E12000009,South West,933,E10000027,Somerset,,,State-funded primary and secondary,254,61624,4.62408,3.51913,1.10495,7213,11.70486
+201718,Academic year,Local authority,E92000001,England,E12000009,South West,933,E10000027,Somerset,,,State-funded primary,216,33304,3.9232,3.07953,0.84368,3168,9.51237
+201718,Academic year,Local authority,E92000001,England,E12000009,South West,933,E10000027,Somerset,,,State-funded secondary,38,28320,5.4687,4.0489,1.4198,4045,14.28319
+201718,Academic year,Parliamentary constituency,E92000001,England,E13000001,Inner London,204,E09000012,Hackney,E14000675,Ealing North,State-funded secondary,10,6457,4.25589,2.70958,1.5463,732,11.33653
+201718,Academic year,Parliamentary constituency,E92000001,England,E13000001,Inner London,E09000012,E09000012,Hackney,E14000676,"Ealing, Southall",State-funded secondary,523,178460,4.20273,3.11568,1.08705,19069,10.68531
+201718,Academic year,Parliamentary constituency,E92000001,England,E13000001,Inner London,204,E09000012,Hackney,E14000674,Ealing Central and Acton,State-funded secondary,447,102579,3.74568,2.84482,0.90087,9708,9.46393
+201718,Academic year,Parliamentary constituency,E92000001,England,E13000001,Inner London,208,E09000022,Lambeth,E14000692,"Enfield, Southgate",State-funded secondary,76,75881,4.81819,3.48042,1.33777,9361,12.33642
+201718,Academic year,Parliamentary constituency,E92000001,England,E13000001,Inner London,208,E09000022,Lambeth,E14000687,Edmonton,State-funded secondary,147,45385,4.02082,3.14309,0.87773,4414,9.72568
+201718,Academic year,Parliamentary constituency,E92000001,England,E13000001,Inner London,208,E09000022,Lambeth,E14000691,Enfield North,State-funded secondary,124,25720,3.37514,2.64818,0.72696,1999,7.77216
+201718,Academic year,Parliamentary constituency,E92000001,England,E13000002,Outer London,303,E09000004,Bexley,E14000691,Enfield North,State-funded secondary,23,19665,4.86878,3.79304,1.07573,2415,12.2807
+201718,Academic year,Parliamentary constituency,E92000001,England,E13000002,Outer London,303,E09000004,Bexley,E14000691,Enfield North,State-funded secondary,254,61624,4.62408,3.51913,1.10495,7213,11.70486
+201718,Academic year,Parliamentary constituency,E92000001,England,E13000002,Outer London,.,E09000004,Bexley,E14000694,Enfield North,State-funded secondary,216,33304,3.9232,3.07953,0.84368,3168,9.51237
+201718,Academic year,Parliamentary constituency,E92000001,England,E13000002,Outer London,310,E09000015,Harrow,E14000978,Streatham,State-funded secondary,38,28320,5.4687,4.0489,1.4198,4045,14.28319
+201718,Academic year,Parliamentary constituency,E92000001,England,E13000002,Outer London,310,E09000015,Harrow,E14000673,Dulwich and West Norwood,State-funded secondary,18,12518,4.44005,3.02546,1.41459,1471,11.75108
+201718,Academic year,Parliamentary constituency,E92000001,England,E13000002,Outer London,310,E09000015,Harrow,E14000788,Lewisham West and Penge,State-funded secondary,73,36195,4.05055,3.0241,1.02645,3643,10.06493
+201718,Academic year,Parliamentary constituency,E92000001,England,E13000002,Outer London,317,E09000026,Redbridge,E14000787,Lewisham East,State-funded secondary,57,18927,3.61617,2.69105,0.92512,1627,8.59619
+201718,Academic year,Parliamentary constituency,E92000001,England,E13000002,Outer London,317,E09000026,Redbridge,E14000789,"Lewisham, Deptford",State-funded secondary,16,17268,4.53415,3.39488,1.13926,2016,11.67477
+201718,Academic year,Parliamentary constituency,E92000001,England,E13000002,Outer London,317,E09000026,Redbridge,E14001040,Wimbledon,State-funded secondary,55,31309,3.73945,3.02676,0.71269,2702,8.63011
+201718,Academic year,Parliamentary constituency,E92000001,England,E12000005,West Midlands,335,E08000030,Walsall,E14000823,Mitcham and Morden,State-funded secondary,42,18680,3.5151,2.90583,0.60927,1500,8.02998
+201718,Academic year,Parliamentary constituency,E92000001,England,E12000005,West Midlands,x,E08000030,Walsall,E14000578,Bolton North East,State-funded secondary,13,12629,4.07819,3.20936,0.86883,1202,9.51778
+201718,Academic year,Parliamentary constituency,E92000001,England,E12000005,West Midlands,335,E08000030,Walsall,E14000537,Ashton-under-Lyne,State-funded secondary,71,45729,3.93118,2.84067,1.09051,4447,9.72468
+201718,Academic year,Parliamentary constituency,E92000001,England,E12000002,North West,342,E08000013,St. Helens,E14000580,Bolton West,State-funded secondary,52,24627,3.66992,2.61618,1.05374,2257,9.16474
+201718,Academic year,Parliamentary constituency,E92000001,England,E12000002,North West,342,E08000013,St. Helens,E14000612,Bury South,State-funded secondary,19,21102,4.23328,3.10025,1.13303,2190,10.37816
+201718,Academic year,Parliamentary constituency,E92000001,England,E12000002,North West,55,E08000013,St. Helens,E14000661,Denton and Reddish,State-funded secondary,104,40793,4.39533,2.73021,1.66512,4618,11.32057
+201718,Academic year,Parliamentary constituency,E92000001,England,E12000001,North East,390,E08000020,Gateshead,E14000611,Bury North,State-funded secondary,85,22776,3.8543,2.40559,1.44871,2207,9.69002
+201718,Academic year,Parliamentary constituency,E92000001,England,E12000001,North East,390,E08000020,Gateshead,E14000897,Rochdale,State-funded secondary,19,18017,5.08931,3.14661,1.94271,2411,13.38181
+201718,Academic year,Parliamentary constituency,E92000001,England,E12000001,North East,390,E08000020,Gateshead,E14000621,Carshalton and Wallington,State-funded secondary,63,22260,4.19956,2.81242,1.38714,2333,10.48068
+201718,Academic year,Parliamentary constituency,E92000001,England,E12000004,East Midlands,830,E10000007,Derbyshire,E14000984,Sutton and Cheam,State-funded secondary,57,18927,3.61617,2.69105,0.92512,1627,8.59619
+201718,Academic year,Parliamentary constituency,E92000001,England,E12000004,East Midlands,830,E10000007,Derbyshire,E14000790,Leyton and Wanstead,State-funded secondary,16,17268,4.53415,3.39488,1.13926,2016,11.67477
+201718,Academic year,Parliamentary constituency,E92000001,England,E12000004,East Midlands,830,E10000007,Derbyshire,E14001013,Walthamstow,State-funded secondary,55,31309,3.73945,3.02676,0.71269,2702,8.63011
+201718,Academic year,Parliamentary constituency,E92000001,England,E12000004,East Midlands,830,E10000007,North Northamptonshire,E14000634,Chingford and Woodford Green,State-funded secondary,42,18680,3.5151,2.90583,0.60927,1500,8.02998
+201718,Academic year,Parliamentary constituency,E92000001,England,E12000004,East Midlands,830,E10000007,North Northamptonshire,xxx!,Cities of London and Westminster,State-funded secondary,13,12629,4.07819,3.20936,0.86883,1202,9.51778
+201718,Academic year,Parliamentary constituency,E92000001,England,E12000004,East Midlands,830,E10000007,North Northamptonshire,"234,456",asdasd,State-funded secondary,71,45729,3.93118,2.84067,1.09051,4447,9.72468

@@ -4,7 +4,7 @@
       "x": {
         "style": "bootstrap",
         "filter": "none",
-        "container": "<table class=\"table table-bordered\">\n  <thead>\n    <tr>\n      <th>time_period<\/th>\n      <th>time_identifier<\/th>\n      <th>geographic_level<\/th>\n      <th>country_code<\/th>\n      <th>country_name<\/th>\n      <th>region_code<\/th>\n      <th>region_name<\/th>\n      <th>old_la_code<\/th>\n      <th>new_la_code<\/th>\n      <th>la_name<\/th>\n      <th>lad_code<\/th>\n      <th>lad_name<\/th>\n      <th>school_urn<\/th>\n      <th>school_laestab<\/th>\n      <th>school_name<\/th>\n      <th>local_enterprise_partnership_code<\/th>\n      <th>local_enterprise_partnership_name<\/th>\n      <th>school_phase<\/th>\n      <th>school_type<\/th>\n      <th>num_schools<\/th>\n      <th>enrolments<\/th>\n      <th>sess_overall_percent<\/th>\n      <th>sess_authorised_percent<\/th>\n      <th>sess_unauthorised_percent<\/th>\n      <th>enrolments_pa_10_exact<\/th>\n      <th>enrolments_pa_10_exact_percent<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>",
+        "container": "<table class=\"table table-bordered\">\n  <thead>\n    <tr>\n      <th>time_period<\/th>\n      <th>time_identifier<\/th>\n      <th>geographic_level<\/th>\n      <th>country_code<\/th>\n      <th>country_name<\/th>\n      <th>region_code<\/th>\n      <th>region_name<\/th>\n      <th>old_la_code<\/th>\n      <th>new_la_code<\/th>\n      <th>la_name<\/th>\n      <th>lad_code<\/th>\n      <th>lad_name<\/th>\n      <th>school_urn<\/th>\n      <th>school_laestab<\/th>\n      <th>school_name<\/th>\n      <th>local_enterprise_partnership_code<\/th>\n      <th>local_enterprise_partnership_name<\/th>\n      <th>pcon_code<\/th>\n      <th>pcon_name<\/th>\n      <th>ward_code<\/th>\n      <th>ward_name<\/th>\n      <th>school_phase<\/th>\n      <th>school_type<\/th>\n      <th>num_schools<\/th>\n      <th>enrolments<\/th>\n      <th>sess_overall_percent<\/th>\n      <th>sess_authorised_percent<\/th>\n      <th>sess_unauthorised_percent<\/th>\n      <th>enrolments_pa_10_exact<\/th>\n      <th>enrolments_pa_10_exact_percent<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>",
         "options": {
           "dom": "pt",
           "pageLength": 12,
@@ -19,13 +19,13 @@
                 7,
                 12,
                 13,
-                19,
-                20,
-                21,
-                22,
                 23,
                 24,
-                25
+                25,
+                26,
+                27,
+                28,
+                29
               ]
             }
           ],
