@@ -58,6 +58,7 @@ las <- suppressMessages(read_csv("data/las.csv")) # change this to database even
 lads <- suppressMessages(read_csv("data/lads.csv")) # change this to database eventually
 pcons <- suppressMessages(read_csv("data/pcons.csv")) # change this to database eventually
 leps <- suppressMessages(read_csv("data/leps.csv")) # change this to database eventually
+edas <- suppressMessages(read_csv("data/english_devolved_areas.csv")) # change this to database eventually
 
 expected_country_combinations <- unique(paste(countries$country_code, countries$country_name))
 
@@ -70,6 +71,9 @@ expected_lad_combinations <- unique(paste(lads$lad_code, lads$lad_name))
 expected_pcon_combinations <- unique(paste(pcons$pcon_code, pcons$pcon_name))
 
 expected_lep_combinations <- unique(paste(leps$local_enterprise_partnership_code, leps$local_enterprise_partnership_name))
+
+expected_eda_combinations <- unique(paste(edas$english_devolved_area_code, edas$english_devolved_area_name))
+
 
 acceptable_levels <- c(
   geography_matrix[, 1] %>% .[!is.na(.)]

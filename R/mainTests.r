@@ -24,6 +24,7 @@ mainTests <- function(data_character, meta_character, datafile, metafile) {
     la_col_present(datafile), # active test
     overcompleted_cols(datafile, metafile), # active test
     ignored_rows(datafile), # active test
+    eda_combinations(datafile), # active test
     lep_combinations(datafile), # active test
     pcon_combinations(datafile), # active test
     lad_combinations(datafile), # active test
@@ -1183,8 +1184,53 @@ ignored_rows <- function(data) {
   }
   return(output)
 }
+
+# eda_combinations -------------------------------------
+# checking that eda code and name combinations are valid
+
+eda_combinations <- function(data) {
+  if (!all(c("english_devolved_area_name", "english_devolved_area_code") %in% names(data))) {
+    output <- list(
+      "message" = "This data file does not contain both english devolved area columns.",
+      "result" = "IGNORE"
+    )
+  } else {
+    invalid_values <- data %>%
+      select("english_devolved_area_name", "english_devolved_area_code") %>%
+      unique() %>%
+      filter(!is.na(.)) %>%
+      filter(english_devolved_area_code != "") %>%
+      filter(english_devolved_area_code != ":") %>%
+      filter(english_devolved_area_code != "z") %>%
+      mutate(combo = paste(english_devolved_area_code, english_devolved_area_name)) %>%
+      pull(combo) %>%
+      .[!(. %in% expected_eda_combinations)]
+
+    if (length(invalid_values) == 0) {
+      output <- list(
+        "message" = "All english_devolved_area_code and english_devolved_area_name combinations are valid.",
+        "result" = "PASS"
+      )
+    } else {
+      if (length(invalid_values) == 1) {
+        output <- list(
+          "message" = paste0("The following english_devolved_area_code and english_devolved_area_name combination is invalid: '", paste0(invalid_values), "'. <br> - We do not expect any combinations outside of the <a href='https://github.com/dfe-analytical-services/dfe-published-data-qa/blob/master/data/english_devolved_areas.csv' target='_blank'>standard geographies lookup</a> (case sensitive), please check your name and code combinations against this lookup."),
+          "result" = "FAIL"
+        )
+      } else {
+        output <- list(
+          "message" = paste0("The following english_devolved_area_code and english_devolved_area_name combinations are invalid: '", paste0(invalid_values, collapse = "', '"), "'. <br> - We do not expect any combinations outside of the <a href='https://github.com/dfe-analytical-services/dfe-published-data-qa/blob/master/data/english_devolved_areas.csv' target='_blank'>standard geographies lookup</a> (case sensitive), please check your name and code combinations against this lookup."),
+          "result" = "FAIL"
+        )
+      }
+    }
+  }
+
+  return(output)
+}
+
 # lep_combinations -------------------------------------
-# checking that pcon code and name combinations are valid
+# checking that lep code and name combinations are valid
 
 lep_combinations <- function(data) {
   if (!all(c("local_enterprise_partnership_name", "local_enterprise_partnership_code") %in% names(data))) {
@@ -1460,7 +1506,7 @@ country_combinations <- function(data) {
 # other_geography_duplicates  ----------------------------------------
 # check that there is a 1:1 relationship between geography codes and names
 
-lower_level_geog_names <- geography_matrix[8:12, 2:3] %>% as.character() # skipping school/prov as they have legit duplicates
+lower_level_geog_names <- geography_matrix[9:12, 2:3] %>% as.character() # skipping school/prov as they have legit duplicates
 
 other_geography_duplicates <- function(data) {
   if (!any(lower_level_geog_names %in% names(data))) {
@@ -1533,7 +1579,7 @@ other_geography_duplicates <- function(data) {
 # other_geography_code_duplicates  ----------------------------------------
 # check that there is a 1:1 relationship between geography names and codes
 
-lower_level_geog_names <- geography_matrix[8:12, 2:3] %>% as.character() # skipping school/prov as they have legit duplicates
+lower_level_geog_names <- geography_matrix[9:12, 2:3] %>% as.character() # skipping school/prov as they have legit duplicates
 
 other_geography_code_duplicates <- function(data) {
   if (!any(lower_level_geog_names %in% names(data))) {
