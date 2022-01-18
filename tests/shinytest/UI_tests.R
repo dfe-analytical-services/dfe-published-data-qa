@@ -194,4 +194,3 @@ app$uploadFile(metafile = "test-data/filter_groups_mix.meta.csv") # <-- This sho
 app$setInputs(screenbutton = "click")
 app$setInputs(trendy_tabs = "obUnitTab")
 app$snapshotDownload("downloadFilterPerms")
-
