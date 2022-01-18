@@ -187,3 +187,11 @@ app$setInputs(trendy_tabs = "obUnitTab")
 app$snapshot(list(output = c("table_1", "table_2", "table_3", "table_4")))
 
 app$setInputs(resetbutton = "click")
+
+# 27 - Filter interactions downloads  -------------------------------------
+app$uploadFile(datafile = "test-data/filter_groups_mix.csv") # <-- This should be the path to the file, relative to the app's tests/shinytest directory
+app$uploadFile(metafile = "test-data/filter_groups_mix.meta.csv") # <-- This should be the path to the file, relative to the app's tests/shinytest directory
+app$setInputs(screenbutton = "click")
+app$setInputs(trendy_tabs = "obUnitTab")
+app$snapshotDownload("downloadFilterPerms")
+
