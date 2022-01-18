@@ -560,44 +560,59 @@ server <- function(input, output, session) {
             )
           })
           # Filter permutations -----------------------------------------------------
+          
+          
+          
+          output$downloadFilterPerms <- downloadHandler(
+            filename = function() {
+              paste("missing_filter_combinations_", basename(inputData$name), ".csv", sep = "")
+            },
+            content = function(file) {
+              filters <- meta$mainFile %>%
+                dplyr::filter(col_type == "Filter") %>%
+                pull(col_name)
+              
+              total_info<-data.frame(filters)
+              
+              for (filter in all_of(filters)) {
+                info <- data$mainFile %>%
+                  select(filter) %>%
+                  distinct()
+                
+                total_info <- total_info %>%  base::merge(info)}
+          
+              
+              total_info <- total_info %>%
+                select(-filters) %>%
+                distinct() %>% 
+                unite(join_col, c(!!filters), sep = "_", remove = FALSE)
+              
+              #Get list of publication-specific filters
+              publication_filters <- meta$mainFile %>%
+                filter(col_type == "Filter") %>%
+                select(col_name) %>%
+                pull(col_name)
+              
+              #Get filter group combos for publication-specific filters
+              distinct_filter_groups <- data$mainFile %>%
+                select(all_of(publication_filters)) %>%
+                distinct() %>%
+                unite(join_col, c(!!filters), sep = "_", remove = TRUE) %>% 
+                mutate(flag=1)
+              
+              
+              missing_combos <- total_info %>% left_join(distinct_filter_groups, by = "join_col") %>%
+                filter(is.na(flag)) %>%
+                select(-flag, -join_col)
+              
+              
+              
+              write.csv(missing_combos, file, row.names = FALSE)
+            }
+          )
+          
 
-          # output$filterperms <- renderTable({
-          #
-          #   filters <- meta$mainFile %>%
-          #     dplyr::filter(col_type == "Filter") %>%
-          #     pull(col_name)
-          #
-          #   total_info<-data.frame(filters)
-          #
-          #   for (filter in all_of(filters)) {
-          #     info <- data$mainFile %>%
-          #       select(filter) %>%
-          #       distinct()
-          #
-          #     total_info <- total_info %>%  merge(info)}
-          #
-          #
-          #   total_info <- total_info %>%
-          #     select(-filters) %>%
-          #     distinct()
-          #
-          #   #Get list of publication-specific filters
-          #   publication_filters <- meta$mainFile %>%
-          #     filter(col_type == "Filter") %>%
-          #     select(col_name) %>%
-          #     pull(col_name)
-          #
-          #   #Get filter group combos for publication-specific filters
-          #   distinct_filter_groups <- data$mainFile %>%
-          #     select(all_of(publication_filters)) %>%
-          #     distinct() %>% mutate(flag=1)
-          #
-          #   total_info %>% left_join(distinct_filter_groups) %>%
-          #     filter(is.na(flag)) %>%
-          #     select(-flag)
-          #
-          # })
-          #
+          
 
 
           # Show filters and associated levels from the data -----------------------------

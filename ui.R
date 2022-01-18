@@ -302,25 +302,26 @@ fluidPage(
                     uiOutput("suppressed_cell_count") %>% withSpinner()
                   )
                 ),
-                hr()
-                #
-                # fluidRow(
-                #   column(
-                #     3,
-                #     tags$b("Filter combinations"),
-                #     br(),
-                #     "The following filter combinations have no relevant data",
-                #     br(),
-                #     "Are there any expected filter combinations that are missing data?"
-                #   ),
-                #   column(
-                #     8,
-                #
-                #     tableOutput("filterperms") %>% withSpinner()
-                #   )
-                # ),
-                #
-                # hr(),
+                hr(),
+
+                fluidRow(
+                  column(
+                    3,
+                    tags$b("Filter combinations"),
+                    br(),
+                    "Are there any expected filter combinations that are missing data?",
+                    br(),
+                    br(),
+                    "Download a list of missing combinations here"
+                  ),
+                  column(
+                    8,
+
+                    downloadButton("downloadFilterPerms", "Download missing filter combinations")
+                  )
+                ),
+
+                hr(),
               ),
 
               tabPanel(
