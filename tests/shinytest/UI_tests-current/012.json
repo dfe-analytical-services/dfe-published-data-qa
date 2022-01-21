@@ -1,0 +1,349 @@
+{
+  "output": {
+    "geog_time_perms2": {
+      "x": {
+        "style": "bootstrap",
+        "filter": "none",
+        "container": "<table class=\"table table-bordered\">\n  <thead>\n    <tr>\n      <th>geographic_level<\/th>\n      <th>201314<\/th>\n      <th>201415<\/th>\n      <th>201516<\/th>\n      <th>201617<\/th>\n      <th>201718<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>",
+        "options": {
+          "dom": "t",
+          "ordering": false,
+          "initComplete": "function(settings, json) {\n$(this.api().table().header()).css({'background-color': '#232628', 'color': '#c8c8c8'});\n}",
+          "order": [
+
+          ],
+          "autoWidth": false,
+          "orderClasses": false,
+          "ajax": {
+            "type": "POST",
+            "data": "function(d) {\nd.search.caseInsensitive = true;\nd.search.smart = true;\nd.escape = true;\nvar encodeAmp = function(x) { x.value = x.value.replace(/&/g, \"%26\"); }\nencodeAmp(d.search);\n$.each(d.columns, function(i, v) {encodeAmp(v.search);});\n}"
+          },
+          "serverSide": true,
+          "processing": true
+        },
+        "selection": {
+          "mode": "multiple",
+          "selected": null,
+          "target": "row",
+          "selectable": null
+        }
+      },
+      "evals": [
+        "options.initComplete",
+        "options.ajax.data"
+      ],
+      "jsHooks": [
+
+      ],
+      "deps": [
+        {
+          "name": "dt-core-bootstrap",
+          "version": "1.10.20",
+          "src": {
+            "href": "dt-core-bootstrap-1.10.20"
+          },
+          "meta": null,
+          "script": [
+            "js/jquery.dataTables.min.js",
+            "js/dataTables.bootstrap.min.js"
+          ],
+          "stylesheet": [
+            "css/dataTables.bootstrap.min.css",
+            "css/dataTables.bootstrap.extra.css"
+          ],
+          "head": null,
+          "attachment": null,
+          "package": null,
+          "all_files": false
+        },
+        {
+          "name": "jquery",
+          "version": "3.5.1",
+          "src": {
+            "href": "jquery-3.5.1"
+          },
+          "meta": null,
+          "script": "jquery.min.js",
+          "stylesheet": null,
+          "head": null,
+          "attachment": null,
+          "all_files": true
+        },
+        {
+          "name": "crosstalk",
+          "version": "1.1.1",
+          "src": {
+            "href": "crosstalk-1.1.1"
+          },
+          "meta": null,
+          "script": "js/crosstalk.min.js",
+          "stylesheet": "css/crosstalk.css",
+          "head": null,
+          "attachment": null,
+          "all_files": true
+        }
+      ]
+    },
+    "indicators": {
+      "x": {
+        "style": "bootstrap",
+        "filter": "none",
+        "container": "<table class=\"table table-bordered\">\n  <thead>\n    <tr>\n      <th>col_name<\/th>\n      <th>label<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>",
+        "options": {
+          "dom": "t",
+          "ordering": false,
+          "initComplete": "function(settings, json) {\n$(this.api().table().header()).css({'background-color': '#232628', 'color': '#c8c8c8'});\n}",
+          "order": [
+
+          ],
+          "autoWidth": false,
+          "orderClasses": false,
+          "ajax": {
+            "type": "POST",
+            "data": "function(d) {\nd.search.caseInsensitive = true;\nd.search.smart = true;\nd.escape = true;\nvar encodeAmp = function(x) { x.value = x.value.replace(/&/g, \"%26\"); }\nencodeAmp(d.search);\n$.each(d.columns, function(i, v) {encodeAmp(v.search);});\n}"
+          },
+          "serverSide": true,
+          "processing": true
+        },
+        "selection": {
+          "mode": "multiple",
+          "selected": null,
+          "target": "row",
+          "selectable": null
+        }
+      },
+      "evals": [
+        "options.initComplete",
+        "options.ajax.data"
+      ],
+      "jsHooks": [
+
+      ],
+      "deps": [
+        {
+          "name": "dt-core-bootstrap",
+          "version": "1.10.20",
+          "src": {
+            "href": "dt-core-bootstrap-1.10.20"
+          },
+          "meta": null,
+          "script": [
+            "js/jquery.dataTables.min.js",
+            "js/dataTables.bootstrap.min.js"
+          ],
+          "stylesheet": [
+            "css/dataTables.bootstrap.min.css",
+            "css/dataTables.bootstrap.extra.css"
+          ],
+          "head": null,
+          "attachment": null,
+          "package": null,
+          "all_files": false
+        },
+        {
+          "name": "jquery",
+          "version": "3.5.1",
+          "src": {
+            "href": "jquery-3.5.1"
+          },
+          "meta": null,
+          "script": "jquery.min.js",
+          "stylesheet": null,
+          "head": null,
+          "attachment": null,
+          "all_files": true
+        },
+        {
+          "name": "crosstalk",
+          "version": "1.1.1",
+          "src": {
+            "href": "crosstalk-1.1.1"
+          },
+          "meta": null,
+          "script": "js/crosstalk.min.js",
+          "stylesheet": "css/crosstalk.css",
+          "head": null,
+          "attachment": null,
+          "all_files": true
+        }
+      ]
+    },
+    "suppressed_cell_count_table": {
+      "x": {
+        "style": "bootstrap",
+        "filter": "none",
+        "container": "<table class=\"table table-bordered\">\n  <thead>\n    <tr>\n      <th>Symbol<\/th>\n      <th>Frequency<\/th>\n      <th>% of total cell count<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>",
+        "options": {
+          "dom": "t",
+          "ordering": false,
+          "initComplete": "function(settings, json) {\n$(this.api().table().header()).css({'background-color': '#232628', 'color': '#c8c8c8'});\n}",
+          "columnDefs": [
+            {
+              "className": "dt-right",
+              "targets": [
+                1,
+                2
+              ]
+            }
+          ],
+          "order": [
+
+          ],
+          "autoWidth": false,
+          "orderClasses": false,
+          "ajax": {
+            "type": "POST",
+            "data": "function(d) {\nd.search.caseInsensitive = true;\nd.search.smart = true;\nd.escape = true;\nvar encodeAmp = function(x) { x.value = x.value.replace(/&/g, \"%26\"); }\nencodeAmp(d.search);\n$.each(d.columns, function(i, v) {encodeAmp(v.search);});\n}"
+          },
+          "serverSide": true,
+          "processing": true
+        },
+        "selection": {
+          "mode": "multiple",
+          "selected": null,
+          "target": "row",
+          "selectable": null
+        }
+      },
+      "evals": [
+        "options.initComplete",
+        "options.ajax.data"
+      ],
+      "jsHooks": [
+
+      ],
+      "deps": [
+        {
+          "name": "dt-core-bootstrap",
+          "version": "1.10.20",
+          "src": {
+            "href": "dt-core-bootstrap-1.10.20"
+          },
+          "meta": null,
+          "script": [
+            "js/jquery.dataTables.min.js",
+            "js/dataTables.bootstrap.min.js"
+          ],
+          "stylesheet": [
+            "css/dataTables.bootstrap.min.css",
+            "css/dataTables.bootstrap.extra.css"
+          ],
+          "head": null,
+          "attachment": null,
+          "package": null,
+          "all_files": false
+        },
+        {
+          "name": "jquery",
+          "version": "3.5.1",
+          "src": {
+            "href": "jquery-3.5.1"
+          },
+          "meta": null,
+          "script": "jquery.min.js",
+          "stylesheet": null,
+          "head": null,
+          "attachment": null,
+          "all_files": true
+        },
+        {
+          "name": "crosstalk",
+          "version": "1.1.1",
+          "src": {
+            "href": "crosstalk-1.1.1"
+          },
+          "meta": null,
+          "script": "js/crosstalk.min.js",
+          "stylesheet": "css/crosstalk.css",
+          "head": null,
+          "attachment": null,
+          "all_files": true
+        }
+      ]
+    },
+    "table_1": {
+      "x": {
+        "style": "bootstrap",
+        "filter": "none",
+        "container": "<table class=\"table table-bordered\">\n  <thead>\n    <tr>\n      <th>school_phase<\/th>\n      <th>school_type<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>",
+        "options": {
+          "dom": "pt",
+          "ordering": false,
+          "initComplete": "function(settings, json) {\n$(this.api().table().header()).css({'background-color': '#232628', 'color': '#c8c8c8'});\n}",
+          "order": [
+
+          ],
+          "autoWidth": false,
+          "orderClasses": false,
+          "ajax": {
+            "type": "POST",
+            "data": "function(d) {\nd.search.caseInsensitive = true;\nd.search.smart = true;\nd.escape = true;\nvar encodeAmp = function(x) { x.value = x.value.replace(/&/g, \"%26\"); }\nencodeAmp(d.search);\n$.each(d.columns, function(i, v) {encodeAmp(v.search);});\n}"
+          },
+          "serverSide": true,
+          "processing": true
+        },
+        "selection": {
+          "mode": "multiple",
+          "selected": null,
+          "target": "row",
+          "selectable": null
+        }
+      },
+      "evals": [
+        "options.initComplete",
+        "options.ajax.data"
+      ],
+      "jsHooks": [
+
+      ],
+      "deps": [
+        {
+          "name": "dt-core-bootstrap",
+          "version": "1.10.20",
+          "src": {
+            "href": "dt-core-bootstrap-1.10.20"
+          },
+          "meta": null,
+          "script": [
+            "js/jquery.dataTables.min.js",
+            "js/dataTables.bootstrap.min.js"
+          ],
+          "stylesheet": [
+            "css/dataTables.bootstrap.min.css",
+            "css/dataTables.bootstrap.extra.css"
+          ],
+          "head": null,
+          "attachment": null,
+          "package": null,
+          "all_files": false
+        },
+        {
+          "name": "jquery",
+          "version": "3.5.1",
+          "src": {
+            "href": "jquery-3.5.1"
+          },
+          "meta": null,
+          "script": "jquery.min.js",
+          "stylesheet": null,
+          "head": null,
+          "attachment": null,
+          "all_files": true
+        },
+        {
+          "name": "crosstalk",
+          "version": "1.1.1",
+          "src": {
+            "href": "crosstalk-1.1.1"
+          },
+          "meta": null,
+          "script": "js/crosstalk.min.js",
+          "stylesheet": "css/crosstalk.css",
+          "head": null,
+          "attachment": null,
+          "all_files": true
+        }
+      ]
+    }
+  }
+}

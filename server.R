@@ -562,56 +562,72 @@ server <- function(input, output, session) {
           # Filter permutations -----------------------------------------------------
 
 
+          observeEvent(input$filter_combos, {
+            filters <- meta$mainFile %>%
+              dplyr::filter(col_type == "Filter") %>%
+              pull(col_name)
 
-          output$downloadFilterPerms <- downloadHandler(
-            filename = function() {
-              paste("missing_filter_combinations_", basename(inputData$name), ".csv", sep = "")
-            },
-            content = function(file) {
-              filters <- meta$mainFile %>%
-                dplyr::filter(col_type == "Filter") %>%
-                pull(col_name)
+            total_info <- data.frame(filters)
 
-              total_info <- data.frame(filters)
+            for (filter in all_of(filters)) {
+              info <- data$mainFile %>%
+                select(filter) %>%
+                distinct()
 
-              for (filter in all_of(filters)) {
-                info <- data$mainFile %>%
-                  select(filter) %>%
-                  distinct()
-
-                total_info <- total_info %>% base::merge(info)
-              }
-
-
-              total_info <- total_info %>%
-                select(-filters) %>%
-                distinct() %>%
-                unite(join_col, c(!!filters), sep = "_", remove = FALSE)
-
-              # Get list of publication-specific filters
-              publication_filters <- meta$mainFile %>%
-                filter(col_type == "Filter") %>%
-                select(col_name) %>%
-                pull(col_name)
-
-              # Get filter group combos for publication-specific filters
-              distinct_filter_groups <- data$mainFile %>%
-                select(all_of(publication_filters)) %>%
-                distinct() %>%
-                unite(join_col, c(!!filters), sep = "_", remove = TRUE) %>%
-                mutate(flag = 1)
-
-
-              missing_combos <- total_info %>%
-                left_join(distinct_filter_groups, by = "join_col") %>%
-                filter(is.na(flag)) %>%
-                select(-flag, -join_col)
-
-
-
-              write.csv(missing_combos, file, row.names = FALSE)
+              total_info <- total_info %>% base::merge(info)
             }
-          )
+
+
+            total_info <- total_info %>%
+              select(-filters) %>%
+              distinct() %>%
+              unite(join_col, c(!!filters), sep = "_", remove = FALSE)
+
+            # Get list of publication-specific filters
+            publication_filters <- meta$mainFile %>%
+              filter(col_type == "Filter") %>%
+              select(col_name) %>%
+              pull(col_name)
+
+            # Get filter group combos for publication-specific filters
+            distinct_filter_groups <- data$mainFile %>%
+              select(all_of(publication_filters)) %>%
+              distinct() %>%
+              unite(join_col, c(!!filters), sep = "_", remove = TRUE) %>%
+              mutate(flag = 1)
+
+
+            missing_combos <- total_info %>%
+              left_join(distinct_filter_groups, by = "join_col") %>%
+              filter(is.na(flag)) %>%
+              select(-flag, -join_col)
+
+            perc_missing <- round(nrow(missing_combos) / nrow(total_info) * 100, 1)
+
+            # Create text for % missing combos
+
+            output$perc_filter_permutations <- renderUI({
+              paste0(cs_num(nrow(missing_combos)), " (", perc_missing, "%) of a possible ", cs_num(nrow(total_info)), " filter combinations are not in your file.")
+            })
+
+            # create download button
+            output$download_filter_combos <- renderUI({
+              req(nrow(missing_combos) > 0)
+
+              downloadButton("downloadFilterPerms", label = "Download missing filter combinations")
+            })
+
+            # create file for download
+
+            output$downloadFilterPerms <- downloadHandler(
+              filename = function() {
+                paste("missing_filter_combinations_", basename(inputData$name), sep = "")
+              },
+              content = function(file) {
+                write.csv(missing_combos, file, row.names = FALSE)
+              }
+            )
+          })
 
 
 
@@ -1228,6 +1244,7 @@ server <- function(input, output, session) {
         shinyjs::reset("geog_indicator_choice")
         shinyjs::reset("submit_geographies")
         shinyjs::reset("table_geography_list")
+        shinyjs::reset("filter_combos")
 
         # reset the screening button
         shinyjs::reset("screenbutton")
@@ -1269,6 +1286,10 @@ server <- function(input, output, session) {
         output$table_failed_tests <- NULL
         output$table_advisory_tests <- NULL
         output$table_all_tests <- NULL
+        output$perc_filter_permutations <- NULL
+        output$download_filter_combos <- NULL
+        output$downloadFilterPerms <- NULL
+
 
         # set QA list objects to NULL
         output$geog_agg2 <- NULL

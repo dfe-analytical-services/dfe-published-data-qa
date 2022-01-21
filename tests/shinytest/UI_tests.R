@@ -180,17 +180,14 @@ app$snapshot(items = list(output = c("progress_stage", "table_all_tests")))
 app$setInputs(resetbutton = "click")
 
 # 26 - Mix of filter groups -------------------------------------
-app$uploadFile(datafile = "test-data/data_mandatory_cols.csv")
-app$uploadFile(metafile = "test-data/data_mandatory_cols.meta.csv")
+app$uploadFile(datafile = "test-data/filter_groups_mix.csv")
+app$uploadFile(metafile = "test-data/filter_groups_mix.meta.csv")
 app$setInputs(screenbutton = "click")
 app$setInputs(trendy_tabs = "obUnitTab")
 app$snapshot(list(output = c("table_1", "table_2", "table_3", "table_4")))
 
-app$setInputs(resetbutton = "click")
-
 # 27 - Filter interactions downloads  -------------------------------------
-app$uploadFile(datafile = "test-data/filter_groups_mix.csv") # <-- This should be the path to the file, relative to the app's tests/shinytest directory
-app$uploadFile(metafile = "test-data/filter_groups_mix.meta.csv") # <-- This should be the path to the file, relative to the app's tests/shinytest directory
-app$setInputs(screenbutton = "click")
-app$setInputs(trendy_tabs = "obUnitTab")
-app$snapshotDownload("downloadFilterPerms")
+app$setInputs(filter_combos = "click")
+app$snapshot(list(output = "perc_filter_permutations"))
+# Sys.sleep(2)
+# app$snapshotDownload("downloadFilterPerms")

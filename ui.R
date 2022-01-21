@@ -316,8 +316,12 @@ fluidPage(
                   ),
                   column(
                     8,
-
-                    downloadButton("downloadFilterPerms", "Download missing filter combinations")
+                    actionButton(
+                      inputId = "filter_combos",
+                      label = "Calculate filter combinations"
+                    ),
+                    uiOutput("perc_filter_permutations"),
+                    uiOutput("download_filter_combos"),
                   )
                 ),
 
