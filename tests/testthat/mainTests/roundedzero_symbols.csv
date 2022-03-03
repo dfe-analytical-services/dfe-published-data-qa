@@ -4,7 +4,7 @@ time_period,time_identifier,geographic_level,country_code,country_name,region_co
 201718,Academic year,National,E92000001,England,,,,,,State-funded secondary,3382,2949285,4.89899,3.45364,1.44535,373305,12.65747
 201718,Academic year,Regional,E92000001,England,E12000001,North East,,,,State-funded primary and secondary,1033,317616,4.62038,3.12503,1.49536,39300,12.37343
 201718,Academic year,Regional,E92000001,England,E12000001,North East,,,,State-funded primary,858,175079,3.90145,2.7663,1.13516,18073,10.32277
-201718,Academic year,Regional,E92000001,England,E12000001,North East,,,,State-funded secondary,175,142537,5.51279,x,1.94247,21227,14.89227
+201718,Academic year,Regional,E92000001,England,E12000001,North East,,,,State-funded secondary,175,142537,5.51279,~,1.94247,21227,14.89227
 201718,Academic year,Regional,E92000001,England,E12000002,North West,,,,State-funded primary and secondary,2905,931181,4.19093,2.89117,1.29976,99903,10.72863
 201718,Academic year,Regional,E92000001,England,E12000002,North West,,,,State-funded primary,2443,531992,3.65441,2.57801,1.0764,49026,9.21555
 201718,Academic year,Regional,E92000001,England,E12000002,North West,,,,State-funded secondary,462,399189,4.91411,3.31328,1.60083,50877,12.74509
@@ -12,7 +12,7 @@ time_period,time_identifier,geographic_level,country_code,country_name,region_co
 201718,Academic year,Regional,E92000001,England,E12000003,Yorkshire and the Humber,,,,State-funded primary,1771,394967,3.85078,2.64836,1.20243,40339,10.21326
 201718,Academic year,Regional,E92000001,England,E12000003,Yorkshire and the Humber,,,,State-funded secondary,317,298801,5.26744,3.32858,1.93886,41997,14.05517
 201718,Academic year,Regional,E92000001,England,E12000004,East Midlands,,,,State-funded primary and secondary,1921,592559,4.15794,3.00161,1.15633,62888,10.61295
-201718,Academic year,Regional,E92000001,England,E12000004,East Midlands,,,,State-funded primary,1633,338065,3.63591,2.65821,0.9777,x,9.17723
+201718,Academic year,Regional,E92000001,England,E12000004,East Midlands,,,,State-funded primary,1633,338065,3.63591,2.65821,0.9777,~,9.17723
 201718,Academic year,Regional,E92000001,England,E12000004,East Midlands,,,,State-funded secondary,288,254494,4.85183,3.45806,1.39377,31863,12.52014
 201718,Academic year,Regional,E92000001,England,E12000005,West Midlands,,,,State-funded primary and secondary,2185,767407,4.20781,2.97631,1.2315,82604,10.76404
 201718,Academic year,Regional,E92000001,England,E12000005,West Midlands,,,,State-funded primary,1770,430199,3.73406,2.65545,1.07861,40347,9.37868
@@ -21,7 +21,7 @@ time_period,time_identifier,geographic_level,country_code,country_name,region_co
 201718,Academic year,Regional,E92000001,England,E12000006,East of England,,,,State-funded primary,1988,434786,3.73296,2.82846,0.9045,40316,9.27261
 201718,Academic year,Regional,E92000001,England,E12000006,East of England,,,,State-funded secondary,382,331375,4.7813,3.57655,1.20475,40100,12.10109
 201718,Academic year,Regional,E92000001,England,E12000008,South East,,,,State-funded primary and secondary,3097,1081715,4.14945,3.12358,1.02586,111669,10.32333
-201718,Academic year,Regional,E92000001,England,E12000008,South East,,,,State-funded primary,2593,x,3.57223,2.73452,0.83771,53231,8.57036
+201718,Academic year,Regional,E92000001,England,E12000008,South East,,,,State-funded primary,2593,~,3.57223,2.73452,0.83771,53231,8.57036
 201718,Academic year,Regional,E92000001,England,E12000008,South East,,,,State-funded secondary,504,460609,4.93607,3.65379,1.28227,58438,12.68712
 201718,Academic year,Regional,E92000001,England,E12000009,South West,,,,State-funded primary and secondary,2210,637090,4.39996,3.37439,1.02557,70819,11.11601
 201718,Academic year,Regional,E92000001,England,E12000009,South West,,,,State-funded primary,1871,356647,3.76448,2.91868,0.8458,32628,9.14854

@@ -30,6 +30,15 @@ four_digit_identifiers <- c("Calendar year", "Reporting year", weeks, months)
 
 six_digit_identifiers <- c("Autumn and spring term", terms, "Financial year", "Academic year", "Tax year", financial_quarters, financial_halves)
 
+# Latest GSS/ONS data symbols
+gssNAvcode <- "x"
+gssNApcode <- "z"
+gssSupcode <- "c"
+gssRndcode <- "low"
+Symbol <- (c(gssNApcode, gssNAvcode, gssSupcode, gssRndcode))
+legacy_symbols <- c("~",":")
+
+
 geography_matrix <- matrix(c(
   "National", "country_code", "country_name", NA,
   "Regional", "region_code", "region_name", NA,

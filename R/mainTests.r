@@ -10,7 +10,7 @@ mainTests <- function(data_character, meta_character, datafile, metafile) {
     total(datafile, metafile), # active test
     observational_total(datafile, metafile), # active test
     null(data_character, meta_character), # active test
-    suppression_symbols(datafile, metafile), # active test
+    obsolete_symbols(datafile, metafile), # active test
     no_data_symbols(datafile), # active test
     blanks_filters(data_character, meta_character), # active test
     blanks_indicators(data_character, meta_character), # active test
@@ -428,32 +428,32 @@ null <- function(data, meta) {
   return(output)
 }
 
-# suppression_symbols -------------------------------------
-# check for the legacy suppression symbol 'c'
+# obsolete_symbols -------------------------------------
+# check for the legacy symbols
 
-suppression_symbols <- function(data, meta) {
+obsolete_symbols <- function(data, meta) {
   mindicators <- filter(meta, col_type == "Indicator")
 
   present_indicators <- intersect(mindicators$col_name, names(data))
 
-  suppression_symbols_check <- function(i) {
-    if ("x" %in% data[[i]]) {
+  obsolete_symbols_check <- function(i) {
+    if (any(legacy_symbols %in% data[[i]])) {
       return("FAIL")
     } else {
       return("PASS")
     }
   }
 
-  pre_result <- stack(sapply(present_indicators, suppression_symbols_check))
+  pre_result <- stack(sapply(present_indicators, obsolete_symbols_check))
 
   if ("FAIL" %in% pre_result$values) {
     output <- list(
-      "message" = "'x' was found in the indicator values, please update these to the GSS recommended 'c' where this refers to suppressed data.",
+      "message" = paste0("Obsolete symbols (one or more of ",paste0(legacy_symbols,collapse=', '),") found in the indicator values, please refer to the GSS recommended symbols."),
       "result" = "ADVISORY"
     )
   } else {
     output <- list(
-      "message" = "The legacy symbol for suppression, 'x', is not present in the indicator values.",
+      "message" = paste("Obsolete symbols (i.e. ",paste0(legacy_symbols,collapse=', '),"), are not present in the indicator values."),
       "result" = "PASS"
     )
   }
@@ -1200,8 +1200,7 @@ eda_combinations <- function(data) {
       unique() %>%
       filter(!is.na(.)) %>%
       filter(english_devolved_area_code != "") %>%
-      filter(english_devolved_area_code != ":") %>%
-      filter(english_devolved_area_code != "z") %>%
+      filter(!(english_devolved_area_code %in% Symbol)) %>%
       mutate(combo = paste(english_devolved_area_code, english_devolved_area_name)) %>%
       pull(combo) %>%
       .[!(. %in% expected_eda_combinations)]
@@ -1244,8 +1243,7 @@ lep_combinations <- function(data) {
       unique() %>%
       filter(!is.na(.)) %>%
       filter(local_enterprise_partnership_code != "") %>%
-      filter(local_enterprise_partnership_code != ":") %>%
-      filter(local_enterprise_partnership_code != "z") %>%
+      filter(!(local_enterprise_partnership_code %in% Symbol)) %>%
       mutate(combo = paste(local_enterprise_partnership_code, local_enterprise_partnership_name)) %>%
       pull(combo) %>%
       .[!(. %in% expected_lep_combinations)]
@@ -1288,8 +1286,7 @@ pcon_combinations <- function(data) {
       unique() %>%
       filter(!is.na(.)) %>%
       filter(pcon_code != "") %>%
-      filter(pcon_code != ":") %>%
-      filter(pcon_code != "z") %>%
+      filter(!(pcon_code %in% Symbol)) %>%
       mutate(combo = paste(pcon_code, pcon_name)) %>%
       pull(combo) %>%
       .[!(. %in% expected_pcon_combinations)]
@@ -1332,8 +1329,7 @@ lad_combinations <- function(data) {
       unique() %>%
       filter(!is.na(.)) %>%
       filter(lad_code != "") %>%
-      filter(lad_code != ":") %>%
-      filter(lad_code != "z") %>%
+      filter(!(lad_code %in% Symbol)) %>%
       mutate(combo = paste(lad_code, lad_name)) %>%
       pull(combo) %>%
       .[!(. %in% expected_lad_combinations)]
@@ -1376,8 +1372,7 @@ la_combinations <- function(data) {
       unique() %>%
       filter(!is.na(.)) %>%
       filter(new_la_code != "") %>%
-      filter(new_la_code != ":") %>%
-      filter(new_la_code != "z") %>%
+      filter(!(new_la_code %in% Symbol)) %>%
       mutate(combo = paste(old_la_code, new_la_code, la_name)) %>%
       pull(combo) %>%
       .[!(. %in% expected_la_combinations)]
@@ -1422,8 +1417,7 @@ region_combinations <- function(data) {
         filter(geographic_level == geography_matrix[2, 1]) %>%
         select(geography_matrix[2, 2], geography_matrix[2, 3]) %>%
         unique() %>%
-        filter(region_code != ":" && !is.na(region_code)) %>%
-        filter(region_code != "z" && !is.na(region_code)),
+        filter(!(region_code %in% Symbol) && !is.na(region_code)),
 
       data %>%
         filter(geographic_level != geography_matrix[2, 1]) %>%
@@ -1431,8 +1425,7 @@ region_combinations <- function(data) {
         unique() %>%
         filter(!is.na(.)) %>%
         filter(region_code != "") %>%
-        filter(region_code != ":") %>%
-        filter(region_code != "z")
+        filter(!(region_code %in% Symbol))
     ) %>%
       mutate(combo = paste(region_code, region_name)) %>%
       pull(combo) %>%
@@ -1473,8 +1466,7 @@ country_combinations <- function(data) {
   } else {
     invalid_values <- data %>%
       select("country_code", "country_name") %>%
-      filter(country_code != ":") %>%
-      filter(country_code != "z") %>%
+      filter(!(country_code %in% Symbol)) %>%
       unique() %>%
       mutate(combo = paste(country_code, country_name)) %>%
       pull(combo) %>%
@@ -1728,7 +1720,7 @@ sch_prov_duplicates <- function(data) {
 }
 
 # na_geography -------------------------------------
-# checking if location has code of ":", then name is "not available"
+# checking if location has proper NA code, then name is "not available"
 
 na_geography <- function(data) {
   geography_name_codes <- geography_matrix[1:14, 2:3] %>% # leaving school and provider in as we want to catch if anyone is using these
@@ -1747,7 +1739,7 @@ na_geography <- function(data) {
 
     na_locations <- eval(parse(text = paste0(
       "geog_data %>% distinct(", code_col, ", ", name_col, ") %>% rename(code = ", code_col, ", name = ", name_col, ")"
-    ))) %>% subset(code == ":" & !(name == "Not available"))
+    ))) %>% subset(code == gssNAvcode & !(name == "Not available"))
 
     if (nrow(na_locations) == 0) {
       return(FALSE)
@@ -1788,18 +1780,18 @@ na_geography <- function(data) {
 
   if (length(na_names) == 0) {
     output <- list(
-      "message" = paste0("No tested locations have a code of ':' without the corresponding name 'Not available'."),
+      "message" = paste0("No tested locations have a code of '",gssNAvcode,"' without the corresponding name 'Not available'."),
       "result" = "PASS"
     )
   } else {
     if (length(na_names) == 1) {
       output <- list(
-        "message" = paste0("The following geographic level has at least one location with a code of ':', but does not have the corresponding name 'Not available': '", paste0(na_names), ". <br> - The name for ':' should always be 'Not available'."),
+        "message" = paste0("The following geographic level has at least one location with a code of '",gssNAvcode,"', but does not have the corresponding name 'Not available': '", paste0(na_names), ". <br> - The name for '",gssNAvcode,"' should always be 'Not available'."),
         "result" = "FAIL"
       )
     } else {
       output <- list(
-        "message" = paste0("The following geographic level has at least one location with a code of ':', but does not have the corresponding name 'Not available': '", paste0(na_names, collapse = "', '"), "'. <br> - The name for ':' should always be 'Not available'."),
+        "message" = paste0("The following geographic level has at least one location with a code of '",gssNAvcode,"', but does not have the corresponding name 'Not available': '", paste0(na_names, collapse = "', '"), "'. <br> - The name for '",gssNAvcode,"' should always be 'Not available'."),
         "result" = "FAIL"
       )
     }
@@ -1809,7 +1801,7 @@ na_geography <- function(data) {
 }
 
 # na_geography_code -------------------------------------
-# checking if location has the name "not available" then its code is ":"
+# checking if location has the name "not available" then its code is the appropriate GSS code.
 
 na_geography_code <- function(data) {
   geography_name_codes <- geography_matrix[1:14, 2:3] %>% # leaving school and provider in as we want to catch if anyone is using these
@@ -1828,7 +1820,7 @@ na_geography_code <- function(data) {
 
     na_locations <- eval(parse(text = paste0(
       "geog_data %>% distinct(", code_col, ", ", name_col, ") %>% rename(code = ", code_col, ", name = ", name_col, ")"
-    ))) %>% subset(name == "Not available" & !(code == ":"))
+    ))) %>% subset(name == "Not available" & !(code == gssNAvcode))
 
     if (nrow(na_locations) == 0) {
       return(FALSE)
@@ -1870,18 +1862,18 @@ na_geography_code <- function(data) {
 
   if (length(na_codes) == 0) {
     output <- list(
-      "message" = paste0("No tested locations have a name of 'Not available' without the corresponding code ':'."),
+      "message" = paste0("No tested locations have a name of 'Not available' without the corresponding code '",gssNAvcode,"'."),
       "result" = "PASS"
     )
   } else {
     if (length(na_codes) == 1) {
       output <- list(
-        "message" = paste0("The following geographic level has at least one location with a name of 'Not available', that does not have the corresponding code ':': '", paste0(na_codes), ". <br> - The code for 'Not available' should always be ':'."),
+        "message" = paste0("The following geographic level has at least one location with a name of 'Not available', that does not have the corresponding code '",gssNAvcode,"': '", paste0(na_codes), "'. <br> - The code for 'Not available' should always be '",gssNAvcode,"'."),
         "result" = "FAIL"
       )
     } else {
       output <- list(
-        "message" = paste0("The following geographic levels have at least one location with a a name of 'Not available', that does not have the corresponding code ':': '", paste0(na_codes, collapse = "', '"), "'. <br> - The code for 'Not available' should always be ':'."),
+        "message" = paste0("The following geographic levels have at least one location with a a name of 'Not available', that does not have the corresponding code '",gssNAvcode,"': '", paste0(na_codes, collapse = "', '"), "'. <br> - The code for 'Not available' should always be '",gssNAvcode,"'."),
         "result" = "FAIL"
       )
     }

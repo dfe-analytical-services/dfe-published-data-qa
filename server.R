@@ -723,10 +723,10 @@ server <- function(input, output, session) {
 
             sumtable <- function(args) {
               y <- eval(parse(text = paste0("data$mainFile %>% filter(geographic_level =='", args[2], "') %>% 
-          mutate(across(all_of('", args[1], "'), na_if, 'c')) %>%
-          mutate(across(all_of('", args[1], "'), na_if, 'z')) %>%
-          mutate(across(all_of('", args[1], "'), na_if, ':')) %>%
-          mutate(across(all_of('", args[1], "'), na_if, '~')) %>%
+          mutate(across(all_of('", args[1], "'), na_if, '",gssNAvcode,"')) %>%
+          mutate(across(all_of('", args[1], "'), na_if, '",gssNApcode,"')) %>%
+          mutate(across(all_of('", args[1], "'), na_if, '",gssNAvcode,"')) %>%
+          mutate(across(all_of('", args[1], "'), na_if, '",gssRndcode,"')) %>%
           mutate(across(all_of('", args[1], "'), as.numeric)) %>%
           select(time_period,'", args[1], "') %>%
           group_by(time_period) %>%
@@ -989,10 +989,10 @@ server <- function(input, output, session) {
               ii <- input$geog_indicator_parameter # "number_of_pupils"
 
               eval(parse(text = paste0("data$mainFile %>%
-                            mutate(across(all_of('", ii, "'), na_if, 'c')) %>%
-                            mutate(across(all_of('", ii, "'), na_if, 'z')) %>%
-                            mutate(across(all_of('", ii, "'), na_if, ':')) %>%
-                            mutate(across(all_of('", ii, "'), na_if, '~')) %>%
+                            mutate(across(all_of('", ii, "'), na_if, '",gssSupcode,"')) %>%
+                            mutate(across(all_of('", ii, "'), na_if, '",gssNApcode,"')) %>%
+                            mutate(across(all_of('", ii, "'), na_if, '",gssNAvcode,"')) %>%
+                            mutate(across(all_of('", ii, "'), na_if, '",gssRndcode,"')) %>%
                             mutate(across(all_of('", ii, "'), as.numeric)) %>%
                             group_by(time_period,geographic_level,", cf, ") %>%
                             summarise(aggregate_number = sum(", ii, ")) %>%
@@ -1095,12 +1095,10 @@ server <- function(input, output, session) {
               unlist() %>%
               table() %>%
               as.data.frame() %>%
-              filter(. %in% c("z", "c", ":", "~")) %>%
+              filter(. %in% Symbol) %>%
               mutate(Perc = roundFiveUp(Freq / total_indicator_count * 100, 1))
 
             names(suppress_count) <- c("Symbol", "Frequency", "% of total cell count")
-
-            Symbol <- (c("z", "c", ":", "~"))
 
             symbol_expected <- as.data.frame(Symbol)
 
