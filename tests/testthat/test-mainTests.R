@@ -47,17 +47,25 @@ test_that("null", {
 # obsolete_symbols -------------------------------------------------------------------------------------------------------
 
 test_that("obsolete_roundedzero_symbols", {
-  expect_equal(testIndividualTestSeparate(paste0(pathStart, "roundedzero_symbols.csv"), 
-                                          paste0(pathStart, "roundedzero_symbols.meta.csv"),
-                                          "obsolete_symbols"),
-               "ADVISORY")
+  expect_equal(
+    testIndividualTestSeparate(
+      paste0(pathStart, "roundedzero_symbols.csv"),
+      paste0(pathStart, "roundedzero_symbols.meta.csv"),
+      "obsolete_symbols"
+    ),
+    "ADVISORY"
+  )
 })
 
 test_that("obsolete_notavailable_symbols", {
-  expect_equal(testIndividualTestSeparate(paste0(pathStart, "notavailable_symbols.csv"), 
-                                          paste0(pathStart, "notavailable_symbols.meta.csv"),
-                                          "obsolete_symbols"),
-               "ADVISORY")
+  expect_equal(
+    testIndividualTestSeparate(
+      paste0(pathStart, "notavailable_symbols.csv"),
+      paste0(pathStart, "notavailable_symbols.meta.csv"),
+      "obsolete_symbols"
+    ),
+    "ADVISORY"
+  )
 })
 
 # no_data_symbols -------------------------------------------------------------------------------------------------------
@@ -337,9 +345,11 @@ test_that("indicator_dp_completed", {
 # indicator_dp_negative -------------------------------------------------------------------------------------------------------
 
 test_that("indicator_dp_negative", {
-  expect_equal(testIndividualTestSeparate(paste0(pathStart, "indicator_dp_negative.csv"), 
-                                          paste0(pathStart, "indicator_dp_negative.meta.csv"), 
-                                          "indicator_dp_validation"), "FAIL")
+  expect_equal(testIndividualTestSeparate(
+    paste0(pathStart, "indicator_dp_negative.csv"),
+    paste0(pathStart, "indicator_dp_negative.meta.csv"),
+    "indicator_dp_validation"
+  ), "FAIL")
 })
 
 # indicator_dp_nonInteger -------------------------------------------------------------------------------------------------------

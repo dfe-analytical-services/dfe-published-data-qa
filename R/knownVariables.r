@@ -35,8 +35,8 @@ gssNAvcode <- "x"
 gssNApcode <- "z"
 gssSupcode <- "c"
 gssRndcode <- "low"
-Symbol <- (c(gssNApcode, gssNAvcode, gssSupcode, gssRndcode))
-legacy_symbols <- c("~",":")
+gss_symbols <- c(gssNApcode, gssNAvcode, gssSupcode, gssRndcode)
+legacy_gss_symbols <- c("~", ":")
 
 
 geography_matrix <- matrix(c(
