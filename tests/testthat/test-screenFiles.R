@@ -85,7 +85,7 @@ context("Geography edge cases")
 test_that("zLocationCode", {
   screeningOutput <- testOther("../../tests/testthat/otherData/adding_z_locationCode.csv")
 
-  expect_equal(screeningOutput$results %>% filter(result == "FAIL") %>% nrow(), 0)
+  expect_equal(screeningOutput$results %>% filter(result == "FAIL") %>% nrow(), 1)
 })
 
 test_that("ladWithinLA", {

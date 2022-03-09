@@ -1200,7 +1200,7 @@ eda_combinations <- function(data) {
       unique() %>%
       filter(!is.na(.)) %>%
       filter(english_devolved_area_code != "") %>%
-      filter(!(english_devolved_area_code %in% gss_symbols)) %>%
+      filter(english_devolved_area_code != gssNAvcode) %>%
       mutate(combo = paste(english_devolved_area_code, english_devolved_area_name)) %>%
       pull(combo) %>%
       .[!(. %in% expected_eda_combinations)]
@@ -1243,7 +1243,7 @@ lep_combinations <- function(data) {
       unique() %>%
       filter(!is.na(.)) %>%
       filter(local_enterprise_partnership_code != "") %>%
-      filter(!(local_enterprise_partnership_code %in% gss_symbols)) %>%
+      filter(local_enterprise_partnership_code != gssNAvcode) %>%
       mutate(combo = paste(local_enterprise_partnership_code, local_enterprise_partnership_name)) %>%
       pull(combo) %>%
       .[!(. %in% expected_lep_combinations)]
@@ -1286,7 +1286,7 @@ pcon_combinations <- function(data) {
       unique() %>%
       filter(!is.na(.)) %>%
       filter(pcon_code != "") %>%
-      filter(!(pcon_code %in% gss_symbols)) %>%
+      filter(pcon_code != gssNAvcode) %>%
       mutate(combo = paste(pcon_code, pcon_name)) %>%
       pull(combo) %>%
       .[!(. %in% expected_pcon_combinations)]
@@ -1329,7 +1329,7 @@ lad_combinations <- function(data) {
       unique() %>%
       filter(!is.na(.)) %>%
       filter(lad_code != "") %>%
-      filter(!(lad_code %in% gss_symbols)) %>%
+      filter(lad_code != gssNAvcode) %>%
       mutate(combo = paste(lad_code, lad_name)) %>%
       pull(combo) %>%
       .[!(. %in% expected_lad_combinations)]
@@ -1372,7 +1372,7 @@ la_combinations <- function(data) {
       unique() %>%
       filter(!is.na(.)) %>%
       filter(new_la_code != "") %>%
-      filter(!(new_la_code %in% gss_symbols)) %>%
+      filter(new_la_code != gssNAvcode) %>%
       mutate(combo = paste(old_la_code, new_la_code, la_name)) %>%
       pull(combo) %>%
       .[!(. %in% expected_la_combinations)]
@@ -1417,7 +1417,7 @@ region_combinations <- function(data) {
         filter(geographic_level == geography_matrix[2, 1]) %>%
         select(geography_matrix[2, 2], geography_matrix[2, 3]) %>%
         unique() %>%
-        filter(!(region_code %in% gss_symbols) && !is.na(region_code)),
+        filter(region_code != gssNAvcode && !is.na(region_code)),
 
       data %>%
         filter(geographic_level != geography_matrix[2, 1]) %>%
@@ -1425,7 +1425,7 @@ region_combinations <- function(data) {
         unique() %>%
         filter(!is.na(.)) %>%
         filter(region_code != "") %>%
-        filter(!(region_code %in% gss_symbols))
+        filter(region_code != gssNAvcode)
     ) %>%
       mutate(combo = paste(region_code, region_name)) %>%
       pull(combo) %>%
@@ -1466,7 +1466,7 @@ country_combinations <- function(data) {
   } else {
     invalid_values <- data %>%
       select("country_code", "country_name") %>%
-      filter(!(country_code %in% gss_symbols)) %>%
+      filter(country_code != gssNAvcode) %>%
       unique() %>%
       mutate(combo = paste(country_code, country_name)) %>%
       pull(combo) %>%
