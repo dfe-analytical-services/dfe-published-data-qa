@@ -31,7 +31,7 @@ four_digit_identifiers <- c("Calendar year", "Reporting year", weeks, months)
 six_digit_identifiers <- c("Autumn and spring term", terms, "Financial year", "Academic year", "Tax year", financial_quarters, financial_halves)
 
 # Latest GSS/ONS data symbols
-gssNAvcode <- "x"
+gssNAvcode <- "x" # Note that this one is also hardwired into the las.csv file for some terminated LAs that don't have a code listed.
 gssNApcode <- "z"
 gssSupcode <- "c"
 gssRndcode <- "low"
