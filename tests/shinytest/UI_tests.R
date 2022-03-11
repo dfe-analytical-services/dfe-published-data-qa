@@ -8,7 +8,7 @@ app$snapshot()
 # 2 Passes everything -------------------------------------------------------------------------------------------------------------------
 app$uploadFile(datafile = "test-data/passes_everything.csv")
 app$uploadFile(metafile = "test-data/passes_everything.meta.csv")
-Sys.sleep(2)
+Sys.sleep(2.8)
 app$setInputs(screenbutton = "click")
 app$snapshot(items = list(output = c("progress_stage", "table_all_tests")))
 
@@ -17,6 +17,7 @@ app$setInputs(resetbutton = "click")
 # 3 - Passes everything advisory -------------------------------------------------------------------------------------------------------------------
 app$uploadFile(datafile = "test-data/passes_everything_advisory.csv")
 app$uploadFile(metafile = "test-data/passes_everything_advisory.meta.csv")
+Sys.sleep(2.8)
 app$setInputs(screenbutton = "click")
 app$snapshot(items = list(output = c("progress_stage", "table_all_tests")))
 

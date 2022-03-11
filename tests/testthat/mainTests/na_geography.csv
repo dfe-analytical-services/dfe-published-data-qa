@@ -5,10 +5,10 @@ time_period,time_identifier,geographic_level,country_code,country_name,local_ent
 2021,Calendar year,Local enterprise partnership,E92000001,England,E37000007,Cheshire and Warrington,,,Total,Mainstream school,z,z,172023,39.9406,172023,39.94061
 2021,Calendar year,Local enterprise partnership,E92000001,England,E37000007,Cheshire and Warrington,,,Total,Non-maintained early years,z,z,2219,0.51521,2219,0.51521
 2021,Calendar year,Local enterprise partnership,E92000001,England,E37000003,Cumbria,,,Total,Further education,z,z,71728,16.6539,71728,16.65394
-2021,Calendar year,MAT,E92000001,England,,,:,ACCORD MULTI ACADEMY TRUST,Total,Other,z,z,2225,0.5166,2225,0.5166
-2021,Calendar year,MAT,E92000001,England,,,:,ACCORDIA ACADEMIES TRUST,Total,Educated elsewhere,z,z,14452,3.35549,14452,3.35549
-2021,Calendar year,MAT,E92000001,England,,,:,ALCESTER ACADEMY,Total,Alternative provision/Pupil referral unit,z,z,3239,0.75204,3239,0.75204
-2021,Calendar year,MAT,E92000001,England,,,:,ALCESTER GRAMMAR SCHOOL,Non-maintained early years,Non-maintained early years,z,z,2219,0.51521,2219,0.51521
+2021,Calendar year,MAT,E92000001,England,,,x,ACCORD MULTI ACADEMY TRUST,Total,Other,z,z,2225,0.5166,2225,0.5166
+2021,Calendar year,MAT,E92000001,England,,,x,ACCORDIA ACADEMIES TRUST,Total,Educated elsewhere,z,z,14452,3.35549,14452,3.35549
+2021,Calendar year,MAT,E92000001,England,,,x,ALCESTER ACADEMY,Total,Alternative provision/Pupil referral unit,z,z,3239,0.75204,3239,0.75204
+2021,Calendar year,MAT,E92000001,England,,,x,ALCESTER GRAMMAR SCHOOL,Non-maintained early years,Non-maintained early years,z,z,2219,0.51521,2219,0.51521
 2021,Calendar year,MAT,E92000001,England,,,TR00004,ABBOTS HALL PRIMARY ACADEMY,Mainstream - LA maintained,Mainstream school,z,z,74331,17.2583,74331,17.2583
 2021,Calendar year,MAT,E92000001,England,,,TR01834,ABINGDON LEARNING TRUST,Mainstream - LA maintained - SEN unit,Mainstream school,z,z,3674,0.85304,3674,0.85304
 2021,Calendar year,MAT,E92000001,England,,,TR03174,ABNEY TRUST,Mainstream - LA maintained - Resourced provision,Mainstream school,z,z,6566,1.52451,6566,1.52451

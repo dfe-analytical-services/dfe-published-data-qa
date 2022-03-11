@@ -61,16 +61,16 @@ E08000033,Calderdale,01/01/2009,,E12000003,E08,Metropolitan Districts,live,381
 E08000034,Kirklees,01/01/2009,,E12000003,E08,Metropolitan Districts,live,382
 E08000035,Leeds,01/01/2009,,E12000003,E08,Metropolitan Districts,live,383
 E08000036,Wakefield,01/01/2009,,E12000003,E08,Metropolitan Districts,live,384
-E10000001,Bedfordshire,01/01/2009,31/03/2009,E12000006,E10,Counties,terminated,:
+E10000001,Bedfordshire,01/01/2009,31/03/2009,E12000006,E10,Counties,terminated,x
 E10000002,Buckinghamshire,01/01/2009,31/03/2020,E12000008,E10,Counties,terminated,825
 E10000003,Cambridgeshire,01/01/2009,,E12000006,E10,Counties,live,873
-E10000004,Cheshire,01/01/2009,31/03/2009,E12000002,E10,Counties,terminated,:
-E10000005,Cornwall and Isles of Scilly,01/01/2009,31/03/2009,E12000009,E10,Counties,terminated,:
+E10000004,Cheshire,01/01/2009,31/03/2009,E12000002,E10,Counties,terminated,x
+E10000005,Cornwall and Isles of Scilly,01/01/2009,31/03/2009,E12000009,E10,Counties,terminated,x
 E10000006,Cumbria,01/01/2009,,E12000002,E10,Counties,live,909
 E10000007,Derbyshire,01/01/2009,,E12000004,E10,Counties,live,830
 E10000008,Devon,01/01/2009,,E12000009,E10,Counties,live,878
 E10000009,Dorset,01/01/2009,31/03/2019,E12000009,E10,Counties,terminated,835
-E10000010,Durham,01/01/2009,31/03/2009,E12000001,E10,Counties,terminated,:
+E10000010,Durham,01/01/2009,31/03/2009,E12000001,E10,Counties,terminated,x
 E10000011,East Sussex,01/01/2009,,E12000008,E10,Counties,live,845
 E10000012,Essex,01/01/2009,,E12000006,E10,Counties,live,881
 E10000013,Gloucestershire,01/01/2009,,E12000009,E10,Counties,live,916
@@ -82,18 +82,18 @@ E10000018,Leicestershire,01/01/2009,,E12000004,E10,Counties,live,855
 E10000019,Lincolnshire,01/01/2009,,E12000004,E10,Counties,live,925
 E10000020,Norfolk,01/01/2009,,E12000006,E10,Counties,live,926
 E10000021,Northamptonshire,01/01/2009,31/03/2021,E12000004,E10,Counties,terminated,928
-E10000022,Northumberland,01/01/2009,31/03/2009,E12000001,E10,Counties,terminated,:
+E10000022,Northumberland,01/01/2009,31/03/2009,E12000001,E10,Counties,terminated,x
 E10000023,North Yorkshire,01/01/2009,,E12000003,E10,Counties,live,815
 E10000024,Nottinghamshire,01/01/2009,,E12000004,E10,Counties,live,891
 E10000025,Oxfordshire,01/01/2009,,E12000008,E10,Counties,live,931
-E10000026,Shropshire,01/01/2009,31/03/2009,E12000005,E10,Counties,terminated,:
+E10000026,Shropshire,01/01/2009,31/03/2009,E12000005,E10,Counties,terminated,x
 E10000027,Somerset,01/01/2009,,E12000009,E10,Counties,live,933
 E10000028,Staffordshire,01/01/2009,,E12000005,E10,Counties,live,860
 E10000029,Suffolk,01/01/2009,,E12000006,E10,Counties,live,935
 E10000030,Surrey,01/01/2009,,E12000008,E10,Counties,live,936
 E10000031,Warwickshire,01/01/2009,,E12000005,E10,Counties,live,937
 E10000032,West Sussex,01/01/2009,,E12000008,E10,Counties,live,938
-E10000033,Wiltshire,01/01/2009,31/03/2009,E12000009,E10,Counties,terminated,:
+E10000033,Wiltshire,01/01/2009,31/03/2009,E12000009,E10,Counties,terminated,x
 E10000034,Worcestershire,01/01/2009,,E12000005,E10,Counties,live,885
 E06000032,Luton,01/01/2009,,E12000006,E06,Unitary Authorities,live,821
 E06000033,Southend-on-Sea,01/01/2009,,E12000006,E06,Unitary Authorities,live,882
