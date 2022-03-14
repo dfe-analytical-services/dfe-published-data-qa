@@ -1,10 +1,10 @@
-﻿time_period,time_identifier,geographic_level,country_code,country_name,region_code,region_name,lad_code,lad_name,school_type,num_schools,headcount,perm_excl,perm_excl_rate,suspension,susp_rate,one_plus_susp,one_plus_susp_rate
+time_period,time_identifier,geographic_level,country_code,country_name,region_code,region_name,lad_code,lad_name,school_type,num_schools,headcount,perm_excl,perm_excl_rate,suspension,susp_rate,one_plus_susp,one_plus_susp_rate
 201920,Academic year,Local authority district,E92000001,England,E12000001,North East,E08000021,Newcastle upon Tyne,state-funded primary,72,22995,0,0,231,1.00456621,103,0.447923462
 201920,Academic year,Local authority district,E92000001,England,E12000001,North East,E06000004,Stockton-on-Tees,state-funded primary,60,19903,2,0.010048736,144,0.723509019,73,0.366778878
 201920,Academic year,Local authority district,E92000001,England,E12000001,North East,E06000002,Middlesbrough,state-funded primary,41,15920,1,0.006281407,63,0.395728643,40,0.251256281
 201920,Academic year,Local authority district,E92000001,England,E12000001,North East,E06000005,Darlington,state-funded secondary,8,6579,14,0.212798298,821,12.47910017,321,4.879160967
 201920,Academic year,Local authority district,E92000001,England,E12000001,North East,E08000023,South Tyneside,state-funded primary,45,12912,3,0.023234201,73,0.565365551,39,0.30204461
-201920,Academic year,Local authority district,E92000001,England,:,Not available,:,Not available,state-funded secondary,1,77,0,0,1,1.298701299,1,1.298701299
+201920,Academic year,Local authority district,E92000001,England,x,Not available,x,Not available,state-funded secondary,1,77,0,0,1,1.298701299,1,1.298701299
 201920,Academic year,Local authority district,E92000001,England,E12000001,North East,E08000023,South Tyneside,special,4,554,0,0,34,6.137184116,22,3.971119134
 201920,Academic year,Local authority district,E92000001,England,E12000001,North East,E06000057,Northumberland,special,10,983,0,0,26,2.644964395,17,1.729399797
 201920,Academic year,Local authority district,E92000001,England,E12000001,North East,E08000037,Gateshead,state-funded primary,67,16458,0,0,67,0.407096853,38,0.230890752

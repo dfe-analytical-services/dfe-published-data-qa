@@ -1,0 +1,57 @@
+time_period,time_identifier,geographic_level,country_code,country_name,region_code,region_name,old_la_code,new_la_code,la_name,school_type,num_schools,enrolments,sess_overall_percent,sess_authorised_percent,sess_unauthorised_percent,enrolments_pa_10_exact,enrolments_pa_10_exact_percent
+201718,Academic year,National,E92000001,England,,,,,,Total,20121,6835059,4.20821,3.01996,1.18824,731047,10.69555
+201718,Academic year,National,E92000001,England,,,,,,State-funded primary,16739,3885774,3.68934,2.69421,0.99512,357742,9.20645
+201718,Academic year,National,E92000001,England,,,,,,State-funded secondary,3382,2949285,4.89899,3.45364,1.44535,373305,12.65747
+201718,Academic year,Regional,E92000001,England,E12000001,North East,,,,State-funded primary and secondary,1033,317616,4.62038,3.12503,1.49536,39300,12.37343
+201718,Academic year,Regional,E92000001,England,E12000001,North East,,,,State-funded primary,858,175079,3.90145,2.7663,1.13516,18073,10.32277
+201718,Academic year,Regional,E92000001,England,E12000001,North East,,,,State-funded secondary,175,142537,5.51279,:,1.94247,21227,14.89227
+201718,Academic year,Regional,E92000001,England,E12000002,North West,,,,State-funded primary and secondary,2905,931181,4.19093,2.89117,1.29976,99903,10.72863
+201718,Academic year,Regional,E92000001,England,E12000002,North West,,,,State-funded primary,2443,531992,3.65441,2.57801,1.0764,49026,9.21555
+201718,Academic year,Regional,E92000001,England,E12000002,North West,,,,State-funded secondary,462,399189,4.91411,3.31328,1.60083,50877,12.74509
+201718,Academic year,Regional,E92000001,England,E12000003,Yorkshire and The Humber,,,,State-funded primary and secondary,2088,693768,4.45385,2.93793,1.51592,82336,11.86794
+201718,Academic year,Regional,E92000001,England,E12000003,Yorkshire and The Humber,,,,State-funded primary,1771,394967,3.85078,2.64836,1.20243,40339,10.21326
+201718,Academic year,Regional,E92000001,England,E12000003,Yorkshire and The Humber,,,,State-funded secondary,317,298801,5.26744,3.32858,1.93886,41997,14.05517
+201718,Academic year,Regional,E92000001,England,E12000004,East Midlands,,,,State-funded primary and secondary,1921,592559,4.15794,3.00161,1.15633,62888,10.61295
+201718,Academic year,Regional,E92000001,England,E12000004,East Midlands,,,,State-funded primary,1633,338065,3.63591,2.65821,0.9777,:,9.17723
+201718,Academic year,Regional,E92000001,England,E12000004,East Midlands,,,,State-funded secondary,288,254494,4.85183,3.45806,1.39377,31863,12.52014
+201718,Academic year,Regional,E92000001,England,E12000005,West Midlands,,,,State-funded primary and secondary,2185,767407,4.20781,2.97631,1.2315,82604,10.76404
+201718,Academic year,Regional,E92000001,England,E12000005,West Midlands,,,,State-funded primary,1770,430199,3.73406,2.65545,1.07861,40347,9.37868
+201718,Academic year,Regional,E92000001,England,E12000005,West Midlands,,,,State-funded secondary,415,337208,4.82122,3.39174,1.42947,42257,12.53143
+201718,Academic year,Regional,E92000001,England,E12000006,East of England,,,,State-funded primary and secondary,2370,766161,4.18822,3.15333,1.03489,80416,10.49597
+201718,Academic year,Regional,E92000001,England,E12000006,East of England,,,,State-funded primary,1988,434786,3.73296,2.82846,0.9045,40316,9.27261
+201718,Academic year,Regional,E92000001,England,E12000006,East of England,,,,State-funded secondary,382,331375,4.7813,3.57655,1.20475,40100,12.10109
+201718,Academic year,Regional,E92000001,England,E12000008,South East,,,,State-funded primary and secondary,3097,1081715,4.14945,3.12358,1.02586,111669,10.32333
+201718,Academic year,Regional,E92000001,England,E12000008,South East,,,,State-funded primary,2593,:,3.57223,2.73452,0.83771,53231,8.57036
+201718,Academic year,Regional,E92000001,England,E12000008,South East,,,,State-funded secondary,504,460609,4.93607,3.65379,1.28227,58438,12.68712
+201718,Academic year,Local authority,E92000001,England,E12000002,North West,342,E08000013,St. Helens,State-funded secondary,9,9378,4.85859,3.19579,1.6628,1171,12.48667
+201718,Academic year,Local authority,E92000001,England,E12000001,North East,390,E08000020,Gateshead,State-funded primary and secondary,77,23100,4.37675,3.07242,1.30433,2765,11.9697
+201718,Academic year,Local authority,E92000001,England,E12000001,North East,390,E08000020,Gateshead,State-funded primary,67,13066,3.59538,2.55073,1.04466,1228,9.39844
+201718,Academic year,Local authority,E92000001,England,E12000001,North East,390,E08000020,Gateshead,State-funded secondary,10,10034,5.41948,3.76862,1.65086,1537,15.31792
+201718,Academic year,Local authority,E92000001,England,E12000003,Yorkshire and The Humber,812,E06000012,North East Lincolnshire,State-funded primary and secondary,57,20346,4.53452,2.71476,1.81976,2547,12.51843
+201617,Academic year,Local authority,E92000001,England,E12000003,Yorkshire and The Humber,812,E06000012,North East Lincolnshire,State-funded secondary,10,8248,5.08001,3.02458,2.05543,1241,15.04607
+201617,Academic year,Local authority,E92000001,England,E12000004,East Midlands,830,E10000007,Derbyshire,State-funded primary and secondary,395,89910,4.28622,3.37696,0.90926,10341,11.5015
+201617,Academic year,Local authority,E92000001,England,E12000004,East Midlands,830,E10000007,Derbyshire,State-funded primary,350,51928,3.7637,3.03904,0.72466,5059,9.74234
+201516,Academic year,Local authority,E92000001,England,E12000001,North East,390,E08000020,Gateshead,State-funded primary and secondary,77,22657,4.26389,3.19712,1.06677,2642,11.66086
+201516,Academic year,Local authority,E92000001,England,E12000001,North East,390,E08000020,Gateshead,State-funded primary,67,12858,3.52823,2.57673,0.9515,1270,9.87712
+201516,Academic year,Local authority,E92000001,England,E12000001,North East,390,E08000020,Gateshead,State-funded secondary,10,9799,5.24743,4.02655,1.22088,1372,14.00143
+201516,Academic year,Local authority,E92000001,England,E12000003,Yorkshire and The Humber,812,E06000012,North East Lincolnshire,State-funded primary and secondary,57,19811,4.45645,2.96003,1.49642,2509,12.66468
+201516,Academic year,Local authority,E92000001,England,E12000003,Yorkshire and The Humber,812,E06000012,North East Lincolnshire,State-funded primary,47,11662,3.98821,2.84118,1.14704,1329,11.39599
+201516,Academic year,Local authority,E92000001,England,E12000003,Yorkshire and The Humber,812,E06000012,North East Lincolnshire,State-funded secondary,10,8149,5.1312,3.1313,1.9999,1180,14.4803
+201516,Academic year,Local authority,E92000001,England,E12000004,East Midlands,830,E10000007,Derbyshire,State-funded primary and secondary,394,88650,4.09889,3.27525,0.82364,9663,10.90017
+201415,Academic year,Local authority,E92000001,England,E13000002,Outer London,317,E09000026,Redbridge,State-funded secondary,18,18864,4.78789,3.64642,1.14147,2201,11.66773
+201415,Academic year,Local authority,E92000001,England,E12000005,West Midlands,335,E08000030,Walsall,State-funded primary and secondary,104,38809,4.28567,3.18868,1.09699,4265,10.98972
+201415,Academic year,Local authority,E92000001,England,E12000005,West Midlands,335,E08000030,Walsall,State-funded primary,85,21742,3.85988,2.90129,0.95859,2083,9.58054
+201415,Academic year,Local authority,E92000001,England,E12000005,West Midlands,335,E08000030,Walsall,State-funded secondary,19,17067,4.83358,3.5585,1.27508,2182,12.78491
+201415,Academic year,Local authority,E92000001,England,E12000002,North West,342,E08000013,St. Helens,State-funded primary and secondary,63,21297,4.03285,2.98701,1.04585,2166,10.17045
+201415,Academic year,Local authority,E92000001,England,E12000002,North West,342,E08000013,St. Helens,State-funded primary,54,12388,3.61176,2.73459,0.87718,1095,8.8392
+201415,Academic year,Local authority,E92000001,England,E12000002,North West,342,E08000013,St. Helens,State-funded secondary,9,8909,4.62611,3.34263,1.28348,1071,12.02155
+201415,Academic year,Local authority,E92000001,England,E12000001,North East,390,E08000020,Gateshead,State-funded primary and secondary,77,22320,4.07514,3.02391,1.05123,2354,10.54659
+201415,Academic year,Local authority,E92000001,England,E12000001,North East,390,E08000020,Gateshead,State-funded primary,67,12587,3.40628,2.51282,0.89346,1050,8.34194
+201415,Academic year,Local authority,E92000001,England,E12000001,North East,390,E08000020,Gateshead,State-funded secondary,10,9733,4.95909,3.69935,1.25974,1304,13.39772
+201415,Academic year,Local authority,E92000001,England,E12000003,Yorkshire and The Humber,812,E06000012,North East Lincolnshire,State-funded primary and secondary,57,19800,4.27091,3.0068,1.26411,2266,11.44444
+201415,Academic year,Local authority,E92000001,England,E12000003,Yorkshire and The Humber,812,E06000012,North East Lincolnshire,State-funded primary,47,11599,3.84033,2.86284,0.97748,1160,10.00086
+201314,Academic year,Local authority,E92000001,England,E12000002,North West,895,E06000049,Cheshire East,State-funded primary,124,23991,3.49321,3.00396,0.48925,1841,7.67371
+201314,Academic year,Local authority,E92000001,England,E12000002,North West,895,E06000049,Cheshire East,State-funded secondary,22,18593,4.67972,3.87759,0.80213,2322,12.48857
+201314,Academic year,Local authority,E92000001,England,E12000009,South West,933,E10000027,Somerset,State-funded primary and secondary,251,59010,4.35082,3.64295,0.70787,6400,10.84562
+201314,Academic year,Local authority,E92000001,England,E12000009,South West,933,E10000027,Somerset,State-funded primary,212,31411,3.82449,3.28843,0.53606,2834,9.02232
+201314,Academic year,Local authority,E92000001,England,E12000009,South West,933,E10000027,Somerset,State-funded secondary,39,27599,4.95423,4.04939,0.90485,3566,12.92076
