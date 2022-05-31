@@ -365,9 +365,7 @@ server <- function(input, output, session) {
             "#trendy_tabs li a[data-value=outliersTab]",
             "#trendy_tabs li a[data-value=geogTab]"
           ))
-        }
-
-        else if (failed_tests == 0 & data$mainFile %>%
+        } else if (failed_tests == 0 & data$mainFile %>%
           select(geographic_level) %>%
           distinct() %>%
           nrow() > 1) {
@@ -621,8 +619,7 @@ server <- function(input, output, session) {
                   pull(filter_grouping_column)
 
                 return(data$mainFile %>% select(filter_group, filter) %>% distinct() %>% arrange(!!sym(filter_group), !!sym(filter)))
-              }
-              else {
+              } else {
                 return(data$mainFile %>% select(filter) %>% distinct() %>% arrange(filter))
               }
             }
@@ -722,7 +719,7 @@ server <- function(input, output, session) {
             args <- expand.grid(ind = parameter, geog = geog_parameter, stringsAsFactors = FALSE)
 
             sumtable <- function(args) {
-              y <- eval(parse(text = paste0("data$mainFile %>% filter(geographic_level =='", args[2], "') %>% 
+              y <- eval(parse(text = paste0("data$mainFile %>% filter(geographic_level =='", args[2], "') %>%
           mutate(across(all_of('", args[1], "'), na_if, '", gssNAvcode, "')) %>%
           mutate(across(all_of('", args[1], "'), na_if, '", gssNApcode, "')) %>%
           mutate(across(all_of('", args[1], "'), na_if, '", gssNAvcode, "')) %>%
@@ -730,14 +727,14 @@ server <- function(input, output, session) {
           mutate(across(all_of('", args[1], "'), as.numeric)) %>%
           select(time_period,'", args[1], "') %>%
           group_by(time_period) %>%
-          summarise(across(everything(), list(min = ~ min(.x, na.rm=TRUE), 
-                                              max = ~ max(.x, na.rm=TRUE), 
-                                              average = ~ round(mean(.x, na.rm=TRUE),1), 
-                                              count = ~ n(), 
+          summarise(across(everything(), list(min = ~ min(.x, na.rm=TRUE),
+                                              max = ~ max(.x, na.rm=TRUE),
+                                              average = ~ round(mean(.x, na.rm=TRUE),1),
+                                              count = ~ n(),
                                               suppressed = ~ sum(is.na(.x))))) %>%
           pivot_longer(!time_period, names_to = c('indicator', 'measure'), names_pattern = '(.*)_(.*)') %>%
           pivot_wider(names_from = 'time_period') %>%
-          mutate(geographic_level ='", args[2], "', .before = indicator) %>% 
+          mutate(geographic_level ='", args[2], "', .before = indicator) %>%
           mutate(Change = as.character(0))")))
 
               for (i in 1:nrow(y)) {
@@ -874,17 +871,17 @@ server <- function(input, output, session) {
               names()
 
             outliertable <- function(args) {
-              return(eval(parse(text = paste0("data$mainFile %>% group_by(time_period,geographic_level) %>% 
-          mutate(", args[1], "== as.numeric(", args[1], ")) %>% 
-          filter(time_period %in% c(", args[4], ",", args[3], ")) %>% 
-          select(all_of(filters),", args[1], ") %>% 
-          spread(time_period,", args[1], ") %>% 
+              return(eval(parse(text = paste0("data$mainFile %>% group_by(time_period,geographic_level) %>%
+          mutate(", args[1], "== as.numeric(", args[1], ")) %>%
+          filter(time_period %in% c(", args[4], ",", args[3], ")) %>%
+          select(all_of(filters),", args[1], ") %>%
+          spread(time_period,", args[1], ") %>%
           mutate(thresh_indicator_big = as.numeric(`", args[4], "`) * (1+(", args[2], "/100)),
                  thresh_indicator_small = as.numeric(`", args[4], "`) * (1-(", args[2], "/100)),
                  outlier_large = as.numeric(`", args[3], "`) >= thresh_indicator_big,
                  outlier_small = as.numeric(`", args[3], "`) <= thresh_indicator_small) %>%
-          filter(as.numeric(`", args[3], "`) >= 5 | as.numeric(`", args[4], "`) >= 5) %>%  
-          filter(outlier_large == TRUE | outlier_small ==TRUE) %>% 
+          filter(as.numeric(`", args[3], "`) >= 5 | as.numeric(`", args[4], "`) >= 5) %>%
+          filter(outlier_large == TRUE | outlier_small ==TRUE) %>%
           select(-thresh_indicator_big,-thresh_indicator_small,-time_identifier,-outlier_large,-outlier_small)"))))
             }
 

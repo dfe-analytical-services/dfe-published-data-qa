@@ -1407,7 +1407,7 @@ la_combinations <- function(data) {
 region_combinations <- function(data) {
   if (!geography_matrix[2, 2] %in% names(data)) {
     output <- list(
-      "message" =  paste(geography_matrix[2, 2], "columns are not present in this data file."),
+      "message" = paste(geography_matrix[2, 2], "columns are not present in this data file."),
       "result" = "IGNORE"
     )
   } else {
@@ -1418,7 +1418,6 @@ region_combinations <- function(data) {
         select(geography_matrix[2, 2], geography_matrix[2, 3]) %>%
         unique() %>%
         filter(region_code != gssNAvcode && !is.na(region_code)),
-
       data %>%
         filter(geographic_level != geography_matrix[2, 1]) %>%
         select(geography_matrix[2, 2], geography_matrix[2, 3]) %>%
@@ -1623,7 +1622,7 @@ other_geography_code_duplicates <- function(data) {
     } else {
       if (length(multi_count_code) == 1) {
         output <- list(
-          "message" = paste0("The following geography code has multiple assigned geographies: ", paste0(multi_count_code), ". 
+          "message" = paste0("The following geography code has multiple assigned geographies: ", paste0(multi_count_code), ".
                              <br> - Each geography code should have only one assigned geography."),
           "result" = "FAIL"
         )
@@ -1700,7 +1699,7 @@ sch_prov_duplicates <- function(data) {
       } else {
         if (length(multi_count_code) == 1) {
           output <- list(
-            "message" = paste0("The following school or provider code has multiple assigned names: ", paste0(multi_count_code), ". 
+            "message" = paste0("The following school or provider code has multiple assigned names: ", paste0(multi_count_code), ".
                              <br> - We are working on a fix in EES, though for the time being this will cause problems, please contact us if this is an issue."),
             "result" = "FAIL"
           )
@@ -2476,8 +2475,7 @@ indicator_dp_validation <- function(meta) {
         test <- all.equal(x, as.integer(x), check.attributes = FALSE)
         if (test == TRUE) {
           return(TRUE)
-        }
-        else {
+        } else {
           return(FALSE)
         }
       }
