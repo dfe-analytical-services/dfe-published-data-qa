@@ -4,6 +4,7 @@
       "x": {
         "style": "bootstrap",
         "filter": "none",
+        "vertical": false,
         "container": "<table class=\"table table-bordered\">\n  <thead>\n    <tr>\n      <th>time_period<\/th>\n      <th>time_identifier<\/th>\n      <th>geographic_level<\/th>\n      <th>country_code<\/th>\n      <th>country_name<\/th>\n      <th>region_code<\/th>\n      <th>region_name<\/th>\n      <th>old_la_code<\/th>\n      <th>new_la_code<\/th>\n      <th>la_name<\/th>\n      <th>lad_code<\/th>\n      <th>lad_name<\/th>\n      <th>school_urn<\/th>\n      <th>school_laestab<\/th>\n      <th>school_name<\/th>\n      <th>local_enterprise_partnership_code<\/th>\n      <th>local_enterprise_partnership_name<\/th>\n      <th>pcon_code<\/th>\n      <th>pcon_name<\/th>\n      <th>ward_code<\/th>\n      <th>ward_name<\/th>\n      <th>english_devolved_area_code<\/th>\n      <th>english_devolved_area_name<\/th>\n      <th>school_phase<\/th>\n      <th>school_type<\/th>\n      <th>num_schools<\/th>\n      <th>enrolments<\/th>\n      <th>sess_overall_percent<\/th>\n      <th>sess_authorised_percent<\/th>\n      <th>sess_unauthorised_percent<\/th>\n      <th>enrolments_pa_10_exact<\/th>\n      <th>enrolments_pa_10_exact_percent<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>",
         "options": {
           "dom": "pt",
@@ -65,10 +66,23 @@
       ],
       "deps": [
         {
-          "name": "dt-core-bootstrap",
-          "version": "1.10.20",
+          "name": "jquery",
+          "version": "3.6.0",
           "src": {
-            "href": "dt-core-bootstrap-1.10.20"
+            "href": "jquery-3.6.0"
+          },
+          "meta": null,
+          "script": "jquery-3.6.0.min.js",
+          "stylesheet": null,
+          "head": null,
+          "attachment": null,
+          "all_files": true
+        },
+        {
+          "name": "dt-core-bootstrap",
+          "version": "1.11.3",
+          "src": {
+            "href": "dt-core-bootstrap-1.11.3"
           },
           "meta": null,
           "script": [
@@ -85,27 +99,14 @@
           "all_files": false
         },
         {
-          "name": "jquery",
-          "version": "3.5.1",
-          "src": {
-            "href": "jquery-3.5.1"
-          },
-          "meta": null,
-          "script": "jquery.min.js",
-          "stylesheet": null,
-          "head": null,
-          "attachment": null,
-          "all_files": true
-        },
-        {
           "name": "crosstalk",
-          "version": "1.1.1",
+          "version": "1.2.0",
           "src": {
-            "href": "crosstalk-1.1.1"
+            "href": "crosstalk-1.2.0"
           },
           "meta": null,
           "script": "js/crosstalk.min.js",
-          "stylesheet": "css/crosstalk.css",
+          "stylesheet": "css/crosstalk.min.css",
           "head": null,
           "attachment": null,
           "all_files": true
@@ -116,6 +117,7 @@
       "x": {
         "style": "bootstrap",
         "filter": "none",
+        "vertical": false,
         "container": "<table class=\"table table-bordered\">\n  <thead>\n    <tr>\n      <th>col_name<\/th>\n      <th>col_type<\/th>\n      <th>label<\/th>\n      <th>indicator_grouping<\/th>\n      <th>indicator_unit<\/th>\n      <th>indicator_dp<\/th>\n      <th>filter_hint<\/th>\n      <th>filter_grouping_column<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>",
         "options": {
           "dom": "pt",
@@ -165,10 +167,23 @@
       ],
       "deps": [
         {
-          "name": "dt-core-bootstrap",
-          "version": "1.10.20",
+          "name": "jquery",
+          "version": "3.6.0",
           "src": {
-            "href": "dt-core-bootstrap-1.10.20"
+            "href": "jquery-3.6.0"
+          },
+          "meta": null,
+          "script": "jquery-3.6.0.min.js",
+          "stylesheet": null,
+          "head": null,
+          "attachment": null,
+          "all_files": true
+        },
+        {
+          "name": "dt-core-bootstrap",
+          "version": "1.11.3",
+          "src": {
+            "href": "dt-core-bootstrap-1.11.3"
           },
           "meta": null,
           "script": [
@@ -185,27 +200,14 @@
           "all_files": false
         },
         {
-          "name": "jquery",
-          "version": "3.5.1",
-          "src": {
-            "href": "jquery-3.5.1"
-          },
-          "meta": null,
-          "script": "jquery.min.js",
-          "stylesheet": null,
-          "head": null,
-          "attachment": null,
-          "all_files": true
-        },
-        {
           "name": "crosstalk",
-          "version": "1.1.1",
+          "version": "1.2.0",
           "src": {
-            "href": "crosstalk-1.1.1"
+            "href": "crosstalk-1.2.0"
           },
           "meta": null,
           "script": "js/crosstalk.min.js",
-          "stylesheet": "css/crosstalk.css",
+          "stylesheet": "css/crosstalk.min.css",
           "head": null,
           "attachment": null,
           "all_files": true

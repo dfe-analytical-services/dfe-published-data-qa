@@ -2,9 +2,7 @@ fluidPage(
 
   # Global ui calls and settings ------------------------------------------------------------------------------------
   theme = "acalat_theme.css",
-
   useShinyjs(),
-  useShinyalert(),
   shinyFeedback::useShinyFeedback(),
 
   # options(shiny.reactlog = TRUE),
@@ -43,7 +41,6 @@ fluidPage(
 
       verticalLayout(
         br(),
-
         shinyjs::hidden(div(
           id = "guidance",
           "This app allows you to screen your data files against the Department’s ",
@@ -80,7 +77,6 @@ fluidPage(
 
         wellPanel(
           tags$style(".shiny-file-input-progress {max-width: 99.8%; padding-left: 1px}"),
-
           fluidRow(
             column(
               5,
@@ -133,14 +129,11 @@ fluidPage(
 
           shinyjs::hidden(div(
             id = "results",
-
             tabsetPanel(
               id = "trendy_tabs",
-
               tabPanel(
                 title = "Screener results",
                 value = "tab1",
-
                 column(
                   5,
                   style = "padding-left:20px;",
@@ -210,7 +203,6 @@ fluidPage(
                 title = "File previews",
                 value = "previewTab",
                 style = "padding-left:20px; padding-right:20px",
-
                 br(),
                 tags$b("View metadata"),
                 DTOutput("meta_table", width = "100%") %>% withSpinner(),
@@ -218,12 +210,10 @@ fluidPage(
                 tags$b("Preview datafile"),
                 DTOutput("data_preview", width = "100%") %>% withSpinner()
               ),
-
               tabPanel(
                 title = "What's in this file",
                 value = "obUnitTab",
                 style = "padding-left:20px; padding-right:20px",
-
                 br(),
                 fluidRow(
                   column(
@@ -322,12 +312,10 @@ fluidPage(
                 #
                 # hr(),
               ),
-
               tabPanel(
                 title = "Explore data",
                 value = "indicatorsTab",
                 style = "padding-left:20px; padding-right:20px",
-
                 br(),
                 fluidRow(
                   column(
@@ -361,25 +349,20 @@ fluidPage(
                       )
                     )
                   ),
-
-
                   fluidRow(
                     column(
                       12,
                       style = "padding-left:20px; padding-right:20px",
-
                       hr(),
                       uiOutput("table_list")
                     )
                   )
                 )
               ),
-
               tabPanel(
                 title = "Year-on-year changes",
                 value = "outliersTab",
                 style = "padding-left:20px; padding-right:20px",
-
                 br(),
                 fluidRow(
                   column(
@@ -433,25 +416,20 @@ fluidPage(
                       )
                     )
                   ),
-
-
                   fluidRow(
                     column(
                       12,
                       style = "padding-left:20px; padding-right:20px",
-
                       hr(),
                       uiOutput("table_outlier_list")
                     )
                   )
                 )
               ),
-
               tabPanel(
                 title = "Check geography subtotals",
                 value = "geogTab",
                 style = "padding-left:20px; padding-right:20px",
-
                 br(),
                 fluidRow(
                   column(
@@ -496,13 +474,10 @@ fluidPage(
                     #   )
                     # ),
                   ),
-
-
                   fluidRow(
                     column(
                       12,
                       style = "padding-left:20px; padding-right:20px",
-
                       hr(),
                       DTOutput("geog_agg2", width = "100%"),
                       # verbatimTextOutput('file1')

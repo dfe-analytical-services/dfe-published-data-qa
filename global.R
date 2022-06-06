@@ -258,8 +258,7 @@ options(spinner.size = .5)
 
 # disconnect duck ---------------------------------------------------------
 
-customDisconnectMessage <- function(
-                                    refresh = "Refresh",
+customDisconnectMessage <- function(refresh = "Refresh",
                                     width = 450,
                                     top = 50,
                                     size = 22,
@@ -308,24 +307,19 @@ customDisconnectMessage <- function(
     htmltools::tags$div(
       id = "custom-disconnect-dialog",
       style = "display: none !important;",
-
       htmltools::tags$div(
         id = "ss-connect-refresh",
         htmltools::tags$p("Something went wrong! Try refreshing the page."),
         htmltools::tags$a(id = "ss-reload-link", href = "#", onclick = "window.location.reload(true);")
       ),
-
       htmltools::tags$div(
         id = "ss-connect-image",
         style = "display: block !important;",
-
         htmltools::tags$img(id = "ss-reload-image", src = "builder-duck.PNG"),
         htmltools::tags$p("If this persists, please contact statistics.development@education.gov.uk with details of what you were trying to do.")
       )
     ),
-
     htmltools::tags$div(id = "ss-overlay", style = "display: none;"),
-
     htmltools::tags$head(htmltools::tags$style(
       glue::glue(
         .open = "{{", .close = "}}",
@@ -346,7 +340,6 @@ customDisconnectMessage <- function(
              overflow: hidden !important;
              cursor: not-allowed !important;
           }",
-
         "#custom-disconnect-dialog {
              background: {{background}} !important;
              color: {{colour}} !important;
@@ -365,7 +358,6 @@ customDisconnectMessage <- function(
              border-radius: 3px !important;
              box-shadow: rgba(0, 0, 0, 0.3) 3px 3px 10px !important;
           }",
-
         "#custom-disconnect-dialog a {
              display: {{ if (refresh == '') 'none' else 'block' }} !important;
              color: {{refreshColour}} !important;
@@ -373,7 +365,6 @@ customDisconnectMessage <- function(
              margin-top: {{size}}px !important;
              font-weight: normal !important;
           }",
-
         "#custom-disconnect-dialog a::before {
             content: '{{refresh}}';
             font-size: {{size}}px;
