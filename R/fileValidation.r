@@ -2,7 +2,8 @@
 # File validation functions
 
 fileValidation <- function(datafilename, metafilename, dataseparator, metaseparator, datafile, metafile) {
-  as_tibble(t(rbind(cbind(
+  print(datafilename)
+  x <- as_tibble(t(rbind(cbind(
     data_filename_spaces(datafilename), # active test
     meta_filename_spaces(metafilename), # active test
     data_filename_special_characters(datafilename), # active test
@@ -19,6 +20,7 @@ fileValidation <- function(datafilename, metafilename, dataseparator, metasepara
   "stage" = "fileValidation",
   "test" = c(activeTests$`R/fileValidation.r`)
   )))
+  print(x)
 }
 
 # data_filename_spaces -------------------------------------

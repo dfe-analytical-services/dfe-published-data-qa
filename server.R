@@ -150,7 +150,9 @@ server <- function(input, output, session) {
       inputData <- values$datafile
       inputMeta <- values$metafile
 
+      print(inputData$datapath)
       data <- readFile(inputData$datapath)
+      print(inputMeta$datapath)
       meta <- readFile(inputMeta$datapath)
 
       # File info ---------------------------------------------------------------------------------------------------------
@@ -168,6 +170,7 @@ server <- function(input, output, session) {
         # Date and time
         # Doing this to force the time to come out in the right time zone as the server runs on UTC
         dateTime <- Sys.time() %>% as.POSIXct(., tz = "")
+        print(dateTime)
         attributes(dateTime)$tzone <- "Europe/London"
 
         output$testtime <- renderText({
@@ -176,6 +179,7 @@ server <- function(input, output, session) {
 
         # Size, rows and cols for files
         # present_file_size() and cs_num() defined in global.r
+        print(inputData$size)
         output$data_size <- renderText({
           paste0("Size - ", present_file_size(inputData$size))
         })
@@ -202,8 +206,10 @@ server <- function(input, output, session) {
 
         # File validation ---------------------------------------------------------------------------------
 
+        print("Screening output")
         screeningOutput <- screenFiles(inputData$name, inputMeta$name, data$fileSeparator, meta$fileSeparator, data$fileCharacter, meta$fileCharacter, data$mainFile, meta$mainFile)
 
+        print(screeningOutput$results)
         all_results <- screeningOutput$results
 
         output$progress_stage <- renderImage(

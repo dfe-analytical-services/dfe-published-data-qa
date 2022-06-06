@@ -7,8 +7,14 @@ source("R/preCheck2.r")
 source("R/mainTests.r")
 
 screenFiles <- function(datafilename, metafilename, dataseparator, metaseparator, data_character, meta_character, datafile, metafile) {
+  print(datafilename)
+  print(metafilename) 
+  print(dataseparator)
+  print(metaseparator)
+  print(datafile) 
+  print(metafile)
   output <- list("results" = fileValidation(datafilename, metafilename, dataseparator, metaseparator, datafile, metafile))
-
+  print(output)
   if (any(output$results[["result"]] == "FAIL")) {
 
     # Failed file validation ---------------------------------------------------------------------------------
