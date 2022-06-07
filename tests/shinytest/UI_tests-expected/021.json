@@ -4,6 +4,7 @@
       "x": {
         "style": "bootstrap",
         "filter": "none",
+        "vertical": false,
         "extensions": [
           "Buttons"
         ],
@@ -275,10 +276,23 @@
       ],
       "deps": [
         {
-          "name": "dt-core-bootstrap",
-          "version": "1.10.20",
+          "name": "jquery",
+          "version": "3.6.0",
           "src": {
-            "href": "dt-core-bootstrap-1.10.20"
+            "href": "jquery-3.6.0"
+          },
+          "meta": null,
+          "script": "jquery-3.6.0.min.js",
+          "stylesheet": null,
+          "head": null,
+          "attachment": null,
+          "all_files": true
+        },
+        {
+          "name": "dt-core-bootstrap",
+          "version": "1.11.3",
+          "src": {
+            "href": "dt-core-bootstrap-1.11.3"
           },
           "meta": null,
           "script": [
@@ -296,14 +310,13 @@
         },
         {
           "name": "dt-ext-buttons-bootstrap",
-          "version": "1.10.20",
+          "version": "1.11.3",
           "src": {
-            "href": "dt-ext-buttons-bootstrap-1.10.20"
+            "href": "dt-ext-buttons-bootstrap-1.11.3"
           },
           "meta": null,
           "script": [
             "js/dataTables.buttons.min.js",
-            "js/buttons.flash.min.js",
             "js/buttons.html5.min.js",
             "js/buttons.colVis.min.js",
             "js/buttons.print.min.js",
@@ -316,27 +329,14 @@
           "all_files": false
         },
         {
-          "name": "jquery",
-          "version": "3.5.1",
-          "src": {
-            "href": "jquery-3.5.1"
-          },
-          "meta": null,
-          "script": "jquery.min.js",
-          "stylesheet": null,
-          "head": null,
-          "attachment": null,
-          "all_files": true
-        },
-        {
           "name": "crosstalk",
-          "version": "1.1.1",
+          "version": "1.2.0",
           "src": {
-            "href": "crosstalk-1.1.1"
+            "href": "crosstalk-1.2.0"
           },
           "meta": null,
           "script": "js/crosstalk.min.js",
-          "stylesheet": "css/crosstalk.css",
+          "stylesheet": "css/crosstalk.min.css",
           "head": null,
           "attachment": null,
           "all_files": true

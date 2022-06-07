@@ -2,7 +2,7 @@ time_period,time_identifier,geographic_level,country_code,country_name,region_co
 201718,Academic year,National,E92000001,England,,,,,,,,Total,Total,20121,6835059,4.20821,3.01996,1.18824,731047,10.69555
 201718,Academic year,National,E92000001,England,,,,,,,,Individual,State-funded primary,16739,3885774,3.68934,2.69421,0.99512,357742,9.20645
 201718,Academic year,National,z,"Scotland, Wales and Northern Ireland",,,,,,,,Individual,State-funded secondary,3382,2949285,4.89899,3.45364,1.44535,373305,12.65747
-201718,Academic year,Regional,E92000001,England,z,Outside of England and unknown,,,,,,Combined,State-funded primary and secondary,1033,317616,4.62038,3.12503,1.49536,39300,12.37343
+201718,Academic year,Regional,z,Outside of England and unknown,z,Outside of England and unknown,,,,,,Combined,State-funded primary and secondary,1033,317616,4.62038,3.12503,1.49536,39300,12.37343
 201718,Academic year,Regional,E92000001,England,E12000001,North East,,,,,,Individual,State-funded primary,858,175079,3.90145,2.7663,1.13516,18073,10.32277
 201718,Academic year,Regional,E92000001,England,E12000001,North East,,,,,,Individual,State-funded secondary,175,142537,5.51279,3.57032,1.94247,21227,14.89227
 201718,Academic year,Regional,E92000001,England,E12000002,North West,,,,,,Combined,State-funded primary and secondary,2905,931181,4.19093,2.89117,1.29976,99903,10.72863
@@ -32,7 +32,7 @@ time_period,time_identifier,geographic_level,country_code,country_name,region_co
 201718,Academic year,Regional,E92000001,England,E13000002,Outer London,,,,,,Combined,State-funded primary and secondary,1426,693773,3.90748,2.81189,1.09559,66262,9.55096
 201718,Academic year,Regional,E92000001,England,E13000002,Outer London,,,,,,Individual,State-funded primary,1105,399538,3.5609,2.59969,0.96121,34117,8.53911
 201718,Academic year,Regional,E92000001,England,E13000002,Outer London,,,,,,Individual,State-funded secondary,321,294235,4.38667,3.10528,1.28139,32145,10.92494
-201718,Academic year,Local authority,E92000001,England,E13000001,Inner London,204,E09000012,Hackney,,,Combined,State-funded primary and secondary,74,28313,3.74661,2.6291,1.11751,2626,9.27489
+201718,Academic year,Local authority,z,Outside of England and unknown,z,Outside of England and unknown,z,z,Outside of England and unknown,,,Combined,State-funded primary and secondary,74,28313,3.74661,2.6291,1.11751,2626,9.27489
 201718,Academic year,Local authority,E92000001,England,E13000001,Inner London,204,E09000012,Hackney,,,Individual,State-funded primary,58,16215,3.36691,2.39498,0.97193,1311,8.08511
 201718,Academic year,Local authority,E92000001,England,E13000001,Inner London,204,E09000012,Hackney,,,Individual,State-funded secondary,16,12098,4.26132,2.94646,1.31486,1315,10.86957
 201718,Academic year,Local authority,E92000001,England,E13000001,Inner London,208,E09000022,Lambeth,,,Combined,State-funded primary and secondary,78,30492,3.96082,2.6899,1.27092,3076,10.08789
