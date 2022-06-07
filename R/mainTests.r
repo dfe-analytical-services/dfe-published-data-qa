@@ -1198,7 +1198,7 @@ eda_combinations <- function(data) {
     invalid_values <- data %>%
       select("english_devolved_area_name", "english_devolved_area_code") %>%
       unique() %>%
-      filter(!is.na(.)) %>%
+      .[!is.na(english_devolved_area_name) & !is.na(english_devolved_area_code)] %>%
       filter(english_devolved_area_code != "") %>%
       filter(english_devolved_area_code != gssNAvcode) %>%
       mutate(combo = paste(english_devolved_area_code, english_devolved_area_name)) %>%
@@ -1241,7 +1241,7 @@ lep_combinations <- function(data) {
     invalid_values <- data %>%
       select("local_enterprise_partnership_name", "local_enterprise_partnership_code") %>%
       unique() %>%
-      filter(!is.na(.)) %>%
+      .[!is.na(local_enterprise_partnership_name) & !is.na(local_enterprise_partnership_code)] %>%
       filter(local_enterprise_partnership_code != "") %>%
       filter(local_enterprise_partnership_code != gssNAvcode) %>%
       mutate(combo = paste(local_enterprise_partnership_code, local_enterprise_partnership_name)) %>%
@@ -1284,7 +1284,7 @@ pcon_combinations <- function(data) {
     invalid_values <- data %>%
       select("pcon_name", "pcon_code") %>%
       unique() %>%
-      filter(!is.na(.)) %>%
+      .[!is.na(pcon_name) & !is.na(pcon_code)] %>%
       filter(pcon_code != "") %>%
       filter(pcon_code != gssNAvcode) %>%
       mutate(combo = paste(pcon_code, pcon_name)) %>%
@@ -1327,7 +1327,7 @@ lad_combinations <- function(data) {
     invalid_values <- data %>%
       select("lad_name", "lad_code") %>%
       unique() %>%
-      filter(!is.na(.)) %>%
+      .[!is.na(lad_name) & !is.na(lad_code)] %>%
       filter(lad_code != "") %>%
       filter(lad_code != gssNAvcode) %>%
       mutate(combo = paste(lad_code, lad_name)) %>%
@@ -1370,7 +1370,7 @@ la_combinations <- function(data) {
     invalid_values <- data %>%
       select("old_la_code", "new_la_code", "la_name") %>%
       unique() %>%
-      filter(!is.na(.)) %>%
+      .[!is.na(old_la_code) & !is.na(new_la_code) & !is.na(la_name)] %>%
       filter(new_la_code != "") %>%
       filter(new_la_code != gssNAvcode) %>%
       mutate(combo = paste(old_la_code, new_la_code, la_name)) %>%
@@ -1407,7 +1407,7 @@ la_combinations <- function(data) {
 region_combinations <- function(data) {
   if (!geography_matrix[2, 2] %in% names(data)) {
     output <- list(
-      "message" =  paste(geography_matrix[2, 2], "columns are not present in this data file."),
+      "message" = paste(geography_matrix[2, 2], "columns are not present in this data file."),
       "result" = "IGNORE"
     )
   } else {
@@ -1418,12 +1418,11 @@ region_combinations <- function(data) {
         select(geography_matrix[2, 2], geography_matrix[2, 3]) %>%
         unique() %>%
         filter(region_code != gssNAvcode && !is.na(region_code)),
-
       data %>%
         filter(geographic_level != geography_matrix[2, 1]) %>%
         select(geography_matrix[2, 2], geography_matrix[2, 3]) %>%
         unique() %>%
-        filter(!is.na(.)) %>%
+        .[!is.na(region_code) & !is.na(region_name)] %>%
         filter(region_code != "") %>%
         filter(region_code != gssNAvcode)
     ) %>%
@@ -1623,7 +1622,7 @@ other_geography_code_duplicates <- function(data) {
     } else {
       if (length(multi_count_code) == 1) {
         output <- list(
-          "message" = paste0("The following geography code has multiple assigned geographies: ", paste0(multi_count_code), ". 
+          "message" = paste0("The following geography code has multiple assigned geographies: ", paste0(multi_count_code), ".
                              <br> - Each geography code should have only one assigned geography."),
           "result" = "FAIL"
         )
@@ -1700,7 +1699,7 @@ sch_prov_duplicates <- function(data) {
       } else {
         if (length(multi_count_code) == 1) {
           output <- list(
-            "message" = paste0("The following school or provider code has multiple assigned names: ", paste0(multi_count_code), ". 
+            "message" = paste0("The following school or provider code has multiple assigned names: ", paste0(multi_count_code), ".
                              <br> - We are working on a fix in EES, though for the time being this will cause problems, please contact us if this is an issue."),
             "result" = "FAIL"
           )
@@ -2476,8 +2475,7 @@ indicator_dp_validation <- function(meta) {
         test <- all.equal(x, as.integer(x), check.attributes = FALSE)
         if (test == TRUE) {
           return(TRUE)
-        }
-        else {
+        } else {
           return(FALSE)
         }
       }

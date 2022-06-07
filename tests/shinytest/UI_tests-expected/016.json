@@ -4,6 +4,7 @@
       "x": {
         "style": "bootstrap",
         "filter": "none",
+        "vertical": false,
         "data": [
           [
             "National",
@@ -116,10 +117,23 @@
       ],
       "deps": [
         {
-          "name": "dt-core-bootstrap",
-          "version": "1.10.20",
+          "name": "jquery",
+          "version": "3.6.0",
           "src": {
-            "href": "dt-core-bootstrap-1.10.20"
+            "href": "jquery-3.6.0"
+          },
+          "meta": null,
+          "script": "jquery-3.6.0.min.js",
+          "stylesheet": null,
+          "head": null,
+          "attachment": null,
+          "all_files": true
+        },
+        {
+          "name": "dt-core-bootstrap",
+          "version": "1.11.3",
+          "src": {
+            "href": "dt-core-bootstrap-1.11.3"
           },
           "meta": null,
           "script": [
@@ -136,43 +150,29 @@
           "all_files": false
         },
         {
-          "name": "jquery",
-          "version": "3.5.1",
-          "src": {
-            "href": "jquery-3.5.1"
-          },
-          "meta": null,
-          "script": "jquery.min.js",
-          "stylesheet": null,
-          "head": null,
-          "attachment": null,
-          "all_files": true
-        },
-        {
           "name": "crosstalk",
-          "version": "1.1.1",
+          "version": "1.2.0",
           "src": {
-            "href": "crosstalk-1.1.1"
+            "href": "crosstalk-1.2.0"
           },
           "meta": null,
           "script": "js/crosstalk.min.js",
-          "stylesheet": "css/crosstalk.css",
+          "stylesheet": "css/crosstalk.min.css",
           "head": null,
           "attachment": null,
           "all_files": true
         },
         {
           "name": "htmlwidgets",
-          "version": "1.5.3",
+          "version": "1.5.4",
           "src": {
-            "href": "htmlwidgets-1.5.3"
+            "href": "htmlwidgets-1.5.4"
           },
           "meta": null,
           "script": "htmlwidgets.js",
           "stylesheet": null,
           "head": null,
           "attachment": null,
-          "package": null,
           "all_files": true
         },
         {
@@ -186,7 +186,6 @@
           "stylesheet": "jquery.sparkline.css",
           "head": null,
           "attachment": null,
-          "package": null,
           "all_files": true
         },
         {
@@ -200,7 +199,6 @@
           "stylesheet": null,
           "head": null,
           "attachment": null,
-          "package": null,
           "all_files": false
         }
       ]
@@ -209,6 +207,7 @@
       "x": {
         "style": "bootstrap",
         "filter": "none",
+        "vertical": false,
         "data": [
           [
             "National",
@@ -321,10 +320,23 @@
       ],
       "deps": [
         {
-          "name": "dt-core-bootstrap",
-          "version": "1.10.20",
+          "name": "jquery",
+          "version": "3.6.0",
           "src": {
-            "href": "dt-core-bootstrap-1.10.20"
+            "href": "jquery-3.6.0"
+          },
+          "meta": null,
+          "script": "jquery-3.6.0.min.js",
+          "stylesheet": null,
+          "head": null,
+          "attachment": null,
+          "all_files": true
+        },
+        {
+          "name": "dt-core-bootstrap",
+          "version": "1.11.3",
+          "src": {
+            "href": "dt-core-bootstrap-1.11.3"
           },
           "meta": null,
           "script": [
@@ -341,43 +353,29 @@
           "all_files": false
         },
         {
-          "name": "jquery",
-          "version": "3.5.1",
-          "src": {
-            "href": "jquery-3.5.1"
-          },
-          "meta": null,
-          "script": "jquery.min.js",
-          "stylesheet": null,
-          "head": null,
-          "attachment": null,
-          "all_files": true
-        },
-        {
           "name": "crosstalk",
-          "version": "1.1.1",
+          "version": "1.2.0",
           "src": {
-            "href": "crosstalk-1.1.1"
+            "href": "crosstalk-1.2.0"
           },
           "meta": null,
           "script": "js/crosstalk.min.js",
-          "stylesheet": "css/crosstalk.css",
+          "stylesheet": "css/crosstalk.min.css",
           "head": null,
           "attachment": null,
           "all_files": true
         },
         {
           "name": "htmlwidgets",
-          "version": "1.5.3",
+          "version": "1.5.4",
           "src": {
-            "href": "htmlwidgets-1.5.3"
+            "href": "htmlwidgets-1.5.4"
           },
           "meta": null,
           "script": "htmlwidgets.js",
           "stylesheet": null,
           "head": null,
           "attachment": null,
-          "package": null,
           "all_files": true
         },
         {
@@ -391,7 +389,6 @@
           "stylesheet": "jquery.sparkline.css",
           "head": null,
           "attachment": null,
-          "package": null,
           "all_files": true
         },
         {
@@ -405,7 +402,6 @@
           "stylesheet": null,
           "head": null,
           "attachment": null,
-          "package": null,
           "all_files": false
         }
       ]
@@ -414,6 +410,7 @@
       "x": {
         "style": "bootstrap",
         "filter": "none",
+        "vertical": false,
         "data": [
           [
             "Regional",
@@ -526,10 +523,23 @@
       ],
       "deps": [
         {
-          "name": "dt-core-bootstrap",
-          "version": "1.10.20",
+          "name": "jquery",
+          "version": "3.6.0",
           "src": {
-            "href": "dt-core-bootstrap-1.10.20"
+            "href": "jquery-3.6.0"
+          },
+          "meta": null,
+          "script": "jquery-3.6.0.min.js",
+          "stylesheet": null,
+          "head": null,
+          "attachment": null,
+          "all_files": true
+        },
+        {
+          "name": "dt-core-bootstrap",
+          "version": "1.11.3",
+          "src": {
+            "href": "dt-core-bootstrap-1.11.3"
           },
           "meta": null,
           "script": [
@@ -546,43 +556,29 @@
           "all_files": false
         },
         {
-          "name": "jquery",
-          "version": "3.5.1",
-          "src": {
-            "href": "jquery-3.5.1"
-          },
-          "meta": null,
-          "script": "jquery.min.js",
-          "stylesheet": null,
-          "head": null,
-          "attachment": null,
-          "all_files": true
-        },
-        {
           "name": "crosstalk",
-          "version": "1.1.1",
+          "version": "1.2.0",
           "src": {
-            "href": "crosstalk-1.1.1"
+            "href": "crosstalk-1.2.0"
           },
           "meta": null,
           "script": "js/crosstalk.min.js",
-          "stylesheet": "css/crosstalk.css",
+          "stylesheet": "css/crosstalk.min.css",
           "head": null,
           "attachment": null,
           "all_files": true
         },
         {
           "name": "htmlwidgets",
-          "version": "1.5.3",
+          "version": "1.5.4",
           "src": {
-            "href": "htmlwidgets-1.5.3"
+            "href": "htmlwidgets-1.5.4"
           },
           "meta": null,
           "script": "htmlwidgets.js",
           "stylesheet": null,
           "head": null,
           "attachment": null,
-          "package": null,
           "all_files": true
         },
         {
@@ -596,7 +592,6 @@
           "stylesheet": "jquery.sparkline.css",
           "head": null,
           "attachment": null,
-          "package": null,
           "all_files": true
         },
         {
@@ -610,7 +605,6 @@
           "stylesheet": null,
           "head": null,
           "attachment": null,
-          "package": null,
           "all_files": false
         }
       ]
@@ -619,6 +613,7 @@
       "x": {
         "style": "bootstrap",
         "filter": "none",
+        "vertical": false,
         "data": [
           [
             "Regional",
@@ -731,10 +726,23 @@
       ],
       "deps": [
         {
-          "name": "dt-core-bootstrap",
-          "version": "1.10.20",
+          "name": "jquery",
+          "version": "3.6.0",
           "src": {
-            "href": "dt-core-bootstrap-1.10.20"
+            "href": "jquery-3.6.0"
+          },
+          "meta": null,
+          "script": "jquery-3.6.0.min.js",
+          "stylesheet": null,
+          "head": null,
+          "attachment": null,
+          "all_files": true
+        },
+        {
+          "name": "dt-core-bootstrap",
+          "version": "1.11.3",
+          "src": {
+            "href": "dt-core-bootstrap-1.11.3"
           },
           "meta": null,
           "script": [
@@ -751,43 +759,29 @@
           "all_files": false
         },
         {
-          "name": "jquery",
-          "version": "3.5.1",
-          "src": {
-            "href": "jquery-3.5.1"
-          },
-          "meta": null,
-          "script": "jquery.min.js",
-          "stylesheet": null,
-          "head": null,
-          "attachment": null,
-          "all_files": true
-        },
-        {
           "name": "crosstalk",
-          "version": "1.1.1",
+          "version": "1.2.0",
           "src": {
-            "href": "crosstalk-1.1.1"
+            "href": "crosstalk-1.2.0"
           },
           "meta": null,
           "script": "js/crosstalk.min.js",
-          "stylesheet": "css/crosstalk.css",
+          "stylesheet": "css/crosstalk.min.css",
           "head": null,
           "attachment": null,
           "all_files": true
         },
         {
           "name": "htmlwidgets",
-          "version": "1.5.3",
+          "version": "1.5.4",
           "src": {
-            "href": "htmlwidgets-1.5.3"
+            "href": "htmlwidgets-1.5.4"
           },
           "meta": null,
           "script": "htmlwidgets.js",
           "stylesheet": null,
           "head": null,
           "attachment": null,
-          "package": null,
           "all_files": true
         },
         {
@@ -801,7 +795,6 @@
           "stylesheet": "jquery.sparkline.css",
           "head": null,
           "attachment": null,
-          "package": null,
           "all_files": true
         },
         {
@@ -815,7 +808,6 @@
           "stylesheet": null,
           "head": null,
           "attachment": null,
-          "package": null,
           "all_files": false
         }
       ]
@@ -824,6 +816,7 @@
       "x": {
         "style": "bootstrap",
         "filter": "none",
+        "vertical": false,
         "data": [
           [
             "Local authority",
@@ -936,10 +929,23 @@
       ],
       "deps": [
         {
-          "name": "dt-core-bootstrap",
-          "version": "1.10.20",
+          "name": "jquery",
+          "version": "3.6.0",
           "src": {
-            "href": "dt-core-bootstrap-1.10.20"
+            "href": "jquery-3.6.0"
+          },
+          "meta": null,
+          "script": "jquery-3.6.0.min.js",
+          "stylesheet": null,
+          "head": null,
+          "attachment": null,
+          "all_files": true
+        },
+        {
+          "name": "dt-core-bootstrap",
+          "version": "1.11.3",
+          "src": {
+            "href": "dt-core-bootstrap-1.11.3"
           },
           "meta": null,
           "script": [
@@ -956,43 +962,29 @@
           "all_files": false
         },
         {
-          "name": "jquery",
-          "version": "3.5.1",
-          "src": {
-            "href": "jquery-3.5.1"
-          },
-          "meta": null,
-          "script": "jquery.min.js",
-          "stylesheet": null,
-          "head": null,
-          "attachment": null,
-          "all_files": true
-        },
-        {
           "name": "crosstalk",
-          "version": "1.1.1",
+          "version": "1.2.0",
           "src": {
-            "href": "crosstalk-1.1.1"
+            "href": "crosstalk-1.2.0"
           },
           "meta": null,
           "script": "js/crosstalk.min.js",
-          "stylesheet": "css/crosstalk.css",
+          "stylesheet": "css/crosstalk.min.css",
           "head": null,
           "attachment": null,
           "all_files": true
         },
         {
           "name": "htmlwidgets",
-          "version": "1.5.3",
+          "version": "1.5.4",
           "src": {
-            "href": "htmlwidgets-1.5.3"
+            "href": "htmlwidgets-1.5.4"
           },
           "meta": null,
           "script": "htmlwidgets.js",
           "stylesheet": null,
           "head": null,
           "attachment": null,
-          "package": null,
           "all_files": true
         },
         {
@@ -1006,7 +998,6 @@
           "stylesheet": "jquery.sparkline.css",
           "head": null,
           "attachment": null,
-          "package": null,
           "all_files": true
         },
         {
@@ -1020,7 +1011,6 @@
           "stylesheet": null,
           "head": null,
           "attachment": null,
-          "package": null,
           "all_files": false
         }
       ]
@@ -1029,6 +1019,7 @@
       "x": {
         "style": "bootstrap",
         "filter": "none",
+        "vertical": false,
         "data": [
           [
             "Local authority",
@@ -1141,10 +1132,23 @@
       ],
       "deps": [
         {
-          "name": "dt-core-bootstrap",
-          "version": "1.10.20",
+          "name": "jquery",
+          "version": "3.6.0",
           "src": {
-            "href": "dt-core-bootstrap-1.10.20"
+            "href": "jquery-3.6.0"
+          },
+          "meta": null,
+          "script": "jquery-3.6.0.min.js",
+          "stylesheet": null,
+          "head": null,
+          "attachment": null,
+          "all_files": true
+        },
+        {
+          "name": "dt-core-bootstrap",
+          "version": "1.11.3",
+          "src": {
+            "href": "dt-core-bootstrap-1.11.3"
           },
           "meta": null,
           "script": [
@@ -1161,43 +1165,29 @@
           "all_files": false
         },
         {
-          "name": "jquery",
-          "version": "3.5.1",
-          "src": {
-            "href": "jquery-3.5.1"
-          },
-          "meta": null,
-          "script": "jquery.min.js",
-          "stylesheet": null,
-          "head": null,
-          "attachment": null,
-          "all_files": true
-        },
-        {
           "name": "crosstalk",
-          "version": "1.1.1",
+          "version": "1.2.0",
           "src": {
-            "href": "crosstalk-1.1.1"
+            "href": "crosstalk-1.2.0"
           },
           "meta": null,
           "script": "js/crosstalk.min.js",
-          "stylesheet": "css/crosstalk.css",
+          "stylesheet": "css/crosstalk.min.css",
           "head": null,
           "attachment": null,
           "all_files": true
         },
         {
           "name": "htmlwidgets",
-          "version": "1.5.3",
+          "version": "1.5.4",
           "src": {
-            "href": "htmlwidgets-1.5.3"
+            "href": "htmlwidgets-1.5.4"
           },
           "meta": null,
           "script": "htmlwidgets.js",
           "stylesheet": null,
           "head": null,
           "attachment": null,
-          "package": null,
           "all_files": true
         },
         {
@@ -1211,7 +1201,6 @@
           "stylesheet": "jquery.sparkline.css",
           "head": null,
           "attachment": null,
-          "package": null,
           "all_files": true
         },
         {
@@ -1225,7 +1214,6 @@
           "stylesheet": null,
           "head": null,
           "attachment": null,
-          "package": null,
           "all_files": false
         }
       ]
@@ -1234,6 +1222,7 @@
       "x": {
         "style": "bootstrap",
         "filter": "none",
+        "vertical": false,
         "data": [
           [
             "Local authority district",
@@ -1312,10 +1301,23 @@
       ],
       "deps": [
         {
-          "name": "dt-core-bootstrap",
-          "version": "1.10.20",
+          "name": "jquery",
+          "version": "3.6.0",
           "src": {
-            "href": "dt-core-bootstrap-1.10.20"
+            "href": "jquery-3.6.0"
+          },
+          "meta": null,
+          "script": "jquery-3.6.0.min.js",
+          "stylesheet": null,
+          "head": null,
+          "attachment": null,
+          "all_files": true
+        },
+        {
+          "name": "dt-core-bootstrap",
+          "version": "1.11.3",
+          "src": {
+            "href": "dt-core-bootstrap-1.11.3"
           },
           "meta": null,
           "script": [
@@ -1332,43 +1334,29 @@
           "all_files": false
         },
         {
-          "name": "jquery",
-          "version": "3.5.1",
-          "src": {
-            "href": "jquery-3.5.1"
-          },
-          "meta": null,
-          "script": "jquery.min.js",
-          "stylesheet": null,
-          "head": null,
-          "attachment": null,
-          "all_files": true
-        },
-        {
           "name": "crosstalk",
-          "version": "1.1.1",
+          "version": "1.2.0",
           "src": {
-            "href": "crosstalk-1.1.1"
+            "href": "crosstalk-1.2.0"
           },
           "meta": null,
           "script": "js/crosstalk.min.js",
-          "stylesheet": "css/crosstalk.css",
+          "stylesheet": "css/crosstalk.min.css",
           "head": null,
           "attachment": null,
           "all_files": true
         },
         {
           "name": "htmlwidgets",
-          "version": "1.5.3",
+          "version": "1.5.4",
           "src": {
-            "href": "htmlwidgets-1.5.3"
+            "href": "htmlwidgets-1.5.4"
           },
           "meta": null,
           "script": "htmlwidgets.js",
           "stylesheet": null,
           "head": null,
           "attachment": null,
-          "package": null,
           "all_files": true
         },
         {
@@ -1382,7 +1370,6 @@
           "stylesheet": "jquery.sparkline.css",
           "head": null,
           "attachment": null,
-          "package": null,
           "all_files": true
         },
         {
@@ -1396,7 +1383,6 @@
           "stylesheet": null,
           "head": null,
           "attachment": null,
-          "package": null,
           "all_files": false
         }
       ]
@@ -1405,6 +1391,7 @@
       "x": {
         "style": "bootstrap",
         "filter": "none",
+        "vertical": false,
         "data": [
           [
             "Local authority district",
@@ -1483,10 +1470,23 @@
       ],
       "deps": [
         {
-          "name": "dt-core-bootstrap",
-          "version": "1.10.20",
+          "name": "jquery",
+          "version": "3.6.0",
           "src": {
-            "href": "dt-core-bootstrap-1.10.20"
+            "href": "jquery-3.6.0"
+          },
+          "meta": null,
+          "script": "jquery-3.6.0.min.js",
+          "stylesheet": null,
+          "head": null,
+          "attachment": null,
+          "all_files": true
+        },
+        {
+          "name": "dt-core-bootstrap",
+          "version": "1.11.3",
+          "src": {
+            "href": "dt-core-bootstrap-1.11.3"
           },
           "meta": null,
           "script": [
@@ -1503,43 +1503,29 @@
           "all_files": false
         },
         {
-          "name": "jquery",
-          "version": "3.5.1",
-          "src": {
-            "href": "jquery-3.5.1"
-          },
-          "meta": null,
-          "script": "jquery.min.js",
-          "stylesheet": null,
-          "head": null,
-          "attachment": null,
-          "all_files": true
-        },
-        {
           "name": "crosstalk",
-          "version": "1.1.1",
+          "version": "1.2.0",
           "src": {
-            "href": "crosstalk-1.1.1"
+            "href": "crosstalk-1.2.0"
           },
           "meta": null,
           "script": "js/crosstalk.min.js",
-          "stylesheet": "css/crosstalk.css",
+          "stylesheet": "css/crosstalk.min.css",
           "head": null,
           "attachment": null,
           "all_files": true
         },
         {
           "name": "htmlwidgets",
-          "version": "1.5.3",
+          "version": "1.5.4",
           "src": {
-            "href": "htmlwidgets-1.5.3"
+            "href": "htmlwidgets-1.5.4"
           },
           "meta": null,
           "script": "htmlwidgets.js",
           "stylesheet": null,
           "head": null,
           "attachment": null,
-          "package": null,
           "all_files": true
         },
         {
@@ -1553,7 +1539,6 @@
           "stylesheet": "jquery.sparkline.css",
           "head": null,
           "attachment": null,
-          "package": null,
           "all_files": true
         },
         {
@@ -1567,7 +1552,6 @@
           "stylesheet": null,
           "head": null,
           "attachment": null,
-          "package": null,
           "all_files": false
         }
       ]
