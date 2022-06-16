@@ -346,12 +346,13 @@
     },
     "dplyr": {
       "Package": "dplyr",
-      "Version": "1.0.9",
+      "Version": "1.0.7",
       "Source": "Repository",
       "Repository": "CRAN",
-      "Hash": "f0bda1627a7f5d3f9a0b5add931596ac",
+      "Hash": "36f1ae62f026c8ba9f9b5c9a08c03297",
       "Requirements": [
         "R6",
+        "ellipsis",
         "generics",
         "glue",
         "lifecycle",
