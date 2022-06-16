@@ -9,7 +9,7 @@ app$snapshot()
 app$uploadFile(datafile = "test-data/passes_everything.csv")
 app$uploadFile(metafile = "test-data/passes_everything.meta.csv")
 Sys.sleep(2.8)
-app$setInputs(screenbutton = "click",timeout_=8.0e4)
+app$setInputs(screenbutton = "click", timeout_ = 8.0e4)
 app$snapshot(items = list(output = c("progress_stage", "table_all_tests")))
 
 app$setInputs(resetbutton = "click")
@@ -18,7 +18,7 @@ app$setInputs(resetbutton = "click")
 app$uploadFile(datafile = "test-data/passes_everything_advisory.csv")
 app$uploadFile(metafile = "test-data/passes_everything_advisory.meta.csv")
 Sys.sleep(2.8)
-app$setInputs(screenbutton = "click",timeout_=8.0e4)
+app$setInputs(screenbutton = "click", timeout_ = 8.0e4)
 app$snapshot(items = list(output = c("progress_stage", "table_all_tests")))
 
 app$setInputs(resetbutton = "click")
@@ -81,7 +81,7 @@ app$snapshot(items = list(
 # 11. Do the metadata preview tables populate as expected ------------------
 app$uploadFile(datafile = "test-data/passes_everything.csv")
 app$uploadFile(metafile = "test-data/passes_everything.meta.csv")
-app$setInputs(screenbutton = "click",timeout_=8.0e4)
+app$setInputs(screenbutton = "click", timeout_ = 8.0e4)
 app$setInputs(trendy_tabs = "previewTab")
 app$snapshot(list(output = c("meta_table", "data_preview")))
 
