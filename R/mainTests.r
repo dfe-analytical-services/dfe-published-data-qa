@@ -56,6 +56,7 @@ mainTests <- function(data_character, meta_character, datafile, metafile) {
     indicator_dp(metafile), # active test
     indicator_dp_validation(metafile), # active test
     indicator_dp_completed(metafile) # active test
+    ethnicity_headers(datafile, metafile)
   ),
   "stage" = "mainTests",
   "test" = c(activeTests$`R/mainTests.r`)
@@ -2537,5 +2538,121 @@ indicator_dp_completed <- function(meta) {
     }
   }
 
+  return(output)
+}
+
+ethnicity_headers <- function(meta){
+  # First find any ethnicity type columns that don't have the standard col_names
+  ethnicity_standard_headers <- c("ethnicity_major","ethnicity_minor","ethnicity_detailed", "minority_ethnic")
+  ethnicity_columns <- meta %>% 
+    filter(grepl("ethnic",tolower(col_name)),
+           !(col_name %in% ethnicity_standard_headers))  %>%
+    pull(col_name)
+  if (length(ethnicity_columns) == 0) {
+    output <- list(
+      "message" = "No ethnicity header issues found.",
+      "result" = "PASS"
+    )
+  } else if (length(ethnicity_columns) == 1) {
+      output <- list(
+        "message" = paste0(paste(ethnicity_columns, collapse = "', '"), " appears to relate to ethnicity data, but does not conform to the standard col_name conventions: ",
+                           paste(ethnicity_standard_headers, collapse=', '),
+                           "."),
+        "result" = "FAIL"
+      )
+    } else {
+      output <- list(
+        "message" = paste0("The following columns appear to relate to ethnicity data, but do not conform to the standard col_name conventions: <br> - '", 
+                           paste(ethnicity_columns, collapse = "', '"), "'. <br> - These should take the form of one of the following: ", 
+                           paste(ethnicity_standard_headers, collapse=', '),
+                           "."),
+        "result" = "FAIL"
+      )
+    }
+  return(output)
+}
+
+ethnicity_values <- function(data){
+  # First find any ethnicity type columns that don't have the standard col_names
+  if ('ethnicity_major' %in% colnames(data) & 'ethnicity_minor' %in% colnames(data)){
+    ethnicity_nonstandard <- data %>% 
+      mutate(ethnicity_combined=paste(ethnicity_major, ethnicity_minor, sep=', ')) %>%
+      select(ethnicity_combined) %>% unique() %>% 
+      filter(!grepl(paste(paste(ethnicity_standard_values$ethnicity_major, ethnicity_standard_values$ethnicity_minor,sep=', '),collapse='|'),
+                    ethnicity_combined)) %>%
+      pull(ethnicity_combined)
+    value_type <- 'combination'
+  } else if ('ethnicity_major' %in% colnames(data)){
+    ethnicity_nonstandard <- data %>% 
+      select(ethnicity_major) %>% unique() %>% 
+      filter(!grepl(paste(ethnicity_standard_values$ethnicity_major,collapse='|'),
+                    ethnicity_major)) %>%
+      pull(ethnicity_major)
+    value_type <- 'value'
+  } else if ('ethnicity_minor' %in% colnames(data)){
+    ethnicity_nonstandard <- data %>% 
+      select(ethnicity_minor) %>% unique() %>% 
+      filter(!grepl(paste(ethnicity_standard_values$ethnicity_minor,collapse='|'),
+                    ethnicity_minor)) %>%
+      pull(ethnicity_minor)
+    value_type <- 'value'
+  } else {
+    ethnicity_nonstandard <- c()
+  }
+  if (length(ethnicity_nonstandard) == 0) {
+    output <- list(
+      "message" = "No ethnicity entry issues found.",
+      "result" = "PASS"
+    )
+  } else if (length(ethnicity_nonstandard) == 1) {
+    output <- list(
+      "message" = paste0("The ethnicity filter ", value_type," '",
+                         paste(ethnicity_nonstandard, collapse = "', '"), 
+                         "' does not conform to the GSS standards. Please cross check against the <a href='https://rsconnect/rsc/stats-production-guidance/ud.html#Ethnicity'>published standards</a>."),
+      "result" = "ADVISORY"
+    )
+  } else {
+    output <- list(
+      "message" = paste0("The following ethnicity filter ", value_type,"s do not conform to the GSS standards: <br> - '", 
+                         paste(ethnicity_nonstandard, collapse = "', '"), 
+                         "'. <br> - Please cross check against the <a href='https://rsconnect/rsc/stats-production-guidance/ud.html#Ethnicity'>published standards</a>."),
+      "result" = "ADVISORY"
+    )
+  }
+  return(output)
+}
+
+
+ethnicity_characteristics_group <- function(data){
+  # First find any ethnicity type columns that don't have the standard col_names
+  ethnicity_standard_characteristics <- c("Ethnicity Major", "Ethnicity Minor", "Ethnicity Detailed", "Minority Ethnic")
+  if ("characteristics_group" %in% tolower(colnames(data))){
+    ethnicity_chargroups <- data %>% select(characteristics_group) %>%
+      filter(grepl("ethnic",tolower(characteristics_group))) %>% 
+      distinct() %>% 
+      filter(!grepl(paste(ethnicity_standard_characteristics,collapse='|'),characteristics_group)) %>%
+      pull(characteristics_group)
+    if (length(ethnicity_chargroups) == 0) {
+      output <- list(
+        "message" = "No ethnicity header issues found.",
+        "result" = "PASS"
+      )
+    } else if (length(ethnicity_chargroups) == 1) {
+      output <- list(
+        "message" = paste0(paste(ethnicity_chargroups, collapse = "', '"), " appears to relate to ethnicity data, but does not conform to the standard col_name conventions: ",
+                           paste(ethnicity_standard_characteristics, collapse=', '),
+                           " (or these combined with other filters with 'and' - e.g. 'Gender and Minority Ethnic')."),
+        "result" = "FAIL"
+      )
+    } else {
+      output <- list(
+        "message" = paste0("The following columns appear to relate to ethnicity data, but do not conform to the standard col_name conventions: <br> - '", 
+                           paste(ethnicity_chargroups, collapse = "', '"), "'. <br> - These should take the form of one of the following: ", 
+                           paste(ethnicity_standard_characteristics, collapse=', '),
+                           " (or these combined with other filters with 'and' - e.g. 'Gender and Minority Ethnic')."),
+        "result" = "FAIL"
+      )
+    }
+  }
   return(output)
 }
