@@ -2668,7 +2668,7 @@ ethnicity_characteristics_group <- function(data){
 
 ethnicity_characteristics_values <- function(data){
   # First find any ethnicity type columns that don't have the standard col_names
-  if ("characteristics_group" %in% tolower(colnames(data)) & "characteristics" %in% tolower(colnames(data)){
+  if ("characteristics_group" %in% tolower(colnames(data)) & "characteristics" %in% tolower(colnames(data))){
     ethnicity_nonstabdard <- data %>% select(characteristics_group,characteristics) %>%
       filter(grepl("ethnic",tolower(characteristics_group))) %>% 
       distinct() %>% 
@@ -2694,6 +2694,7 @@ ethnicity_characteristics_values <- function(data){
                            "'. <br> - Please cross check against the <a href='https://rsconnect/rsc/stats-production-guidance/ud.html#Ethnicity'>published standards</a>."),
         "result" = "ADVISORY"
       )
+    }
     } else {
       output <- list(
         "message" = "No ethnicity data found.",
