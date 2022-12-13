@@ -55,8 +55,11 @@ mainTests <- function(data_character, meta_character, datafile, metafile) {
     indicator_unit_validation(metafile), # active test
     indicator_dp(metafile), # active test
     indicator_dp_validation(metafile), # active test
-    indicator_dp_completed(metafile) # active test
-    ethnicity_headers(datafile, metafile)
+    indicator_dp_completed(metafile), # active test
+    ethnicity_headers(metafile),
+    ethnicity_values(datafile),
+    ethnicity_characteristics_group(datafile),
+    ethnicity_characteristics_values(datafile)
   ),
   "stage" = "mainTests",
   "test" = c(activeTests$`R/mainTests.r`)
@@ -2574,6 +2577,7 @@ ethnicity_headers <- function(meta){
 
 ethnicity_values <- function(data){
   # First find any ethnicity type columns that don't have the standard col_names
+  print(colnames(data))
   if ('ethnicity_major' %in% colnames(data) & 'ethnicity_minor' %in% colnames(data)){
     ethnicity_nonstandard <- data %>% 
       mutate(ethnicity_combined=paste(ethnicity_major, ethnicity_minor, sep=', ')) %>%
@@ -2653,6 +2657,48 @@ ethnicity_characteristics_group <- function(data){
         "result" = "FAIL"
       )
     }
+  } else {
+    output <- list(
+      "message" = "No ethnicity data found.",
+      "result" = "PASS"
+    )
   }
   return(output)
+}
+
+ethnicity_characteristics_values <- function(data){
+  # First find any ethnicity type columns that don't have the standard col_names
+  if ("characteristics_group" %in% tolower(colnames(data)) & "characteristics" %in% tolower(colnames(data)){
+    ethnicity_nonstabdard <- data %>% select(characteristics_group,characteristics) %>%
+      filter(grepl("ethnic",tolower(characteristics_group))) %>% 
+      distinct() %>% 
+      filter(!grepl(paste(paste(ethnicity_standard_values$ethnicity_major, 
+                                ethnicity_standard_values$ethnicity_minor,sep=', '),collapse='|'),characteristics)) %>%
+      pull(characteristics) %>% distinct()
+    if (length(ethnicity_nonstandard) == 0) {
+      output <- list(
+        "message" = "No ethnicity entry issues found.",
+        "result" = "PASS"
+      )
+    } else if (length(ethnicity_nonstandard) == 1) {
+      output <- list(
+        "message" = paste0("The ethnicity filter value '",
+                           paste(ethnicity_nonstandard, collapse = "', '"), 
+                           "' does not conform to the GSS standards. Please cross check against the <a href='https://rsconnect/rsc/stats-production-guidance/ud.html#Ethnicity'>published standards</a>."),
+        "result" = "ADVISORY"
+      )
+    } else {
+      output <- list(
+        "message" = paste0("The following ethnicity filter values do not conform to the GSS standards: <br> - '", 
+                           paste(ethnicity_nonstandard, collapse = "', '"), 
+                           "'. <br> - Please cross check against the <a href='https://rsconnect/rsc/stats-production-guidance/ud.html#Ethnicity'>published standards</a>."),
+        "result" = "ADVISORY"
+      )
+    } else {
+      output <- list(
+        "message" = "No ethnicity data found.",
+        "result" = "PASS"
+      )
+    }
+    return(output)
 }
