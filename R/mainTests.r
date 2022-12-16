@@ -56,10 +56,10 @@ mainTests <- function(data_character, meta_character, datafile, metafile) {
     indicator_dp(metafile), # active test
     indicator_dp_validation(metafile), # active test
     indicator_dp_completed(metafile), # active test
-    ethnicity_headers(metafile),
-    ethnicity_values(datafile),
-    ethnicity_characteristics_group(datafile),
-    ethnicity_characteristics_values(datafile)
+    ethnicity_headers(metafile), # active test
+    ethnicity_values(datafile), # active test
+    ethnicity_characteristics_group(datafile), # active test
+    ethnicity_characteristics_values(datafile) # active test
   ),
   "stage" = "mainTests",
   "test" = c(activeTests$`R/mainTests.r`)
@@ -143,7 +143,7 @@ duplicate_rows <- function(data, meta) {
 
   present_obUnits_filters <- intersect(c(acceptable_observational_units, filters, filter_groups), names(data))
 
-  if (nrow(data %>% distinct(geographic_level)) == 1 &&
+  if (nrow(data %>% distinct(geographic_level)) == 1 &
     data$geographic_level[1] %in% geography_matrix[13:14, 1]
   ) {
     dupes <- suppressMessages(data %>%
@@ -289,7 +289,7 @@ total <- function(data, meta) {
           "result" = "ADVISORY"
         )
       } else {
-        if (length(filters) > 0 && length(filter_groups) > 0) {
+        if (length(filters) > 0 & length(filter_groups) > 0) {
           output <- list(
             "message" = paste0("A 'Total' aggregation should be added in the following filters and groups if applicable: '", paste(missing_total, collapse = "', '"), "'."),
             "result" = "ADVISORY"
@@ -344,7 +344,7 @@ observational_total <- function(data, meta) {
     pull(filter_grouping_column)
 
   if (
-    length(filters) == 1 &&
+    length(filters) == 1 &
       any(filters[1] %in% geography_matrix[13:14, 3], filter_groups[1] %in% geography_matrix[13:14, 3])
   ) {
     present_ob_units <- present_ob_units[!present_ob_units %in% c(geography_matrix[13, 3], geography_matrix[14, 3])]
@@ -390,7 +390,7 @@ null <- function(data, meta) {
     "meta" = null_symbols %in% unlist(meta, use.names = FALSE)
   ))
 
-  if ((TRUE %in% pre_result$data) && (TRUE %in% pre_result$meta)) {
+  if ((TRUE %in% pre_result$data) & (TRUE %in% pre_result$meta)) {
     output <- list(
       "message" = paste0(
         "The following problematic symbols were found in the data file: '", paste(pre_result %>% filter(data == TRUE) %>% pull(symbol), collapse = "', '"),
@@ -645,7 +645,7 @@ time_period_six <- function(data) {
     currentyearend <- as.numeric(substr(i, 3, 4))
     nextyearend <- as.numeric(substr(i, 5, 6))
 
-    if (currentyearend == 99 && nextyearend == 0) {
+    if (currentyearend == 99 & nextyearend == 0) {
       return("PASS")
     } else {
       if ((currentyearend + 1) == nextyearend) {
@@ -725,7 +725,7 @@ region_for_la <- function(data) {
       missing_region_codes <- sum(is.na(select(region_cols, geography_matrix[2, 2])))
       missing_region_names <- sum(is.na(select(region_cols, geography_matrix[2, 3])))
 
-      if (missing_region_codes > 0 && missing_region_names > 0) {
+      if (missing_region_codes > 0 & missing_region_names > 0) {
         output <- list(
           "message" = paste("Both", geography_matrix[2, 2], "and", geography_matrix[2, 3], "have missing values for", geography_matrix[3, 1], "rows in the data file. <br> - It is recommended to include the information from these columns for", geography_matrix[3, 1], "level data."),
           "result" = "ADVISORY"
@@ -768,7 +768,7 @@ region_for_lad <- function(data) {
       missing_region_codes <- sum(is.na(select(region_cols, region_code)))
       missing_region_names <- sum(is.na(select(region_cols, region_name)))
 
-      if (missing_region_codes > 0 && missing_region_names > 0) {
+      if (missing_region_codes > 0 & missing_region_names > 0) {
         output <- list(
           "message" = paste("Both", geography_matrix[2, 2], "and", geography_matrix[2, 3], "have missing values for", geography_matrix[4, 1], "rows in the data file. <br> - It is recommended to include the information from these columns for", geography_matrix[4, 1], "level data."),
           "result" = "ADVISORY"
@@ -846,7 +846,7 @@ geography_level_completed <- function(data) {
 # When one of region name and code is completed, is the other also?
 
 region_col_present <- function(data) {
-  if ((geography_matrix[2, 2] %in% names(data)) && (geography_matrix[2, 3] %in% names(data))) {
+  if ((geography_matrix[2, 2] %in% names(data)) & (geography_matrix[2, 3] %in% names(data))) {
     output <- list(
       "message" = paste("Where one of", geography_matrix[2, 2], "or", geography_matrix[2, 3], "is present, the other column is also present."),
       "result" = "PASS"
@@ -886,19 +886,19 @@ la_col_present <- function(data) {
     )
   } else {
     if (any(c("old_la_code", "la_name", "new_la_code") %in% names(data))) {
-      if (!("la_name" %in% names(data)) && !("new_la_code" %in% names(data))) {
+      if (!("la_name" %in% names(data)) & !("new_la_code" %in% names(data))) {
         output <- list(
           "message" = "Where old_la_code is included in the data file, la_name and new_la_code should also be included.",
           "result" = "FAIL"
         )
       } else {
-        if (!("la_name" %in% names(data)) && !("old_la_code" %in% names(data))) {
+        if (!("la_name" %in% names(data)) & !("old_la_code" %in% names(data))) {
           output <- list(
             "message" = "Where new_la_code is included in the data file, la_name and old_la_code should also be included.",
             "result" = "FAIL"
           )
         } else {
-          if (!("new_la_code" %in% names(data)) && !("old_la_code" %in% names(data))) {
+          if (!("new_la_code" %in% names(data)) & !("old_la_code" %in% names(data))) {
             output <- list(
               "message" = "Where la_name is included in the data file, new_la_code and old_la_code should also be included.",
               "result" = "FAIL"
@@ -1078,8 +1078,8 @@ overcompleted_cols <- function(data, meta) {
       pull(filter_grouping_column)
 
     if (
-      matrixRow[3] %in% geography_matrix[13:14, 3] &&
-        length(filters) == 1 &&
+      matrixRow[3] %in% geography_matrix[13:14, 3] &
+        length(filters) == 1 &
         any(filters[1] %in% geography_matrix[13:14, 3], filter_groups[1] %in% geography_matrix[13:14, 3])
     ) {
       sch_prov_only_filter <- TRUE
@@ -1161,13 +1161,13 @@ ignored_rows <- function(data) {
       levels_present <- data %>%
         distinct(geographic_level)
 
-      if (nrow(levels_present) == 1 && data$geographic_level[1] %in% geography_matrix[13:14, 1]) {
+      if (nrow(levels_present) == 1 & data$geographic_level[1] %in% geography_matrix[13:14, 1]) {
         output <- list(
           "message" = "No rows in the file will be ignored by the EES table tool.",
           "result" = "PASS"
         )
       } else {
-        if (geography_matrix[13, 1] %in% levels_present$geographic_level && geography_matrix[14, 1] %in% levels_present$geographic_level) {
+        if (geography_matrix[13, 1] %in% levels_present$geographic_level & geography_matrix[14, 1] %in% levels_present$geographic_level) {
           output <- list(
             "message" = paste(geography_matrix[13, 1], "and", geography_matrix[14, 1], "data has been mixed - please contact the Statistics Development Team."),
             "result" = "FAIL"
@@ -1421,12 +1421,12 @@ region_combinations <- function(data) {
         filter(geographic_level == geography_matrix[2, 1]) %>%
         select(geography_matrix[2, 2], geography_matrix[2, 3]) %>%
         unique() %>%
-        filter(region_code != gssNAvcode && !is.na(region_code)),
+        filter(region_code != gssNAvcode | is.na(region_code)),
       data %>%
         filter(geographic_level != geography_matrix[2, 1]) %>%
         select(geography_matrix[2, 2], geography_matrix[2, 3]) %>%
         unique() %>%
-        .[!is.na(region_code) & !is.na(region_name)] %>%
+        filter(!is.na(region_code) & !is.na(region_name)) %>%
         filter(region_code != "") %>%
         filter(region_code != gssNAvcode)
     ) %>%
@@ -1648,7 +1648,7 @@ other_geography_code_duplicates <- function(data) {
 # check that there is a 1:1 relationship between geography names and codes
 
 sch_prov_duplicates <- function(data) {
-  if (!"School" %in% unique(data$geographic_level) && !"Provider" %in% unique(data$geographic_level)) {
+  if (!"School" %in% unique(data$geographic_level) & !"Provider" %in% unique(data$geographic_level)) {
     output <- list(
       "message" = "School or provider geography data is not present in this data file.",
       "result" = "IGNORE"
@@ -2007,7 +2007,7 @@ geographic_catch <- function(meta) {
     pull(filter_grouping_column)
 
   if (
-    length(filters) == 1 &&
+    length(filters) == 1 &
       any(filters[1] %in% geography_matrix[13:14, 3], filter_groups[1] %in% geography_matrix[13:14, 3])
   ) {
     filters_and_groups <- c(filters, filter_groups)[!c(filters, filter_groups) %in% c(geography_matrix[13, 3], geography_matrix[14, 3])]
@@ -2577,7 +2577,6 @@ ethnicity_headers <- function(meta){
 
 ethnicity_values <- function(data){
   # First find any ethnicity type columns that don't have the standard col_names
-  print(colnames(data))
   if ('ethnicity_major' %in% colnames(data) & 'ethnicity_minor' %in% colnames(data)){
     ethnicity_nonstandard <- data %>% 
       mutate(ethnicity_combined=paste(ethnicity_major, ethnicity_minor, sep=', ')) %>%
