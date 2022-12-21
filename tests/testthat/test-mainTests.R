@@ -359,10 +359,12 @@ test_that("indicator_dp_nonInteger", {
 })
 
 test_that("ethnicity_headers", {
-  expect_equal(testIndividualTestSeparate(
-    paste0(pathStart, "ethnicity_wrong_headers.csv"), 
-    paste0(pathStart, "ethnicity_wrong_headers.meta.csv"), 
-    "ethnicity_headers"), 
-    "FAIL")
+  expect_equal(
+    testIndividualTestSeparate(
+      paste0(pathStart, "ethnicity_wrong_headers.csv"),
+      paste0(pathStart, "ethnicity_wrong_headers.meta.csv"),
+      "ethnicity_headers"
+    ),
+    "FAIL"
+  )
 })
-

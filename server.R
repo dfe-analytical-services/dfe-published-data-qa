@@ -202,10 +202,12 @@ server <- function(input, output, session) {
 
         # File validation ---------------------------------------------------------------------------------
 
-        screeningOutput <- screenFiles(inputData$name, inputMeta$name, 
-                                       data$fileSeparator, meta$fileSeparator, 
-                                       data$fileCharacter, meta$fileCharacter, 
-                                       data$mainFile, meta$mainFile)
+        screeningOutput <- screenFiles(
+          inputData$name, inputMeta$name,
+          data$fileSeparator, meta$fileSeparator,
+          data$fileCharacter, meta$fileCharacter,
+          data$mainFile, meta$mainFile
+        )
 
         all_results <- screeningOutput$results
 
