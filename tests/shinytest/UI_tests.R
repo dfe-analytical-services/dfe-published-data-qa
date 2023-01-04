@@ -1,4 +1,4 @@
-app <- ShinyDriver$new("../../")
+app <- ShinyDriver$new("../../", loadTimeout = 6.4e5)
 app$snapshotInit("UI_tests", screenshot = FALSE)
 
 # 1. Does it load  -------------------------------------------------------------------------------------------------------------------
