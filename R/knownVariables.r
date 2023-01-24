@@ -39,26 +39,27 @@ gss_symbols <- c(gssNApcode, gssNAvcode, gssSupcode, gssRndcode)
 legacy_gss_symbols <- c("~", ":")
 
 
-geography_matrix <- matrix(c(
-  "National", "country_code", "country_name", NA,
-  "Regional", "region_code", "region_name", NA,
-  "Local authority", "old_la_code", "la_name", "new_la_code",
-  "Local authority district", "lad_code", "lad_name", NA,
-  "RSC region", "rsc_region_lead_name", NA, NA,
-  "Parliamentary constituency", "pcon_code", "pcon_name", NA,
-  "Local enterprise partnership", "local_enterprise_partnership_code", "local_enterprise_partnership_name", NA,
-  "English devolved area", "english_devolved_area_code", "english_devolved_area_name", NA,
-  "Opportunity area", "opportunity_area_code", "opportunity_area_name", NA,
-  "Ward", "ward_code", "ward_name", NA,
-  "MAT", "trust_id", "trust_name", NA,
-  "Sponsor", "sponsor_id", "sponsor_name", NA,
-  "School", "school_urn", "school_name", "school_laestab",
-  "Provider", "provider_ukprn", "provider_name", NA,
-  "Institution", "institution_id", "institution_name", NA,
-  "Planning area", "planning_area_code", "planning_area_name", NA
-),
-ncol = 4,
-byrow = TRUE
+geography_matrix <- matrix(
+  c(
+    "National", "country_code", "country_name", NA,
+    "Regional", "region_code", "region_name", NA,
+    "Local authority", "old_la_code", "la_name", "new_la_code",
+    "Local authority district", "lad_code", "lad_name", NA,
+    "RSC region", "rsc_region_lead_name", NA, NA,
+    "Parliamentary constituency", "pcon_code", "pcon_name", NA,
+    "Local enterprise partnership", "local_enterprise_partnership_code", "local_enterprise_partnership_name", NA,
+    "English devolved area", "english_devolved_area_code", "english_devolved_area_name", NA,
+    "Opportunity area", "opportunity_area_code", "opportunity_area_name", NA,
+    "Ward", "ward_code", "ward_name", NA,
+    "MAT", "trust_id", "trust_name", NA,
+    "Sponsor", "sponsor_id", "sponsor_name", NA,
+    "School", "school_urn", "school_name", "school_laestab",
+    "Provider", "provider_ukprn", "provider_name", NA,
+    "Institution", "institution_id", "institution_name", NA,
+    "Planning area", "planning_area_code", "planning_area_name", NA
+  ),
+  ncol = 4,
+  byrow = TRUE
 )
 
 countries <- suppressMessages(read_csv("data/country.csv")) # change this to database eventually

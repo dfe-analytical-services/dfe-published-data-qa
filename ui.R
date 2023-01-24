@@ -116,7 +116,6 @@ fluidPage(
         fluidRow(
 
           # Loading screen that appears while tests are running -----------------------------------------------------------------------------------
-
           shinyjs::hidden(div(
             id = "loading",
             h4("Tests are now running against the files, this may take a few minutes depending on the size of your data file.", align = "center"),
