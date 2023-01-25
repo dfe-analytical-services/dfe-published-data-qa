@@ -1098,10 +1098,6 @@ server <- function(input, output, session) {
               left_join(suppress_count) %>%
               mutate_all(~ replace(., is.na(.), 0))
 
-            output$suppressed_cell_count <- renderUI({
-              DTOutput("suppressed_cell_count_table", width = "60%") %>% withSpinner()
-            })
-
             output$suppressed_cell_count_table <- DT::renderDT({
               datatable(suppress_count,
                 rownames = FALSE,

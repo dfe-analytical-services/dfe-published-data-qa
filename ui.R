@@ -288,7 +288,7 @@ fluidPage(
                   ),
                   column(
                     9,
-                    uiOutput("suppressed_cell_count") %>% withSpinner()
+                    DTOutput("suppressed_cell_count_table") %>% withSpinner()
                   )
                 ),
                 hr()

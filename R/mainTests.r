@@ -146,7 +146,7 @@ duplicate_rows <- function(data, meta) {
     dupes <- suppressMessages(data %>%
       filter(geographic_level != geography_matrix[15, 1]) %>%
       filter(geographic_level != geography_matrix[16, 1]) %>%
-      select(present_obUnits_filters) %>%
+      select(all_of(present_obUnits_filters)) %>%
       get_dupes())
 
     if (nrow(dupes) > 0) {
