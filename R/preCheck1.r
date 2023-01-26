@@ -2,16 +2,17 @@
 # Pre-checks stage 1 functions
 
 preCheck1 <- function(datafile, metafile) {
-  as_tibble(t(rbind(cbind(
-    invalid_meta_cols(metafile), # active test
-    meta_to_data_crosscheck(datafile, metafile), # active test
-    time_identifier(datafile), # active test
-    geographic_level(datafile), # active test
-    col_name_completed(metafile), # active test
-    duplicate_variable_names(datafile) # active test
-  ),
-  "stage" = "preCheck1",
-  "test" = c(activeTests$`R/preCheck1.r`)
+  as_tibble(t(rbind(
+    cbind(
+      invalid_meta_cols(metafile), # active test
+      meta_to_data_crosscheck(datafile, metafile), # active test
+      time_identifier(datafile), # active test
+      geographic_level(datafile), # active test
+      col_name_completed(metafile), # active test
+      duplicate_variable_names(datafile) # active test
+    ),
+    "stage" = "preCheck1",
+    "test" = c(activeTests$`R/preCheck1.r`)
   )))
 }
 

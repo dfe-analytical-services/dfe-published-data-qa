@@ -2,63 +2,64 @@
 # main tests functions
 
 mainTests <- function(data_character, meta_character, datafile, metafile) {
-  as_tibble(t(rbind(cbind(
-    variable_snake_case(datafile), # active test
-    variable_start_letter(datafile), # active test
-    duplicate_rows(datafile, metafile), # active test
-    data_to_meta_crosscheck(datafile, metafile), # active test
-    total(datafile, metafile), # active test
-    observational_total(datafile, metafile), # active test
-    null(data_character, meta_character), # active test
-    obsolete_symbols(datafile, metafile), # active test
-    no_data_symbols(datafile), # active test
-    blanks_filters(data_character, meta_character), # active test
-    blanks_indicators(data_character, meta_character), # active test
-    time_period(datafile), # active test
-    time_period_six(datafile), # active test
-    three_years(datafile), # active test
-    region_for_la(datafile), # active test
-    region_for_lad(datafile), # active test
-    geography_level_completed(datafile), # active test
-    region_col_present(datafile), # active test
-    la_col_present(datafile), # active test
-    overcompleted_cols(datafile, metafile), # active test
-    ignored_rows(datafile), # active test
-    eda_combinations(datafile), # active test
-    lep_combinations(datafile), # active test
-    pcon_combinations(datafile), # active test
-    lad_combinations(datafile), # active test
-    la_combinations(datafile), # active test
-    region_combinations(datafile), # active test
-    country_combinations(datafile), # active test
-    other_geography_duplicates(datafile), # active test
-    other_geography_code_duplicates(datafile), # active test
-    sch_prov_duplicates(datafile), # active test
-    na_geography(datafile), # active test
-    na_geography_code(datafile), # active test
-    col_name_duplicate(metafile), # active test
-    col_name_spaces(metafile), # active test
-    label(metafile), # active test
-    duplicate_label(metafile), # active test
-    geographic_catch(metafile), # active test
-    filter_hint(metafile), # active test
-    filter_group(metafile), # active test
-    filter_group_match(datafile, metafile), # active test
-    filter_group_level(datafile, metafile), # active test
-    filter_group_not_filter(metafile), # active test
-    filter_group_duplicate(metafile), # active test
-    whitespace_filters(datafile, metafile), # active test
-    indicator_grouping(metafile), # active test
-    filter_group_stripped(data_character, meta_character), # active test
-    indicator_group_stripped(meta_character), # active test
-    indicator_unit(metafile), # active test
-    indicator_unit_validation(metafile), # active test
-    indicator_dp(metafile), # active test
-    indicator_dp_validation(metafile), # active test
-    indicator_dp_completed(metafile) # active test
-  ),
-  "stage" = "mainTests",
-  "test" = c(activeTests$`R/mainTests.r`)
+  as_tibble(t(rbind(
+    cbind(
+      variable_snake_case(datafile), # active test
+      variable_start_letter(datafile), # active test
+      duplicate_rows(datafile, metafile), # active test
+      data_to_meta_crosscheck(datafile, metafile), # active test
+      total(datafile, metafile), # active test
+      observational_total(datafile, metafile), # active test
+      null(data_character, meta_character), # active test
+      obsolete_symbols(datafile, metafile), # active test
+      no_data_symbols(datafile), # active test
+      blanks_filters(data_character, meta_character), # active test
+      blanks_indicators(data_character, meta_character), # active test
+      time_period(datafile), # active test
+      time_period_six(datafile), # active test
+      three_years(datafile), # active test
+      region_for_la(datafile), # active test
+      region_for_lad(datafile), # active test
+      geography_level_completed(datafile), # active test
+      region_col_present(datafile), # active test
+      la_col_present(datafile), # active test
+      overcompleted_cols(datafile, metafile), # active test
+      ignored_rows(datafile), # active test
+      eda_combinations(datafile), # active test
+      lep_combinations(datafile), # active test
+      pcon_combinations(datafile), # active test
+      lad_combinations(datafile), # active test
+      la_combinations(datafile), # active test
+      region_combinations(datafile), # active test
+      country_combinations(datafile), # active test
+      other_geography_duplicates(datafile), # active test
+      other_geography_code_duplicates(datafile), # active test
+      sch_prov_duplicates(datafile), # active test
+      na_geography(datafile), # active test
+      na_geography_code(datafile), # active test
+      col_name_duplicate(metafile), # active test
+      col_name_spaces(metafile), # active test
+      label(metafile), # active test
+      duplicate_label(metafile), # active test
+      geographic_catch(metafile), # active test
+      filter_hint(metafile), # active test
+      filter_group(metafile), # active test
+      filter_group_match(datafile, metafile), # active test
+      filter_group_level(datafile, metafile), # active test
+      filter_group_not_filter(metafile), # active test
+      filter_group_duplicate(metafile), # active test
+      whitespace_filters(datafile, metafile), # active test
+      indicator_grouping(metafile), # active test
+      filter_group_stripped(data_character, meta_character), # active test
+      indicator_group_stripped(meta_character), # active test
+      indicator_unit(metafile), # active test
+      indicator_unit_validation(metafile), # active test
+      indicator_dp(metafile), # active test
+      indicator_dp_validation(metafile), # active test
+      indicator_dp_completed(metafile) # active test
+    ),
+    "stage" = "mainTests",
+    "test" = c(activeTests$`R/mainTests.r`)
   )))
 }
 
@@ -145,7 +146,7 @@ duplicate_rows <- function(data, meta) {
     dupes <- suppressMessages(data %>%
       filter(geographic_level != geography_matrix[15, 1]) %>%
       filter(geographic_level != geography_matrix[16, 1]) %>%
-      select(present_obUnits_filters) %>%
+      select(all_of(present_obUnits_filters)) %>%
       get_dupes())
 
     if (nrow(dupes) > 0) {
@@ -705,7 +706,6 @@ region_for_la <- function(data) {
       "result" = "IGNORE"
     )
   } else {
-
     # not testing for individual columns as region_col_completed covers that
 
     if (!(geography_matrix[2, 2] %in% names(data)) | !(geography_matrix[2, 3] %in% names(data))) {
@@ -748,7 +748,6 @@ region_for_lad <- function(data) {
       "result" = "IGNORE"
     )
   } else {
-
     # not testing for individual columns as region_col_completed covers that
 
     if (!(geography_matrix[2, 2] %in% names(data)) | !(geography_matrix[2, 3] %in% names(data))) {
@@ -936,12 +935,10 @@ la_col_present <- function(data) {
 # Are any columns completed for unexpected rows
 
 overcompleted_cols <- function(data, meta) {
-
   # ----------------------------------------------------------------------------------------------------------------------------------
   # checking if region cols are completed in national rows
 
   overcomplete_regional_cols <- function(matrixRow) {
-
     # Start by filtering the data down to remove the geographic level being tested and any lower levels we don't care about
 
     level_rows <- data %>%
@@ -974,7 +971,6 @@ overcompleted_cols <- function(data, meta) {
   # checking if local authority columns are completed for national, regional or mid-geography rows (ignoring LAD)
 
   overcomplete_la_cols <- function(matrixRow) {
-
     # This is a test that could benefit from more detail, and maybe a table in the error feedback
 
     # Start by filtering the data down to remove the geographic level being tested, lad rows and any lower levels we don't care about
@@ -1010,7 +1006,6 @@ overcompleted_cols <- function(data, meta) {
   # checking if mid-geography cols are completed for unexpected levels
 
   overcomplete_mid_cols <- function(matrixRow) {
-
     # Start by filtering the data down to remove the geographic level being tested and any lower levels we don't care about
 
     level_rows <- data %>%
@@ -1043,7 +1038,6 @@ overcompleted_cols <- function(data, meta) {
   # checking if low level geographies are completed for any rows other than their own
 
   overcomplete_low_cols <- function(matrixRow) {
-
     # Filtering the data down to remove the geographic level being tested and any lower levels we don't care about
 
     level_rows <- data %>% filter(geographic_level != matrixRow[1])

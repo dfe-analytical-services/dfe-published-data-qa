@@ -2,18 +2,19 @@
 # Pre-checks stage 2 functions
 
 preCheck2 <- function(data_character, meta_character, datafile, metafile) {
-  as_tibble(t(rbind(cbind(
-    time_identifier_mix(datafile), # active test
-    geography_level_present(datafile), # active test
-    data_variable_spaces(datafile), # active test
-    ob_unit_meta(metafile), # active test
-    filter_level(datafile, metafile), # active test
-    utf8(data_character, meta_character), # active test
-    col_type(metafile), # active test
-    time_validation(datafile) # active test
-  ),
-  "stage" = "preCheck2",
-  "test" = c(activeTests$`R/preCheck2.r`)
+  as_tibble(t(rbind(
+    cbind(
+      time_identifier_mix(datafile), # active test
+      geography_level_present(datafile), # active test
+      data_variable_spaces(datafile), # active test
+      ob_unit_meta(metafile), # active test
+      filter_level(datafile, metafile), # active test
+      utf8(data_character, meta_character), # active test
+      col_type(metafile), # active test
+      time_validation(datafile) # active test
+    ),
+    "stage" = "preCheck2",
+    "test" = c(activeTests$`R/preCheck2.r`)
   )))
 }
 

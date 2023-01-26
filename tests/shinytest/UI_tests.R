@@ -1,4 +1,4 @@
-app <- ShinyDriver$new("../../")
+app <- ShinyDriver$new("../../", loadTimeout = 6.4e5)
 app$snapshotInit("UI_tests", screenshot = FALSE)
 
 # 1. Does it load  -------------------------------------------------------------------------------------------------------------------
@@ -9,7 +9,7 @@ app$snapshot()
 app$uploadFile(datafile = "test-data/passes_everything.csv")
 app$uploadFile(metafile = "test-data/passes_everything.meta.csv")
 Sys.sleep(2.8)
-app$setInputs(screenbutton = "click", timeout_ = 8.0e4)
+app$setInputs(screenbutton = "click", timeout_ = 1.2e4)
 app$snapshot(items = list(output = c("progress_stage", "table_all_tests")))
 
 app$setInputs(resetbutton = "click")
@@ -18,7 +18,7 @@ app$setInputs(resetbutton = "click")
 app$uploadFile(datafile = "test-data/passes_everything_advisory.csv")
 app$uploadFile(metafile = "test-data/passes_everything_advisory.meta.csv")
 Sys.sleep(2.8)
-app$setInputs(screenbutton = "click", timeout_ = 8.0e4)
+app$setInputs(screenbutton = "click", timeout_ = 1.2e4)
 app$snapshot(items = list(output = c("progress_stage", "table_all_tests")))
 
 app$setInputs(resetbutton = "click")
@@ -81,13 +81,13 @@ app$snapshot(items = list(
 # 11. Do the metadata preview tables populate as expected ------------------
 app$uploadFile(datafile = "test-data/passes_everything.csv")
 app$uploadFile(metafile = "test-data/passes_everything.meta.csv")
-app$setInputs(screenbutton = "click", timeout_ = 8.0e4)
-app$setInputs(trendy_tabs = "previewTab")
+app$setInputs(screenbutton = "click")
+app$setInputs(trendy_tabs = "previewTab", timeout_ = 1.2e4)
 app$snapshot(list(output = c("meta_table", "data_preview")))
 
 # 12. Do the file info tables populate as expected -------------------------
-app$setInputs(trendy_tabs = "obUnitTab")
-app$snapshot(list(output = c("geog_time_perms2", "table_1", "indicators", "suppressed_cell_count_table")))
+app$setInputs(trendy_tabs = "obUnitTab", timeout_ = 1.2e4)
+app$snapshot(list(output = c("geog_time_perms2", "tables", "indicators", "suppressed_cell_count_table")))
 
 # 13. Explore indicators doesn't break with no arguments -------------------
 app$setInputs(trendy_tabs = "indicatorsTab")
@@ -160,7 +160,7 @@ app$snapshot(list(output = "geog_agg2"))
 # 23. Hyphen works for filters on What's in this file ----------------------
 
 app$setInputs(trendy_tabs = "obUnitTab")
-app$snapshot(list(output = c("table_1", "table_2")))
+app$snapshot(list(output = c("tables")))
 
 app$setInputs(resetbutton = "click")
 
@@ -185,6 +185,6 @@ app$uploadFile(datafile = "test-data/data_mandatory_cols.csv")
 app$uploadFile(metafile = "test-data/data_mandatory_cols.meta.csv")
 app$setInputs(screenbutton = "click")
 app$setInputs(trendy_tabs = "obUnitTab")
-app$snapshot(list(output = c("table_1", "table_2", "table_3", "table_4")))
+app$snapshot(list(output = c("tables")))
 
 app$setInputs(resetbutton = "click")
