@@ -59,8 +59,8 @@ mainTests <- function(data_character, meta_character, datafile, metafile) {
       indicator_dp_completed(metafile), # active test
       ethnicity_headers(metafile), # active test
       ethnicity_values(datafile), # active test
-      ethnicity_characteristics_group(datafile), # active test
-      ethnicity_characteristics_values(datafile) # active test
+      ethnicity_characteristic_group(datafile), # active test
+      ethnicity_characteristic_values(datafile) # active test
     ),
     "stage" = "mainTests",
     "test" = c(activeTests$`R/mainTests.r`)
@@ -2639,16 +2639,16 @@ ethnicity_values <- function(data) {
 }
 
 
-ethnicity_characteristics_group <- function(data) {
+ethnicity_characteristic_group <- function(data) {
   # First find any ethnicity type columns that don't have the standard col_names
   ethnicity_standard_characteristics <- c("Ethnicity Major", "Ethnicity Minor", "Ethnicity Detailed", "Minority Ethnic")
   if ("characteristic_group" %in% tolower(colnames(data))) {
     ethnicity_chargroups <- data %>%
-      select(characteristics_group) %>%
-      filter(grepl("ethnic", tolower(characteristics_group))) %>%
+      select(characteristic_group) %>%
+      filter(grepl("ethnic", tolower(characteristic_group))) %>%
       distinct() %>%
-      filter(!grepl(paste(ethnicity_standard_characteristics, collapse = "|"), characteristics_group)) %>%
-      pull(characteristics_group)
+      filter(!grepl(paste(ethnicity_standard_characteristics, collapse = "|"), characteristic_group)) %>%
+      pull(characteristic_group)
     if (length(ethnicity_chargroups) == 0) {
       output <- list(
         "message" = "No ethnicity header issues found.",
@@ -2683,19 +2683,19 @@ ethnicity_characteristics_group <- function(data) {
   return(output)
 }
 
-ethnicity_characteristics_values <- function(data) {
+ethnicity_characteristic_values <- function(data) {
   # First find any ethnicity type columns that don't have the standard col_names
-  if ("characteristics_group" %in% tolower(colnames(data)) & "characteristics" %in% tolower(colnames(data))) {
-    ethnicity_nonstabdard <- data %>%
-      select(characteristics_group, characteristics) %>%
-      filter(grepl("ethnic", tolower(characteristics_group))) %>%
+  if ("characteristic_group" %in% tolower(colnames(data)) & "characteristic" %in% tolower(colnames(data))) {
+    ethnicity_nonstandard <- data %>%
+      select(characteristic_group, characteristic) %>%
+      filter(grepl("ethnic", tolower(characteristic_group))) %>%
       distinct() %>%
       filter(!grepl(paste(paste(ethnicity_standard_values$ethnicity_major,
         ethnicity_standard_values$ethnicity_minor,
         sep = ", "
-      ), collapse = "|"), characteristics)) %>%
-      pull(characteristics) %>%
-      distinct()
+      ), collapse = "|"), characteristic)) %>%
+      pull(characteristic) %>%
+      unique()
     if (length(ethnicity_nonstandard) == 0) {
       output <- list(
         "message" = "No ethnicity entry issues found.",
