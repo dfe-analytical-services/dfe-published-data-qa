@@ -56,7 +56,7 @@ mainTests <- function(data_character, meta_character, datafile, metafile) {
       indicator_unit_validation(metafile), # active test
       indicator_dp(metafile), # active test
       indicator_dp_validation(metafile), # active test
-      indicator_dp_completed(metafile) # active test
+      indicator_dp_completed(metafile), # active test
       ethnicity_headers(metafile), # active test
       ethnicity_values(datafile), # active test
       ethnicity_characteristics_group(datafile), # active test
