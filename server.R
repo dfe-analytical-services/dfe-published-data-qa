@@ -1,5 +1,4 @@
 server <- function(input, output, session) {
-
   # Loading screen ----------------------------------------------------------------------------
 
   hide(id = "loading-content", anim = TRUE, animType = "fade")
@@ -104,7 +103,6 @@ server <- function(input, output, session) {
           values$proceed_with_screening <- x
         } else {
           if (x == FALSE) {
-
             # Clear uploaded files (well, partly)
             shinyjs::reset("datafile")
             shinyjs::reset("metafile")
@@ -128,7 +126,6 @@ server <- function(input, output, session) {
   observeEvent(input$screenbutton | values$proceed_with_screening,
     {
       if (input$screenbutton == 0 && is.null(values$proceed_with_screening)) {
-
         # This prevents it running if no button was pressed to trigger it, required due to `ignoreInit = TRUE`
         return()
       }
@@ -156,7 +153,6 @@ server <- function(input, output, session) {
       # File info ---------------------------------------------------------------------------------------------------------
 
       isolate({
-
         # Output the file names
         output$datafilename <- renderText({
           paste0("Data - ", inputData$name)
@@ -475,7 +471,6 @@ server <- function(input, output, session) {
         # File previews ----------------------------------------------------------------
 
         if (failed_tests == 0) {
-
           # Set striping to be "off" for data tables
           rowCallback <- c(
             "function(row, data, num, index){",
@@ -1108,10 +1103,6 @@ server <- function(input, output, session) {
               left_join(suppress_count) %>%
               mutate_all(~ replace(., is.na(.), 0))
 
-            output$suppressed_cell_count <- renderUI({
-              DTOutput("suppressed_cell_count_table", width = "60%") %>% withSpinner()
-            })
-
             output$suppressed_cell_count_table <- DT::renderDT({
               datatable(suppress_count,
                 rownames = FALSE,
@@ -1177,7 +1168,6 @@ server <- function(input, output, session) {
   observeEvent(input$resetbutton,
     {
       if (values$environment == "shinyapps") {
-
         # Completely reset the session, reload the app.
         # Required as the warning modal stops working after a normal reset
         session$reload()

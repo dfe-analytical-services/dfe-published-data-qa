@@ -9,7 +9,6 @@
 # ---------- Lines to use to profile specific R code (currently laid out for a function against a refactored version)
 
 profvis({
-
   # data <- fread("c:/R_Projects/dfe-published-data-qa/tests/shinytest/test-data/passes_everything.csv", encoding = "UTF-8", colClasses = c("character"), na.strings = NULL)
   # meta <- fread("c:/R_Projects/dfe-published-data-qa/tests/shinytest/test-data/passes_everything.meta.csv", encoding = "UTF-8", colClasses = c("character"), na.strings = NULL)
 

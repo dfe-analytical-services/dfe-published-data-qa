@@ -2,22 +2,23 @@
 # File validation functions
 
 fileValidation <- function(datafilename, metafilename, dataseparator, metaseparator, datafile, metafile) {
-  as_tibble(t(rbind(cbind(
-    data_filename_spaces(datafilename), # active test
-    meta_filename_spaces(metafilename), # active test
-    data_filename_special_characters(datafilename), # active test
-    meta_filename_special_characters(metafilename), # active test
-    naming_convention(datafilename, metafilename), # active test
-    rows_to_cols(datafile, metafile), # active test
-    file_separator(dataseparator, metaseparator), # active test
-    data_empty_rows(datafile), # active test
-    meta_empty_rows(metafile), # active test
-    data_empty_cols(datafile), # active test
-    data_mandatory_cols(datafile), # active test
-    meta_mandatory_cols(metafile) # active test
-  ),
-  "stage" = "fileValidation",
-  "test" = c(activeTests$`R/fileValidation.r`)
+  as_tibble(t(rbind(
+    cbind(
+      data_filename_spaces(datafilename), # active test
+      meta_filename_spaces(metafilename), # active test
+      data_filename_special_characters(datafilename), # active test
+      meta_filename_special_characters(metafilename), # active test
+      naming_convention(datafilename, metafilename), # active test
+      rows_to_cols(datafile, metafile), # active test
+      file_separator(dataseparator, metaseparator), # active test
+      data_empty_rows(datafile), # active test
+      meta_empty_rows(metafile), # active test
+      data_empty_cols(datafile), # active test
+      data_mandatory_cols(datafile), # active test
+      meta_mandatory_cols(metafile) # active test
+    ),
+    "stage" = "fileValidation",
+    "test" = c(activeTests$`R/fileValidation.r`)
   )))
 }
 
@@ -145,7 +146,6 @@ naming_convention <- function(data, meta) {
 # rows in meta < cols in data file
 
 rows_to_cols <- function(data, meta) {
-
   # 5 is the number of mandatory observational unit columns, so every data file should have at least 5 columns not included in the metadata
 
   data_cols <- ncol(data) - 5

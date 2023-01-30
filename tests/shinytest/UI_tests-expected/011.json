@@ -80,9 +80,9 @@
         },
         {
           "name": "dt-core-bootstrap",
-          "version": "1.11.3",
+          "version": "1.12.1",
           "src": {
-            "href": "dt-core-bootstrap-1.11.3"
+            "href": "dt-core-bootstrap-1.12.1"
           },
           "meta": null,
           "script": [
@@ -181,9 +181,9 @@
         },
         {
           "name": "dt-core-bootstrap",
-          "version": "1.11.3",
+          "version": "1.12.1",
           "src": {
-            "href": "dt-core-bootstrap-1.11.3"
+            "href": "dt-core-bootstrap-1.12.1"
           },
           "meta": null,
           "script": [
