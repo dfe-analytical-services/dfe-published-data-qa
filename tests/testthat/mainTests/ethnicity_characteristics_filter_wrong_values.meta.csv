@@ -1,0 +1,4 @@
+col_name,col_type,label,indicator_grouping,indicator_unit,indicator_dp,filter_hint,filter_grouping_column
+characteristic,Filter,Ethnicity Minor,,,,Characteristics filter,characteristic_group
+full_time_equivalent,Indicator,Full time equivalent,Pupil full time equivalent,,2,,
+headcount,Indicator,Headcount,Pupil counts,,0,,

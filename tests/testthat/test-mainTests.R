@@ -357,3 +357,69 @@ test_that("indicator_dp_negative", {
 test_that("indicator_dp_nonInteger", {
   expect_equal(testIndividualTestSeparate(paste0(pathStart, "indicator_dp_nonInteger.csv"), paste0(pathStart, "indicator_dp_nonInteger.meta.csv"), "indicator_dp_validation"), "FAIL")
 })
+
+test_that("ethnicity_headers", {
+  expect_equal(
+    testIndividualTestSeparate(
+      paste0(pathStart, "ethnicity_wrong_headers.csv"),
+      paste0(pathStart, "ethnicity_wrong_headers.meta.csv"),
+      "ethnicity_headers"
+    ),
+    "FAIL"
+  )
+})
+
+test_that("ethnicity_values", {
+  expect_equal(
+    testIndividualTestSeparate(
+      paste0(pathStart, "ethnicity_value_advisory.csv"),
+      paste0(pathStart, "ethnicity_value_advisory.meta.csv"),
+      "ethnicity_values"
+    ),
+    "ADVISORY"
+  )
+})
+
+test_that("ethnicity_headers", {
+  expect_equal(
+    testIndividualTestSeparate(
+      paste0(pathStart, "ethnicity_meets_standards.csv"),
+      paste0(pathStart, "ethnicity_meets_standards.meta.csv"),
+      "ethnicity_headers"
+    ),
+    "PASS"
+  )
+})
+
+test_that("ethnicity_values", {
+  expect_equal(
+    testIndividualTestSeparate(
+      paste0(pathStart, "ethnicity_meets_standards.csv"),
+      paste0(pathStart, "ethnicity_meets_standards.meta.csv"),
+      "ethnicity_values"
+    ),
+    "PASS"
+  )
+})
+
+test_that("ethnicity_characteristic_group", {
+  expect_equal(
+    testIndividualTestSeparate(
+      paste0(pathStart, "ethnicity_characteristics_filter_wrong_group_and_values.csv"),
+      paste0(pathStart, "ethnicity_characteristics_filter_wrong_group_and_values.meta.csv"),
+      "ethnicity_characteristic_group"
+    ),
+    "FAIL"
+  )
+})
+
+test_that("ethnicity_characteristic_values", {
+  expect_equal(
+    testIndividualTestSeparate(
+      paste0(pathStart, "ethnicity_characteristics_filter_wrong_values.csv"),
+      paste0(pathStart, "ethnicity_characteristics_filter_wrong_values.meta.csv"),
+      "ethnicity_characteristic_values"
+    ),
+    "ADVISORY"
+  )
+})
