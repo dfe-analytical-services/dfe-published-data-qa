@@ -1,0 +1,3 @@
+col_name,col_type,label,indicator_grouping,indicator_unit,indicator_dp,filter_hint,filter_grouping_column
+ethnicity_major,Filter,Ethnicity Major,,,,Filter by pupil ethnicity,
+headcount,Indicator,Headcount,Pupil counts,,0,,

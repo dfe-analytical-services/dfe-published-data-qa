@@ -1491,7 +1491,7 @@
       "Source": "Repository",
       "Repository": "CRAN",
       "Hash": "f5baec54606751aa53ac9c0e05848ed6",
-      "Requirements": []
+    "Requirements": []
     },
     "xtable": {
       "Package": "xtable",
