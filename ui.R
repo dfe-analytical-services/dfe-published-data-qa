@@ -3,7 +3,8 @@ fluidPage(
     tags$link(
     rel = "shortcut icon",
     href = "screener_favicon.png"
-    )
+    ),
+    tags$title("DfE Data Screener")
   ),
   
   
@@ -43,7 +44,7 @@ fluidPage(
 
       titlePanel(
         div(HTML("DfE published data QA <h4>QA your data files before uploading to Explore Education Statistics for publication</h4>")), 
-        windowTitle = "DfE data QA"),
+        ),
 
       # Initial guidance text -----------------------------------------------------------------------------------
 
