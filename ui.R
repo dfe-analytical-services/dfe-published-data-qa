@@ -1,10 +1,16 @@
 fluidPage(
-
+  title = tags$head(
+    tags$link(
+    rel = "shortcut icon",
+    href = "screener_favicon.png"
+    )
+  ),
+  
+  
   # Global ui calls and settings ------------------------------------------------------------------------------------
   theme = "acalat_theme.css",
   useShinyjs(),
   shinyFeedback::useShinyFeedback(),
-
   # options(shiny.reactlog = TRUE),
 
   inlineCSS(appLoadingCSS), # set in global.r
@@ -35,7 +41,9 @@ fluidPage(
 
       # Application title -----------------------------------------------------------------------------------
 
-      titlePanel(div(HTML("DfE published data QA <h4>QA your data files before uploading to Explore Education Statistics for publication</h4>")), windowTitle = "DfE data QA"),
+      titlePanel(
+        div(HTML("DfE published data QA <h4>QA your data files before uploading to Explore Education Statistics for publication</h4>")), 
+        windowTitle = "DfE data QA"),
 
       # Initial guidance text -----------------------------------------------------------------------------------
 
