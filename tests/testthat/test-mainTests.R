@@ -423,4 +423,3 @@ test_that("ethnicity_characteristic_values", {
     "ADVISORY"
   )
 })
-
