@@ -1,13 +1,13 @@
 fluidPage(
   title = tags$head(
     tags$link(
-    rel = "shortcut icon",
-    href = "screener_favicon.png"
+      rel = "shortcut icon",
+      href = "screener_favicon.png"
     ),
     tags$title("DfE Data Screener")
   ),
-  
-  
+
+
   # Global ui calls and settings ------------------------------------------------------------------------------------
   theme = "acalat_theme.css",
   useShinyjs(),
@@ -43,8 +43,8 @@ fluidPage(
       # Application title -----------------------------------------------------------------------------------
 
       titlePanel(
-        div(HTML("DfE published data QA <h4>QA your data files before uploading to Explore Education Statistics for publication</h4>")), 
-        ),
+        div(HTML("DfE published data QA <h4>QA your data files before uploading to Explore Education Statistics for publication</h4>")),
+      ),
 
       # Initial guidance text -----------------------------------------------------------------------------------
 
