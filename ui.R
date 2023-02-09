@@ -11,6 +11,7 @@ fluidPage(
   # Global ui calls and settings ------------------------------------------------------------------------------------
   theme = "acalat_theme.css",
   useShinyjs(),
+  tags$head(includeHTML(("google-analytics.html"))),
   shinyFeedback::useShinyFeedback(),
   # options(shiny.reactlog = TRUE),
 
