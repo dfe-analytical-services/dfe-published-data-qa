@@ -6,7 +6,7 @@ mainTests <- function(data_character, meta_character, datafile, metafile) {
     cbind(
       variable_snake_case(datafile), # active test
       variable_start_letter(datafile), # active test
-      variable_characteristic(metafile), #active test
+      variable_characteristic(metafile), # active test
       duplicate_rows(datafile, metafile), # active test
       data_to_meta_crosscheck(datafile, metafile), # active test
       total(datafile, metafile), # active test
@@ -145,6 +145,7 @@ variable_characteristic <- function(meta) {
       output <- list(
         "message" = paste0("Neither characteristic nor characteristic_group were found as listed filters in the meta data file."),
         "result" = "PASS"
+      )
   }
   
   return(output)
@@ -190,7 +191,7 @@ duplicate_rows <- function(data, meta) {
       filter(geographic_level != geography_matrix[14, 1]) %>%
       filter(geographic_level != geography_matrix[15, 1]) %>%
       filter(geographic_level != geography_matrix[16, 1]) %>%
-      select(present_obUnits_filters) %>%
+      select(all_of(present_obUnits_filters)) %>%
       get_dupes())
 
     if (nrow(dupes) > 0) {
