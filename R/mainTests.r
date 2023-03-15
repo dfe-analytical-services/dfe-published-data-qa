@@ -6,6 +6,7 @@ mainTests <- function(data_character, meta_character, datafile, metafile) {
     cbind(
       variable_snake_case(datafile), # active test
       variable_start_letter(datafile), # active test
+      variable_characteristic(metafile), #active test
       duplicate_rows(datafile, metafile), # active test
       data_to_meta_crosscheck(datafile, metafile), # active test
       total(datafile, metafile), # active test
