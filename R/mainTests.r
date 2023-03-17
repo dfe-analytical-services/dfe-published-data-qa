@@ -135,21 +135,22 @@ variable_start_letter <- function(data) {
 # Checking datafile for presence of characteristic_group or characteristic filter fields
 
 variable_characteristic <- function(meta) {
-
-  if ('characteristic' %in% meta$colname | 'characteristic_group' %in% meta$colname | 'characteristic_group' %in% meta$filter_grouping_column) {
+  if ("characteristic" %in% meta$colname | "characteristic_group" %in% meta$colname | "characteristic_group" %in% meta$filter_grouping_column) {
     output <- list(
-      "message" = paste("The fields characteristic and/or characteristic_group have been included in the data.",
-                        "These are not recommended for use with the EES Table Tool.",
-                        "Please refer to the <a href='https://rsconnect/rsc/stats-production-guidance/ud.html#Introduction_to_filters'>guidance pages on filters</a>."),
+      "message" = paste(
+        "The fields characteristic and/or characteristic_group have been included in the data.",
+        "These are not recommended for use with the EES Table Tool.",
+        "Please refer to the <a href='https://rsconnect/rsc/stats-production-guidance/ud.html#Introduction_to_filters'>guidance pages on filters</a>."
+      ),
       "result" = "ADVISORY"
     )
   } else {
-      output <- list(
-        "message" = paste0("Neither characteristic nor characteristic_group were found as listed filters in the meta data file."),
-        "result" = "PASS"
-      )
+    output <- list(
+      "message" = paste0("Neither characteristic nor characteristic_group were found as listed filters in the meta data file."),
+      "result" = "PASS"
+    )
   }
-  
+
   return(output)
 }
 
