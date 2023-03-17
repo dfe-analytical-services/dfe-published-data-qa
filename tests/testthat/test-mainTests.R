@@ -14,6 +14,12 @@ test_that("variable_start_letter", {
   expect_equal(testIndividualTest(pathStart, "variable_snake_case"), "ADVISORY") # intentionally sharing test data with the above test
 })
 
+# variable_characteristic -------------------------------------------------------------------------------------------------------
+
+test_that("variable_characteristic", {
+  expect_equal(testIndividualTest(pathStart, "variable_characteristic"), "ADVISORY") # intentionally sharing test data with the above test
+})
+
 # duplicate_rows -------------------------------------------------------------------------------------------------------
 
 test_that("duplicate_rows", {
