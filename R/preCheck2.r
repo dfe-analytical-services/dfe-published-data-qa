@@ -36,7 +36,7 @@ time_identifier_mix <- function(data) {
 
   if (any(is.na(factor(unique(data$time_identifier), base_level))) == TRUE) {
     output <- list(
-      "message" = paste0("The datafile is mixing incompatable time identifiers. <br> - Allowable values with '", paste(base_identifier), "' present, are: '", paste(base_level, sep = "', '"), "'. <br> - See the <a href='https://rsconnect/rsc/stats-production-guidance/ud.html#list_of_allowable_time_values' target='_blank'>guidance on time values</a> if you are unsure."),
+      "message" = paste0("The datafile is mixing incompatable time identifiers. <br> - Allowable values with '", paste(base_identifier), "' present, are: '", paste(base_level, collapse = "', '"), "'. <br> - See the <a href='https://rsconnect/rsc/stats-production-guidance/ud.html#list_of_allowable_time_values' target='_blank'>guidance on time values</a> if you are unsure."),
       "result" = "FAIL"
     )
   } else {
