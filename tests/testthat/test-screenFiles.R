@@ -175,6 +175,13 @@ test_that("sch_filter_group", {
   expect_equal(screeningOutput$results %>% filter(result == "FAIL") %>% nrow(), 0)
 })
 
+test_that("sch_with_trust_cols", {
+  screeningOutput <- testOther("../../tests/testthat/sch_prov/school_with_trust.csv")
+
+  expect_equal(screeningOutput$results %>% filter(test == "other_geography_duplicates") %>% pull(result) %>% unlist(use.names = FALSE), "IGNORE")
+  expect_equal(screeningOutput$results %>% filter(test == "other_geography_code_duplicates") %>% pull(result) %>% unlist(use.names = FALSE), "IGNORE")
+})
+
 test_that("not_sch_but_one_filter", {
   screeningOutput <- testOther("../../tests/testthat/sch_prov/not_sch_but_one_filter.csv")
 

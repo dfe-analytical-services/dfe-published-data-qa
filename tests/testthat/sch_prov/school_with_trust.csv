@@ -1,0 +1,7 @@
+time_identifier,time_period,geographic_level,country_code,country_name,region_code,region_name,old_la_code,new_la_code,la_name,estab,school_laestab,school_urn,school_name,trust_name,academy_type,academy_open_date,school_type,headcount,perm_excl,perm_excl_rate,suspension,susp_rate,one_plus_susp,one_plus_susp_rate
+Spring term,202122,School,E92000001,England,E13000001,Inner London,201,E09000001,City of London,3614,2013614,100000,The Aldgate School,z,z,z,State-funded primary,277,0,0,0,0,0,0
+Autumn term,202122,School,E92000001,England,E13000001,Inner London,201,E09000001,City of London,3614,2013614,100000,The Aldgate School,z,z,z,State-funded primary,269,0,0,0,0,0,0
+Autumn term,202122,School,E92000001,England,E13000001,Inner London,202,E09000007,Camden,2000,2022000,136807,St Luke's Church of England School,ST LUKE'S CHURCH OF ENGLAND SCHOOL,z,z,State-funded primary,101,0,0,0,0,0,0
+Spring term,202122,School,E92000001,England,E13000001,Inner London,202,E09000007,Camden,2000,2022000,136807,St Luke's Church of England School,ST LUKE'S CHURCH OF ENGLAND SCHOOL,z,z,State-funded primary,102,0,0,0,0,0,0
+Autumn term,202122,School,E92000001,England,E13000001,Inner London,202,E09000007,Camden,2001,2022001,139837,Abacus Belsize Primary School,ANTHEM SCHOOLS TRUST,z,z,State-funded secondary,156,0,0,0,0,0,0
+Spring term,202122,School,E92000001,England,E13000001,Inner London,202,E09000007,Camden,2001,2022001,139837,Abacus Belsize Primary School,ANTHEM SCHOOLS TRUST,z,z,State-funded secondary,163,0,0,0,0,0,0
