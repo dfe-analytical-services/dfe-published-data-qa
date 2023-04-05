@@ -202,7 +202,7 @@ test_that("other_geography_duplicates", {
 
 # other_geography_code_duplicates -------------------------------------------------------------------------------------------------------
 
-test_that("other_geography_duplicates", {
+test_that("other_geography_code_duplicates", {
   expect_equal(testIndividualTest(pathStart, "other_geography_code_duplicates"), "FAIL")
 })
 
