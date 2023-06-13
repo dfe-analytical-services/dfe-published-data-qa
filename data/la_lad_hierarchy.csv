@@ -171,7 +171,7 @@ E08000003,Manchester,,,live,E08000003,Manchester,352
 E07000174,Mansfield,,,live,E10000024,Nottinghamshire,891
 E06000035,Medway,,,live,E06000035,Medway,887
 E07000133,Melton,,,live,E10000018,Leicestershire,855
-E07000187,Mendip,,,live,E10000027,Somerset,933
+E07000187,Mendip,,2023-03-31,terminated,E10000027,Somerset,933
 E09000024,Merton,,,live,E09000024,Merton,315
 E07000042,Mid Devon,,,live,E10000008,Devon,878
 E07000203,Mid Suffolk,,,live,E10000029,Suffolk,935
@@ -235,7 +235,7 @@ E07000167,Ryedale,,,live,E10000023,North Yorkshire,815
 E08000006,Salford,,,live,E08000006,Salford,355
 E08000028,Sandwell,,,live,E08000028,Sandwell,333
 E07000168,Scarborough,,,live,E10000023,North Yorkshire,815
-E07000188,Sedgemoor,,,live,E10000027,Somerset,933
+E07000188,Sedgemoor,,2023-03-31,terminated,E10000027,Somerset,933
 E08000014,Sefton,,,live,E08000014,Sefton,343
 E07000169,Selby,,,live,E10000023,North Yorkshire,815
 E07000111,Sevenoaks,,,live,E10000016,Kent,886
@@ -244,7 +244,8 @@ E07000112,Shepway,,2017-12-01,terminated,E10000016,Kent,886
 E06000051,Shropshire,,,live,E06000051,Shropshire,893
 E06000039,Slough,,,live,E06000039,Slough,871
 E08000029,Solihull,,,live,E08000029,Solihull,334
-E07000246,Somerset West and Taunton,2019-12-01,,live,E10000027,Somerset,933
+E07000246,Somerset West and Taunton,2019-12-01,2023-03-31,terminated,E10000027,Somerset,933
+E06000066,Somerset,2023-04-01,,live,E06000066,Somerset,933
 E07000006,South Bucks,,2019-12-01,terminated,E10000002,Buckinghamshire,825
 E07000012,South Cambridgeshire,,,live,E10000003,Cambridgeshire,873
 E07000039,South Derbyshire,,,live,E10000007,Derbyshire,830
@@ -257,7 +258,7 @@ E07000149,South Norfolk,,,live,E10000020,Norfolk,926
 E07000155,South Northamptonshire,,2020-04-01,terminated,E10000021,Northamptonshire,928
 E07000179,South Oxfordshire,,,live,E10000025,Oxfordshire,931
 E07000126,South Ribble,,,live,E10000017,Lancashire,888
-E07000189,South Somerset,,,live,E10000027,Somerset,933
+E07000189,South Somerset,,2023-03-31,terminated,E10000027,Somerset,933
 E07000196,South Staffordshire,,,live,E10000028,Staffordshire,860
 E08000023,South Tyneside,,,live,E08000023,South Tyneside,393
 E06000045,Southampton,,,live,E06000045,Southampton,852
