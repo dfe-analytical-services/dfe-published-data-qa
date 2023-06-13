@@ -20,16 +20,18 @@ E07000011,Huntingdonshire,,,live
 E07000012,South Cambridgeshire,,,live
 E06000010,"Kingston upon Hull, City of",,,live
 E06000011,East Riding of Yorkshire,,,live
-E07000026,Allerdale,,,live
-E07000027,Barrow-in-Furness,,,live
+E06000063,Cumberland,2023-04-01,,live
+E06000064,Westmorland and Furness,2023-04-01,,live
+E07000026,Allerdale,,2023-03-31,terminated
+E07000027,Barrow-in-Furness,,2023-03-31,terminated
 E06000012,North East Lincolnshire,,,live
 E06000013,North Lincolnshire,,,live
-E07000028,Carlisle,,,live
-E07000029,Copeland,,,live
+E07000028,Carlisle,,2023-03-31,terminated
+E07000029,Copeland,,2023-03-31,terminated
 E06000014,York,,,live
 E06000015,Derby,,,live
-E07000030,Eden,,,live
-E07000031,South Lakeland,,,live
+E07000030,Eden,,2023-03-31,terminated
+E07000031,South Lakeland,,2023-03-31,terminated
 E06000016,Leicester,,,live
 E06000017,Rutland,,,live
 E07000032,Amber Valley,,,live
