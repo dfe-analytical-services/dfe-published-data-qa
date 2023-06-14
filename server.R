@@ -717,25 +717,40 @@ server <- function(input, output, session) {
           # Show summary stats table for an indicator
           showsumstats <- function(parameter, geog_parameter) {
             args <- expand.grid(ind = parameter, geog = geog_parameter, stringsAsFactors = FALSE)
-
             sumtable <- function(args) {
-              y <- eval(parse(text = paste0("data$mainFile %>% filter(geographic_level =='", args[2], "') %>%
-          mutate(across(all_of('", args[1], "'), na_if, '", gssNAvcode, "')) %>%
-          mutate(across(all_of('", args[1], "'), na_if, '", gssNApcode, "')) %>%
-          mutate(across(all_of('", args[1], "'), na_if, '", gssNAvcode, "')) %>%
-          mutate(across(all_of('", args[1], "'), na_if, '", gssRndcode, "')) %>%
-          mutate(across(all_of('", args[1], "'), as.numeric)) %>%
-          select(time_period,'", args[1], "') %>%
-          group_by(time_period) %>%
-          summarise(across(everything(), list(min = ~ min(.x, na.rm=TRUE),
-                                              max = ~ max(.x, na.rm=TRUE),
-                                              average = ~ round(mean(.x, na.rm=TRUE),1),
-                                              count = ~ n(),
-                                              suppressed = ~ sum(is.na(.x))))) %>%
-          pivot_longer(!time_period, names_to = c('indicator', 'measure'), names_pattern = '(.*)_(.*)') %>%
-          pivot_wider(names_from = 'time_period') %>%
-          mutate(geographic_level ='", args[2], "', .before = indicator) %>%
-          mutate(Change = as.character(0))")))
+              indicators <- args[[1]]
+              geographies <- args[[2]]
+              y <- data$mainFile %>%
+                filter(geographic_level %in% geographies) %>%
+                mutate(
+                  across(get(indicators), na_if, gssNAvcode),
+                  across(get(indicators), na_if, gssNApcode),
+                  across(get(indicators), na_if, gssSupcode),
+                  across(get(indicators), na_if, gssRndcode),
+                  across(get(indicators), as.numeric)
+                ) %>%
+                select(time_period, indicators) %>%
+                group_by(time_period) %>%
+                summarise(
+                  across(
+                    everything(),
+                    list(
+                      min = ~ min(.x, na.rm = TRUE),
+                      max = ~ max(.x, na.rm = TRUE),
+                      average = ~ round(mean(.x, na.rm = TRUE), 1),
+                      count = ~ n(),
+                      suppressed = ~ sum(is.na(.x))
+                    )
+                  )
+                ) %>%
+                pivot_longer(
+                  !time_period,
+                  names_to = c("indicator", "measure"),
+                  names_pattern = "(.*)_(.*)"
+                ) %>%
+                pivot_wider(names_from = "time_period") %>%
+                mutate(geographic_level = geographies, .before = indicator) %>%
+                mutate(Change = as.character(0))
 
               for (i in 1:nrow(y)) {
                 y[i, ncol(y)] <- (paste(y[i, 4:(ncol(y) - 1)], sep = "", collapse = ","))
@@ -981,19 +996,28 @@ server <- function(input, output, session) {
                 filter(col_type == "Filter") %>%
                 pull(col_name)
 
-              cf <- paste(pf, collapse = ", ")
-
               ii <- input$geog_indicator_parameter # "number_of_pupils"
-
-              eval(parse(text = paste0("data$mainFile %>%
-                            mutate(across(all_of('", ii, "'), na_if, '", gssSupcode, "')) %>%
-                            mutate(across(all_of('", ii, "'), na_if, '", gssNApcode, "')) %>%
-                            mutate(across(all_of('", ii, "'), na_if, '", gssNAvcode, "')) %>%
-                            mutate(across(all_of('", ii, "'), na_if, '", gssRndcode, "')) %>%
-                            mutate(across(all_of('", ii, "'), as.numeric)) %>%
-                            group_by(time_period,geographic_level,", cf, ") %>%
-                            summarise(aggregate_number = sum(", ii, ")) %>%
-                            spread(key = geographic_level, value = aggregate_number)")))
+              print(pf)
+              print(ii)              
+              y <- data$mainFile %>%
+                mutate(
+                  across(get(ii), na_if, gssNAvcode),
+                  across(get(ii), na_if, gssNApcode),
+                  across(get(ii), na_if, gssSupcode),
+                  across(get(ii), na_if, gssNAvcode),
+                  across(get(ii), as.numeric)
+                )
+              print(y)
+              y <- y %>%
+                summarise(
+                  across(all_of(ii),sum),
+                  .by=c(time_period,geographic_level,all_of(pf))
+                  )
+              print(y)
+              y <- y %>%
+                spread(key = geographic_level, value = ii)
+              print(y)
+              return(y)
             }
           })
 
