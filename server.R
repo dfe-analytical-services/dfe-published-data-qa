@@ -998,7 +998,7 @@ server <- function(input, output, session) {
 
               ii <- input$geog_indicator_parameter # "number_of_pupils"
               print(pf)
-              print(ii)              
+              print(ii)
               y <- data$mainFile %>%
                 mutate(
                   across(get(ii), na_if, gssNAvcode),
@@ -1010,9 +1010,9 @@ server <- function(input, output, session) {
               print(y)
               y <- y %>%
                 summarise(
-                  across(all_of(ii),sum),
-                  .by=c(time_period,geographic_level,all_of(pf))
-                  )
+                  across(all_of(ii), sum),
+                  .by = c(time_period, geographic_level, all_of(pf))
+                )
               print(y)
               y <- y %>%
                 spread(key = geographic_level, value = ii)
