@@ -20,16 +20,18 @@ E07000011,Huntingdonshire,,,live
 E07000012,South Cambridgeshire,,,live
 E06000010,"Kingston upon Hull, City of",,,live
 E06000011,East Riding of Yorkshire,,,live
-E07000026,Allerdale,,,live
-E07000027,Barrow-in-Furness,,,live
+E06000063,Cumberland,2023-04-01,,live
+E06000064,Westmorland and Furness,2023-04-01,,live
+E07000026,Allerdale,,2023-03-31,terminated
+E07000027,Barrow-in-Furness,,2023-03-31,terminated
 E06000012,North East Lincolnshire,,,live
 E06000013,North Lincolnshire,,,live
-E07000028,Carlisle,,,live
-E07000029,Copeland,,,live
+E07000028,Carlisle,,2023-03-31,terminated
+E07000029,Copeland,,2023-03-31,terminated
 E06000014,York,,,live
 E06000015,Derby,,,live
-E07000030,Eden,,,live
-E07000031,South Lakeland,,,live
+E07000030,Eden,,2023-03-31,terminated
+E07000031,South Lakeland,,2023-03-31,terminated
 E06000016,Leicester,,,live
 E06000017,Rutland,,,live
 E07000032,Amber Valley,,,live
@@ -186,7 +188,7 @@ E07000243,Stevenage,2015-04-01,,live
 E07000244,East Suffolk,2019-04-01,,live
 E07000245,West Suffolk,2019-04-01,,live
 E07000142,West Lindsey,,,live
-E07000246,Somerset West and Taunton,2019-04-01,,live
+E07000246,Somerset West and Taunton,2019-04-01,2023-03-31,terminated
 E07000143,Breckland,,,live
 E08000001,Bolton,,,live
 E07000144,Broadland,,,live
@@ -201,19 +203,19 @@ E07000148,Norwich,,,live
 E08000006,Salford,,,live
 E07000149,South Norfolk,,,live
 E08000007,Stockport,,,live
-E07000163,Craven,,,live
+E07000163,Craven,,2023-03-31,terminated
 E08000008,Tameside,,,live
-E07000164,Hambleton,,,live
+E07000164,Hambleton,,2023-03-31,terminated
 E08000009,Trafford,,,live
-E07000165,Harrogate,,,live
+E07000165,Harrogate,,2023-03-31,terminated
 E08000010,Wigan,,,live
-E07000166,Richmondshire,,,live
+E07000166,Richmondshire,,2023-03-31,terminated
 E08000011,Knowsley,,,live
-E07000167,Ryedale,,,live
+E07000167,Ryedale,,2023-03-31,terminated
 E08000012,Liverpool,,,live
-E07000168,Scarborough,,,live
+E07000168,Scarborough,,2023-03-31,terminated
 E08000013,St. Helens,,,live
-E07000169,Selby,,,live
+E07000169,Selby,,2023-03-31,terminated
 E08000014,Sefton,,,live
 E07000170,Ashfield,,,live
 E08000015,Wirral,,,live
@@ -230,9 +232,9 @@ E07000178,Oxford,,,live
 E07000179,South Oxfordshire,,,live
 E07000180,Vale of White Horse,,,live
 E07000181,West Oxfordshire,,,live
-E07000187,Mendip,,,live
-E07000188,Sedgemoor,,,live
-E07000189,South Somerset,,,live
+E07000187,Mendip,,2023-03-31,terminated
+E07000188,Sedgemoor,,2023-03-31,terminated
+E07000189,South Somerset,,2023-03-31,terminated
 E07000192,Cannock Chase,,,live
 E07000193,East Staffordshire,,,live
 E07000194,Lichfield,,,live
@@ -308,6 +310,8 @@ E09000030,Tower Hamlets,,,live
 E09000031,Waltham Forest,,,live
 E09000032,Wandsworth,,,live
 E09000033,Westminster,,,live
+E06000065,North Yorkshire,2023-04-01,,live
+E06000066,Somerset,2023-04-01,,live
 E07000150,Corby,,2020-12-01,terminated
 E07000151,Daventry,,2020-12-01,terminated
 E07000152,East Northamptonshire,,2020-12-01,terminated
