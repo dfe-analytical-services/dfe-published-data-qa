@@ -144,9 +144,9 @@
         },
         {
           "name": "dt-core-bootstrap",
-          "version": "1.12.1",
+          "version": "1.13.4",
           "src": {
-            "href": "dt-core-bootstrap-1.12.1"
+            "href": "dt-core-bootstrap-1.13.4"
           },
           "meta": null,
           "script": [
@@ -164,9 +164,9 @@
         },
         {
           "name": "dt-ext-buttons-bootstrap",
-          "version": "1.12.1",
+          "version": "1.13.4",
           "src": {
-            "href": "dt-ext-buttons-bootstrap-1.12.1"
+            "href": "dt-ext-buttons-bootstrap-1.13.4"
           },
           "meta": null,
           "script": [
@@ -366,9 +366,9 @@
         },
         {
           "name": "dt-core-bootstrap",
-          "version": "1.12.1",
+          "version": "1.13.4",
           "src": {
-            "href": "dt-core-bootstrap-1.12.1"
+            "href": "dt-core-bootstrap-1.13.4"
           },
           "meta": null,
           "script": [
@@ -386,9 +386,9 @@
         },
         {
           "name": "dt-ext-buttons-bootstrap",
-          "version": "1.12.1",
+          "version": "1.13.4",
           "src": {
-            "href": "dt-ext-buttons-bootstrap-1.12.1"
+            "href": "dt-ext-buttons-bootstrap-1.13.4"
           },
           "meta": null,
           "script": [

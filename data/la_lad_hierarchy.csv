@@ -1,6 +1,8 @@
 lad_code,lad_name,date_of_introduction,date_of_termination,status,new_la_code,la_name,old_la_code
 E07000223,Adur,,,live,E10000032,West Sussex,938
-E07000026,Allerdale,,,live,E10000006,Cumbria,909
+E06000063,Cumberland,2023-04-01,,live,E06000063,Cumberland,942
+E06000064,Westmorland and Furness,2023-04-01,,live,E06000064,Westmorland and Furness,943
+E07000026,Allerdale,,2023-03-31,terminated,E10000006,Cumbria,909
 E07000032,Amber Valley,,,live,E10000007,Derbyshire,830
 E07000224,Arun,,,live,E10000032,West Sussex,938
 E07000170,Ashfield,,,live,E10000024,Nottinghamshire,891
@@ -10,7 +12,7 @@ E07000200,Babergh,,,live,E10000029,Suffolk,935
 E09000002,Barking and Dagenham,,,live,E09000002,Barking and Dagenham,301
 E09000003,Barnet,,,live,E09000003,Barnet,302
 E08000016,Barnsley,,,live,E08000016,Barnsley,370
-E07000027,Barrow-in-Furness,,,live,E10000006,Cumbria,909
+E07000027,Barrow-in-Furness,,2023-03-31,terminated,E10000006,Cumbria,909
 E07000066,Basildon,,,live,E10000012,Essex,881
 E07000084,Basingstoke and Deane,,,live,E10000014,Hampshire,850
 E07000171,Bassetlaw,,,live,E10000024,Nottinghamshire,891
@@ -47,7 +49,7 @@ E07000008,Cambridge,,,live,E10000003,Cambridgeshire,873
 E09000007,Camden,,,live,E09000007,Camden,202
 E07000192,Cannock Chase,,,live,E10000028,Staffordshire,860
 E07000106,Canterbury,,,live,E10000016,Kent,886
-E07000028,Carlisle,,,live,E10000006,Cumbria,909
+E07000028,Carlisle,,2023-03-31,terminated,E10000006,Cumbria,909
 E07000069,Castle Point,,,live,E10000012,Essex,881
 E06000056,Central Bedfordshire,,,live,E06000056,Central Bedfordshire,823
 E07000130,Charnwood,,,live,E10000018,Leicestershire,855
@@ -63,7 +65,7 @@ E07000118,Chorley,,,live,E10000017,Lancashire,888
 E07000048,Christchurch,,2018-12-01,terminated,E10000009,Dorset,835
 E09000001,City of London,,,live,E09000001,City of London,201
 E07000071,Colchester,,,live,E10000012,Essex,881
-E07000029,Copeland,,,live,E10000006,Cumbria,909
+E07000029,Copeland,,2023-03-31,terminated,E10000006,Cumbria,909
 E07000150,Corby,,2020-04-01,terminated,E10000021,Northamptonshire,928
 E06000052,Cornwall,,,live,E06000052,Cornwall,908
 E07000079,Cotswold,,,live,E10000013,Gloucestershire,916
@@ -96,7 +98,7 @@ E07000193,East Staffordshire,,,live,E10000028,Staffordshire,860
 E07000244,East Suffolk,2019-12-01,,live,E10000029,Suffolk,935
 E07000061,Eastbourne,,,live,E10000011,East Sussex,845
 E07000086,Eastleigh,,,live,E10000014,Hampshire,850
-E07000030,Eden,,,live,E10000006,Cumbria,909
+E07000030,Eden,,2023-03-31,terminated,E10000006,Cumbria,909
 E07000207,Elmbridge,,,live,E10000030,Surrey,936
 E09000010,Enfield,,,live,E09000010,Enfield,308
 E07000072,Epping Forest,,,live,E10000012,Essex,881
@@ -169,7 +171,7 @@ E08000003,Manchester,,,live,E08000003,Manchester,352
 E07000174,Mansfield,,,live,E10000024,Nottinghamshire,891
 E06000035,Medway,,,live,E06000035,Medway,887
 E07000133,Melton,,,live,E10000018,Leicestershire,855
-E07000187,Mendip,,,live,E10000027,Somerset,933
+E07000187,Mendip,,2023-03-31,terminated,E10000027,Somerset,933
 E09000024,Merton,,,live,E09000024,Merton,315
 E07000042,Mid Devon,,,live,E10000008,Devon,878
 E07000203,Mid Suffolk,,,live,E10000029,Suffolk,935
@@ -233,7 +235,7 @@ E07000167,Ryedale,,,live,E10000023,North Yorkshire,815
 E08000006,Salford,,,live,E08000006,Salford,355
 E08000028,Sandwell,,,live,E08000028,Sandwell,333
 E07000168,Scarborough,,,live,E10000023,North Yorkshire,815
-E07000188,Sedgemoor,,,live,E10000027,Somerset,933
+E07000188,Sedgemoor,,2023-03-31,terminated,E10000027,Somerset,933
 E08000014,Sefton,,,live,E08000014,Sefton,343
 E07000169,Selby,,,live,E10000023,North Yorkshire,815
 E07000111,Sevenoaks,,,live,E10000016,Kent,886
@@ -242,7 +244,8 @@ E07000112,Shepway,,2017-12-01,terminated,E10000016,Kent,886
 E06000051,Shropshire,,,live,E06000051,Shropshire,893
 E06000039,Slough,,,live,E06000039,Slough,871
 E08000029,Solihull,,,live,E08000029,Solihull,334
-E07000246,Somerset West and Taunton,2019-12-01,,live,E10000027,Somerset,933
+E07000246,Somerset West and Taunton,2019-12-01,2023-03-31,terminated,E10000027,Somerset,933
+E06000066,Somerset,2023-04-01,,live,E06000066,Somerset,933
 E07000006,South Bucks,,2019-12-01,terminated,E10000002,Buckinghamshire,825
 E07000012,South Cambridgeshire,,,live,E10000003,Cambridgeshire,873
 E07000039,South Derbyshire,,,live,E10000007,Derbyshire,830
@@ -250,12 +253,12 @@ E06000025,South Gloucestershire,,,live,E06000025,South Gloucestershire,803
 E07000044,South Hams,,,live,E10000008,Devon,878
 E07000140,South Holland,,,live,E10000019,Lincolnshire,925
 E07000141,South Kesteven,,,live,E10000019,Lincolnshire,925
-E07000031,South Lakeland,,,live,E10000006,Cumbria,909
+E07000031,South Lakeland,,2023-03-31,terminated,E10000006,Cumbria,909
 E07000149,South Norfolk,,,live,E10000020,Norfolk,926
 E07000155,South Northamptonshire,,2020-04-01,terminated,E10000021,Northamptonshire,928
 E07000179,South Oxfordshire,,,live,E10000025,Oxfordshire,931
 E07000126,South Ribble,,,live,E10000017,Lancashire,888
-E07000189,South Somerset,,,live,E10000027,Somerset,933
+E07000189,South Somerset,,2023-03-31,terminated,E10000027,Somerset,933
 E07000196,South Staffordshire,,,live,E10000028,Staffordshire,860
 E08000023,South Tyneside,,,live,E08000023,South Tyneside,393
 E06000045,Southampton,,,live,E06000045,Southampton,852

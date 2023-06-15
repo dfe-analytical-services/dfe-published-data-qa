@@ -206,12 +206,6 @@ test_that("other_geography_code_duplicates", {
   expect_equal(testIndividualTest(pathStart, "other_geography_code_duplicates"), "FAIL")
 })
 
-# sch_prov_duplicates -------------------------------------------------------------------------------------------------------
-
-test_that("sch_prov_duplicates", {
-  expect_equal(testIndividualTest(pathStart, "sch_prov_duplicates"), "FAIL")
-})
-
 # na_geography -------------------------------------------------------------------------------------------------------
 
 test_that("na_geography", {

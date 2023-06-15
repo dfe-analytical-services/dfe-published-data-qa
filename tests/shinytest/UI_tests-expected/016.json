@@ -131,9 +131,9 @@
         },
         {
           "name": "dt-core-bootstrap",
-          "version": "1.12.1",
+          "version": "1.13.4",
           "src": {
-            "href": "dt-core-bootstrap-1.12.1"
+            "href": "dt-core-bootstrap-1.13.4"
           },
           "meta": null,
           "script": [
@@ -164,9 +164,9 @@
         },
         {
           "name": "htmlwidgets",
-          "version": "1.6.1",
+          "version": "1.6.2",
           "src": {
-            "href": "htmlwidgets-1.6.1"
+            "href": "htmlwidgets-1.6.2"
           },
           "meta": null,
           "script": "htmlwidgets.js",
@@ -334,9 +334,9 @@
         },
         {
           "name": "dt-core-bootstrap",
-          "version": "1.12.1",
+          "version": "1.13.4",
           "src": {
-            "href": "dt-core-bootstrap-1.12.1"
+            "href": "dt-core-bootstrap-1.13.4"
           },
           "meta": null,
           "script": [
@@ -367,9 +367,9 @@
         },
         {
           "name": "htmlwidgets",
-          "version": "1.6.1",
+          "version": "1.6.2",
           "src": {
-            "href": "htmlwidgets-1.6.1"
+            "href": "htmlwidgets-1.6.2"
           },
           "meta": null,
           "script": "htmlwidgets.js",
@@ -537,9 +537,9 @@
         },
         {
           "name": "dt-core-bootstrap",
-          "version": "1.12.1",
+          "version": "1.13.4",
           "src": {
-            "href": "dt-core-bootstrap-1.12.1"
+            "href": "dt-core-bootstrap-1.13.4"
           },
           "meta": null,
           "script": [
@@ -570,9 +570,9 @@
         },
         {
           "name": "htmlwidgets",
-          "version": "1.6.1",
+          "version": "1.6.2",
           "src": {
-            "href": "htmlwidgets-1.6.1"
+            "href": "htmlwidgets-1.6.2"
           },
           "meta": null,
           "script": "htmlwidgets.js",
@@ -740,9 +740,9 @@
         },
         {
           "name": "dt-core-bootstrap",
-          "version": "1.12.1",
+          "version": "1.13.4",
           "src": {
-            "href": "dt-core-bootstrap-1.12.1"
+            "href": "dt-core-bootstrap-1.13.4"
           },
           "meta": null,
           "script": [
@@ -773,9 +773,9 @@
         },
         {
           "name": "htmlwidgets",
-          "version": "1.6.1",
+          "version": "1.6.2",
           "src": {
-            "href": "htmlwidgets-1.6.1"
+            "href": "htmlwidgets-1.6.2"
           },
           "meta": null,
           "script": "htmlwidgets.js",
@@ -842,14 +842,14 @@
           [
             8,
             528,
-            95.9,
+            95.90000000000001,
             42,
             0
           ],
           [
             9,
             527,
-            95.6,
+            95.59999999999999,
             42,
             0
           ],
@@ -870,7 +870,7 @@
           [
             9,
             523,
-            96.1,
+            96.09999999999999,
             42,
             0
           ],
@@ -943,9 +943,9 @@
         },
         {
           "name": "dt-core-bootstrap",
-          "version": "1.12.1",
+          "version": "1.13.4",
           "src": {
-            "href": "dt-core-bootstrap-1.12.1"
+            "href": "dt-core-bootstrap-1.13.4"
           },
           "meta": null,
           "script": [
@@ -976,9 +976,9 @@
         },
         {
           "name": "htmlwidgets",
-          "version": "1.6.1",
+          "version": "1.6.2",
           "src": {
-            "href": "htmlwidgets-1.6.1"
+            "href": "htmlwidgets-1.6.2"
           },
           "meta": null,
           "script": "htmlwidgets.js",
@@ -1146,9 +1146,9 @@
         },
         {
           "name": "dt-core-bootstrap",
-          "version": "1.12.1",
+          "version": "1.13.4",
           "src": {
-            "href": "dt-core-bootstrap-1.12.1"
+            "href": "dt-core-bootstrap-1.13.4"
           },
           "meta": null,
           "script": [
@@ -1179,9 +1179,9 @@
         },
         {
           "name": "htmlwidgets",
-          "version": "1.6.1",
+          "version": "1.6.2",
           "src": {
-            "href": "htmlwidgets-1.6.1"
+            "href": "htmlwidgets-1.6.2"
           },
           "meta": null,
           "script": "htmlwidgets.js",
@@ -1315,9 +1315,9 @@
         },
         {
           "name": "dt-core-bootstrap",
-          "version": "1.12.1",
+          "version": "1.13.4",
           "src": {
-            "href": "dt-core-bootstrap-1.12.1"
+            "href": "dt-core-bootstrap-1.13.4"
           },
           "meta": null,
           "script": [
@@ -1348,9 +1348,9 @@
         },
         {
           "name": "htmlwidgets",
-          "version": "1.6.1",
+          "version": "1.6.2",
           "src": {
-            "href": "htmlwidgets-1.6.1"
+            "href": "htmlwidgets-1.6.2"
           },
           "meta": null,
           "script": "htmlwidgets.js",
@@ -1484,9 +1484,9 @@
         },
         {
           "name": "dt-core-bootstrap",
-          "version": "1.12.1",
+          "version": "1.13.4",
           "src": {
-            "href": "dt-core-bootstrap-1.12.1"
+            "href": "dt-core-bootstrap-1.13.4"
           },
           "meta": null,
           "script": [
@@ -1517,9 +1517,9 @@
         },
         {
           "name": "htmlwidgets",
-          "version": "1.6.1",
+          "version": "1.6.2",
           "src": {
-            "href": "htmlwidgets-1.6.1"
+            "href": "htmlwidgets-1.6.2"
           },
           "meta": null,
           "script": "htmlwidgets.js",
