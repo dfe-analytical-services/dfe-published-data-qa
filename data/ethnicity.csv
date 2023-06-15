@@ -2,24 +2,41 @@ ethnicity_major,ethnicity_minor
 Total,Total
 White,Total
 White,English/Welsh/Scottish/Northern Irish/British
+White,English / Welsh / Scottish / Northern Irish / British
 White,Irish
 White,Gypsy or Irish Traveller
+White,Roma
 White,Any other White background
 Mixed/Multiple ethnic groups,Total
 Mixed/Multiple ethnic groups,White and Black Caribbean
 Mixed/Multiple ethnic groups,White and Black African
 Mixed/Multiple ethnic groups,White and Asian
 Mixed/Multiple ethnic groups,Any other Mixed/Multiple ethnic background
+Mixed / Multiple ethnic groups,Total
+Mixed / Multiple ethnic groups,White and Black Caribbean
+Mixed / Multiple ethnic groups,White and Black African
+Mixed / Multiple ethnic groups,White and Asian
+Mixed / Multiple ethnic groups,Any other Mixed / Multiple ethnic background
 Asian/Asian British,Total
 Asian/Asian British,Indian
 Asian/Asian British,Pakistani
 Asian/Asian British,Bangladeshi
 Asian/Asian British,Chinese
 Asian/Asian British,Any other Asian background
+Asian / Asian British,Total
+Asian / Asian British,Indian
+Asian / Asian British,Pakistani
+Asian / Asian British,Bangladeshi
+Asian / Asian British,Chinese
+Asian / Asian British,Any other Asian background
 Black/African/Caribbean/Black British,Total
 Black/African/Caribbean/Black British,African
 Black/African/Caribbean/Black British,Caribbean
 Black/African/Caribbean/Black British,Any other Black/African/Caribbean background
+Black / African / Caribbean / Black British,Total
+Black / African / Caribbean / Black British,African
+Black / African / Caribbean / Black British,Caribbean
+Black / African / Caribbean / Black British,Any other Black / African / Caribbean background
 Other ethnic group,Total
 Other ethnic group,Arab
 Other ethnic group,Any other ethnic group
