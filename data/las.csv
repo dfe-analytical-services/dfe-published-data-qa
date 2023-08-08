@@ -87,7 +87,7 @@ E10000023,North Yorkshire,01/01/2009,31/03/2023,E12000003,E10,Counties,terminate
 E10000024,Nottinghamshire,01/01/2009,,E12000004,E10,Counties,live,891
 E10000025,Oxfordshire,01/01/2009,,E12000008,E10,Counties,live,931
 E10000026,Shropshire,01/01/2009,31/03/2009,E12000005,E10,Counties,terminated,x
-E10000027,Somerset,01/01/2009,31/03/2023,E12000009,E10,Counties,live,933
+E10000027,Somerset,01/01/2009,31/03/2023,E12000009,E10,Counties,terminated,933
 E10000028,Staffordshire,01/01/2009,,E12000005,E10,Counties,live,860
 E10000029,Suffolk,01/01/2009,,E12000006,E10,Counties,live,935
 E10000030,Surrey,01/01/2009,,E12000008,E10,Counties,live,936
@@ -162,7 +162,7 @@ E06000057,Northumberland,01/04/2013,,E12000001,E06,Unitary Authorities,live,929
 E06000063,Cumberland,01/04/2023,,E12000002,E06,Unitary Authorities,live,942
 E06000064,Westmorland and Furness,01/04/2023,,E12000002,E06,Unitary Authorities,live,943
 E06000065,North Yorkshire,01/04/2023,,E12000003,E06,Unitary Authorities,live,815
-E10000027,Somerset,01/04/2023,,E12000009,E06,Unitary Authorities,live,933
+E06000066,Somerset,01/04/2023,,E12000009,E06,Unitary Authorities,live,933
 E08000037,Gateshead,01/04/2013,,E12000001,E08,Metropolitan Districts,live,390
 E06000058,"Bournemouth, Christchurch and Poole",01/04/2019,,E12000009,E06,Unitary Authorities,live,839
 E06000059,Dorset,01/04/2019,,E12000009,E06,Unitary Authorities,live,838
