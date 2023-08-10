@@ -1,5 +1,4 @@
-
-options(renv.config.sandbox.enabled=FALSE)
+options(renv.config.sandbox.enabled = FALSE)
 source("renv/activate.R")
 
 shhh <- suppressPackageStartupMessages # It's a library, so shhh!
