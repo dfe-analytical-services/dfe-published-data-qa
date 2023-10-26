@@ -1,0 +1,20 @@
+BUDGET UAT Notes
+
+
+Error in upload with more than 2 decimal places in cells. Seems right.
+Error in upload created through long string entries pre-populated in schools table, linked to the pre-population error.
+After uploading the xml, I can only see the entry for the last school in the list. I.e. the link to the schools table in COLLECT takes me to the specific COLLECT page for the final school, with no discernable way of navigating to another school or to a wider view of the whole schools table.
+EY table lines 2a to 6 - primary nursery class number of units value in the maintained nursery school cell, and the primary nursery class cell empty in collect when is present in generator.
+EY table line 2a to 6 -  not showing errors for negative anticipated budget (although errors for the values and units are present).
+EY table line 7(all) - no anticipated budget values, despite all being present in the xml generator. 
+EY totals show as blank, is this supposed to be the case (when clicking to view 'EY Totals' in COLLECT.
+
+XML Generator
+Appear to be no validation errors in the schools table
+Also, issue with rows 17 and 18 (LA 381), which are pre-populated with 'School Name', and 'Calderdale' the name of the LA. The DfE numbers are pre-populated as 'DfE Reference' and 'LA Number' respectively, which causes errors on upload. The school types are pre-populated as 'Mainstream'. Should these two rows even be pre-populated though.
+
+In EY, no errors for Blank cells from line 3 onwards.
+EY Table protected, unable to enter anything other than descriptions from line 7 onwards. Can unprotect without a password. Assuming we wouldn't want to expect LA's to know how to do this though, plus it then risks unprotecting all of the formulas which could lead to a variety of problems.
+
+*Above have been emailed to C-L
+

@@ -1,0 +1,13 @@
+﻿time_period,time_identifier,geographic_level,country_code,country_name,region_code,region_name,old_la_code,new_la_code,la_name,institution_name,institution_id,school_type,grade,gender,age_group,full_time_equivalent,headcount
+201920,Academic year,Institution,E92000001,England,E13000001,Inner London,201,E09000001,City of London,St Pauls,2013614,LA maintained primary,Total,Total,Total,17.7,25
+201920,Academic year,Institution,E92000001,England,E13000001,Inner London,201,E09000001,City of London,St Pauls,2013614,LA maintained primary,Head teacher,Total,Total,1,1
+201920,Academic year,Institution,E92000001,England,E13000001,Inner London,201,E09000001,City of London,St Pauls,2013614,LA maintained primary,Deputy head teacher,Total,Total,1,1
+201920,Academic year,Institution,E92000001,England,E13000001,Inner London,201,E09000001,City of London,St Pauls,2013614,LA maintained primary,Assistant head teacher,Total,Total,1.6,3
+201920,Academic year,Institution,E92000001,England,E13000001,Inner London,201,E09000001,City of London,St Pauls,2013614,LA maintained primary,Classroom teacher,Total,Total,14.1,20
+201920,Academic year,Institution,E92000001,England,E13000001,Inner London,201,E09000001,City of London,St Pauls,2013614,LA maintained primary,Total,Male,Total,4,5
+201920,Academic year,Institution,E92000001,England,E13000001,Inner London,201,E09000001,City of London,St Pauls,2013614,LA maintained primary,Total,Female,Total,13.7,20
+201920,Academic year,Institution,E92000001,England,E13000001,Inner London,201,E09000001,City of London,St Pauls,2013614,LA maintained primary,Total,Total,Under 25,1,1
+201920,Academic year,Institution,E92000001,England,E13000001,Inner London,201,E09000001,City of London,St Pauls,2013614,LA maintained primary,Total,Total,25 to 29,2,2
+201920,Academic year,Institution,E92000001,England,E13000001,Inner London,201,E09000001,City of London,St Pauls,2013614,LA maintained primary,Total,Total,30 to 39,6.2,8
+201920,Academic year,Institution,E92000001,England,E13000001,Inner London,201,E09000001,City of London,St Pauls,2013614,LA maintained primary,Total,Total,40 to 49,5.08,9
+201920,Academic year,Institution,E92000001,England,E13000001,Inner London,201,E09000001,City of London,St Pauls,2013614,LA maintained primary,Total,Total,50 to 59,0.42,1
