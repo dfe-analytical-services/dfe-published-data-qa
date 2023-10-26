@@ -87,6 +87,7 @@ app$snapshot(items = list(output = c("progress_stage", "table_all_tests", "fail_
 app$setInputs(resetbutton = "click")
 
 # 10 - Reset button -------------------------------------------------------------------------------------------------------------------
+message("Running test 10 - reset after failing")
 app$snapshot(items = list(
   input = c("resetbutton", "screenbutton", "shinyjs-resettable-datafile", "shinyjs-resettable-metafile"),
   output = c("advisory_box", "all_tests", "ancillary_box", "failed_box", "passed_box", "data_cols", "data_rows", "data_size", "datafilename", "file_exists", "meta_rows", "meta_cols", "meta_size", "metafilename", "num_advisory_tests", "num_failed_tests", "progress_stage", "showresults", "sum_combined_tests", "sum_failed_tests", "sum_ignored_tests", "sum_passed_tests", "summary_text", "table_advisory_tests", "table_all_tests", "table_failed_tests", "testtime"),
@@ -94,6 +95,7 @@ app$snapshot(items = list(
 ))
 
 # 11. Do the metadata preview tables populate as expected ------------------
+message("Running test 11 - preview table")
 app$uploadFile(datafile = "test-data/passes_everything.csv")
 app$uploadFile(metafile = "test-data/passes_everything.meta.csv")
 app$setInputs(screenbutton = "click")
@@ -102,11 +104,12 @@ app$setInputs(trendy_tabs = "previewTab", timeout_ = 1.6e4)
 app$snapshot(list(output = c("meta_table", "data_preview")))
 
 # 12. Do the file info tables populate as expected -------------------------
+message("Running test 12 - file info tables")
 app$setInputs(trendy_tabs = "obUnitTab", timeout_ = 1.6e4)
 app$snapshot(list(output = c("geog_time_perms2", "tables", "indicators", "suppressed_cell_count_table")))
 
 # 13. Explore indicators doesn't break with no arguments -------------------
-message("Test indicator choice with no arguments")
+message("Running test 13Test indicator choice with no arguments")
 app$setInputs(trendy_tabs = "indicatorsTab")
 app$setInputs(submit = "click", timeout_ = 1.6e4)
 app$snapshot(list(output = "table_list"))
