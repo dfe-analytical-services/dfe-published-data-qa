@@ -699,10 +699,10 @@ server <- function(input, output, session) {
           })
 
           # Create indicator choice depending on what's available
-  observe({
-          updateSelectInput(session, "ind_parameter", choices = meta$mainFile %>% filter(col_type == "Indicator") %>% pull(col_name))
+          observe({
+            updateSelectInput(session, "ind_parameter", choices = meta$mainFile %>% filter(col_type == "Indicator") %>% pull(col_name))
           })
-  
+
           # Show summary stats table for an indicator
           showsumstats <- function(parameter, geog_parameter) {
             args <- expand.grid(ind = parameter, geog = geog_parameter, stringsAsFactors = FALSE)
