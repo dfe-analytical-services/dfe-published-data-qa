@@ -66,7 +66,7 @@ E10000002,Buckinghamshire,01/01/2009,31/03/2020,E12000008,E10,Counties,terminate
 E10000003,Cambridgeshire,01/01/2009,,E12000006,E10,Counties,live,873
 E10000004,Cheshire,01/01/2009,31/03/2009,E12000002,E10,Counties,terminated,x
 E10000005,Cornwall and Isles of Scilly,01/01/2009,31/03/2009,E12000009,E10,Counties,terminated,x
-E10000006,Cumbria,01/01/2009,,E12000002,E10,Counties,live,909
+E10000006,Cumbria,01/01/2009,31/03/2023,E12000002,E10,Counties,terminated,909
 E10000007,Derbyshire,01/01/2009,,E12000004,E10,Counties,live,830
 E10000008,Devon,01/01/2009,,E12000009,E10,Counties,live,878
 E10000009,Dorset,01/01/2009,31/03/2019,E12000009,E10,Counties,terminated,835

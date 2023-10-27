@@ -342,11 +342,21 @@ fluidPage(
                     fluidRow(
                       column(
                         4,
-                        uiOutput("indicatorChoice") %>% withSpinner(),
+                        selectInput(
+                          inputId = "ind_parameter",
+                          label = "Choose indicator(s):",
+                          choices = "",
+                          multiple = TRUE
+                        )
                       ),
                       column(
                         4,
-                        uiOutput("geogChoice") %>% withSpinner()
+                        selectInput(
+                          inputId = "geog_parameter",
+                          label = "Choose geographic level(s):",
+                          choices = "",
+                          multiple = TRUE
+                        )
                       ),
                       column(
                         4,

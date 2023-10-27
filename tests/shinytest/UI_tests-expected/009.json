@@ -7,7 +7,7 @@
       ]
     },
     "ancillary_box": {
-      "html": "<div>\n  <div class=\"panel panel-info\">\n    <div class=\"panel-heading\" style=\"color: white;font-size: 18px;font-style: bold;\">This file should not be uploaded as a standard data file<\/div>\n    <div class=\"panel-body\" style=\"padding-left:27px\">\n      The data file only includes geographic levels that are going to be ignored by EES, see our  \n      <a href=\"https://rsconnect/rsc/stats-production-guidance/ees.html#Ancillary_file_uploads\" target=\"_blank\">guidance on uploading ancillary files<\/a>\n       for more information on how to upload as an ancillary file instead of via the normal data route.\n    <\/div>\n  <\/div>\n<\/div>",
+      "html": "<div>\n  <div class=\"panel panel-info\">\n    <div class=\"panel-heading\" style=\"color: white;font-size: 18px;font-style: bold;\">This file should not be uploaded as a standard data file<\/div>\n    <div class=\"panel-body\" style=\"padding-left:27px\">\n      The data file only includes geographic levels that are going to be ignored by EES, see our  \n      <a href=\"https://dfe-analytical-services.github.io/analysts-guide/statistics-production/ees.html#supporting-file-uploads\" target=\"_blank\">guidance on uploading ancillary files<\/a>\n       for more information on how to upload as an ancillary file instead of via the normal data route.\n    <\/div>\n  <\/div>\n<\/div>",
       "deps": [
 
       ]
