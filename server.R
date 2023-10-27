@@ -694,24 +694,13 @@ server <- function(input, output, session) {
 
           # Create geographic level choice depending on what's available
 
-          output$geogChoice <- renderUI({
-            selectInput(
-              inputId = "geog_parameter",
-              label = "Choose geographic level(s):",
-              choices = data$mainFile %>% pull(geographic_level) %>% unique(),
-              multiple = TRUE
-            )
+          observe({
+            updateSelectInput(session, "geog_parameter", choices = data$mainFile %>% pull(geographic_level) %>% unique())
           })
 
           # Create indicator choice depending on what's available
-
-          output$indicatorChoice <- renderUI({
-            selectInput(
-              inputId = "ind_parameter",
-              label = "Choose indicator(s):",
-              choices = meta$mainFile %>% filter(col_type == "Indicator") %>% pull(col_name),
-              multiple = TRUE
-            )
+          observe({
+            updateSelectInput(session, "ind_parameter", choices = meta$mainFile %>% filter(col_type == "Indicator") %>% pull(col_name))
           })
 
           # Show summary stats table for an indicator
@@ -798,7 +787,7 @@ server <- function(input, output, session) {
               t_list <- purrr::imap(theList(), ~ {
                 tagList(
                   h4(.y),
-                  DTOutput(outputId = paste0("t_", .y), width = "100%") %>% withSpinner()
+                  DTOutput(outputId = paste0("t_", .y), width = "100%")
                 )
               })
 

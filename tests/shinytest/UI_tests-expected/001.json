@@ -1,6 +1,8 @@
 {
   "input": {
     "datafile": null,
+    "geog_parameter": null,
+    "ind_parameter": null,
     "metafile": null,
     "submit": 0,
     "submit_geographies": 0,
