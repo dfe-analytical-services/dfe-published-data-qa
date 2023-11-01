@@ -63,6 +63,9 @@ geography_matrix <- matrix(
   byrow = TRUE
 )
 
+geography_dataframe <- geography_matrix %>% as.data.frame() %>%
+  select(geographic_level=V1, geographic_code=V2, geographic_name=V3, geographic_code_secondary=V4)
+
 countries <- suppressMessages(read_csv("data/country.csv")) # change this to database eventually
 regions <- suppressMessages(read_csv("data/regions.csv")) # change this to database eventually
 lsips <- suppressMessages(read_csv("data/lsips.csv")) # change this to database eventually

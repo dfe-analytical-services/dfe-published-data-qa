@@ -1421,6 +1421,59 @@ la_combinations <- function(data) {
   return(output)
 }
 
+# lsip_combinations -------------------------------------
+# Checking that region_code and region_name combinations are valid
+## Need to update reference list in error message to whatever method we use for LAs as the portal list doesn't include inner/outer london (which we allow)
+
+lsip_combinations <- function(data) {
+  if (!geography_matrix[3, 2] %in% names(data)) {
+    output <- list(
+      "message" = paste(geography_matrix[3, 2], "columns are not present in this data file."),
+      "result" = "IGNORE"
+    )
+  } else {
+    invalid_values <- rbind(
+      # Not allowing blanks for regional rows
+      data %>%
+        filter(geographic_level == geography_matrix[3, 1]) %>%
+        select(geography_matrix[3, 2], geography_matrix[3, 3]) %>%
+        unique() %>%
+        filter(lsip_code != gssNAvcode | is.na(lsip_code)),
+      data %>%
+        filter(geographic_level != geography_matrix[3, 1]) %>%
+        select(geography_matrix[3, 2], geography_matrix[3, 3]) %>%
+        unique() %>%
+        filter(!is.na(lsip_code) & !is.na(lsip_name)) %>%
+        filter(lsip_code != "") %>%
+        filter(lsip_code != gssNAvcode)
+    ) %>%
+      mutate(combo = paste(lsip_code, lsip_name)) %>%
+      pull(combo) %>%
+      .[!(. %in% expected_lsip_combinations)]
+    
+    if (length(invalid_values) == 0) {
+      output <- list(
+        "message" = "All lsip_code and lsip_name combinations are valid.",
+        "result" = "PASS"
+      )
+    } else {
+      if (length(invalid_values) == 1) {
+        output <- list(
+          "message" = paste0("The following region_code and region_name combination is invalid for rows within the 'Regional' geographic_level: '", paste0(invalid_values), "'. <br> - We do not expect any combinations outside of the <a href='https://github.com/dfe-analytical-services/dfe-published-data-qa/blob/master/data/regions.csv' target='_blank'>standard geographies lookup</a> (case sensitive), please check your name and code combinations against this lookup."),
+          "result" = "FAIL"
+        )
+      } else {
+        output <- list(
+          "message" = paste0("The following region_code / region_name combinations are invalid for rows within the 'Regional' geographic_level: '", paste0(invalid_values, collapse = "', '"), "'. <br> - We do not expect any combinations outside of the <a href='https://github.com/dfe-analytical-services/dfe-published-data-qa/blob/master/data/regions.csv' target='_blank'>standard geographies lookup</a> (case sensitive), please check your name and code combinations against this lookup."),
+          "result" = "FAIL"
+        )
+      }
+    }
+  }
+  
+  return(output)
+}
+
 # region_combinations -------------------------------------
 # Checking that region_code and region_name combinations are valid
 ## Need to update reference list in error message to whatever method we use for LAs as the portal list doesn't include inner/outer london (which we allow)
