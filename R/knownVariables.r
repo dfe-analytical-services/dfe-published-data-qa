@@ -43,6 +43,7 @@ geography_matrix <- matrix(
   c(
     "National", "country_code", "country_name", NA,
     "Regional", "region_code", "region_name", NA,
+    "Local skills improvement plan area", "lsip_code", "lsip_name", NA,
     "Local authority", "old_la_code", "la_name", "new_la_code",
     "Local authority district", "lad_code", "lad_name", NA,
     "RSC region", "rsc_region_lead_name", NA, NA,
