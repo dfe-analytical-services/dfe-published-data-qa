@@ -38,16 +38,15 @@ gssRndcode <- "low"
 gss_symbols <- c(gssNApcode, gssNAvcode, gssSupcode, gssRndcode)
 legacy_gss_symbols <- c("~", ":")
 
-
 geography_matrix <- matrix(
   c(
     "National", "country_code", "country_name", NA,
     "Regional", "region_code", "region_name", NA,
-    "Local skills improvement plan area", "lsip_code", "lsip_name", NA,
     "Local authority", "old_la_code", "la_name", "new_la_code",
     "Local authority district", "lad_code", "lad_name", NA,
     "RSC region", "rsc_region_lead_name", NA, NA,
     "Parliamentary constituency", "pcon_code", "pcon_name", NA,
+    "Local skills improvement plan area", "lsip_code", "lsip_name", NA,
     "Local enterprise partnership", "local_enterprise_partnership_code", "local_enterprise_partnership_name", NA,
     "English devolved area", "english_devolved_area_code", "english_devolved_area_name", NA,
     "Opportunity area", "opportunity_area_code", "opportunity_area_name", NA,
@@ -63,8 +62,16 @@ geography_matrix <- matrix(
   byrow = TRUE
 )
 
-geography_dataframe <- geography_matrix %>% as.data.frame() %>%
-  select(geographic_level=V1, geographic_code=V2, geographic_name=V3, geographic_code_secondary=V4)
+geography_dataframe <- geography_matrix %>%
+  as.data.frame() %>%
+  select(geographic_level = V1, code_field = V2, name_field = V3, code_field_secondary = V4)
+
+# Pull out lower level geographies that we don't have standardised lists for (and excluding school-provider etc levels)
+lower_level_geog_levels <- c("Opportunity area", "Ward", "MAT", "Sponsor")
+lower_level_geog_names <- geography_dataframe %>%
+  filter(geographic_level %in% lower_level_geog_levels) %>%
+  pivot_longer(c(code_field, name_field)) %>%
+  pull(value)
 
 countries <- suppressMessages(read_csv("data/country.csv")) # change this to database eventually
 regions <- suppressMessages(read_csv("data/regions.csv")) # change this to database eventually
