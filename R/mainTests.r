@@ -964,7 +964,7 @@ la_col_present <- function(data) {
 col_completed <- function(x, row, level_rows) {
   y <- x + 1
   col <- paste(row[y])
-  
+
   if (any(!is.na(level_rows[[col]] %>% .[. != ""]))) {
     return(col)
   }
@@ -979,8 +979,8 @@ overcompleted_cols <- function(data, meta) {
 
   overcomplete_regional_cols <- function(matrixRow) {
     # Start by filtering the data down to remove the geographic level being tested and any lower levels we don't care about
-      levels_incompatible_with_region <- c("National", "Local skills improvement plan area")
-    
+    levels_incompatible_with_region <- c("National", "Local skills improvement plan area")
+
     level_rows <- data %>%
       filter(geographic_level %in% levels_incompatible_with_region)
 
@@ -990,7 +990,7 @@ overcompleted_cols <- function(data, meta) {
 
     # Apply over every column in the matrixRow (geographic_level) being tested
 
-    pre_output <- sapply(c(1:length(cols)), col_completed, row=matrixRow, level_rows=level_rows)
+    pre_output <- sapply(c(1:length(cols)), col_completed, row = matrixRow, level_rows = level_rows)
 
     return(pre_output)
   }
@@ -1003,7 +1003,7 @@ overcompleted_cols <- function(data, meta) {
 
     # Start by filtering the data down to remove the geographic level being tested, lad rows and any lower levels we don't care about
     levels_compatible_with_la <- c("Local authority", "Local authority district", "School", "Provider", "Institution", "Planning area")
-    
+
     level_rows <- data %>%
       filter(!geographic_level %in% levels_compatible_with_la)
 
@@ -1013,31 +1013,31 @@ overcompleted_cols <- function(data, meta) {
 
     # Apply over every column in the matrixRow (geographic_level) being tested
 
-    pre_output <- sapply(c(1:length(cols)), col_completed, row=matrixRow, level_rows=level_rows)
+    pre_output <- sapply(c(1:length(cols)), col_completed, row = matrixRow, level_rows = level_rows)
 
     return(pre_output)
   }
 
   # ----------------------------------------------------------------------------------------------------------------------------------
   # checking whether LSIP columns are completed for national, regional or mid-geography rows (ignoring LAD)
-  
+
   overcomplete_lsip_cols <- function(matrixRow) {
     # This is a test that could benefit from more detail, and maybe a table in the error feedback
-    
+
     # Start by filtering the data down to remove the geographic level being tested, lad rows and any lower levels we don't care about
     levels_compatible_with_lsip <- c("Local skills improvement plan area", "Local authority district", "School", "Provider", "Institution", "Planning area")
-    
+
     level_rows <- data %>%
       filter(!geographic_level %in% levels_compatible_with_lsip)
-    
+
     # Extract the columns for the geographic level that is being tested
-    
+
     cols <- matrixRow[2:4] %>% .[!is.na(.)]
-    
+
     # Apply over every column in the matrixRow (geographic_level) being tested
-    
-    pre_output <- sapply(c(1:length(cols)), col_completed, row=matrixRow, level_rows=level_rows)
-    
+
+    pre_output <- sapply(c(1:length(cols)), col_completed, row = matrixRow, level_rows = level_rows)
+
     return(pre_output)
   }
   # ----------------------------------------------------------------------------------------------------------------------------------
@@ -1056,7 +1056,7 @@ overcompleted_cols <- function(data, meta) {
 
     # Apply over every column in the matrixRow (geographic_level) being tested
 
-    pre_output <- sapply(c(1:length(cols)), col_completed, row=matrixRow, level_rows=level_rows)
+    pre_output <- sapply(c(1:length(cols)), col_completed, row = matrixRow, level_rows = level_rows)
 
     return(pre_output)
   }
@@ -1096,9 +1096,9 @@ overcompleted_cols <- function(data, meta) {
     # Apply over every column in the matrixRow (geographic_level) being tested
 
     if (sch_prov_only_filter == TRUE) {
-      pre_output <- sapply(c(1, 3), col_completed, row=matrixRow, level_rows=level_rows)
+      pre_output <- sapply(c(1, 3), col_completed, row = matrixRow, level_rows = level_rows)
     } else {
-      pre_output <- sapply(c(1:length(cols)), col_completed, row=matrixRow, level_rows=level_rows)
+      pre_output <- sapply(c(1:length(cols)), col_completed, row = matrixRow, level_rows = level_rows)
     }
 
     return(pre_output)
@@ -1110,7 +1110,7 @@ overcompleted_cols <- function(data, meta) {
   regional_matrix <- matrix(geography_matrix[2, ], nrow = 1)
   la_matrix <- matrix(geography_matrix[3, ], nrow = 1)
   lsip_matrix <- matrix(geography_matrix[7, ], nrow = 1)
-  
+
   overcomplete_geographies <- c(
     unlist(apply(regional_matrix, 1, overcomplete_regional_cols)),
     unlist(apply(la_matrix, 1, overcomplete_la_cols)),
@@ -1419,7 +1419,7 @@ la_combinations <- function(data) {
 
 lsip_combinations <- function(data) {
   level_description <- "Local skills improvement plan area"
-  level_line <- geography_dataframe %>% filter(geographic_level == level_description) 
+  level_line <- geography_dataframe %>% filter(geographic_level == level_description)
   if (!level_line$code_field %in% names(data)) {
     output <- list(
       "message" = paste(level_line$code_field, "columns are not present in this data file."),
@@ -1453,12 +1453,12 @@ lsip_combinations <- function(data) {
     } else {
       if (length(invalid_values) == 1) {
         output <- list(
-          "message" = paste0("The following ", level_line$code_field," and ", level_line$name_field," combination is invalid for rows within the '", level_description, "' geographic_level: '", paste0(invalid_values), "'. <br> - We do not expect any combinations outside of the <a href='https://github.com/dfe-analytical-services/dfe-published-data-qa/blob/master/data/lsips.csv' target='_blank'>standard geographies lookup</a> (case sensitive), please check your name and code combinations against this lookup."),
+          "message" = paste0("The following ", level_line$code_field, " and ", level_line$name_field, " combination is invalid for rows within the '", level_description, "' geographic_level: '", paste0(invalid_values), "'. <br> - We do not expect any combinations outside of the <a href='https://github.com/dfe-analytical-services/dfe-published-data-qa/blob/master/data/lsips.csv' target='_blank'>standard geographies lookup</a> (case sensitive), please check your name and code combinations against this lookup."),
           "result" = "FAIL"
         )
       } else {
         output <- list(
-          "message" = paste0("The following ", level_line$code_field," / ", level_line$name_field," combinations are invalid for rows within the '", level_description, "' geographic_level: '", paste0(invalid_values, collapse = "', '"), "'. <br> - We do not expect any combinations outside of the <a href='https://github.com/dfe-analytical-services/dfe-published-data-qa/blob/master/data/lsips.csv' target='_blank'>standard geographies lookup</a> (case sensitive), please check your name and code combinations against this lookup."),
+          "message" = paste0("The following ", level_line$code_field, " / ", level_line$name_field, " combinations are invalid for rows within the '", level_description, "' geographic_level: '", paste0(invalid_values, collapse = "', '"), "'. <br> - We do not expect any combinations outside of the <a href='https://github.com/dfe-analytical-services/dfe-published-data-qa/blob/master/data/lsips.csv' target='_blank'>standard geographies lookup</a> (case sensitive), please check your name and code combinations against this lookup."),
           "result" = "FAIL"
         )
       }
