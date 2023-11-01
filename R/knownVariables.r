@@ -65,6 +65,7 @@ geography_matrix <- matrix(
 
 countries <- suppressMessages(read_csv("data/country.csv")) # change this to database eventually
 regions <- suppressMessages(read_csv("data/regions.csv")) # change this to database eventually
+las <- suppressMessages(read_csv("data/lsips.csv")) # change this to database eventually
 las <- suppressMessages(read_csv("data/las.csv")) # change this to database eventually
 lads <- suppressMessages(read_csv("data/lads.csv")) # change this to database eventually
 pcons <- suppressMessages(read_csv("data/pcons.csv")) # change this to database eventually
