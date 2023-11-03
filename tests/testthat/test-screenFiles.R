@@ -17,7 +17,7 @@ context("Passes everything")
 test_that("PassEverything", {
   screeningOutput <- testOther("../../tests/shinytest/test-data/passes_everything.csv")
 
-  expect_equal(screeningOutput$results %>% filter(!(result %in% c("PASS", "PASS WITH NOTE", "IGNORE"))) %>% nrow(), 0)
+  expect_equal(screeningOutput$results %>% filter(!(result %in% c("PASS", "PASS WITH NOTE"))) %>% nrow(), 0)
 })
 
 context("Quoted blanks")

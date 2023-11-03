@@ -978,11 +978,10 @@ overcompleted_cols <- function(data, meta) {
   # checking if region cols are completed in national rows
 
   overcomplete_regional_cols <- function(matrixRow) {
-    # Start by filtering the data down to remove the geographic level being tested and any lower levels we don't care about
+    # Filter the data to just the geographic levels that shouldn't have entries under region code and name
     levels_incompatible_with_region <- c("National", "Local skills improvement plan area")
 
-    level_rows <- data %>%
-      filter(geographic_level %in% levels_incompatible_with_region)
+    level_rows <- data %>% filter(geographic_level %in% levels_incompatible_with_region)
 
     # Extract the columns for the geographic level that is being tested
 
@@ -1001,11 +1000,10 @@ overcompleted_cols <- function(data, meta) {
   overcomplete_la_cols <- function(matrixRow) {
     # This is a test that could benefit from more detail, and maybe a table in the error feedback
 
-    # Start by filtering the data down to remove the geographic level being tested, lad rows and any lower levels we don't care about
+    # Start by removing any geographic levels that are allowed to have entries in the LA ID and name columns
     levels_compatible_with_la <- c("Local authority", "Local authority district", "School", "Provider", "Institution", "Planning area")
 
-    level_rows <- data %>%
-      filter(!geographic_level %in% levels_compatible_with_la)
+    level_rows <- data %>% filter(!geographic_level %in% levels_compatible_with_la)
 
     # Extract the columns for the geographic level that is being tested
 
@@ -1024,11 +1022,10 @@ overcompleted_cols <- function(data, meta) {
   overcomplete_lsip_cols <- function(matrixRow) {
     # This is a test that could benefit from more detail, and maybe a table in the error feedback
 
-    # Start by filtering the data down to remove the geographic level being tested, lad rows and any lower levels we don't care about
+    # Remove any geographic levels from the test data that are allowed to have LSIP code and name filled
     levels_compatible_with_lsip <- c("Local skills improvement plan area", "Local authority district", "School", "Provider", "Institution", "Planning area")
 
-    level_rows <- data %>%
-      filter(!geographic_level %in% levels_compatible_with_lsip)
+    level_rows <- data %>% filter(!geographic_level %in% levels_compatible_with_lsip)
 
     # Extract the columns for the geographic level that is being tested
 
