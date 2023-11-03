@@ -10,6 +10,7 @@
   <a href="#introduction">Introduction</a> |
   <a href="#requirements">Requirements</a> |
   <a href="#how-to-use">How to use</a> |
+  <a href="#data-sources">Data sources</a> |
   <a href="#contact">Contact</a>
 </p>
 
@@ -101,6 +102,18 @@ There is a debugging script (named as such) in the R folder. This uses the funct
 ### Code styling
 
 The function `tidy_code()` is created in the Rprofile script and therefore is always available in the RStudio console to tidy code according to tidyverse styling using the styler package. This function also helps to test the running of the code and for basic syntax errors such as missing commas and brackets.
+
+---
+
+## Data sources
+
+### Geographies
+
+The standard geographies used in this tool are sourced from (or developed with) the Office for National Statistics (ONS). As such, they are maintained in line with the ONS's [open geography portal](https://geoportal.statistics.gov.uk/). Some further details on specific geographic levels are provided below.
+
+#### Local skills improvement plan area (LSIP)
+
+These were developed in direct communications with the ONS ([ONS Geography e-mail](mailto:ONS.Geography@ons.gov.uk)) and they provided the basis for the code and name file used in this tool. At the time of writing, this has not been added to the open geography portal, although boundary files have been ([LSIP boundary map files](https://geoportal.statistics.gov.uk/search?collection=Dataset&sort=name&tags=all(BDY_LSIP%2CAUG_2023))).
 
 ---
 
