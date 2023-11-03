@@ -1111,9 +1111,8 @@ overcompleted_cols <- function(data, meta) {
   overcomplete_geographies <- c(
     unlist(apply(regional_matrix, 1, overcomplete_regional_cols)),
     unlist(apply(la_matrix, 1, overcomplete_la_cols)),
-    unlist(apply(geography_matrix[4:6, ], 1, overcomplete_mid_cols)),
     unlist(apply(lsip_matrix, 1, overcomplete_lsip_cols)),
-    unlist(apply(geography_matrix[8:13, ], 1, overcomplete_mid_cols)),
+    unlist(apply(geography_matrix[c(4:6,8:13), ], 1, overcomplete_mid_cols)),
     unlist(apply(geography_matrix[14:17, ], 1, overcomplete_low_cols))
   )
 
