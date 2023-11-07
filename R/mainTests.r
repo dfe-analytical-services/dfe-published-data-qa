@@ -27,6 +27,7 @@ mainTests <- function(data_character, meta_character, datafile, metafile) {
       overcompleted_cols(datafile, metafile), # active test
       ignored_rows(datafile), # active test
       eda_combinations(datafile), # active test
+      lsip_combinations(datafile), # active test
       lep_combinations(datafile), # active test
       pcon_combinations(datafile), # active test
       lad_combinations(datafile), # active test
@@ -168,42 +169,42 @@ duplicate_rows <- function(data, meta) {
   present_obUnits_filters <- intersect(c(acceptable_observational_units, filters, filter_groups), names(data))
 
   if (nrow(data %>% distinct(geographic_level)) == 1 &
-    data$geographic_level[1] %in% geography_matrix[13:14, 1]
+    data$geographic_level[1] %in% geography_matrix[14:15, 1]
   ) {
     dupes <- suppressMessages(data %>%
-      filter(geographic_level != geography_matrix[15, 1]) %>%
       filter(geographic_level != geography_matrix[16, 1]) %>%
+      filter(geographic_level != geography_matrix[17, 1]) %>%
       select(all_of(present_obUnits_filters)) %>%
       get_dupes())
 
     if (nrow(dupes) > 0) {
       output <- list(
-        "message" = paste("There are", cs_num(nrow(dupes)), "duplicate rows in the data file. <br> - Note that", paste0(geography_matrix[15, 1], " and ", geography_matrix[16, 1]), "level rows were not included in this test."),
+        "message" = paste("There are", cs_num(nrow(dupes)), "duplicate rows in the data file. <br> - Note that", paste0(geography_matrix[16, 1], " and ", geography_matrix[17, 1]), "level rows were not included in this test."),
         "result" = "FAIL"
       )
     } else {
       output <- list(
-        "message" = paste("There are no duplicate rows in the data file. <br> - Note that", paste0(geography_matrix[15, 1], " and ", geography_matrix[16, 1]), "level rows were not included in this test."),
+        "message" = paste("There are no duplicate rows in the data file. <br> - Note that", paste0(geography_matrix[16, 1], " and ", geography_matrix[17, 1]), "level rows were not included in this test."),
         "result" = "PASS"
       )
     }
   } else {
     dupes <- suppressMessages(data %>%
-      filter(geographic_level != geography_matrix[13, 1]) %>%
       filter(geographic_level != geography_matrix[14, 1]) %>%
       filter(geographic_level != geography_matrix[15, 1]) %>%
       filter(geographic_level != geography_matrix[16, 1]) %>%
+      filter(geographic_level != geography_matrix[17, 1]) %>%
       select(all_of(present_obUnits_filters)) %>%
       get_dupes())
 
     if (nrow(dupes) > 0) {
       output <- list(
-        "message" = paste("There are", cs_num(nrow(dupes)), "duplicate rows in the data file. <br> - Note that", paste0(geography_matrix[13, 1], ", ", geography_matrix[14, 1], ", ", geography_matrix[15, 1], " and ", geography_matrix[16, 1]), "level rows were not included in this test."),
+        "message" = paste("There are", cs_num(nrow(dupes)), "duplicate rows in the data file. <br> - Note that", paste0(geography_matrix[14, 1], ", ", geography_matrix[15, 1], ", ", geography_matrix[16, 1], " and ", geography_matrix[17, 1]), "level rows were not included in this test."),
         "result" = "FAIL"
       )
     } else {
       output <- list(
-        "message" = paste("There are no duplicate rows in the data file. <br> - Note that", paste0(geography_matrix[13, 1], ", ", geography_matrix[14, 1], ", ", geography_matrix[15, 1], " and ", geography_matrix[16, 1]), "level rows were not included in this test."),
+        "message" = paste("There are no duplicate rows in the data file. <br> - Note that", paste0(geography_matrix[14, 1], ", ", geography_matrix[15, 1], ", ", geography_matrix[16, 1], " and ", geography_matrix[17, 1]), "level rows were not included in this test."),
         "result" = "PASS"
       )
     }
@@ -350,7 +351,7 @@ observational_total <- function(data, meta) {
     }
   }
 
-  acceptable_ob_units_sch_prov_filter <- acceptable_observational_units[!acceptable_observational_units %in% c(geography_matrix[13, 3], geography_matrix[14, 3])]
+  acceptable_ob_units_sch_prov_filter <- acceptable_observational_units[!acceptable_observational_units %in% c(geography_matrix[14, 3], geography_matrix[15, 3])]
 
   present_ob_units <- c(
     intersect(acceptable_ob_units_sch_prov_filter, names(data)),
@@ -369,9 +370,9 @@ observational_total <- function(data, meta) {
 
   if (
     length(filters) == 1 &
-      any(filters[1] %in% geography_matrix[13:14, 3], filter_groups[1] %in% geography_matrix[13:14, 3])
+      any(filters[1] %in% geography_matrix[14:15, 3], filter_groups[1] %in% geography_matrix[14:15, 3])
   ) {
-    present_ob_units <- present_ob_units[!present_ob_units %in% c(geography_matrix[13, 3], geography_matrix[14, 3])]
+    present_ob_units <- present_ob_units[!present_ob_units %in% c(geography_matrix[14, 3], geography_matrix[15, 3])]
   }
 
   pre_result <- stack(sapply(present_ob_units, observational_total_check))
@@ -958,6 +959,17 @@ la_col_present <- function(data) {
   return(output)
 }
 
+# Function used to check if each column for that geographic level has any cells that are not blank
+
+col_completed <- function(x, row, level_rows) {
+  y <- x + 1
+  col <- paste(row[y])
+
+  if (any(!is.na(level_rows[[col]] %>% .[. != ""]))) {
+    return(col)
+  }
+}
+
 # overcompleted_cols -------------------------------------
 # Are any columns completed for unexpected rows
 
@@ -966,30 +978,18 @@ overcompleted_cols <- function(data, meta) {
   # checking if region cols are completed in national rows
 
   overcomplete_regional_cols <- function(matrixRow) {
-    # Start by filtering the data down to remove the geographic level being tested and any lower levels we don't care about
+    # Filter the data to just the geographic levels that shouldn't have entries under region code and name
+    levels_incompatible_with_region <- c("National", "Local skills improvement plan area")
 
-    level_rows <- data %>%
-      filter(geographic_level != matrixRow[1]) %>%
-      filter(!geographic_level %in% geography_matrix[3:16, ])
+    level_rows <- data %>% filter(geographic_level %in% levels_incompatible_with_region)
 
     # Extract the columns for the geographic level that is being tested
 
     cols <- matrixRow[2:4] %>% .[!is.na(.)]
 
-    # Function used to check if each column for that geographic level has any cells that are not blank
-
-    col_completed <- function(x) {
-      y <- x + 1
-      col <- paste(matrixRow[y])
-
-      if (any(!is.na(level_rows[[col]] %>% .[. != ""]))) {
-        return(col)
-      }
-    }
-
     # Apply over every column in the matrixRow (geographic_level) being tested
 
-    pre_output <- sapply(c(1:length(cols)), col_completed)
+    pre_output <- sapply(c(1:length(cols)), col_completed, row = matrixRow, level_rows = level_rows)
 
     return(pre_output)
   }
@@ -1000,35 +1000,43 @@ overcompleted_cols <- function(data, meta) {
   overcomplete_la_cols <- function(matrixRow) {
     # This is a test that could benefit from more detail, and maybe a table in the error feedback
 
-    # Start by filtering the data down to remove the geographic level being tested, lad rows and any lower levels we don't care about
+    # Start by removing any geographic levels that are allowed to have entries in the LA ID and name columns
+    levels_compatible_with_la <- c("Local authority", "Local authority district", "School", "Provider", "Institution", "Planning area")
 
-    level_rows <- data %>%
-      filter(geographic_level != matrixRow[1]) %>%
-      filter(!geographic_level %in% geography_matrix[13:16, ]) %>%
-      filter(geographic_level != geography_matrix[4, 1])
+    level_rows <- data %>% filter(!geographic_level %in% levels_compatible_with_la)
 
     # Extract the columns for the geographic level that is being tested
 
     cols <- matrixRow[2:4] %>% .[!is.na(.)]
 
-    # Function used to check if each column for that geographic level has any cells that are not blank
-
-    col_completed <- function(x) {
-      y <- x + 1
-      col <- paste(matrixRow[y])
-
-      if (any(!is.na(level_rows[[col]] %>% .[. != ""]))) {
-        return(col)
-      }
-    }
-
     # Apply over every column in the matrixRow (geographic_level) being tested
 
-    pre_output <- sapply(c(1:length(cols)), col_completed)
+    pre_output <- sapply(c(1:length(cols)), col_completed, row = matrixRow, level_rows = level_rows)
 
     return(pre_output)
   }
 
+  # ----------------------------------------------------------------------------------------------------------------------------------
+  # checking whether LSIP columns are completed for national, regional or mid-geography rows (ignoring LAD)
+
+  overcomplete_lsip_cols <- function(matrixRow) {
+    # This is a test that could benefit from more detail, and maybe a table in the error feedback
+
+    # Remove any geographic levels from the test data that are allowed to have LSIP code and name filled
+    levels_compatible_with_lsip <- c("Local skills improvement plan area", "Local authority district", "School", "Provider", "Institution", "Planning area")
+
+    level_rows <- data %>% filter(!geographic_level %in% levels_compatible_with_lsip)
+
+    # Extract the columns for the geographic level that is being tested
+
+    cols <- matrixRow[2:4] %>% .[!is.na(.)]
+
+    # Apply over every column in the matrixRow (geographic_level) being tested
+
+    pre_output <- sapply(c(1:length(cols)), col_completed, row = matrixRow, level_rows = level_rows)
+
+    return(pre_output)
+  }
   # ----------------------------------------------------------------------------------------------------------------------------------
   # checking if mid-geography cols are completed for unexpected levels
 
@@ -1037,26 +1045,15 @@ overcompleted_cols <- function(data, meta) {
 
     level_rows <- data %>%
       filter(geographic_level != matrixRow[1]) %>%
-      filter(!geographic_level %in% geography_matrix[13:16, ])
+      filter(!geographic_level %in% geography_matrix[14:17, ])
 
     # Extract the columns for the geographic level that is being tested
 
     cols <- matrixRow[2:4] %>% .[!is.na(.)]
 
-    # Function used to check if each column for that geographic level has any cells that are not blank
-
-    col_completed <- function(x) {
-      y <- x + 1
-      col <- paste(matrixRow[y])
-
-      if (any(!is.na(level_rows[[col]] %>% .[. != ""]))) {
-        return(col)
-      }
-    }
-
     # Apply over every column in the matrixRow (geographic_level) being tested
 
-    pre_output <- sapply(c(1:length(cols)), col_completed)
+    pre_output <- sapply(c(1:length(cols)), col_completed, row = matrixRow, level_rows = level_rows)
 
     return(pre_output)
   }
@@ -1073,17 +1070,6 @@ overcompleted_cols <- function(data, meta) {
 
     cols <- matrixRow[2:4] %>% .[!is.na(.)]
 
-    # Function used to check if each column for that geographic level has any cells that are not blank
-
-    col_completed <- function(x) {
-      y <- x + 1
-      col <- paste(matrixRow[y])
-
-      if (any(!is.na(level_rows[[col]] %>% .[. != ""]))) {
-        return(col)
-      }
-    }
-
     # flagging if sch or prov level and name is only filter
     filters <- meta %>%
       filter(col_type == "Filter") %>%
@@ -1095,9 +1081,9 @@ overcompleted_cols <- function(data, meta) {
       pull(filter_grouping_column)
 
     if (
-      matrixRow[3] %in% geography_matrix[13:14, 3] &
+      matrixRow[3] %in% geography_matrix[14:15, 3] &
         length(filters) == 1 &
-        any(filters[1] %in% geography_matrix[13:14, 3], filter_groups[1] %in% geography_matrix[13:14, 3])
+        any(filters[1] %in% geography_matrix[14:15, 3], filter_groups[1] %in% geography_matrix[14:15, 3])
     ) {
       sch_prov_only_filter <- TRUE
     } else {
@@ -1107,9 +1093,9 @@ overcompleted_cols <- function(data, meta) {
     # Apply over every column in the matrixRow (geographic_level) being tested
 
     if (sch_prov_only_filter == TRUE) {
-      pre_output <- sapply(c(1, 3), col_completed)
+      pre_output <- sapply(c(1, 3), col_completed, row = matrixRow, level_rows = level_rows)
     } else {
-      pre_output <- sapply(c(1:length(cols)), col_completed)
+      pre_output <- sapply(c(1:length(cols)), col_completed, row = matrixRow, level_rows = level_rows)
     }
 
     return(pre_output)
@@ -1120,12 +1106,14 @@ overcompleted_cols <- function(data, meta) {
 
   regional_matrix <- matrix(geography_matrix[2, ], nrow = 1)
   la_matrix <- matrix(geography_matrix[3, ], nrow = 1)
+  lsip_matrix <- matrix(geography_matrix[7, ], nrow = 1)
 
   overcomplete_geographies <- c(
     unlist(apply(regional_matrix, 1, overcomplete_regional_cols)),
     unlist(apply(la_matrix, 1, overcomplete_la_cols)),
-    unlist(apply(geography_matrix[4:12, ], 1, overcomplete_mid_cols)),
-    unlist(apply(geography_matrix[13:16, ], 1, overcomplete_low_cols))
+    unlist(apply(lsip_matrix, 1, overcomplete_lsip_cols)),
+    unlist(apply(geography_matrix[c(4:6, 8:13), ], 1, overcomplete_mid_cols)),
+    unlist(apply(geography_matrix[14:17, ], 1, overcomplete_low_cols))
   )
 
   if (length(overcomplete_geographies) == 0) {
@@ -1155,8 +1143,8 @@ overcompleted_cols <- function(data, meta) {
 
 ignored_rows <- function(data) {
   table_tool_rows <- data %>%
-    filter(geographic_level != geography_matrix[15, 1]) %>%
     filter(geographic_level != geography_matrix[16, 1]) %>%
+    filter(geographic_level != geography_matrix[17, 1]) %>%
     nrow()
 
   if (table_tool_rows == 0) {
@@ -1166,7 +1154,7 @@ ignored_rows <- function(data) {
     )
   } else {
     potential_ignored_rows <- data %>%
-      filter(geographic_level %in% geography_matrix[13:16, 1]) %>%
+      filter(geographic_level %in% geography_matrix[14:17, 1]) %>%
       nrow()
 
     if (potential_ignored_rows == 0) {
@@ -1178,21 +1166,21 @@ ignored_rows <- function(data) {
       levels_present <- data %>%
         distinct(geographic_level)
 
-      if (nrow(levels_present) == 1 & data$geographic_level[1] %in% geography_matrix[13:14, 1]) {
+      if (nrow(levels_present) == 1 & data$geographic_level[1] %in% geography_matrix[14:15, 1]) {
         output <- list(
           "message" = "No rows in the file will be ignored by the EES table tool.",
           "result" = "PASS"
         )
       } else {
-        if (geography_matrix[13, 1] %in% levels_present$geographic_level & geography_matrix[14, 1] %in% levels_present$geographic_level) {
+        if (geography_matrix[14, 1] %in% levels_present$geographic_level & geography_matrix[15, 1] %in% levels_present$geographic_level) {
           output <- list(
-            "message" = paste(geography_matrix[13, 1], "and", geography_matrix[14, 1], "data has been mixed - please contact the Statistics Development Team."),
+            "message" = paste(geography_matrix[14, 1], "and", geography_matrix[15, 1], "data has been mixed - please contact the Statistics Development Team."),
             "result" = "FAIL"
           )
         } else {
           output <- list(
             "message" = paste0(
-              potential_ignored_rows, " rows of data will be ignored by the table tool. <br> - These will be at ", geography_matrix[13, 1], ", ", geography_matrix[14, 1], ", ", geography_matrix[15, 1], " and ", geography_matrix[16, 1], " level. <br> - Please ",
+              potential_ignored_rows, " rows of data will be ignored by the table tool. <br> - These will be at ", geography_matrix[14, 1], ", ", geography_matrix[15, 1], ", ", geography_matrix[16, 1], " and ", geography_matrix[17, 1], " level. <br> - Please ",
               "<a href='mailto: explore.statistics@education.gov.uk'>contact us</a>", " or see our ",
               "<a href='https://dfe-analytical-services.github.io/stats-production-guidance-copy/ud.html#Allowable_geographic_levels' target='_blank'>guidance website</a>", # a message that we should add the option to see those rows in another tab at some point
               " for more information."
@@ -1421,6 +1409,61 @@ la_combinations <- function(data) {
   return(output)
 }
 
+# lsip_combinations -------------------------------------
+# Checking that region_code and region_name combinations are valid
+## Need to update reference list in error message to whatever method we use for LAs as the portal list doesn't include inner/outer london (which we allow)
+
+lsip_combinations <- function(data) {
+  level_description <- "Local skills improvement plan area"
+  level_line <- geography_dataframe %>% filter(geographic_level == level_description)
+  if (!level_line$code_field %in% names(data)) {
+    output <- list(
+      "message" = paste(level_line$code_field, "columns are not present in this data file."),
+      "result" = "IGNORE"
+    )
+  } else {
+    invalid_values <- rbind(
+      # Not allowing blanks for regional rows
+      data %>%
+        filter(geographic_level == level_description) %>%
+        select(level_line$code_field, level_line$name_field) %>%
+        unique() %>%
+        filter(lsip_code != gssNAvcode | is.na(lsip_code)),
+      data %>%
+        filter(geographic_level != level_description) %>%
+        select(level_line$code_field, level_line$name_field) %>%
+        unique() %>%
+        filter(!is.na(lsip_code) & !is.na(lsip_name)) %>%
+        filter(lsip_code != "") %>%
+        filter(lsip_code != gssNAvcode)
+    ) %>%
+      mutate(combo = paste(lsip_code, lsip_name)) %>%
+      pull(combo) %>%
+      .[!(. %in% expected_lsip_combinations)]
+
+    if (length(invalid_values) == 0) {
+      output <- list(
+        "message" = "All lsip_code and lsip_name combinations are valid.",
+        "result" = "PASS"
+      )
+    } else {
+      if (length(invalid_values) == 1) {
+        output <- list(
+          "message" = paste0("The following ", level_line$code_field, " and ", level_line$name_field, " combination is invalid for rows within the '", level_description, "' geographic_level: '", paste0(invalid_values), "'. <br> - We do not expect any combinations outside of the <a href='https://github.com/dfe-analytical-services/dfe-published-data-qa/blob/master/data/lsips.csv' target='_blank'>standard geographies lookup</a> (case sensitive), please check your name and code combinations against this lookup."),
+          "result" = "FAIL"
+        )
+      } else {
+        output <- list(
+          "message" = paste0("The following ", level_line$code_field, " / ", level_line$name_field, " combinations are invalid for rows within the '", level_description, "' geographic_level: '", paste0(invalid_values, collapse = "', '"), "'. <br> - We do not expect any combinations outside of the <a href='https://github.com/dfe-analytical-services/dfe-published-data-qa/blob/master/data/lsips.csv' target='_blank'>standard geographies lookup</a> (case sensitive), please check your name and code combinations against this lookup."),
+          "result" = "FAIL"
+        )
+      }
+    }
+  }
+
+  return(output)
+}
+
 # region_combinations -------------------------------------
 # Checking that region_code and region_name combinations are valid
 ## Need to update reference list in error message to whatever method we use for LAs as the portal list doesn't include inner/outer london (which we allow)
@@ -1517,10 +1560,6 @@ country_combinations <- function(data) {
 
 # other_geography_duplicates  ----------------------------------------
 # check that there is a 1:1 relationship between geography codes and names
-
-lower_level_geog_names <- geography_matrix[9:12, 2:3] %>% as.character() # skipping school/prov as they have legit duplicates
-lower_level_geog_levels <- geography_matrix[9:12, 1] %>% as.character()
-
 other_geography_duplicates <- function(data) {
   if (!any(lower_level_geog_levels %in% unique(data$geographic_level))) {
     output <- list(
@@ -1591,10 +1630,6 @@ other_geography_duplicates <- function(data) {
 
 # other_geography_code_duplicates  ----------------------------------------
 # check that there is a 1:1 relationship between geography names and codes
-
-lower_level_geog_names <- geography_matrix[9:12, 2:3] %>% as.character() # skipping school/prov as they have legit duplicates
-lower_level_geog_levels <- geography_matrix[9:12, 1] %>% as.character()
-
 other_geography_code_duplicates <- function(data) {
   if (!any(lower_level_geog_levels %in% unique(data$geographic_level))) {
     output <- list(
@@ -1668,7 +1703,12 @@ other_geography_code_duplicates <- function(data) {
 # checking if location has proper NA code, then name is "not available"
 
 na_geography <- function(data) {
-  geography_name_codes <- geography_matrix[1:14, 2:3] %>% # leaving school and provider in as we want to catch if anyone is using these
+  testable_levels <- c(
+    "Local authority district", "Parliamentary constituency",
+    "Local skills improvement plan area", "Local enterprise partnership",
+    "English devolved area", "Opportunity area", "Ward", "MAT", "Sponsor", "School", "Provider"
+  )
+  geography_name_codes <- geography_matrix[1:15, 2:3] %>% # leaving school and provider in as we want to catch if anyone is using these
     as.character() %>%
     .[!is.na(.)]
 
@@ -1695,7 +1735,7 @@ na_geography <- function(data) {
 
   testable_levels_present <- data %>%
     # Removing country, region, la (specific lookups), rsc region (only name) and planning area/institution (ignored in EES)
-    filter(geographic_level %in% c(geography_matrix[c(4, 6:14), 1])) %>%
+    filter(geographic_level %in% testable_levels) %>%
     distinct(geographic_level) %>%
     pull(geographic_level)
 
@@ -1749,7 +1789,12 @@ na_geography <- function(data) {
 # checking if location has the name "not available" then its code is the appropriate GSS code.
 
 na_geography_code <- function(data) {
-  geography_name_codes <- geography_matrix[1:14, 2:3] %>% # leaving school and provider in as we want to catch if anyone is using these
+  testable_levels <- c(
+    "Local authority district", "Parliamentary constituency",
+    "Local skills improvement plan area", "Local enterprise partnership",
+    "English devolved area", "Opportunity area", "Ward", "MAT", "Sponsor", "School", "Provider"
+  )
+  geography_name_codes <- geography_matrix[1:15, 2:3] %>% # leaving school and provider in as we want to catch if anyone is using these
     as.character() %>%
     .[!is.na(.)]
 
@@ -1776,7 +1821,7 @@ na_geography_code <- function(data) {
 
   testable_levels_present <- data %>%
     # Removing country, region, la (specific lookups), rsc region (only name) and planning area/institution (ignored in EES)
-    filter(geographic_level %in% c(geography_matrix[c(4, 6:14), 1])) %>%
+    filter(geographic_level %in% testable_levels) %>%
     distinct(geographic_level) %>%
     pull(geographic_level)
 
@@ -1950,9 +1995,9 @@ geographic_catch <- function(meta) {
 
   if (
     length(filters) == 1 &
-      any(filters[1] %in% geography_matrix[13:14, 3], filter_groups[1] %in% geography_matrix[13:14, 3])
+      any(filters[1] %in% geography_matrix[14:15, 3], filter_groups[1] %in% geography_matrix[14:15, 3])
   ) {
-    filters_and_groups <- c(filters, filter_groups)[!c(filters, filter_groups) %in% c(geography_matrix[13, 3], geography_matrix[14, 3])]
+    filters_and_groups <- c(filters, filter_groups)[!c(filters, filter_groups) %in% c(geography_matrix[14, 3], geography_matrix[15, 3])]
   } else {
     filters_and_groups <- c(filters, filter_groups)
   }
