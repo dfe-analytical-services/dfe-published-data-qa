@@ -164,6 +164,12 @@ test_that("lep_combinations", {
   expect_equal(testIndividualTest(pathStart, "lep_combinations"), "FAIL")
 })
 
+# lsip_combinations -------------------------------------------------------------------------------------------------------
+
+test_that("lsip_combinations", {
+  expect_equal(testIndividualTest(pathStart, "lsip_combinations"), "FAIL")
+})
+
 # pcon_combinations -------------------------------------------------------------------------------------------------------
 
 test_that("pcon_combinations", {
