@@ -62,6 +62,7 @@ mainTests <- function(data_character, meta_character, datafile, metafile) {
       ethnicity_values(datafile), # active test
       ethnicity_characteristic_group(datafile), # active test
       ethnicity_characteristic_values(datafile) # active test
+      indicators_smushed(metafile) # active test
     ),
     "stage" = "mainTests",
     "test" = c(activeTests$`R/mainTests.r`)
@@ -2719,5 +2720,50 @@ ethnicity_characteristic_values <- function(data) {
       "result" = "PASS"
     )
   }
+  return(output)
+}
+
+
+#' Indicators smushed
+#' 
+#' @description This test checks the meta data file for any indicators that appear
+#' to be 'smushed'. To do this, it flags any indicator col_name that contains 
+#' common filter entries (e.g. male, female, white, asian, black, etc)
+#' 
+#' @param meta 
+#'
+#' @return list(message, result) 
+#' @export
+#'
+#' @examples
+indicators_smushed <- function(meta) {
+  common_filter_substrings <- c(
+    'male', 'female',
+    'white', 'asian', 'black', 'chinese', 'indian', 'pakistani'
+  )
+  
+  indicator_names <- meta %>%
+    filter(
+      col_type == "Indicator", 
+      grepl(paste(common_filter_substrings,sep='|'), col_name, ignore.case=TRUE)
+      ) %>%
+    pull(col_name)
+  
+  if (length(indicator_names) > 0) {
+    output <- list(
+      "message" = paste0(
+        "The following indicators appear to not conform to tidy data principles: ",
+        paste(indicator_names,collapse=', '),
+        '. We recommend pivoting your data longer and adding a filter to contain characteristic choices.'
+        ),
+      "result" = "FAIL"
+    )
+  } else {
+    output <- list(
+      "message" = "No indicators found containing typical filter entries.",
+      "result" = "PASS"
+    )
+  }
+  
   return(output)
 }
