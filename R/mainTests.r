@@ -2724,38 +2724,35 @@ ethnicity_characteristic_values <- function(data) {
 }
 
 
-#' Indicators smushed
-#' 
-#' @description This test checks the meta data file for any indicators that appear
-#' to be 'smushed'. To do this, it flags any indicator col_name that contains 
-#' common filter entries (e.g. male, female, white, asian, black, etc)
-#' 
-#' @param meta 
-#'
-#' @return list(message, result) 
-#' @export
-#'
-#' @examples
+# Indicators smushed
+#
+# @description This test checks the meta data file for any indicators that appear
+# to be 'smushed'. To do this, it flags any indicator col_name that contains
+# common filter entries (e.g. male, female, white, asian, black, etc)
+#
+# @param meta
+#
+# @return list(message, result)
 indicators_smushed <- function(meta) {
   common_filter_substrings <- c(
-    'male', 'female',
-    'white', 'asian', 'black', 'chinese', 'indian', 'pakistani'
+    "male", "female",
+    "white", "asian", "black", "chinese", "indian", "pakistani"
   )
-  
+
   indicator_names <- meta %>%
     filter(
-      col_type == "Indicator", 
-      grepl(paste(common_filter_substrings,sep='|'), col_name, ignore.case=TRUE)
-      ) %>%
+      col_type == "Indicator",
+      grepl(paste(common_filter_substrings, collapse = "|"), col_name, ignore.case = TRUE)
+    ) %>%
     pull(col_name)
-  
+
   if (length(indicator_names) > 0) {
     output <- list(
       "message" = paste0(
         "The following indicators appear to not conform to tidy data principles: ",
-        paste(indicator_names,collapse=', '),
-        '. We recommend pivoting your data longer and adding a filter to contain characteristic choices.'
-        ),
+        paste(indicator_names, collapse = ", "),
+        ". We recommend pivoting your data longer and adding a filter to contain characteristic choices."
+      ),
       "result" = "FAIL"
     )
   } else {
@@ -2764,6 +2761,6 @@ indicators_smushed <- function(meta) {
       "result" = "PASS"
     )
   }
-  
+
   return(output)
 }
