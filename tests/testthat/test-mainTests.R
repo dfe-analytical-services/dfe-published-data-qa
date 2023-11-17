@@ -429,3 +429,7 @@ test_that("ethnicity_characteristic_values", {
     "ADVISORY"
   )
 })
+
+test_that("indicators_smushed", {
+  expect_equal(testIndividualTest(pathStart, "indicators_smushed"), "FAIL")
+})

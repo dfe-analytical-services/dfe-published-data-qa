@@ -1,7 +1,7 @@
 col_name,col_type,label,indicator_grouping,indicator_unit,indicator_dp,filter_hint,filter_grouping_column
 pupil_count,Indicator,Number of pupils,,,0,,
-pupil_count_male,Indicator,Number of male pupils,Sex,,0,,
-pupil_count_female,Indicator,Number of female pupils,Sex,,0,,
+pupil_count_sex_male,Indicator,Number of male pupils,Sex,,0,,
+pupil_count_sex_female,Indicator,Number of female pupils,Sex,,0,,
 pupil_count_white,Indicator,Number of ethnically white pupils,Ethnicity,,0,,
 pupil_count_asian,Indicator,Number of ethnically Asian pupils,Ethnicity,,0,,
 pupil_count_black,Indicator,Number of ethnically black pupils,Ethnicity,,0,,
