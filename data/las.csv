@@ -19,6 +19,7 @@ E09000024,Merton,01/01/2009,,E12000007,E09,London Boroughs,live,315
 E09000025,Newham,01/01/2009,,E12000007,E09,London Boroughs,live,316
 E09000026,Redbridge,01/01/2009,,E12000007,E09,London Boroughs,live,317
 E09000027,Richmond upon Thames,01/01/2009,,E12000007,E09,London Boroughs,live,318
+E09000021 / E09000027,Kingston upon Thames / Richmond upon Thames,01/01/2009,,E12000007,E09,London Boroughs,live,314 / 318
 E09000028,Southwark,01/01/2009,,E12000007,E09,London Boroughs,live,210
 E09000029,Sutton,01/01/2009,,E12000007,E09,London Boroughs,live,319
 E09000030,Tower Hamlets,01/01/2009,,E12000007,E09,London Boroughs,live,211
@@ -167,6 +168,7 @@ E08000037,Gateshead,01/04/2013,,E12000001,E08,Metropolitan Districts,live,390
 E06000058,"Bournemouth, Christchurch and Poole",01/04/2019,,E12000009,E06,Unitary Authorities,live,839
 E06000059,Dorset,01/04/2019,,E12000009,E06,Unitary Authorities,live,838
 E06000060,Buckinghamshire,01/04/2020,,E12000008,E06,Unitary Authorities,live,825
+E06000061 / E06000062,North Northamptonshire / West Northamptonshire,01/04/2021,,E12000004,E06,Unitary Authorities,live,940 / 941
 E06000061,North Northamptonshire,01/04/2021,,E12000004,E06,Unitary Authorities,live,940
 E06000062,West Northamptonshire,01/04/2021,,E12000004,E06,Unitary Authorities,live,941
 z,Outside of England and unknown,,,,,,,z
