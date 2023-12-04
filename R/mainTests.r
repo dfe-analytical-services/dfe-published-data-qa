@@ -2737,8 +2737,8 @@ indicators_smushed <- function(meta) {
   common_filter_substrings <- c(
     "male", "female",
     "asian", "chinese", "indian", "pakistani", "bangladeshi",
-    "black", "african", "caribbean", 
-    "white", "roma", "irish", "english", "british", "scottish", "welsh", "northern irish", 
+    "black", "african", "caribbean",
+    "white", "roma", "irish", "english", "british", "scottish", "welsh", "northern irish",
     "arab"
   )
 
@@ -2755,7 +2755,7 @@ indicators_smushed <- function(meta) {
         "The following indicators appear to not conform to tidy data principles: ",
         paste(indicator_names, collapse = ", "),
         ". We recommend pivoting your data longer and adding a filter to contain characteristic choices. ",
-        "Please ","<a href='mailto: explore.statistics@education.gov.uk'>contact us</a>"," for support on tidy data structures."
+        "Please ", "<a href='mailto: explore.statistics@education.gov.uk'>contact us</a>", " for support on tidy data structures."
       ),
       "result" = "FAIL"
     )
