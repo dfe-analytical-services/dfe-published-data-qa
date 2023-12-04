@@ -2754,7 +2754,8 @@ indicators_smushed <- function(meta) {
       "message" = paste0(
         "The following indicators appear to not conform to tidy data principles: ",
         paste(indicator_names, collapse = ", "),
-        ". We recommend pivoting your data longer and adding a filter to contain characteristic choices."
+        ". We recommend pivoting your data longer and adding a filter to contain characteristic choices. ",
+        "Please ","<a href='mailto: explore.statistics@education.gov.uk'>contact us</a>"," for support on tidy data structures."
       ),
       "result" = "FAIL"
     )
