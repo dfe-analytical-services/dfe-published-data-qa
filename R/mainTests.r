@@ -2736,7 +2736,10 @@ ethnicity_characteristic_values <- function(data) {
 indicators_smushed <- function(meta) {
   common_filter_substrings <- c(
     "male", "female",
-    "white", "asian", "black", "chinese", "indian", "pakistani"
+    "asian", "chinese", "indian", "pakistani", "bangladeshi",
+    "black", "african", "caribbean", 
+    "white", "roma", "irish", "english", "british", "scottish", "welsh", "northern irish", 
+    "arab"
   )
 
   indicator_names <- meta %>%
