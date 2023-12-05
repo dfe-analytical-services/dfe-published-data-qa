@@ -1,0 +1,9 @@
+time_period,time_identifier,geographic_level,country_code,country_name,region_code,region_name,pupil_count,pupil_count_sex_male,pupil_count_sex_female,pupil_count_white,pupil_count_asian,pupil_count_black,pupil_count_mixed,pupil_count_other
+201718,Academic year,National,E92000001,England,,,7909,3776,4133,5315,1111,1156,145,182
+201718,Academic year,Regional,E92000001,England,E12000001,North East,975,432,543,741,65,117,20,32
+201718,Academic year,Regional,E92000001,England,E12000003,Yorkshire and The Humber,465,234,231,326,80,28,9,22
+201718,Academic year,Regional,E92000001,England,E12000004,East Midlands,666,234,432,532,62,64,2,6
+201718,Academic year,Regional,E92000001,England,E12000006,East of England,1086,543,543,977,44,32,22,11
+201718,Academic year,Regional,E92000001,England,E12000008,South East,1188,534,654,713,300,95,24,56
+201718,Academic year,Regional,E92000001,England,E13000001,Inner London,1519,765,754,820,260,364,30,45
+201718,Academic year,Regional,E92000001,England,E13000002,Outer London,2010,1034,976,1206,300,456,38,10
