@@ -9,7 +9,7 @@ tidy_code <- function() {
 }
 
 run_tests_locally <- function() {
-  shhh(library(shinytest2))
+  shhh(source("global.r"))
   Sys.unsetenv("HTTP_PROXY")
   test_app()
 }
