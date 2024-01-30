@@ -32,6 +32,7 @@ shhh(library(config))
 # shhh(library(rsconnect))
 shhh(library(shinyalert))
 shhh(library(shinydisconnect))
+shhh(library(shinytest2))
 
 
 # activeTestsInFile ---------------------------------------------------------------------------------
