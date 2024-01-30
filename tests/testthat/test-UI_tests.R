@@ -5,7 +5,7 @@ test_that("Migrated shinytest test: UI_tests.R", {
 
   # 1. Does it load  -------------------------------------------------------------------------------------------------------------------
   message("\nRunning test 1 - load test")
-  Sys.sleep(1) 
+  Sys.sleep(1)
   app$expect_values()
 
   # 2 Passes everything -------------------------------------------------------------------------------------------------------------------
@@ -34,8 +34,10 @@ test_that("Migrated shinytest test: UI_tests.R", {
   app$upload_file(metafile = "test-data/passes_everything_ancillary.meta.csv")
   app$set_inputs(screenbutton = "click", timeout_ = 16000)
   Sys.sleep(3.2)
-  app$expect_values(output = c("progress_stage", "table_all_tests",
-    "fail_box", "passed_box", "advisory_box", "ancillary_box"))
+  app$expect_values(output = c(
+    "progress_stage", "table_all_tests",
+    "fail_box", "passed_box", "advisory_box", "ancillary_box"
+  ))
 
   app$set_inputs(resetbutton = "click")
 
@@ -45,8 +47,10 @@ test_that("Migrated shinytest test: UI_tests.R", {
   app$upload_file(metafile = "test-data/fails_prescreening2.meta.csv")
   app$set_inputs(screenbutton = "click", timeout_ = 16000)
   Sys.sleep(3.2)
-  app$expect_values(output = c("progress_stage", "table_all_tests",
-    "fail_box", "passed_box", "advisory_box", "ancillary_box"))
+  app$expect_values(output = c(
+    "progress_stage", "table_all_tests",
+    "fail_box", "passed_box", "advisory_box", "ancillary_box"
+  ))
 
   app$set_inputs(resetbutton = "click")
 
@@ -56,8 +60,10 @@ test_that("Migrated shinytest test: UI_tests.R", {
   app$upload_file(metafile = "test-data/fails_prescreening1.meta.csv")
   app$set_inputs(screenbutton = "click", timeout_ = 16000)
   Sys.sleep(3.2)
-  app$expect_values(output = c("progress_stage", "table_all_tests",
-    "fail_box", "passed_box", "advisory_box", "ancillary_box"))
+  app$expect_values(output = c(
+    "progress_stage", "table_all_tests",
+    "fail_box", "passed_box", "advisory_box", "ancillary_box"
+  ))
 
   app$set_inputs(resetbutton = "click")
 
@@ -67,8 +73,10 @@ test_that("Migrated shinytest test: UI_tests.R", {
   app$upload_file(metafile = "test-data/fails_allchecks.meta.csv")
   app$set_inputs(screenbutton = "click", timeout_ = 16000)
   Sys.sleep(3.2)
-  app$expect_values(output = c("progress_stage", "table_all_tests",
-    "fail_box", "passed_box", "advisory_box", "ancillary_box"))
+  app$expect_values(output = c(
+    "progress_stage", "table_all_tests",
+    "fail_box", "passed_box", "advisory_box", "ancillary_box"
+  ))
 
   app$set_inputs(resetbutton = "click")
 
@@ -78,8 +86,10 @@ test_that("Migrated shinytest test: UI_tests.R", {
   app$upload_file(metafile = "test-data/fails_file validation.meta.csv")
   app$set_inputs(screenbutton = "click", timeout_ = 16000)
   Sys.sleep(3.2)
-  app$expect_values(output = c("progress_stage", "table_all_tests",
-    "fail_box", "passed_box", "advisory_box", "ancillary_box"))
+  app$expect_values(output = c(
+    "progress_stage", "table_all_tests",
+    "fail_box", "passed_box", "advisory_box", "ancillary_box"
+  ))
 
   app$set_inputs(resetbutton = "click")
 
@@ -89,22 +99,28 @@ test_that("Migrated shinytest test: UI_tests.R", {
   app$upload_file(metafile = "test-data/fails_everything_ancillary.meta.csv")
   app$set_inputs(screenbutton = "click", timeout_ = 16000)
   Sys.sleep(3.2)
-  app$expect_values(output = c("progress_stage", "table_all_tests",
-    "fail_box", "passed_box", "advisory_box", "ancillary_box"))
+  app$expect_values(output = c(
+    "progress_stage", "table_all_tests",
+    "fail_box", "passed_box", "advisory_box", "ancillary_box"
+  ))
 
   app$set_inputs(resetbutton = "click")
 
   # 10 - Reset button -------------------------------------------------------------------------------------------------------------------
   message("Running test 10 - reset after failing")
-  app$expect_values(input = c("resetbutton", "screenbutton", "shinyjs-resettable-datafile",
-    "shinyjs-resettable-metafile"), output = c("advisory_box",
+  app$expect_values(input = c(
+    "resetbutton", "screenbutton", "shinyjs-resettable-datafile",
+    "shinyjs-resettable-metafile"
+  ), output = c(
+    "advisory_box",
     "all_tests", "ancillary_box", "failed_box", "passed_box",
     "data_cols", "data_rows", "data_size", "datafilename", "file_exists",
     "meta_rows", "meta_cols", "meta_size", "metafilename", "num_advisory_tests",
     "num_failed_tests", "progress_stage", "showresults", "sum_combined_tests",
     "sum_failed_tests", "sum_ignored_tests", "sum_passed_tests",
     "summary_text", "table_advisory_tests", "table_all_tests",
-    "table_failed_tests", "testtime"), export = TRUE)
+    "table_failed_tests", "testtime"
+  ), export = TRUE)
 
   # 11. Do the metadata preview tables populate as expected ------------------
   message("Running test 11 - preview table")
@@ -118,8 +134,10 @@ test_that("Migrated shinytest test: UI_tests.R", {
   # 12. Do the file info tables populate as expected -------------------------
   message("Running test 12 - file info tables")
   app$set_inputs(trendy_tabs = "obUnitTab", timeout_ = 16000)
-  app$expect_values(output = c("geog_time_perms2", "tables", "indicators",
-    "suppressed_cell_count_table"))
+  app$expect_values(output = c(
+    "geog_time_perms2", "tables", "indicators",
+    "suppressed_cell_count_table"
+  ))
 
   # 13. Explore indicators doesn't break with no arguments -------------------
   message("Running test 13 - test indicator choice with no arguments")
@@ -137,8 +155,10 @@ test_that("Migrated shinytest test: UI_tests.R", {
   # 15. Explore indicators doesn't break with just geography -----------------
   message("Running test 15 - explore indicators doesn't break with just geography")
   app$set_inputs(ind_parameter = character(0))
-  app$set_inputs(geog_parameter = c("National", "Regional", "Local authority",
-    "Local authority district"))
+  app$set_inputs(geog_parameter = c(
+    "National", "Regional", "Local authority",
+    "Local authority district"
+  ))
   app$set_inputs(submit = "click", timeout_ = 16000)
   Sys.sleep(3.2)
   app$expect_values(output = "table_list")
@@ -148,8 +168,10 @@ test_that("Migrated shinytest test: UI_tests.R", {
   app$set_inputs(ind_parameter = c("num_schools", "enrolments"))
   app$set_inputs(submit = "click", timeout_ = 16000)
   Sys.sleep(3.2)
-  app$expect_values(output = c("t_1", "t_2", "t_3", "t_4", "t_5",
-    "t_6", "t_7", "t_8"))
+  app$expect_values(output = c(
+    "t_1", "t_2", "t_3", "t_4", "t_5",
+    "t_6", "t_7", "t_8"
+  ))
 
   # 17. Outlier check doesn't break with no arguments ------------------------
   message("Running test 17 - outlier check doesn't break due to no arguments")
@@ -176,8 +198,10 @@ test_that("Migrated shinytest test: UI_tests.R", {
 
   # 20. Outlier check runs as expected --------------------------------------
   message("Running test 20 - outlier check runs as expected")
-  app$set_inputs(outlier_indicator_parameter = c("num_schools",
-    "enrolments"))
+  app$set_inputs(outlier_indicator_parameter = c(
+    "num_schools",
+    "enrolments"
+  ))
   app$set_inputs(threshold_setting = 5)
   app$set_inputs(submit_outlier = "click", timeout_ = 16000)
   Sys.sleep(3.2)
