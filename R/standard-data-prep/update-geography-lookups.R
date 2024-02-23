@@ -1,9 +1,14 @@
 library(readr)
+library(dplyr)
 # @param open_geography_file Lookup file sourced from
 #       https://geoportal.statistics.gov.uk/search?q=LUP_WPC&sort=Date%20Created%7Ccreated%7Cdesc
 #       e.g. data/downloaded_source_data/Ward_to_Westminster_Parliamentary_Constituency_to_Local_Authority_District_to_Upper_Tier_L.csv
-update_pcon_la_lookup <- function(open_geography_file, existing_data_file = "data/la_pcon_hierarchy.csv") {
-  new_data <- read_csv(open_geography_file)
+update_pcon_la_lookup <- function(
+    open_geography_file,
+    output_lookup = "data/la_pcon_hierarchy.csv",
+    existing_data_file = "data/la_pcon_hierarchy.csv") {
+  message("Reading in new data from: ", open_geography_file)
+  new_data <- read_csv(open_geography_file, show_col_types = FALSE)
   new_year <- names(new_data) %>%
     as.data.frame() %>%
     filter(grepl("PCON", .), grepl("CD", .)) %>%
@@ -44,7 +49,7 @@ update_pcon_la_lookup <- function(open_geography_file, existing_data_file = "dat
     )
   if (!is.null(existing_data_file)) {
     message("Reading data from existing file: ", existing_data_file)
-    existing_lookup <- read_csv(existing_data_file)
+    existing_lookup <- read_csv(existing_data_file, show_col_types = FALSE)
     new_lookup <- existing_lookup %>%
       rbind(new_lookup) %>%
       summarise(
@@ -53,16 +58,21 @@ update_pcon_la_lookup <- function(open_geography_file, existing_data_file = "dat
         .by = c("pcon_code", "pcon_name", "new_la_code", "la_name")
       )
   }
+  message("Writing updated lookup to: ", output_lookup)
   new_lookup %>%
     arrange(pcon_code, new_la_code) %>%
     filter(grepl("E", pcon_code)) %>% # Filter to only include England
-    write.csv("data/la_pcon_hierarchy.csv", row.names = FALSE)
+    write.csv(output_lookup, row.names = FALSE)
 }
 
 # @param open_geography_file Lookup file sourced from
 #       https://geoportal.statistics.gov.uk/search?q=lsip&sort=Title%7Ctitle%7Casc
-update_lad_lsip_lookup <- function(open_geography_file, existing_data_file = "data/lsip_lad_hierarchy.csv") {
-  new_data <- read_csv(open_geography_file)
+update_lad_lsip_lookup <- function(
+    open_geography_file,
+    output_lookup = "data/lsip_lad_hierarchy.csv",
+    existing_data_file = "data/lsip_lad_hierarchy.csv") {
+  message("Reading in new data from: ", open_geography_file)
+  new_data <- read_csv(open_geography_file, show_col_types = FALSE)
   new_year <- names(new_data) %>%
     as.data.frame() %>%
     filter(grepl("LSIP", .), grepl("CD", .)) %>%
@@ -83,7 +93,7 @@ update_lad_lsip_lookup <- function(open_geography_file, existing_data_file = "da
     )
   if (!is.null(existing_data_file)) {
     message("Reading data from existing file: ", existing_data_file)
-    existing_lookup <- read_csv(existing_data_file)
+    existing_lookup <- read_csv(existing_data_file, show_col_types = FALSE)
     new_lookup <- existing_lookup %>%
       rbind(new_lookup) %>%
       summarise(
@@ -92,7 +102,8 @@ update_lad_lsip_lookup <- function(open_geography_file, existing_data_file = "da
         .by = c("lad_code", "lad_name", "lsip_code", "lsip_name")
       )
   }
+  message("Writing updated lookup to: ", output_lookup)
   new_lookup %>%
     arrange(lsip_code, lad_code) %>%
-    write.csv("data/lsip_lad_hierarchy.csv", row.names = FALSE)
+    write.csv(output_lookup, row.names = FALSE)
 }
