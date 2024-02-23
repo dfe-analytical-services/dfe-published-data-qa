@@ -109,7 +109,11 @@ The function `tidy_code()` is created in the Rprofile script and therefore is al
 
 ### Geographies
 
-The standard geographies used in this tool are sourced from (or developed with) the Office for National Statistics (ONS). As such, they are maintained in line with the ONS's [open geography portal](https://geoportal.statistics.gov.uk/). Some further details on specific geographic levels are provided below.
+The standard geographies used in this tool are sourced from (or developed with) the Office for National Statistics (ONS). As such, they are maintained in line with the ONS's [open geography portal](https://geoportal.statistics.gov.uk/). 
+
+#### Updating pcon_la or lad_lsip lookups
+
+There's an R script in the R/standard-data-prep folder containing functions to update both the pcon_la and lad_lsip lookups. To use this, download the latest version of the file from the searches linked in the comments of that script, and then save a copy of that data in a new folder called /data/downloaded_source_data/. The functions will then append any new data from that CSV into the lookup files.
 
 #### Local skills improvement plan area (LSIP)
 
