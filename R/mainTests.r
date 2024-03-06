@@ -960,12 +960,19 @@ la_col_present <- function(data) {
   return(output)
 }
 
-# Function used to check if each column for that geographic level has any cells that are not blank
-
+# Function used to check if each column for that geographic level has any cells 
+# that are not blank
+# x: the index of the entry in the matrix row to check for
+# row: the matrix row containing the col_names being checked
+# level_rows: the data being checked (note this excludes rows with geographic 
+#   levels equating to row[1])
 col_completed <- function(x, row, level_rows) {
-  y <- x + 1
+  # The first entry in row is the geographic_level term, rather than a column 
+  # name, so skipping that one out with the +1.
+  y <- x + 1 
   col <- paste(row[y])
-
+  # Check for any data rows that contain anything other than NA or "" in the 
+  # col_name being checked
   if (any(!is.na(level_rows[[col]] %>% .[. != ""]))) {
     return(col)
   }
@@ -1046,7 +1053,7 @@ overcompleted_cols <- function(data, meta) {
 
     level_rows <- data %>%
       filter(geographic_level != matrixRow[1]) %>%
-      filter(!geographic_level %in% geography_matrix[14:17, ])
+      filter(!geographic_level %in% geography_matrix[14:16, ])
 
     # Extract the columns for the geographic level that is being tested
 
@@ -1113,8 +1120,8 @@ overcompleted_cols <- function(data, meta) {
     unlist(apply(regional_matrix, 1, overcomplete_regional_cols)),
     unlist(apply(la_matrix, 1, overcomplete_la_cols)),
     unlist(apply(lsip_matrix, 1, overcomplete_lsip_cols)),
-    unlist(apply(geography_matrix[c(4:6, 8:13), ], 1, overcomplete_mid_cols)),
-    unlist(apply(geography_matrix[14:17, ], 1, overcomplete_low_cols))
+    unlist(apply(geography_matrix[c(4:6, 8:13, 17), ], 1, overcomplete_mid_cols)),
+    unlist(apply(geography_matrix[14:16, ], 1, overcomplete_low_cols))
   )
 
   if (length(overcomplete_geographies) == 0) {
