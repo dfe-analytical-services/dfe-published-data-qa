@@ -960,18 +960,18 @@ la_col_present <- function(data) {
   return(output)
 }
 
-# Function used to check if each column for that geographic level has any cells 
+# Function used to check if each column for that geographic level has any cells
 # that are not blank
 # x: the index of the entry in the matrix row to check for
 # row: the matrix row containing the col_names being checked
-# level_rows: the data being checked (note this excludes rows with geographic 
+# level_rows: the data being checked (note this excludes rows with geographic
 #   levels equating to row[1])
 col_completed <- function(x, row, level_rows) {
-  # The first entry in row is the geographic_level term, rather than a column 
+  # The first entry in row is the geographic_level term, rather than a column
   # name, so skipping that one out with the +1.
-  y <- x + 1 
+  y <- x + 1
   col <- paste(row[y])
-  # Check for any data rows that contain anything other than NA or "" in the 
+  # Check for any data rows that contain anything other than NA or "" in the
   # col_name being checked
   if (any(!is.na(level_rows[[col]] %>% .[. != ""]))) {
     return(col)
