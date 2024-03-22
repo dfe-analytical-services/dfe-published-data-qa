@@ -119,6 +119,12 @@ There's an R script in the R/standard-data-prep folder containing functions to u
 
 These were developed in direct communications with the ONS ([ONS Geography e-mail](mailto:ONS.Geography@ons.gov.uk)) and they provided the basis for the code and name file used in this tool. At the time of writing, this has not been added to the open geography portal, although boundary files have been ([LSIP boundary map files](https://geoportal.statistics.gov.uk/search?collection=Dataset&sort=name&tags=all(BDY_LSIP%2CAUG_2023))).
 
+#### Wards
+
+The Ward to LAD lookup has been downloaded from the [Open Geography Portal administrative lookups](https://geoportal.statistics.gov.uk/search?q=LUP_WD_LAD&sort=Title%7Ctitle%7Cdesc). 
+
+For example, in March 2024 we downloaded and used the 'Ward to Local Authority District (May 2023) Lookup in the United Kingdom' data set.
+
 ---
 
 ## Contact
