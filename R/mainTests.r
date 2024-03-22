@@ -28,6 +28,7 @@ mainTests <- function(data_character, meta_character, datafile, metafile) {
       ignored_rows(datafile), # active test
       eda_combinations(datafile), # active test
       lsip_combinations(datafile), # active test
+      ward_combinations(datafile), # NOT YET ACTIVE
       lep_combinations(datafile), # active test
       pcon_combinations(datafile), # active test
       lad_combinations(datafile), # active test
@@ -1469,6 +1470,60 @@ lsip_combinations <- function(data) {
     }
   }
 
+  return(output)
+}
+
+# ward_combinations ---------------------------------------
+# Check that ward_code and ward_name combinations are valid
+
+ward_combinations <- function(data) {
+  level_description <- "Ward"
+  level_line <- geography_dataframe %>% filter(geographic_level == level_description)
+  if (!level_line$code_field %in% names(data)) {
+    output <- list(
+      "message" = paste(level_line$code_field, "columns are not present in this data file."),
+      "result" = "IGNORE"
+    )
+  } else {
+    invalid_values <- rbind(
+      # Not allowing blanks for regional rows
+      data %>%
+        filter(geographic_level == level_description) %>%
+        select(level_line$code_field, level_line$name_field) %>%
+        unique() %>%
+        filter(ward_code != gssNAvcode | is.na(ward_code)),
+      data %>%
+        filter(geographic_level != level_description) %>%
+        select(level_line$code_field, level_line$name_field) %>%
+        unique() %>%
+        filter(!is.na(ward_code) & !is.na(ward_code)) %>%
+        filter(ward_code != "") %>%
+        filter(ward_code != gssNAvcode)
+    ) %>%
+      mutate(combo = paste(ward_code, ward_name)) %>%
+      pull(combo) %>%
+      .[!(. %in% expected_ward_combinations)]
+    
+    if (length(invalid_values) == 0) {
+      output <- list(
+        "message" = "All ward_code and ward_name combinations are valid.",
+        "result" = "PASS"
+      )
+    } else {
+      if (length(invalid_values) == 1) {
+        output <- list(
+          "message" = paste0("The following ", level_line$code_field, " and ", level_line$name_field, " combination is invalid for rows within the '", level_description, "' geographic_level: '", paste0(invalid_values), "'. <br> - We do not expect any combinations outside of the <a href='https://github.com/dfe-analytical-services/dfe-published-data-qa/blob/master/data/ward_lad.csv' target='_blank'>standard geographies lookup</a> (case sensitive), please check your name and code combinations against this lookup."),
+          "result" = "FAIL"
+        )
+      } else {
+        output <- list(
+          "message" = paste0("The following ", level_line$code_field, " / ", level_line$name_field, " combinations are invalid for rows within the '", level_description, "' geographic_level: '", paste0(invalid_values, collapse = "', '"), "'. <br> - We do not expect any combinations outside of the <a href='https://github.com/dfe-analytical-services/dfe-published-data-qa/blob/master/data/ward_lad.csv' target='_blank'>standard geographies lookup</a> (case sensitive), please check your name and code combinations against this lookup."),
+          "result" = "FAIL"
+        )
+      }
+    }
+  }
+  
   return(output)
 }
 
