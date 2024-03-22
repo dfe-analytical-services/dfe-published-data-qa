@@ -76,6 +76,7 @@ lower_level_geog_names <- geography_dataframe %>%
 countries <- suppressMessages(read_csv("data/country.csv")) # change this to database eventually
 regions <- suppressMessages(read_csv("data/regions.csv")) # change this to database eventually
 lsips <- suppressMessages(read_csv("data/lsips.csv")) # change this to database eventually
+wards <- suppressMessages(read_csv("data/ward_lad.csv")) # change this to database eventually
 las <- suppressMessages(read_csv("data/las.csv")) # change this to database eventually
 lads <- suppressMessages(read_csv("data/lads.csv")) # change this to database eventually
 pcons <- suppressMessages(read_csv("data/pcons.csv")) # change this to database eventually
@@ -87,6 +88,8 @@ expected_country_combinations <- unique(paste(countries$country_code, countries$
 expected_region_combinations <- unique(paste(regions$region_code, regions$region_name))
 
 expected_lsip_combinations <- unique(paste(lsips$lsip_code, lsips$lsip_name))
+
+expected_ward_combinations <- unique(paste(wards$WD23CD, wards$WD23NM))
 
 expected_la_combinations <- unique(paste(las$old_la_code, las$new_la_code, las$la_name))
 

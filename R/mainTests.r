@@ -28,7 +28,7 @@ mainTests <- function(data_character, meta_character, datafile, metafile) {
       ignored_rows(datafile), # active test
       eda_combinations(datafile), # active test
       lsip_combinations(datafile), # active test
-      ward_combinations(datafile), # NOT YET ACTIVE
+      ward_combinations(datafile), # active test
       lep_combinations(datafile), # active test
       pcon_combinations(datafile), # active test
       lad_combinations(datafile), # active test
@@ -982,7 +982,7 @@ col_completed <- function(x, row, level_rows) {
 # overcompleted_cols -------------------------------------
 # Are any columns completed for unexpected rows
 
-overcompleted_cols <- function(data, meta) {
+overcompleted_cols <- function(data, meta) { #TODO : Update this so that Ward works with LAD and LA above it
   # ----------------------------------------------------------------------------------------------------------------------------------
   # checking if region cols are completed in national rows
 
@@ -1624,7 +1624,7 @@ country_combinations <- function(data) {
 # other_geography_duplicates  ----------------------------------------
 # check that there is a 1:1 relationship between geography codes and names
 other_geography_duplicates <- function(data) {
-  if (!any(lower_level_geog_levels %in% unique(data$geographic_level))) {
+  if (!any(lower_level_geog_levels %in% unique(data$geographic_level))) { #TODO : Update this and take ward out of it
     output <- list(
       "message" = "Lower-level geography data is not present in this data file.",
       "result" = "IGNORE"
@@ -1694,7 +1694,7 @@ other_geography_duplicates <- function(data) {
 # other_geography_code_duplicates  ----------------------------------------
 # check that there is a 1:1 relationship between geography names and codes
 other_geography_code_duplicates <- function(data) {
-  if (!any(lower_level_geog_levels %in% unique(data$geographic_level))) {
+  if (!any(lower_level_geog_levels %in% unique(data$geographic_level))) { #TODO : Update this and take ward out of it
     output <- list(
       "message" = "Lower-level geography data is not present in this data file.",
       "result" = "IGNORE"
