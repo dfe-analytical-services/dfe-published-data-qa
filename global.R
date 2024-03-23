@@ -1,9 +1,7 @@
 # Max file size ---------------------------------------------------------------------------------
-
 options(shiny.maxRequestSize = 800 * 1024^2)
 
 # Sanitising error messages (to avoid revealing anything untoward)
-
 options(shiny.sanitize.errors = TRUE)
 
 # Library calls ---------------------------------------------------------------------------------
@@ -19,7 +17,6 @@ shhh(library(shinyjs))
 shhh(library(tools))
 shhh(library(readr))
 shhh(library(testthat))
-# shhh(library(shinytest))
 shhh(library(styler))
 shhh(library(tidyr))
 shhh(library(ggplot2))
@@ -29,11 +26,14 @@ shhh(library(shinyWidgets))
 shhh(library(shinycssloaders))
 shhh(library(sparkline))
 shhh(library(config))
-# shhh(library(rsconnect))
 shhh(library(shinyalert))
 shhh(library(shinydisconnect))
 shhh(library(praise))
 shhh(library(dfeR))
+
+# Following are commented out as they are needed for CI / CD but not for running of app
+# shhh(library(shinytest))
+# shhh(library(rsconnect))
 
 # activeTestsInFile ---------------------------------------------------------------------------------
 # Extracting the active tests that are run against files
@@ -228,7 +228,6 @@ appLoadingCSS <- "
 options(spinner.type = 5)
 options(spinner.color = "#c8c8c8") # Grey '#C0C0C0') # Laura's blue #6294C6
 options(spinner.size = .5)
-
 
 # disconnect duck ---------------------------------------------------------
 
