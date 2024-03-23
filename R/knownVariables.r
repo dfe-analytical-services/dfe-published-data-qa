@@ -67,7 +67,7 @@ geography_dataframe <- geography_matrix %>%
   select(geographic_level = V1, code_field = V2, name_field = V3, code_field_secondary = V4)
 
 # Pull out lower level geographies that we don't have standardised lists for (and excluding school-provider etc levels)
-lower_level_geog_levels <- c("Opportunity area", "Ward", "MAT", "Sponsor")
+lower_level_geog_levels <- c("Opportunity area", "MAT", "Sponsor")
 lower_level_geog_names <- geography_dataframe %>%
   filter(geographic_level %in% lower_level_geog_levels) %>%
   pivot_longer(c(code_field, name_field)) %>%

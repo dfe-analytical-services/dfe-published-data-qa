@@ -1594,7 +1594,7 @@ country_combinations <- function(data) {
 # other_geography_duplicates  ----------------------------------------
 # check that there is a 1:1 relationship between geography codes and names
 other_geography_duplicates <- function(data) {
-  if (!any(lower_level_geog_levels %in% unique(data$geographic_level))) { # TODO : Update this and take ward out of it
+  if (!any(lower_level_geog_levels %in% unique(data$geographic_level))) {
     output <- list(
       "message" = "Lower-level geography data is not present in this data file.",
       "result" = "IGNORE"
@@ -1664,7 +1664,7 @@ other_geography_duplicates <- function(data) {
 # other_geography_code_duplicates  ----------------------------------------
 # check that there is a 1:1 relationship between geography names and codes
 other_geography_code_duplicates <- function(data) {
-  if (!any(lower_level_geog_levels %in% unique(data$geographic_level))) { # TODO : Update this and take ward out of it
+  if (!any(lower_level_geog_levels %in% unique(data$geographic_level))) {
     output <- list(
       "message" = "Lower-level geography data is not present in this data file.",
       "result" = "IGNORE"
