@@ -1106,7 +1106,7 @@ server <- function(input, output, session) {
               table() %>%
               as.data.frame() %>%
               filter(. %in% gss_symbols) %>%
-              mutate(Perc = roundFiveUp(Freq / total_indicator_count * 100, 1))
+              mutate(Perc = round_five_up(Freq / total_indicator_count * 100, 1))
 
             names(suppress_count) <- c("Symbol", "Frequency", "% of total cell count")
 

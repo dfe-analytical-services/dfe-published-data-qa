@@ -33,6 +33,7 @@ shhh(library(config))
 shhh(library(shinyalert))
 shhh(library(shinydisconnect))
 shhh(library(praise))
+shhh(library(dfeR))
 
 # activeTestsInFile ---------------------------------------------------------------------------------
 # Extracting the active tests that are run against files
@@ -223,18 +224,6 @@ appLoadingCSS <- "
 }
 "
 
-# roundFiveUp ----------------------------------------------------------------------------
-# This function is used in place of round() which rounds 5's down
-roundFiveUp <- function(x, n) {
-  positiveNegative <- sign(x)
-  z <- abs(x) * 10^n
-  z <- z + 0.5 + sqrt(.Machine$double.eps)
-  z <- trunc(z)
-  z <- z / 10^n
-  return(z * positiveNegative)
-}
-
-
 # spinner options ---------------------------------------------------------
 options(spinner.type = 5)
 options(spinner.color = "#c8c8c8") # Grey '#C0C0C0') # Laura's blue #6294C6
@@ -301,7 +290,7 @@ customDisconnectMessage <- function(refresh = "Refresh",
         id = "ss-connect-image",
         style = "display: block !important;",
         htmltools::tags$img(id = "ss-reload-image", src = "builder-duck.PNG"),
-        htmltools::tags$p("If this persists, please contact statistics.development@education.gov.uk with details of what you were trying to do.")
+        htmltools::tags$p("If this persists, please contact explore.statistics@education.gov.uk with details of what you were trying to do.")
       )
     ),
     htmltools::tags$div(id = "ss-overlay", style = "display: none;"),

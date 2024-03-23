@@ -422,6 +422,21 @@
       ],
       "Hash": "6b9602c7ebbe87101a9c8edb6e8b6d21"
     },
+    "dfeR": {
+      "Package": "dfeR",
+      "Version": "0.1.1",
+      "Source": "GitHub",
+      "RemoteType": "github",
+      "RemoteHost": "api.github.com",
+      "RemoteUsername": "dfe-analytical-services",
+      "RemoteRepo": "dfeR",
+      "RemoteRef": "main",
+      "RemoteSha": "1ef40da4c1a764a2eb7d8aea036462006ec8baf7",
+      "Requirements": [
+        "lifecycle"
+      ],
+      "Hash": "3026b396a59eb8484cc12380dd714e1c"
+    },
     "diffobj": {
       "Package": "diffobj",
       "Version": "0.3.5",
