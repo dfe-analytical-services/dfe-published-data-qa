@@ -982,70 +982,33 @@ col_completed <- function(x, row, level_rows) {
 # overcompleted_cols -------------------------------------
 # Are any columns completed for unexpected rows
 
-overcompleted_cols <- function(data, meta) { #TODO : Update this so that Ward works with LAD and LA above it
+overcompleted_cols <- function(data, meta) {
   # ----------------------------------------------------------------------------------------------------------------------------------
-  # checking if region cols are completed in national rows
+  # Helper function for calculating overcomplete rows
+  # Feed in the geog level you want to test, and then the levels it's columns it is okay to be completed for
+  # It will return any columns that are detected as filled in for rows that they shouldn't be
+  #
+  # E.g. if you use geog_row = 4, that is the LAD row in the geog matrix...
+  # ...then in compatible_levels you have c("School", "Ward")...
+  # ...it will check if LAD name or code are incorrectly filled in for LA and other rows like Regional...
+  # ...but not for school or ward, where you might expect LAD information in those rows
 
-  overcomplete_regional_cols <- function(matrixRow) {
-    # Filter the data to just the geographic levels that shouldn't have entries under region code and name
-    levels_incompatible_with_region <- c("National", "Local skills improvement plan area")
-
-    level_rows <- data %>% filter(geographic_level %in% levels_incompatible_with_region)
+  level_overcomplete_cols <- function(geog_row, compatible_levels) {
+    # Filter the data to just the geographic levels that shouldn't have entries for the geographic level
+    level_rows <- data %>% filter(!geographic_level %in% compatible_levels)
 
     # Extract the columns for the geographic level that is being tested
+    matrixRow <- matrix(geography_matrix[geog_row, ], nrow = 1)
 
     cols <- matrixRow[2:4] %>% .[!is.na(.)]
 
     # Apply over every column in the matrixRow (geographic_level) being tested
-
+    # Return any cols detected as overcompleted
     pre_output <- sapply(c(1:length(cols)), col_completed, row = matrixRow, level_rows = level_rows)
 
     return(pre_output)
   }
 
-  # ----------------------------------------------------------------------------------------------------------------------------------
-  # checking if local authority columns are completed for national, regional or mid-geography rows (ignoring LAD)
-
-  overcomplete_la_cols <- function(matrixRow) {
-    # This is a test that could benefit from more detail, and maybe a table in the error feedback
-
-    # Start by removing any geographic levels that are allowed to have entries in the LA ID and name columns
-    levels_compatible_with_la <- c("Local authority", "Local authority district", "School", "Provider", "Institution", "Planning area")
-
-    level_rows <- data %>% filter(!geographic_level %in% levels_compatible_with_la)
-
-    # Extract the columns for the geographic level that is being tested
-
-    cols <- matrixRow[2:4] %>% .[!is.na(.)]
-
-    # Apply over every column in the matrixRow (geographic_level) being tested
-
-    pre_output <- sapply(c(1:length(cols)), col_completed, row = matrixRow, level_rows = level_rows)
-
-    return(pre_output)
-  }
-
-  # ----------------------------------------------------------------------------------------------------------------------------------
-  # checking whether LSIP columns are completed for national, regional or mid-geography rows (ignoring LAD)
-
-  overcomplete_lsip_cols <- function(matrixRow) {
-    # This is a test that could benefit from more detail, and maybe a table in the error feedback
-
-    # Remove any geographic levels from the test data that are allowed to have LSIP code and name filled
-    levels_compatible_with_lsip <- c("Local skills improvement plan area", "Local authority district", "School", "Provider", "Institution", "Planning area")
-
-    level_rows <- data %>% filter(!geographic_level %in% levels_compatible_with_lsip)
-
-    # Extract the columns for the geographic level that is being tested
-
-    cols <- matrixRow[2:4] %>% .[!is.na(.)]
-
-    # Apply over every column in the matrixRow (geographic_level) being tested
-
-    pre_output <- sapply(c(1:length(cols)), col_completed, row = matrixRow, level_rows = level_rows)
-
-    return(pre_output)
-  }
   # ----------------------------------------------------------------------------------------------------------------------------------
   # checking if mid-geography cols are completed for unexpected levels
 
@@ -1111,17 +1074,24 @@ overcompleted_cols <- function(data, meta) { #TODO : Update this so that Ward wo
   }
 
   # ----------------------------------------------------------------------------------------------------------------------------------
-  # forcing these into a matrix, otherwise just calling that row returns a vector that breaks the apply function
-
-  regional_matrix <- matrix(geography_matrix[2, ], nrow = 1)
-  la_matrix <- matrix(geography_matrix[3, ], nrow = 1)
-  lsip_matrix <- matrix(geography_matrix[7, ], nrow = 1)
+  # Run all of the checks together and output any columns flagged as completed for rows that they shouldn't be
 
   overcomplete_geographies <- c(
-    unlist(apply(regional_matrix, 1, overcomplete_regional_cols)),
-    unlist(apply(la_matrix, 1, overcomplete_la_cols)),
-    unlist(apply(lsip_matrix, 1, overcomplete_lsip_cols)),
-    unlist(apply(geography_matrix[c(4:6, 8:13, 17), ], 1, overcomplete_mid_cols)),
+    # Regional
+    unlist(level_overcomplete_cols(2, compatible_levels = c("Regional", "Local skills improvement plan area", "Local authority", "Local enterprise partnership", "Opportunity area", "Local authority district", "Parliamentary constituency", "English devolved area", "Ward", "School", "Provider", "Institution", "Planning area"))),
+
+    # Local authority
+    unlist(level_overcomplete_cols(3, compatible_levels = c("Local authority", "Parliamentary constituency", "Local authority district", "Ward", "School", "Provider", "Institution", "Planning area"))),
+
+    # LAD
+    unlist(level_overcomplete_cols(4, compatible_levels = c("Local authority district", "Ward", "School", "Provider", "Institution"))),
+
+    # LSIP
+    unlist(level_overcomplete_cols(7, compatible_levels = c("Local skills improvement plan area", "Local authority district", "School", "Provider", "Institution", "Planning area"))),
+
+    # Other levels tested using old code
+    # forcing these into a matrix, otherwise just calling that row returns a vector that breaks the apply function
+    unlist(apply(geography_matrix[c(5, 6, 8:13, 17), ], 1, overcomplete_mid_cols)),
     unlist(apply(geography_matrix[14:16, ], 1, overcomplete_low_cols))
   )
 
@@ -1503,7 +1473,7 @@ ward_combinations <- function(data) {
       mutate(combo = paste(ward_code, ward_name)) %>%
       pull(combo) %>%
       .[!(. %in% expected_ward_combinations)]
-    
+
     if (length(invalid_values) == 0) {
       output <- list(
         "message" = "All ward_code and ward_name combinations are valid.",
@@ -1523,7 +1493,7 @@ ward_combinations <- function(data) {
       }
     }
   }
-  
+
   return(output)
 }
 
@@ -1624,7 +1594,7 @@ country_combinations <- function(data) {
 # other_geography_duplicates  ----------------------------------------
 # check that there is a 1:1 relationship between geography codes and names
 other_geography_duplicates <- function(data) {
-  if (!any(lower_level_geog_levels %in% unique(data$geographic_level))) { #TODO : Update this and take ward out of it
+  if (!any(lower_level_geog_levels %in% unique(data$geographic_level))) { # TODO : Update this and take ward out of it
     output <- list(
       "message" = "Lower-level geography data is not present in this data file.",
       "result" = "IGNORE"
@@ -1694,7 +1664,7 @@ other_geography_duplicates <- function(data) {
 # other_geography_code_duplicates  ----------------------------------------
 # check that there is a 1:1 relationship between geography names and codes
 other_geography_code_duplicates <- function(data) {
-  if (!any(lower_level_geog_levels %in% unique(data$geographic_level))) { #TODO : Update this and take ward out of it
+  if (!any(lower_level_geog_levels %in% unique(data$geographic_level))) { # TODO : Update this and take ward out of it
     output <- list(
       "message" = "Lower-level geography data is not present in this data file.",
       "result" = "IGNORE"
