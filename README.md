@@ -101,7 +101,9 @@ There is a debugging script (named as such) in the R folder. This uses the funct
 
 ### Code styling
 
-The function `tidy_code()` is created in the Rprofile script and therefore is always available in the RStudio console to tidy code according to tidyverse styling using the styler package. This function also helps to test the running of the code and for basic syntax errors such as missing commas and brackets.
+The function `styler::style_dir()` should be used to tidy code according to tidyverse styling using the styler package. This function also helps to test the running of the code and for basic syntax errors such as missing commas and brackets.
+
+There is a GitHub action workflow that automatically runs this against PRs to ensure all code going into the main branch is styled appropriately.
 
 ---
 
@@ -129,5 +131,4 @@ For example, in March 2024 we downloaded and used the 'Ward to Local Authority D
 
 ## Contact
 
-
-statistics.development@education.gov.uk
+explore.statistics@education.gov.uk

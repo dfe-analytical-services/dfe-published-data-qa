@@ -56,19 +56,17 @@ jobs:
       - name: Tidy code
         shell: Rscript {0}
         run: |
-            source("global.R")
-        
-            codeChecks <- tidy_code_function()
-            
+            codeChecks <- eval(styler::style_dir()$changed)
+
             if(any(is.na(codeChecks))) {
               stop("There is a breaking error in the code.")
             } else {
               if(TRUE %in% codeChecks) {
-                stop("The code is not styled correctly. Open the project in RStudio and use tidy_code() to restyle the code.")
+                stop("The code is not styled correctly. Open the project in RStudio and use styler::style_dir() to restyle the code.")
               } else {
-                message("----------------------------------------")
-                message("The code is beautiful, go you!")
-                message("----------------------------------------")
+                message("")
+                message(praise::praise("${Exclamation}! This code is ${Adjective}, go you!"))
+                message(""")
               }
             }
 
