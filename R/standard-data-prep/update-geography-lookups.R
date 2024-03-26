@@ -1,53 +1,50 @@
-# Example code for updating geography lookups =================================
-# source and use the functions in the /R/standard-data-prep/utils.R file to
+# Code for updating geography lookups =================================
+# source functions and dependencies
 
 source("R/standard-data-prep/utils.R")
 
-# PCON LA =====================================================================
+# Create a lookup table for shorthand to levels we care about
 
-new_pcon_la_file <- create_new_lookup(
-  # some stuff
-) %>%
-  # Manual faffing specific to this file
-  mutate(
-    la_name = if_else(
-      grepl("E11", new_la_code) | grepl("E12", new_la_code) | grepl("E13", new_la_code),
-      lad_name,
-      la_name
-    ),
-    new_la_code = if_else(
-      grepl("E11", new_la_code) | grepl("E12", new_la_code) | grepl("E13", new_la_code),
-      lad_code,
-      new_la_code
-    )
-  ) %>%
-  select(
-    pcon_code,
-    pcon_name,
-    new_la_code,
-    la_name
-  )
+open_geog_shorthands <- c("WD", "PCON", "LAD", "UTLA", "LSIP")
+name_column <- paste0(c("ward", "pcon", "lad", "la", "lsip"), "_name")
+code_column <- paste0(c("ward", "pcon", "lad", "new_la", "lsip"), "_code")
+
+open_geog_shorthand_lookup <- data.frame(
+  open_geog_shorthands,
+  name_column,
+  code_column
+)
+
+# PCON LA =====================================================================
+# Download latest from:
+# Last title of file on Open Geography Portal: 
 
 write_updated_lookup(
-  # some stuff
+  new_lookup = tidy_downloaded_lookup(
+    open_geography_file = "data/downloaded_source_data/Ward_to_Westminster_Parliamentary_Constituency_to_Local_Authority_District_to_Upper_Tier_L.csv",
+    shorthand_lookup = open_geog_shorthand_lookup
+  ),
+  lookup_filepath = "data/la_pcon_hierarchy.csv"
 )
 
 # LAD LSIP ====================================================================
 
-new_lad_lsip_file <- create_new_lookup(
-  # some stuff
-)
-
 write_updated_lookup(
-  # some stuff
+  new_lookup = tidy_downloaded_lookup(
+    open_geography_file = "",
+    shorthand_lookup = open_geog_shorthand_lookup
+  ),
+  
+  lookup_filepath = "data/la_pcon_hierarchy.csv"
 )
 
 # Ward LAD ====================================================================
 
-new_ward_lad_file <- create_new_lookup(
-  # some stuff
-)
-
 write_updated_lookup(
-  # some stuff
+  new_lookup = tidy_downloaded_lookup(
+    open_geography_file = "",
+    shorthand_lookup = open_geog_shorthand_lookup
+  ),
+  
+  lookup_filepath = "data/la_pcon_hierarchy.csv"
 )

@@ -1,37 +1,26 @@
-# Dependencies for this script ====
+# Dependencies for this script ================================================
 library(readr)
 library(dplyr)
 library(stringr)
 
-# Lookup table for shorthand to levels we care about ====
-
-open_geog_shorthands <- c("WD", "PCON", "LAD", "UTLA", "LSIP")
-geographic_level <- c("Ward", "Parliamentary consistuency", "Local authority district", "Local authority", "Local skills improvment plan area")
-name_column <- paste0(c("ward", "pcon", "lad", "la", "lsip"), "_name")
-code_column <- paste0(c("ward", "pcon", "lad", "new_la", "lsip"), "_code")
-
-shorthand_lookup <- data.frame(
-  open_geog_shorthands,
-  geographic_level,
-  name_column,
-  code_column
-)
-
-# Helper functions ====
+# Helper functions ============================================================
 
 #' Tidy a downloaded lookup file from the Open Geography Portal
 #'
-#' Takes a file from the open geography portal and tidies it ready for appending to an existing lookup
+#' Takes a file from the open geography portal and tidies it ready for
+#' appending to an existing lookup
 #'
-#' @param open_geography_file Lookup file sourced from
-#'      https://geoportal.statistics.gov.uk/search?q=LUP_WPC&sort=Date%20Created%7Ccreated%7Cdesc
-#'      e.g. data/downloaded_source_data/Ward_to_Westminster_Parliamentary_Constituency_to_Local_Authority_District_to_Upper_Tier_L.csv
-#' @param output_lookup
+#' @param open_geography_file lookup file downloaded from Open Geography Portal, 
+#' e.g. "data/downloaded_source_data/my_newly_downloaded_file.csv"
+#' @param shorthand_lookup data frame that gives the conversion from the Open
+#' Geography Portal's shorthands to our column names 
 #'
-#' @return
-
+#' @return a data frame of a tidied lookup file
 tidy_downloaded_lookup <- function(
-    open_geography_file) {
+    open_geography_file,
+    shorthand_lookup
+    ) {
+  
   # Read in the downloaded open geography file --------------------------------
   message("Reading in new data from: ", open_geography_file)
   new_data <- read_csv(open_geography_file, show_col_types = FALSE)
@@ -53,7 +42,7 @@ tidy_downloaded_lookup <- function(
   }
 
   #' Function to rename columns using the shorthand_lookup table made in
-  #' R/standard-data-prep/utils.R
+  #' R/standard-data-prep/update-geography-lookups.R
   #'
   #' @param col_name single column name to be updated based on the shorthand
   #' lookup table
@@ -121,19 +110,35 @@ tidy_downloaded_lookup <- function(
 
 #' Overwrite the existing lookup file by appending new data
 #'
-#' Take a tidied file produced by the tidy_downloaded_lookup function and append to existing lookup file
+#' Take a tidied file, likely produced by the tidy_downloaded_lookup function
+#' and either append to existing lookup file or write a new lookup file if
+#' one doesn't exist at the given file path
 #'
-#' @param new_lookup data fram of new lookup table, usually the output of tidy_downloaded_lookup
-#' @param existing_data_file filepath to existing lookup you want to update
+#' If a lookup file already exists it will automatically only use the columns
+#' present in that file
 #'
-#' @return message confirming if the existing CSV has been overwritten
+#' @param new_lookup data frame of new lookup table,
+#' usually the output of tidy_downloaded_lookup
+#' @param lookup_filepath file path to existing lookup you want to update,
+#' or the path for the new lookup to be written to
+#'
+#' @return message confirming if the CSV file has been successfully written
 
 write_updated_lookup <- function(
     new_lookup,
-    existing_data_file) {
-  # Start by reading the existing lookup from the repo
-  message("Reading data from existing file: ", existing_data_file)
-  existing_lookup <- read_csv(existing_data_file, show_col_types = FALSE)
+    lookup_filepath
+    ) {
+  
+  # If a lookup file exists already read it in
+  if (file.exists(lookup_filepath)) {
+    message("Reading data from existing file: ", lookup_filepath)
+    existing_lookup <- read_csv(lookup_filepath, show_col_types = FALSE)
+
+    # Filter the new lookup to only have the same columns
+    new_lookup <- new_lookup %>% select(all_of(names(existing_lookup)))
+  } else {
+    message("No existing lookup found at: ", lookup_filepath)
+  }
 
   # Work out the geography columns we care about in the new lookup
   cols_to_join_by <- names(new_lookup)[!names(new_lookup) %in% c("first_available_year_included", "most_recent_year_included")]
@@ -149,11 +154,11 @@ write_updated_lookup <- function(
     )
 
   # Update the existing lookup
-  message("Writing updated lookup to: ", output_lookup)
+  message("Writing new lookup to: ", lookup_filepath)
   tryCatch(
     {
-      write.csv(updated_lookup, row.names = FALSE)
-      message("...", output_lookup, " successfully updated")
+      write.csv(updated_lookup, file = paste(lookup_filepath), row.names = FALSE)
+      message("...", lookup_filepath, " successfully written")
     },
     error = function(msg) {
       message("Issue writing lookup file. Try looking at the code within the `write_updated_lookup()` function and running in the console separately.")
