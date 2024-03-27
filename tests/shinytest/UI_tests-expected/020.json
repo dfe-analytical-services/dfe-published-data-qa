@@ -79,6 +79,12 @@
             null
           ],
           [
+            null
+          ],
+          [
+            null
+          ],
+          [
             "Individual"
           ],
           [
@@ -91,7 +97,7 @@
             18
           ]
         ],
-        "container": "<table class=\"table table-bordered\">\n  <thead>\n    <tr>\n      <th>geographic_level<\/th>\n      <th>country_code<\/th>\n      <th>country_name<\/th>\n      <th>region_code<\/th>\n      <th>region_name<\/th>\n      <th>old_la_code<\/th>\n      <th>new_la_code<\/th>\n      <th>la_name<\/th>\n      <th>lad_code<\/th>\n      <th>lad_name<\/th>\n      <th>school_urn<\/th>\n      <th>school_laestab<\/th>\n      <th>school_name<\/th>\n      <th>lsip_code<\/th>\n      <th>lsip_name<\/th>\n      <th>local_enterprise_partnership_code<\/th>\n      <th>local_enterprise_partnership_name<\/th>\n      <th>pcon_code<\/th>\n      <th>pcon_name<\/th>\n      <th>ward_code<\/th>\n      <th>ward_name<\/th>\n      <th>english_devolved_area_code<\/th>\n      <th>english_devolved_area_name<\/th>\n      <th>school_phase<\/th>\n      <th>school_type<\/th>\n      <th>201617<\/th>\n      <th>201718<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>",
+        "container": "<table class=\"table table-bordered\">\n  <thead>\n    <tr>\n      <th>geographic_level<\/th>\n      <th>country_code<\/th>\n      <th>country_name<\/th>\n      <th>region_code<\/th>\n      <th>region_name<\/th>\n      <th>old_la_code<\/th>\n      <th>new_la_code<\/th>\n      <th>la_name<\/th>\n      <th>lad_code<\/th>\n      <th>lad_name<\/th>\n      <th>school_urn<\/th>\n      <th>school_laestab<\/th>\n      <th>school_name<\/th>\n      <th>lsip_code<\/th>\n      <th>lsip_name<\/th>\n      <th>local_enterprise_partnership_code<\/th>\n      <th>local_enterprise_partnership_name<\/th>\n      <th>pcon_code<\/th>\n      <th>pcon_name<\/th>\n      <th>ward_code<\/th>\n      <th>ward_name<\/th>\n      <th>english_devolved_area_code<\/th>\n      <th>english_devolved_area_name<\/th>\n      <th>trust_id<\/th>\n      <th>trust_name<\/th>\n      <th>school_phase<\/th>\n      <th>school_type<\/th>\n      <th>201617<\/th>\n      <th>201718<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>",
         "options": {
           "dom": "Bptl",
           "buttons": [
@@ -109,8 +115,8 @@
                 5,
                 10,
                 11,
-                25,
-                26
+                27,
+                28
               ]
             }
           ],
@@ -305,6 +311,14 @@
             null
           ],
           [
+            null,
+            null
+          ],
+          [
+            null,
+            null
+          ],
+          [
             "Individual",
             "Individual"
           ],
@@ -321,7 +335,7 @@
             12629
           ]
         ],
-        "container": "<table class=\"table table-bordered\">\n  <thead>\n    <tr>\n      <th>geographic_level<\/th>\n      <th>country_code<\/th>\n      <th>country_name<\/th>\n      <th>region_code<\/th>\n      <th>region_name<\/th>\n      <th>old_la_code<\/th>\n      <th>new_la_code<\/th>\n      <th>la_name<\/th>\n      <th>lad_code<\/th>\n      <th>lad_name<\/th>\n      <th>school_urn<\/th>\n      <th>school_laestab<\/th>\n      <th>school_name<\/th>\n      <th>lsip_code<\/th>\n      <th>lsip_name<\/th>\n      <th>local_enterprise_partnership_code<\/th>\n      <th>local_enterprise_partnership_name<\/th>\n      <th>pcon_code<\/th>\n      <th>pcon_name<\/th>\n      <th>ward_code<\/th>\n      <th>ward_name<\/th>\n      <th>english_devolved_area_code<\/th>\n      <th>english_devolved_area_name<\/th>\n      <th>school_phase<\/th>\n      <th>school_type<\/th>\n      <th>201617<\/th>\n      <th>201718<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>",
+        "container": "<table class=\"table table-bordered\">\n  <thead>\n    <tr>\n      <th>geographic_level<\/th>\n      <th>country_code<\/th>\n      <th>country_name<\/th>\n      <th>region_code<\/th>\n      <th>region_name<\/th>\n      <th>old_la_code<\/th>\n      <th>new_la_code<\/th>\n      <th>la_name<\/th>\n      <th>lad_code<\/th>\n      <th>lad_name<\/th>\n      <th>school_urn<\/th>\n      <th>school_laestab<\/th>\n      <th>school_name<\/th>\n      <th>lsip_code<\/th>\n      <th>lsip_name<\/th>\n      <th>local_enterprise_partnership_code<\/th>\n      <th>local_enterprise_partnership_name<\/th>\n      <th>pcon_code<\/th>\n      <th>pcon_name<\/th>\n      <th>ward_code<\/th>\n      <th>ward_name<\/th>\n      <th>english_devolved_area_code<\/th>\n      <th>english_devolved_area_name<\/th>\n      <th>trust_id<\/th>\n      <th>trust_name<\/th>\n      <th>school_phase<\/th>\n      <th>school_type<\/th>\n      <th>201617<\/th>\n      <th>201718<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>",
         "options": {
           "dom": "Bptl",
           "buttons": [
@@ -339,8 +353,8 @@
                 5,
                 10,
                 11,
-                25,
-                26
+                27,
+                28
               ]
             }
           ],
