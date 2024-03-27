@@ -18,10 +18,10 @@ open_geog_shorthand_lookup <- data.frame(
 # PCON LA =====================================================================
 # Download latest from: https://geoportal.statistics.gov.uk/search?q=LUP_WPC&sort=Date%20Created%7Ccreated%7Cdesc
 # ...and save into /data/downloaded_source_data
-# Then add the filepath into the function below to update the lookup to 
+# Then add the filepath into the function below to update the lookup to
 # ...account for any recent additions
 
-# Last title of file used on Open Geography Portal (incase it's helpful): 
+# Last title of file used on Open Geography Portal (incase it's helpful):
 # Ward to Westminster Parliamentary Constituency to Local Authority District to UTLA
 
 write_updated_lookup(
@@ -35,10 +35,10 @@ write_updated_lookup(
 # LAD LSIP ====================================================================
 # Download latest from: https://geoportal.statistics.gov.uk/datasets/effcab9660fd4375baaed44c2bd23719_0/explore?q=local%20skills%20lad
 # ...and save into /data/downloaded_source_data
-# Then add the filepath into the function below to update the lookup to 
+# Then add the filepath into the function below to update the lookup to
 # ...account for any recent additions
 
-# Last title of file used on Open Geography Portal (incase it's helpful): 
+# Last title of file used on Open Geography Portal (incase it's helpful):
 # LAD to Local skills improvement plan areas (August 2023) Lookup in England
 
 write_updated_lookup(
@@ -52,10 +52,10 @@ write_updated_lookup(
 # Ward LAD ====================================================================
 # Download latest from: https://geoportal.statistics.gov.uk/search?collection=dataset&q=ward%20lad
 # ...and save into /data/downloaded_source_data
-# Then add the filepath into the function below to update the lookup to 
+# Then add the filepath into the function below to update the lookup to
 # ...account for any recent additions
 
-# Last title of file used on Open Geography Portal (incase it's helpful): 
+# Last title of file used on Open Geography Portal (incase it's helpful):
 # Ward to Westminster Parliamentary Constituency to Local Authority District to UTLA (same as for pcon_la)
 
 write_updated_lookup(

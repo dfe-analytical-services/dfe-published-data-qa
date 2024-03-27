@@ -83,12 +83,12 @@ tidy_downloaded_lookup <- function(
       first_available_year_included = paste0("20", new_year),
       most_recent_year_included = paste0("20", new_year)
     )
-  
+
   # Remove ObjectId if it exists
-  if(suppressWarnings(!is.null(new_lookup$ObjectId))){
+  if (suppressWarnings(!is.null(new_lookup$ObjectId))) {
     new_lookup <- new_lookup %>% select(-ObjectId)
   }
-    
+
   # Extra tidy up for separating LAs / LADs
   # Not 100% on the logic but it seems to be filtering / sifting between LAs and LADs - is that right Rich?
   if ("new_la_code" %in% names(new_lookup)) {
