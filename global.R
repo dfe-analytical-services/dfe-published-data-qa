@@ -30,7 +30,7 @@ shhh(library(shinyalert))
 shhh(library(shinydisconnect))
 shhh(library(praise))
 shhh(library(dfeR))
-shhh(library(git2r))
+# shhh(library(git2r)) # this is needed in the repo, but not in the app
 
 # Following are commented out as they are needed for CI / CD but not for running of app
 # shhh(library(shinytest))
