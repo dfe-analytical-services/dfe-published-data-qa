@@ -1,13 +1,13 @@
 context("No filters")
 
 test_that("noFiltersFinalStage", {
-  screeningOutput <- testOther("../../tests/shinytest/test-data/noFilters.csv")
+  screeningOutput <- testOther("../../tests/testthat/test-data/noFilters.csv")
 
   expect_equal(screeningOutput$progress_message, "Made it to the full screening checks and passed")
 })
 
 test_that("noFiltersPassEverything", {
-  screeningOutput <- testOther("../../tests/shinytest/test-data/noFilters.csv")
+  screeningOutput <- testOther("../../tests/testthat/test-data/noFilters.csv")
 
   expect_equal(screeningOutput$results %>% filter(result == "FAIL") %>% nrow(), 0)
 })
@@ -15,7 +15,7 @@ test_that("noFiltersPassEverything", {
 context("Passes everything")
 
 test_that("PassEverything", {
-  screeningOutput <- testOther("../../tests/shinytest/test-data/passes_everything.csv")
+  screeningOutput <- testOther("../../tests/testthat/test-data/passes_everything.csv")
 
   expect_equal(screeningOutput$results %>% filter(!(result %in% c("PASS", "PASS WITH NOTE"))) %>% nrow(), 0)
 })
