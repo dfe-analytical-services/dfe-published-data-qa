@@ -23,32 +23,32 @@ jobs:
          with:
           profile: '"shiny"'
 
-      - name: Find PhantomJS path
-        id: phantomjs
-        run: |
-          echo "path=$(Rscript -e 'cat(shinytest:::phantom_paths()[[1]])')" >> $GITHUB_OUTPUT
+       - name: Find PhantomJS path
+         id: phantomjs
+         run: |
+           echo "path=$(Rscript -e 'cat(shinytest:::phantom_paths()[[1]])')" >> $GITHUB_OUTPUT
           
-      - name: Cache PhantomJS
-        uses: actions/cache@v4
-        with:
+       - name: Cache PhantomJS
+         uses: actions/cache@v4
+         with:
           path: ${{steps.phantomjs.outputs.path}}
           key: ${{ runner.os }}-phantomjs
           restore-keys: ${{ runner.os }}-phantomjs
           
-      - name: Install PhantomJS
-        shell: Rscript {0}
-        run: |
-          options(install.packages.check.source = "no")
-          if (!shinytest::dependenciesInstalled()) shinytest::installDependencies()
+       - name: Install PhantomJS
+         shell: Rscript {0}
+         run: |
+           options(install.packages.check.source = "no")
+           if (!shinytest::dependenciesInstalled()) shinytest::installDependencies()
           
-      - name: Run tests
-        shell: Rscript {0}
-        run: |
-          shiny::runTests(".", assert = TRUE)
+       - name: Run tests
+         shell: Rscript {0}
+         run: |
+           shiny::runTests(".", assert = TRUE)
           
-      - name: Upload test results
-        if: failure()
-        uses: actions/upload-artifact@master
-        with:
-          name: ${{ runner.os }}-r${{ matrix.config.r }}-tests
-          path: tests
+       - name: Upload test results
+         if: failure()
+         uses: actions/upload-artifact@master
+         with:
+           name: ${{ runner.os }}-r${{ matrix.config.r }}-tests
+           path: tests
