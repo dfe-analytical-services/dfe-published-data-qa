@@ -30,11 +30,13 @@ shhh(library(shinyalert))
 shhh(library(shinydisconnect))
 shhh(library(praise))
 shhh(library(dfeR))
-# shhh(library(git2r)) # this is needed in the repo, but not in the app
 
 # Following are commented out as they are needed for CI / CD but not for running of app
-# shhh(library(shinytest))
-# shhh(library(rsconnect))
+pigs_will_fly <- FALSE
+if (pigs_will_fly == TRUE) {
+  shhh(library(git2r))
+  shhh(library(shinytest))
+}
 
 # activeTestsInFile ---------------------------------------------------------------------------------
 # Extracting the active tests that are run against files
