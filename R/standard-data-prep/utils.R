@@ -10,17 +10,15 @@ library(stringr)
 #' Takes a file from the open geography portal and tidies it ready for
 #' appending to an existing lookup
 #'
-#' @param open_geography_file lookup file downloaded from Open Geography Portal, 
+#' @param open_geography_file lookup file downloaded from Open Geography Portal,
 #' e.g. "data/downloaded_source_data/my_newly_downloaded_file.csv"
 #' @param shorthand_lookup data frame that gives the conversion from the Open
-#' Geography Portal's shorthands to our column names 
+#' Geography Portal's shorthands to our column names
 #'
 #' @return a data frame of a tidied lookup file
 tidy_downloaded_lookup <- function(
     open_geography_file,
-    shorthand_lookup
-    ) {
-  
+    shorthand_lookup) {
   # Read in the downloaded open geography file --------------------------------
   message("Reading in new data from: ", open_geography_file)
   new_data <- read_csv(open_geography_file, show_col_types = FALSE)
@@ -84,9 +82,13 @@ tidy_downloaded_lookup <- function(
     mutate(
       first_available_year_included = paste0("20", new_year),
       most_recent_year_included = paste0("20", new_year)
-    ) %>%
-    select(-ObjectId)
-
+    )
+  
+  # Remove ObjectId if it exists
+  if(suppressWarnings(!is.null(new_lookup$ObjectId))){
+    new_lookup <- new_lookup %>% select(-ObjectId)
+  }
+    
   # Extra tidy up for separating LAs / LADs
   # Not 100% on the logic but it seems to be filtering / sifting between LAs and LADs - is that right Rich?
   if ("new_la_code" %in% names(new_lookup)) {
@@ -126,9 +128,7 @@ tidy_downloaded_lookup <- function(
 
 write_updated_lookup <- function(
     new_lookup,
-    lookup_filepath
-    ) {
-  
+    lookup_filepath) {
   # If a lookup file exists already read it in
   if (file.exists(lookup_filepath)) {
     message("Reading data from existing file: ", lookup_filepath)
@@ -137,6 +137,7 @@ write_updated_lookup <- function(
     # Filter the new lookup to only have the same columns
     new_lookup <- new_lookup %>% select(all_of(names(existing_lookup)))
   } else {
+    existing_lookup <- data.frame()
     message("No existing lookup found at: ", lookup_filepath)
   }
 
@@ -150,7 +151,7 @@ write_updated_lookup <- function(
     summarise(
       first_available_year_included = min(first_available_year_included),
       most_recent_year_included = max(most_recent_year_included),
-      .by = cols_to_join_by
+      .by = all_of(cols_to_join_by)
     )
 
   # Update the existing lookup
