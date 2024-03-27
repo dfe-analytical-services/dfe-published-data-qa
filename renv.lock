@@ -1,6 +1,6 @@
 {
   "R": {
-    "Version": "4.3.1",
+    "Version": "4.3.3",
     "Repositories": [
       {
         "Name": "CRAN",
@@ -422,6 +422,21 @@
       ],
       "Hash": "6b9602c7ebbe87101a9c8edb6e8b6d21"
     },
+    "dfeR": {
+      "Package": "dfeR",
+      "Version": "0.1.1",
+      "Source": "GitHub",
+      "RemoteType": "github",
+      "RemoteHost": "api.github.com",
+      "RemoteUsername": "dfe-analytical-services",
+      "RemoteRepo": "dfeR",
+      "RemoteRef": "main",
+      "RemoteSha": "1ef40da4c1a764a2eb7d8aea036462006ec8baf7",
+      "Requirements": [
+        "lifecycle"
+      ],
+      "Hash": "3026b396a59eb8484cc12380dd714e1c"
+    },
     "diffobj": {
       "Package": "diffobj",
       "Version": "0.3.5",
@@ -577,6 +592,18 @@
         "withr"
       ],
       "Hash": "313d31eff2274ecf4c1d3581db7241f9"
+    },
+    "git2r": {
+      "Package": "git2r",
+      "Version": "0.33.0",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Requirements": [
+        "R",
+        "graphics",
+        "utils"
+      ],
+      "Hash": "cdec9964efeda730d1b2cd3d5dd27747"
     },
     "glue": {
       "Package": "glue",

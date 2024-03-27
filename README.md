@@ -101,7 +101,9 @@ There is a debugging script (named as such) in the R folder. This uses the funct
 
 ### Code styling
 
-The function `tidy_code()` is created in the Rprofile script and therefore is always available in the RStudio console to tidy code according to tidyverse styling using the styler package. This function also helps to test the running of the code and for basic syntax errors such as missing commas and brackets.
+The function `styler::style_dir()` should be used to tidy code according to tidyverse styling using the styler package. This function also helps to test the running of the code and for basic syntax errors such as missing commas and brackets.
+
+There is a GitHub action workflow that automatically runs this against PRs to ensure all code going into the main branch is styled appropriately.
 
 ---
 
@@ -119,9 +121,14 @@ There's an R script in the R/standard-data-prep folder containing functions to u
 
 These were developed in direct communications with the ONS ([ONS Geography e-mail](mailto:ONS.Geography@ons.gov.uk)) and they provided the basis for the code and name file used in this tool. At the time of writing, this has not been added to the open geography portal, although boundary files have been ([LSIP boundary map files](https://geoportal.statistics.gov.uk/search?collection=Dataset&sort=name&tags=all(BDY_LSIP%2CAUG_2023))).
 
+#### Wards
+
+The Ward to LAD lookup has been downloaded from the [Open Geography Portal administrative lookups](https://geoportal.statistics.gov.uk/search?q=LUP_WD_LAD&sort=Title%7Ctitle%7Cdesc). 
+
+For example, in March 2024 we downloaded and used the 'Ward to Local Authority District (May 2023) Lookup in the United Kingdom' data set.
+
 ---
 
 ## Contact
 
-
-statistics.development@education.gov.uk
+explore.statistics@education.gov.uk

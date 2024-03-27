@@ -67,7 +67,7 @@ geography_dataframe <- geography_matrix %>%
   select(geographic_level = V1, code_field = V2, name_field = V3, code_field_secondary = V4)
 
 # Pull out lower level geographies that we don't have standardised lists for (and excluding school-provider etc levels)
-lower_level_geog_levels <- c("Opportunity area", "Ward", "MAT", "Sponsor")
+lower_level_geog_levels <- c("Opportunity area", "MAT", "Sponsor")
 lower_level_geog_names <- geography_dataframe %>%
   filter(geographic_level %in% lower_level_geog_levels) %>%
   pivot_longer(c(code_field, name_field)) %>%
@@ -76,6 +76,7 @@ lower_level_geog_names <- geography_dataframe %>%
 countries <- suppressMessages(read_csv("data/country.csv")) # change this to database eventually
 regions <- suppressMessages(read_csv("data/regions.csv")) # change this to database eventually
 lsips <- suppressMessages(read_csv("data/lsips.csv")) # change this to database eventually
+wards <- suppressMessages(read_csv("data/ward_lad_hierarchy.csv")) # change this to database eventually
 las <- suppressMessages(read_csv("data/las.csv")) # change this to database eventually
 lads <- suppressMessages(read_csv("data/lads.csv")) # change this to database eventually
 pcons <- suppressMessages(read_csv("data/pcons.csv")) # change this to database eventually
@@ -87,6 +88,8 @@ expected_country_combinations <- unique(paste(countries$country_code, countries$
 expected_region_combinations <- unique(paste(regions$region_code, regions$region_name))
 
 expected_lsip_combinations <- unique(paste(lsips$lsip_code, lsips$lsip_name))
+
+expected_ward_combinations <- unique(paste(wards$ward_code, wards$ward_name))
 
 expected_la_combinations <- unique(paste(las$old_la_code, las$new_la_code, las$la_name))
 

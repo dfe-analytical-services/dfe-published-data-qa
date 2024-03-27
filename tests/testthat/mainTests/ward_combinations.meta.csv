@@ -1,0 +1,4 @@
+﻿col_name,col_type,label,indicator_grouping,indicator_unit,indicator_dp,filter_hint,filter_grouping_column
+codes_issued,Indicator,Number of codes issued,,,,,
+codes_validated,Indicator,Number of codes validated,,,,,
+percent_validated,Indicator,Percentage of codes validated,,%,,,
