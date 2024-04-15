@@ -1,0 +1,42 @@
+col_name,breakdown _topic,filter_item,filter_grouping_column,filter_item_grouping,school_census_code
+sen_status,SEN status,Total,,,
+sen_status,SEN status,Any special educational need,,,
+sen_status,SEN status,No identified special educational need,,,
+sen_provision,SEN provision,"Education, health and care plan",sen_status,Any special educational needs,
+sen_provision,SEN provision,SEN support / SEN without an EHC plan,sen_status,Any special educational needs,
+sen_provision,SEN provision,No SEN provision,sen_status,No identified special educational needs,
+sen_provision,SEN provision,Total,sen_status,Total,
+sen_primary_need,SEN primary need,All primary need,,,
+sen_primary_need,SEN primary need,"Autistic spectrum disorder	",,,ASD
+sen_primary_need,SEN primary need,Hearing impairment,,,HI
+sen_primary_need,SEN primary need,Not reported,,,
+sen_primary_need,SEN primary need,Moderate learning difficulty,,,MLD
+sen_primary_need,SEN primary need,Multi-sensory impairment,,,MSI
+sen_primary_need,SEN primary need,Other difficulty or disability,,,OTH
+sen_primary_need,SEN primary need,Physical disability,,,PD
+sen_primary_need,SEN primary need,Profound and multiple learning difficulty,,,PMLD
+sen_primary_need,SEN primary need,SEN support but no specialist assessment of type of need,,,
+sen_primary_need,SEN primary need,Severe learning difficulty,,,SLD
+sen_primary_need,SEN primary need,"Social, emotional and mental health",,,SEMH
+sen_primary_need,SEN primary need,Specific learning difficulty,,,SPLD
+sen_primary_need,SEN primary need,"Speech, language and communication needs",,,SLCN
+sen_primary_need,SEN primary need,Vision impairment,,,VI
+sen_primary_need,SEN primary need,No primary need,,,
+sen_primary_need,SEN primary need,Unknown,,,
+sen_secondary_need,SEN secondary need,All secondary need,,,
+sen_secondary_need,SEN secondary need,"Autistic spectrum disorder	",,,ASD
+sen_secondary_need,SEN secondary need,Hearing impairment,,,HI
+sen_secondary_need,SEN secondary need,Not reported,,,
+sen_secondary_need,SEN secondary need,Moderate learning difficulty,,,MLD
+sen_secondary_need,SEN secondary need,Multi-sensory impairment,,,MSI
+sen_secondary_need,SEN secondary need,Other difficulty or disability,,,OTH
+sen_secondary_need,SEN secondary need,Physical disability,,,PD
+sen_secondary_need,SEN secondary need,Profound and multiple learning difficulty,,,PMLD
+sen_secondary_need,SEN secondary need,SEN support but no specialist assessment of type of need,,,
+sen_secondary_need,SEN secondary need,Severe learning difficulty,,,SLD
+sen_secondary_need,SEN secondary need,"Social, emotional and mental health",,,SEMH
+sen_secondary_need,SEN secondary need,Specific learning difficulty,,,SPLD
+sen_secondary_need,SEN secondary need,"Speech, language and communication needs",,,SLCN
+sen_secondary_need,SEN secondary need,Vision impairment,,,VI
+sen_secondary_need,SEN secondary need,No secondary need,,,
+sen_secondary_need,SEN secondary need,Unknown,,,
