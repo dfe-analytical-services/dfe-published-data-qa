@@ -2,9 +2,9 @@ col_name,breakdown _topic,filter_item,filter_grouping_column,filter_item_groupin
 sen_status,SEN status,Total,,,
 sen_status,SEN status,Any special educational need,,,
 sen_status,SEN status,No identified special educational need,,,
-sen_provision,SEN provision,"Education, health and care plan",sen_status,Any special educational needs,
-sen_provision,SEN provision,SEN support / SEN without an EHC plan,sen_status,Any special educational needs,
-sen_provision,SEN provision,No SEN provision,sen_status,No identified special educational needs,
+sen_provision,SEN provision,"Education, health and care plan",sen_status,Any special educational need,
+sen_provision,SEN provision,SEN support / SEN without an EHC plan,sen_status,Any special educational need,
+sen_provision,SEN provision,No SEN provision,sen_status,No identified special educational need,
 sen_provision,SEN provision,Total,sen_status,Total,
 sen_primary_need,SEN primary need,All primary need,,,
 sen_primary_need,SEN primary need,"Autistic spectrum disorder	",,,ASD
