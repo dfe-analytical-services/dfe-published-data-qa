@@ -90,16 +90,15 @@ tidy_downloaded_lookup <- function(
   }
 
   # Extra tidy up for separating LAs / LADs
-  # This bit's to deal with LAs and UTLAs not being quite the same thing. 
+  # This bit's to deal with LAs and UTLAs not being quite the same thing.
   # The parent UTLA for LADs in metropolitan counties (E11, e.g. Manchester),
-  # and Inner or Outer London (E13) are the Metropolitan counties 
-  # and Inner / Outer London. 
+  # and Inner or Outer London (E13) are the Metropolitan counties
+  # and Inner / Outer London.
   # But in these cases, the LA for our purposes is the LAD itself.
-  
+
   # So this is using the LAD as it's own parent LA if it's in a metropolitan
   # county or in London and taking the UTLA otherwise.
-  
-  So all this logic is doing is using the LAD as it's own parent LA if it's in a metropolitan county or in London and taking the UTLA otherwise.
+
   if ("new_la_code" %in% names(new_lookup)) {
     new_lookup1 <- new_lookup %>%
       mutate(
