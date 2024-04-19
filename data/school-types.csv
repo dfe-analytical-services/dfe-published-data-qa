@@ -3,7 +3,7 @@ establishment_type_group,Establishment type group,Academy,,,
 establishment_type_group,Establishment type group,Total,,,
 establishment_type_group,Establishment type group,All state funded,,,
 establishment_type_group,Establishment type group,Independent,,,
-establishment_type_group,Establishment type group,LA maintained,,,
+establishment_type_group,Establishment type group,Local authority maintained,,,
 establishment_type_group,Establishment type group,Non-maintained,,,
 establishment_governance,Establishment governance,Community,establishment_type_group,,CO
 establishment_governance,Establishment governance,Voluntary aided,establishment_type_group,,VA
