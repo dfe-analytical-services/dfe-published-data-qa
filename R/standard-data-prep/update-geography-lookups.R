@@ -3,18 +3,6 @@
 
 source("R/standard-data-prep/utils.R")
 
-# Create a lookup table for shorthand to levels we care about
-
-open_geog_shorthands <- c("WD", "PCON", "LAD", "UTLA", "LSIP")
-name_column <- paste0(c("ward", "pcon", "lad", "la", "lsip"), "_name")
-code_column <- paste0(c("ward", "pcon", "lad", "new_la", "lsip"), "_code")
-
-open_geog_shorthand_lookup <- data.frame(
-  open_geog_shorthands,
-  name_column,
-  code_column
-)
-
 # PCON LA =====================================================================
 # Download latest from: https://geoportal.statistics.gov.uk/search?q=LUP_WPC&sort=Date%20Created%7Ccreated%7Cdesc
 # ...and save into /data/downloaded_source_data

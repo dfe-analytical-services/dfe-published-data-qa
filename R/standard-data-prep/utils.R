@@ -3,6 +3,31 @@ library(readr)
 library(dplyr)
 library(stringr)
 
+# Helpful variables ===========================================================
+# Names of time columns
+time_cols <- c(
+  "first_available_year_included",
+  "most_recent_year_included"
+)
+
+# Create a lookup table for shorthand to levels we care about
+open_geog_shorthands <- c("WD", "PCON", "LAD", "UTLA", "LSIP")
+name_column <- paste0(c("ward", "pcon", "lad", "la", "lsip"), "_name")
+code_column <- paste0(c("ward", "pcon", "lad", "new_la", "lsip"), "_code")
+
+open_geog_shorthand_lookup <- data.frame(
+  open_geog_shorthands,
+  name_column,
+  code_column
+)
+
+# Create a vector of potential expected cols in lookups
+potential_cols <- c(
+  time_cols,
+  unlist(open_geog_shorthand_lookup$name_column, use.names = FALSE),
+  unlist(open_geog_shorthand_lookup$code_column, use.names = FALSE)
+)
+
 # Helper functions ============================================================
 
 #' Tidy a downloaded lookup file from the Open Geography Portal
@@ -100,7 +125,7 @@ tidy_downloaded_lookup <- function(
   # county or in London and taking the UTLA otherwise.
 
   if ("new_la_code" %in% names(new_lookup)) {
-    new_lookup1 <- new_lookup %>%
+    new_lookup <- new_lookup %>%
       mutate(
         la_name = if_else(
           grepl("E11", new_la_code) | grepl("E13", new_la_code),
@@ -114,6 +139,12 @@ tidy_downloaded_lookup <- function(
         )
       )
   }
+
+  # Strip out excess white space from name columns
+  new_lookup <- new_lookup %>%
+    mutate(across(ends_with("_name"), ~ str_replace_all(.x, "\\s+", " "))) %>%
+    # Also strip out leading and trailing whitespace for belts and braces
+    mutate(across(everything(), ~ str_trim(.x)))
 
   return(new_lookup)
 }
@@ -150,7 +181,7 @@ write_updated_lookup <- function(
   }
 
   # Work out the geography columns we care about in the new lookup
-  cols_to_join_by <- names(new_lookup)[!names(new_lookup) %in% c("first_available_year_included", "most_recent_year_included")]
+  cols_to_join_by <- names(new_lookup)[!names(new_lookup) %in% time_cols]
 
   # Append the new lookup
   updated_lookup <- existing_lookup %>%
@@ -161,6 +192,14 @@ write_updated_lookup <- function(
       most_recent_year_included = max(most_recent_year_included),
       .by = all_of(cols_to_join_by)
     )
+
+  # Select only columns that we expect
+  # Start with any possible column from the shorthand table
+  expected_columns <- potential_cols %>%
+    # Filter to only the ones that exist in the new file too
+    intersect(names(updated_lookup))
+
+  updated_lookup <- updated_lookup[, expected_columns]
 
   # Update the existing lookup
   message("Writing new lookup to: ", lookup_filepath)
