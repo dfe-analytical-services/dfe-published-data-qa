@@ -124,6 +124,9 @@ tidy_downloaded_lookup <- function(
   # So this is using the LAD as it's own parent LA if it's in a metropolitan
   # county or in London and taking the UTLA otherwise.
 
+  # For example, Barnsley is a metropolitan borough of South Yorkshire
+  # South Yorkshire is the UTLA, but we use Barnsley as the LA and LAD
+
   if ("new_la_code" %in% names(new_lookup)) {
     new_lookup <- new_lookup %>%
       mutate(

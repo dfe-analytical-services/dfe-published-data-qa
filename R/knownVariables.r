@@ -76,7 +76,7 @@ lower_level_geog_names <- geography_dataframe %>%
 countries <- suppressMessages(read_csv("data/country.csv")) # change this to database eventually
 regions <- suppressMessages(read_csv("data/regions.csv")) # change this to database eventually
 lsips <- suppressMessages(read_csv("data/lsips.csv")) # change this to database eventually
-wards <- suppressMessages(read_csv("data/ward_lad_hierarchy.csv")) # change this to database eventually
+wards <- suppressMessages(read_csv("data/ward_lad_la_pcon_hierarchy.csv")) # change this to database eventually
 las <- suppressMessages(read_csv("data/las.csv")) # change this to database eventually
 lads <- suppressMessages(read_csv("data/lads.csv")) # change this to database eventually
 pcons <- suppressMessages(read_csv("data/pcons.csv")) # change this to database eventually
@@ -100,7 +100,6 @@ expected_pcon_combinations <- unique(paste(pcons$pcon_code, pcons$pcon_name))
 expected_lep_combinations <- unique(paste(leps$local_enterprise_partnership_code, leps$local_enterprise_partnership_name))
 
 expected_eda_combinations <- unique(paste(edas$english_devolved_area_code, edas$english_devolved_area_name))
-
 
 acceptable_levels <- c(
   geography_matrix[, 1] %>% .[!is.na(.)]
