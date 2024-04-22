@@ -207,7 +207,7 @@ write_updated_lookup <- function(
   sorting_cols <- names(updated_lookup %>% select(ends_with("_code")))
 
   # Order the file by year and then code columns
-  updated_lookup %>% arrange(desc(most_recent_year_included), !!!sorting_cols)
+  updated_lookup <- updated_lookup %>% arrange(desc(most_recent_year_included), !!!sorting_cols)
 
   # Update the existing lookup
   message("Writing new lookup to: ", lookup_filepath)
