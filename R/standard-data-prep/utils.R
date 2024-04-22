@@ -193,13 +193,21 @@ write_updated_lookup <- function(
       .by = all_of(cols_to_join_by)
     )
 
+  # Final tidy up of the output file ==========================================
   # Select only columns that we expect
   # Start with any possible column from the shorthand table
   expected_columns <- potential_cols %>%
     # Filter to only the ones that exist in the new file too
     intersect(names(updated_lookup))
 
+  # Select the columns we expect
   updated_lookup <- updated_lookup[, expected_columns]
+
+  # Pull out code columns
+  sorting_cols <- names(updated_lookup %>% select(ends_with("_code")))
+
+  # Order the file by year and then code columns
+  updated_lookup %>% arrange(desc(most_recent_year_included), !!!sorting_cols)
 
   # Update the existing lookup
   message("Writing new lookup to: ", lookup_filepath)

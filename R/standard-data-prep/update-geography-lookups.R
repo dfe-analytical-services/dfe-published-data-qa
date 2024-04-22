@@ -14,7 +14,7 @@ source("R/standard-data-prep/utils.R")
 
 write_updated_lookup(
   new_lookup = tidy_downloaded_lookup(
-    open_geography_file = "data/downloaded_source_data/Ward_to_Westminster_Parliamentary_Constituency_to_Local_Authority_District_to_UTLA.csv",
+    open_geography_file = "data/downloaded_source_data/2023.csv",
     shorthand_lookup = open_geog_shorthand_lookup
   ),
   lookup_filepath = "data/la_pcon_hierarchy.csv"
