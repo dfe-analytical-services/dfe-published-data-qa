@@ -1,0 +1,72 @@
+col_name,breakdown_topic,filter_item,filter_grouping_column,filter_item_grouping,school_census_code
+establishment_type_group,Establishment type group,Academy,,,
+establishment_type_group,Establishment type group,Total,,,
+establishment_type_group,Establishment type group,All state funded,,,
+establishment_type_group,Establishment type group,Independent,,,
+establishment_type_group,Establishment type group,Local authority maintained,,,
+establishment_type_group,Establishment type group,Non-maintained,,,
+establishment_governance,Establishment governance,Community,establishment_type_group,,CO
+establishment_governance,Establishment governance,Voluntary aided,establishment_type_group,,VA
+establishment_governance,Establishment governance,Voluntary controlled,establishment_type_group,,VC
+establishment_governance,Establishment governance,Foundation,establishment_type_group,,FO
+establishment_governance,Establishment governance,Independent,establishment_type_group,,IN
+establishment_governance,Establishment governance,Non-maintained,establishment_type_group,,NM
+establishment_governance,Establishment governance,City technology college,establishment_type_group,,CT
+establishment_governance,Establishment governance,Academy,establishment_type_group,,CA
+education_phase,Education phase,All-through,establishment_type_group,,AT
+education_phase,Education phase,Alternative provision,establishment_type_group,,PR
+education_phase,Education phase,Early years settings,establishment_type_group,,
+education_phase,Education phase,Independent school,establishment_type_group,,
+education_phase,Education phase,Middle (deemed primary),establishment_type_group,,MP
+education_phase,Education phase,Middle (deemed secondary),establishment_type_group,,MS
+education_phase,Education phase,No establishment,establishment_type_group,,
+education_phase,Education phase,Nursery,establishment_type_group,,NS
+education_phase,Education phase,Primary,establishment_type_group,,PS
+education_phase,Education phase,Secondary,establishment_type_group,,SS
+education_phase,Education phase,Special,establishment_type_group,,SP
+education_phase,Education phase,Further education,establishment_type_group,,
+education_phase,Education phase,Higher education,establishment_type_group,,
+education_phase,Education phase,Total,establishment_type_group,,
+establishment_type,Establishment type,Academy 16 to 19 converter,education_phase;establishment_type_group;establishment_governance,,
+establishment_type,Establishment type,Academy 16 to 19 sponsor led,education_phase;establishment_type_group;establishment_governance,,
+establishment_type,Establishment type,Academy converter,education_phase;establishment_type_group;establishment_governance,,
+establishment_type,Establishment type,Academy sponsor led,education_phase;establishment_type_group;establishment_governance,,
+establishment_type,Establishment type,All establishments,education_phase;establishment_type_group;establishment_governance,,
+establishment_type,Establishment type,City technology college,education_phase;establishment_type_group;establishment_governance,,
+establishment_type,Establishment type,Community school,education_phase;establishment_type_group;establishment_governance,,
+establishment_type,Establishment type,Foundation school,education_phase;establishment_type_group;establishment_governance,,
+establishment_type,Establishment type,Free school,education_phase;establishment_type_group;establishment_governance,,
+establishment_type,Establishment type,Free school 16 to 19,education_phase;establishment_type_group;establishment_governance,,
+establishment_type,Establishment type,Hospital special school,education_phase;establishment_type_group;establishment_governance,,
+establishment_type,Establishment type,Other FE sector college,education_phase;establishment_type_group;establishment_governance,,
+establishment_type,Establishment type,Pupil referral unit,education_phase;establishment_type_group;establishment_governance,,
+establishment_type,Establishment type,Sixth form college,education_phase;establishment_type_group;establishment_governance,,
+establishment_type,Establishment type,Studio,education_phase;establishment_type_group;establishment_governance,,
+establishment_type,Establishment type,Sudio schools,education_phase;establishment_type_group;establishment_governance,,
+establishment_type,Establishment type,University technical college,education_phase;establishment_type_group;establishment_governance,,
+establishment_type,Establishment type,Voluntary aided school,education_phase;establishment_type_group;establishment_governance,,
+establishment_type,Establishment type,Voluntary controlled school,education_phase;establishment_type_group;establishment_governance,,
+establishment_type,Establishment type,Other non-selective school,education_phase;establishment_type_group;establishment_governance,,
+establishment_type,Establishment type,Non-selective school in highly selective area,education_phase;establishment_type_group;establishment_governance,,
+establishment_type,Establishment type,Selective school,education_phase;establishment_type_group;establishment_governance,,
+establishment_type,Establishment type,Total,,,
+provider_type,Provider type,Total,,,
+provider_type,Provider type,General FE college including tertiary,,,
+provider_type,Provider type,Other public funded (LAs and HE),,,
+provider_type,Provider type,Private sector public funded,,,
+provider_type,Provider type,Schools,,,
+provider_type,Provider type,Sixth form college,,,
+provider_type,Provider type,Specialist college,,,
+provider_type,Provider type,Further education colleges,,,
+provider_type,Provider type,Higher education providers,,,
+provider_type,Provider type,Local authorities,,,
+provider_type,Provider type,Other provider type,,,
+provider_type,Provider type,Private training providers in the FE sector,,,
+provider_type,Provider type,All group-based providers,,,
+provider_type,Provider type,All school-based providers,,,
+provider_type,Provider type,Childminders,,,
+provider_type,Provider type,Maintained nursery schools,,,
+provider_type,Provider type,Nursery class childcare settings,,,
+provider_type,Provider type,Private group-based providers,,,
+provider_type,Provider type,"School, college, LA and other unclassified group-based providers",,,
+provider_type,Provider type,Voluntary group-based providers,,,
