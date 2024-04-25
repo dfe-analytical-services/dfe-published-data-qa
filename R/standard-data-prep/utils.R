@@ -216,7 +216,7 @@ write_updated_lookup <- function(
   message("Writing new lookup to: ", lookup_filepath)
   tryCatch(
     {
-      write.csv(updated_lookup, file = paste(lookup_filepath), row.names = FALSE)
+      write_csv(updated_lookup, file = paste(lookup_filepath))
       message("...", lookup_filepath, " successfully written")
     },
     error = function(msg) {
