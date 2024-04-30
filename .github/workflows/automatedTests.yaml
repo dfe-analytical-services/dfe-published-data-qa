@@ -9,7 +9,7 @@ on:
 name: automatedTests
 
 jobs:
-  deployShiny:
+  automatedTests:
     runs-on: ubuntu-latest
     
     env:
