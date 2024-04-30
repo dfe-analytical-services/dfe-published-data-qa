@@ -27,7 +27,8 @@ jobs:
       
       - uses: r-lib/actions/setup-renv@v2
           
-      - uses: rstudio/shinytest2/actions/test-app@actions/v1
-        with:
-          app-dir: "."
+      - name: Run tests 
+        shell: Rscript {0}
+        run: |
+          shinytest2::test_app()
           
