@@ -86,6 +86,42 @@
                 6,
                 7
               ]
+            },
+            {
+              "name": "geographic_level",
+              "targets": 0
+            },
+            {
+              "name": "indicator",
+              "targets": 1
+            },
+            {
+              "name": "measure",
+              "targets": 2
+            },
+            {
+              "name": "201314",
+              "targets": 3
+            },
+            {
+              "name": "201415",
+              "targets": 4
+            },
+            {
+              "name": "201516",
+              "targets": 5
+            },
+            {
+              "name": "201617",
+              "targets": 6
+            },
+            {
+              "name": "201718",
+              "targets": 7
+            },
+            {
+              "name": "Change",
+              "targets": 8
             }
           ],
           "fnDrawCallback": "function (oSettings, json) {\n  $('.sparkSamples:not(:has(canvas))').sparkline('html', { type: 'line', lineColor: '#c8c8c8', fillColor: '#e87421', width: '200px', height: '40px'});\n}\n",
@@ -131,9 +167,9 @@
         },
         {
           "name": "dt-core-bootstrap",
-          "version": "1.13.4",
+          "version": "1.13.6",
           "src": {
-            "href": "dt-core-bootstrap-1.13.4"
+            "href": "dt-core-bootstrap-1.13.6"
           },
           "meta": null,
           "script": [
@@ -151,9 +187,9 @@
         },
         {
           "name": "crosstalk",
-          "version": "1.2.0",
+          "version": "1.2.1",
           "src": {
-            "href": "crosstalk-1.2.0"
+            "href": "crosstalk-1.2.1"
           },
           "meta": null,
           "script": "js/crosstalk.min.js",
@@ -164,9 +200,9 @@
         },
         {
           "name": "htmlwidgets",
-          "version": "1.6.2",
+          "version": "1.6.4",
           "src": {
-            "href": "htmlwidgets-1.6.2"
+            "href": "htmlwidgets-1.6.4"
           },
           "meta": null,
           "script": "htmlwidgets.js",
@@ -289,6 +325,42 @@
                 6,
                 7
               ]
+            },
+            {
+              "name": "geographic_level",
+              "targets": 0
+            },
+            {
+              "name": "indicator",
+              "targets": 1
+            },
+            {
+              "name": "measure",
+              "targets": 2
+            },
+            {
+              "name": "201314",
+              "targets": 3
+            },
+            {
+              "name": "201415",
+              "targets": 4
+            },
+            {
+              "name": "201516",
+              "targets": 5
+            },
+            {
+              "name": "201617",
+              "targets": 6
+            },
+            {
+              "name": "201718",
+              "targets": 7
+            },
+            {
+              "name": "Change",
+              "targets": 8
             }
           ],
           "fnDrawCallback": "function (oSettings, json) {\n  $('.sparkSamples:not(:has(canvas))').sparkline('html', { type: 'line', lineColor: '#c8c8c8', fillColor: '#e87421', width: '200px', height: '40px'});\n}\n",
@@ -334,9 +406,9 @@
         },
         {
           "name": "dt-core-bootstrap",
-          "version": "1.13.4",
+          "version": "1.13.6",
           "src": {
-            "href": "dt-core-bootstrap-1.13.4"
+            "href": "dt-core-bootstrap-1.13.6"
           },
           "meta": null,
           "script": [
@@ -354,9 +426,9 @@
         },
         {
           "name": "crosstalk",
-          "version": "1.2.0",
+          "version": "1.2.1",
           "src": {
-            "href": "crosstalk-1.2.0"
+            "href": "crosstalk-1.2.1"
           },
           "meta": null,
           "script": "js/crosstalk.min.js",
@@ -367,9 +439,9 @@
         },
         {
           "name": "htmlwidgets",
-          "version": "1.6.2",
+          "version": "1.6.4",
           "src": {
-            "href": "htmlwidgets-1.6.2"
+            "href": "htmlwidgets-1.6.4"
           },
           "meta": null,
           "script": "htmlwidgets.js",
@@ -492,6 +564,42 @@
                 6,
                 7
               ]
+            },
+            {
+              "name": "geographic_level",
+              "targets": 0
+            },
+            {
+              "name": "indicator",
+              "targets": 1
+            },
+            {
+              "name": "measure",
+              "targets": 2
+            },
+            {
+              "name": "201314",
+              "targets": 3
+            },
+            {
+              "name": "201415",
+              "targets": 4
+            },
+            {
+              "name": "201516",
+              "targets": 5
+            },
+            {
+              "name": "201617",
+              "targets": 6
+            },
+            {
+              "name": "201718",
+              "targets": 7
+            },
+            {
+              "name": "Change",
+              "targets": 8
             }
           ],
           "fnDrawCallback": "function (oSettings, json) {\n  $('.sparkSamples:not(:has(canvas))').sparkline('html', { type: 'line', lineColor: '#c8c8c8', fillColor: '#e87421', width: '200px', height: '40px'});\n}\n",
@@ -537,9 +645,9 @@
         },
         {
           "name": "dt-core-bootstrap",
-          "version": "1.13.4",
+          "version": "1.13.6",
           "src": {
-            "href": "dt-core-bootstrap-1.13.4"
+            "href": "dt-core-bootstrap-1.13.6"
           },
           "meta": null,
           "script": [
@@ -557,9 +665,9 @@
         },
         {
           "name": "crosstalk",
-          "version": "1.2.0",
+          "version": "1.2.1",
           "src": {
-            "href": "crosstalk-1.2.0"
+            "href": "crosstalk-1.2.1"
           },
           "meta": null,
           "script": "js/crosstalk.min.js",
@@ -570,9 +678,9 @@
         },
         {
           "name": "htmlwidgets",
-          "version": "1.6.2",
+          "version": "1.6.4",
           "src": {
-            "href": "htmlwidgets-1.6.2"
+            "href": "htmlwidgets-1.6.4"
           },
           "meta": null,
           "script": "htmlwidgets.js",
@@ -695,6 +803,42 @@
                 6,
                 7
               ]
+            },
+            {
+              "name": "geographic_level",
+              "targets": 0
+            },
+            {
+              "name": "indicator",
+              "targets": 1
+            },
+            {
+              "name": "measure",
+              "targets": 2
+            },
+            {
+              "name": "201314",
+              "targets": 3
+            },
+            {
+              "name": "201415",
+              "targets": 4
+            },
+            {
+              "name": "201516",
+              "targets": 5
+            },
+            {
+              "name": "201617",
+              "targets": 6
+            },
+            {
+              "name": "201718",
+              "targets": 7
+            },
+            {
+              "name": "Change",
+              "targets": 8
             }
           ],
           "fnDrawCallback": "function (oSettings, json) {\n  $('.sparkSamples:not(:has(canvas))').sparkline('html', { type: 'line', lineColor: '#c8c8c8', fillColor: '#e87421', width: '200px', height: '40px'});\n}\n",
@@ -740,9 +884,9 @@
         },
         {
           "name": "dt-core-bootstrap",
-          "version": "1.13.4",
+          "version": "1.13.6",
           "src": {
-            "href": "dt-core-bootstrap-1.13.4"
+            "href": "dt-core-bootstrap-1.13.6"
           },
           "meta": null,
           "script": [
@@ -760,9 +904,9 @@
         },
         {
           "name": "crosstalk",
-          "version": "1.2.0",
+          "version": "1.2.1",
           "src": {
-            "href": "crosstalk-1.2.0"
+            "href": "crosstalk-1.2.1"
           },
           "meta": null,
           "script": "js/crosstalk.min.js",
@@ -773,9 +917,9 @@
         },
         {
           "name": "htmlwidgets",
-          "version": "1.6.2",
+          "version": "1.6.4",
           "src": {
-            "href": "htmlwidgets-1.6.2"
+            "href": "htmlwidgets-1.6.4"
           },
           "meta": null,
           "script": "htmlwidgets.js",
@@ -898,6 +1042,42 @@
                 6,
                 7
               ]
+            },
+            {
+              "name": "geographic_level",
+              "targets": 0
+            },
+            {
+              "name": "indicator",
+              "targets": 1
+            },
+            {
+              "name": "measure",
+              "targets": 2
+            },
+            {
+              "name": "201314",
+              "targets": 3
+            },
+            {
+              "name": "201415",
+              "targets": 4
+            },
+            {
+              "name": "201516",
+              "targets": 5
+            },
+            {
+              "name": "201617",
+              "targets": 6
+            },
+            {
+              "name": "201718",
+              "targets": 7
+            },
+            {
+              "name": "Change",
+              "targets": 8
             }
           ],
           "fnDrawCallback": "function (oSettings, json) {\n  $('.sparkSamples:not(:has(canvas))').sparkline('html', { type: 'line', lineColor: '#c8c8c8', fillColor: '#e87421', width: '200px', height: '40px'});\n}\n",
@@ -943,9 +1123,9 @@
         },
         {
           "name": "dt-core-bootstrap",
-          "version": "1.13.4",
+          "version": "1.13.6",
           "src": {
-            "href": "dt-core-bootstrap-1.13.4"
+            "href": "dt-core-bootstrap-1.13.6"
           },
           "meta": null,
           "script": [
@@ -963,9 +1143,9 @@
         },
         {
           "name": "crosstalk",
-          "version": "1.2.0",
+          "version": "1.2.1",
           "src": {
-            "href": "crosstalk-1.2.0"
+            "href": "crosstalk-1.2.1"
           },
           "meta": null,
           "script": "js/crosstalk.min.js",
@@ -976,9 +1156,9 @@
         },
         {
           "name": "htmlwidgets",
-          "version": "1.6.2",
+          "version": "1.6.4",
           "src": {
-            "href": "htmlwidgets-1.6.2"
+            "href": "htmlwidgets-1.6.4"
           },
           "meta": null,
           "script": "htmlwidgets.js",
@@ -1101,6 +1281,42 @@
                 6,
                 7
               ]
+            },
+            {
+              "name": "geographic_level",
+              "targets": 0
+            },
+            {
+              "name": "indicator",
+              "targets": 1
+            },
+            {
+              "name": "measure",
+              "targets": 2
+            },
+            {
+              "name": "201314",
+              "targets": 3
+            },
+            {
+              "name": "201415",
+              "targets": 4
+            },
+            {
+              "name": "201516",
+              "targets": 5
+            },
+            {
+              "name": "201617",
+              "targets": 6
+            },
+            {
+              "name": "201718",
+              "targets": 7
+            },
+            {
+              "name": "Change",
+              "targets": 8
             }
           ],
           "fnDrawCallback": "function (oSettings, json) {\n  $('.sparkSamples:not(:has(canvas))').sparkline('html', { type: 'line', lineColor: '#c8c8c8', fillColor: '#e87421', width: '200px', height: '40px'});\n}\n",
@@ -1146,9 +1362,9 @@
         },
         {
           "name": "dt-core-bootstrap",
-          "version": "1.13.4",
+          "version": "1.13.6",
           "src": {
-            "href": "dt-core-bootstrap-1.13.4"
+            "href": "dt-core-bootstrap-1.13.6"
           },
           "meta": null,
           "script": [
@@ -1166,9 +1382,9 @@
         },
         {
           "name": "crosstalk",
-          "version": "1.2.0",
+          "version": "1.2.1",
           "src": {
-            "href": "crosstalk-1.2.0"
+            "href": "crosstalk-1.2.1"
           },
           "meta": null,
           "script": "js/crosstalk.min.js",
@@ -1179,9 +1395,9 @@
         },
         {
           "name": "htmlwidgets",
-          "version": "1.6.2",
+          "version": "1.6.4",
           "src": {
-            "href": "htmlwidgets-1.6.2"
+            "href": "htmlwidgets-1.6.4"
           },
           "meta": null,
           "script": "htmlwidgets.js",
@@ -1270,6 +1486,26 @@
             {
               "className": "dt-right",
               "targets": 3
+            },
+            {
+              "name": "geographic_level",
+              "targets": 0
+            },
+            {
+              "name": "indicator",
+              "targets": 1
+            },
+            {
+              "name": "measure",
+              "targets": 2
+            },
+            {
+              "name": "201314",
+              "targets": 3
+            },
+            {
+              "name": "Change",
+              "targets": 4
             }
           ],
           "fnDrawCallback": "function (oSettings, json) {\n  $('.sparkSamples:not(:has(canvas))').sparkline('html', { type: 'line', lineColor: '#c8c8c8', fillColor: '#e87421', width: '200px', height: '40px'});\n}\n",
@@ -1315,9 +1551,9 @@
         },
         {
           "name": "dt-core-bootstrap",
-          "version": "1.13.4",
+          "version": "1.13.6",
           "src": {
-            "href": "dt-core-bootstrap-1.13.4"
+            "href": "dt-core-bootstrap-1.13.6"
           },
           "meta": null,
           "script": [
@@ -1335,9 +1571,9 @@
         },
         {
           "name": "crosstalk",
-          "version": "1.2.0",
+          "version": "1.2.1",
           "src": {
-            "href": "crosstalk-1.2.0"
+            "href": "crosstalk-1.2.1"
           },
           "meta": null,
           "script": "js/crosstalk.min.js",
@@ -1348,9 +1584,9 @@
         },
         {
           "name": "htmlwidgets",
-          "version": "1.6.2",
+          "version": "1.6.4",
           "src": {
-            "href": "htmlwidgets-1.6.2"
+            "href": "htmlwidgets-1.6.4"
           },
           "meta": null,
           "script": "htmlwidgets.js",
@@ -1439,6 +1675,26 @@
             {
               "className": "dt-right",
               "targets": 3
+            },
+            {
+              "name": "geographic_level",
+              "targets": 0
+            },
+            {
+              "name": "indicator",
+              "targets": 1
+            },
+            {
+              "name": "measure",
+              "targets": 2
+            },
+            {
+              "name": "201314",
+              "targets": 3
+            },
+            {
+              "name": "Change",
+              "targets": 4
             }
           ],
           "fnDrawCallback": "function (oSettings, json) {\n  $('.sparkSamples:not(:has(canvas))').sparkline('html', { type: 'line', lineColor: '#c8c8c8', fillColor: '#e87421', width: '200px', height: '40px'});\n}\n",
@@ -1484,9 +1740,9 @@
         },
         {
           "name": "dt-core-bootstrap",
-          "version": "1.13.4",
+          "version": "1.13.6",
           "src": {
-            "href": "dt-core-bootstrap-1.13.4"
+            "href": "dt-core-bootstrap-1.13.6"
           },
           "meta": null,
           "script": [
@@ -1504,9 +1760,9 @@
         },
         {
           "name": "crosstalk",
-          "version": "1.2.0",
+          "version": "1.2.1",
           "src": {
-            "href": "crosstalk-1.2.0"
+            "href": "crosstalk-1.2.1"
           },
           "meta": null,
           "script": "js/crosstalk.min.js",
@@ -1517,9 +1773,9 @@
         },
         {
           "name": "htmlwidgets",
-          "version": "1.6.2",
+          "version": "1.6.4",
           "src": {
-            "href": "htmlwidgets-1.6.2"
+            "href": "htmlwidgets-1.6.4"
           },
           "meta": null,
           "script": "htmlwidgets.js",

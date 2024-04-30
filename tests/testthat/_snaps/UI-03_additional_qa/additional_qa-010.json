@@ -118,6 +118,122 @@
                 27,
                 28
               ]
+            },
+            {
+              "name": "geographic_level",
+              "targets": 0
+            },
+            {
+              "name": "country_code",
+              "targets": 1
+            },
+            {
+              "name": "country_name",
+              "targets": 2
+            },
+            {
+              "name": "region_code",
+              "targets": 3
+            },
+            {
+              "name": "region_name",
+              "targets": 4
+            },
+            {
+              "name": "old_la_code",
+              "targets": 5
+            },
+            {
+              "name": "new_la_code",
+              "targets": 6
+            },
+            {
+              "name": "la_name",
+              "targets": 7
+            },
+            {
+              "name": "lad_code",
+              "targets": 8
+            },
+            {
+              "name": "lad_name",
+              "targets": 9
+            },
+            {
+              "name": "school_urn",
+              "targets": 10
+            },
+            {
+              "name": "school_laestab",
+              "targets": 11
+            },
+            {
+              "name": "school_name",
+              "targets": 12
+            },
+            {
+              "name": "lsip_code",
+              "targets": 13
+            },
+            {
+              "name": "lsip_name",
+              "targets": 14
+            },
+            {
+              "name": "local_enterprise_partnership_code",
+              "targets": 15
+            },
+            {
+              "name": "local_enterprise_partnership_name",
+              "targets": 16
+            },
+            {
+              "name": "pcon_code",
+              "targets": 17
+            },
+            {
+              "name": "pcon_name",
+              "targets": 18
+            },
+            {
+              "name": "ward_code",
+              "targets": 19
+            },
+            {
+              "name": "ward_name",
+              "targets": 20
+            },
+            {
+              "name": "english_devolved_area_code",
+              "targets": 21
+            },
+            {
+              "name": "english_devolved_area_name",
+              "targets": 22
+            },
+            {
+              "name": "trust_id",
+              "targets": 23
+            },
+            {
+              "name": "trust_name",
+              "targets": 24
+            },
+            {
+              "name": "school_phase",
+              "targets": 25
+            },
+            {
+              "name": "school_type",
+              "targets": 26
+            },
+            {
+              "name": "201617",
+              "targets": 27
+            },
+            {
+              "name": "201718",
+              "targets": 28
             }
           ],
           "order": [
@@ -156,9 +272,9 @@
         },
         {
           "name": "dt-core-bootstrap",
-          "version": "1.13.4",
+          "version": "1.13.6",
           "src": {
-            "href": "dt-core-bootstrap-1.13.4"
+            "href": "dt-core-bootstrap-1.13.6"
           },
           "meta": null,
           "script": [
@@ -176,9 +292,9 @@
         },
         {
           "name": "dt-ext-buttons-bootstrap",
-          "version": "1.13.4",
+          "version": "1.13.6",
           "src": {
-            "href": "dt-ext-buttons-bootstrap-1.13.4"
+            "href": "dt-ext-buttons-bootstrap-1.13.6"
           },
           "meta": null,
           "script": [
@@ -196,9 +312,9 @@
         },
         {
           "name": "crosstalk",
-          "version": "1.2.0",
+          "version": "1.2.1",
           "src": {
-            "href": "crosstalk-1.2.0"
+            "href": "crosstalk-1.2.1"
           },
           "meta": null,
           "script": "js/crosstalk.min.js",
@@ -356,6 +472,122 @@
                 27,
                 28
               ]
+            },
+            {
+              "name": "geographic_level",
+              "targets": 0
+            },
+            {
+              "name": "country_code",
+              "targets": 1
+            },
+            {
+              "name": "country_name",
+              "targets": 2
+            },
+            {
+              "name": "region_code",
+              "targets": 3
+            },
+            {
+              "name": "region_name",
+              "targets": 4
+            },
+            {
+              "name": "old_la_code",
+              "targets": 5
+            },
+            {
+              "name": "new_la_code",
+              "targets": 6
+            },
+            {
+              "name": "la_name",
+              "targets": 7
+            },
+            {
+              "name": "lad_code",
+              "targets": 8
+            },
+            {
+              "name": "lad_name",
+              "targets": 9
+            },
+            {
+              "name": "school_urn",
+              "targets": 10
+            },
+            {
+              "name": "school_laestab",
+              "targets": 11
+            },
+            {
+              "name": "school_name",
+              "targets": 12
+            },
+            {
+              "name": "lsip_code",
+              "targets": 13
+            },
+            {
+              "name": "lsip_name",
+              "targets": 14
+            },
+            {
+              "name": "local_enterprise_partnership_code",
+              "targets": 15
+            },
+            {
+              "name": "local_enterprise_partnership_name",
+              "targets": 16
+            },
+            {
+              "name": "pcon_code",
+              "targets": 17
+            },
+            {
+              "name": "pcon_name",
+              "targets": 18
+            },
+            {
+              "name": "ward_code",
+              "targets": 19
+            },
+            {
+              "name": "ward_name",
+              "targets": 20
+            },
+            {
+              "name": "english_devolved_area_code",
+              "targets": 21
+            },
+            {
+              "name": "english_devolved_area_name",
+              "targets": 22
+            },
+            {
+              "name": "trust_id",
+              "targets": 23
+            },
+            {
+              "name": "trust_name",
+              "targets": 24
+            },
+            {
+              "name": "school_phase",
+              "targets": 25
+            },
+            {
+              "name": "school_type",
+              "targets": 26
+            },
+            {
+              "name": "201617",
+              "targets": 27
+            },
+            {
+              "name": "201718",
+              "targets": 28
             }
           ],
           "order": [
@@ -394,9 +626,9 @@
         },
         {
           "name": "dt-core-bootstrap",
-          "version": "1.13.4",
+          "version": "1.13.6",
           "src": {
-            "href": "dt-core-bootstrap-1.13.4"
+            "href": "dt-core-bootstrap-1.13.6"
           },
           "meta": null,
           "script": [
@@ -414,9 +646,9 @@
         },
         {
           "name": "dt-ext-buttons-bootstrap",
-          "version": "1.13.4",
+          "version": "1.13.6",
           "src": {
-            "href": "dt-ext-buttons-bootstrap-1.13.4"
+            "href": "dt-ext-buttons-bootstrap-1.13.6"
           },
           "meta": null,
           "script": [
@@ -434,9 +666,9 @@
         },
         {
           "name": "crosstalk",
-          "version": "1.2.0",
+          "version": "1.2.1",
           "src": {
-            "href": "crosstalk-1.2.0"
+            "href": "crosstalk-1.2.1"
           },
           "meta": null,
           "script": "js/crosstalk.min.js",

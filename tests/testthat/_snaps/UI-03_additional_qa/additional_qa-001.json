@@ -28,6 +28,150 @@
                 34,
                 35
               ]
+            },
+            {
+              "name": "time_period",
+              "targets": 0
+            },
+            {
+              "name": "time_identifier",
+              "targets": 1
+            },
+            {
+              "name": "geographic_level",
+              "targets": 2
+            },
+            {
+              "name": "country_code",
+              "targets": 3
+            },
+            {
+              "name": "country_name",
+              "targets": 4
+            },
+            {
+              "name": "region_code",
+              "targets": 5
+            },
+            {
+              "name": "region_name",
+              "targets": 6
+            },
+            {
+              "name": "old_la_code",
+              "targets": 7
+            },
+            {
+              "name": "new_la_code",
+              "targets": 8
+            },
+            {
+              "name": "la_name",
+              "targets": 9
+            },
+            {
+              "name": "lad_code",
+              "targets": 10
+            },
+            {
+              "name": "lad_name",
+              "targets": 11
+            },
+            {
+              "name": "school_urn",
+              "targets": 12
+            },
+            {
+              "name": "school_laestab",
+              "targets": 13
+            },
+            {
+              "name": "school_name",
+              "targets": 14
+            },
+            {
+              "name": "lsip_code",
+              "targets": 15
+            },
+            {
+              "name": "lsip_name",
+              "targets": 16
+            },
+            {
+              "name": "local_enterprise_partnership_code",
+              "targets": 17
+            },
+            {
+              "name": "local_enterprise_partnership_name",
+              "targets": 18
+            },
+            {
+              "name": "pcon_code",
+              "targets": 19
+            },
+            {
+              "name": "pcon_name",
+              "targets": 20
+            },
+            {
+              "name": "ward_code",
+              "targets": 21
+            },
+            {
+              "name": "ward_name",
+              "targets": 22
+            },
+            {
+              "name": "english_devolved_area_code",
+              "targets": 23
+            },
+            {
+              "name": "english_devolved_area_name",
+              "targets": 24
+            },
+            {
+              "name": "trust_id",
+              "targets": 25
+            },
+            {
+              "name": "trust_name",
+              "targets": 26
+            },
+            {
+              "name": "school_phase",
+              "targets": 27
+            },
+            {
+              "name": "school_type",
+              "targets": 28
+            },
+            {
+              "name": "num_schools",
+              "targets": 29
+            },
+            {
+              "name": "enrolments",
+              "targets": 30
+            },
+            {
+              "name": "sess_overall_percent",
+              "targets": 31
+            },
+            {
+              "name": "sess_authorised_percent",
+              "targets": 32
+            },
+            {
+              "name": "sess_unauthorised_percent",
+              "targets": 33
+            },
+            {
+              "name": "enrolments_pa_10_exact",
+              "targets": 34
+            },
+            {
+              "name": "enrolments_pa_10_exact_percent",
+              "targets": 35
             }
           ],
           "order": [
@@ -80,9 +224,9 @@
         },
         {
           "name": "dt-core-bootstrap",
-          "version": "1.13.4",
+          "version": "1.13.6",
           "src": {
-            "href": "dt-core-bootstrap-1.13.4"
+            "href": "dt-core-bootstrap-1.13.6"
           },
           "meta": null,
           "script": [
@@ -100,9 +244,9 @@
         },
         {
           "name": "crosstalk",
-          "version": "1.2.0",
+          "version": "1.2.1",
           "src": {
-            "href": "crosstalk-1.2.0"
+            "href": "crosstalk-1.2.1"
           },
           "meta": null,
           "script": "js/crosstalk.min.js",
@@ -129,6 +273,38 @@
             {
               "className": "dt-right",
               "targets": 5
+            },
+            {
+              "name": "col_name",
+              "targets": 0
+            },
+            {
+              "name": "col_type",
+              "targets": 1
+            },
+            {
+              "name": "label",
+              "targets": 2
+            },
+            {
+              "name": "indicator_grouping",
+              "targets": 3
+            },
+            {
+              "name": "indicator_unit",
+              "targets": 4
+            },
+            {
+              "name": "indicator_dp",
+              "targets": 5
+            },
+            {
+              "name": "filter_hint",
+              "targets": 6
+            },
+            {
+              "name": "filter_grouping_column",
+              "targets": 7
             }
           ],
           "order": [
@@ -181,9 +357,9 @@
         },
         {
           "name": "dt-core-bootstrap",
-          "version": "1.13.4",
+          "version": "1.13.6",
           "src": {
-            "href": "dt-core-bootstrap-1.13.4"
+            "href": "dt-core-bootstrap-1.13.6"
           },
           "meta": null,
           "script": [
@@ -201,9 +377,9 @@
         },
         {
           "name": "crosstalk",
-          "version": "1.2.0",
+          "version": "1.2.1",
           "src": {
-            "href": "crosstalk-1.2.0"
+            "href": "crosstalk-1.2.1"
           },
           "meta": null,
           "script": "js/crosstalk.min.js",

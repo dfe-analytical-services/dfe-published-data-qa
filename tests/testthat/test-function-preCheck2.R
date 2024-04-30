@@ -1,5 +1,3 @@
-context("preCheck2Functions")
-
 pathStart <- "preCheck2/"
 
 # time_identifier_mix -------------------------------------------------------------------------------------------------------

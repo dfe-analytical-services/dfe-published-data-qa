@@ -181,7 +181,7 @@ duplicate_rows <- function(data, meta) {
 
     if (nrow(dupes) > 0) {
       output <- list(
-        "message" = paste("There are", cs_num(nrow(dupes)), "duplicate rows in the data file. <br> - Note that", paste0(geography_matrix[16, 1], " and ", geography_matrix[17, 1]), "level rows were not included in this test."),
+        "message" = paste("There are", comma_sep(nrow(dupes)), "duplicate rows in the data file. <br> - Note that", paste0(geography_matrix[16, 1], " and ", geography_matrix[17, 1]), "level rows were not included in this test."),
         "result" = "FAIL"
       )
     } else {
@@ -201,7 +201,7 @@ duplicate_rows <- function(data, meta) {
 
     if (nrow(dupes) > 0) {
       output <- list(
-        "message" = paste("There are", cs_num(nrow(dupes)), "duplicate rows in the data file. <br> - Note that", paste0(geography_matrix[14, 1], ", ", geography_matrix[15, 1], ", ", geography_matrix[16, 1], " and ", geography_matrix[17, 1]), "level rows were not included in this test."),
+        "message" = paste("There are", comma_sep(nrow(dupes)), "duplicate rows in the data file. <br> - Note that", paste0(geography_matrix[14, 1], ", ", geography_matrix[15, 1], ", ", geography_matrix[16, 1], " and ", geography_matrix[17, 1]), "level rows were not included in this test."),
         "result" = "FAIL"
       )
     } else {

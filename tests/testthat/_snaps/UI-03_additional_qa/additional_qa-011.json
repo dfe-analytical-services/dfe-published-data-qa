@@ -290,6 +290,62 @@
                 11,
                 12
               ]
+            },
+            {
+              "name": "time_period",
+              "targets": 0
+            },
+            {
+              "name": "school_type",
+              "targets": 1
+            },
+            {
+              "name": "English devolved area",
+              "targets": 2
+            },
+            {
+              "name": "Local authority",
+              "targets": 3
+            },
+            {
+              "name": "Local authority district",
+              "targets": 4
+            },
+            {
+              "name": "Local enterprise partnership",
+              "targets": 5
+            },
+            {
+              "name": "Local skills improvement plan area",
+              "targets": 6
+            },
+            {
+              "name": "MAT",
+              "targets": 7
+            },
+            {
+              "name": "National",
+              "targets": 8
+            },
+            {
+              "name": "Parliamentary constituency",
+              "targets": 9
+            },
+            {
+              "name": "Regional",
+              "targets": 10
+            },
+            {
+              "name": "School",
+              "targets": 11
+            },
+            {
+              "name": "Ward",
+              "targets": 12
+            },
+            {
+              "name": "match",
+              "targets": 13
             }
           ],
           "order": [
@@ -328,9 +384,9 @@
         },
         {
           "name": "dt-core-bootstrap",
-          "version": "1.13.4",
+          "version": "1.13.6",
           "src": {
-            "href": "dt-core-bootstrap-1.13.4"
+            "href": "dt-core-bootstrap-1.13.6"
           },
           "meta": null,
           "script": [
@@ -348,9 +404,9 @@
         },
         {
           "name": "dt-ext-buttons-bootstrap",
-          "version": "1.13.4",
+          "version": "1.13.6",
           "src": {
-            "href": "dt-ext-buttons-bootstrap-1.13.4"
+            "href": "dt-ext-buttons-bootstrap-1.13.6"
           },
           "meta": null,
           "script": [
@@ -368,9 +424,9 @@
         },
         {
           "name": "crosstalk",
-          "version": "1.2.0",
+          "version": "1.2.1",
           "src": {
-            "href": "crosstalk-1.2.0"
+            "href": "crosstalk-1.2.1"
           },
           "meta": null,
           "script": "js/crosstalk.min.js",

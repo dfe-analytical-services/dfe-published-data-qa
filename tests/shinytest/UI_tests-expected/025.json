@@ -1,9 +1,0 @@
-{
-  "output": {
-    "progress_stage": {
-      "src": "[image data sha1: 2beac162fae1b3e21cd1979a3f47d9c765268c7a]",
-      "alt": "Failed at file validation stage, fix it then screen again"
-    },
-    "table_all_tests": "<table  class = 'table shiny-table table- spacing-s' style = 'width:auto;'>\n  <thead> <tr> <td> The data filename does not have spaces. <\/td> <td> PASS <\/td> <\/tr> <\/thead> <tbody>\n  <tr> <td> The metadata filename does not have spaces. <\/td> <td> PASS <\/td> <\/tr>\n  <tr> <td> The data filename does not have any special characters. <\/td> <td> PASS <\/td> <\/tr>\n  <tr> <td> The metadata filename does not have any special characters. <\/td> <td> PASS <\/td> <\/tr>\n  <tr> <td> The names of the files follow the recommended naming convention. <\/td> <td> PASS <\/td> <\/tr>\n  <tr> <td> There are fewer rows in the metadata file (8) than non-mandatory columns in the data file (14). <\/td> <td> PASS <\/td> <\/tr>\n  <tr> <td> The data and metadata files both appear to use a comma delimited structure. <\/td> <td> PASS <\/td> <\/tr>\n  <tr> <td> The data file does not have any blank rows. <\/td> <td> PASS <\/td> <\/tr>\n  <tr> <td> The metadata file does not have any blank rows. <\/td> <td> PASS <\/td> <\/tr>\n  <tr> <td> The data file does not have any blank columns <\/td> <td> PASS <\/td> <\/tr>\n  <tr> <td> The following mandatory columns are missing from the data file: 'geographic_level', 'time_period'. <\/td> <td> FAIL <\/td> <\/tr>\n  <tr> <td> All of the mandatory columns are present in the metadata file. <\/td> <td> PASS <\/td> <\/tr>\n   <\/tbody> <\/table>"
-  }
-}

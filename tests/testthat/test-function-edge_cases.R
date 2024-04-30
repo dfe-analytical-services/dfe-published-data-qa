@@ -1,26 +1,20 @@
-context("No filters")
-
 test_that("noFiltersFinalStage", {
-  screeningOutput <- testOther("../../tests/shinytest/test-data/noFilters.csv")
+  screeningOutput <- testOther("../../tests/testthat/test-data/noFilters.csv")
 
   expect_equal(screeningOutput$progress_message, "Made it to the full screening checks and passed")
 })
 
 test_that("noFiltersPassEverything", {
-  screeningOutput <- testOther("../../tests/shinytest/test-data/noFilters.csv")
+  screeningOutput <- testOther("../../tests/testthat/test-data/noFilters.csv")
 
   expect_equal(screeningOutput$results %>% filter(result == "FAIL") %>% nrow(), 0)
 })
 
-context("Passes everything")
-
 test_that("PassEverything", {
-  screeningOutput <- testOther("../../tests/shinytest/test-data/passes_everything.csv")
+  screeningOutput <- testOther("../../tests/testthat/test-data/passes_everything.csv")
 
   expect_equal(screeningOutput$results %>% filter(!(result %in% c("PASS", "PASS WITH NOTE"))) %>% nrow(), 0)
 })
-
-context("Quoted blanks")
 
 test_that("QuotedBlanks-overcompleted_cols", {
   screeningOutput <- testOther("../../tests/testthat/otherData/quoted_blank_geographies.csv")
@@ -39,8 +33,6 @@ test_that("QuotedBlanks-region_code", {
 
   expect_equal(screeningOutput$results %>% filter(test == "region_combinations") %>% pull(result) %>% unlist(use.names = FALSE), "PASS")
 })
-
-context("Financial quarter and halves")
 
 test_that("financialQuarterValid", {
   screeningOutput <- testOther("../../tests/testthat/otherData/financial_quarter.csv")
@@ -66,8 +58,6 @@ test_that("financialHalves", {
   expect_equal(screeningOutput$results %>% filter(result == "FAIL") %>% nrow(), 0)
 })
 
-context("Filter group edge cases")
-
 test_that("multipleFilterGroupStripped", {
   screeningOutput <- testOther("../../tests/testthat/otherData/multiple_stripped_filter_groups.csv")
 
@@ -79,8 +69,6 @@ test_that("blankFilterGroupsMeta", {
 
   expect_equal(screeningOutput$results %>% filter(result == "FAIL") %>% nrow(), 0)
 })
-
-context("Geography edge cases")
 
 test_that("zLocationCode", {
   screeningOutput <- testOther("../../tests/testthat/otherData/adding_z_locationCode.csv")
@@ -118,8 +106,6 @@ test_that("regional_blanks", {
   expect_equal(screeningOutput$results %>% filter(test == "region_combinations") %>% pull(result) %>% unlist(use.names = FALSE), "FAIL")
   expect_equal(screeningOutput$results %>% filter(result == "FAIL") %>% nrow() > 0, TRUE)
 })
-
-context("School and provider scenarios")
 
 test_that("prov_level_only", {
   screeningOutput <- testOther("../../tests/testthat/sch_prov/prov_level_only.csv")

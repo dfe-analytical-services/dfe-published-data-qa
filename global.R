@@ -35,7 +35,8 @@ shhh(library(dfeR))
 pigs_will_fly <- FALSE
 if (pigs_will_fly == TRUE) {
   shhh(library(git2r))
-  shhh(library(shinytest))
+  shhh(library(shinytest2))
+  shhh(library(diffviewer))
 }
 
 # activeTestsInFile ---------------------------------------------------------------------------------
@@ -48,29 +49,6 @@ activeTestsInFile <- function(file) {
 activeTests <- sapply(c("R/fileValidation.r", "R/preCheck1.r", "R/preCheck2.r", "R/mainTests.r"), activeTestsInFile, simplify = FALSE)
 
 numberActiveTests <- length(unlist(activeTests, use.names = FALSE))
-
-# Function scripts ---------------------------------------------------------------------------------
-
-source("R/knownVariables.r", encoding = "UTF-8")
-source("R/readFile.r")
-source("R/screenFiles.r")
-
-# present_file_size ---------------------------------------------------------------------------------
-# Function to show the file size
-
-present_file_size <- function(filesize) {
-  if (is.null(filesize)) {} else {
-    if (round(filesize / 1024 / 1024 / 1024, 2) >= 1) {
-      return(paste0(round(filesize / 1024 / 1024 / 1024, 2), " GB"))
-    } else {
-      if (round(filesize / 1024 / 1024, 2) < 1) {
-        return(paste0(round(filesize / 1024, 2), " Bytes"))
-      } else {
-        return(paste0(round(filesize / 1024 / 1024, 2), " MB"))
-      }
-    }
-  }
-}
 
 # Results boxes ----------------------------------------------------------------------------
 
@@ -190,13 +168,6 @@ info_results_box <- function(message, table) {
       )
     )
   )
-}
-
-# cs_num ----------------------------------------------------------------------------
-# Comma separating function
-
-cs_num <- function(value) {
-  format(value, big.mark = ",", trim = TRUE)
 }
 
 # summarise_stats ----------------------------------------------------------------------------

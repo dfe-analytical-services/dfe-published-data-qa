@@ -1,11 +1,6 @@
 # screenFiles ------------------------------------------------------------
 # function used to screen the data files, built upon other progress functions
 
-source("R/fileValidation.r")
-source("R/preCheck1.r")
-source("R/preCheck2.r")
-source("R/mainTests.r")
-
 screenFiles <- function(datafilename, metafilename, dataseparator, metaseparator, data_character, meta_character, datafile, metafile) {
   output <- list("results" = fileValidation(datafilename, metafilename, dataseparator, metaseparator, datafile, metafile))
   if (any(output$results[["result"]] == "FAIL")) {

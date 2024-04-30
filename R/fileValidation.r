@@ -157,18 +157,18 @@ rows_to_cols <- function(data, meta) {
   if (data_cols < meta_rows) {
     output <- list(
       "result" = "FAIL",
-      "message" = paste0("There are more rows in the metadata file (", paste(cs_num(meta_rows)), ") than the number of non-mandatory columns in the data file (", paste(cs_num(data_cols)), "). <br> - This is not expected, please check the csv files. It can often be helpful open them in a text editor such as wordpad to investigate.")
+      "message" = paste0("There are more rows in the metadata file (", paste(comma_sep(meta_rows)), ") than the number of non-mandatory columns in the data file (", paste(comma_sep(data_cols)), "). <br> - This is not expected, please check the csv files. It can often be helpful open them in a text editor such as wordpad to investigate.")
     )
   } else {
     if (data_cols == meta_rows) {
       output <- list(
         "result" = "PASS",
-        "message" = paste0("There are an equal number of rows in the metadata file (", paste(cs_num(meta_rows)), ") and non-mandatory columns in the data file (", paste(cs_num(data_cols)), ").")
+        "message" = paste0("There are an equal number of rows in the metadata file (", paste(comma_sep(meta_rows)), ") and non-mandatory columns in the data file (", paste(comma_sep(data_cols)), ").")
       )
     } else {
       output <- list(
         "result" = "PASS",
-        "message" = paste0("There are fewer rows in the metadata file (", paste(cs_num(meta_rows)), ") than non-mandatory columns in the data file (", paste(cs_num(data_cols)), ").")
+        "message" = paste0("There are fewer rows in the metadata file (", paste(comma_sep(meta_rows)), ") than non-mandatory columns in the data file (", paste(comma_sep(data_cols)), ").")
       )
     }
   }
@@ -224,12 +224,12 @@ data_empty_rows <- function(data) {
     if (blank_rows == 1) {
       output <- list(
         "result" = "FAIL",
-        "message" = paste("There is", cs_num(blank_rows), "blank row in the data file. Try opening the csv in notepad if you're not sure where the blank rows are.")
+        "message" = paste("There is", comma_sep(blank_rows), "blank row in the data file. Try opening the csv in notepad if you're not sure where the blank rows are.")
       )
     } else {
       output <- list(
         "result" = "FAIL",
-        "message" = paste("There are", cs_num(blank_rows), "blank rows in the data file. Try opening the csv in notepad if you're not sure where the blank rows are.")
+        "message" = paste("There are", comma_sep(blank_rows), "blank rows in the data file. Try opening the csv in notepad if you're not sure where the blank rows are.")
       )
     }
   }
@@ -252,12 +252,12 @@ meta_empty_rows <- function(meta) {
     if (blank_rows == 1) {
       output <- list(
         "result" = "FAIL",
-        "message" = paste("There is", cs_num(blank_rows), "blank row in the metadata file. Try opening the csv in notepad if you're not sure where the blank rows are.")
+        "message" = paste("There is", comma_sep(blank_rows), "blank row in the metadata file. Try opening the csv in notepad if you're not sure where the blank rows are.")
       )
     } else {
       output <- list(
         "result" = "FAIL",
-        "message" = paste("There are", cs_num(blank_rows), "blank rows in the metadata file. Try opening the csv in notepad if you're not sure where the blank rows are.")
+        "message" = paste("There are", comma_sep(blank_rows), "blank rows in the metadata file. Try opening the csv in notepad if you're not sure where the blank rows are.")
       )
     }
   }

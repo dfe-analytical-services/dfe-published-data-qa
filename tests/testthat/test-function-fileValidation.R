@@ -1,5 +1,3 @@
-context("fileValidationFunctions")
-
 pathStart <- "fileValidation/"
 
 # filename_spaces --------------------------------------------------------------------------------------------------

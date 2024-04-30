@@ -1,6 +1,6 @@
 {
   "input": {
-    "resetbutton": 8,
+    "resetbutton": 9,
     "screenbutton": 1,
     "shinyjs-resettable-datafile": {
 
@@ -214,6 +214,12 @@
     }
   },
   "export": {
-
+    "advisory": 1,
+    "ancillary": 1,
+    "failed": 1,
+    "ignored": 17,
+    "info": 0,
+    "passed": 66,
+    "progress_message": "Made it to the full screening checks but failed"
   }
 }
