@@ -2,8 +2,11 @@ on:
   push:
     branches:
       - master
+  
+  pull_request:
+
       
-name: automated-tests
+name: automatedTests
 
 jobs:
   deployShiny:
