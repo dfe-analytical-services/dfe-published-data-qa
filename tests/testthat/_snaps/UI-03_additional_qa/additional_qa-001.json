@@ -1,0 +1,394 @@
+{
+  "output": {
+    "data_preview": {
+      "x": {
+        "style": "bootstrap",
+        "filter": "none",
+        "vertical": false,
+        "container": "<table class=\"table table-bordered\">\n  <thead>\n    <tr>\n      <th>time_period<\/th>\n      <th>time_identifier<\/th>\n      <th>geographic_level<\/th>\n      <th>country_code<\/th>\n      <th>country_name<\/th>\n      <th>region_code<\/th>\n      <th>region_name<\/th>\n      <th>old_la_code<\/th>\n      <th>new_la_code<\/th>\n      <th>la_name<\/th>\n      <th>lad_code<\/th>\n      <th>lad_name<\/th>\n      <th>school_urn<\/th>\n      <th>school_laestab<\/th>\n      <th>school_name<\/th>\n      <th>lsip_code<\/th>\n      <th>lsip_name<\/th>\n      <th>local_enterprise_partnership_code<\/th>\n      <th>local_enterprise_partnership_name<\/th>\n      <th>pcon_code<\/th>\n      <th>pcon_name<\/th>\n      <th>ward_code<\/th>\n      <th>ward_name<\/th>\n      <th>english_devolved_area_code<\/th>\n      <th>english_devolved_area_name<\/th>\n      <th>trust_id<\/th>\n      <th>trust_name<\/th>\n      <th>school_phase<\/th>\n      <th>school_type<\/th>\n      <th>num_schools<\/th>\n      <th>enrolments<\/th>\n      <th>sess_overall_percent<\/th>\n      <th>sess_authorised_percent<\/th>\n      <th>sess_unauthorised_percent<\/th>\n      <th>enrolments_pa_10_exact<\/th>\n      <th>enrolments_pa_10_exact_percent<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>",
+        "options": {
+          "dom": "pt",
+          "pageLength": 12,
+          "rowCallback": "function(row, data, num, index){\n  var $row = $(row);\n    $row.css('background-color', '#454b51');\n    $row.hover(function(){\n      $(this).css('background-color', '#6a737c');\n     }, function(){\n      $(this).css('background-color', '#454b51');\n     }\n    );\n}",
+          "initComplete": "function(settings, json) {\n$(this.api().table().header()).css({'background-color': '#232628', 'color': '#c8c8c8'});\n}",
+          "scrollX": true,
+          "columnDefs": [
+            {
+              "className": "dt-right",
+              "targets": [
+                0,
+                7,
+                12,
+                13,
+                29,
+                30,
+                31,
+                32,
+                33,
+                34,
+                35
+              ]
+            },
+            {
+              "name": "time_period",
+              "targets": 0
+            },
+            {
+              "name": "time_identifier",
+              "targets": 1
+            },
+            {
+              "name": "geographic_level",
+              "targets": 2
+            },
+            {
+              "name": "country_code",
+              "targets": 3
+            },
+            {
+              "name": "country_name",
+              "targets": 4
+            },
+            {
+              "name": "region_code",
+              "targets": 5
+            },
+            {
+              "name": "region_name",
+              "targets": 6
+            },
+            {
+              "name": "old_la_code",
+              "targets": 7
+            },
+            {
+              "name": "new_la_code",
+              "targets": 8
+            },
+            {
+              "name": "la_name",
+              "targets": 9
+            },
+            {
+              "name": "lad_code",
+              "targets": 10
+            },
+            {
+              "name": "lad_name",
+              "targets": 11
+            },
+            {
+              "name": "school_urn",
+              "targets": 12
+            },
+            {
+              "name": "school_laestab",
+              "targets": 13
+            },
+            {
+              "name": "school_name",
+              "targets": 14
+            },
+            {
+              "name": "lsip_code",
+              "targets": 15
+            },
+            {
+              "name": "lsip_name",
+              "targets": 16
+            },
+            {
+              "name": "local_enterprise_partnership_code",
+              "targets": 17
+            },
+            {
+              "name": "local_enterprise_partnership_name",
+              "targets": 18
+            },
+            {
+              "name": "pcon_code",
+              "targets": 19
+            },
+            {
+              "name": "pcon_name",
+              "targets": 20
+            },
+            {
+              "name": "ward_code",
+              "targets": 21
+            },
+            {
+              "name": "ward_name",
+              "targets": 22
+            },
+            {
+              "name": "english_devolved_area_code",
+              "targets": 23
+            },
+            {
+              "name": "english_devolved_area_name",
+              "targets": 24
+            },
+            {
+              "name": "trust_id",
+              "targets": 25
+            },
+            {
+              "name": "trust_name",
+              "targets": 26
+            },
+            {
+              "name": "school_phase",
+              "targets": 27
+            },
+            {
+              "name": "school_type",
+              "targets": 28
+            },
+            {
+              "name": "num_schools",
+              "targets": 29
+            },
+            {
+              "name": "enrolments",
+              "targets": 30
+            },
+            {
+              "name": "sess_overall_percent",
+              "targets": 31
+            },
+            {
+              "name": "sess_authorised_percent",
+              "targets": 32
+            },
+            {
+              "name": "sess_unauthorised_percent",
+              "targets": 33
+            },
+            {
+              "name": "enrolments_pa_10_exact",
+              "targets": 34
+            },
+            {
+              "name": "enrolments_pa_10_exact_percent",
+              "targets": 35
+            }
+          ],
+          "order": [
+
+          ],
+          "autoWidth": false,
+          "orderClasses": false,
+          "lengthMenu": [
+            10,
+            12,
+            25,
+            50,
+            100
+          ],
+          "ajax": {
+            "type": "POST",
+            "data": "function(d) {\nd.search.caseInsensitive = true;\nd.search.smart = true;\nd.escape = true;\nvar encodeAmp = function(x) { x.value = x.value.replace(/&/g, \"%26\"); }\nencodeAmp(d.search);\n$.each(d.columns, function(i, v) {encodeAmp(v.search);});\n}"
+          },
+          "serverSide": true,
+          "processing": true
+        },
+        "selection": {
+          "mode": "multiple",
+          "selected": null,
+          "target": "row",
+          "selectable": null
+        }
+      },
+      "evals": [
+        "options.rowCallback",
+        "options.initComplete",
+        "options.ajax.data"
+      ],
+      "jsHooks": [
+
+      ],
+      "deps": [
+        {
+          "name": "jquery",
+          "version": "3.6.0",
+          "src": {
+            "href": "jquery-3.6.0"
+          },
+          "meta": null,
+          "script": "jquery-3.6.0.min.js",
+          "stylesheet": null,
+          "head": null,
+          "attachment": null,
+          "all_files": true
+        },
+        {
+          "name": "dt-core-bootstrap",
+          "version": "1.13.6",
+          "src": {
+            "href": "dt-core-bootstrap-1.13.6"
+          },
+          "meta": null,
+          "script": [
+            "js/jquery.dataTables.min.js",
+            "js/dataTables.bootstrap.min.js"
+          ],
+          "stylesheet": [
+            "css/dataTables.bootstrap.min.css",
+            "css/dataTables.bootstrap.extra.css"
+          ],
+          "head": null,
+          "attachment": null,
+          "package": null,
+          "all_files": false
+        },
+        {
+          "name": "crosstalk",
+          "version": "1.2.1",
+          "src": {
+            "href": "crosstalk-1.2.1"
+          },
+          "meta": null,
+          "script": "js/crosstalk.min.js",
+          "stylesheet": "css/crosstalk.min.css",
+          "head": null,
+          "attachment": null,
+          "all_files": true
+        }
+      ]
+    },
+    "meta_table": {
+      "x": {
+        "style": "bootstrap",
+        "filter": "none",
+        "vertical": false,
+        "container": "<table class=\"table table-bordered\">\n  <thead>\n    <tr>\n      <th>col_name<\/th>\n      <th>col_type<\/th>\n      <th>label<\/th>\n      <th>indicator_grouping<\/th>\n      <th>indicator_unit<\/th>\n      <th>indicator_dp<\/th>\n      <th>filter_hint<\/th>\n      <th>filter_grouping_column<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>",
+        "options": {
+          "dom": "pt",
+          "ordering": false,
+          "pageLength": 12,
+          "rowCallback": "function(row, data, num, index){\n  var $row = $(row);\n    $row.css('background-color', '#454b51');\n    $row.hover(function(){\n      $(this).css('background-color', '#6a737c');\n     }, function(){\n      $(this).css('background-color', '#454b51');\n     }\n    );\n}",
+          "initComplete": "function(settings, json) {\n$(this.api().table().header()).css({'background-color': '#232628', 'color': '#c8c8c8'});\n}",
+          "columnDefs": [
+            {
+              "className": "dt-right",
+              "targets": 5
+            },
+            {
+              "name": "col_name",
+              "targets": 0
+            },
+            {
+              "name": "col_type",
+              "targets": 1
+            },
+            {
+              "name": "label",
+              "targets": 2
+            },
+            {
+              "name": "indicator_grouping",
+              "targets": 3
+            },
+            {
+              "name": "indicator_unit",
+              "targets": 4
+            },
+            {
+              "name": "indicator_dp",
+              "targets": 5
+            },
+            {
+              "name": "filter_hint",
+              "targets": 6
+            },
+            {
+              "name": "filter_grouping_column",
+              "targets": 7
+            }
+          ],
+          "order": [
+
+          ],
+          "autoWidth": false,
+          "orderClasses": false,
+          "lengthMenu": [
+            10,
+            12,
+            25,
+            50,
+            100
+          ],
+          "ajax": {
+            "type": "POST",
+            "data": "function(d) {\nd.search.caseInsensitive = true;\nd.search.smart = true;\nd.escape = true;\nvar encodeAmp = function(x) { x.value = x.value.replace(/&/g, \"%26\"); }\nencodeAmp(d.search);\n$.each(d.columns, function(i, v) {encodeAmp(v.search);});\n}"
+          },
+          "serverSide": true,
+          "processing": true
+        },
+        "selection": {
+          "mode": "multiple",
+          "selected": null,
+          "target": "row",
+          "selectable": null
+        }
+      },
+      "evals": [
+        "options.rowCallback",
+        "options.initComplete",
+        "options.ajax.data"
+      ],
+      "jsHooks": [
+
+      ],
+      "deps": [
+        {
+          "name": "jquery",
+          "version": "3.6.0",
+          "src": {
+            "href": "jquery-3.6.0"
+          },
+          "meta": null,
+          "script": "jquery-3.6.0.min.js",
+          "stylesheet": null,
+          "head": null,
+          "attachment": null,
+          "all_files": true
+        },
+        {
+          "name": "dt-core-bootstrap",
+          "version": "1.13.6",
+          "src": {
+            "href": "dt-core-bootstrap-1.13.6"
+          },
+          "meta": null,
+          "script": [
+            "js/jquery.dataTables.min.js",
+            "js/dataTables.bootstrap.min.js"
+          ],
+          "stylesheet": [
+            "css/dataTables.bootstrap.min.css",
+            "css/dataTables.bootstrap.extra.css"
+          ],
+          "head": null,
+          "attachment": null,
+          "package": null,
+          "all_files": false
+        },
+        {
+          "name": "crosstalk",
+          "version": "1.2.1",
+          "src": {
+            "href": "crosstalk-1.2.1"
+          },
+          "meta": null,
+          "script": "js/crosstalk.min.js",
+          "stylesheet": "css/crosstalk.min.css",
+          "head": null,
+          "attachment": null,
+          "all_files": true
+        }
+      ]
+    }
+  }
+}

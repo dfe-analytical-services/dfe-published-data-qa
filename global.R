@@ -1,9 +1,7 @@
 # Max file size ---------------------------------------------------------------------------------
-
 options(shiny.maxRequestSize = 800 * 1024^2)
 
 # Sanitising error messages (to avoid revealing anything untoward)
-
 options(shiny.sanitize.errors = TRUE)
 
 # Library calls ---------------------------------------------------------------------------------
@@ -19,7 +17,6 @@ shhh(library(shinyjs))
 shhh(library(tools))
 shhh(library(readr))
 shhh(library(testthat))
-# shhh(library(shinytest))
 shhh(library(styler))
 shhh(library(tidyr))
 shhh(library(ggplot2))
@@ -29,10 +26,18 @@ shhh(library(shinyWidgets))
 shhh(library(shinycssloaders))
 shhh(library(sparkline))
 shhh(library(config))
-# shhh(library(rsconnect))
 shhh(library(shinyalert))
 shhh(library(shinydisconnect))
+shhh(library(praise))
+shhh(library(dfeR))
 
+# Following are commented out as they are needed for CI / CD but not for running of app
+pigs_will_fly <- FALSE
+if (pigs_will_fly == TRUE) {
+  shhh(library(git2r))
+  shhh(library(shinytest2))
+  shhh(library(diffviewer))
+}
 
 # activeTestsInFile ---------------------------------------------------------------------------------
 # Extracting the active tests that are run against files
@@ -44,46 +49,6 @@ activeTestsInFile <- function(file) {
 activeTests <- sapply(c("R/fileValidation.r", "R/preCheck1.r", "R/preCheck2.r", "R/mainTests.r"), activeTestsInFile, simplify = FALSE)
 
 numberActiveTests <- length(unlist(activeTests, use.names = FALSE))
-
-# tidy_code_function -------------------------------------------------------------------------------
-
-tidy_code_function <- function() {
-  message("----------------------------------------")
-  message("App scripts")
-  message("----------------------------------------")
-  app_scripts <- eval(styler::style_dir(recursive = FALSE)$changed)
-  message("R scripts")
-  message("----------------------------------------")
-  r_scripts <- eval(styler::style_dir("R/")$changed)
-  message("Test scripts")
-  message("----------------------------------------")
-  test_scripts <- eval(styler::style_dir("tests/", filetype = "r")$changed)
-  script_changes <- c(app_scripts, r_scripts, test_scripts)
-  return(script_changes)
-}
-
-# Function scripts ---------------------------------------------------------------------------------
-
-source("R/knownVariables.r", encoding = "UTF-8")
-source("R/readFile.r")
-source("R/screenFiles.r")
-
-# present_file_size ---------------------------------------------------------------------------------
-# Function to show the file size
-
-present_file_size <- function(filesize) {
-  if (is.null(filesize)) {} else {
-    if (round(filesize / 1024 / 1024 / 1024, 2) >= 1) {
-      return(paste0(round(filesize / 1024 / 1024 / 1024, 2), " GB"))
-    } else {
-      if (round(filesize / 1024 / 1024, 2) < 1) {
-        return(paste0(round(filesize / 1024, 2), " Bytes"))
-      } else {
-        return(paste0(round(filesize / 1024 / 1024, 2), " MB"))
-      }
-    }
-  }
-}
 
 # Results boxes ----------------------------------------------------------------------------
 
@@ -205,13 +170,6 @@ info_results_box <- function(message, table) {
   )
 }
 
-# cs_num ----------------------------------------------------------------------------
-# Comma separating function
-
-cs_num <- function(value) {
-  format(value, big.mark = ",", trim = TRUE)
-}
-
 # summarise_stats ----------------------------------------------------------------------------
 # Summarising the counts of the results
 
@@ -240,23 +198,10 @@ appLoadingCSS <- "
 }
 "
 
-# roundFiveUp ----------------------------------------------------------------------------
-# This function is used in place of round() which rounds 5's down
-roundFiveUp <- function(x, n) {
-  positiveNegative <- sign(x)
-  z <- abs(x) * 10^n
-  z <- z + 0.5 + sqrt(.Machine$double.eps)
-  z <- trunc(z)
-  z <- z / 10^n
-  return(z * positiveNegative)
-}
-
-
 # spinner options ---------------------------------------------------------
 options(spinner.type = 5)
 options(spinner.color = "#c8c8c8") # Grey '#C0C0C0') # Laura's blue #6294C6
 options(spinner.size = .5)
-
 
 # disconnect duck ---------------------------------------------------------
 
@@ -318,7 +263,7 @@ customDisconnectMessage <- function(refresh = "Refresh",
         id = "ss-connect-image",
         style = "display: block !important;",
         htmltools::tags$img(id = "ss-reload-image", src = "builder-duck.PNG"),
-        htmltools::tags$p("If this persists, please contact statistics.development@education.gov.uk with details of what you were trying to do.")
+        htmltools::tags$p("If this persists, please contact explore.statistics@education.gov.uk with details of what you were trying to do.")
       )
     ),
     htmltools::tags$div(id = "ss-overlay", style = "display: none;"),

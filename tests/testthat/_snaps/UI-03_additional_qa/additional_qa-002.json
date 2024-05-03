@@ -1,0 +1,399 @@
+{
+  "output": {
+    "geog_time_perms2": {
+      "x": {
+        "style": "bootstrap",
+        "filter": "none",
+        "vertical": false,
+        "container": "<table class=\"table table-bordered\">\n  <thead>\n    <tr>\n      <th>geographic_level<\/th>\n      <th>201314<\/th>\n      <th>201415<\/th>\n      <th>201516<\/th>\n      <th>201617<\/th>\n      <th>201718<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>",
+        "options": {
+          "dom": "t",
+          "ordering": false,
+          "initComplete": "function(settings, json) {\n$(this.api().table().header()).css({'background-color': '#232628', 'color': '#c8c8c8'});\n}",
+          "columnDefs": [
+            {
+              "name": "geographic_level",
+              "targets": 0
+            },
+            {
+              "name": "201314",
+              "targets": 1
+            },
+            {
+              "name": "201415",
+              "targets": 2
+            },
+            {
+              "name": "201516",
+              "targets": 3
+            },
+            {
+              "name": "201617",
+              "targets": 4
+            },
+            {
+              "name": "201718",
+              "targets": 5
+            }
+          ],
+          "order": [
+
+          ],
+          "autoWidth": false,
+          "orderClasses": false,
+          "ajax": {
+            "type": "POST",
+            "data": "function(d) {\nd.search.caseInsensitive = true;\nd.search.smart = true;\nd.escape = true;\nvar encodeAmp = function(x) { x.value = x.value.replace(/&/g, \"%26\"); }\nencodeAmp(d.search);\n$.each(d.columns, function(i, v) {encodeAmp(v.search);});\n}"
+          },
+          "serverSide": true,
+          "processing": true
+        },
+        "selection": {
+          "mode": "multiple",
+          "selected": null,
+          "target": "row",
+          "selectable": null
+        }
+      },
+      "evals": [
+        "options.initComplete",
+        "options.ajax.data"
+      ],
+      "jsHooks": [
+
+      ],
+      "deps": [
+        {
+          "name": "jquery",
+          "version": "3.6.0",
+          "src": {
+            "href": "jquery-3.6.0"
+          },
+          "meta": null,
+          "script": "jquery-3.6.0.min.js",
+          "stylesheet": null,
+          "head": null,
+          "attachment": null,
+          "all_files": true
+        },
+        {
+          "name": "dt-core-bootstrap",
+          "version": "1.13.6",
+          "src": {
+            "href": "dt-core-bootstrap-1.13.6"
+          },
+          "meta": null,
+          "script": [
+            "js/jquery.dataTables.min.js",
+            "js/dataTables.bootstrap.min.js"
+          ],
+          "stylesheet": [
+            "css/dataTables.bootstrap.min.css",
+            "css/dataTables.bootstrap.extra.css"
+          ],
+          "head": null,
+          "attachment": null,
+          "package": null,
+          "all_files": false
+        },
+        {
+          "name": "crosstalk",
+          "version": "1.2.1",
+          "src": {
+            "href": "crosstalk-1.2.1"
+          },
+          "meta": null,
+          "script": "js/crosstalk.min.js",
+          "stylesheet": "css/crosstalk.min.css",
+          "head": null,
+          "attachment": null,
+          "all_files": true
+        }
+      ]
+    },
+    "indicators": {
+      "x": {
+        "style": "bootstrap",
+        "filter": "none",
+        "vertical": false,
+        "container": "<table class=\"table table-bordered\">\n  <thead>\n    <tr>\n      <th>col_name<\/th>\n      <th>label<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>",
+        "options": {
+          "dom": "t",
+          "ordering": false,
+          "initComplete": "function(settings, json) {\n$(this.api().table().header()).css({'background-color': '#232628', 'color': '#c8c8c8'});\n}",
+          "columnDefs": [
+            {
+              "name": "col_name",
+              "targets": 0
+            },
+            {
+              "name": "label",
+              "targets": 1
+            }
+          ],
+          "order": [
+
+          ],
+          "autoWidth": false,
+          "orderClasses": false,
+          "ajax": {
+            "type": "POST",
+            "data": "function(d) {\nd.search.caseInsensitive = true;\nd.search.smart = true;\nd.escape = true;\nvar encodeAmp = function(x) { x.value = x.value.replace(/&/g, \"%26\"); }\nencodeAmp(d.search);\n$.each(d.columns, function(i, v) {encodeAmp(v.search);});\n}"
+          },
+          "serverSide": true,
+          "processing": true
+        },
+        "selection": {
+          "mode": "multiple",
+          "selected": null,
+          "target": "row",
+          "selectable": null
+        }
+      },
+      "evals": [
+        "options.initComplete",
+        "options.ajax.data"
+      ],
+      "jsHooks": [
+
+      ],
+      "deps": [
+        {
+          "name": "jquery",
+          "version": "3.6.0",
+          "src": {
+            "href": "jquery-3.6.0"
+          },
+          "meta": null,
+          "script": "jquery-3.6.0.min.js",
+          "stylesheet": null,
+          "head": null,
+          "attachment": null,
+          "all_files": true
+        },
+        {
+          "name": "dt-core-bootstrap",
+          "version": "1.13.6",
+          "src": {
+            "href": "dt-core-bootstrap-1.13.6"
+          },
+          "meta": null,
+          "script": [
+            "js/jquery.dataTables.min.js",
+            "js/dataTables.bootstrap.min.js"
+          ],
+          "stylesheet": [
+            "css/dataTables.bootstrap.min.css",
+            "css/dataTables.bootstrap.extra.css"
+          ],
+          "head": null,
+          "attachment": null,
+          "package": null,
+          "all_files": false
+        },
+        {
+          "name": "crosstalk",
+          "version": "1.2.1",
+          "src": {
+            "href": "crosstalk-1.2.1"
+          },
+          "meta": null,
+          "script": "js/crosstalk.min.js",
+          "stylesheet": "css/crosstalk.min.css",
+          "head": null,
+          "attachment": null,
+          "all_files": true
+        }
+      ]
+    },
+    "suppressed_cell_count_table": {
+      "x": {
+        "style": "bootstrap",
+        "filter": "none",
+        "vertical": false,
+        "container": "<table class=\"table table-bordered\">\n  <thead>\n    <tr>\n      <th>Symbol<\/th>\n      <th>Frequency<\/th>\n      <th>% of total cell count<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>",
+        "options": {
+          "dom": "t",
+          "ordering": false,
+          "initComplete": "function(settings, json) {\n$(this.api().table().header()).css({'background-color': '#232628', 'color': '#c8c8c8'});\n}",
+          "columnDefs": [
+            {
+              "className": "dt-right",
+              "targets": [
+                1,
+                2
+              ]
+            },
+            {
+              "name": "Symbol",
+              "targets": 0
+            },
+            {
+              "name": "Frequency",
+              "targets": 1
+            },
+            {
+              "name": "% of total cell count",
+              "targets": 2
+            }
+          ],
+          "order": [
+
+          ],
+          "autoWidth": false,
+          "orderClasses": false,
+          "ajax": {
+            "type": "POST",
+            "data": "function(d) {\nd.search.caseInsensitive = true;\nd.search.smart = true;\nd.escape = true;\nvar encodeAmp = function(x) { x.value = x.value.replace(/&/g, \"%26\"); }\nencodeAmp(d.search);\n$.each(d.columns, function(i, v) {encodeAmp(v.search);});\n}"
+          },
+          "serverSide": true,
+          "processing": true
+        },
+        "selection": {
+          "mode": "multiple",
+          "selected": null,
+          "target": "row",
+          "selectable": null
+        }
+      },
+      "evals": [
+        "options.initComplete",
+        "options.ajax.data"
+      ],
+      "jsHooks": [
+
+      ],
+      "deps": [
+        {
+          "name": "jquery",
+          "version": "3.6.0",
+          "src": {
+            "href": "jquery-3.6.0"
+          },
+          "meta": null,
+          "script": "jquery-3.6.0.min.js",
+          "stylesheet": null,
+          "head": null,
+          "attachment": null,
+          "all_files": true
+        },
+        {
+          "name": "dt-core-bootstrap",
+          "version": "1.13.6",
+          "src": {
+            "href": "dt-core-bootstrap-1.13.6"
+          },
+          "meta": null,
+          "script": [
+            "js/jquery.dataTables.min.js",
+            "js/dataTables.bootstrap.min.js"
+          ],
+          "stylesheet": [
+            "css/dataTables.bootstrap.min.css",
+            "css/dataTables.bootstrap.extra.css"
+          ],
+          "head": null,
+          "attachment": null,
+          "package": null,
+          "all_files": false
+        },
+        {
+          "name": "crosstalk",
+          "version": "1.2.1",
+          "src": {
+            "href": "crosstalk-1.2.1"
+          },
+          "meta": null,
+          "script": "js/crosstalk.min.js",
+          "stylesheet": "css/crosstalk.min.css",
+          "head": null,
+          "attachment": null,
+          "all_files": true
+        }
+      ]
+    },
+    "tables": {
+      "html": "<h4>Filter  1<\/h4>\n<head>\n  <style>#spinner-dab841739f0a0ecace50eea0dbaaf595 {   -webkit-animation: load5-spinner-dab841739f0a0ecace50eea0dbaaf595 1.1s infinite ease;   animation: load5-spinner-dab841739f0a0ecace50eea0dbaaf595 1.1s infinite ease; }  @-webkit-keyframes load5-spinner-dab841739f0a0ecace50eea0dbaaf595 {   0%,   100% {     box-shadow: 0em -2.6em 0em 0em #c8c8c8, 1.8em -1.8em 0 0em rgba(200,200,200, 0.2), 2.5em 0em 0 0em rgba(200,200,200, 0.2), 1.75em 1.75em 0 0em rgba(200,200,200, 0.2), 0em 2.5em 0 0em rgba(200,200,200, 0.2), -1.8em 1.8em 0 0em rgba(200,200,200, 0.2), -2.6em 0em 0 0em rgba(200,200,200, 0.5), -1.8em -1.8em 0 0em rgba(200,200,200, 0.7);   }   12.5% {     box-shadow: 0em -2.6em 0em 0em rgba(200,200,200, 0.7), 1.8em -1.8em 0 0em #c8c8c8, 2.5em 0em 0 0em rgba(200,200,200, 0.2), 1.75em 1.75em 0 0em rgba(200,200,200, 0.2), 0em 2.5em 0 0em rgba(200,200,200, 0.2), -1.8em 1.8em 0 0em rgba(200,200,200, 0.2), -2.6em 0em 0 0em rgba(200,200,200, 0.2), -1.8em -1.8em 0 0em rgba(200,200,200, 0.5);   }   25% {     box-shadow: 0em -2.6em 0em 0em rgba(200,200,200, 0.5), 1.8em -1.8em 0 0em rgba(200,200,200, 0.7), 2.5em 0em 0 0em #c8c8c8, 1.75em 1.75em 0 0em rgba(200,200,200, 0.2), 0em 2.5em 0 0em rgba(200,200,200, 0.2), -1.8em 1.8em 0 0em rgba(200,200,200, 0.2), -2.6em 0em 0 0em rgba(200,200,200, 0.2), -1.8em -1.8em 0 0em rgba(200,200,200, 0.2);   }   37.5% {     box-shadow: 0em -2.6em 0em 0em rgba(200,200,200, 0.2), 1.8em -1.8em 0 0em rgba(200,200,200, 0.5), 2.5em 0em 0 0em rgba(200,200,200, 0.7), 1.75em 1.75em 0 0em #c8c8c8, 0em 2.5em 0 0em rgba(200,200,200, 0.2), -1.8em 1.8em 0 0em rgba(200,200,200, 0.2), -2.6em 0em 0 0em rgba(200,200,200, 0.2), -1.8em -1.8em 0 0em rgba(200,200,200, 0.2);   }   50% {     box-shadow: 0em -2.6em 0em 0em rgba(200,200,200, 0.2), 1.8em -1.8em 0 0em rgba(200,200,200, 0.2), 2.5em 0em 0 0em rgba(200,200,200, 0.5), 1.75em 1.75em 0 0em rgba(200,200,200, 0.7), 0em 2.5em 0 0em #c8c8c8, -1.8em 1.8em 0 0em rgba(200,200,200, 0.2), -2.6em 0em 0 0em rgba(200,200,200, 0.2), -1.8em -1.8em 0 0em rgba(200,200,200, 0.2);   }   62.5% {     box-shadow: 0em -2.6em 0em 0em rgba(200,200,200, 0.2), 1.8em -1.8em 0 0em rgba(200,200,200, 0.2), 2.5em 0em 0 0em rgba(200,200,200, 0.2), 1.75em 1.75em 0 0em rgba(200,200,200, 0.5), 0em 2.5em 0 0em rgba(200,200,200, 0.7), -1.8em 1.8em 0 0em #c8c8c8, -2.6em 0em 0 0em rgba(200,200,200, 0.2), -1.8em -1.8em 0 0em rgba(200,200,200, 0.2);   }   75% {     box-shadow: 0em -2.6em 0em 0em rgba(200,200,200, 0.2), 1.8em -1.8em 0 0em rgba(200,200,200, 0.2), 2.5em 0em 0 0em rgba(200,200,200, 0.2), 1.75em 1.75em 0 0em rgba(200,200,200, 0.2), 0em 2.5em 0 0em rgba(200,200,200, 0.5), -1.8em 1.8em 0 0em rgba(200,200,200, 0.7), -2.6em 0em 0 0em #c8c8c8, -1.8em -1.8em 0 0em rgba(200,200,200, 0.2);   }   87.5% {     box-shadow: 0em -2.6em 0em 0em rgba(200,200,200, 0.2), 1.8em -1.8em 0 0em rgba(200,200,200, 0.2), 2.5em 0em 0 0em rgba(200,200,200, 0.2), 1.75em 1.75em 0 0em rgba(200,200,200, 0.2), 0em 2.5em 0 0em rgba(200,200,200, 0.2), -1.8em 1.8em 0 0em rgba(200,200,200, 0.5), -2.6em 0em 0 0em rgba(200,200,200, 0.7), -1.8em -1.8em 0 0em #c8c8c8;   } } @keyframes load5-spinner-dab841739f0a0ecace50eea0dbaaf595 {   0%,   100% {     box-shadow: 0em -2.6em 0em 0em #c8c8c8, 1.8em -1.8em 0 0em rgba(200,200,200, 0.2), 2.5em 0em 0 0em rgba(200,200,200, 0.2), 1.75em 1.75em 0 0em rgba(200,200,200, 0.2), 0em 2.5em 0 0em rgba(200,200,200, 0.2), -1.8em 1.8em 0 0em rgba(200,200,200, 0.2), -2.6em 0em 0 0em rgba(200,200,200, 0.5), -1.8em -1.8em 0 0em rgba(200,200,200, 0.7);   }   12.5% {     box-shadow: 0em -2.6em 0em 0em rgba(200,200,200, 0.7), 1.8em -1.8em 0 0em #c8c8c8, 2.5em 0em 0 0em rgba(200,200,200, 0.2), 1.75em 1.75em 0 0em rgba(200,200,200, 0.2), 0em 2.5em 0 0em rgba(200,200,200, 0.2), -1.8em 1.8em 0 0em rgba(200,200,200, 0.2), -2.6em 0em 0 0em rgba(200,200,200, 0.2), -1.8em -1.8em 0 0em rgba(200,200,200, 0.5);   }   25% {     box-shadow: 0em -2.6em 0em 0em rgba(200,200,200, 0.5), 1.8em -1.8em 0 0em rgba(200,200,200, 0.7), 2.5em 0em 0 0em #c8c8c8, 1.75em 1.75em 0 0em rgba(200,200,200, 0.2), 0em 2.5em 0 0em rgba(200,200,200, 0.2), -1.8em 1.8em 0 0em rgba(200,200,200, 0.2), -2.6em 0em 0 0em rgba(200,200,200, 0.2), -1.8em -1.8em 0 0em rgba(200,200,200, 0.2);   }   37.5% {     box-shadow: 0em -2.6em 0em 0em rgba(200,200,200, 0.2), 1.8em -1.8em 0 0em rgba(200,200,200, 0.5), 2.5em 0em 0 0em rgba(200,200,200, 0.7), 1.75em 1.75em 0 0em #c8c8c8, 0em 2.5em 0 0em rgba(200,200,200, 0.2), -1.8em 1.8em 0 0em rgba(200,200,200, 0.2), -2.6em 0em 0 0em rgba(200,200,200, 0.2), -1.8em -1.8em 0 0em rgba(200,200,200, 0.2);   }   50% {     box-shadow: 0em -2.6em 0em 0em rgba(200,200,200, 0.2), 1.8em -1.8em 0 0em rgba(200,200,200, 0.2), 2.5em 0em 0 0em rgba(200,200,200, 0.5), 1.75em 1.75em 0 0em rgba(200,200,200, 0.7), 0em 2.5em 0 0em #c8c8c8, -1.8em 1.8em 0 0em rgba(200,200,200, 0.2), -2.6em 0em 0 0em rgba(200,200,200, 0.2), -1.8em -1.8em 0 0em rgba(200,200,200, 0.2);   }   62.5% {     box-shadow: 0em -2.6em 0em 0em rgba(200,200,200, 0.2), 1.8em -1.8em 0 0em rgba(200,200,200, 0.2), 2.5em 0em 0 0em rgba(200,200,200, 0.2), 1.75em 1.75em 0 0em rgba(200,200,200, 0.5), 0em 2.5em 0 0em rgba(200,200,200, 0.7), -1.8em 1.8em 0 0em #c8c8c8, -2.6em 0em 0 0em rgba(200,200,200, 0.2), -1.8em -1.8em 0 0em rgba(200,200,200, 0.2);   }   75% {     box-shadow: 0em -2.6em 0em 0em rgba(200,200,200, 0.2), 1.8em -1.8em 0 0em rgba(200,200,200, 0.2), 2.5em 0em 0 0em rgba(200,200,200, 0.2), 1.75em 1.75em 0 0em rgba(200,200,200, 0.2), 0em 2.5em 0 0em rgba(200,200,200, 0.5), -1.8em 1.8em 0 0em rgba(200,200,200, 0.7), -2.6em 0em 0 0em #c8c8c8, -1.8em -1.8em 0 0em rgba(200,200,200, 0.2);   }   87.5% {     box-shadow: 0em -2.6em 0em 0em rgba(200,200,200, 0.2), 1.8em -1.8em 0 0em rgba(200,200,200, 0.2), 2.5em 0em 0 0em rgba(200,200,200, 0.2), 1.75em 1.75em 0 0em rgba(200,200,200, 0.2), 0em 2.5em 0 0em rgba(200,200,200, 0.2), -1.8em 1.8em 0 0em rgba(200,200,200, 0.5), -2.6em 0em 0 0em rgba(200,200,200, 0.7), -1.8em -1.8em 0 0em #c8c8c8;   } } #spinner-dab841739f0a0ecace50eea0dbaaf595 { font-size: 9px; }<\/style>\n<\/head>\n<div class=\"shiny-spinner-output-container shiny-spinner-hideui \">\n  <div class=\"load-container shiny-spinner-hidden load5\">\n    <div id=\"spinner-dab841739f0a0ecace50eea0dbaaf595\" class=\"loader\">Loading...<\/div>\n  <\/div>\n  <div style=\"height:400px\" class=\"shiny-spinner-placeholder\"><\/div>\n  <div class=\"datatables html-widget html-widget-output shiny-report-size html-fill-item\" id=\"table_1\" style=\"width:60%;height:auto;\"><\/div>\n<\/div>",
+      "deps": [
+        {
+          "name": "htmltools-fill",
+          "version": "0.5.8.1",
+          "src": {
+            "href": "htmltools-fill-0.5.8.1"
+          },
+          "meta": null,
+          "script": null,
+          "stylesheet": "fill.css",
+          "head": null,
+          "attachment": null,
+          "all_files": true
+        },
+        {
+          "name": "htmlwidgets",
+          "version": "1.6.4",
+          "src": {
+            "href": "htmlwidgets-1.6.4"
+          },
+          "meta": null,
+          "script": "htmlwidgets.js",
+          "stylesheet": null,
+          "head": null,
+          "attachment": null,
+          "all_files": true
+        },
+        {
+          "name": "datatables-css",
+          "version": "0.0.0",
+          "src": {
+            "href": "datatables-css-0.0.0"
+          },
+          "meta": null,
+          "script": null,
+          "stylesheet": "datatables-crosstalk.css",
+          "head": null,
+          "attachment": null,
+          "all_files": true
+        },
+        {
+          "name": "datatables-binding",
+          "version": "0.33",
+          "src": {
+            "href": "datatables-binding-0.33"
+          },
+          "meta": null,
+          "script": "datatables.js",
+          "stylesheet": null,
+          "head": null,
+          "attachment": null,
+          "all_files": false
+        },
+        {
+          "name": "jquery",
+          "version": "3.5.1",
+          "src": {
+            "href": "jquery-3.5.1"
+          },
+          "meta": null,
+          "script": "jquery.min.js",
+          "stylesheet": null,
+          "head": null,
+          "attachment": null,
+          "all_files": true
+        },
+        {
+          "name": "crosstalk",
+          "version": "1.2.1",
+          "src": {
+            "href": "crosstalk-1.2.1"
+          },
+          "meta": null,
+          "script": "js/crosstalk.min.js",
+          "stylesheet": "css/crosstalk.min.css",
+          "head": null,
+          "attachment": null,
+          "all_files": true
+        }
+      ]
+    }
+  }
+}

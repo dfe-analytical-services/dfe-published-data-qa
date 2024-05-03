@@ -171,29 +171,28 @@ server <- function(input, output, session) {
         })
 
         # Size, rows and cols for files
-        # present_file_size() and cs_num() defined in global.r
         output$data_size <- renderText({
-          paste0("Size - ", present_file_size(inputData$size))
+          paste0("Size - ", pretty_filesize(inputData$size))
         })
 
         output$data_rows <- renderText({
-          paste0("Rows - ", cs_num(data$mainFile %>% nrow()))
+          paste0("Rows - ", comma_sep(data$mainFile %>% nrow()))
         })
 
         output$data_cols <- renderText({
-          paste0("Columns - ", cs_num(data$mainFile %>% ncol()))
+          paste0("Columns - ", comma_sep(data$mainFile %>% ncol()))
         })
 
         output$meta_size <- renderText({
-          paste0("Size - ", present_file_size(inputMeta$size))
+          paste0("Size - ", pretty_filesize(inputMeta$size))
         })
 
         output$meta_rows <- renderText({
-          paste0("Rows - ", cs_num(meta$mainFile %>% nrow()))
+          paste0("Rows - ", comma_sep(meta$mainFile %>% nrow()))
         })
 
         output$meta_cols <- renderText({
-          paste0("Columns - ", cs_num(meta$mainFile %>% ncol()))
+          paste0("Columns - ", comma_sep(meta$mainFile %>% ncol()))
         })
 
         # File validation ---------------------------------------------------------------------------------
@@ -217,7 +216,6 @@ server <- function(input, output, session) {
         output$progress_message <- renderText({
           screeningOutput$progress_message
         })
-
 
         # Summary stats ---------------------------------------------------------------------------------
         # numberActiveTests created in global.r file
@@ -252,6 +250,31 @@ server <- function(input, output, session) {
 
         leftover_tests <- numberActiveTests - run_tests
 
+        # Export these counts for use in tests
+        exportTestValues(
+          passed = {
+            passed_tests
+          },
+          failed = {
+            failed_tests
+          },
+          advisory = {
+            advisory_tests
+          },
+          ancillary = {
+            ancillary_tests
+          },
+          info = {
+            info_tests
+          },
+          ignored = {
+            ignored_tests
+          },
+          progress_message = {
+            screeningOutput$progress_message
+          }
+        )
+
         output$summary_text <- renderText({
           paste0("Of all ", numberActiveTests, " tests, ", run_tests, " were successfully ran against the files, the results of these were:")
         })
@@ -271,6 +294,7 @@ server <- function(input, output, session) {
         output$sum_ignored_tests <- renderText({
           summarise_stats(ignored_tests, "not applicable to the data")
         })
+
 
         # Top lines for results ---------------------------------------------------------------------------------
 
@@ -1106,7 +1130,7 @@ server <- function(input, output, session) {
               table() %>%
               as.data.frame() %>%
               filter(. %in% gss_symbols) %>%
-              mutate(Perc = roundFiveUp(Freq / total_indicator_count * 100, 1))
+              mutate(Perc = round_five_up(Freq / total_indicator_count * 100, 1))
 
             names(suppress_count) <- c("Symbol", "Frequency", "% of total cell count")
 

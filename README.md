@@ -73,13 +73,13 @@ Package control is handled using renv. As in the steps above, you will need to r
 
 ### Tests
 
-Automated tests have been created using testthat and shinytest. All functions created to screen files have an associated failing file, and unit test using testthat, all sharing the same name. There are also a couple of other unit tests of functions in the app. A helper function is used to easily input the associated file and test against it; utilise this when writing any new checks - create the example file first, followed by the unit test, followed by the function. You may then need to update the UI tests if new tests create differences in the outputted page. This is expected due to the snapshot based nature of shinytest.
+Automated tests have been created using testthat and shinytest2. These tests can be ran locally using `shinytest2::test_app()`. 
 
-UI tests have been created using shinytest that test the app loads, that the reset button really does clear everything, and that files that we'd expect to hit each particular stage of the screening do so. More should be added over time as extra features are added.
+All functions created to screen files have an associated failing file, and unit test using testthat, all sharing the same name. There are also a couple of other unit tests of functions in the app. A helper function is used to easily input the associated file and test against it; utilise this when writing any new checks - create the example file first, followed by the unit test, followed by the function. You may then need to update the UI tests if new tests create differences in the outputted page. This is expected due to the snapshot based nature of shinytest2.
+
+End to end UI tests have been created using shinytest2 that test the app loads, that the reset button really does clear everything, and that files that we'd expect to hit each particular stage of the screening do so.
 
 GitHub Actions provide CI by running the automated tests and checks for code styling, with badges in this README referring to the latest state of the master branch. The yaml files for these workflows can be found in the `.github/workflows` folder.
-
-The function `run_tests_locally()` is created in the Rprofile script and is available in the RStudio console at all times to run both the unit and ui tests.
 
 ### Deployment
 
@@ -93,15 +93,17 @@ In general all .r files will have a usable outline, so make use of that for navi
 
 ### Profiling
 
-`R/profilingCode.r` contains the outline of code to assist when profiling the app.
+`R/manual_scripts/profilingCode.r` contains the outline of code to assist when profiling the app. It is commented out by default it isn't ran when loading the app.
 
 ### Debugging
 
-There is a debugging script (named as such) in the R folder. This uses the functions `readFile()` and `screenFiles()` to allow you to debug what is happening by running the core screening functions in the console, useful if screening a particular file crashes the app in an unknown way. This also usually brings up the traceback in RStudio, which often helps to pin down the culprit line of code.
+There is a debugging script (named as such) in the `R/manual_scripts` folder. This uses the functions `readFile()` and `screenFiles()` to allow you to debug what is happening by running the core screening functions in the console, useful if screening a particular file crashes the app in an unknown way. This also usually brings up the traceback in RStudio, which often helps to pin down the culprit line of code. It is commented out by default it isn't ran when loading the app.
 
 ### Code styling
 
-The function `tidy_code()` is created in the Rprofile script and therefore is always available in the RStudio console to tidy code according to tidyverse styling using the styler package. This function also helps to test the running of the code and for basic syntax errors such as missing commas and brackets.
+The function `styler::style_dir()` should be used to tidy code according to tidyverse styling using the styler package. This function also helps to test the running of the code and for basic syntax errors such as missing commas and brackets.
+
+There is a GitHub action workflow that automatically runs this against PRs to ensure all code going into the main branch is styled appropriately.
 
 ---
 
@@ -119,9 +121,14 @@ There's an R script in the R/standard-data-prep folder containing functions to u
 
 These were developed in direct communications with the ONS ([ONS Geography e-mail](mailto:ONS.Geography@ons.gov.uk)) and they provided the basis for the code and name file used in this tool. At the time of writing, this has not been added to the open geography portal, although boundary files have been ([LSIP boundary map files](https://geoportal.statistics.gov.uk/search?collection=Dataset&sort=name&tags=all(BDY_LSIP%2CAUG_2023))).
 
+#### Wards
+
+The Ward to LAD lookup has been downloaded from the [Open Geography Portal administrative lookups](https://geoportal.statistics.gov.uk/search?q=LUP_WD_LAD&sort=Title%7Ctitle%7Cdesc). 
+
+For example, in March 2024 we downloaded and used the 'Ward to Local Authority District (May 2023) Lookup in the United Kingdom' data set.
+
 ---
 
 ## Contact
 
-
-statistics.development@education.gov.uk
+explore.statistics@education.gov.uk
