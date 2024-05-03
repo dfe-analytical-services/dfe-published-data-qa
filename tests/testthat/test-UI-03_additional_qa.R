@@ -79,5 +79,7 @@ test_that("Additional QA tabs", {
   app$set_inputs(geog_indicator_parameter = "num_schools")
   app$set_inputs(submit_geographies = "click")
 
+  app$wait_for_idle(5) # this test seems weirdly flaky for unknown reasons
+
   app$expect_values(output = "geog_agg2")
 })
