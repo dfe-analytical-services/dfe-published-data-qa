@@ -1959,6 +1959,7 @@ col_name_spaces <- function(meta) {
 label <- function(meta) {
   completed_labels <- meta %>%
     filter(!is.na(label)) %>%
+    filter(label != "") %>%
     nrow()
 
   blank_labels <- nrow(meta) - completed_labels
