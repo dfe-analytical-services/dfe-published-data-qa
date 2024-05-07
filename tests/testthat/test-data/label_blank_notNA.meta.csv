@@ -1,0 +1,3 @@
+﻿col_name,col_type,label,indicator_grouping,indicator_unit,indicator_dp,filter_hint,filter_grouping_column
+"staff_count_type","Filter","","","","","",""
+"some_number","Indicator","Test indicator","","","0","",""

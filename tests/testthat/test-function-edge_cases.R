@@ -198,3 +198,9 @@ test_that("prov_level_diff_names", {
 
   expect_equal(screeningOutput$results %>% filter(result == "FAIL") %>% nrow(), 0)
 })
+
+test_that("blank_meta_label_notNA_still_fails", {
+  screeningOutput <- testOther("../../tests/testthat/test-data/label_blank_notNA.csv")
+
+  expect_equal(screeningOutput$results %>% filter(test == "label") %>% pull(result) %>% unlist(use.names = FALSE), "FAIL")
+})

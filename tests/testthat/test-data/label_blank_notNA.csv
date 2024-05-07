@@ -1,0 +1,7 @@
+time_period,time_identifier,geographic_level,country_code,country_name,staff_count_type,some_number
+202122,Academic year,National,E92000001,England,Admin,6
+202122,Academic year,National,E92000001,England,Support,4
+202122,Academic year,National,E92000001,England,Teacher,2
+202122,Academic year,National,E92000001,England,Manager,6
+202122,Academic year,National,E92000001,England,Leader,8
+202122,Academic year,National,E92000001,England,Total,89098
