@@ -73,16 +73,25 @@ lower_level_geog_names <- geography_dataframe %>%
   pivot_longer(c(code_field, name_field)) %>%
   pull(value)
 
-countries <- suppressMessages(read_csv("data/country.csv")) # change this to database eventually
-regions <- suppressMessages(read_csv("data/regions.csv")) # change this to database eventually
-lsips <- suppressMessages(read_csv("data/lsips.csv")) # change this to database eventually
-wards <- suppressMessages(read_csv("data/ward_lad_la_pcon_hierarchy.csv")) # change this to database eventually
-las <- suppressMessages(read_csv("data/las.csv")) # change this to database eventually
-lads <- suppressMessages(read_csv("data/lads.csv")) # change this to database eventually
-pcons <- suppressMessages(read_csv("data/pcons.csv")) # change this to database eventually
-leps <- suppressMessages(read_csv("data/leps.csv")) # change this to database eventually
-edas <- suppressMessages(read_csv("data/english_devolved_areas.csv")) # change this to database eventually
+# Change all of these to database eventually
+countries <- suppressMessages(read_csv("data/country.csv"))
+regions <- suppressMessages(read_csv("data/regions.csv"))
+lsips <- suppressMessages(read_csv("data/lsips.csv"))
+wards <- suppressMessages(read_csv("data/ward_lad_la_pcon_hierarchy.csv"))
+las <- suppressMessages(read_csv("data/las.csv"))
+lads <- suppressMessages(read_csv("data/lads.csv"))
+leps <- suppressMessages(read_csv("data/leps.csv"))
+edas <- suppressMessages(read_csv("data/english_devolved_areas.csv"))
 
+# PCons, this is quick and dirty, should take the chance to clean up when we move to using Pins
+pcons <- suppressMessages(read_csv("data/pcons.csv"))
+pcons_2024 <- suppressMessages(read_csv("data/postcode_to_pcon_2024.csv")) %>%
+  distinct(pconcd, pconnm) %>%
+  rename("pcon_code" = pconcd, "pcon_name" = pconnm)
+
+combined_pcons <- rbind(pcons %>% select(pcon_code, pcon_name), pcons_2024)
+
+# Create combinations to use in tests
 expected_country_combinations <- unique(paste(countries$country_code, countries$country_name))
 
 expected_region_combinations <- unique(paste(regions$region_code, regions$region_name))
@@ -95,7 +104,7 @@ expected_la_combinations <- unique(paste(las$old_la_code, las$new_la_code, las$l
 
 expected_lad_combinations <- unique(paste(lads$lad_code, lads$lad_name))
 
-expected_pcon_combinations <- unique(paste(pcons$pcon_code, pcons$pcon_name))
+expected_pcon_combinations <- unique(paste(combined_pcons$pcon_code, combined_pcons$pcon_name))
 
 expected_lep_combinations <- unique(paste(leps$local_enterprise_partnership_code, leps$local_enterprise_partnership_name))
 
