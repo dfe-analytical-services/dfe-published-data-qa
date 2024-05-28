@@ -127,9 +127,11 @@ The Ward to LAD lookup has been downloaded from the [Open Geography Portal admin
 
 For example, in March 2024 we downloaded and used the 'Ward to Local Authority District (May 2023) Lookup in the United Kingdom' data set.
 
-#### PCon to postcode lookup
+#### PCon 2024 lookup
 
-We have recently added a lookup from postcodes to to 2024 Parliamentary Constituency boundaries. This is available in the `data/postcode_to_pcon_2024.csv` file, and further information on that file can be found on the [Open Geography Portal](https://geoportal.statistics.gov.uk/datasets/c57ec6ce5a6a42669b27d6fc7b007500/about).
+We have recently added a lookup including provisional 2024 Parliamentary Constituency boundaries. This is available in the `data/pcon_2024_v2.csv` file, and further information on that file can be found on the [Open Geography Portal](https://geoportal.statistics.gov.uk/datasets/ons::postcode-to-new-westminster-parliamentary-constituencies-may-2024-lookup-in-the-uk/about).
+
+Long term we aim to remove this and instead update the Ward > PCon > LAD > LA lookup once that is released by ONS.
 
 ---
 

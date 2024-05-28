@@ -85,9 +85,9 @@ edas <- suppressMessages(read_csv("data/english_devolved_areas.csv"))
 
 # PCons, this is quick and dirty, should take the chance to clean up when we move to using Pins
 pcons <- suppressMessages(read_csv("data/pcons.csv"))
-pcons_2024 <- suppressMessages(read_csv("data/postcode_to_pcon_2024.csv")) %>%
-  distinct(pconcd, pconnm) %>%
-  rename("pcon_code" = pconcd, "pcon_name" = pconnm)
+pcons_2024 <- suppressMessages(read_csv("data/pcon_2024_v2.csv")) %>%
+  rename("pcon_code" = PCON24CD, "pcon_name" = PCON24NM) %>%
+  select(c(pcon_code, pcon_name))
 
 combined_pcons <- rbind(pcons %>% select(pcon_code, pcon_name), pcons_2024)
 
