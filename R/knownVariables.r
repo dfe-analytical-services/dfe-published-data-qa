@@ -83,11 +83,10 @@ lads <- suppressMessages(read_csv("data/lads.csv"))
 leps <- suppressMessages(read_csv("data/leps.csv"))
 edas <- suppressMessages(read_csv("data/english_devolved_areas.csv"))
 
-# PCons, this is quick and dirty, should take the chance to clean up when we move to using Pins
+# PCons, this is quick and dirty, should move to use the ward / PCon / LAD / LA file instead
 pcons <- suppressMessages(read_csv("data/pcons.csv"))
 pcons_2024 <- suppressMessages(read_csv("data/pcon_2024_v2.csv")) %>%
-  rename("pcon_code" = PCON24CD, "pcon_name" = PCON24NM) %>%
-  select(c(pcon_code, pcon_name))
+  select(pcon_code = PCON24CD, pcon_name = PCON24NM)
 
 combined_pcons <- rbind(pcons %>% select(pcon_code, pcon_name), pcons_2024)
 
