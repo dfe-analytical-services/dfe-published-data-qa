@@ -171,8 +171,9 @@ E06000060,Buckinghamshire,01/04/2020,,E12000008,E06,Unitary Authorities,live,825
 E06000061 / E06000062,North Northamptonshire / West Northamptonshire,01/04/2021,,E12000004,E06,Unitary Authorities,live,940 / 941
 E06000061,North Northamptonshire,01/04/2021,,E12000004,E06,Unitary Authorities,live,940
 E06000062,West Northamptonshire,01/04/2021,,E12000004,E06,Unitary Authorities,live,941
-z,Outside of England and unknown,,,,,,,z
-z,Outside of the United Kingdom and unknown,,,,,,,z
-z,Outside of England,,,,,,,z
-z,Outside of the United Kingdom,,,,,,,z
-z,Unknown,,,,,,,z
+z,Outside of England and unknown,,,,,,live,z
+z,Outside of the United Kingdom and unknown,,,,,,live,z
+z,Outside of England,,,,,,live,z
+z,Outside of the United Kingdom,,,,,,live,z
+z,Unknown,,,,,,live,z
+z,British Forces Post Office overseas establishments,,,,,,live,702
