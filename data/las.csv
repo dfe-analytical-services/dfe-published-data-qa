@@ -162,6 +162,7 @@ E06000056,Central Bedfordshire,01/04/2009,,E12000006,E06,Unitary Authorities,liv
 E06000057,Northumberland,01/04/2013,,E12000001,E06,Unitary Authorities,live,929
 E06000063,Cumberland,01/04/2023,,E12000002,E06,Unitary Authorities,live,942
 E06000064,Westmorland and Furness,01/04/2023,,E12000002,E06,Unitary Authorities,live,943
+E06000063 / E06000064,Cumberland / Westmorland and Furness,01/04/2023,,E12000002,E06,Unitary Authorities,live,942 / 943
 E06000065,North Yorkshire,01/04/2023,,E12000003,E06,Unitary Authorities,live,815
 E06000066,Somerset,01/04/2023,,E12000009,E06,Unitary Authorities,live,933
 E08000037,Gateshead,01/04/2013,,E12000001,E08,Metropolitan Districts,live,390
@@ -171,5 +172,9 @@ E06000060,Buckinghamshire,01/04/2020,,E12000008,E06,Unitary Authorities,live,825
 E06000061 / E06000062,North Northamptonshire / West Northamptonshire,01/04/2021,,E12000004,E06,Unitary Authorities,live,940 / 941
 E06000061,North Northamptonshire,01/04/2021,,E12000004,E06,Unitary Authorities,live,940
 E06000062,West Northamptonshire,01/04/2021,,E12000004,E06,Unitary Authorities,live,941
-z,Outside of England and unknown,,,,,,,z
-z,Outside of the United Kingdom and unknown,,,,,,,z
+z,Outside of England and unknown,,,,,,live,z
+z,Outside of the United Kingdom and unknown,,,,,,live,z
+z,Outside of England,,,,,,live,z
+z,Outside of the United Kingdom,,,,,,live,z
+z,Unknown,,,,,,live,z
+z,British Forces Post Office overseas establishments,,,,,,live,702
