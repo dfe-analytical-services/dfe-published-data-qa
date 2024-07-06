@@ -18,7 +18,6 @@ mainTests <- function(data_character, meta_character, datafile, metafile) {
       blanks_indicators(data_character, meta_character), # active test
       time_period(datafile), # active test
       time_period_six(datafile), # active test
-      three_years(datafile), # active test
       region_for_la(datafile), # active test
       region_for_lad(datafile), # active test
       geography_level_completed(datafile), # active test
@@ -702,25 +701,6 @@ time_period_six <- function(data) {
         "result" = "PASS"
       )
     }
-  }
-
-  return(output)
-}
-
-# three_years -------------------------------------
-# produce a warning if there are fewer than 3 years of data in the file
-
-three_years <- function(data) {
-  if (length(unique(data$time_period)) < 3) {
-    output <- list(
-      "message" = "The data file contains fewer than three different years of data. <br> - Where it exists, you should include at least 3 years of data in your file to meet upcoming changes in accessibility legislation.",
-      "result" = "ADVISORY"
-    )
-  } else {
-    output <- list(
-      "message" = "The data file contains at least three different years of data.",
-      "result" = "PASS"
-    )
   }
 
   return(output)
