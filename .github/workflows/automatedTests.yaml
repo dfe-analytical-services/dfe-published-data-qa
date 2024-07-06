@@ -29,7 +29,7 @@ jobs:
         id: cache-renv
         uses: actions/cache@v4
         with:
-          path: ${{ env.RENV_PATHS_ROOT }}
+          path: screener-renv-cache
           key: ${{ runner.os }}-renv-${{ hashFiles('**/renv.lock') }}
           restore-keys: |
             ${{ runner.os }}-renv-
