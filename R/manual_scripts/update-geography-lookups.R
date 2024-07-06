@@ -1,7 +1,7 @@
 # Code for updating geography lookups =================================
 # source functions and dependencies
 
-source("R/standard-data-prep/utils.R")
+source("R/manual_scripts/utils.R")
 
 # Ward PCON LAD LA ============================================================
 # Download latest from: https://geoportal.statistics.gov.uk/search?q=LUP_WPC&sort=Date%20Created%7Ccreated%7Cdesc
