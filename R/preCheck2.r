@@ -75,7 +75,7 @@ geography_level_present <- function(data) {
     }
 
     # filter out the non table tool rows / cols from geography matrix
-    geography_present <- geography_matrix[1:14, ]
+    geography_present <- geography_matrix[1:16, ]
 
     missing_cols <- unlist(apply(geography_present, 1, expected_cols)) %>%
       .[!is.na(.)] %>%
