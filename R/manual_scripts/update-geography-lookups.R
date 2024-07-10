@@ -1,9 +1,9 @@
 # Code for updating geography lookups =================================
 # source functions and dependencies
 
-source("R/standard-data-prep/utils.R")
+source("R/manual_scripts/utils.R")
 
-# PCON LA =====================================================================
+# Ward PCON LAD LA ============================================================
 # Download latest from: https://geoportal.statistics.gov.uk/search?q=LUP_WPC&sort=Date%20Created%7Ccreated%7Cdesc
 # ...and save into /data/downloaded_source_data
 # Then add the file path into the function below to update the lookup to
@@ -12,11 +12,11 @@ source("R/standard-data-prep/utils.R")
 # Last title of file used on Open Geography Portal (in case it's helpful):
 # Ward to Westminster Parliamentary Constituency to Local Authority District to UTLA
 
-# Files used so far: 2017, 2019, 2020, 2021, 2022, 2023
+# Files used so far: 2017, 2019, 2020, 2021, 2022, 2023, 2024
 
 write_updated_lookup(
   new_lookup = tidy_downloaded_lookup(
-    open_geography_file = "data/downloaded_source_data/2023.csv",
+    open_geography_file = "data/downloaded_source_data/Ward_to_Westminster_Parliamentary_Constituency_to_LAD_to_UTLA_(July_2024)_Lookup_in_UK.csv",
     shorthand_lookup = open_geog_shorthand_lookup
   ),
   lookup_filepath = "data/ward_lad_la_pcon_hierarchy.csv"
