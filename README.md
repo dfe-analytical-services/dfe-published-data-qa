@@ -113,25 +113,13 @@ There is a GitHub action workflow that automatically runs this against PRs to en
 
 The standard geographies used in this tool are sourced from (or developed with) the Office for National Statistics (ONS). As such, they are maintained in line with the ONS's [open geography portal](https://geoportal.statistics.gov.uk/). 
 
-#### Updating pcon_la or lad_lsip lookups
+#### Updating ward_pcon_lad_la or lad_lsip lookups
 
-There's an R script in the R/standard-data-prep folder containing functions to update both the pcon_la and lad_lsip lookups. To use this, download the latest version of the file from the searches linked in the comments of that script, and then save a copy of that data in a new folder called /data/downloaded_source_data/. The functions will then append any new data from that CSV into the lookup files.
+There's an R script in the `R/manual_scripts/` folder containing functions to update both the geography lookups. To use this, download the latest version of the file from the searches linked in the comments of that script, and then save a copy of that data in a new folder called `/data/downloaded_source_data/`. The functions will then append any new data from that CSV into the lookup files.
 
 #### Local skills improvement plan area (LSIP)
 
 These were developed in direct communications with the ONS ([ONS Geography e-mail](mailto:ONS.Geography@ons.gov.uk)) and they provided the basis for the code and name file used in this tool. At the time of writing, this has not been added to the open geography portal, although boundary files have been ([LSIP boundary map files](https://geoportal.statistics.gov.uk/search?collection=Dataset&sort=name&tags=all(BDY_LSIP%2CAUG_2023))).
-
-#### Wards
-
-The Ward to LAD lookup has been downloaded from the [Open Geography Portal administrative lookups](https://geoportal.statistics.gov.uk/search?q=LUP_WD_LAD&sort=Title%7Ctitle%7Cdesc). 
-
-For example, in March 2024 we downloaded and used the 'Ward to Local Authority District (May 2023) Lookup in the United Kingdom' data set.
-
-#### PCon 2024 lookup
-
-We have recently added a lookup including provisional 2024 Parliamentary Constituency boundaries. This is available in the `data/pcon_2024_v2.csv` file, and further information on that file can be found on the [Open Geography Portal](https://geoportal.statistics.gov.uk/datasets/ons::postcode-to-new-westminster-parliamentary-constituencies-may-2024-lookup-in-the-uk/about).
-
-Long term we aim to remove this and instead update the Ward > PCon > LAD > LA lookup once that is released by ONS.
 
 ---
 

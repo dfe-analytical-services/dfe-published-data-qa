@@ -46,7 +46,8 @@ tidy_downloaded_lookup <- function(
     shorthand_lookup) {
   # Read in the downloaded open geography file --------------------------------
   message("Reading in new data from: ", open_geography_file)
-  new_data <- read_csv(open_geography_file, show_col_types = FALSE)
+  new_data <- read_csv(open_geography_file, show_col_types = FALSE) %>%
+    select(-ends_with("NMW")) # remove Welsh name cols
 
   # Extract the year from columns ---------------------------------------------
   new_year <- names(new_data) %>%
