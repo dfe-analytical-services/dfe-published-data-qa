@@ -154,7 +154,7 @@ ob_unit_meta <- function(meta) {
     }
   }
 
-  acceptable_ob_units_sch_prov_filter <- acceptable_observational_units[!acceptable_observational_units %in% c(geography_matrix[13, 3], geography_matrix[14, 3])]
+  acceptable_ob_units_sch_prov_filter <- acceptable_observational_units[!acceptable_observational_units %in% c(geography_matrix[14, 3], geography_matrix[15, 3])]
 
   if (nrow(meta %>% filter(col_type == "Filter")) == 1) {
     # We could consider adding more detail around this check for if it fails because the data has provider_name or school_name mixed with other filters
