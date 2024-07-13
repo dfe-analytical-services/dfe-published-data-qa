@@ -6027,6 +6027,6 @@ a.list-group-item-danger.active:hover,a.list-group-item-danger.active:focus{
     visibility: hidden !important
 }
 .shiny-output-error:after{
-    content: 'An error has occurred. Please contact the Statistics Development Team.';
+    content: 'An error has occurred. Please contact the Explore education statistics platforms team.';
     visibility: visible
 }
