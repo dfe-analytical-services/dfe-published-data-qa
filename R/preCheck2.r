@@ -60,7 +60,7 @@ time_identifier_mix <- function(data) {
 # Do we have the right columns for the geographic level
 
 geography_level_present <- function(data) {
-  if (all(data$geographic_level == geography_matrix[1, 1])) {
+  if (all(data$geographic_level == "National")) {
     output <- list(
       "message" = "There is only National level data in the file.",
       "result" = "IGNORE"
@@ -154,7 +154,11 @@ ob_unit_meta <- function(meta) {
     }
   }
 
-  acceptable_ob_units_sch_prov_filter <- acceptable_observational_units[!acceptable_observational_units %in% c(geography_matrix[14, 3], geography_matrix[15, 3])]
+  # Checking for everything except school_name and provider_name as sometimes they can legitimately be in the metadata
+  acceptable_ob_units_sch_prov_filter <- acceptable_observational_units[
+    !acceptable_observational_units %in%
+      c(geography_dataframe %>% filter(geographic_level %in% c("School", "Provider")) %>% pull(name_field))
+  ]
 
   if (nrow(meta %>% filter(col_type == "Filter")) == 1) {
     # We could consider adding more detail around this check for if it fails because the data has provider_name or school_name mixed with other filters

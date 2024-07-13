@@ -710,35 +710,35 @@ time_period_six <- function(data) {
 # check if there is LA level data, and if so, if regional columns are present and completed
 
 region_for_la <- function(data) {
-  if (!geography_matrix[3, 1] %in% unique(data$geographic_level)) {
+  if (!"Local authority" %in% unique(data$geographic_level)) {
     output <- list(
-      "message" = paste("There is no", geography_matrix[3, 1], "level data in the data file."),
+      "message" = paste("There is no Local authority level data in the data file."),
       "result" = "IGNORE"
     )
   } else {
     # not testing for individual columns as region_col_completed covers that
 
-    if (!(geography_matrix[2, 2] %in% names(data)) | !(geography_matrix[2, 3] %in% names(data))) {
+    if (!("region_code" %in% names(data)) | !("region_name" %in% names(data))) {
       output <- list(
-        "message" = paste("Both", geography_matrix[2, 2], "and", geography_matrix[2, 3], "are missing from the data file. <br> -", geography_matrix[2, 1], "information should ideally be given for all", geography_matrix[3, 1], "level data."),
+        "message" = paste("Both region_code and region_name are missing from the data file. <br> - Regional information should ideally be given for all Local authority level data."),
         "result" = "ADVISORY"
       )
     } else {
       region_cols <- data %>%
-        filter(geographic_level == geography_matrix[3, 1]) %>%
-        select(geography_matrix[2, 2], geography_matrix[2, 3])
+        filter(geographic_level == "Local authority") %>%
+        select(region_code, region_name)
 
-      missing_region_codes <- sum(is.na(select(region_cols, geography_matrix[2, 2])))
-      missing_region_names <- sum(is.na(select(region_cols, geography_matrix[2, 3])))
+      missing_region_codes <- sum(is.na(select(region_cols, region_code)))
+      missing_region_names <- sum(is.na(select(region_cols, region_name)))
 
       if (missing_region_codes > 0 & missing_region_names > 0) {
         output <- list(
-          "message" = paste("Both", geography_matrix[2, 2], "and", geography_matrix[2, 3], "have missing values for", geography_matrix[3, 1], "rows in the data file. <br> - It is recommended to include the information from these columns for", geography_matrix[3, 1], "level data."),
+          "message" = paste("Both region_code and region_name have missing values for Local authority rows in the data file. <br> - It is recommended to include the information from these columns for Local authority level data."),
           "result" = "ADVISORY"
         )
       } else {
         output <- list(
-          "message" = paste("Both", geography_matrix[2, 2], "and", geography_matrix[2, 3], "are completed for all", geography_matrix[3, 1], "rows in the data file."),
+          "message" = paste("Both region_code and region_name are completed for all Local authority rows in the data file."),
           "result" = "PASS"
         )
       }
@@ -1479,25 +1479,25 @@ ward_combinations <- function(data) {
 
 # region_combinations -------------------------------------
 # Checking that region_code and region_name combinations are valid
-## Need to update reference list in error message to whatever method we use for LAs as the portal list doesn't include inner/outer london (which we allow)
+# We know from geography_level_present (pre-check 2) that if regional rows exist both cols must be present
 
 region_combinations <- function(data) {
-  if (!geography_matrix[2, 2] %in% names(data)) {
+  if (!"region_code" %in% names(data)) {
     output <- list(
-      "message" = paste(geography_matrix[2, 2], "columns are not present in this data file."),
+      "message" = "region_code column is not present in this data file.",
       "result" = "IGNORE"
     )
   } else {
     invalid_values <- rbind(
       # Not allowing blanks for regional rows
       data %>%
-        filter(geographic_level == geography_matrix[2, 1]) %>%
-        select(geography_matrix[2, 2], geography_matrix[2, 3]) %>%
+        filter(geographic_level == "Regional") %>%
+        select("region_code", "region_name") %>%
         unique() %>%
         filter(region_code != gssNAvcode | is.na(region_code)),
       data %>%
-        filter(geographic_level != geography_matrix[2, 1]) %>%
-        select(geography_matrix[2, 2], geography_matrix[2, 3]) %>%
+        filter(geographic_level != "Regional") %>%
+        select("region_code", "region_name") %>%
         unique() %>%
         filter(!is.na(region_code) & !is.na(region_name)) %>%
         filter(region_code != "") %>%
