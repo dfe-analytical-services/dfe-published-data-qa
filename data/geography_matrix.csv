@@ -3,7 +3,7 @@ row_number,geographic_level,code_field,name_field,code_field_secondary
 2,Regional,region_code,region_name,NA
 3,Local authority,new_la_code,la_name,old_la_code
 4,Local authority district,lad_code,lad_name,NA
-5,RSC region,rsc_region_lead_name,NA,NA
+5,RSC region,NA,rsc_region_lead_name,NA
 6,Parliamentary constituency,pcon_code,pcon_name,NA
 7,Local skills improvement plan area,lsip_code,lsip_name,NA
 8,Local enterprise partnership,local_enterprise_partnership_code,local_enterprise_partnership_name,NA
