@@ -46,14 +46,12 @@ test_that("School, Provider, Institution and Planning area are rows 14-17 in ord
   )
 })
 
-test_that("National and Regional are rows 1 and 2", {
+test_that("First 7 rows are as expected", {
   expect_equal(
-    geography_matrix[1:2, 1],
-    c("National", "Regional")
+    geography_matrix[1:7, 1],
+    c(
+      "National", "Regional", "Local authority", "Local authority district", "RSC region",
+      "Parliamentary constituency", "Local skills improvement plan area"
+    )
   )
 })
-
-
-# Upper geogs?
-# Mid geogs?
-# Lower level geogs?
