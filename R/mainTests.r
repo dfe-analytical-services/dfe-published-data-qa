@@ -73,7 +73,7 @@ mainTests <- function(data_character, meta_character, datafile, metafile) {
 # Checking datafile for whether the variable names are following snake case
 
 variable_snake_case <- function(data) {
-  present_special_characters <- unique(unlist(str_split(gsub("[a-z0-9]|_|\\s", "", names(data)), ""), use.names = FALSE))
+  present_special_characters <- unique(unlist(str_split(gsub("[a-z0-9]|_", "", names(data)), ""), use.names = FALSE))
 
   if (length(present_special_characters) == 0) {
     output <- list(
