@@ -6,7 +6,6 @@ options(shiny.sanitize.errors = TRUE)
 
 # Library calls ---------------------------------------------------------------------------------
 shhh <- suppressPackageStartupMessages # It's a library, so shhh!
-
 shhh(library(lubridate))
 shhh(library(shiny))
 shhh(library(janitor))
