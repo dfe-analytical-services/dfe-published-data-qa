@@ -6,7 +6,7 @@ on:
   pull_request:
 
       
-name: automatedTests
+name: Automated tests
 
 jobs:
   automatedTests:
