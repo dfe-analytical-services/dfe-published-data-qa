@@ -3911,7 +3911,7 @@
       "checksum": "e5b9343c9a0e43d83e02b339946591d1"
     },
     ".Rprofile": {
-      "checksum": "1fc949ccbffc15a71282f9e190cfbb19"
+      "checksum": "780913d05ffbbee7385b42e28ffd9a3e"
     },
     "azure-pipelines.yml": {
       "checksum": "a49cbc7a1e9f19bd41cffd43e444a7d7"
@@ -3927,6 +3927,9 @@
     },
     "data/ethnicity.csv": {
       "checksum": "7477c76d8990b16372dc3f19c3e8f045"
+    },
+    "data/geography_matrix.csv": {
+      "checksum": "dd655b6a3307ee538cbd412493345790"
     },
     "data/lads.csv": {
       "checksum": "a83ae9b20279f744b432e14461bd8f51"
@@ -3983,18 +3986,18 @@
       "checksum": "ee777c0ac14e8bae2c20d5b1d5dac85a"
     },
     "R/knownVariables.r": {
-      "checksum": "4916f5b0d087e10679cb492b27bf4ac6"
+      "checksum": "7248277e0e99b5aee4e66bf9e8c69963"
     },
     "R/mainTests.r": {
-      "checksum": "e3ab0a7028ab185eca358fba7f051330"
+      "checksum": "6f0e8aeba703ccdd207132822a1d3ee4"
     },
     "R/manual_scripts/debugging.R": {
       "checksum": "e56763afdf3659c7c47cfe0e3262e8cf"
     },
-    "R/manual_scripts/profilingCode.r": {
+    "R/manual_scripts/profiling_code.r": {
       "checksum": "4dc8717876735d0a105687d14f56c0b8"
     },
-    "R/manual_scripts/update-geography-lookups.R": {
+    "R/manual_scripts/update_geography_lookups.R": {
       "checksum": "8d7b3d434bc5a56b066db93162a66bf6"
     },
     "R/manual_scripts/utils.R": {
@@ -4004,7 +4007,7 @@
       "checksum": "f0ee4cca72e9cdfcd6a11a92f6efc946"
     },
     "R/preCheck2.r": {
-      "checksum": "feaf0688ddc05be4bf8188c70f7098bb"
+      "checksum": "9a98f3e6a22cac4c8cc4c345fbecb791"
     },
     "R/readFile.r": {
       "checksum": "23d3c726936fede5e8139667d4a4dd6a"
@@ -4013,7 +4016,7 @@
       "checksum": "98fe876938a64018a332891bce1148a1"
     },
     "README.md": {
-      "checksum": "1221aed34be9ae8a0cc985108f1265a5"
+      "checksum": "49f84962c930a31bd04b66f5ec0855e8"
     },
     "renv.lock": {
       "checksum": "4bcf543280b896eb5ee9ddc6a5668a09"
@@ -4594,6 +4597,12 @@
     "tests/testthat/otherData/passes_na_name.meta.csv": {
       "checksum": "4ec24788f9281d27f214e982d8766832"
     },
+    "tests/testthat/otherData/provider_col_incorrect.csv": {
+      "checksum": "b644366d765196471cdb1e9c6796925a"
+    },
+    "tests/testthat/otherData/provider_col_incorrect.meta.csv": {
+      "checksum": "22fe788bfad0901af4780ad9f9fca6e0"
+    },
     "tests/testthat/otherData/quoted_blank_geographies.csv": {
       "checksum": "7a419c60c2e349a4601c987ad3aa4ec1"
     },
@@ -4895,10 +4904,13 @@
       "checksum": "41a423a4bc68e5ba6c20a11f06092471"
     },
     "tests/testthat/test-function-edge_cases.R": {
-      "checksum": "a3fe187bddf118771f4c9befa2e3a65e"
+      "checksum": "cc86859c0c8b5919e764d20fa8c72207"
     },
     "tests/testthat/test-function-fileValidation.R": {
       "checksum": "302dd04b308471644c1a6574c3844c81"
+    },
+    "tests/testthat/test-function-geography_matrix.R": {
+      "checksum": "0ad4c6ef88604b628207156991a92349"
     },
     "tests/testthat/test-function-mainTests.R": {
       "checksum": "b59462c7d89642ee29bdfcacf0efbb0c"
@@ -4922,10 +4934,10 @@
       "checksum": "4570dc372c5f2d83bb0039da58795e3e"
     },
     "ui.R": {
-      "checksum": "b4bd84862419053e40d76a41054432e5"
+      "checksum": "52e49b75e9766a106c5653305d382d16"
     },
     "www/acalat_theme.css": {
-      "checksum": "f57440071227e73c85fa5470b6450b06"
+      "checksum": "e926d2ff3a5799c06d16a5e3c70b47aa"
     },
     "www/builder-duck.PNG": {
       "checksum": "7574642f76936b645e9ce137ec6a99e9"
