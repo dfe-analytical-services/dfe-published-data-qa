@@ -1194,12 +1194,12 @@ eda_combinations <- function(data) {
     } else {
       if (length(invalid_values) == 1) {
         output <- list(
-          "message" = paste0("The following english_devolved_area_code and english_devolved_area_name combination is invalid: '", paste0(invalid_values), "'. <br> - We do not expect any combinations outside of the <a href='https://github.com/dfe-analytical-services/dfe-published-data-qa/blob/master/data/english_devolved_areas.csv' target='_blank'>standard geographies lookup</a> (case sensitive), please check your name and code combinations against this lookup."),
+          "message" = paste0("The following english_devolved_area_code and english_devolved_area_name combination is invalid: '", paste0(invalid_values), "'. <br> - We do not expect any combinations outside of the <a href='https://github.com/dfe-analytical-services/dfe-published-data-qa/blob/main/data/english_devolved_areas.csv' target='_blank'>standard geographies lookup</a> (case sensitive), please check your name and code combinations against this lookup."),
           "result" = "FAIL"
         )
       } else {
         output <- list(
-          "message" = paste0("The following english_devolved_area_code and english_devolved_area_name combinations are invalid: '", paste0(invalid_values, collapse = "', '"), "'. <br> - We do not expect any combinations outside of the <a href='https://github.com/dfe-analytical-services/dfe-published-data-qa/blob/master/data/english_devolved_areas.csv' target='_blank'>standard geographies lookup</a> (case sensitive), please check your name and code combinations against this lookup."),
+          "message" = paste0("The following english_devolved_area_code and english_devolved_area_name combinations are invalid: '", paste0(invalid_values, collapse = "', '"), "'. <br> - We do not expect any combinations outside of the <a href='https://github.com/dfe-analytical-services/dfe-published-data-qa/blob/main/data/english_devolved_areas.csv' target='_blank'>standard geographies lookup</a> (case sensitive), please check your name and code combinations against this lookup."),
           "result" = "FAIL"
         )
       }
@@ -1237,12 +1237,12 @@ lep_combinations <- function(data) {
     } else {
       if (length(invalid_values) == 1) {
         output <- list(
-          "message" = paste0("The following local_enterprise_partnership_code and local_enterprise_partnership_name combination is invalid: '", paste0(invalid_values), "'. <br> - We do not expect any combinations outside of the <a href='https://github.com/dfe-analytical-services/dfe-published-data-qa/blob/master/data/leps.csv' target='_blank'>standard geographies lookup</a> (case sensitive), please check your name and code combinations against this lookup."),
+          "message" = paste0("The following local_enterprise_partnership_code and local_enterprise_partnership_name combination is invalid: '", paste0(invalid_values), "'. <br> - We do not expect any combinations outside of the <a href='https://github.com/dfe-analytical-services/dfe-published-data-qa/blob/main/data/leps.csv' target='_blank'>standard geographies lookup</a> (case sensitive), please check your name and code combinations against this lookup."),
           "result" = "FAIL"
         )
       } else {
         output <- list(
-          "message" = paste0("The following local_enterprise_partnership_code and local_enterprise_partnership_name combinations are invalid: '", paste0(invalid_values, collapse = "', '"), "'. <br> - We do not expect any combinations outside of the <a href='https://github.com/dfe-analytical-services/dfe-published-data-qa/blob/master/data/leps.csv' target='_blank'>standard geographies lookup</a> (case sensitive), please check your name and code combinations against this lookup."),
+          "message" = paste0("The following local_enterprise_partnership_code and local_enterprise_partnership_name combinations are invalid: '", paste0(invalid_values, collapse = "', '"), "'. <br> - We do not expect any combinations outside of the <a href='https://github.com/dfe-analytical-services/dfe-published-data-qa/blob/main/data/leps.csv' target='_blank'>standard geographies lookup</a> (case sensitive), please check your name and code combinations against this lookup."),
           "result" = "FAIL"
         )
       }
@@ -1280,12 +1280,12 @@ pcon_combinations <- function(data) {
     } else {
       if (length(invalid_values) == 1) {
         output <- list(
-          "message" = paste0("The following pcon_code and pcon_name combination is invalid: '", paste0(invalid_values), "'. <br> - We do not expect any combinations outside of the <a href='https://github.com/dfe-analytical-services/dfe-published-data-qa/blob/master/data/pcons.csv' target='_blank'>standard geographies lookup</a> (case sensitive), please check your name and code combinations against this lookup."),
+          "message" = paste0("The following pcon_code and pcon_name combination is invalid: '", paste0(invalid_values), "'. <br> - We do not expect any combinations outside of the <a href='https://github.com/dfe-analytical-services/dfe-published-data-qa/blob/main/data/pcons.csv' target='_blank'>standard geographies lookup</a> (case sensitive), please check your name and code combinations against this lookup."),
           "result" = "FAIL"
         )
       } else {
         output <- list(
-          "message" = paste0("The following pcon_code and pcon_name combinations are invalid: '", paste0(invalid_values, collapse = "', '"), "'. <br> - We do not expect any combinations outside of the <a href='https://github.com/dfe-analytical-services/dfe-published-data-qa/blob/master/data/pcons.csv' target='_blank'>standard geographies lookup</a> (case sensitive), please check your name and code combinations against this lookup."),
+          "message" = paste0("The following pcon_code and pcon_name combinations are invalid: '", paste0(invalid_values, collapse = "', '"), "'. <br> - We do not expect any combinations outside of the <a href='https://github.com/dfe-analytical-services/dfe-published-data-qa/blob/main/data/pcons.csv' target='_blank'>standard geographies lookup</a> (case sensitive), please check your name and code combinations against this lookup."),
           "result" = "FAIL"
         )
       }
@@ -1323,12 +1323,12 @@ lad_combinations <- function(data) {
     } else {
       if (length(invalid_values) == 1) {
         output <- list(
-          "message" = paste0("The following lad_code and lad_name combination is invalid: '", paste0(invalid_values), "'. <br> - We do not expect any combinations outside of the <a href='https://github.com/dfe-analytical-services/dfe-published-data-qa/blob/master/data/lads.csv' target='_blank'>standard geographies lookup</a> (case sensitive), please check your name and code combinations against this lookup."),
+          "message" = paste0("The following lad_code and lad_name combination is invalid: '", paste0(invalid_values), "'. <br> - We do not expect any combinations outside of the <a href='https://github.com/dfe-analytical-services/dfe-published-data-qa/blob/main/data/lads.csv' target='_blank'>standard geographies lookup</a> (case sensitive), please check your name and code combinations against this lookup."),
           "result" = "FAIL"
         )
       } else {
         output <- list(
-          "message" = paste0("The following lad_code and lad_name combinations are invalid: '", paste0(invalid_values, collapse = "', '"), "'. <br> - We do not expect any combinations outside of the <a href='https://github.com/dfe-analytical-services/dfe-published-data-qa/blob/master/data/lads.csv' target='_blank'>standard geographies lookup</a> (case sensitive), please check your name and code combinations against this lookup."),
+          "message" = paste0("The following lad_code and lad_name combinations are invalid: '", paste0(invalid_values, collapse = "', '"), "'. <br> - We do not expect any combinations outside of the <a href='https://github.com/dfe-analytical-services/dfe-published-data-qa/blob/main/data/lads.csv' target='_blank'>standard geographies lookup</a> (case sensitive), please check your name and code combinations against this lookup."),
           "result" = "FAIL"
         )
       }
@@ -1366,12 +1366,12 @@ la_combinations <- function(data) {
     } else {
       if (length(invalid_values) == 1) {
         output <- list(
-          "message" = paste0("The following old_la_code, new_la_code and la_name combination is invalid: '", paste0(invalid_values), "'. <br> - We do not expect any combinations outside of the <a href='https://github.com/dfe-analytical-services/dfe-published-data-qa/blob/master/data/las.csv' target='_blank'>standard geographies lookup</a> (case sensitive), please check your name and code combinations against this lookup."),
+          "message" = paste0("The following old_la_code, new_la_code and la_name combination is invalid: '", paste0(invalid_values), "'. <br> - We do not expect any combinations outside of the <a href='https://github.com/dfe-analytical-services/dfe-published-data-qa/blob/main/data/las.csv' target='_blank'>standard geographies lookup</a> (case sensitive), please check your name and code combinations against this lookup."),
           "result" = "FAIL"
         )
       } else {
         output <- list(
-          "message" = paste0("The following old_la_code, new_la_code and la_name combinations are invalid: '", paste0(invalid_values, collapse = "', '"), "'. <br> - We do not expect any combinations outside of the <a href='https://github.com/dfe-analytical-services/dfe-published-data-qa/blob/master/data/las.csv' target='_blank'>standard geographies lookup</a> (case sensitive), please check your name and code combinations against this lookup."),
+          "message" = paste0("The following old_la_code, new_la_code and la_name combinations are invalid: '", paste0(invalid_values, collapse = "', '"), "'. <br> - We do not expect any combinations outside of the <a href='https://github.com/dfe-analytical-services/dfe-published-data-qa/blob/main/data/las.csv' target='_blank'>standard geographies lookup</a> (case sensitive), please check your name and code combinations against this lookup."),
           "result" = "FAIL"
         )
       }
@@ -1421,12 +1421,12 @@ lsip_combinations <- function(data) {
     } else {
       if (length(invalid_values) == 1) {
         output <- list(
-          "message" = paste0("The following ", level_line$code_field, " and ", level_line$name_field, " combination is invalid for rows within the '", level_description, "' geographic_level: '", paste0(invalid_values), "'. <br> - We do not expect any combinations outside of the <a href='https://github.com/dfe-analytical-services/dfe-published-data-qa/blob/master/data/lsips.csv' target='_blank'>standard geographies lookup</a> (case sensitive), please check your name and code combinations against this lookup."),
+          "message" = paste0("The following ", level_line$code_field, " and ", level_line$name_field, " combination is invalid for rows within the '", level_description, "' geographic_level: '", paste0(invalid_values), "'. <br> - We do not expect any combinations outside of the <a href='https://github.com/dfe-analytical-services/dfe-published-data-qa/blob/main/data/lsips.csv' target='_blank'>standard geographies lookup</a> (case sensitive), please check your name and code combinations against this lookup."),
           "result" = "FAIL"
         )
       } else {
         output <- list(
-          "message" = paste0("The following ", level_line$code_field, " / ", level_line$name_field, " combinations are invalid for rows within the '", level_description, "' geographic_level: '", paste0(invalid_values, collapse = "', '"), "'. <br> - We do not expect any combinations outside of the <a href='https://github.com/dfe-analytical-services/dfe-published-data-qa/blob/master/data/lsips.csv' target='_blank'>standard geographies lookup</a> (case sensitive), please check your name and code combinations against this lookup."),
+          "message" = paste0("The following ", level_line$code_field, " / ", level_line$name_field, " combinations are invalid for rows within the '", level_description, "' geographic_level: '", paste0(invalid_values, collapse = "', '"), "'. <br> - We do not expect any combinations outside of the <a href='https://github.com/dfe-analytical-services/dfe-published-data-qa/blob/main/data/lsips.csv' target='_blank'>standard geographies lookup</a> (case sensitive), please check your name and code combinations against this lookup."),
           "result" = "FAIL"
         )
       }
@@ -1475,12 +1475,12 @@ ward_combinations <- function(data) {
     } else {
       if (length(invalid_values) == 1) {
         output <- list(
-          "message" = paste0("The following ", level_line$code_field, " and ", level_line$name_field, " combination is invalid for rows within the '", level_description, "' geographic_level: '", paste0(invalid_values), "'. <br> - We do not expect any combinations outside of the <a href='https://github.com/dfe-analytical-services/dfe-published-data-qa/blob/master/data/ward_lad.csv' target='_blank'>standard geographies lookup</a> (case sensitive), please check your name and code combinations against this lookup."),
+          "message" = paste0("The following ", level_line$code_field, " and ", level_line$name_field, " combination is invalid for rows within the '", level_description, "' geographic_level: '", paste0(invalid_values), "'. <br> - We do not expect any combinations outside of the <a href='https://github.com/dfe-analytical-services/dfe-published-data-qa/blob/main/data/ward_lad.csv' target='_blank'>standard geographies lookup</a> (case sensitive), please check your name and code combinations against this lookup."),
           "result" = "FAIL"
         )
       } else {
         output <- list(
-          "message" = paste0("The following ", level_line$code_field, " / ", level_line$name_field, " combinations are invalid for rows within the '", level_description, "' geographic_level: '", paste0(invalid_values, collapse = "', '"), "'. <br> - We do not expect any combinations outside of the <a href='https://github.com/dfe-analytical-services/dfe-published-data-qa/blob/master/data/ward_lad.csv' target='_blank'>standard geographies lookup</a> (case sensitive), please check your name and code combinations against this lookup."),
+          "message" = paste0("The following ", level_line$code_field, " / ", level_line$name_field, " combinations are invalid for rows within the '", level_description, "' geographic_level: '", paste0(invalid_values, collapse = "', '"), "'. <br> - We do not expect any combinations outside of the <a href='https://github.com/dfe-analytical-services/dfe-published-data-qa/blob/main/data/ward_lad.csv' target='_blank'>standard geographies lookup</a> (case sensitive), please check your name and code combinations against this lookup."),
           "result" = "FAIL"
         )
       }
@@ -1528,12 +1528,12 @@ region_combinations <- function(data) {
     } else {
       if (length(invalid_values) == 1) {
         output <- list(
-          "message" = paste0("The following region_code and region_name combination is invalid for rows within the 'Regional' geographic_level: '", paste0(invalid_values), "'. <br> - We do not expect any combinations outside of the <a href='https://github.com/dfe-analytical-services/dfe-published-data-qa/blob/master/data/regions.csv' target='_blank'>standard geographies lookup</a> (case sensitive), please check your name and code combinations against this lookup."),
+          "message" = paste0("The following region_code and region_name combination is invalid for rows within the 'Regional' geographic_level: '", paste0(invalid_values), "'. <br> - We do not expect any combinations outside of the <a href='https://github.com/dfe-analytical-services/dfe-published-data-qa/blob/main/data/regions.csv' target='_blank'>standard geographies lookup</a> (case sensitive), please check your name and code combinations against this lookup."),
           "result" = "FAIL"
         )
       } else {
         output <- list(
-          "message" = paste0("The following region_code / region_name combinations are invalid for rows within the 'Regional' geographic_level: '", paste0(invalid_values, collapse = "', '"), "'. <br> - We do not expect any combinations outside of the <a href='https://github.com/dfe-analytical-services/dfe-published-data-qa/blob/master/data/regions.csv' target='_blank'>standard geographies lookup</a> (case sensitive), please check your name and code combinations against this lookup."),
+          "message" = paste0("The following region_code / region_name combinations are invalid for rows within the 'Regional' geographic_level: '", paste0(invalid_values, collapse = "', '"), "'. <br> - We do not expect any combinations outside of the <a href='https://github.com/dfe-analytical-services/dfe-published-data-qa/blob/main/data/regions.csv' target='_blank'>standard geographies lookup</a> (case sensitive), please check your name and code combinations against this lookup."),
           "result" = "FAIL"
         )
       }
@@ -1569,12 +1569,12 @@ country_combinations <- function(data) {
     } else {
       if (length(invalid_values) == 1) {
         output <- list(
-          "message" = paste0("The following country_code / country_name combination is invalid: '", paste0(invalid_values), "'. <br> - We do not expect any combinations outside of the <a href='https://github.com/dfe-analytical-services/dfe-published-data-qa/blob/master/data/country.csv' target='_blank'>standard geographies lookup</a> (case sensitive), please check your name and code combinations against this lookup."),
+          "message" = paste0("The following country_code / country_name combination is invalid: '", paste0(invalid_values), "'. <br> - We do not expect any combinations outside of the <a href='https://github.com/dfe-analytical-services/dfe-published-data-qa/blob/main/data/country.csv' target='_blank'>standard geographies lookup</a> (case sensitive), please check your name and code combinations against this lookup."),
           "result" = "FAIL"
         )
       } else {
         output <- list(
-          "message" = paste0("The following country_code / country_name combinations are invalid: '", paste0(invalid_values, collapse = "', '"), "'. <br> - We do not expect any combinations outside of the <a href='https://github.com/dfe-analytical-services/dfe-published-data-qa/blob/master/data/country.csv' target='_blank'>standard geographies lookup</a> (case sensitive), please check your name and code combinations against this lookup."),
+          "message" = paste0("The following country_code / country_name combinations are invalid: '", paste0(invalid_values, collapse = "', '"), "'. <br> - We do not expect any combinations outside of the <a href='https://github.com/dfe-analytical-services/dfe-published-data-qa/blob/main/data/country.csv' target='_blank'>standard geographies lookup</a> (case sensitive), please check your name and code combinations against this lookup."),
           "result" = "FAIL"
         )
       }
