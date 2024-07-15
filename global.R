@@ -31,9 +31,10 @@ shhh(library(shinydisconnect))
 shhh(library(praise))
 shhh(library(dfeR))
 
-# Following are commented out as they are needed for CI / CD but not for running of app
+# Following are commented out as they are needed for CI / CD or commit hooks but not for running of app
 pigs_will_fly <- FALSE
 if (pigs_will_fly == TRUE) {
+  shhh(library(rsconnect))
   shhh(library(git2r))
   shhh(library(shinytest2))
   shhh(library(diffviewer))
