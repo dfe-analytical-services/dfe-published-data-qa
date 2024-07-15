@@ -16,7 +16,6 @@ if (any(style_output)) {
 }
 
 message("\n")
-
 message("\n2. Rebuilding manifest.json...", fill = TRUE)
 if (system.file(package = "rsconnect") != "" & system.file(package = "git2r") != "") {
   if (!any(grepl("manifest.json", git2r::status()))) {
