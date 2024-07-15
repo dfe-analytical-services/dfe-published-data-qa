@@ -1,4 +1,5 @@
-[![automatedTests](https://github.com/dfe-analytical-services/dfe-published-data-qa/actions/workflows/automatedTests.yaml/badge.svg?branch=master)](https://github.com/dfe-analytical-services/dfe-published-data-qa/actions/workflows/automatedTests.yaml) [![deployShinyApps](https://github.com/dfe-analytical-services/dfe-published-data-qa/actions/workflows/deployShinyApps.yaml/badge.svg?branch=master)](https://github.com/dfe-analytical-services/dfe-published-data-qa/actions/workflows/deployShinyApps.yaml)
+[![automatedTests](https://github.com/dfe-analytical-services/dfe-published-data-qa/actions/workflows/automatedTests.yaml/badge.svg?branch=main)](https://github.com/dfe-analytical-services/dfe-published-data-qa/actions/workflows/automatedTests.yaml) [![deployShinyApps](https://github.com/dfe-analytical-services/dfe-published-data-qa/actions/workflows/deployShinyApps.yaml/badge.svg?branch=main)](https://github.com/dfe-analytical-services/dfe-published-data-qa/actions/workflows/deployShinyApps.yaml)
+[![Build Status](https://dfe-gov-uk.visualstudio.com/stats-development/_apis/build/status%2Fdfe-analytical-services.dfe-published-data-qa?repoName=dfe-analytical-services%2Fdfe-published-data-qa&branchName=main)](https://dfe-gov-uk.visualstudio.com/stats-development/_build/latest?definitionId=1381&repoName=dfe-analytical-services%2Fdfe-published-data-qa&branchName=main)
 
 <h1 align="center">
   <br>
@@ -79,7 +80,7 @@ All functions created to screen files have an associated failing file, and unit 
 
 End to end UI tests have been created using shinytest2 that test the app loads, that the reset button really does clear everything, and that files that we'd expect to hit each particular stage of the screening do so.
 
-GitHub Actions provide CI by running the automated tests and checks for code styling, with badges in this README referring to the latest state of the master branch. The yaml files for these workflows can be found in the `.github/workflows` folder.
+GitHub Actions provide CI by running the automated tests and checks for code styling, with badges in this README referring to the latest state of the main branch. The yaml files for these workflows can be found in the `.github/workflows` folder.
 
 ### Deployment
 

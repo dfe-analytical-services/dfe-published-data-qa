@@ -3902,19 +3902,19 @@
       "checksum": "cbe2be338cd6586dc070e6a77e8e69ab"
     },
     ".github/workflows/automatedTests.yaml": {
-      "checksum": "2c02c8af14a2a3223366de7e262c794e"
+      "checksum": "a54e1c514096822310da73c07785d1f3"
     },
     ".github/workflows/deployShinyApps.yaml": {
-      "checksum": "068c21c28047fbd6bc659cb6c20aa53c"
+      "checksum": "edb6540188731400e0beaa5c2b599cf6"
     },
     ".hooks/pre-commit.R": {
       "checksum": "e5b9343c9a0e43d83e02b339946591d1"
     },
     ".Rprofile": {
-      "checksum": "f9e7da48fc9e50d14dd4661a051b011e"
+      "checksum": "87d24a2201fa8746739fe24983e6dbf9"
     },
     "azure-pipelines.yml": {
-      "checksum": "09a84038ac2e0704407b37d495a06762"
+      "checksum": "a49cbc7a1e9f19bd41cffd43e444a7d7"
     },
     "config.yml": {
       "checksum": "a00c58b97b9d930c17db2efef6257c30"
@@ -3986,7 +3986,7 @@
       "checksum": "4916f5b0d087e10679cb492b27bf4ac6"
     },
     "R/mainTests.r": {
-      "checksum": "8cbb619c2dc5c6785c9545e9450504b9"
+      "checksum": "e3ab0a7028ab185eca358fba7f051330"
     },
     "R/manual_scripts/debugging.R": {
       "checksum": "e56763afdf3659c7c47cfe0e3262e8cf"
@@ -4013,7 +4013,7 @@
       "checksum": "98fe876938a64018a332891bce1148a1"
     },
     "README.md": {
-      "checksum": "699af9a0e978f95f19dfa15d4240b458"
+      "checksum": "1221aed34be9ae8a0cc985108f1265a5"
     },
     "renv.lock": {
       "checksum": "4bcf543280b896eb5ee9ddc6a5668a09"
