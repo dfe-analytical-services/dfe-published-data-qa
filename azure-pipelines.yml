@@ -24,7 +24,7 @@ extends:
     appName: dfe-published-data-qa
     environments:
     - name: Pre-Production
-      appId: 459 # Dev is 460
+      appId: 459
     - name: Production
       appId: 123
     approvers: |
