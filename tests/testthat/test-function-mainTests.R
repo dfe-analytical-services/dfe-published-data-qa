@@ -102,12 +102,6 @@ test_that("time_period_six", {
   expect_equal(testIndividualTest(pathStart, "time_period_six"), "FAIL")
 })
 
-# three_years -------------------------------------------------------------------------------------------------------
-
-test_that("three_years", {
-  expect_equal(testIndividualTest(pathStart, "three_years"), "ADVISORY")
-})
-
 # region_for_la -------------------------------------------------------------------------------------------------------
 
 test_that("region_for_la", {

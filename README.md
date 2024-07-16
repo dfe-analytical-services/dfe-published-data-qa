@@ -1,4 +1,5 @@
-[![automatedTests](https://github.com/dfe-analytical-services/dfe-published-data-qa/actions/workflows/automatedTests.yaml/badge.svg?branch=master)](https://github.com/dfe-analytical-services/dfe-published-data-qa/actions/workflows/automatedTests.yaml) [![deployShinyApps](https://github.com/dfe-analytical-services/dfe-published-data-qa/actions/workflows/deployShinyApps.yaml/badge.svg?branch=master)](https://github.com/dfe-analytical-services/dfe-published-data-qa/actions/workflows/deployShinyApps.yaml)
+[![automatedTests](https://github.com/dfe-analytical-services/dfe-published-data-qa/actions/workflows/automatedTests.yaml/badge.svg?branch=main)](https://github.com/dfe-analytical-services/dfe-published-data-qa/actions/workflows/automatedTests.yaml) [![deployShinyApps](https://github.com/dfe-analytical-services/dfe-published-data-qa/actions/workflows/deployShinyApps.yaml/badge.svg?branch=main)](https://github.com/dfe-analytical-services/dfe-published-data-qa/actions/workflows/deployShinyApps.yaml)
+[![Build Status](https://dfe-gov-uk.visualstudio.com/stats-development/_apis/build/status%2Fdfe-analytical-services.dfe-published-data-qa?repoName=dfe-analytical-services%2Fdfe-published-data-qa&branchName=main)](https://dfe-gov-uk.visualstudio.com/stats-development/_build/latest?definitionId=1381&repoName=dfe-analytical-services%2Fdfe-published-data-qa&branchName=main)
 
 <h1 align="center">
   <br>
@@ -79,7 +80,7 @@ All functions created to screen files have an associated failing file, and unit 
 
 End to end UI tests have been created using shinytest2 that test the app loads, that the reset button really does clear everything, and that files that we'd expect to hit each particular stage of the screening do so.
 
-GitHub Actions provide CI by running the automated tests and checks for code styling, with badges in this README referring to the latest state of the master branch. The yaml files for these workflows can be found in the `.github/workflows` folder.
+GitHub Actions provide CI by running the automated tests and checks for code styling, with badges in this README referring to the latest state of the main branch. The yaml files for these workflows can be found in the `.github/workflows` folder.
 
 ### Deployment
 
@@ -113,25 +114,31 @@ There is a GitHub action workflow that automatically runs this against PRs to en
 
 The standard geographies used in this tool are sourced from (or developed with) the Office for National Statistics (ONS). As such, they are maintained in line with the ONS's [open geography portal](https://geoportal.statistics.gov.uk/). 
 
-#### Updating pcon_la or lad_lsip lookups
+#### Updating ward_pcon_lad_la or lad_lsip lookups
 
-There's an R script in the R/standard-data-prep folder containing functions to update both the pcon_la and lad_lsip lookups. To use this, download the latest version of the file from the searches linked in the comments of that script, and then save a copy of that data in a new folder called /data/downloaded_source_data/. The functions will then append any new data from that CSV into the lookup files.
+There's an R script in the `R/manual_scripts/` folder containing functions to update both the geography lookups. To use this, download the latest version of the file from the searches linked in the comments of that script, and then save a copy of that data in a new folder called `/data/downloaded_source_data/`. The functions will then append any new data from that CSV into the lookup files.
 
-#### Local skills improvement plan area (LSIP)
+* [Ward / PCon / LAD / LA lookup on Open Geography Portal (2024)](https://geoportal.statistics.gov.uk/datasets/62eb9df29a2f4521b5076a419ff9a47e_0/explore)
 
-These were developed in direct communications with the ONS ([ONS Geography e-mail](mailto:ONS.Geography@ons.gov.uk)) and they provided the basis for the code and name file used in this tool. At the time of writing, this has not been added to the open geography portal, although boundary files have been ([LSIP boundary map files](https://geoportal.statistics.gov.uk/search?collection=Dataset&sort=name&tags=all(BDY_LSIP%2CAUG_2023))).
+Local skills improvement plan area (LSIP) to LAD lookup was developed in direct communications with the ONS ([ONS Geography e-mail](mailto:ONS.Geography@ons.gov.uk)) and they provided the basis for the code and name file used in this tool. 
 
-#### Wards
+* [LAD / LSIP lookup on Open Geography Portal (2023)](https://geoportal.statistics.gov.uk/datasets/effcab9660fd4375baaed44c2bd23719_0/explore?q=local%20skills%20lad)
 
-The Ward to LAD lookup has been downloaded from the [Open Geography Portal administrative lookups](https://geoportal.statistics.gov.uk/search?q=LUP_WD_LAD&sort=Title%7Ctitle%7Cdesc). 
+#### Boundary files
 
-For example, in March 2024 we downloaded and used the 'Ward to Local Authority District (May 2023) Lookup in the United Kingdom' data set.
+Boundary files for use when mapping aren't available in this repo but are published on the Open Geography Portal. 
 
-#### PCon 2024 lookup
+* [Regions boundary map files](https://geoportal.statistics.gov.uk/search?q=BDY_RGN&sort=Title%7Ctitle%7Casc)
 
-We have recently added a lookup including provisional 2024 Parliamentary Constituency boundaries. This is available in the `data/pcon_2024_v2.csv` file, and further information on that file can be found on the [Open Geography Portal](https://geoportal.statistics.gov.uk/datasets/ons::postcode-to-new-westminster-parliamentary-constituencies-may-2024-lookup-in-the-uk/about).
+* [Local authority boundary map files (Counties and Unitary Authorities)](https://geoportal.statistics.gov.uk/search?q=BDY_CTYUA&sort=Date%20Created%7Ccreated%7Cdesc)
 
-Long term we aim to remove this and instead update the Ward > PCon > LAD > LA lookup once that is released by ONS.
+* [Local authority district boundary map files](https://geoportal.statistics.gov.uk/search?q=BDY_LAD&sort=Date%20Created%7Ccreated%7Cdesc)
+
+* [Westminster Constituency boundary map files](https://geoportal.statistics.gov.uk/search?q=BDY_PCON&sort=Date%20Created%7Ccreated%7Cdesc)
+
+* [Ward boundary map files](https://geoportal.statistics.gov.uk/search?q=BDY_WD&sort=Title%7Ctitle%7Casc)
+
+* [LSIP boundary map files](https://geoportal.statistics.gov.uk/search?collection=Dataset&sort=name&tags=all(BDY_LSIP%2CAUG_2023))
 
 ---
 
