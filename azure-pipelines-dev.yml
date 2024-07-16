@@ -1,0 +1,31 @@
+name: ees-data-screener-$(rev:r)
+
+pool:
+  name: RSConnect
+  
+trigger:
+  branches:
+    include:
+    - development
+
+  paths:
+    exclude:
+    - azure-pipelines.yml
+    - azure-pipelines-dev.yml
+
+resources:
+  repositories:
+    - repository: posit-deploy
+      type: git
+      name: ESFA-Data-Science/posit-deploy
+      
+extends:
+  template: deploy.yml@posit-deploy
+  parameters:
+    appName: dfe-published-data-qa
+    environments:
+    - name: Pre-Production
+      appId: 460
+    approvers: |
+     cameron.race@education.gov.uk
+     richard.bielby@education.gov.uk
