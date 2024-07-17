@@ -757,7 +757,7 @@ region_for_la <- function(data) {
 }
 
 # region_for_lad -------------------------------------
-# check if there is LA level data, and if so, if regional columns are present and completed
+# check if there is LAD level data, and if so, if regional columns are present and completed
 
 region_for_lad <- function(data) {
   if (!"Local authority district" %in% unique(data$geographic_level)) {
