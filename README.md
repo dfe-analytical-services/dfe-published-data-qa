@@ -1,5 +1,7 @@
-[![automatedTests](https://github.com/dfe-analytical-services/dfe-published-data-qa/actions/workflows/automatedTests.yaml/badge.svg?branch=main)](https://github.com/dfe-analytical-services/dfe-published-data-qa/actions/workflows/automatedTests.yaml) [![deployShinyApps](https://github.com/dfe-analytical-services/dfe-published-data-qa/actions/workflows/deployShinyApps.yaml/badge.svg?branch=main)](https://github.com/dfe-analytical-services/dfe-published-data-qa/actions/workflows/deployShinyApps.yaml)
+[![automatedTests](https://github.com/dfe-analytical-services/dfe-published-data-qa/actions/workflows/automatedTests.yaml/badge.svg?branch=main)](https://github.com/dfe-analytical-services/dfe-published-data-qa/actions/workflows/automatedTests.yaml) 
 [![Build Status](https://dfe-gov-uk.visualstudio.com/stats-development/_apis/build/status%2Fdfe-analytical-services.dfe-published-data-qa?repoName=dfe-analytical-services%2Fdfe-published-data-qa&branchName=main)](https://dfe-gov-uk.visualstudio.com/stats-development/_build/latest?definitionId=1381&repoName=dfe-analytical-services%2Fdfe-published-data-qa&branchName=main)
+[![deployShinyApps](https://github.com/dfe-analytical-services/dfe-published-data-qa/actions/workflows/deployShinyApps.yaml/badge.svg?branch=main)](https://github.com/dfe-analytical-services/dfe-published-data-qa/actions/workflows/deployShinyApps.yaml)
+
 
 <h1 align="center">
   <br>
@@ -94,7 +96,7 @@ In general all .r files will have a usable outline, so make use of that for navi
 
 ### Profiling
 
-`R/manual_scripts/profilingCode.r` contains the outline of code to assist when profiling the app. It is commented out by default it isn't ran when loading the app.
+`R/manual_scripts/profiling_code.r` contains the outline of code to assist when profiling the app. It is commented out by default it isn't ran when loading the app.
 
 ### Debugging
 
@@ -116,7 +118,7 @@ The standard geographies used in this tool are sourced from (or developed with) 
 
 #### Updating ward_pcon_lad_la or lad_lsip lookups
 
-There's an R script in the `R/manual_scripts/` folder containing functions to update both the geography lookups. To use this, download the latest version of the file from the searches linked in the comments of that script, and then save a copy of that data in a new folder called `/data/downloaded_source_data/`. The functions will then append any new data from that CSV into the lookup files.
+There's an R script in the `R/manual_scripts/` folder containing functions to update both the geography lookups (`R/manual_scripts/update_geography_lookups.R`). To use this, download the latest version of the file from the searches linked in the comments of that script, and then save a copy of that data in a new folder called `/data/downloaded_source_data/`. The functions will then append any new data from that CSV into the lookup files.
 
 * [Ward / PCon / LAD / LA lookup on Open Geography Portal (2024)](https://geoportal.statistics.gov.uk/datasets/62eb9df29a2f4521b5076a419ff9a47e_0/explore)
 

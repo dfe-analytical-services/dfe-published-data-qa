@@ -60,7 +60,7 @@ time_identifier_mix <- function(data) {
 # Do we have the right columns for the geographic level
 
 geography_level_present <- function(data) {
-  if (all(data$geographic_level == geography_matrix[1, 1])) {
+  if (all(data$geographic_level == "National")) {
     output <- list(
       "message" = "There is only National level data in the file.",
       "result" = "IGNORE"
@@ -68,14 +68,16 @@ geography_level_present <- function(data) {
   } else {
     expected_cols <- function(i) {
       # if a geographic level is present, then this returns the expected cols from the pre-defined geography_matrix
-
       if (i[1] %in% data$geographic_level) {
         return(i[2:4])
       }
     }
 
     # filter out the non table tool rows / cols from geography matrix
-    geography_present <- geography_matrix[1:14, ]
+    geography_present <- geography_dataframe %>%
+      filter(geographic_level != "Planning area") %>%
+      select(-row_number) %>%
+      as.matrix()
 
     missing_cols <- unlist(apply(geography_present, 1, expected_cols)) %>%
       .[!is.na(.)] %>%
@@ -154,7 +156,11 @@ ob_unit_meta <- function(meta) {
     }
   }
 
-  acceptable_ob_units_sch_prov_filter <- acceptable_observational_units[!acceptable_observational_units %in% c(geography_matrix[13, 3], geography_matrix[14, 3])]
+  # Checking for everything except school_name and provider_name as sometimes they can legitimately be in the metadata
+  acceptable_ob_units_sch_prov_filter <- acceptable_observational_units[
+    !acceptable_observational_units %in%
+      c(geography_dataframe %>% filter(geographic_level %in% c("School", "Provider")) %>% pull(name_field))
+  ]
 
   if (nrow(meta %>% filter(col_type == "Filter")) == 1) {
     # We could consider adding more detail around this check for if it fails because the data has provider_name or school_name mixed with other filters
