@@ -204,3 +204,7 @@ test_that("blank_meta_label_notNA_still_fails", {
 
   expect_equal(screeningOutput$results %>% filter(test == "label") %>% pull(result) %>% unlist(use.names = FALSE), "FAIL")
 })
+
+test_that("Can handle incorrect provider cols", {
+  expect_no_error(screeningOutput <- testOther("../../tests/testthat/otherData/provider_col_incorrect.csv"))
+})
