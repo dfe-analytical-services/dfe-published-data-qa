@@ -189,18 +189,18 @@ file_separator <- function(data, meta) {
     if ((grepl(",", data) == FALSE) && (grepl(",", meta) == FALSE)) {
       output <- list(
         "result" = "FAIL",
-        "message" = paste0("Neither of the data and metadata files appear to be using a comma delimited structure. <br> - See the ", "<a href='https://dfe-analytical-services.github.io/analysts-guide/statistics-production/ud.html#data_format' target='_blank'>guidance on how to save the files</a>", " if you are unsure.")
+        "message" = paste0("Neither of the data and metadata files appear to be using a comma delimited structure. <br> - See the ", "<a href='https://dfe-analytical-services.github.io/analysts-guide/statistics-production/ud.html#data-format' target='_blank'>guidance on data formats</a> and <a href='https://dfe-analytical-services.github.io/analysts-guide/statistics-production/ud.html#how-to-export-data-with-utf-8-encoding' target='_blank'>guidance how to save data files in the right format</a>", " if you are unsure.")
       )
     } else {
       if (grepl(",", meta)) {
         output <- list(
           "result" = "FAIL",
-          "message" = paste0("The data file does not appear to be using a comma delimited structure. <br> - See the ", "<a href='https://dfe-analytical-services.github.io/analysts-guide/statistics-production/ud.html#data_format' target='_blank'>guidance on how to save the files</a>", " if you are unsure.")
+          "message" = paste0("The data file does not appear to be using a comma delimited structure. <br> - See the ", "<a href='https://dfe-analytical-services.github.io/analysts-guide/statistics-production/ud.html#data-format' target='_blank'>guidance on how to save the files</a>", " if you are unsure.")
         )
       } else {
         output <- list(
           "result" = "FAIL",
-          "message" = paste0("The metadata file does not appear to be using a comma delimited structure. <br> - See the ", "<a href='https://dfe-analytical-services.github.io/analysts-guide/statistics-production/ud.html#data_format' target='_blank'>guidance on how to save the files</a>", " if you are unsure.")
+          "message" = paste0("The metadata file does not appear to be using a comma delimited structure. <br> - See the ", "<a href='https://dfe-analytical-services.github.io/analysts-guide/statistics-production/ud.html#data-format' target='_blank'>guidance on how to save the files</a>", " if you are unsure.")
         )
       }
     }
