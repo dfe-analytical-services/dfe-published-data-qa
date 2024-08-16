@@ -141,7 +141,7 @@ variable_characteristic <- function(meta) {
       "message" = paste(
         "The fields characteristic and/or characteristic_group have been included in the data.",
         "These are not recommended for use with the EES Table Tool.",
-        "Please refer to the <a href='https://rsconnect/rsc/stats-production-guidance/ud.html#Introduction_to_filters'>guidance pages on filters</a>."
+        "Please refer to the <a href='https://dfe-analytical-services.github.io/analysts-guide/statistics-production/ud.html#introduction-to-filters'>guidance pages on filters</a>."
       ),
       "result" = "ADVISORY"
     )
@@ -639,7 +639,7 @@ time_period <- function(data) {
   if (base_identifier %in% four_digit_identifiers) {
     if ((nrow(filter(time_length, digits == 4)) == nrow(time_length)) == FALSE) {
       output <- list(
-        "message" = paste0("The time_period length for '", paste(base_identifier), "' must always be a four digit number. <br> - Please check the ", "<a href='https://rsconnect/rsc/stats-production-guidance/ud.html#list_of_allowable_time_values' target='_blank'>guidance website</a> if you are unsure."),
+        "message" = paste0("The time_period length for '", paste(base_identifier), "' must always be a four digit number. <br> - Please check the ", "<a href='https://dfe-analytical-services.github.io/analysts-guide/statistics-production/ud.html#list-of-allowable-time-values' target='_blank'>guidance website</a> if you are unsure."),
         "result" = "FAIL"
       )
     } else {
@@ -653,7 +653,7 @@ time_period <- function(data) {
   if (base_identifier %in% six_digit_identifiers) {
     if ((nrow(filter(time_length, digits == 6)) == nrow(time_length)) == FALSE) {
       output <- list(
-        "message" = paste0("The time_period length for '", paste(base_identifier), "' must always be a six digit number. <br> - Please check the ", "<a href='https://rsconnect/rsc/stats-production-guidance/ud.html#list_of_allowable_time_values' target='_blank'>guidance website</a> if you are unsure."),
+        "message" = paste0("The time_period length for '", paste(base_identifier), "' must always be a six digit number. <br> - Please check the ", "<a href='https://dfe-analytical-services.github.io/analysts-guide/statistics-production/ud.html#list-of-allowable-time-values' target='_blank'>guidance website</a> if you are unsure."),
         "result" = "FAIL"
       )
     } else {
@@ -850,7 +850,7 @@ geography_level_completed <- function(data) {
       output <- list(
         "message" = paste0(
           "The following columns should be completed for all rows of the associated level that they refer to: <br> - '", paste0(incomplete_geographies, collapse = "', '"), "' . <br> - If you are unsure of the levels that they refer to, please check the ",
-          "<a href='https://rsconnect/rsc/stats-production-guidance/ud.html#allowable_geographic_levels' target='_blank'>allowable geographic values table</a>."
+          "<a href='https://dfe-analytical-services.github.io/analysts-guide/statistics-production/ud.html#allowable-geographic-levels' target='_blank'>allowable geographic values table</a>."
         ),
         "result" = "FAIL"
       )
@@ -2645,7 +2645,7 @@ ethnicity_values <- function(data) {
       "message" = paste0(
         "The ethnicity filter ", value_type, " '",
         paste(ethnicity_nonstandard, collapse = "', '"),
-        "' does not conform to the GSS standards. Please cross check against the <a href='https://rsconnect/rsc/stats-production-guidance/ud.html#Ethnicity'>published standards</a>."
+        "' does not conform to the GSS standards. Please cross check against the <a href='https://dfe-analytical-services.github.io/analysts-guide/statistics-production/ud.html#ethnicity'>published standards</a>."
       ),
       "result" = "ADVISORY"
     )
@@ -2654,7 +2654,7 @@ ethnicity_values <- function(data) {
       "message" = paste0(
         "The following ethnicity filter ", value_type, "s do not conform to the GSS standards: <br> - '",
         paste(ethnicity_nonstandard, collapse = "', '"),
-        "'. <br> - Please cross check against the <a href='https://rsconnect/rsc/stats-production-guidance/ud.html#Ethnicity'>published standards</a>."
+        "'. <br> - Please cross check against the <a href='https://dfe-analytical-services.github.io/analysts-guide/statistics-production/ud.html#ethnicity'>published standards</a>."
       ),
       "result" = "ADVISORY"
     )
@@ -2730,7 +2730,7 @@ ethnicity_characteristic_values <- function(data) {
         "message" = paste0(
           "The ethnicity filter value '",
           paste(ethnicity_nonstandard, collapse = "', '"),
-          "' does not conform to the GSS standards. Please cross check against the <a href='https://rsconnect/rsc/stats-production-guidance/ud.html#Ethnicity'>published standards</a>."
+          "' does not conform to the GSS standards. Please cross check against the <a href='https://dfe-analytical-services.github.io/analysts-guide/statistics-production/ud.html#ethnicity'>published standards</a>."
         ),
         "result" = "ADVISORY"
       )
@@ -2739,7 +2739,7 @@ ethnicity_characteristic_values <- function(data) {
         "message" = paste0(
           "The following ethnicity filter values do not conform to the GSS standards: <br> - '",
           paste(ethnicity_nonstandard, collapse = "', '"),
-          "'. <br> - Please cross check against the <a href='https://rsconnect/rsc/stats-production-guidance/ud.html#Ethnicity'>published standards</a>."
+          "'. <br> - Please cross check against the <a href='https://dfe-analytical-services.github.io/analysts-guide/statistics-production/ud.html#ethnicity'>published standards</a>."
         ),
         "result" = "ADVISORY"
       )

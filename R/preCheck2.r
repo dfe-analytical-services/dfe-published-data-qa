@@ -36,7 +36,7 @@ time_identifier_mix <- function(data) {
 
   if (any(is.na(factor(unique(data$time_identifier), base_level))) == TRUE) {
     output <- list(
-      "message" = paste0("The datafile is mixing incompatable time identifiers. <br> - Allowable values with '", paste(base_identifier), "' present, are: '", paste(base_level, collapse = "', '"), "'. <br> - See the <a href='https://rsconnect/rsc/stats-production-guidance/ud.html#list_of_allowable_time_values' target='_blank'>guidance on time values</a> if you are unsure."),
+      "message" = paste0("The datafile is mixing incompatable time identifiers. <br> - Allowable values with '", paste(base_identifier), "' present, are: '", paste(base_level, collapse = "', '"), "'. <br> - See the <a href='https://dfe-analytical-services.github.io/analysts-guide/statistics-production/ud.html#list-of-allowable-time-values' target='_blank'>guidance on time values</a> if you are unsure."),
       "result" = "FAIL"
     )
   } else {
@@ -259,18 +259,18 @@ utf8 <- function(data, meta) {
   } else {
     if (number_data_invalid > 0 && number_meta_invalid > 0) {
       output <- list(
-        "message" = paste0("Neither of the data and metadata files are using UTF-8 encoding. <br> - See the ", "<a href='https://rsconnect/rsc/stats-production-guidance/ud.html#data_format' target='_blank'>guidance on how to do this</a>", " if you are unsure."),
+        "message" = paste0("Neither of the data and metadata files are using UTF-8 encoding. <br> - See the ", "<a href='https://dfe-analytical-services.github.io/analysts-guide/statistics-production/ud.html#list-of-allowable-time-values' target='_blank'>guidance on how to do this</a>", " if you are unsure."),
         "result" = "FAIL"
       )
     } else {
       if (number_data_invalid > 0) {
         output <- list(
-          "message" = paste0("The data file is not using UTF-8 encoding. <br> - See the ", "<a href='https://rsconnect/rsc/stats-production-guidance/ud.html#data_format' target='_blank'>guidance on how to do this</a>", " if you are unsure."),
+          "message" = paste0("The data file is not using UTF-8 encoding. <br> - See the ", "<a href='https://dfe-analytical-services.github.io/analysts-guide/statistics-production/ud.html#list-of-allowable-time-values' target='_blank'>guidance on how to do this</a>", " if you are unsure."),
           "result" = "FAIL"
         )
       } else {
         output <- list(
-          "message" = paste0("The metadata file is not using UTF-8 encoding. <br> - See the ", "<a href='https://rsconnect/rsc/stats-production-guidance/ud.html#data_format' target='_blank'>guidance on how to do this</a>", " if you are unsure."),
+          "message" = paste0("The metadata file is not using UTF-8 encoding. <br> - See the ", "<a href='https://dfe-analytical-services.github.io/analysts-guide/statistics-production/ud.html#list-of-allowable-time-values' target='_blank'>guidance on how to do this</a>", " if you are unsure."),
           "result" = "FAIL"
         )
       }
