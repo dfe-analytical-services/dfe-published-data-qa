@@ -373,7 +373,7 @@ server <- function(input, output, session) {
             type = "success",
             tags$span(
               "Your files can now be uploaded to Explore Education Statistics, see our  ",
-              a(href = "https://rsconnect/rsc/stats-production-guidance/ees.html", "guidance on using EES", target = "_blank"),
+              a(href = "https://dfe-analytical-services.github.io/analysts-guide/statistics-production/ees.html", "guidance on using EES", target = "_blank"),
               " for more information."
             ),
             html = TRUE
