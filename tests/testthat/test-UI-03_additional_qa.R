@@ -56,6 +56,8 @@ test_that("Additional QA tabs", {
   app$set_inputs(outlier_indicator_parameter = "num_schools")
   app$set_inputs(submit_outlier = "click")
 
+  app$wait_for_idle(50) # this test seems weirdly flaky for unknown reasons
+
   app$expect_values(output = "table_outlier_list")
 
   # 9. Outlier check doesn't run with same time periods

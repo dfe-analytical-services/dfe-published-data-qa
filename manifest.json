@@ -3903,7 +3903,7 @@
       "checksum": "e5b9343c9a0e43d83e02b339946591d1"
     },
     ".Rprofile": {
-      "checksum": "ec8bbd4624ab1b090bdb8673b41d024a"
+      "checksum": "41d1ba97c663e97c4c53ecd99ab13eb0"
     },
     "azure-pipelines-dev.yml": {
       "checksum": "fc2ef843ff5024bcba25ff84eec05f4c"
@@ -4568,6 +4568,12 @@
     "tests/testthat/otherData/lad_within_la.meta.csv": {
       "checksum": "fb14aee7a7e0fb0671e5feb4c41af9bf"
     },
+    "tests/testthat/otherData/missing_region_name.csv": {
+      "checksum": "307a7ff183aa1eb50f567d2a3d7b6071"
+    },
+    "tests/testthat/otherData/missing_region_name.meta.csv": {
+      "checksum": "f7397c726426f2c1210b9062ddeb8ac5"
+    },
     "tests/testthat/otherData/multiple_stripped_filter_groups.csv": {
       "checksum": "93efa02917cba280b37a1b13083d2819"
     },
@@ -4899,7 +4905,7 @@
       "checksum": "41a423a4bc68e5ba6c20a11f06092471"
     },
     "tests/testthat/test-function-edge_cases.R": {
-      "checksum": "cc86859c0c8b5919e764d20fa8c72207"
+      "checksum": "f28bebce557004db15917ee71e2a4fab"
     },
     "tests/testthat/test-function-fileValidation.R": {
       "checksum": "302dd04b308471644c1a6574c3844c81"
@@ -4926,7 +4932,7 @@
       "checksum": "e1c273ef462a5f49a60df1e3a5e94fb6"
     },
     "tests/testthat/test-UI-03_additional_qa.R": {
-      "checksum": "4570dc372c5f2d83bb0039da58795e3e"
+      "checksum": "82a40f0765550189be42b19c4178ee66"
     },
     "ui.R": {
       "checksum": "52e49b75e9766a106c5653305d382d16"

@@ -208,3 +208,7 @@ test_that("blank_meta_label_notNA_still_fails", {
 test_that("Can handle incorrect provider cols", {
   expect_no_error(screeningOutput <- testOther("../../tests/testthat/otherData/provider_col_incorrect.csv"))
 })
+
+test_that("Can handle missing region_name", {
+  expect_no_error(screeningOutput <- testOther("../../tests/testthat/otherData/missing_region_name.csv"))
+})
