@@ -1493,11 +1493,12 @@ ward_combinations <- function(data) {
 # region_combinations -------------------------------------
 # Checking that region_code and region_name combinations are valid
 # We know from geography_level_present (pre-check 2) that if regional rows exist both cols must be present
+# We know from region_col_present (main tests) that if one region col exists both cols must be present
 
 region_combinations <- function(data) {
-  if (!"region_code" %in% names(data)) {
+  if (!"region_code" %in% names(data) || !"region_name" %in% names(data)) {
     output <- list(
-      "message" = "region_code column is not present in this data file.",
+      "message" = "At least one of the region columns is not present in this data file.",
       "result" = "IGNORE"
     )
   } else {
@@ -1544,40 +1545,33 @@ region_combinations <- function(data) {
 }
 
 # country_combinations -------------------------------------
-# checking that country_code and country_name combinations are valid
-
+# Checking that country_code and country_name combinations are valid
+# We already know that both columns have to exist from data_mandatory_cols() (fileValidation)
 country_combinations <- function(data) {
-  if (!"country_code" %in% names(data)) {
+  invalid_values <- data %>%
+    select("country_code", "country_name") %>%
+    filter(country_code != gssNAvcode) %>%
+    unique() %>%
+    mutate(combo = paste(country_code, country_name)) %>%
+    pull(combo) %>%
+    .[!(. %in% expected_country_combinations)]
+
+  if (length(invalid_values) == 0) {
     output <- list(
-      "message" = "Country columns are not present in this data file.",
-      "result" = "IGNORE"
+      "message" = "All country_code and country_name combinations are valid.",
+      "result" = "PASS"
     )
   } else {
-    invalid_values <- data %>%
-      select("country_code", "country_name") %>%
-      filter(country_code != gssNAvcode) %>%
-      unique() %>%
-      mutate(combo = paste(country_code, country_name)) %>%
-      pull(combo) %>%
-      .[!(. %in% expected_country_combinations)]
-
-    if (length(invalid_values) == 0) {
+    if (length(invalid_values) == 1) {
       output <- list(
-        "message" = "All country_code and country_name combinations are valid.",
-        "result" = "PASS"
+        "message" = paste0("The following country_code / country_name combination is invalid: '", paste0(invalid_values), "'. <br> - We do not expect any combinations outside of the <a href='https://github.com/dfe-analytical-services/dfe-published-data-qa/blob/main/data/country.csv' target='_blank'>standard geographies lookup</a> (case sensitive), please check your name and code combinations against this lookup."),
+        "result" = "FAIL"
       )
     } else {
-      if (length(invalid_values) == 1) {
-        output <- list(
-          "message" = paste0("The following country_code / country_name combination is invalid: '", paste0(invalid_values), "'. <br> - We do not expect any combinations outside of the <a href='https://github.com/dfe-analytical-services/dfe-published-data-qa/blob/main/data/country.csv' target='_blank'>standard geographies lookup</a> (case sensitive), please check your name and code combinations against this lookup."),
-          "result" = "FAIL"
-        )
-      } else {
-        output <- list(
-          "message" = paste0("The following country_code / country_name combinations are invalid: '", paste0(invalid_values, collapse = "', '"), "'. <br> - We do not expect any combinations outside of the <a href='https://github.com/dfe-analytical-services/dfe-published-data-qa/blob/main/data/country.csv' target='_blank'>standard geographies lookup</a> (case sensitive), please check your name and code combinations against this lookup."),
-          "result" = "FAIL"
-        )
-      }
+      output <- list(
+        "message" = paste0("The following country_code / country_name combinations are invalid: '", paste0(invalid_values, collapse = "', '"), "'. <br> - We do not expect any combinations outside of the <a href='https://github.com/dfe-analytical-services/dfe-published-data-qa/blob/main/data/country.csv' target='_blank'>standard geographies lookup</a> (case sensitive), please check your name and code combinations against this lookup."),
+        "result" = "FAIL"
+      )
     }
   }
 
