@@ -58,7 +58,7 @@ mainTests <- function(data_character, meta_character, datafile, metafile) {
       indicator_dp(metafile), # active test
       indicator_dp_validation(metafile), # active test
       indicator_dp_completed(metafile), # active test
-      ethnicity_headers(metafile), # active test
+      harmonised_filter_headers(metafile), # active test
       ethnicity_values(datafile), # active test
       ethnicity_characteristic_group(datafile), # active test
       ethnicity_characteristic_values(datafile), # active test
