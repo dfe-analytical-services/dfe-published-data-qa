@@ -117,3 +117,5 @@ acceptable_indicatorunits <- c("%", "pp", "£", "£m")
 
 # Harmonised values ===================================================================================================
 ethnicity_standard_values <- suppressMessages(read_csv("data/ethnicity.csv"))
+
+harmonised_col_names <- suppressMessages(read_csv("data/harmonised_col_names.csv"))

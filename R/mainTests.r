@@ -2556,36 +2556,39 @@ indicator_dp_completed <- function(meta) {
   return(output)
 }
 
-ethnicity_headers <- function(meta) {
-  # First find any ethnicity type columns that don't have the standard col_names
-  ethnicity_standard_headers <- c("ethnicity_major", "ethnicity_minor", "ethnicity_detailed", "minority_ethnic")
-  ethnicity_columns <- meta %>%
-    filter(
-      grepl("ethnic", tolower(col_name)),
-      !(col_name %in% ethnicity_standard_headers)
-    ) %>%
-    pull(col_name)
-  if (length(ethnicity_columns) == 0) {
+harmonised_filter_headers <- function(meta) {
+  search_strings <- harmonised_col_names %>%
+    pull(col_name_search_string) %>%
+    unique()
+  bad_col_names <- c()
+  for (search_string in search_strings) {
+    standard_headers <- harmonised_col_names %>%
+      filter(col_name_search_string == search_string) %>%
+      pull(col_name_harmonised)
+    bad_cols <- meta %>%
+      filter(
+        grepl(search_string, tolower(col_name)),
+        !(col_name %in% standard_headers)
+      ) %>%
+      pull(col_name)
+    if (length(bad_cols) > 0) {
+      bad_col_names <- c(bad_col_names, bad_cols)
+    }
+  }
+  if (length(bad_col_names) == 0) {
     output <- list(
-      "message" = "No ethnicity header issues found.",
+      "message" = "No standardised col_name issues found.",
       "result" = "PASS"
-    )
-  } else if (length(ethnicity_columns) == 1) {
-    output <- list(
-      "message" = paste0(
-        paste(ethnicity_columns, collapse = "', '"), " appears to relate to ethnicity data, but does not conform to the standard col_name conventions: ",
-        paste(ethnicity_standard_headers, collapse = ", "),
-        "."
-      ),
-      "result" = "FAIL"
     )
   } else {
     output <- list(
       "message" = paste0(
-        "The following columns appear to relate to ethnicity data, but do not conform to the standard col_name conventions: <br> - '",
-        paste(ethnicity_columns, collapse = "', '"), "'. <br> - These should take the form of one of the following: ",
-        paste(ethnicity_standard_headers, collapse = ", "),
-        "."
+        "The column(s) ",
+        paste(bad_col_names, collapse = "', '"), " appear to relate to ",
+        "contexts that fall under the harmonised data standards. Please verify ",
+        "your column headers against the data standards in:\n",
+        "https://github.com/dfe-analytical-services/dfe-published-data-qa/tree",
+        "/main/data"
       ),
       "result" = "FAIL"
     )
