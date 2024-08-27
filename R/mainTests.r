@@ -58,7 +58,7 @@ mainTests <- function(data_character, meta_character, datafile, metafile) {
       indicator_dp(metafile), # active test
       indicator_dp_validation(metafile), # active test
       indicator_dp_completed(metafile), # active test
-      harmonised_filter_headers(metafile), # active test
+      standard_filter_headers(metafile), # active test
       ethnicity_values(datafile), # active test
       ethnicity_characteristic_group(datafile), # active test
       ethnicity_characteristic_values(datafile), # active test
@@ -2556,7 +2556,7 @@ indicator_dp_completed <- function(meta) {
   return(output)
 }
 
-harmonised_filter_headers <- function(meta) {
+standard_filter_headers <- function(meta) {
   search_strings <- harmonised_col_names %>%
     pull(col_name_search_string) %>%
     unique()

@@ -6,6 +6,7 @@ sen_,sen_provision
 primary_need,sen_primary_need
 secondary_need,sen_secondary_need
 establishment_type,establishment_type
+establishment_type,establishment_type_group
 provider_type,provider_type
 school_type,establishment_type
 school_type,establishment_type_group

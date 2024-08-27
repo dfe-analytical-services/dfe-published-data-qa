@@ -1,761 +1,761 @@
-"time_period","time_identifier","geographic_level","country_code","country_name","region_name","region_code","ethnicity_major","ethnicity_minor","headcount"
-202122,"Academic year","Regional","E92000001","England","West Midlands","E12000005","Black/African/Caribbean/Black British","Any other Black/African/Caribbean background",6844
-202122,"Academic year","Regional","E92000001","England","Yorkshire and The Humber","E12000003","Mixed/Multiple ethnic groups","White and Black Caribbean",10577
+"time_period","time_identifier","geographic_level","country_code","country_name","region_name","region_code","ethnicity_major","ethnicity_minor","pupil_count"
+202122,"Academic year","Regional","E92000001","England","West Midlands","E12000005","Black / African / Caribbean / Black British","Any other Black / African / Caribbean background",6844
+202122,"Academic year","Regional","E92000001","England","Yorkshire and The Humber","E12000003","Mixed / Multiple ethnic groups","White and Black Caribbean",10577
 202122,"Academic year","Regional","E92000001","England","Yorkshire and The Humber","E12000003","White","Any other White background",39331
-202122,"Academic year","National","E92000001","England","","","Mixed/Multiple ethnic groups","Any other Mixed/Multiple ethnic background",213597
-202122,"Academic year","National","E92000001","England","","","Mixed/Multiple ethnic groups","White and Black Caribbean",133504
+202122,"Academic year","National","E92000001","England","","","Mixed / Multiple ethnic groups","Any other Mixed / Multiple ethnic background",213597
+202122,"Academic year","National","E92000001","England","","","Mixed / Multiple ethnic groups","White and Black Caribbean",133504
 202122,"Academic year","National","E92000001","England","","","Unknown","Unknown",136371
 202122,"Academic year","National","E92000001","England","","","Total","Total",8418013
-202122,"Academic year","Regional","E92000001","England","East Midlands","E12000004","Black/African/Caribbean/Black British","African",18098
-202122,"Academic year","Regional","E92000001","England","East Midlands","E12000004","Black/African/Caribbean/Black British","Caribbean",3112
-202122,"Academic year","Regional","E92000001","England","East Midlands","E12000004","Mixed/Multiple ethnic groups","White and Asian",9859
+202122,"Academic year","Regional","E92000001","England","East Midlands","E12000004","Black / African / Caribbean / Black British","African",18098
+202122,"Academic year","Regional","E92000001","England","East Midlands","E12000004","Black / African / Caribbean / Black British","Caribbean",3112
+202122,"Academic year","Regional","E92000001","England","East Midlands","E12000004","Mixed / Multiple ethnic groups","White and Asian",9859
 202122,"Academic year","Regional","E92000001","England","East Midlands","E12000004","White","Gypsy or Irish Traveller",2346
 202122,"Academic year","Regional","E92000001","England","East Midlands","E12000004","White","Irish",1150
-202122,"Academic year","Regional","E92000001","England","East Midlands","E12000004","White","English/Welsh/Scottish/Northern Irish/British",516312
-202122,"Academic year","Regional","E92000001","England","East of England","E12000006","Mixed/Multiple ethnic groups","White and Asian",15694
+202122,"Academic year","Regional","E92000001","England","East Midlands","E12000004","White","English / Welsh / Scottish / Northern Irish / British",516312
+202122,"Academic year","Regional","E92000001","England","East of England","E12000006","Mixed / Multiple ethnic groups","White and Asian",15694
 202122,"Academic year","Regional","E92000001","England","East of England","E12000006","Unknown","Unknown",18204
 202122,"Academic year","Regional","E92000001","England","East of England","E12000006","White","Gypsy or Irish Traveller",3005
-202122,"Academic year","Regional","E92000001","England","East of England","E12000006","White","English/Welsh/Scottish/Northern Irish/British",660612
-202122,"Academic year","Regional","E92000001","England","London","E12000007","Asian/Asian British","Bangladeshi",79954
-202122,"Academic year","Regional","E92000001","England","London","E12000007","Mixed/Multiple ethnic groups","White and Black African",20290
+202122,"Academic year","Regional","E92000001","England","East of England","E12000006","White","English / Welsh / Scottish / Northern Irish / British",660612
+202122,"Academic year","Regional","E92000001","England","London","E12000007","Asian / Asian British","Bangladeshi",79954
+202122,"Academic year","Regional","E92000001","England","London","E12000007","Mixed / Multiple ethnic groups","White and Black African",20290
 202122,"Academic year","Regional","E92000001","England","London","E12000007","White","Any other White background",183941
-202122,"Academic year","Regional","E92000001","England","North East","E12000001","Black/African/Caribbean/Black British","African",5275
+202122,"Academic year","Regional","E92000001","England","North East","E12000001","Black / African / Caribbean / Black British","African",5275
 202122,"Academic year","Regional","E92000001","England","North East","E12000001","White","Gypsy or Irish Traveller",1351
 202122,"Academic year","Regional","E92000001","England","North West","E12000002","Other ethnic group","Total",22824
-202122,"Academic year","Regional","E92000001","England","North West","E12000002","Asian/Asian British","Chinese",8041
-202122,"Academic year","Regional","E92000001","England","North West","E12000002","Asian/Asian British","Indian",23483
-202122,"Academic year","Regional","E92000001","England","North West","E12000002","Mixed/Multiple ethnic groups","Any other Mixed/Multiple ethnic background",23246
+202122,"Academic year","Regional","E92000001","England","North West","E12000002","Asian / Asian British","Chinese",8041
+202122,"Academic year","Regional","E92000001","England","North West","E12000002","Asian / Asian British","Indian",23483
+202122,"Academic year","Regional","E92000001","England","North West","E12000002","Mixed / Multiple ethnic groups","Any other Mixed / Multiple ethnic background",23246
 202122,"Academic year","Regional","E92000001","England","North West","E12000002","Unknown","Unknown",13948
 202122,"Academic year","Regional","E92000001","England","North West","E12000002","White","Any other White background",41690
-202122,"Academic year","Regional","E92000001","England","South East","E12000008","Asian/Asian British","Pakistani",35115
-202122,"Academic year","Regional","E92000001","England","South East","E12000008","Mixed/Multiple ethnic groups","Any other Mixed/Multiple ethnic background",33692
-202122,"Academic year","Regional","E92000001","England","South West","E12000009","Asian/Asian British","Chinese",2917
-202122,"Academic year","Regional","E92000001","England","South West","E12000009","Black/African/Caribbean/Black British","African",9802
-202122,"Academic year","Regional","E92000001","England","South West","E12000009","Mixed/Multiple ethnic groups","White and Black Caribbean",8557
-202122,"Academic year","Regional","E92000001","England","West Midlands","E12000005","Asian/Asian British","Pakistani",82717
-202122,"Academic year","Regional","E92000001","England","West Midlands","E12000005","Mixed/Multiple ethnic groups","White and Black Caribbean",23793
+202122,"Academic year","Regional","E92000001","England","South East","E12000008","Asian / Asian British","Pakistani",35115
+202122,"Academic year","Regional","E92000001","England","South East","E12000008","Mixed / Multiple ethnic groups","Any other Mixed / Multiple ethnic background",33692
+202122,"Academic year","Regional","E92000001","England","South West","E12000009","Asian / Asian British","Chinese",2917
+202122,"Academic year","Regional","E92000001","England","South West","E12000009","Black / African / Caribbean / Black British","African",9802
+202122,"Academic year","Regional","E92000001","England","South West","E12000009","Mixed / Multiple ethnic groups","White and Black Caribbean",8557
+202122,"Academic year","Regional","E92000001","England","West Midlands","E12000005","Asian / Asian British","Pakistani",82717
+202122,"Academic year","Regional","E92000001","England","West Midlands","E12000005","Mixed / Multiple ethnic groups","White and Black Caribbean",23793
 202122,"Academic year","Regional","E92000001","England","West Midlands","E12000005","White","Gypsy or Irish Traveller",3357
 202122,"Academic year","Regional","E92000001","England","West Midlands","E12000005","White","Irish",1797
 202122,"Academic year","Regional","E92000001","England","Yorkshire and The Humber","E12000003","Other ethnic group","Total",13668
-202122,"Academic year","Regional","E92000001","England","Yorkshire and The Humber","E12000003","Black/African/Caribbean/Black British","Caribbean",2186
+202122,"Academic year","Regional","E92000001","England","Yorkshire and The Humber","E12000003","Black / African / Caribbean / Black British","Caribbean",2186
 202122,"Academic year","Regional","E92000001","England","Yorkshire and The Humber","E12000003","White","Irish",1140
 202122,"Academic year","National","E92000001","England","","","White","Gypsy or Irish Traveller",27359
-202122,"Academic year","National","E92000001","England","","","White","English/Welsh/Scottish/Northern Irish/British",5379748
+202122,"Academic year","National","E92000001","England","","","White","English / Welsh / Scottish / Northern Irish / British",5379748
 202122,"Academic year","Regional","E92000001","England","East Midlands","E12000004","White","Any other White background",47266
 202122,"Academic year","Regional","E92000001","England","East of England","E12000006","Other ethnic group","Total",10279
-202122,"Academic year","Regional","E92000001","England","East of England","E12000006","Asian/Asian British","Any other Asian background",14672
-202122,"Academic year","Regional","E92000001","England","East of England","E12000006","Mixed/Multiple ethnic groups","White and Black Caribbean",15144
+202122,"Academic year","Regional","E92000001","England","East of England","E12000006","Asian / Asian British","Any other Asian background",14672
+202122,"Academic year","Regional","E92000001","England","East of England","E12000006","Mixed / Multiple ethnic groups","White and Black Caribbean",15144
 202122,"Academic year","Regional","E92000001","England","East of England","E12000006","White","Irish",3029
-202122,"Academic year","Regional","E92000001","England","London","E12000007","Asian/Asian British","Indian",89639
-202122,"Academic year","Regional","E92000001","England","London","E12000007","Asian/Asian British","Pakistani",60707
-202122,"Academic year","Regional","E92000001","England","London","E12000007","Black/African/Caribbean/Black British","Any other Black/African/Caribbean background",27761
-202122,"Academic year","Regional","E92000001","England","London","E12000007","Black/African/Caribbean/Black British","African",156883
-202122,"Academic year","Regional","E92000001","England","London","E12000007","Black/African/Caribbean/Black British","Caribbean",50178
+202122,"Academic year","Regional","E92000001","England","London","E12000007","Asian / Asian British","Indian",89639
+202122,"Academic year","Regional","E92000001","England","London","E12000007","Asian / Asian British","Pakistani",60707
+202122,"Academic year","Regional","E92000001","England","London","E12000007","Black / African / Caribbean / Black British","Any other Black / African / Caribbean background",27761
+202122,"Academic year","Regional","E92000001","England","London","E12000007","Black / African / Caribbean / Black British","African",156883
+202122,"Academic year","Regional","E92000001","England","London","E12000007","Black / African / Caribbean / Black British","Caribbean",50178
 202122,"Academic year","Regional","E92000001","England","London","E12000007","White","Irish",6268
 202122,"Academic year","Regional","E92000001","England","London","E12000007","Total","Total",1309322
-202122,"Academic year","Regional","E92000001","England","North East","E12000001","Asian/Asian British","Bangladeshi",3929
-202122,"Academic year","Regional","E92000001","England","North East","E12000001","White","English/Welsh/Scottish/Northern Irish/British",341858
-202122,"Academic year","Regional","E92000001","England","North West","E12000002","Asian/Asian British","Pakistani",74053
-202122,"Academic year","Regional","E92000001","England","North West","E12000002","Black/African/Caribbean/Black British","African",28344
-202122,"Academic year","Regional","E92000001","England","South East","E12000008","Black/African/Caribbean/Black British","Any other Black/African/Caribbean background",5250
-202122,"Academic year","Regional","E92000001","England","South East","E12000008","Black/African/Caribbean/Black British","African",35205
+202122,"Academic year","Regional","E92000001","England","North East","E12000001","Asian / Asian British","Bangladeshi",3929
+202122,"Academic year","Regional","E92000001","England","North East","E12000001","White","English / Welsh / Scottish / Northern Irish / British",341858
+202122,"Academic year","Regional","E92000001","England","North West","E12000002","Asian / Asian British","Pakistani",74053
+202122,"Academic year","Regional","E92000001","England","North West","E12000002","Black / African / Caribbean / Black British","African",28344
+202122,"Academic year","Regional","E92000001","England","South East","E12000008","Black / African / Caribbean / Black British","Any other Black / African / Caribbean background",5250
+202122,"Academic year","Regional","E92000001","England","South East","E12000008","Black / African / Caribbean / Black British","African",35205
 202122,"Academic year","Regional","E92000001","England","South East","E12000008","White","Gypsy or Irish Traveller",5872
 202122,"Academic year","National","E92000001","England","","","Other ethnic group","Total",185355
-202122,"Academic year","National","E92000001","England","","","Asian/Asian British","Indian",289179
-202122,"Academic year","National","E92000001","England","","","Black/African/Caribbean/Black British","Any other Black/African/Caribbean background",65501
-202122,"Academic year","National","E92000001","England","","","Black/African/Caribbean/Black British","Caribbean",82402
+202122,"Academic year","National","E92000001","England","","","Asian / Asian British","Indian",289179
+202122,"Academic year","National","E92000001","England","","","Black / African / Caribbean / Black British","Any other Black / African / Caribbean background",65501
+202122,"Academic year","National","E92000001","England","","","Black / African / Caribbean / Black British","Caribbean",82402
 202122,"Academic year","National","E92000001","England","","","White","Irish",21495
-202122,"Academic year","Regional","E92000001","England","East Midlands","E12000004","Asian/Asian British","Any other Asian background",10499
-202122,"Academic year","Regional","E92000001","England","East Midlands","E12000004","Asian/Asian British","Indian",35705
-202122,"Academic year","Regional","E92000001","England","East Midlands","E12000004","Black/African/Caribbean/Black British","Any other Black/African/Caribbean background",4589
-202122,"Academic year","Regional","E92000001","England","East of England","E12000006","Asian/Asian British","Chinese",4806
-202122,"Academic year","Regional","E92000001","England","East of England","E12000006","Black/African/Caribbean/Black British","Any other Black/African/Caribbean background",5230
-202122,"Academic year","Regional","E92000001","England","East of England","E12000006","Black/African/Caribbean/Black British","African",27046
-202122,"Academic year","Regional","E92000001","England","East of England","E12000006","Mixed/Multiple ethnic groups","Any other Mixed/Multiple ethnic background",22801
+202122,"Academic year","Regional","E92000001","England","East Midlands","E12000004","Asian / Asian British","Any other Asian background",10499
+202122,"Academic year","Regional","E92000001","England","East Midlands","E12000004","Asian / Asian British","Indian",35705
+202122,"Academic year","Regional","E92000001","England","East Midlands","E12000004","Black / African / Caribbean / Black British","Any other Black / African / Caribbean background",4589
+202122,"Academic year","Regional","E92000001","England","East of England","E12000006","Asian / Asian British","Chinese",4806
+202122,"Academic year","Regional","E92000001","England","East of England","E12000006","Black / African / Caribbean / Black British","Any other Black / African / Caribbean background",5230
+202122,"Academic year","Regional","E92000001","England","East of England","E12000006","Black / African / Caribbean / Black British","African",27046
+202122,"Academic year","Regional","E92000001","England","East of England","E12000006","Mixed / Multiple ethnic groups","Any other Mixed / Multiple ethnic background",22801
 202122,"Academic year","Regional","E92000001","England","London","E12000007","Other ethnic group","Total",82516
-202122,"Academic year","Regional","E92000001","England","London","E12000007","Mixed/Multiple ethnic groups","Any other Mixed/Multiple ethnic background",68689
-202122,"Academic year","Regional","E92000001","England","North East","E12000001","Asian/Asian British","Chinese",1616
-202122,"Academic year","Regional","E92000001","England","North East","E12000001","Black/African/Caribbean/Black British","Caribbean",138
-202122,"Academic year","Regional","E92000001","England","North East","E12000001","Mixed/Multiple ethnic groups","Any other Mixed/Multiple ethnic background",4805
-202122,"Academic year","Regional","E92000001","England","North East","E12000001","Mixed/Multiple ethnic groups","White and Black African",2143
+202122,"Academic year","Regional","E92000001","England","London","E12000007","Mixed / Multiple ethnic groups","Any other Mixed / Multiple ethnic background",68689
+202122,"Academic year","Regional","E92000001","England","North East","E12000001","Asian / Asian British","Chinese",1616
+202122,"Academic year","Regional","E92000001","England","North East","E12000001","Black / African / Caribbean / Black British","Caribbean",138
+202122,"Academic year","Regional","E92000001","England","North East","E12000001","Mixed / Multiple ethnic groups","Any other Mixed / Multiple ethnic background",4805
+202122,"Academic year","Regional","E92000001","England","North East","E12000001","Mixed / Multiple ethnic groups","White and Black African",2143
 202122,"Academic year","Regional","E92000001","England","North East","E12000001","Unknown","Unknown",3101
-202122,"Academic year","Regional","E92000001","England","North West","E12000002","Black/African/Caribbean/Black British","Caribbean",2566
-202122,"Academic year","Regional","E92000001","England","North West","E12000002","Mixed/Multiple ethnic groups","White and Asian",13673
+202122,"Academic year","Regional","E92000001","England","North West","E12000002","Black / African / Caribbean / Black British","Caribbean",2566
+202122,"Academic year","Regional","E92000001","England","North West","E12000002","Mixed / Multiple ethnic groups","White and Asian",13673
 202122,"Academic year","Regional","E92000001","England","North West","E12000002","White","Gypsy or Irish Traveller",1971
-202122,"Academic year","Regional","E92000001","England","South East","E12000008","Asian/Asian British","Any other Asian background",27700
-202122,"Academic year","Regional","E92000001","England","South East","E12000008","Asian/Asian British","Indian",43780
-202122,"Academic year","Regional","E92000001","England","South East","E12000008","White","English/Welsh/Scottish/Northern Irish/British",933373
-202122,"Academic year","Regional","E92000001","England","South West","E12000009","Asian/Asian British","Bangladeshi",2399
-202122,"Academic year","Regional","E92000001","England","South West","E12000009","Asian/Asian British","Pakistani",3561
-202122,"Academic year","Regional","E92000001","England","South West","E12000009","Mixed/Multiple ethnic groups","White and Asian",9554
+202122,"Academic year","Regional","E92000001","England","South East","E12000008","Asian / Asian British","Any other Asian background",27700
+202122,"Academic year","Regional","E92000001","England","South East","E12000008","Asian / Asian British","Indian",43780
+202122,"Academic year","Regional","E92000001","England","South East","E12000008","White","English / Welsh / Scottish / Northern Irish / British",933373
+202122,"Academic year","Regional","E92000001","England","South West","E12000009","Asian / Asian British","Bangladeshi",2399
+202122,"Academic year","Regional","E92000001","England","South West","E12000009","Asian / Asian British","Pakistani",3561
+202122,"Academic year","Regional","E92000001","England","South West","E12000009","Mixed / Multiple ethnic groups","White and Asian",9554
 202122,"Academic year","Regional","E92000001","England","South West","E12000009","Unknown","Unknown",13355
 202122,"Academic year","Regional","E92000001","England","South West","E12000009","White","Gypsy or Irish Traveller",1436
-202122,"Academic year","Regional","E92000001","England","South West","E12000009","White","English/Welsh/Scottish/Northern Irish/British",631234
-202122,"Academic year","Regional","E92000001","England","West Midlands","E12000005","Asian/Asian British","Any other Asian background",18227
-202122,"Academic year","Regional","E92000001","England","West Midlands","E12000005","Asian/Asian British","Bangladeshi",19029
-202122,"Academic year","Regional","E92000001","England","West Midlands","E12000005","Black/African/Caribbean/Black British","Caribbean",12871
-202122,"Academic year","Regional","E92000001","England","West Midlands","E12000005","Mixed/Multiple ethnic groups","White and Black African",5886
+202122,"Academic year","Regional","E92000001","England","South West","E12000009","White","English / Welsh / Scottish / Northern Irish / British",631234
+202122,"Academic year","Regional","E92000001","England","West Midlands","E12000005","Asian / Asian British","Any other Asian background",18227
+202122,"Academic year","Regional","E92000001","England","West Midlands","E12000005","Asian / Asian British","Bangladeshi",19029
+202122,"Academic year","Regional","E92000001","England","West Midlands","E12000005","Black / African / Caribbean / Black British","Caribbean",12871
+202122,"Academic year","Regional","E92000001","England","West Midlands","E12000005","Mixed / Multiple ethnic groups","White and Black African",5886
 202122,"Academic year","Regional","E92000001","England","West Midlands","E12000005","White","Any other White background",44742
-202122,"Academic year","Regional","E92000001","England","West Midlands","E12000005","White","English/Welsh/Scottish/Northern Irish/British",559675
-202122,"Academic year","Regional","E92000001","England","Yorkshire and The Humber","E12000003","Asian/Asian British","Chinese",3119
-202122,"Academic year","Regional","E92000001","England","Yorkshire and The Humber","E12000003","Mixed/Multiple ethnic groups","White and Black African",5640
+202122,"Academic year","Regional","E92000001","England","West Midlands","E12000005","White","English / Welsh / Scottish / Northern Irish / British",559675
+202122,"Academic year","Regional","E92000001","England","Yorkshire and The Humber","E12000003","Asian / Asian British","Chinese",3119
+202122,"Academic year","Regional","E92000001","England","Yorkshire and The Humber","E12000003","Mixed / Multiple ethnic groups","White and Black African",5640
 202122,"Academic year","Regional","E92000001","England","Yorkshire and The Humber","E12000003","Unknown","Unknown",11577
-202122,"Academic year","Regional","E92000001","England","Yorkshire and The Humber","E12000003","White","English/Welsh/Scottish/Northern Irish/British",597711
-202122,"Academic year","National","E92000001","England","","","Mixed/Multiple ethnic groups","White and Asian",134821
-202122,"Academic year","National","E92000001","England","","","Mixed/Multiple ethnic groups","White and Black African",76262
+202122,"Academic year","Regional","E92000001","England","Yorkshire and The Humber","E12000003","White","English / Welsh / Scottish / Northern Irish / British",597711
+202122,"Academic year","National","E92000001","England","","","Mixed / Multiple ethnic groups","White and Asian",134821
+202122,"Academic year","National","E92000001","England","","","Mixed / Multiple ethnic groups","White and Black African",76262
 202122,"Academic year","National","E92000001","England","","","White","Any other White background",575540
-202122,"Academic year","Regional","E92000001","England","East Midlands","E12000004","Asian/Asian British","Bangladeshi",4721
-202122,"Academic year","Regional","E92000001","England","East Midlands","E12000004","Asian/Asian British","Pakistani",17087
-202122,"Academic year","Regional","E92000001","England","East of England","E12000006","Asian/Asian British","Indian",21162
-202122,"Academic year","Regional","E92000001","England","East of England","E12000006","Asian/Asian British","Pakistani",24079
-202122,"Academic year","Regional","E92000001","England","East of England","E12000006","Black/African/Caribbean/Black British","Caribbean",4920
+202122,"Academic year","Regional","E92000001","England","East Midlands","E12000004","Asian / Asian British","Bangladeshi",4721
+202122,"Academic year","Regional","E92000001","England","East Midlands","E12000004","Asian / Asian British","Pakistani",17087
+202122,"Academic year","Regional","E92000001","England","East of England","E12000006","Asian / Asian British","Indian",21162
+202122,"Academic year","Regional","E92000001","England","East of England","E12000006","Asian / Asian British","Pakistani",24079
+202122,"Academic year","Regional","E92000001","England","East of England","E12000006","Black / African / Caribbean / Black British","Caribbean",4920
 202122,"Academic year","Regional","E92000001","England","East of England","E12000006","Total","Total",952659
 202122,"Academic year","Regional","E92000001","England","London","E12000007","Unknown","Unknown",30359
-202122,"Academic year","Regional","E92000001","England","London","E12000007","White","English/Welsh/Scottish/Northern Irish/British",312522
-202122,"Academic year","Regional","E92000001","England","North East","E12000001","Mixed/Multiple ethnic groups","White and Black Caribbean",1061
-202122,"Academic year","Regional","E92000001","England","North West","E12000002","Asian/Asian British","Any other Asian background",15699
-202122,"Academic year","Regional","E92000001","England","North West","E12000002","Black/African/Caribbean/Black British","Any other Black/African/Caribbean background",8714
-202122,"Academic year","Regional","E92000001","England","South East","E12000008","Asian/Asian British","Bangladeshi",8367
-202122,"Academic year","Regional","E92000001","England","South East","E12000008","Mixed/Multiple ethnic groups","White and Asian",25681
+202122,"Academic year","Regional","E92000001","England","London","E12000007","White","English / Welsh / Scottish / Northern Irish / British",312522
+202122,"Academic year","Regional","E92000001","England","North East","E12000001","Mixed / Multiple ethnic groups","White and Black Caribbean",1061
+202122,"Academic year","Regional","E92000001","England","North West","E12000002","Asian / Asian British","Any other Asian background",15699
+202122,"Academic year","Regional","E92000001","England","North West","E12000002","Black / African / Caribbean / Black British","Any other Black / African / Caribbean background",8714
+202122,"Academic year","Regional","E92000001","England","South East","E12000008","Asian / Asian British","Bangladeshi",8367
+202122,"Academic year","Regional","E92000001","England","South East","E12000008","Mixed / Multiple ethnic groups","White and Asian",25681
 202122,"Academic year","Regional","E92000001","England","South East","E12000008","White","Irish",3554
 202122,"Academic year","Regional","E92000001","England","South East","E12000008","Total","Total",1327416
 202122,"Academic year","Regional","E92000001","England","South West","E12000009","Other ethnic group","Total",6188
-202122,"Academic year","Regional","E92000001","England","South West","E12000009","Asian/Asian British","Any other Asian background",6824
-202122,"Academic year","Regional","E92000001","England","South West","E12000009","Black/African/Caribbean/Black British","Any other Black/African/Caribbean background",2450
+202122,"Academic year","Regional","E92000001","England","South West","E12000009","Asian / Asian British","Any other Asian background",6824
+202122,"Academic year","Regional","E92000001","England","South West","E12000009","Black / African / Caribbean / Black British","Any other Black / African / Caribbean background",2450
 202122,"Academic year","Regional","E92000001","England","West Midlands","E12000005","Other ethnic group","Total",20983
-202122,"Academic year","Regional","E92000001","England","West Midlands","E12000005","Black/African/Caribbean/Black British","African",38733
-202122,"Academic year","Regional","E92000001","England","West Midlands","E12000005","Mixed/Multiple ethnic groups","Any other Mixed/Multiple ethnic background",21183
-202122,"Academic year","Regional","E92000001","England","Yorkshire and The Humber","E12000003","Asian/Asian British","Indian",12633
-202122,"Academic year","Regional","E92000001","England","Yorkshire and The Humber","E12000003","Asian/Asian British","Pakistani",77431
-202122,"Academic year","Regional","E92000001","England","Yorkshire and The Humber","E12000003","Black/African/Caribbean/Black British","Any other Black/African/Caribbean background",3611
-202122,"Academic year","Regional","E92000001","England","Yorkshire and The Humber","E12000003","Black/African/Caribbean/Black British","African",19228
-202122,"Academic year","Regional","E92000001","England","Yorkshire and The Humber","E12000003","Mixed/Multiple ethnic groups","Any other Mixed/Multiple ethnic background",14579
+202122,"Academic year","Regional","E92000001","England","West Midlands","E12000005","Black / African / Caribbean / Black British","African",38733
+202122,"Academic year","Regional","E92000001","England","West Midlands","E12000005","Mixed / Multiple ethnic groups","Any other Mixed / Multiple ethnic background",21183
+202122,"Academic year","Regional","E92000001","England","Yorkshire and The Humber","E12000003","Asian / Asian British","Indian",12633
+202122,"Academic year","Regional","E92000001","England","Yorkshire and The Humber","E12000003","Asian / Asian British","Pakistani",77431
+202122,"Academic year","Regional","E92000001","England","Yorkshire and The Humber","E12000003","Black / African / Caribbean / Black British","Any other Black / African / Caribbean background",3611
+202122,"Academic year","Regional","E92000001","England","Yorkshire and The Humber","E12000003","Black / African / Caribbean / Black British","African",19228
+202122,"Academic year","Regional","E92000001","England","Yorkshire and The Humber","E12000003","Mixed / Multiple ethnic groups","Any other Mixed / Multiple ethnic background",14579
 202122,"Academic year","Regional","E92000001","England","Yorkshire and The Humber","E12000003","White","Gypsy or Irish Traveller",5663
-202122,"Academic year","National","E92000001","England","","","Asian/Asian British","Any other Asian background",170572
-202122,"Academic year","National","E92000001","England","","","Black/African/Caribbean/Black British","African",338614
-202122,"Academic year","Regional","E92000001","England","East Midlands","E12000004","Asian/Asian British","Chinese",3280
-202122,"Academic year","Regional","E92000001","England","East Midlands","E12000004","Mixed/Multiple ethnic groups","Any other Mixed/Multiple ethnic background",13357
-202122,"Academic year","Regional","E92000001","England","East Midlands","E12000004","Mixed/Multiple ethnic groups","White and Black African",5824
-202122,"Academic year","Regional","E92000001","England","East Midlands","E12000004","Mixed/Multiple ethnic groups","White and Black Caribbean",13376
+202122,"Academic year","National","E92000001","England","","","Asian / Asian British","Any other Asian background",170572
+202122,"Academic year","National","E92000001","England","","","Black / African / Caribbean / Black British","African",338614
+202122,"Academic year","Regional","E92000001","England","East Midlands","E12000004","Asian / Asian British","Chinese",3280
+202122,"Academic year","Regional","E92000001","England","East Midlands","E12000004","Mixed / Multiple ethnic groups","Any other Mixed / Multiple ethnic background",13357
+202122,"Academic year","Regional","E92000001","England","East Midlands","E12000004","Mixed / Multiple ethnic groups","White and Black African",5824
+202122,"Academic year","Regional","E92000001","England","East Midlands","E12000004","Mixed / Multiple ethnic groups","White and Black Caribbean",13376
 202122,"Academic year","Regional","E92000001","England","East Midlands","E12000004","Unknown","Unknown",10909
-202122,"Academic year","Regional","E92000001","England","London","E12000007","Asian/Asian British","Any other Asian background",62502
+202122,"Academic year","Regional","E92000001","England","London","E12000007","Asian / Asian British","Any other Asian background",62502
 202122,"Academic year","Regional","E92000001","England","London","E12000007","White","Gypsy or Irish Traveller",2358
-202122,"Academic year","Regional","E92000001","England","North East","E12000001","Mixed/Multiple ethnic groups","White and Asian",3758
+202122,"Academic year","Regional","E92000001","England","North East","E12000001","Mixed / Multiple ethnic groups","White and Asian",3758
 202122,"Academic year","Regional","E92000001","England","North East","E12000001","White","Any other White background",8783
-202122,"Academic year","Regional","E92000001","England","North West","E12000002","Asian/Asian British","Bangladeshi",14322
+202122,"Academic year","Regional","E92000001","England","North West","E12000002","Asian / Asian British","Bangladeshi",14322
 202122,"Academic year","Regional","E92000001","England","North West","E12000002","White","Irish",2650
-202122,"Academic year","Regional","E92000001","England","North West","E12000002","White","English/Welsh/Scottish/Northern Irish/British",826451
+202122,"Academic year","Regional","E92000001","England","North West","E12000002","White","English / Welsh / Scottish / Northern Irish / British",826451
 202122,"Academic year","Regional","E92000001","England","North West","E12000002","Total","Total",1141306
 202122,"Academic year","Regional","E92000001","England","South East","E12000008","Other ethnic group","Total",15895
-202122,"Academic year","Regional","E92000001","England","South East","E12000008","Mixed/Multiple ethnic groups","White and Black Caribbean",17250
+202122,"Academic year","Regional","E92000001","England","South East","E12000008","Mixed / Multiple ethnic groups","White and Black Caribbean",17250
 202122,"Academic year","Regional","E92000001","England","South East","E12000008","Unknown","Unknown",19584
-202122,"Academic year","Regional","E92000001","England","South West","E12000009","Asian/Asian British","Indian",10356
-202122,"Academic year","Regional","E92000001","England","South West","E12000009","Black/African/Caribbean/Black British","Caribbean",1829
-202122,"Academic year","Regional","E92000001","England","South West","E12000009","Mixed/Multiple ethnic groups","White and Black African",4920
+202122,"Academic year","Regional","E92000001","England","South West","E12000009","Asian / Asian British","Indian",10356
+202122,"Academic year","Regional","E92000001","England","South West","E12000009","Black / African / Caribbean / Black British","Caribbean",1829
+202122,"Academic year","Regional","E92000001","England","South West","E12000009","Mixed / Multiple ethnic groups","White and Black African",4920
 202122,"Academic year","Regional","E92000001","England","South West","E12000009","White","Any other White background",40956
 202122,"Academic year","Regional","E92000001","England","West Midlands","E12000005","Unknown","Unknown",15334
-202122,"Academic year","Regional","E92000001","England","Yorkshire and The Humber","E12000003","Asian/Asian British","Bangladeshi",6897
-202122,"Academic year","Regional","E92000001","England","Yorkshire and The Humber","E12000003","Mixed/Multiple ethnic groups","White and Asian",12504
-202122,"Academic year","National","E92000001","England","","","Asian/Asian British","Bangladeshi",151613
-202122,"Academic year","National","E92000001","England","","","Asian/Asian British","Chinese",48396
-202122,"Academic year","National","E92000001","England","","","Asian/Asian British","Pakistani",380781
+202122,"Academic year","Regional","E92000001","England","Yorkshire and The Humber","E12000003","Asian / Asian British","Bangladeshi",6897
+202122,"Academic year","Regional","E92000001","England","Yorkshire and The Humber","E12000003","Mixed / Multiple ethnic groups","White and Asian",12504
+202122,"Academic year","National","E92000001","England","","","Asian / Asian British","Bangladeshi",151613
+202122,"Academic year","National","E92000001","England","","","Asian / Asian British","Chinese",48396
+202122,"Academic year","National","E92000001","England","","","Asian / Asian British","Pakistani",380781
 202122,"Academic year","Regional","E92000001","England","East Midlands","E12000004","Other ethnic group","Total",8034
 202122,"Academic year","Regional","E92000001","England","East Midlands","E12000004","Total","Total",726038
-202122,"Academic year","Regional","E92000001","England","East of England","E12000006","Asian/Asian British","Bangladeshi",11995
-202122,"Academic year","Regional","E92000001","England","East of England","E12000006","Mixed/Multiple ethnic groups","White and Black African",9697
+202122,"Academic year","Regional","E92000001","England","East of England","E12000006","Asian / Asian British","Bangladeshi",11995
+202122,"Academic year","Regional","E92000001","England","East of England","E12000006","Mixed / Multiple ethnic groups","White and Black African",9697
 202122,"Academic year","Regional","E92000001","England","East of England","E12000006","White","Any other White background",79248
-202122,"Academic year","Regional","E92000001","England","London","E12000007","Asian/Asian British","Chinese",12267
-202122,"Academic year","Regional","E92000001","England","London","E12000007","Mixed/Multiple ethnic groups","White and Asian",27992
-202122,"Academic year","Regional","E92000001","England","London","E12000007","Mixed/Multiple ethnic groups","White and Black Caribbean",33314
+202122,"Academic year","Regional","E92000001","England","London","E12000007","Asian / Asian British","Chinese",12267
+202122,"Academic year","Regional","E92000001","England","London","E12000007","Mixed / Multiple ethnic groups","White and Asian",27992
+202122,"Academic year","Regional","E92000001","England","London","E12000007","Mixed / Multiple ethnic groups","White and Black Caribbean",33314
 202122,"Academic year","Regional","E92000001","England","North East","E12000001","Other ethnic group","Total",4968
-202122,"Academic year","Regional","E92000001","England","North East","E12000001","Asian/Asian British","Any other Asian background",3816
-202122,"Academic year","Regional","E92000001","England","North East","E12000001","Asian/Asian British","Indian",2926
-202122,"Academic year","Regional","E92000001","England","North East","E12000001","Asian/Asian British","Pakistani",6031
-202122,"Academic year","Regional","E92000001","England","North East","E12000001","Black/African/Caribbean/Black British","Any other Black/African/Caribbean background",1052
+202122,"Academic year","Regional","E92000001","England","North East","E12000001","Asian / Asian British","Any other Asian background",3816
+202122,"Academic year","Regional","E92000001","England","North East","E12000001","Asian / Asian British","Indian",2926
+202122,"Academic year","Regional","E92000001","England","North East","E12000001","Asian / Asian British","Pakistani",6031
+202122,"Academic year","Regional","E92000001","England","North East","E12000001","Black / African / Caribbean / Black British","Any other Black / African / Caribbean background",1052
 202122,"Academic year","Regional","E92000001","England","North East","E12000001","White","Irish",480
 202122,"Academic year","Regional","E92000001","England","North East","E12000001","Total","Total",397359
-202122,"Academic year","Regional","E92000001","England","North West","E12000002","Mixed/Multiple ethnic groups","White and Black African",8215
-202122,"Academic year","Regional","E92000001","England","North West","E12000002","Mixed/Multiple ethnic groups","White and Black Caribbean",10432
-202122,"Academic year","Regional","E92000001","England","South East","E12000008","Asian/Asian British","Chinese",7757
-202122,"Academic year","Regional","E92000001","England","South East","E12000008","Black/African/Caribbean/Black British","Caribbean",4602
-202122,"Academic year","Regional","E92000001","England","South East","E12000008","Mixed/Multiple ethnic groups","White and Black African",13647
+202122,"Academic year","Regional","E92000001","England","North West","E12000002","Mixed / Multiple ethnic groups","White and Black African",8215
+202122,"Academic year","Regional","E92000001","England","North West","E12000002","Mixed / Multiple ethnic groups","White and Black Caribbean",10432
+202122,"Academic year","Regional","E92000001","England","South East","E12000008","Asian / Asian British","Chinese",7757
+202122,"Academic year","Regional","E92000001","England","South East","E12000008","Black / African / Caribbean / Black British","Caribbean",4602
+202122,"Academic year","Regional","E92000001","England","South East","E12000008","Mixed / Multiple ethnic groups","White and Black African",13647
 202122,"Academic year","Regional","E92000001","England","South East","E12000008","White","Any other White background",89583
-202122,"Academic year","Regional","E92000001","England","South West","E12000009","Mixed/Multiple ethnic groups","Any other Mixed/Multiple ethnic background",11245
+202122,"Academic year","Regional","E92000001","England","South West","E12000009","Mixed / Multiple ethnic groups","Any other Mixed / Multiple ethnic background",11245
 202122,"Academic year","Regional","E92000001","England","South West","E12000009","White","Irish",1427
 202122,"Academic year","Regional","E92000001","England","South West","E12000009","Total","Total",769427
-202122,"Academic year","Regional","E92000001","England","West Midlands","E12000005","Asian/Asian British","Chinese",4593
-202122,"Academic year","Regional","E92000001","England","West Midlands","E12000005","Asian/Asian British","Indian",49495
-202122,"Academic year","Regional","E92000001","England","West Midlands","E12000005","Mixed/Multiple ethnic groups","White and Asian",16106
+202122,"Academic year","Regional","E92000001","England","West Midlands","E12000005","Asian / Asian British","Chinese",4593
+202122,"Academic year","Regional","E92000001","England","West Midlands","E12000005","Asian / Asian British","Indian",49495
+202122,"Academic year","Regional","E92000001","England","West Midlands","E12000005","Mixed / Multiple ethnic groups","White and Asian",16106
 202122,"Academic year","Regional","E92000001","England","West Midlands","E12000005","Total","Total",945936
-202122,"Academic year","Regional","E92000001","England","Yorkshire and The Humber","E12000003","Asian/Asian British","Any other Asian background",10633
+202122,"Academic year","Regional","E92000001","England","Yorkshire and The Humber","E12000003","Asian / Asian British","Any other Asian background",10633
 202122,"Academic year","Regional","E92000001","England","Yorkshire and The Humber","E12000003","Total","Total",848550
-202021,"Academic year","National","E92000001","England","","","Asian/Asian British","Indian",275106
-202021,"Academic year","National","E92000001","England","","","Black/African/Caribbean/Black British","Any other Black/African/Caribbean background",64655
-202021,"Academic year","National","E92000001","England","","","Mixed/Multiple ethnic groups","White and Asian",128850
-202021,"Academic year","Regional","E92000001","England","East Midlands","E12000004","Asian/Asian British","Any other Asian background",9786
-202021,"Academic year","Regional","E92000001","England","East Midlands","E12000004","Black/African/Caribbean/Black British","Any other Black/African/Caribbean background",4367
+202021,"Academic year","National","E92000001","England","","","Asian / Asian British","Indian",275106
+202021,"Academic year","National","E92000001","England","","","Black / African / Caribbean / Black British","Any other Black / African / Caribbean background",64655
+202021,"Academic year","National","E92000001","England","","","Mixed / Multiple ethnic groups","White and Asian",128850
+202021,"Academic year","Regional","E92000001","England","East Midlands","E12000004","Asian / Asian British","Any other Asian background",9786
+202021,"Academic year","Regional","E92000001","England","East Midlands","E12000004","Black / African / Caribbean / Black British","Any other Black / African / Caribbean background",4367
 202021,"Academic year","Regional","E92000001","England","East Midlands","E12000004","Unknown","Unknown",10352
-202021,"Academic year","Regional","E92000001","England","East Midlands","E12000004","White","English/Welsh/Scottish/Northern Irish/British",517967
+202021,"Academic year","Regional","E92000001","England","East Midlands","E12000004","White","English / Welsh / Scottish / Northern Irish / British",517967
 202021,"Academic year","Regional","E92000001","England","East of England","E12000006","Other ethnic group","Total",9581
-202021,"Academic year","Regional","E92000001","England","East of England","E12000006","Black/African/Caribbean/Black British","Any other Black/African/Caribbean background",4937
-202021,"Academic year","Regional","E92000001","England","East of England","E12000006","Black/African/Caribbean/Black British","Caribbean",4756
-202021,"Academic year","Regional","E92000001","England","East of England","E12000006","Mixed/Multiple ethnic groups","Any other Mixed/Multiple ethnic background",21555
+202021,"Academic year","Regional","E92000001","England","East of England","E12000006","Black / African / Caribbean / Black British","Any other Black / African / Caribbean background",4937
+202021,"Academic year","Regional","E92000001","England","East of England","E12000006","Black / African / Caribbean / Black British","Caribbean",4756
+202021,"Academic year","Regional","E92000001","England","East of England","E12000006","Mixed / Multiple ethnic groups","Any other Mixed / Multiple ethnic background",21555
 202021,"Academic year","Regional","E92000001","England","East of England","E12000006","White","Gypsy or Irish Traveller",2818
-202021,"Academic year","Regional","E92000001","England","London","E12000007","Asian/Asian British","Indian",87031
-202021,"Academic year","Regional","E92000001","England","London","E12000007","Mixed/Multiple ethnic groups","White and Black African",19926
+202021,"Academic year","Regional","E92000001","England","London","E12000007","Asian / Asian British","Indian",87031
+202021,"Academic year","Regional","E92000001","England","London","E12000007","Mixed / Multiple ethnic groups","White and Black African",19926
 202021,"Academic year","Regional","E92000001","England","London","E12000007","Unknown","Unknown",30319
-202021,"Academic year","Regional","E92000001","England","North East","E12000001","Black/African/Caribbean/Black British","Any other Black/African/Caribbean background",973
-202021,"Academic year","Regional","E92000001","England","North East","E12000001","Black/African/Caribbean/Black British","African",4211
-202021,"Academic year","Regional","E92000001","England","North East","E12000001","Mixed/Multiple ethnic groups","White and Asian",3539
+202021,"Academic year","Regional","E92000001","England","North East","E12000001","Black / African / Caribbean / Black British","Any other Black / African / Caribbean background",973
+202021,"Academic year","Regional","E92000001","England","North East","E12000001","Black / African / Caribbean / Black British","African",4211
+202021,"Academic year","Regional","E92000001","England","North East","E12000001","Mixed / Multiple ethnic groups","White and Asian",3539
 202021,"Academic year","Regional","E92000001","England","North East","E12000001","White","Any other White background",8458
-202021,"Academic year","Regional","E92000001","England","North East","E12000001","White","English/Welsh/Scottish/Northern Irish/British",343569
-202021,"Academic year","Regional","E92000001","England","North West","E12000002","Asian/Asian British","Bangladeshi",14392
-202021,"Academic year","Regional","E92000001","England","North West","E12000002","Asian/Asian British","Pakistani",71455
-202021,"Academic year","Regional","E92000001","England","North West","E12000002","Mixed/Multiple ethnic groups","Any other Mixed/Multiple ethnic background",21932
-202021,"Academic year","Regional","E92000001","England","North West","E12000002","Mixed/Multiple ethnic groups","White and Black African",7798
-202021,"Academic year","Regional","E92000001","England","South East","E12000008","Asian/Asian British","Bangladeshi",8126
-202021,"Academic year","Regional","E92000001","England","South East","E12000008","Asian/Asian British","Indian",40262
-202021,"Academic year","Regional","E92000001","England","South East","E12000008","Black/African/Caribbean/Black British","Caribbean",4454
-202021,"Academic year","Regional","E92000001","England","South West","E12000009","Asian/Asian British","Bangladeshi",2366
-202021,"Academic year","Regional","E92000001","England","West Midlands","E12000005","Asian/Asian British","Bangladeshi",18773
-202021,"Academic year","Regional","E92000001","England","West Midlands","E12000005","Black/African/Caribbean/Black British","Caribbean",13081
+202021,"Academic year","Regional","E92000001","England","North East","E12000001","White","English / Welsh / Scottish / Northern Irish / British",343569
+202021,"Academic year","Regional","E92000001","England","North West","E12000002","Asian / Asian British","Bangladeshi",14392
+202021,"Academic year","Regional","E92000001","England","North West","E12000002","Asian / Asian British","Pakistani",71455
+202021,"Academic year","Regional","E92000001","England","North West","E12000002","Mixed / Multiple ethnic groups","Any other Mixed / Multiple ethnic background",21932
+202021,"Academic year","Regional","E92000001","England","North West","E12000002","Mixed / Multiple ethnic groups","White and Black African",7798
+202021,"Academic year","Regional","E92000001","England","South East","E12000008","Asian / Asian British","Bangladeshi",8126
+202021,"Academic year","Regional","E92000001","England","South East","E12000008","Asian / Asian British","Indian",40262
+202021,"Academic year","Regional","E92000001","England","South East","E12000008","Black / African / Caribbean / Black British","Caribbean",4454
+202021,"Academic year","Regional","E92000001","England","South West","E12000009","Asian / Asian British","Bangladeshi",2366
+202021,"Academic year","Regional","E92000001","England","West Midlands","E12000005","Asian / Asian British","Bangladeshi",18773
+202021,"Academic year","Regional","E92000001","England","West Midlands","E12000005","Black / African / Caribbean / Black British","Caribbean",13081
 202021,"Academic year","Regional","E92000001","England","West Midlands","E12000005","White","Any other White background",43633
 202021,"Academic year","Regional","E92000001","England","West Midlands","E12000005","White","Irish",1883
 202021,"Academic year","Regional","E92000001","England","West Midlands","E12000005","Total","Total",936238
-202021,"Academic year","Regional","E92000001","England","Yorkshire and The Humber","E12000003","Asian/Asian British","Pakistani",76524
-202021,"Academic year","Regional","E92000001","England","Yorkshire and The Humber","E12000003","Black/African/Caribbean/Black British","African",17371
+202021,"Academic year","Regional","E92000001","England","Yorkshire and The Humber","E12000003","Asian / Asian British","Pakistani",76524
+202021,"Academic year","Regional","E92000001","England","Yorkshire and The Humber","E12000003","Black / African / Caribbean / Black British","African",17371
 202021,"Academic year","Regional","E92000001","England","Yorkshire and The Humber","E12000003","Total","Total",841498
-202021,"Academic year","National","E92000001","England","","","Black/African/Caribbean/Black British","Caribbean",83712
+202021,"Academic year","National","E92000001","England","","","Black / African / Caribbean / Black British","Caribbean",83712
 202021,"Academic year","National","E92000001","England","","","White","Gypsy or Irish Traveller",26045
 202021,"Academic year","Regional","E92000001","England","East Midlands","E12000004","Other ethnic group","Total",7128
-202021,"Academic year","Regional","E92000001","England","East Midlands","E12000004","Asian/Asian British","Indian",34066
-202021,"Academic year","Regional","E92000001","England","East Midlands","E12000004","Black/African/Caribbean/Black British","Caribbean",3107
-202021,"Academic year","Regional","E92000001","England","East of England","E12000006","Asian/Asian British","Indian",19429
-202021,"Academic year","Regional","E92000001","England","East of England","E12000006","Asian/Asian British","Pakistani",23605
-202021,"Academic year","Regional","E92000001","England","East of England","E12000006","Black/African/Caribbean/Black British","African",25325
-202021,"Academic year","Regional","E92000001","England","London","E12000007","Asian/Asian British","Chinese",10542
-202021,"Academic year","Regional","E92000001","England","London","E12000007","Black/African/Caribbean/Black British","Any other Black/African/Caribbean background",28121
-202021,"Academic year","Regional","E92000001","England","London","E12000007","Mixed/Multiple ethnic groups","White and Black Caribbean",33208
-202021,"Academic year","Regional","E92000001","England","North East","E12000001","Mixed/Multiple ethnic groups","White and Black Caribbean",1049
+202021,"Academic year","Regional","E92000001","England","East Midlands","E12000004","Asian / Asian British","Indian",34066
+202021,"Academic year","Regional","E92000001","England","East Midlands","E12000004","Black / African / Caribbean / Black British","Caribbean",3107
+202021,"Academic year","Regional","E92000001","England","East of England","E12000006","Asian / Asian British","Indian",19429
+202021,"Academic year","Regional","E92000001","England","East of England","E12000006","Asian / Asian British","Pakistani",23605
+202021,"Academic year","Regional","E92000001","England","East of England","E12000006","Black / African / Caribbean / Black British","African",25325
+202021,"Academic year","Regional","E92000001","England","London","E12000007","Asian / Asian British","Chinese",10542
+202021,"Academic year","Regional","E92000001","England","London","E12000007","Black / African / Caribbean / Black British","Any other Black / African / Caribbean background",28121
+202021,"Academic year","Regional","E92000001","England","London","E12000007","Mixed / Multiple ethnic groups","White and Black Caribbean",33208
+202021,"Academic year","Regional","E92000001","England","North East","E12000001","Mixed / Multiple ethnic groups","White and Black Caribbean",1049
 202021,"Academic year","Regional","E92000001","England","North East","E12000001","White","Irish",506
-202021,"Academic year","Regional","E92000001","England","North West","E12000002","Asian/Asian British","Chinese",5942
-202021,"Academic year","Regional","E92000001","England","North West","E12000002","Mixed/Multiple ethnic groups","White and Asian",13056
+202021,"Academic year","Regional","E92000001","England","North West","E12000002","Asian / Asian British","Chinese",5942
+202021,"Academic year","Regional","E92000001","England","North West","E12000002","Mixed / Multiple ethnic groups","White and Asian",13056
 202021,"Academic year","Regional","E92000001","England","North West","E12000002","Total","Total",1129325
-202021,"Academic year","Regional","E92000001","England","South East","E12000008","Mixed/Multiple ethnic groups","White and Asian",24402
+202021,"Academic year","Regional","E92000001","England","South East","E12000008","Mixed / Multiple ethnic groups","White and Asian",24402
 202021,"Academic year","Regional","E92000001","England","South East","E12000008","White","Gypsy or Irish Traveller",5740
-202021,"Academic year","Regional","E92000001","England","South West","E12000009","Asian/Asian British","Any other Asian background",6183
-202021,"Academic year","Regional","E92000001","England","South West","E12000009","Mixed/Multiple ethnic groups","White and Asian",9002
-202021,"Academic year","Regional","E92000001","England","South West","E12000009","Mixed/Multiple ethnic groups","White and Black African",4788
-202021,"Academic year","Regional","E92000001","England","South West","E12000009","Mixed/Multiple ethnic groups","White and Black Caribbean",8300
+202021,"Academic year","Regional","E92000001","England","South West","E12000009","Asian / Asian British","Any other Asian background",6183
+202021,"Academic year","Regional","E92000001","England","South West","E12000009","Mixed / Multiple ethnic groups","White and Asian",9002
+202021,"Academic year","Regional","E92000001","England","South West","E12000009","Mixed / Multiple ethnic groups","White and Black African",4788
+202021,"Academic year","Regional","E92000001","England","South West","E12000009","Mixed / Multiple ethnic groups","White and Black Caribbean",8300
 202021,"Academic year","Regional","E92000001","England","South West","E12000009","Unknown","Unknown",13097
-202021,"Academic year","Regional","E92000001","England","South West","E12000009","White","English/Welsh/Scottish/Northern Irish/British",631819
+202021,"Academic year","Regional","E92000001","England","South West","E12000009","White","English / Welsh / Scottish / Northern Irish / British",631819
 202021,"Academic year","Regional","E92000001","England","West Midlands","E12000005","White","Gypsy or Irish Traveller",3127
-202021,"Academic year","Regional","E92000001","England","West Midlands","E12000005","White","English/Welsh/Scottish/Northern Irish/British",564022
-202021,"Academic year","Regional","E92000001","England","Yorkshire and The Humber","E12000003","Black/African/Caribbean/Black British","Caribbean",2160
-202021,"Academic year","Regional","E92000001","England","Yorkshire and The Humber","E12000003","Mixed/Multiple ethnic groups","White and Asian",12094
+202021,"Academic year","Regional","E92000001","England","West Midlands","E12000005","White","English / Welsh / Scottish / Northern Irish / British",564022
+202021,"Academic year","Regional","E92000001","England","Yorkshire and The Humber","E12000003","Black / African / Caribbean / Black British","Caribbean",2160
+202021,"Academic year","Regional","E92000001","England","Yorkshire and The Humber","E12000003","Mixed / Multiple ethnic groups","White and Asian",12094
 202021,"Academic year","Regional","E92000001","England","Yorkshire and The Humber","E12000003","White","Gypsy or Irish Traveller",5491
 202021,"Academic year","Regional","E92000001","England","Yorkshire and The Humber","E12000003","White","Irish",1130
-202021,"Academic year","Regional","E92000001","England","Yorkshire and The Humber","E12000003","White","English/Welsh/Scottish/Northern Irish/British",600593
-202021,"Academic year","National","E92000001","England","","","White","English/Welsh/Scottish/Northern Irish/British",5410043
+202021,"Academic year","Regional","E92000001","England","Yorkshire and The Humber","E12000003","White","English / Welsh / Scottish / Northern Irish / British",600593
+202021,"Academic year","National","E92000001","England","","","White","English / Welsh / Scottish / Northern Irish / British",5410043
 202021,"Academic year","National","E92000001","England","","","Total","Total",8342004
-202021,"Academic year","Regional","E92000001","England","East Midlands","E12000004","Asian/Asian British","Pakistani",16607
-202021,"Academic year","Regional","E92000001","England","East Midlands","E12000004","Mixed/Multiple ethnic groups","Any other Mixed/Multiple ethnic background",12528
-202021,"Academic year","Regional","E92000001","England","East Midlands","E12000004","Mixed/Multiple ethnic groups","White and Asian",9382
-202021,"Academic year","Regional","E92000001","England","East Midlands","E12000004","Mixed/Multiple ethnic groups","White and Black African",5463
+202021,"Academic year","Regional","E92000001","England","East Midlands","E12000004","Asian / Asian British","Pakistani",16607
+202021,"Academic year","Regional","E92000001","England","East Midlands","E12000004","Mixed / Multiple ethnic groups","Any other Mixed / Multiple ethnic background",12528
+202021,"Academic year","Regional","E92000001","England","East Midlands","E12000004","Mixed / Multiple ethnic groups","White and Asian",9382
+202021,"Academic year","Regional","E92000001","England","East Midlands","E12000004","Mixed / Multiple ethnic groups","White and Black African",5463
 202021,"Academic year","Regional","E92000001","England","East Midlands","E12000004","White","Any other White background",45763
 202021,"Academic year","Regional","E92000001","England","East Midlands","E12000004","White","Irish",1134
-202021,"Academic year","Regional","E92000001","England","East of England","E12000006","Asian/Asian British","Chinese",3931
-202021,"Academic year","Regional","E92000001","England","East of England","E12000006","Mixed/Multiple ethnic groups","White and Black African",9220
-202021,"Academic year","Regional","E92000001","England","East of England","E12000006","Mixed/Multiple ethnic groups","White and Black Caribbean",14661
+202021,"Academic year","Regional","E92000001","England","East of England","E12000006","Asian / Asian British","Chinese",3931
+202021,"Academic year","Regional","E92000001","England","East of England","E12000006","Mixed / Multiple ethnic groups","White and Black African",9220
+202021,"Academic year","Regional","E92000001","England","East of England","E12000006","Mixed / Multiple ethnic groups","White and Black Caribbean",14661
 202021,"Academic year","Regional","E92000001","England","East of England","E12000006","Unknown","Unknown",17132
 202021,"Academic year","Regional","E92000001","England","London","E12000007","Other ethnic group","Total",78717
-202021,"Academic year","Regional","E92000001","England","London","E12000007","Asian/Asian British","Pakistani",60301
-202021,"Academic year","Regional","E92000001","England","London","E12000007","Black/African/Caribbean/Black British","Caribbean",51649
+202021,"Academic year","Regional","E92000001","England","London","E12000007","Asian / Asian British","Pakistani",60301
+202021,"Academic year","Regional","E92000001","England","London","E12000007","Black / African / Caribbean / Black British","Caribbean",51649
 202021,"Academic year","Regional","E92000001","England","London","E12000007","White","Irish",6472
-202021,"Academic year","Regional","E92000001","England","North East","E12000001","Asian/Asian British","Any other Asian background",3560
-202021,"Academic year","Regional","E92000001","England","North East","E12000001","Asian/Asian British","Chinese",1505
-202021,"Academic year","Regional","E92000001","England","North East","E12000001","Asian/Asian British","Pakistani",5929
-202021,"Academic year","Regional","E92000001","England","North East","E12000001","Black/African/Caribbean/Black British","Caribbean",132
+202021,"Academic year","Regional","E92000001","England","North East","E12000001","Asian / Asian British","Any other Asian background",3560
+202021,"Academic year","Regional","E92000001","England","North East","E12000001","Asian / Asian British","Chinese",1505
+202021,"Academic year","Regional","E92000001","England","North East","E12000001","Asian / Asian British","Pakistani",5929
+202021,"Academic year","Regional","E92000001","England","North East","E12000001","Black / African / Caribbean / Black British","Caribbean",132
 202021,"Academic year","Regional","E92000001","England","North East","E12000001","Unknown","Unknown",2767
-202021,"Academic year","Regional","E92000001","England","North West","E12000002","Asian/Asian British","Any other Asian background",14100
-202021,"Academic year","Regional","E92000001","England","North West","E12000002","Asian/Asian British","Indian",22229
-202021,"Academic year","Regional","E92000001","England","North West","E12000002","Black/African/Caribbean/Black British","Any other Black/African/Caribbean background",8609
-202021,"Academic year","Regional","E92000001","England","North West","E12000002","Black/African/Caribbean/Black British","African",26228
-202021,"Academic year","Regional","E92000001","England","North West","E12000002","Mixed/Multiple ethnic groups","White and Black Caribbean",10074
+202021,"Academic year","Regional","E92000001","England","North West","E12000002","Asian / Asian British","Any other Asian background",14100
+202021,"Academic year","Regional","E92000001","England","North West","E12000002","Asian / Asian British","Indian",22229
+202021,"Academic year","Regional","E92000001","England","North West","E12000002","Black / African / Caribbean / Black British","Any other Black / African / Caribbean background",8609
+202021,"Academic year","Regional","E92000001","England","North West","E12000002","Black / African / Caribbean / Black British","African",26228
+202021,"Academic year","Regional","E92000001","England","North West","E12000002","Mixed / Multiple ethnic groups","White and Black Caribbean",10074
 202021,"Academic year","Regional","E92000001","England","South East","E12000008","Other ethnic group","Total",14535
-202021,"Academic year","Regional","E92000001","England","South East","E12000008","Asian/Asian British","Chinese",5269
-202021,"Academic year","Regional","E92000001","England","South East","E12000008","Black/African/Caribbean/Black British","African",32345
-202021,"Academic year","Regional","E92000001","England","South East","E12000008","Mixed/Multiple ethnic groups","White and Black Caribbean",16609
+202021,"Academic year","Regional","E92000001","England","South East","E12000008","Asian / Asian British","Chinese",5269
+202021,"Academic year","Regional","E92000001","England","South East","E12000008","Black / African / Caribbean / Black British","African",32345
+202021,"Academic year","Regional","E92000001","England","South East","E12000008","Mixed / Multiple ethnic groups","White and Black Caribbean",16609
 202021,"Academic year","Regional","E92000001","England","South West","E12000009","Other ethnic group","Total",5590
-202021,"Academic year","Regional","E92000001","England","South West","E12000009","Asian/Asian British","Pakistani",3432
-202021,"Academic year","Regional","E92000001","England","South West","E12000009","Black/African/Caribbean/Black British","Caribbean",1794
+202021,"Academic year","Regional","E92000001","England","South West","E12000009","Asian / Asian British","Pakistani",3432
+202021,"Academic year","Regional","E92000001","England","South West","E12000009","Black / African / Caribbean / Black British","Caribbean",1794
 202021,"Academic year","Regional","E92000001","England","South West","E12000009","White","Gypsy or Irish Traveller",1394
 202021,"Academic year","Regional","E92000001","England","West Midlands","E12000005","Other ethnic group","Total",19829
-202021,"Academic year","Regional","E92000001","England","West Midlands","E12000005","Mixed/Multiple ethnic groups","Any other Mixed/Multiple ethnic background",19689
-202021,"Academic year","Regional","E92000001","England","West Midlands","E12000005","Mixed/Multiple ethnic groups","White and Black Caribbean",23348
-202021,"Academic year","Regional","E92000001","England","Yorkshire and The Humber","E12000003","Asian/Asian British","Chinese",2619
-202021,"Academic year","Regional","E92000001","England","Yorkshire and The Humber","E12000003","Mixed/Multiple ethnic groups","Any other Mixed/Multiple ethnic background",13579
-202021,"Academic year","Regional","E92000001","England","Yorkshire and The Humber","E12000003","Mixed/Multiple ethnic groups","White and Black Caribbean",10283
+202021,"Academic year","Regional","E92000001","England","West Midlands","E12000005","Mixed / Multiple ethnic groups","Any other Mixed / Multiple ethnic background",19689
+202021,"Academic year","Regional","E92000001","England","West Midlands","E12000005","Mixed / Multiple ethnic groups","White and Black Caribbean",23348
+202021,"Academic year","Regional","E92000001","England","Yorkshire and The Humber","E12000003","Asian / Asian British","Chinese",2619
+202021,"Academic year","Regional","E92000001","England","Yorkshire and The Humber","E12000003","Mixed / Multiple ethnic groups","Any other Mixed / Multiple ethnic background",13579
+202021,"Academic year","Regional","E92000001","England","Yorkshire and The Humber","E12000003","Mixed / Multiple ethnic groups","White and Black Caribbean",10283
 202021,"Academic year","Regional","E92000001","England","Yorkshire and The Humber","E12000003","Unknown","Unknown",10719
 202021,"Academic year","Regional","E92000001","England","Yorkshire and The Humber","E12000003","White","Any other White background",38353
 202021,"Academic year","National","E92000001","England","","","Other ethnic group","Total",173423
-202021,"Academic year","National","E92000001","England","","","Black/African/Caribbean/Black British","African",326365
+202021,"Academic year","National","E92000001","England","","","Black / African / Caribbean / Black British","African",326365
 202021,"Academic year","National","E92000001","England","","","White","Irish",21898
-202021,"Academic year","Regional","E92000001","England","East Midlands","E12000004","Asian/Asian British","Chinese",2369
-202021,"Academic year","Regional","E92000001","England","East Midlands","E12000004","Mixed/Multiple ethnic groups","White and Black Caribbean",13037
-202021,"Academic year","Regional","E92000001","England","East of England","E12000006","Asian/Asian British","Bangladeshi",11598
-202021,"Academic year","Regional","E92000001","England","East of England","E12000006","White","English/Welsh/Scottish/Northern Irish/British",664185
-202021,"Academic year","Regional","E92000001","England","London","E12000007","Asian/Asian British","Bangladeshi",78462
-202021,"Academic year","Regional","E92000001","England","London","E12000007","Black/African/Caribbean/Black British","African",158864
-202021,"Academic year","Regional","E92000001","England","London","E12000007","Mixed/Multiple ethnic groups","White and Asian",27063
+202021,"Academic year","Regional","E92000001","England","East Midlands","E12000004","Asian / Asian British","Chinese",2369
+202021,"Academic year","Regional","E92000001","England","East Midlands","E12000004","Mixed / Multiple ethnic groups","White and Black Caribbean",13037
+202021,"Academic year","Regional","E92000001","England","East of England","E12000006","Asian / Asian British","Bangladeshi",11598
+202021,"Academic year","Regional","E92000001","England","East of England","E12000006","White","English / Welsh / Scottish / Northern Irish / British",664185
+202021,"Academic year","Regional","E92000001","England","London","E12000007","Asian / Asian British","Bangladeshi",78462
+202021,"Academic year","Regional","E92000001","England","London","E12000007","Black / African / Caribbean / Black British","African",158864
+202021,"Academic year","Regional","E92000001","England","London","E12000007","Mixed / Multiple ethnic groups","White and Asian",27063
 202021,"Academic year","Regional","E92000001","England","London","E12000007","White","Gypsy or Irish Traveller",2240
-202021,"Academic year","Regional","E92000001","England","London","E12000007","White","English/Welsh/Scottish/Northern Irish/British",319750
+202021,"Academic year","Regional","E92000001","England","London","E12000007","White","English / Welsh / Scottish / Northern Irish / British",319750
 202021,"Academic year","Regional","E92000001","England","London","E12000007","Total","Total",1306083
-202021,"Academic year","Regional","E92000001","England","North East","E12000001","Asian/Asian British","Indian",2668
-202021,"Academic year","Regional","E92000001","England","North East","E12000001","Mixed/Multiple ethnic groups","Any other Mixed/Multiple ethnic background",4477
+202021,"Academic year","Regional","E92000001","England","North East","E12000001","Asian / Asian British","Indian",2668
+202021,"Academic year","Regional","E92000001","England","North East","E12000001","Mixed / Multiple ethnic groups","Any other Mixed / Multiple ethnic background",4477
 202021,"Academic year","Regional","E92000001","England","North East","E12000001","White","Gypsy or Irish Traveller",1310
 202021,"Academic year","Regional","E92000001","England","North West","E12000002","Other ethnic group","Total",21033
 202021,"Academic year","Regional","E92000001","England","North West","E12000002","White","Gypsy or Irish Traveller",1736
 202021,"Academic year","Regional","E92000001","England","North West","E12000002","White","Irish",2600
-202021,"Academic year","Regional","E92000001","England","North West","E12000002","White","English/Welsh/Scottish/Northern Irish/British",830959
-202021,"Academic year","Regional","E92000001","England","South East","E12000008","Asian/Asian British","Any other Asian background",25766
-202021,"Academic year","Regional","E92000001","England","South East","E12000008","Asian/Asian British","Pakistani",34081
-202021,"Academic year","Regional","E92000001","England","South East","E12000008","Black/African/Caribbean/Black British","Any other Black/African/Caribbean background",5137
-202021,"Academic year","Regional","E92000001","England","South East","E12000008","White","English/Welsh/Scottish/Northern Irish/British",937179
+202021,"Academic year","Regional","E92000001","England","North West","E12000002","White","English / Welsh / Scottish / Northern Irish / British",830959
+202021,"Academic year","Regional","E92000001","England","South East","E12000008","Asian / Asian British","Any other Asian background",25766
+202021,"Academic year","Regional","E92000001","England","South East","E12000008","Asian / Asian British","Pakistani",34081
+202021,"Academic year","Regional","E92000001","England","South East","E12000008","Black / African / Caribbean / Black British","Any other Black / African / Caribbean background",5137
+202021,"Academic year","Regional","E92000001","England","South East","E12000008","White","English / Welsh / Scottish / Northern Irish / British",937179
 202021,"Academic year","Regional","E92000001","England","South East","E12000008","Total","Total",1311068
-202021,"Academic year","Regional","E92000001","England","South West","E12000009","Black/African/Caribbean/Black British","African",9153
+202021,"Academic year","Regional","E92000001","England","South West","E12000009","Black / African / Caribbean / Black British","African",9153
 202021,"Academic year","Regional","E92000001","England","South West","E12000009","White","Irish",1477
 202021,"Academic year","Regional","E92000001","England","South West","E12000009","Total","Total",763799
-202021,"Academic year","Regional","E92000001","England","West Midlands","E12000005","Asian/Asian British","Chinese",3534
-202021,"Academic year","Regional","E92000001","England","West Midlands","E12000005","Mixed/Multiple ethnic groups","White and Black African",5580
-202021,"Academic year","Regional","E92000001","England","Yorkshire and The Humber","E12000003","Asian/Asian British","Any other Asian background",9948
-202021,"Academic year","Regional","E92000001","England","Yorkshire and The Humber","E12000003","Black/African/Caribbean/Black British","Any other Black/African/Caribbean background",3426
-202021,"Academic year","Regional","E92000001","England","Yorkshire and The Humber","E12000003","Mixed/Multiple ethnic groups","White and Black African",5355
-202021,"Academic year","National","E92000001","England","","","Asian/Asian British","Chinese",37943
-202021,"Academic year","National","E92000001","England","","","Asian/Asian British","Pakistani",374031
-202021,"Academic year","National","E92000001","England","","","Mixed/Multiple ethnic groups","White and Black African",73202
-202021,"Academic year","National","E92000001","England","","","Mixed/Multiple ethnic groups","White and Black Caribbean",130569
-202021,"Academic year","Regional","E92000001","England","East Midlands","E12000004","Asian/Asian British","Bangladeshi",4586
-202021,"Academic year","Regional","E92000001","England","East Midlands","E12000004","Black/African/Caribbean/Black British","African",16637
+202021,"Academic year","Regional","E92000001","England","West Midlands","E12000005","Asian / Asian British","Chinese",3534
+202021,"Academic year","Regional","E92000001","England","West Midlands","E12000005","Mixed / Multiple ethnic groups","White and Black African",5580
+202021,"Academic year","Regional","E92000001","England","Yorkshire and The Humber","E12000003","Asian / Asian British","Any other Asian background",9948
+202021,"Academic year","Regional","E92000001","England","Yorkshire and The Humber","E12000003","Black / African / Caribbean / Black British","Any other Black / African / Caribbean background",3426
+202021,"Academic year","Regional","E92000001","England","Yorkshire and The Humber","E12000003","Mixed / Multiple ethnic groups","White and Black African",5355
+202021,"Academic year","National","E92000001","England","","","Asian / Asian British","Chinese",37943
+202021,"Academic year","National","E92000001","England","","","Asian / Asian British","Pakistani",374031
+202021,"Academic year","National","E92000001","England","","","Mixed / Multiple ethnic groups","White and Black African",73202
+202021,"Academic year","National","E92000001","England","","","Mixed / Multiple ethnic groups","White and Black Caribbean",130569
+202021,"Academic year","Regional","E92000001","England","East Midlands","E12000004","Asian / Asian British","Bangladeshi",4586
+202021,"Academic year","Regional","E92000001","England","East Midlands","E12000004","Black / African / Caribbean / Black British","African",16637
 202021,"Academic year","Regional","E92000001","England","East Midlands","E12000004","Total","Total",716908
-202021,"Academic year","Regional","E92000001","England","East of England","E12000006","Mixed/Multiple ethnic groups","White and Asian",14794
+202021,"Academic year","Regional","E92000001","England","East of England","E12000006","Mixed / Multiple ethnic groups","White and Asian",14794
 202021,"Academic year","Regional","E92000001","England","East of England","E12000006","White","Any other White background",76547
 202021,"Academic year","Regional","E92000001","England","North East","E12000001","Total","Total",395479
-202021,"Academic year","Regional","E92000001","England","North West","E12000002","Black/African/Caribbean/Black British","Caribbean",2579
-202021,"Academic year","Regional","E92000001","England","South East","E12000008","Mixed/Multiple ethnic groups","White and Black African",13068
+202021,"Academic year","Regional","E92000001","England","North West","E12000002","Black / African / Caribbean / Black British","Caribbean",2579
+202021,"Academic year","Regional","E92000001","England","South East","E12000008","Mixed / Multiple ethnic groups","White and Black African",13068
 202021,"Academic year","Regional","E92000001","England","South East","E12000008","White","Irish",3645
-202021,"Academic year","Regional","E92000001","England","South West","E12000009","Asian/Asian British","Indian",9398
-202021,"Academic year","Regional","E92000001","England","South West","E12000009","Mixed/Multiple ethnic groups","Any other Mixed/Multiple ethnic background",10714
-202021,"Academic year","Regional","E92000001","England","West Midlands","E12000005","Asian/Asian British","Any other Asian background",16599
-202021,"Academic year","Regional","E92000001","England","West Midlands","E12000005","Asian/Asian British","Indian",47924
-202021,"Academic year","Regional","E92000001","England","West Midlands","E12000005","Black/African/Caribbean/Black British","Any other Black/African/Caribbean background",6681
+202021,"Academic year","Regional","E92000001","England","South West","E12000009","Asian / Asian British","Indian",9398
+202021,"Academic year","Regional","E92000001","England","South West","E12000009","Mixed / Multiple ethnic groups","Any other Mixed / Multiple ethnic background",10714
+202021,"Academic year","Regional","E92000001","England","West Midlands","E12000005","Asian / Asian British","Any other Asian background",16599
+202021,"Academic year","Regional","E92000001","England","West Midlands","E12000005","Asian / Asian British","Indian",47924
+202021,"Academic year","Regional","E92000001","England","West Midlands","E12000005","Black / African / Caribbean / Black British","Any other Black / African / Caribbean background",6681
 202021,"Academic year","Regional","E92000001","England","West Midlands","E12000005","Unknown","Unknown",14172
-202021,"Academic year","Regional","E92000001","England","Yorkshire and The Humber","E12000003","Asian/Asian British","Indian",12099
-202021,"Academic year","National","E92000001","England","","","Asian/Asian British","Any other Asian background",161435
-202021,"Academic year","National","E92000001","England","","","Asian/Asian British","Bangladeshi",149202
-202021,"Academic year","National","E92000001","England","","","Mixed/Multiple ethnic groups","Any other Mixed/Multiple ethnic background",200996
+202021,"Academic year","Regional","E92000001","England","Yorkshire and The Humber","E12000003","Asian / Asian British","Indian",12099
+202021,"Academic year","National","E92000001","England","","","Asian / Asian British","Any other Asian background",161435
+202021,"Academic year","National","E92000001","England","","","Asian / Asian British","Bangladeshi",149202
+202021,"Academic year","National","E92000001","England","","","Mixed / Multiple ethnic groups","Any other Mixed / Multiple ethnic background",200996
 202021,"Academic year","National","E92000001","England","","","Unknown","Unknown",132439
 202021,"Academic year","National","E92000001","England","","","White","Any other White background",565893
 202021,"Academic year","Regional","E92000001","England","East Midlands","E12000004","White","Gypsy or Irish Traveller",2189
-202021,"Academic year","Regional","E92000001","England","East of England","E12000006","Asian/Asian British","Any other Asian background",13559
+202021,"Academic year","Regional","E92000001","England","East of England","E12000006","Asian / Asian British","Any other Asian background",13559
 202021,"Academic year","Regional","E92000001","England","East of England","E12000006","White","Irish",3051
 202021,"Academic year","Regional","E92000001","England","East of England","E12000006","Total","Total",941606
-202021,"Academic year","Regional","E92000001","England","London","E12000007","Asian/Asian British","Any other Asian background",61934
-202021,"Academic year","Regional","E92000001","England","London","E12000007","Mixed/Multiple ethnic groups","Any other Mixed/Multiple ethnic background",65204
+202021,"Academic year","Regional","E92000001","England","London","E12000007","Asian / Asian British","Any other Asian background",61934
+202021,"Academic year","Regional","E92000001","England","London","E12000007","Mixed / Multiple ethnic groups","Any other Mixed / Multiple ethnic background",65204
 202021,"Academic year","Regional","E92000001","England","London","E12000007","White","Any other White background",185154
 202021,"Academic year","Regional","E92000001","England","North East","E12000001","Other ethnic group","Total",4644
-202021,"Academic year","Regional","E92000001","England","North East","E12000001","Asian/Asian British","Bangladeshi",3913
-202021,"Academic year","Regional","E92000001","England","North East","E12000001","Mixed/Multiple ethnic groups","White and Black African",2004
+202021,"Academic year","Regional","E92000001","England","North East","E12000001","Asian / Asian British","Bangladeshi",3913
+202021,"Academic year","Regional","E92000001","England","North East","E12000001","Mixed / Multiple ethnic groups","White and Black African",2004
 202021,"Academic year","Regional","E92000001","England","North West","E12000002","Unknown","Unknown",13225
 202021,"Academic year","Regional","E92000001","England","North West","E12000002","White","Any other White background",40510
-202021,"Academic year","Regional","E92000001","England","South East","E12000008","Mixed/Multiple ethnic groups","Any other Mixed/Multiple ethnic background",31318
+202021,"Academic year","Regional","E92000001","England","South East","E12000008","Mixed / Multiple ethnic groups","Any other Mixed / Multiple ethnic background",31318
 202021,"Academic year","Regional","E92000001","England","South East","E12000008","Unknown","Unknown",20656
 202021,"Academic year","Regional","E92000001","England","South East","E12000008","White","Any other White background",87176
-202021,"Academic year","Regional","E92000001","England","South West","E12000009","Asian/Asian British","Chinese",2232
-202021,"Academic year","Regional","E92000001","England","South West","E12000009","Black/African/Caribbean/Black British","Any other Black/African/Caribbean background",2404
+202021,"Academic year","Regional","E92000001","England","South West","E12000009","Asian / Asian British","Chinese",2232
+202021,"Academic year","Regional","E92000001","England","South West","E12000009","Black / African / Caribbean / Black British","Any other Black / African / Caribbean background",2404
 202021,"Academic year","Regional","E92000001","England","South West","E12000009","White","Any other White background",40299
-202021,"Academic year","Regional","E92000001","England","West Midlands","E12000005","Asian/Asian British","Pakistani",82097
-202021,"Academic year","Regional","E92000001","England","West Midlands","E12000005","Black/African/Caribbean/Black British","African",36231
-202021,"Academic year","Regional","E92000001","England","West Midlands","E12000005","Mixed/Multiple ethnic groups","White and Asian",15518
+202021,"Academic year","Regional","E92000001","England","West Midlands","E12000005","Asian / Asian British","Pakistani",82097
+202021,"Academic year","Regional","E92000001","England","West Midlands","E12000005","Black / African / Caribbean / Black British","African",36231
+202021,"Academic year","Regional","E92000001","England","West Midlands","E12000005","Mixed / Multiple ethnic groups","White and Asian",15518
 202021,"Academic year","Regional","E92000001","England","Yorkshire and The Humber","E12000003","Other ethnic group","Total",12366
-202021,"Academic year","Regional","E92000001","England","Yorkshire and The Humber","E12000003","Asian/Asian British","Bangladeshi",6986
+202021,"Academic year","Regional","E92000001","England","Yorkshire and The Humber","E12000003","Asian / Asian British","Bangladeshi",6986
 201920,"Academic year","National","E92000001","England","","","Other ethnic group","Total",168758
-201920,"Academic year","National","E92000001","England","","","Asian/Asian British","Indian",268318
-201920,"Academic year","National","E92000001","England","","","Black/African/Caribbean/Black British","Any other Black/African/Caribbean background",64153
-201920,"Academic year","National","E92000001","England","","","Black/African/Caribbean/Black British","African",323874
-201920,"Academic year","Regional","E92000001","England","East Midlands","E12000004","Asian/Asian British","Indian",33051
-201920,"Academic year","Regional","E92000001","England","East Midlands","E12000004","Mixed/Multiple ethnic groups","Any other Mixed/Multiple ethnic background",11955
+201920,"Academic year","National","E92000001","England","","","Asian / Asian British","Indian",268318
+201920,"Academic year","National","E92000001","England","","","Black / African / Caribbean / Black British","Any other Black / African / Caribbean background",64153
+201920,"Academic year","National","E92000001","England","","","Black / African / Caribbean / Black British","African",323874
+201920,"Academic year","Regional","E92000001","England","East Midlands","E12000004","Asian / Asian British","Indian",33051
+201920,"Academic year","Regional","E92000001","England","East Midlands","E12000004","Mixed / Multiple ethnic groups","Any other Mixed / Multiple ethnic background",11955
 201920,"Academic year","Regional","E92000001","England","East Midlands","E12000004","Unknown","Unknown",9852
 201920,"Academic year","Regional","E92000001","England","East of England","E12000006","Other ethnic group","Total",9107
-201920,"Academic year","Regional","E92000001","England","East of England","E12000006","Asian/Asian British","Any other Asian background",13057
-201920,"Academic year","Regional","E92000001","England","East of England","E12000006","Asian/Asian British","Chinese",3946
+201920,"Academic year","Regional","E92000001","England","East of England","E12000006","Asian / Asian British","Any other Asian background",13057
+201920,"Academic year","Regional","E92000001","England","East of England","E12000006","Asian / Asian British","Chinese",3946
 201920,"Academic year","Regional","E92000001","England","East of England","E12000006","Total","Total",934498
 201920,"Academic year","Regional","E92000001","England","London","E12000007","Other ethnic group","Total",77413
-201920,"Academic year","Regional","E92000001","England","London","E12000007","Asian/Asian British","Indian",85521
-201920,"Academic year","Regional","E92000001","England","London","E12000007","Asian/Asian British","Pakistani",60415
-201920,"Academic year","Regional","E92000001","England","London","E12000007","Mixed/Multiple ethnic groups","White and Black Caribbean",33296
-201920,"Academic year","Regional","E92000001","England","North East","E12000001","Asian/Asian British","Pakistani",5995
+201920,"Academic year","Regional","E92000001","England","London","E12000007","Asian / Asian British","Indian",85521
+201920,"Academic year","Regional","E92000001","England","London","E12000007","Asian / Asian British","Pakistani",60415
+201920,"Academic year","Regional","E92000001","England","London","E12000007","Mixed / Multiple ethnic groups","White and Black Caribbean",33296
+201920,"Academic year","Regional","E92000001","England","North East","E12000001","Asian / Asian British","Pakistani",5995
 201920,"Academic year","Regional","E92000001","England","North East","E12000001","Unknown","Unknown",2421
 201920,"Academic year","Regional","E92000001","England","North East","E12000001","White","Gypsy or Irish Traveller",1402
-201920,"Academic year","Regional","E92000001","England","North East","E12000001","White","English/Welsh/Scottish/Northern Irish/British",344917
-201920,"Academic year","Regional","E92000001","England","North West","E12000002","Black/African/Caribbean/Black British","Any other Black/African/Caribbean background",8380
+201920,"Academic year","Regional","E92000001","England","North East","E12000001","White","English / Welsh / Scottish / Northern Irish / British",344917
+201920,"Academic year","Regional","E92000001","England","North West","E12000002","Black / African / Caribbean / Black British","Any other Black / African / Caribbean background",8380
 201920,"Academic year","Regional","E92000001","England","North West","E12000002","White","Irish",2614
 201920,"Academic year","Regional","E92000001","England","South East","E12000008","Other ethnic group","Total",13980
-201920,"Academic year","Regional","E92000001","England","South West","E12000009","Black/African/Caribbean/Black British","Caribbean",1843
-201920,"Academic year","Regional","E92000001","England","South West","E12000009","White","English/Welsh/Scottish/Northern Irish/British",631554
-201920,"Academic year","Regional","E92000001","England","West Midlands","E12000005","Asian/Asian British","Any other Asian background",15739
-201920,"Academic year","Regional","E92000001","England","West Midlands","E12000005","Black/African/Caribbean/Black British","Any other Black/African/Caribbean background",6518
+201920,"Academic year","Regional","E92000001","England","South West","E12000009","Black / African / Caribbean / Black British","Caribbean",1843
+201920,"Academic year","Regional","E92000001","England","South West","E12000009","White","English / Welsh / Scottish / Northern Irish / British",631554
+201920,"Academic year","Regional","E92000001","England","West Midlands","E12000005","Asian / Asian British","Any other Asian background",15739
+201920,"Academic year","Regional","E92000001","England","West Midlands","E12000005","Black / African / Caribbean / Black British","Any other Black / African / Caribbean background",6518
 201920,"Academic year","Regional","E92000001","England","West Midlands","E12000005","Unknown","Unknown",12598
-201920,"Academic year","National","E92000001","England","","","Asian/Asian British","Pakistani",372699
-201920,"Academic year","National","E92000001","England","","","Mixed/Multiple ethnic groups","White and Black African",70403
-201920,"Academic year","Regional","E92000001","England","East Midlands","E12000004","Black/African/Caribbean/Black British","Any other Black/African/Caribbean background",4226
-201920,"Academic year","Regional","E92000001","England","East Midlands","E12000004","White","English/Welsh/Scottish/Northern Irish/British",519315
-201920,"Academic year","Regional","E92000001","England","East of England","E12000006","Asian/Asian British","Bangladeshi",11433
-201920,"Academic year","Regional","E92000001","England","London","E12000007","Asian/Asian British","Bangladeshi",77408
-201920,"Academic year","Regional","E92000001","England","London","E12000007","Black/African/Caribbean/Black British","Caribbean",53733
-201920,"Academic year","Regional","E92000001","England","London","E12000007","Mixed/Multiple ethnic groups","White and Black African",19570
+201920,"Academic year","National","E92000001","England","","","Asian / Asian British","Pakistani",372699
+201920,"Academic year","National","E92000001","England","","","Mixed / Multiple ethnic groups","White and Black African",70403
+201920,"Academic year","Regional","E92000001","England","East Midlands","E12000004","Black / African / Caribbean / Black British","Any other Black / African / Caribbean background",4226
+201920,"Academic year","Regional","E92000001","England","East Midlands","E12000004","White","English / Welsh / Scottish / Northern Irish / British",519315
+201920,"Academic year","Regional","E92000001","England","East of England","E12000006","Asian / Asian British","Bangladeshi",11433
+201920,"Academic year","Regional","E92000001","England","London","E12000007","Asian / Asian British","Bangladeshi",77408
+201920,"Academic year","Regional","E92000001","England","London","E12000007","Black / African / Caribbean / Black British","Caribbean",53733
+201920,"Academic year","Regional","E92000001","England","London","E12000007","Mixed / Multiple ethnic groups","White and Black African",19570
 201920,"Academic year","Regional","E92000001","England","London","E12000007","Unknown","Unknown",27935
-201920,"Academic year","Regional","E92000001","England","North East","E12000001","Black/African/Caribbean/Black British","African",3857
-201920,"Academic year","Regional","E92000001","England","North East","E12000001","Asian/Asian British","Chinese",1532
-201920,"Academic year","Regional","E92000001","England","North East","E12000001","Mixed/Multiple ethnic groups","Any other Mixed/Multiple ethnic background",4263
-201920,"Academic year","Regional","E92000001","England","North East","E12000001","Mixed/Multiple ethnic groups","White and Black Caribbean",1024
+201920,"Academic year","Regional","E92000001","England","North East","E12000001","Black / African / Caribbean / Black British","African",3857
+201920,"Academic year","Regional","E92000001","England","North East","E12000001","Asian / Asian British","Chinese",1532
+201920,"Academic year","Regional","E92000001","England","North East","E12000001","Mixed / Multiple ethnic groups","Any other Mixed / Multiple ethnic background",4263
+201920,"Academic year","Regional","E92000001","England","North East","E12000001","Mixed / Multiple ethnic groups","White and Black Caribbean",1024
 201920,"Academic year","Regional","E92000001","England","North East","E12000001","Total","Total",395344
-201920,"Academic year","Regional","E92000001","England","North West","E12000002","Asian/Asian British","Indian",22020
-201920,"Academic year","Regional","E92000001","England","North West","E12000002","Mixed/Multiple ethnic groups","White and Black Caribbean",9919
-201920,"Academic year","Regional","E92000001","England","South East","E12000008","Asian/Asian British","Indian",38172
-201920,"Academic year","Regional","E92000001","England","South East","E12000008","Mixed/Multiple ethnic groups","White and Asian",23278
+201920,"Academic year","Regional","E92000001","England","North West","E12000002","Asian / Asian British","Indian",22020
+201920,"Academic year","Regional","E92000001","England","North West","E12000002","Mixed / Multiple ethnic groups","White and Black Caribbean",9919
+201920,"Academic year","Regional","E92000001","England","South East","E12000008","Asian / Asian British","Indian",38172
+201920,"Academic year","Regional","E92000001","England","South East","E12000008","Mixed / Multiple ethnic groups","White and Asian",23278
 201920,"Academic year","Regional","E92000001","England","South East","E12000008","White","Gypsy or Irish Traveller",5965
 201920,"Academic year","Regional","E92000001","England","South West","E12000009","Other ethnic group","Total",5433
-201920,"Academic year","Regional","E92000001","England","South West","E12000009","Asian/Asian British","Any other Asian background",5813
-201920,"Academic year","Regional","E92000001","England","South West","E12000009","Black/African/Caribbean/Black British","African",8982
-201920,"Academic year","Regional","E92000001","England","South West","E12000009","Asian/Asian British","Chinese",2268
-201920,"Academic year","Regional","E92000001","England","South West","E12000009","Mixed/Multiple ethnic groups","Any other Mixed/Multiple ethnic background",10342
+201920,"Academic year","Regional","E92000001","England","South West","E12000009","Asian / Asian British","Any other Asian background",5813
+201920,"Academic year","Regional","E92000001","England","South West","E12000009","Black / African / Caribbean / Black British","African",8982
+201920,"Academic year","Regional","E92000001","England","South West","E12000009","Asian / Asian British","Chinese",2268
+201920,"Academic year","Regional","E92000001","England","South West","E12000009","Mixed / Multiple ethnic groups","Any other Mixed / Multiple ethnic background",10342
 201920,"Academic year","Regional","E92000001","England","South West","E12000009","White","Irish",1523
 201920,"Academic year","Regional","E92000001","England","West Midlands","E12000005","Other ethnic group","Total",19395
-201920,"Academic year","Regional","E92000001","England","West Midlands","E12000005","Mixed/Multiple ethnic groups","White and Black Caribbean",22940
+201920,"Academic year","Regional","E92000001","England","West Midlands","E12000005","Mixed / Multiple ethnic groups","White and Black Caribbean",22940
 201920,"Academic year","Regional","E92000001","England","West Midlands","E12000005","White","Gypsy or Irish Traveller",3399
 201920,"Academic year","Regional","E92000001","England","West Midlands","E12000005","White","Irish",1970
 201920,"Academic year","Regional","E92000001","England","West Midlands","E12000005","Total","Total",934071
-201920,"Academic year","Regional","E92000001","England","Yorkshire and The Humber","E12000003","Asian/Asian British","Indian",12121
-201920,"Academic year","Regional","E92000001","England","Yorkshire and The Humber","E12000003","Asian/Asian British","Pakistani",76948
-201920,"Academic year","Regional","E92000001","England","Yorkshire and The Humber","E12000003","Black/African/Caribbean/Black British","Any other Black/African/Caribbean background",3404
-201920,"Academic year","Regional","E92000001","England","Yorkshire and The Humber","E12000003","Black/African/Caribbean/Black British","African",16609
-201920,"Academic year","Regional","E92000001","England","Yorkshire and The Humber","E12000003","Mixed/Multiple ethnic groups","Any other Mixed/Multiple ethnic background",13226
-201920,"Academic year","Regional","E92000001","England","Yorkshire and The Humber","E12000003","Mixed/Multiple ethnic groups","White and Black Caribbean",10121
+201920,"Academic year","Regional","E92000001","England","Yorkshire and The Humber","E12000003","Asian / Asian British","Indian",12121
+201920,"Academic year","Regional","E92000001","England","Yorkshire and The Humber","E12000003","Asian / Asian British","Pakistani",76948
+201920,"Academic year","Regional","E92000001","England","Yorkshire and The Humber","E12000003","Black / African / Caribbean / Black British","Any other Black / African / Caribbean background",3404
+201920,"Academic year","Regional","E92000001","England","Yorkshire and The Humber","E12000003","Black / African / Caribbean / Black British","African",16609
+201920,"Academic year","Regional","E92000001","England","Yorkshire and The Humber","E12000003","Mixed / Multiple ethnic groups","Any other Mixed / Multiple ethnic background",13226
+201920,"Academic year","Regional","E92000001","England","Yorkshire and The Humber","E12000003","Mixed / Multiple ethnic groups","White and Black Caribbean",10121
 201920,"Academic year","Regional","E92000001","England","Yorkshire and The Humber","E12000003","White","Gypsy or Irish Traveller",6095
 201920,"Academic year","Regional","E92000001","England","Yorkshire and The Humber","E12000003","White","Irish",1155
 201920,"Academic year","Regional","E92000001","England","Yorkshire and The Humber","E12000003","Total","Total",841364
-201920,"Academic year","National","E92000001","England","","","Asian/Asian British","Any other Asian background",158756
-201920,"Academic year","Regional","E92000001","England","East Midlands","E12000004","Asian/Asian British","Any other Asian background",9540
-201920,"Academic year","Regional","E92000001","England","East Midlands","E12000004","Mixed/Multiple ethnic groups","White and Asian",8850
-201920,"Academic year","Regional","E92000001","England","East of England","E12000006","Asian/Asian British","Pakistani",23238
-201920,"Academic year","Regional","E92000001","England","East of England","E12000006","Black/African/Caribbean/Black British","African",24380
-201920,"Academic year","Regional","E92000001","England","East of England","E12000006","Mixed/Multiple ethnic groups","White and Asian",14154
-201920,"Academic year","Regional","E92000001","England","East of England","E12000006","Mixed/Multiple ethnic groups","White and Black African",8808
-201920,"Academic year","Regional","E92000001","England","East of England","E12000006","Mixed/Multiple ethnic groups","White and Black Caribbean",14379
+201920,"Academic year","National","E92000001","England","","","Asian / Asian British","Any other Asian background",158756
+201920,"Academic year","Regional","E92000001","England","East Midlands","E12000004","Asian / Asian British","Any other Asian background",9540
+201920,"Academic year","Regional","E92000001","England","East Midlands","E12000004","Mixed / Multiple ethnic groups","White and Asian",8850
+201920,"Academic year","Regional","E92000001","England","East of England","E12000006","Asian / Asian British","Pakistani",23238
+201920,"Academic year","Regional","E92000001","England","East of England","E12000006","Black / African / Caribbean / Black British","African",24380
+201920,"Academic year","Regional","E92000001","England","East of England","E12000006","Mixed / Multiple ethnic groups","White and Asian",14154
+201920,"Academic year","Regional","E92000001","England","East of England","E12000006","Mixed / Multiple ethnic groups","White and Black African",8808
+201920,"Academic year","Regional","E92000001","England","East of England","E12000006","Mixed / Multiple ethnic groups","White and Black Caribbean",14379
 201920,"Academic year","Regional","E92000001","England","East of England","E12000006","White","Any other White background",74304
-201920,"Academic year","Regional","E92000001","England","London","E12000007","Black/African/Caribbean/Black British","Any other Black/African/Caribbean background",28575
-201920,"Academic year","Regional","E92000001","England","London","E12000007","Black/African/Caribbean/Black British","African",162680
-201920,"Academic year","Regional","E92000001","England","London","E12000007","Asian/Asian British","Chinese",10475
+201920,"Academic year","Regional","E92000001","England","London","E12000007","Black / African / Caribbean / Black British","Any other Black / African / Caribbean background",28575
+201920,"Academic year","Regional","E92000001","England","London","E12000007","Black / African / Caribbean / Black British","African",162680
+201920,"Academic year","Regional","E92000001","England","London","E12000007","Asian / Asian British","Chinese",10475
 201920,"Academic year","Regional","E92000001","England","London","E12000007","White","Irish",6759
 201920,"Academic year","Regional","E92000001","England","London","E12000007","Total","Total",1309562
-201920,"Academic year","Regional","E92000001","England","North East","E12000001","Black/African/Caribbean/Black British","Caribbean",129
-201920,"Academic year","Regional","E92000001","England","North West","E12000002","Asian/Asian British","Any other Asian background",13596
-201920,"Academic year","Regional","E92000001","England","North West","E12000002","Black/African/Caribbean/Black British","Caribbean",2630
+201920,"Academic year","Regional","E92000001","England","North East","E12000001","Black / African / Caribbean / Black British","Caribbean",129
+201920,"Academic year","Regional","E92000001","England","North West","E12000002","Asian / Asian British","Any other Asian background",13596
+201920,"Academic year","Regional","E92000001","England","North West","E12000002","Black / African / Caribbean / Black British","Caribbean",2630
 201920,"Academic year","Regional","E92000001","England","North West","E12000002","Unknown","Unknown",11916
 201920,"Academic year","Regional","E92000001","England","North West","E12000002","White","Any other White background",39860
-201920,"Academic year","Regional","E92000001","England","North West","E12000002","White","English/Welsh/Scottish/Northern Irish/British",834407
-201920,"Academic year","Regional","E92000001","England","South East","E12000008","Black/African/Caribbean/Black British","Any other Black/African/Caribbean background",5002
-201920,"Academic year","Regional","E92000001","England","South East","E12000008","Asian/Asian British","Chinese",5079
-201920,"Academic year","Regional","E92000001","England","South East","E12000008","Mixed/Multiple ethnic groups","Any other Mixed/Multiple ethnic background",29592
-201920,"Academic year","Regional","E92000001","England","South East","E12000008","Mixed/Multiple ethnic groups","White and Black Caribbean",16100
-201920,"Academic year","Regional","E92000001","England","South West","E12000009","Black/African/Caribbean/Black British","Any other Black/African/Caribbean background",2339
+201920,"Academic year","Regional","E92000001","England","North West","E12000002","White","English / Welsh / Scottish / Northern Irish / British",834407
+201920,"Academic year","Regional","E92000001","England","South East","E12000008","Black / African / Caribbean / Black British","Any other Black / African / Caribbean background",5002
+201920,"Academic year","Regional","E92000001","England","South East","E12000008","Asian / Asian British","Chinese",5079
+201920,"Academic year","Regional","E92000001","England","South East","E12000008","Mixed / Multiple ethnic groups","Any other Mixed / Multiple ethnic background",29592
+201920,"Academic year","Regional","E92000001","England","South East","E12000008","Mixed / Multiple ethnic groups","White and Black Caribbean",16100
+201920,"Academic year","Regional","E92000001","England","South West","E12000009","Black / African / Caribbean / Black British","Any other Black / African / Caribbean background",2339
 201920,"Academic year","Regional","E92000001","England","South West","E12000009","Unknown","Unknown",11968
-201920,"Academic year","Regional","E92000001","England","West Midlands","E12000005","Black/African/Caribbean/Black British","Caribbean",13550
-201920,"Academic year","Regional","E92000001","England","West Midlands","E12000005","Mixed/Multiple ethnic groups","Any other Mixed/Multiple ethnic background",18696
-201920,"Academic year","Regional","E92000001","England","West Midlands","E12000005","Mixed/Multiple ethnic groups","White and Asian",14983
+201920,"Academic year","Regional","E92000001","England","West Midlands","E12000005","Black / African / Caribbean / Black British","Caribbean",13550
+201920,"Academic year","Regional","E92000001","England","West Midlands","E12000005","Mixed / Multiple ethnic groups","Any other Mixed / Multiple ethnic background",18696
+201920,"Academic year","Regional","E92000001","England","West Midlands","E12000005","Mixed / Multiple ethnic groups","White and Asian",14983
 201920,"Academic year","Regional","E92000001","England","West Midlands","E12000005","White","Any other White background",43169
-201920,"Academic year","Regional","E92000001","England","Yorkshire and The Humber","E12000003","Asian/Asian British","Bangladeshi",7097
-201920,"Academic year","Regional","E92000001","England","Yorkshire and The Humber","E12000003","Black/African/Caribbean/Black British","Caribbean",2251
-201920,"Academic year","Regional","E92000001","England","Yorkshire and The Humber","E12000003","Mixed/Multiple ethnic groups","White and Asian",11583
-201920,"Academic year","Regional","E92000001","England","Yorkshire and The Humber","E12000003","Mixed/Multiple ethnic groups","White and Black African",5114
-201920,"Academic year","Regional","E92000001","England","Yorkshire and The Humber","E12000003","White","English/Welsh/Scottish/Northern Irish/British",604006
-201920,"Academic year","National","E92000001","England","","","Asian/Asian British","Bangladeshi",148290
-201920,"Academic year","National","E92000001","England","","","Black/African/Caribbean/Black British","Caribbean",86543
-201920,"Academic year","National","E92000001","England","","","Mixed/Multiple ethnic groups","White and Asian",123153
+201920,"Academic year","Regional","E92000001","England","Yorkshire and The Humber","E12000003","Asian / Asian British","Bangladeshi",7097
+201920,"Academic year","Regional","E92000001","England","Yorkshire and The Humber","E12000003","Black / African / Caribbean / Black British","Caribbean",2251
+201920,"Academic year","Regional","E92000001","England","Yorkshire and The Humber","E12000003","Mixed / Multiple ethnic groups","White and Asian",11583
+201920,"Academic year","Regional","E92000001","England","Yorkshire and The Humber","E12000003","Mixed / Multiple ethnic groups","White and Black African",5114
+201920,"Academic year","Regional","E92000001","England","Yorkshire and The Humber","E12000003","White","English / Welsh / Scottish / Northern Irish / British",604006
+201920,"Academic year","National","E92000001","England","","","Asian / Asian British","Bangladeshi",148290
+201920,"Academic year","National","E92000001","England","","","Black / African / Caribbean / Black British","Caribbean",86543
+201920,"Academic year","National","E92000001","England","","","Mixed / Multiple ethnic groups","White and Asian",123153
 201920,"Academic year","Regional","E92000001","England","East Midlands","E12000004","Other ethnic group","Total",6828
-201920,"Academic year","Regional","E92000001","England","East Midlands","E12000004","Asian/Asian British","Pakistani",16246
-201920,"Academic year","Regional","E92000001","England","East Midlands","E12000004","Mixed/Multiple ethnic groups","White and Black African",5195
+201920,"Academic year","Regional","E92000001","England","East Midlands","E12000004","Asian / Asian British","Pakistani",16246
+201920,"Academic year","Regional","E92000001","England","East Midlands","E12000004","Mixed / Multiple ethnic groups","White and Black African",5195
 201920,"Academic year","Regional","E92000001","England","East Midlands","E12000004","Total","Total",712715
 201920,"Academic year","Regional","E92000001","England","East of England","E12000006","White","Irish",3081
-201920,"Academic year","Regional","E92000001","England","East of England","E12000006","White","English/Welsh/Scottish/Northern Irish/British",665959
-201920,"Academic year","Regional","E92000001","England","London","E12000007","Mixed/Multiple ethnic groups","White and Asian",25938
+201920,"Academic year","Regional","E92000001","England","East of England","E12000006","White","English / Welsh / Scottish / Northern Irish / British",665959
+201920,"Academic year","Regional","E92000001","England","London","E12000007","Mixed / Multiple ethnic groups","White and Asian",25938
 201920,"Academic year","Regional","E92000001","England","London","E12000007","White","Any other White background",186086
-201920,"Academic year","Regional","E92000001","England","London","E12000007","White","English/Welsh/Scottish/Northern Irish/British",324358
+201920,"Academic year","Regional","E92000001","England","London","E12000007","White","English / Welsh / Scottish / Northern Irish / British",324358
 201920,"Academic year","Regional","E92000001","England","North East","E12000001","Other ethnic group","Total",4512
 201920,"Academic year","Regional","E92000001","England","North East","E12000001","White","Irish",494
-201920,"Academic year","Regional","E92000001","England","North West","E12000002","Asian/Asian British","Bangladeshi",14583
-201920,"Academic year","Regional","E92000001","England","North West","E12000002","Asian/Asian British","Pakistani",70462
-201920,"Academic year","Regional","E92000001","England","North West","E12000002","Asian/Asian British","Chinese",5870
-201920,"Academic year","Regional","E92000001","England","North West","E12000002","Mixed/Multiple ethnic groups","White and Asian",12471
-201920,"Academic year","Regional","E92000001","England","South East","E12000008","Asian/Asian British","Bangladeshi",8101
+201920,"Academic year","Regional","E92000001","England","North West","E12000002","Asian / Asian British","Bangladeshi",14583
+201920,"Academic year","Regional","E92000001","England","North West","E12000002","Asian / Asian British","Pakistani",70462
+201920,"Academic year","Regional","E92000001","England","North West","E12000002","Asian / Asian British","Chinese",5870
+201920,"Academic year","Regional","E92000001","England","North West","E12000002","Mixed / Multiple ethnic groups","White and Asian",12471
+201920,"Academic year","Regional","E92000001","England","South East","E12000008","Asian / Asian British","Bangladeshi",8101
 201920,"Academic year","Regional","E92000001","England","South East","E12000008","White","Any other White background",84985
 201920,"Academic year","Regional","E92000001","England","South East","E12000008","White","Irish",3701
-201920,"Academic year","Regional","E92000001","England","South West","E12000009","Asian/Asian British","Pakistani",3393
-201920,"Academic year","Regional","E92000001","England","South West","E12000009","Mixed/Multiple ethnic groups","White and Asian",8551
-201920,"Academic year","Regional","E92000001","England","South West","E12000009","Mixed/Multiple ethnic groups","White and Black African",4569
-201920,"Academic year","Regional","E92000001","England","South West","E12000009","Mixed/Multiple ethnic groups","White and Black Caribbean",8136
+201920,"Academic year","Regional","E92000001","England","South West","E12000009","Asian / Asian British","Pakistani",3393
+201920,"Academic year","Regional","E92000001","England","South West","E12000009","Mixed / Multiple ethnic groups","White and Asian",8551
+201920,"Academic year","Regional","E92000001","England","South West","E12000009","Mixed / Multiple ethnic groups","White and Black African",4569
+201920,"Academic year","Regional","E92000001","England","South West","E12000009","Mixed / Multiple ethnic groups","White and Black Caribbean",8136
 201920,"Academic year","Regional","E92000001","England","Yorkshire and The Humber","E12000003","Other ethnic group","Total",11899
-201920,"Academic year","Regional","E92000001","England","Yorkshire and The Humber","E12000003","Asian/Asian British","Any other Asian background",9834
-201920,"Academic year","Regional","E92000001","England","Yorkshire and The Humber","E12000003","Asian/Asian British","Chinese",2621
+201920,"Academic year","Regional","E92000001","England","Yorkshire and The Humber","E12000003","Asian / Asian British","Any other Asian background",9834
+201920,"Academic year","Regional","E92000001","England","Yorkshire and The Humber","E12000003","Asian / Asian British","Chinese",2621
 201920,"Academic year","National","E92000001","England","","","Unknown","Unknown",119388
 201920,"Academic year","National","E92000001","England","","","White","Any other White background",558877
-201920,"Academic year","National","E92000001","England","","","White","English/Welsh/Scottish/Northern Irish/British",5432991
+201920,"Academic year","National","E92000001","England","","","White","English / Welsh / Scottish / Northern Irish / British",5432991
 201920,"Academic year","National","E92000001","England","","","Total","Total",8312552
-201920,"Academic year","Regional","E92000001","England","East Midlands","E12000004","Black/African/Caribbean/Black British","African",16093
-201920,"Academic year","Regional","E92000001","England","East Midlands","E12000004","Asian/Asian British","Chinese",2420
-201920,"Academic year","Regional","E92000001","England","East Midlands","E12000004","Mixed/Multiple ethnic groups","White and Black Caribbean",12859
+201920,"Academic year","Regional","E92000001","England","East Midlands","E12000004","Black / African / Caribbean / Black British","African",16093
+201920,"Academic year","Regional","E92000001","England","East Midlands","E12000004","Asian / Asian British","Chinese",2420
+201920,"Academic year","Regional","E92000001","England","East Midlands","E12000004","Mixed / Multiple ethnic groups","White and Black Caribbean",12859
 201920,"Academic year","Regional","E92000001","England","East Midlands","E12000004","White","Any other White background",44572
 201920,"Academic year","Regional","E92000001","England","East Midlands","E12000004","White","Irish",1146
-201920,"Academic year","Regional","E92000001","England","East of England","E12000006","Asian/Asian British","Indian",18660
-201920,"Academic year","Regional","E92000001","England","East of England","E12000006","Black/African/Caribbean/Black British","Any other Black/African/Caribbean background",4783
-201920,"Academic year","Regional","E92000001","England","East of England","E12000006","Black/African/Caribbean/Black British","Caribbean",4810
+201920,"Academic year","Regional","E92000001","England","East of England","E12000006","Asian / Asian British","Indian",18660
+201920,"Academic year","Regional","E92000001","England","East of England","E12000006","Black / African / Caribbean / Black British","Any other Black / African / Caribbean background",4783
+201920,"Academic year","Regional","E92000001","England","East of England","E12000006","Black / African / Caribbean / Black British","Caribbean",4810
 201920,"Academic year","Regional","E92000001","England","East of England","E12000006","White","Gypsy or Irish Traveller",3091
-201920,"Academic year","Regional","E92000001","England","North East","E12000001","Asian/Asian British","Any other Asian background",3531
-201920,"Academic year","Regional","E92000001","England","North East","E12000001","Black/African/Caribbean/Black British","Any other Black/African/Caribbean background",926
-201920,"Academic year","Regional","E92000001","England","North West","E12000002","Mixed/Multiple ethnic groups","Any other Mixed/Multiple ethnic background",20954
-201920,"Academic year","Regional","E92000001","England","North West","E12000002","Mixed/Multiple ethnic groups","White and Black African",7403
+201920,"Academic year","Regional","E92000001","England","North East","E12000001","Asian / Asian British","Any other Asian background",3531
+201920,"Academic year","Regional","E92000001","England","North East","E12000001","Black / African / Caribbean / Black British","Any other Black / African / Caribbean background",926
+201920,"Academic year","Regional","E92000001","England","North West","E12000002","Mixed / Multiple ethnic groups","Any other Mixed / Multiple ethnic background",20954
+201920,"Academic year","Regional","E92000001","England","North West","E12000002","Mixed / Multiple ethnic groups","White and Black African",7403
 201920,"Academic year","Regional","E92000001","England","North West","E12000002","Total","Total",1125421
-201920,"Academic year","Regional","E92000001","England","South East","E12000008","Asian/Asian British","Pakistani",33643
-201920,"Academic year","Regional","E92000001","England","South East","E12000008","Black/African/Caribbean/Black British","African",31062
-201920,"Academic year","Regional","E92000001","England","South East","E12000008","Black/African/Caribbean/Black British","Caribbean",4342
-201920,"Academic year","Regional","E92000001","England","South East","E12000008","Mixed/Multiple ethnic groups","White and Black African",12491
-201920,"Academic year","Regional","E92000001","England","South East","E12000008","White","English/Welsh/Scottish/Northern Irish/British",940237
+201920,"Academic year","Regional","E92000001","England","South East","E12000008","Asian / Asian British","Pakistani",33643
+201920,"Academic year","Regional","E92000001","England","South East","E12000008","Black / African / Caribbean / Black British","African",31062
+201920,"Academic year","Regional","E92000001","England","South East","E12000008","Black / African / Caribbean / Black British","Caribbean",4342
+201920,"Academic year","Regional","E92000001","England","South East","E12000008","Mixed / Multiple ethnic groups","White and Black African",12491
+201920,"Academic year","Regional","E92000001","England","South East","E12000008","White","English / Welsh / Scottish / Northern Irish / British",940237
 201920,"Academic year","Regional","E92000001","England","South East","E12000008","Total","Total",1299738
 201920,"Academic year","Regional","E92000001","England","South West","E12000009","White","Any other White background",39910
-201920,"Academic year","Regional","E92000001","England","West Midlands","E12000005","Asian/Asian British","Pakistani",82359
-201920,"Academic year","Regional","E92000001","England","West Midlands","E12000005","Black/African/Caribbean/Black British","African",35081
-201920,"Academic year","Regional","E92000001","England","West Midlands","E12000005","Asian/Asian British","Chinese",3521
-201920,"Academic year","Regional","E92000001","England","West Midlands","E12000005","White","English/Welsh/Scottish/Northern Irish/British",568238
-201920,"Academic year","National","E92000001","England","","","Asian/Asian British","Chinese",37732
-201920,"Academic year","National","E92000001","England","","","Mixed/Multiple ethnic groups","Any other Mixed/Multiple ethnic background",192731
-201920,"Academic year","National","E92000001","England","","","Mixed/Multiple ethnic groups","White and Black Caribbean",128774
+201920,"Academic year","Regional","E92000001","England","West Midlands","E12000005","Asian / Asian British","Pakistani",82359
+201920,"Academic year","Regional","E92000001","England","West Midlands","E12000005","Black / African / Caribbean / Black British","African",35081
+201920,"Academic year","Regional","E92000001","England","West Midlands","E12000005","Asian / Asian British","Chinese",3521
+201920,"Academic year","Regional","E92000001","England","West Midlands","E12000005","White","English / Welsh / Scottish / Northern Irish / British",568238
+201920,"Academic year","National","E92000001","England","","","Asian / Asian British","Chinese",37732
+201920,"Academic year","National","E92000001","England","","","Mixed / Multiple ethnic groups","Any other Mixed / Multiple ethnic background",192731
+201920,"Academic year","National","E92000001","England","","","Mixed / Multiple ethnic groups","White and Black Caribbean",128774
 201920,"Academic year","National","E92000001","England","","","White","Gypsy or Irish Traveller",28091
 201920,"Academic year","National","E92000001","England","","","White","Irish",22443
-201920,"Academic year","Regional","E92000001","England","East Midlands","E12000004","Asian/Asian British","Bangladeshi",4591
-201920,"Academic year","Regional","E92000001","England","East Midlands","E12000004","Black/African/Caribbean/Black British","Caribbean",3255
+201920,"Academic year","Regional","E92000001","England","East Midlands","E12000004","Asian / Asian British","Bangladeshi",4591
+201920,"Academic year","Regional","E92000001","England","East Midlands","E12000004","Black / African / Caribbean / Black British","Caribbean",3255
 201920,"Academic year","Regional","E92000001","England","East Midlands","E12000004","White","Gypsy or Irish Traveller",2255
-201920,"Academic year","Regional","E92000001","England","East of England","E12000006","Mixed/Multiple ethnic groups","Any other Mixed/Multiple ethnic background",20372
+201920,"Academic year","Regional","E92000001","England","East of England","E12000006","Mixed / Multiple ethnic groups","Any other Mixed / Multiple ethnic background",20372
 201920,"Academic year","Regional","E92000001","England","East of England","E12000006","Unknown","Unknown",15965
-201920,"Academic year","Regional","E92000001","England","London","E12000007","Asian/Asian British","Any other Asian background",62505
-201920,"Academic year","Regional","E92000001","England","London","E12000007","Mixed/Multiple ethnic groups","Any other Mixed/Multiple ethnic background",63331
+201920,"Academic year","Regional","E92000001","England","London","E12000007","Asian / Asian British","Any other Asian background",62505
+201920,"Academic year","Regional","E92000001","England","London","E12000007","Mixed / Multiple ethnic groups","Any other Mixed / Multiple ethnic background",63331
 201920,"Academic year","Regional","E92000001","England","London","E12000007","White","Gypsy or Irish Traveller",2359
-201920,"Academic year","Regional","E92000001","England","North East","E12000001","Asian/Asian British","Bangladeshi",3910
-201920,"Academic year","Regional","E92000001","England","North East","E12000001","Asian/Asian British","Indian",2602
-201920,"Academic year","Regional","E92000001","England","North East","E12000001","Mixed/Multiple ethnic groups","White and Asian",3345
-201920,"Academic year","Regional","E92000001","England","North East","E12000001","Mixed/Multiple ethnic groups","White and Black African",1901
+201920,"Academic year","Regional","E92000001","England","North East","E12000001","Asian / Asian British","Bangladeshi",3910
+201920,"Academic year","Regional","E92000001","England","North East","E12000001","Asian / Asian British","Indian",2602
+201920,"Academic year","Regional","E92000001","England","North East","E12000001","Mixed / Multiple ethnic groups","White and Asian",3345
+201920,"Academic year","Regional","E92000001","England","North East","E12000001","Mixed / Multiple ethnic groups","White and Black African",1901
 201920,"Academic year","Regional","E92000001","England","North East","E12000001","White","Any other White background",8305
 201920,"Academic year","Regional","E92000001","England","North West","E12000002","Other ethnic group","Total",20191
-201920,"Academic year","Regional","E92000001","England","North West","E12000002","Black/African/Caribbean/Black British","African",25130
+201920,"Academic year","Regional","E92000001","England","North West","E12000002","Black / African / Caribbean / Black British","African",25130
 201920,"Academic year","Regional","E92000001","England","North West","E12000002","White","Gypsy or Irish Traveller",2037
-201920,"Academic year","Regional","E92000001","England","South East","E12000008","Asian/Asian British","Any other Asian background",25141
+201920,"Academic year","Regional","E92000001","England","South East","E12000008","Asian / Asian British","Any other Asian background",25141
 201920,"Academic year","Regional","E92000001","England","South East","E12000008","Unknown","Unknown",17597
-201920,"Academic year","Regional","E92000001","England","South West","E12000009","Asian/Asian British","Bangladeshi",2355
-201920,"Academic year","Regional","E92000001","England","South West","E12000009","Asian/Asian British","Indian",8988
+201920,"Academic year","Regional","E92000001","England","South West","E12000009","Asian / Asian British","Bangladeshi",2355
+201920,"Academic year","Regional","E92000001","England","South West","E12000009","Asian / Asian British","Indian",8988
 201920,"Academic year","Regional","E92000001","England","South West","E12000009","White","Gypsy or Irish Traveller",1488
 201920,"Academic year","Regional","E92000001","England","South West","E12000009","Total","Total",759839
-201920,"Academic year","Regional","E92000001","England","West Midlands","E12000005","Asian/Asian British","Bangladeshi",18812
-201920,"Academic year","Regional","E92000001","England","West Midlands","E12000005","Asian/Asian British","Indian",47183
-201920,"Academic year","Regional","E92000001","England","West Midlands","E12000005","Mixed/Multiple ethnic groups","White and Black African",5352
+201920,"Academic year","Regional","E92000001","England","West Midlands","E12000005","Asian / Asian British","Bangladeshi",18812
+201920,"Academic year","Regional","E92000001","England","West Midlands","E12000005","Asian / Asian British","Indian",47183
+201920,"Academic year","Regional","E92000001","England","West Midlands","E12000005","Mixed / Multiple ethnic groups","White and Black African",5352
 201920,"Academic year","Regional","E92000001","England","Yorkshire and The Humber","E12000003","Unknown","Unknown",9136
 201920,"Academic year","Regional","E92000001","England","Yorkshire and The Humber","E12000003","White","Any other White background",37686
-201819,"Academic year","Regional","E92000001","England","London","E12000007","Asian/Asian British","Any other Asian background",61943
-201819,"Academic year","Regional","E92000001","England","London","E12000007","Black/African/Caribbean/Black British","African",165610
-201819,"Academic year","Regional","E92000001","England","London","E12000007","Asian/Asian British","Chinese",10224
-201819,"Academic year","Regional","E92000001","England","London","E12000007","Mixed/Multiple ethnic groups","Any other Mixed/Multiple ethnic background",61555
+201819,"Academic year","Regional","E92000001","England","London","E12000007","Asian / Asian British","Any other Asian background",61943
+201819,"Academic year","Regional","E92000001","England","London","E12000007","Black / African / Caribbean / Black British","African",165610
+201819,"Academic year","Regional","E92000001","England","London","E12000007","Asian / Asian British","Chinese",10224
+201819,"Academic year","Regional","E92000001","England","London","E12000007","Mixed / Multiple ethnic groups","Any other Mixed / Multiple ethnic background",61555
 201819,"Academic year","Regional","E92000001","England","North East","E12000001","Other ethnic group","Total",4158
-201819,"Academic year","Regional","E92000001","England","North East","E12000001","Black/African/Caribbean/Black British","Caribbean",131
+201819,"Academic year","Regional","E92000001","England","North East","E12000001","Black / African / Caribbean / Black British","Caribbean",131
 201819,"Academic year","Regional","E92000001","England","North East","E12000001","White","Gypsy or Irish Traveller",1410
-201819,"Academic year","Regional","E92000001","England","North West","E12000002","Asian/Asian British","Bangladeshi",14553
-201819,"Academic year","Regional","E92000001","England","North West","E12000002","Mixed/Multiple ethnic groups","Any other Mixed/Multiple ethnic background",19589
-201819,"Academic year","Regional","E92000001","England","North West","E12000002","Mixed/Multiple ethnic groups","White and Asian",11865
-201819,"Academic year","Regional","E92000001","England","North West","E12000002","Mixed/Multiple ethnic groups","White and Black African",6929
-201819,"Academic year","Regional","E92000001","England","South East","E12000008","Asian/Asian British","Bangladeshi",8103
-201819,"Academic year","Regional","E92000001","England","South East","E12000008","Asian/Asian British","Indian",35673
+201819,"Academic year","Regional","E92000001","England","North West","E12000002","Asian / Asian British","Bangladeshi",14553
+201819,"Academic year","Regional","E92000001","England","North West","E12000002","Mixed / Multiple ethnic groups","Any other Mixed / Multiple ethnic background",19589
+201819,"Academic year","Regional","E92000001","England","North West","E12000002","Mixed / Multiple ethnic groups","White and Asian",11865
+201819,"Academic year","Regional","E92000001","England","North West","E12000002","Mixed / Multiple ethnic groups","White and Black African",6929
+201819,"Academic year","Regional","E92000001","England","South East","E12000008","Asian / Asian British","Bangladeshi",8103
+201819,"Academic year","Regional","E92000001","England","South East","E12000008","Asian / Asian British","Indian",35673
 201819,"Academic year","Regional","E92000001","England","South East","E12000008","Total","Total",1283789
 201819,"Academic year","Regional","E92000001","England","South West","E12000009","Other ethnic group","Total",4980
 201819,"Academic year","Regional","E92000001","England","South West","E12000009","Unknown","Unknown",11009
-201819,"Academic year","Regional","E92000001","England","West Midlands","E12000005","Black/African/Caribbean/Black British","Caribbean",13957
+201819,"Academic year","Regional","E92000001","England","West Midlands","E12000005","Black / African / Caribbean / Black British","Caribbean",13957
 201819,"Academic year","Regional","E92000001","England","West Midlands","E12000005","White","Gypsy or Irish Traveller",3334
-201819,"Academic year","Regional","E92000001","England","West Midlands","E12000005","White","English/Welsh/Scottish/Northern Irish/British",570694
+201819,"Academic year","Regional","E92000001","England","West Midlands","E12000005","White","English / Welsh / Scottish / Northern Irish / British",570694
 201819,"Academic year","Regional","E92000001","England","West Midlands","E12000005","Total","Total",925435
 201819,"Academic year","Regional","E92000001","England","Yorkshire and The Humber","E12000003","White","Any other White background",36280
 201819,"Academic year","Regional","E92000001","England","Yorkshire and The Humber","E12000003","White","Irish",1172
 201819,"Academic year","National","E92000001","England","","","Other ethnic group","Total",161402
-201819,"Academic year","National","E92000001","England","","","Asian/Asian British","Bangladeshi",146047
-201819,"Academic year","National","E92000001","England","","","Black/African/Caribbean/Black British","African",318288
-201819,"Academic year","National","E92000001","England","","","Black/African/Caribbean/Black British","Caribbean",89083
+201819,"Academic year","National","E92000001","England","","","Asian / Asian British","Bangladeshi",146047
+201819,"Academic year","National","E92000001","England","","","Black / African / Caribbean / Black British","African",318288
+201819,"Academic year","National","E92000001","England","","","Black / African / Caribbean / Black British","Caribbean",89083
 201819,"Academic year","National","E92000001","England","","","White","Gypsy or Irish Traveller",27632
-201819,"Academic year","Regional","E92000001","England","East Midlands","E12000004","Asian/Asian British","Bangladeshi",4531
-201819,"Academic year","Regional","E92000001","England","East Midlands","E12000004","White","English/Welsh/Scottish/Northern Irish/British",519745
-201819,"Academic year","Regional","E92000001","England","East of England","E12000006","Mixed/Multiple ethnic groups","White and Black Caribbean",13893
-201819,"Academic year","Regional","E92000001","England","London","E12000007","Asian/Asian British","Indian",82228
-201819,"Academic year","Regional","E92000001","England","London","E12000007","Black/African/Caribbean/Black British","Caribbean",55938
+201819,"Academic year","Regional","E92000001","England","East Midlands","E12000004","Asian / Asian British","Bangladeshi",4531
+201819,"Academic year","Regional","E92000001","England","East Midlands","E12000004","White","English / Welsh / Scottish / Northern Irish / British",519745
+201819,"Academic year","Regional","E92000001","England","East of England","E12000006","Mixed / Multiple ethnic groups","White and Black Caribbean",13893
+201819,"Academic year","Regional","E92000001","England","London","E12000007","Asian / Asian British","Indian",82228
+201819,"Academic year","Regional","E92000001","England","London","E12000007","Black / African / Caribbean / Black British","Caribbean",55938
 201819,"Academic year","Regional","E92000001","England","London","E12000007","White","Gypsy or Irish Traveller",2266
-201819,"Academic year","Regional","E92000001","England","London","E12000007","White","English/Welsh/Scottish/Northern Irish/British",328876
-201819,"Academic year","Regional","E92000001","England","North East","E12000001","Asian/Asian British","Chinese",1506
-201819,"Academic year","Regional","E92000001","England","North East","E12000001","Mixed/Multiple ethnic groups","Any other Mixed/Multiple ethnic background",4021
-201819,"Academic year","Regional","E92000001","England","North East","E12000001","Mixed/Multiple ethnic groups","White and Black Caribbean",974
+201819,"Academic year","Regional","E92000001","England","London","E12000007","White","English / Welsh / Scottish / Northern Irish / British",328876
+201819,"Academic year","Regional","E92000001","England","North East","E12000001","Asian / Asian British","Chinese",1506
+201819,"Academic year","Regional","E92000001","England","North East","E12000001","Mixed / Multiple ethnic groups","Any other Mixed / Multiple ethnic background",4021
+201819,"Academic year","Regional","E92000001","England","North East","E12000001","Mixed / Multiple ethnic groups","White and Black Caribbean",974
 201819,"Academic year","Regional","E92000001","England","North East","E12000001","Total","Total",393467
-201819,"Academic year","Regional","E92000001","England","North West","E12000002","Asian/Asian British","Pakistani",67922
-201819,"Academic year","Regional","E92000001","England","North West","E12000002","Black/African/Caribbean/Black British","African",23589
+201819,"Academic year","Regional","E92000001","England","North West","E12000002","Asian / Asian British","Pakistani",67922
+201819,"Academic year","Regional","E92000001","England","North West","E12000002","Black / African / Caribbean / Black British","African",23589
 201819,"Academic year","Regional","E92000001","England","North West","E12000002","White","Gypsy or Irish Traveller",1976
-201819,"Academic year","Regional","E92000001","England","North West","E12000002","White","English/Welsh/Scottish/Northern Irish/British",834878
-201819,"Academic year","Regional","E92000001","England","South East","E12000008","Asian/Asian British","Any other Asian background",24267
-201819,"Academic year","Regional","E92000001","England","South East","E12000008","Black/African/Caribbean/Black British","Any other Black/African/Caribbean background",4807
-201819,"Academic year","Regional","E92000001","England","South East","E12000008","Black/African/Caribbean/Black British","African",29317
-201819,"Academic year","Regional","E92000001","England","South East","E12000008","Black/African/Caribbean/Black British","Caribbean",4201
-201819,"Academic year","Regional","E92000001","England","South East","E12000008","Mixed/Multiple ethnic groups","White and Black African",11853
+201819,"Academic year","Regional","E92000001","England","North West","E12000002","White","English / Welsh / Scottish / Northern Irish / British",834878
+201819,"Academic year","Regional","E92000001","England","South East","E12000008","Asian / Asian British","Any other Asian background",24267
+201819,"Academic year","Regional","E92000001","England","South East","E12000008","Black / African / Caribbean / Black British","Any other Black / African / Caribbean background",4807
+201819,"Academic year","Regional","E92000001","England","South East","E12000008","Black / African / Caribbean / Black British","African",29317
+201819,"Academic year","Regional","E92000001","England","South East","E12000008","Black / African / Caribbean / Black British","Caribbean",4201
+201819,"Academic year","Regional","E92000001","England","South East","E12000008","Mixed / Multiple ethnic groups","White and Black African",11853
 201819,"Academic year","Regional","E92000001","England","South East","E12000008","White","Any other White background",80966
-201819,"Academic year","Regional","E92000001","England","South West","E12000009","Asian/Asian British","Bangladeshi",2306
-201819,"Academic year","Regional","E92000001","England","South West","E12000009","Black/African/Caribbean/Black British","African",8545
-201819,"Academic year","Regional","E92000001","England","South West","E12000009","Mixed/Multiple ethnic groups","Any other Mixed/Multiple ethnic background",9802
-201819,"Academic year","Regional","E92000001","England","South West","E12000009","Mixed/Multiple ethnic groups","White and Black African",4344
-201819,"Academic year","Regional","E92000001","England","West Midlands","E12000005","Asian/Asian British","Chinese",3404
-201819,"Academic year","Regional","E92000001","England","West Midlands","E12000005","Mixed/Multiple ethnic groups","White and Asian",14293
-201819,"Academic year","Regional","E92000001","England","West Midlands","E12000005","Mixed/Multiple ethnic groups","White and Black African",4980
+201819,"Academic year","Regional","E92000001","England","South West","E12000009","Asian / Asian British","Bangladeshi",2306
+201819,"Academic year","Regional","E92000001","England","South West","E12000009","Black / African / Caribbean / Black British","African",8545
+201819,"Academic year","Regional","E92000001","England","South West","E12000009","Mixed / Multiple ethnic groups","Any other Mixed / Multiple ethnic background",9802
+201819,"Academic year","Regional","E92000001","England","South West","E12000009","Mixed / Multiple ethnic groups","White and Black African",4344
+201819,"Academic year","Regional","E92000001","England","West Midlands","E12000005","Asian / Asian British","Chinese",3404
+201819,"Academic year","Regional","E92000001","England","West Midlands","E12000005","Mixed / Multiple ethnic groups","White and Asian",14293
+201819,"Academic year","Regional","E92000001","England","West Midlands","E12000005","Mixed / Multiple ethnic groups","White and Black African",4980
 201819,"Academic year","Regional","E92000001","England","West Midlands","E12000005","White","Any other White background",41580
 201819,"Academic year","Regional","E92000001","England","West Midlands","E12000005","White","Irish",2000
-201819,"Academic year","Regional","E92000001","England","Yorkshire and The Humber","E12000003","Mixed/Multiple ethnic groups","White and Black Caribbean",9928
-201819,"Academic year","National","E92000001","England","","","Asian/Asian British","Indian",257669
-201819,"Academic year","National","E92000001","England","","","Asian/Asian British","Pakistani",366574
-201819,"Academic year","National","E92000001","England","","","Mixed/Multiple ethnic groups","White and Asian",117513
+201819,"Academic year","Regional","E92000001","England","Yorkshire and The Humber","E12000003","Mixed / Multiple ethnic groups","White and Black Caribbean",9928
+201819,"Academic year","National","E92000001","England","","","Asian / Asian British","Indian",257669
+201819,"Academic year","National","E92000001","England","","","Asian / Asian British","Pakistani",366574
+201819,"Academic year","National","E92000001","England","","","Mixed / Multiple ethnic groups","White and Asian",117513
 201819,"Academic year","Regional","E92000001","England","East Midlands","E12000004","Other ethnic group","Total",6397
-201819,"Academic year","Regional","E92000001","England","East Midlands","E12000004","Asian/Asian British","Any other Asian background",9344
-201819,"Academic year","Regional","E92000001","England","East Midlands","E12000004","Asian/Asian British","Pakistani",15780
-201819,"Academic year","Regional","E92000001","England","East Midlands","E12000004","Mixed/Multiple ethnic groups","Any other Mixed/Multiple ethnic background",11548
+201819,"Academic year","Regional","E92000001","England","East Midlands","E12000004","Asian / Asian British","Any other Asian background",9344
+201819,"Academic year","Regional","E92000001","England","East Midlands","E12000004","Asian / Asian British","Pakistani",15780
+201819,"Academic year","Regional","E92000001","England","East Midlands","E12000004","Mixed / Multiple ethnic groups","Any other Mixed / Multiple ethnic background",11548
 201819,"Academic year","Regional","E92000001","England","East Midlands","E12000004","Total","Total",706385
 201819,"Academic year","Regional","E92000001","England","East of England","E12000006","Other ethnic group","Total",8549
-201819,"Academic year","Regional","E92000001","England","East of England","E12000006","Asian/Asian British","Bangladeshi",11124
-201819,"Academic year","Regional","E92000001","England","East of England","E12000006","Black/African/Caribbean/Black British","African",23422
-201819,"Academic year","Regional","E92000001","England","East of England","E12000006","Black/African/Caribbean/Black British","Caribbean",4786
-201819,"Academic year","Regional","E92000001","England","East of England","E12000006","Asian/Asian British","Chinese",3913
-201819,"Academic year","Regional","E92000001","England","East of England","E12000006","Mixed/Multiple ethnic groups","White and Black African",8305
-201819,"Academic year","National","E92000001","England","","","Black/African/Caribbean/Black British","Any other Black/African/Caribbean background",62875
+201819,"Academic year","Regional","E92000001","England","East of England","E12000006","Asian / Asian British","Bangladeshi",11124
+201819,"Academic year","Regional","E92000001","England","East of England","E12000006","Black / African / Caribbean / Black British","African",23422
+201819,"Academic year","Regional","E92000001","England","East of England","E12000006","Black / African / Caribbean / Black British","Caribbean",4786
+201819,"Academic year","Regional","E92000001","England","East of England","E12000006","Asian / Asian British","Chinese",3913
+201819,"Academic year","Regional","E92000001","England","East of England","E12000006","Mixed / Multiple ethnic groups","White and Black African",8305
+201819,"Academic year","National","E92000001","England","","","Black / African / Caribbean / Black British","Any other Black / African / Caribbean background",62875
 201819,"Academic year","National","E92000001","England","","","White","Any other White background",541983
 201819,"Academic year","National","E92000001","England","","","White","Irish",22808
-201819,"Academic year","National","E92000001","England","","","White","English/Welsh/Scottish/Northern Irish/British",5441773
-201819,"Academic year","Regional","E92000001","England","East of England","E12000006","Asian/Asian British","Any other Asian background",12627
+201819,"Academic year","National","E92000001","England","","","White","English / Welsh / Scottish / Northern Irish / British",5441773
+201819,"Academic year","Regional","E92000001","England","East of England","E12000006","Asian / Asian British","Any other Asian background",12627
 201819,"Academic year","Regional","E92000001","England","East of England","E12000006","White","Gypsy or Irish Traveller",2898
-201819,"Academic year","Regional","E92000001","England","London","E12000007","Asian/Asian British","Pakistani",59870
-201819,"Academic year","Regional","E92000001","England","London","E12000007","Mixed/Multiple ethnic groups","White and Asian",24794
+201819,"Academic year","Regional","E92000001","England","London","E12000007","Asian / Asian British","Pakistani",59870
+201819,"Academic year","Regional","E92000001","England","London","E12000007","Mixed / Multiple ethnic groups","White and Asian",24794
 201819,"Academic year","Regional","E92000001","England","London","E12000007","White","Irish",7046
-201819,"Academic year","Regional","E92000001","England","North East","E12000001","Asian/Asian British","Bangladeshi",3789
-201819,"Academic year","Regional","E92000001","England","North East","E12000001","Asian/Asian British","Indian",2567
-201819,"Academic year","Regional","E92000001","England","North East","E12000001","Black/African/Caribbean/Black British","African",3590
-201819,"Academic year","Regional","E92000001","England","North East","E12000001","Mixed/Multiple ethnic groups","White and Black African",1759
-201819,"Academic year","Regional","E92000001","England","North West","E12000002","Asian/Asian British","Indian",21612
-201819,"Academic year","Regional","E92000001","England","North West","E12000002","Asian/Asian British","Chinese",5672
+201819,"Academic year","Regional","E92000001","England","North East","E12000001","Asian / Asian British","Bangladeshi",3789
+201819,"Academic year","Regional","E92000001","England","North East","E12000001","Asian / Asian British","Indian",2567
+201819,"Academic year","Regional","E92000001","England","North East","E12000001","Black / African / Caribbean / Black British","African",3590
+201819,"Academic year","Regional","E92000001","England","North East","E12000001","Mixed / Multiple ethnic groups","White and Black African",1759
+201819,"Academic year","Regional","E92000001","England","North West","E12000002","Asian / Asian British","Indian",21612
+201819,"Academic year","Regional","E92000001","England","North West","E12000002","Asian / Asian British","Chinese",5672
 201819,"Academic year","Regional","E92000001","England","North West","E12000002","White","Irish",2632
 201819,"Academic year","Regional","E92000001","England","South East","E12000008","White","Gypsy or Irish Traveller",5816
-201819,"Academic year","Regional","E92000001","England","South West","E12000009","Asian/Asian British","Indian",8298
-201819,"Academic year","Regional","E92000001","England","South West","E12000009","Mixed/Multiple ethnic groups","White and Asian",8213
+201819,"Academic year","Regional","E92000001","England","South West","E12000009","Asian / Asian British","Indian",8298
+201819,"Academic year","Regional","E92000001","England","South West","E12000009","Mixed / Multiple ethnic groups","White and Asian",8213
 201819,"Academic year","Regional","E92000001","England","South West","E12000009","Total","Total",753326
 201819,"Academic year","Regional","E92000001","England","West Midlands","E12000005","Other ethnic group","Total",18402
-201819,"Academic year","Regional","E92000001","England","West Midlands","E12000005","Mixed/Multiple ethnic groups","White and Black Caribbean",22597
+201819,"Academic year","Regional","E92000001","England","West Midlands","E12000005","Mixed / Multiple ethnic groups","White and Black Caribbean",22597
 201819,"Academic year","Regional","E92000001","England","Yorkshire and The Humber","E12000003","Other ethnic group","Total",11218
-201819,"Academic year","Regional","E92000001","England","Yorkshire and The Humber","E12000003","Asian/Asian British","Chinese",2545
-201819,"Academic year","Regional","E92000001","England","Yorkshire and The Humber","E12000003","Mixed/Multiple ethnic groups","Any other Mixed/Multiple ethnic background",12498
-201819,"Academic year","National","E92000001","England","","","Asian/Asian British","Any other Asian background",154519
-201819,"Academic year","National","E92000001","England","","","Asian/Asian British","Chinese",36853
-201819,"Academic year","National","E92000001","England","","","Mixed/Multiple ethnic groups","Any other Mixed/Multiple ethnic background",183671
-201819,"Academic year","Regional","E92000001","England","East Midlands","E12000004","Mixed/Multiple ethnic groups","White and Black Caribbean",12596
-201819,"Academic year","Regional","E92000001","England","East of England","E12000006","Asian/Asian British","Pakistani",22501
-201819,"Academic year","Regional","E92000001","England","East of England","E12000006","Mixed/Multiple ethnic groups","Any other Mixed/Multiple ethnic background",19037
-201819,"Academic year","Regional","E92000001","England","East of England","E12000006","White","English/Welsh/Scottish/Northern Irish/British",666706
+201819,"Academic year","Regional","E92000001","England","Yorkshire and The Humber","E12000003","Asian / Asian British","Chinese",2545
+201819,"Academic year","Regional","E92000001","England","Yorkshire and The Humber","E12000003","Mixed / Multiple ethnic groups","Any other Mixed / Multiple ethnic background",12498
+201819,"Academic year","National","E92000001","England","","","Asian / Asian British","Any other Asian background",154519
+201819,"Academic year","National","E92000001","England","","","Asian / Asian British","Chinese",36853
+201819,"Academic year","National","E92000001","England","","","Mixed / Multiple ethnic groups","Any other Mixed / Multiple ethnic background",183671
+201819,"Academic year","Regional","E92000001","England","East Midlands","E12000004","Mixed / Multiple ethnic groups","White and Black Caribbean",12596
+201819,"Academic year","Regional","E92000001","England","East of England","E12000006","Asian / Asian British","Pakistani",22501
+201819,"Academic year","Regional","E92000001","England","East of England","E12000006","Mixed / Multiple ethnic groups","Any other Mixed / Multiple ethnic background",19037
+201819,"Academic year","Regional","E92000001","England","East of England","E12000006","White","English / Welsh / Scottish / Northern Irish / British",666706
 201819,"Academic year","Regional","E92000001","England","London","E12000007","Other ethnic group","Total",75915
 201819,"Academic year","Regional","E92000001","England","London","E12000007","Unknown","Unknown",25495
-201819,"Academic year","Regional","E92000001","England","North East","E12000001","Black/African/Caribbean/Black British","Any other Black/African/Caribbean background",870
+201819,"Academic year","Regional","E92000001","England","North East","E12000001","Black / African / Caribbean / Black British","Any other Black / African / Caribbean background",870
 201819,"Academic year","Regional","E92000001","England","North East","E12000001","Unknown","Unknown",2153
 201819,"Academic year","Regional","E92000001","England","North East","E12000001","White","Any other White background",7979
-201819,"Academic year","Regional","E92000001","England","North East","E12000001","White","English/Welsh/Scottish/Northern Irish/British",345253
-201819,"Academic year","Regional","E92000001","England","North West","E12000002","Black/African/Caribbean/Black British","Any other Black/African/Caribbean background",8091
+201819,"Academic year","Regional","E92000001","England","North East","E12000001","White","English / Welsh / Scottish / Northern Irish / British",345253
+201819,"Academic year","Regional","E92000001","England","North West","E12000002","Black / African / Caribbean / Black British","Any other Black / African / Caribbean background",8091
 201819,"Academic year","Regional","E92000001","England","North West","E12000002","White","Any other White background",38473
-201819,"Academic year","Regional","E92000001","England","South East","E12000008","Asian/Asian British","Pakistani",32625
-201819,"Academic year","Regional","E92000001","England","South East","E12000008","Mixed/Multiple ethnic groups","White and Black Caribbean",15622
-201819,"Academic year","Regional","E92000001","England","South West","E12000009","Asian/Asian British","Any other Asian background",5468
-201819,"Academic year","Regional","E92000001","England","South West","E12000009","Black/African/Caribbean/Black British","Any other Black/African/Caribbean background",2256
-201819,"Academic year","Regional","E92000001","England","South West","E12000009","Mixed/Multiple ethnic groups","White and Black Caribbean",8020
+201819,"Academic year","Regional","E92000001","England","South East","E12000008","Asian / Asian British","Pakistani",32625
+201819,"Academic year","Regional","E92000001","England","South East","E12000008","Mixed / Multiple ethnic groups","White and Black Caribbean",15622
+201819,"Academic year","Regional","E92000001","England","South West","E12000009","Asian / Asian British","Any other Asian background",5468
+201819,"Academic year","Regional","E92000001","England","South West","E12000009","Black / African / Caribbean / Black British","Any other Black / African / Caribbean background",2256
+201819,"Academic year","Regional","E92000001","England","South West","E12000009","Mixed / Multiple ethnic groups","White and Black Caribbean",8020
 201819,"Academic year","Regional","E92000001","England","South West","E12000009","White","Any other White background",40023
-201819,"Academic year","Regional","E92000001","England","West Midlands","E12000005","Asian/Asian British","Pakistani",81920
-201819,"Academic year","Regional","E92000001","England","Yorkshire and The Humber","E12000003","Asian/Asian British","Bangladeshi",7150
-201819,"Academic year","Regional","E92000001","England","Yorkshire and The Humber","E12000003","Asian/Asian British","Indian",12035
-201819,"Academic year","Regional","E92000001","England","Yorkshire and The Humber","E12000003","Asian/Asian British","Pakistani",76789
-201819,"Academic year","Regional","E92000001","England","Yorkshire and The Humber","E12000003","Black/African/Caribbean/Black British","Caribbean",2289
-201819,"Academic year","Regional","E92000001","England","Yorkshire and The Humber","E12000003","Mixed/Multiple ethnic groups","White and Asian",11126
-201819,"Academic year","National","E92000001","England","","","Mixed/Multiple ethnic groups","White and Black African",66931
-201819,"Academic year","National","E92000001","England","","","Mixed/Multiple ethnic groups","White and Black Caribbean",126398
+201819,"Academic year","Regional","E92000001","England","West Midlands","E12000005","Asian / Asian British","Pakistani",81920
+201819,"Academic year","Regional","E92000001","England","Yorkshire and The Humber","E12000003","Asian / Asian British","Bangladeshi",7150
+201819,"Academic year","Regional","E92000001","England","Yorkshire and The Humber","E12000003","Asian / Asian British","Indian",12035
+201819,"Academic year","Regional","E92000001","England","Yorkshire and The Humber","E12000003","Asian / Asian British","Pakistani",76789
+201819,"Academic year","Regional","E92000001","England","Yorkshire and The Humber","E12000003","Black / African / Caribbean / Black British","Caribbean",2289
+201819,"Academic year","Regional","E92000001","England","Yorkshire and The Humber","E12000003","Mixed / Multiple ethnic groups","White and Asian",11126
+201819,"Academic year","National","E92000001","England","","","Mixed / Multiple ethnic groups","White and Black African",66931
+201819,"Academic year","National","E92000001","England","","","Mixed / Multiple ethnic groups","White and Black Caribbean",126398
 201819,"Academic year","National","E92000001","England","","","Unknown","Unknown",109421
-201819,"Academic year","Regional","E92000001","England","East Midlands","E12000004","Asian/Asian British","Indian",31969
-201819,"Academic year","Regional","E92000001","England","East Midlands","E12000004","Black/African/Caribbean/Black British","Any other Black/African/Caribbean background",4109
-201819,"Academic year","Regional","E92000001","England","East Midlands","E12000004","Black/African/Caribbean/Black British","African",15473
-201819,"Academic year","Regional","E92000001","England","East Midlands","E12000004","Asian/Asian British","Chinese",2388
+201819,"Academic year","Regional","E92000001","England","East Midlands","E12000004","Asian / Asian British","Indian",31969
+201819,"Academic year","Regional","E92000001","England","East Midlands","E12000004","Black / African / Caribbean / Black British","Any other Black / African / Caribbean background",4109
+201819,"Academic year","Regional","E92000001","England","East Midlands","E12000004","Black / African / Caribbean / Black British","African",15473
+201819,"Academic year","Regional","E92000001","England","East Midlands","E12000004","Asian / Asian British","Chinese",2388
 201819,"Academic year","Regional","E92000001","England","East Midlands","E12000004","White","Gypsy or Irish Traveller",2262
 201819,"Academic year","Regional","E92000001","England","East Midlands","E12000004","White","Irish",1167
-201819,"Academic year","Regional","E92000001","England","East of England","E12000006","Asian/Asian British","Indian",17363
-201819,"Academic year","Regional","E92000001","England","East of England","E12000006","Mixed/Multiple ethnic groups","White and Asian",13434
+201819,"Academic year","Regional","E92000001","England","East of England","E12000006","Asian / Asian British","Indian",17363
+201819,"Academic year","Regional","E92000001","England","East of England","E12000006","Mixed / Multiple ethnic groups","White and Asian",13434
 201819,"Academic year","Regional","E92000001","England","East of England","E12000006","White","Irish",3149
 201819,"Academic year","Regional","E92000001","England","East of England","E12000006","Total","Total",922883
-201819,"Academic year","Regional","E92000001","England","London","E12000007","Mixed/Multiple ethnic groups","White and Black African",19129
-201819,"Academic year","Regional","E92000001","England","London","E12000007","Mixed/Multiple ethnic groups","White and Black Caribbean",33064
-201819,"Academic year","Regional","E92000001","England","North East","E12000001","Asian/Asian British","Any other Asian background",3425
-201819,"Academic year","Regional","E92000001","England","North West","E12000002","Asian/Asian British","Any other Asian background",12948
-201819,"Academic year","Regional","E92000001","England","North West","E12000002","Black/African/Caribbean/Black British","Caribbean",2669
+201819,"Academic year","Regional","E92000001","England","London","E12000007","Mixed / Multiple ethnic groups","White and Black African",19129
+201819,"Academic year","Regional","E92000001","England","London","E12000007","Mixed / Multiple ethnic groups","White and Black Caribbean",33064
+201819,"Academic year","Regional","E92000001","England","North East","E12000001","Asian / Asian British","Any other Asian background",3425
+201819,"Academic year","Regional","E92000001","England","North West","E12000002","Asian / Asian British","Any other Asian background",12948
+201819,"Academic year","Regional","E92000001","England","North West","E12000002","Black / African / Caribbean / Black British","Caribbean",2669
 201819,"Academic year","Regional","E92000001","England","North West","E12000002","Unknown","Unknown",10907
-201819,"Academic year","Regional","E92000001","England","South East","E12000008","Mixed/Multiple ethnic groups","Any other Mixed/Multiple ethnic background",27884
-201819,"Academic year","Regional","E92000001","England","South East","E12000008","Mixed/Multiple ethnic groups","White and Asian",22197
+201819,"Academic year","Regional","E92000001","England","South East","E12000008","Mixed / Multiple ethnic groups","Any other Mixed / Multiple ethnic background",27884
+201819,"Academic year","Regional","E92000001","England","South East","E12000008","Mixed / Multiple ethnic groups","White and Asian",22197
 201819,"Academic year","Regional","E92000001","England","South East","E12000008","White","Irish",3672
-201819,"Academic year","Regional","E92000001","England","South West","E12000009","Asian/Asian British","Chinese",2215
+201819,"Academic year","Regional","E92000001","England","South West","E12000009","Asian / Asian British","Chinese",2215
 201819,"Academic year","Regional","E92000001","England","South West","E12000009","White","Gypsy or Irish Traveller",1459
-201819,"Academic year","Regional","E92000001","England","West Midlands","E12000005","Asian/Asian British","Any other Asian background",14999
-201819,"Academic year","Regional","E92000001","England","West Midlands","E12000005","Asian/Asian British","Indian",45924
-201819,"Academic year","Regional","E92000001","England","West Midlands","E12000005","Black/African/Caribbean/Black British","Any other Black/African/Caribbean background",6231
-201819,"Academic year","Regional","E92000001","England","West Midlands","E12000005","Mixed/Multiple ethnic groups","Any other Mixed/Multiple ethnic background",17737
-201819,"Academic year","Regional","E92000001","England","Yorkshire and The Humber","E12000003","Black/African/Caribbean/Black British","Any other Black/African/Caribbean background",3298
+201819,"Academic year","Regional","E92000001","England","West Midlands","E12000005","Asian / Asian British","Any other Asian background",14999
+201819,"Academic year","Regional","E92000001","England","West Midlands","E12000005","Asian / Asian British","Indian",45924
+201819,"Academic year","Regional","E92000001","England","West Midlands","E12000005","Black / African / Caribbean / Black British","Any other Black / African / Caribbean background",6231
+201819,"Academic year","Regional","E92000001","England","West Midlands","E12000005","Mixed / Multiple ethnic groups","Any other Mixed / Multiple ethnic background",17737
+201819,"Academic year","Regional","E92000001","England","Yorkshire and The Humber","E12000003","Black / African / Caribbean / Black British","Any other Black / African / Caribbean background",3298
 201819,"Academic year","Regional","E92000001","England","Yorkshire and The Humber","E12000003","White","Gypsy or Irish Traveller",6211
-201819,"Academic year","Regional","E92000001","England","Yorkshire and The Humber","E12000003","White","English/Welsh/Scottish/Northern Irish/British",605426
+201819,"Academic year","Regional","E92000001","England","Yorkshire and The Humber","E12000003","White","English / Welsh / Scottish / Northern Irish / British",605426
 201819,"Academic year","Regional","E92000001","England","Yorkshire and The Humber","E12000003","Total","Total",836573
 201819,"Academic year","National","E92000001","England","","","Total","Total",8237832
-201819,"Academic year","Regional","E92000001","England","East Midlands","E12000004","Black/African/Caribbean/Black British","Caribbean",3233
-201819,"Academic year","Regional","E92000001","England","East Midlands","E12000004","Mixed/Multiple ethnic groups","White and Asian",8382
-201819,"Academic year","Regional","E92000001","England","East Midlands","E12000004","Mixed/Multiple ethnic groups","White and Black African",4851
+201819,"Academic year","Regional","E92000001","England","East Midlands","E12000004","Black / African / Caribbean / Black British","Caribbean",3233
+201819,"Academic year","Regional","E92000001","England","East Midlands","E12000004","Mixed / Multiple ethnic groups","White and Asian",8382
+201819,"Academic year","Regional","E92000001","England","East Midlands","E12000004","Mixed / Multiple ethnic groups","White and Black African",4851
 201819,"Academic year","Regional","E92000001","England","East Midlands","E12000004","Unknown","Unknown",8863
 201819,"Academic year","Regional","E92000001","England","East Midlands","E12000004","White","Any other White background",43335
-201819,"Academic year","Regional","E92000001","England","East of England","E12000006","Black/African/Caribbean/Black British","Any other Black/African/Caribbean background",4556
+201819,"Academic year","Regional","E92000001","England","East of England","E12000006","Black / African / Caribbean / Black British","Any other Black / African / Caribbean background",4556
 201819,"Academic year","Regional","E92000001","England","East of England","E12000006","Unknown","Unknown",14902
 201819,"Academic year","Regional","E92000001","England","East of England","E12000006","White","Any other White background",70738
-201819,"Academic year","Regional","E92000001","England","London","E12000007","Asian/Asian British","Bangladeshi",75988
-201819,"Academic year","Regional","E92000001","England","London","E12000007","Black/African/Caribbean/Black British","Any other Black/African/Caribbean background",28657
+201819,"Academic year","Regional","E92000001","England","London","E12000007","Asian / Asian British","Bangladeshi",75988
+201819,"Academic year","Regional","E92000001","England","London","E12000007","Black / African / Caribbean / Black British","Any other Black / African / Caribbean background",28657
 201819,"Academic year","Regional","E92000001","England","London","E12000007","White","Any other White background",182609
 201819,"Academic year","Regional","E92000001","England","London","E12000007","Total","Total",1302406
-201819,"Academic year","Regional","E92000001","England","North East","E12000001","Asian/Asian British","Pakistani",5923
-201819,"Academic year","Regional","E92000001","England","North East","E12000001","Mixed/Multiple ethnic groups","White and Asian",3209
+201819,"Academic year","Regional","E92000001","England","North East","E12000001","Asian / Asian British","Pakistani",5923
+201819,"Academic year","Regional","E92000001","England","North East","E12000001","Mixed / Multiple ethnic groups","White and Asian",3209
 201819,"Academic year","Regional","E92000001","England","North East","E12000001","White","Irish",470
 201819,"Academic year","Regional","E92000001","England","North West","E12000002","Other ethnic group","Total",18626
-201819,"Academic year","Regional","E92000001","England","North West","E12000002","Mixed/Multiple ethnic groups","White and Black Caribbean",9704
+201819,"Academic year","Regional","E92000001","England","North West","E12000002","Mixed / Multiple ethnic groups","White and Black Caribbean",9704
 201819,"Academic year","Regional","E92000001","England","North West","E12000002","Total","Total",1113568
 201819,"Academic year","Regional","E92000001","England","South East","E12000008","Other ethnic group","Total",13157
-201819,"Academic year","Regional","E92000001","England","South East","E12000008","Asian/Asian British","Chinese",4986
+201819,"Academic year","Regional","E92000001","England","South East","E12000008","Asian / Asian British","Chinese",4986
 201819,"Academic year","Regional","E92000001","England","South East","E12000008","Unknown","Unknown",16655
-201819,"Academic year","Regional","E92000001","England","South East","E12000008","White","English/Welsh/Scottish/Northern Irish/British",940809
-201819,"Academic year","Regional","E92000001","England","South West","E12000009","Asian/Asian British","Pakistani",3244
-201819,"Academic year","Regional","E92000001","England","South West","E12000009","Black/African/Caribbean/Black British","Caribbean",1879
+201819,"Academic year","Regional","E92000001","England","South East","E12000008","White","English / Welsh / Scottish / Northern Irish / British",940809
+201819,"Academic year","Regional","E92000001","England","South West","E12000009","Asian / Asian British","Pakistani",3244
+201819,"Academic year","Regional","E92000001","England","South West","E12000009","Black / African / Caribbean / Black British","Caribbean",1879
 201819,"Academic year","Regional","E92000001","England","South West","E12000009","White","Irish",1500
-201819,"Academic year","Regional","E92000001","England","South West","E12000009","White","English/Welsh/Scottish/Northern Irish/British",629386
-201819,"Academic year","Regional","E92000001","England","West Midlands","E12000005","Asian/Asian British","Bangladeshi",18503
-201819,"Academic year","Regional","E92000001","England","West Midlands","E12000005","Black/African/Caribbean/Black British","African",33050
+201819,"Academic year","Regional","E92000001","England","South West","E12000009","White","English / Welsh / Scottish / Northern Irish / British",629386
+201819,"Academic year","Regional","E92000001","England","West Midlands","E12000005","Asian / Asian British","Bangladeshi",18503
+201819,"Academic year","Regional","E92000001","England","West Midlands","E12000005","Black / African / Caribbean / Black British","African",33050
 201819,"Academic year","Regional","E92000001","England","West Midlands","E12000005","Unknown","Unknown",11263
-201819,"Academic year","Regional","E92000001","England","Yorkshire and The Humber","E12000003","Asian/Asian British","Any other Asian background",9498
-201819,"Academic year","Regional","E92000001","England","Yorkshire and The Humber","E12000003","Black/African/Caribbean/Black British","African",15692
-201819,"Academic year","Regional","E92000001","England","Yorkshire and The Humber","E12000003","Mixed/Multiple ethnic groups","White and Black African",4781
+201819,"Academic year","Regional","E92000001","England","Yorkshire and The Humber","E12000003","Asian / Asian British","Any other Asian background",9498
+201819,"Academic year","Regional","E92000001","England","Yorkshire and The Humber","E12000003","Black / African / Caribbean / Black British","African",15692
+201819,"Academic year","Regional","E92000001","England","Yorkshire and The Humber","E12000003","Mixed / Multiple ethnic groups","White and Black African",4781
 201819,"Academic year","Regional","E92000001","England","Yorkshire and The Humber","E12000003","Unknown","Unknown",8174

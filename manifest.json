@@ -4103,7 +4103,7 @@
       "checksum": "e5b9343c9a0e43d83e02b339946591d1"
     },
     ".Rprofile": {
-      "checksum": "9337d4f3bddd2fa2358f0186b94431a4"
+      "checksum": "769989cf2a9790e375dbfcef070281cb"
     },
     "azure-pipelines-dev.yml": {
       "checksum": "fc2ef843ff5024bcba25ff84eec05f4c"
@@ -4127,7 +4127,7 @@
       "checksum": "dd655b6a3307ee538cbd412493345790"
     },
     "data/harmonised_col_names.csv": {
-      "checksum": "33c864ee253a94382c011d3b657d7469"
+      "checksum": "dbb72bdbeeeeb1fadf893986cd3d5905"
     },
     "data/lads.csv": {
       "checksum": "a83ae9b20279f744b432e14461bd8f51"
@@ -4187,7 +4187,7 @@
       "checksum": "dc7fb82f219d00f5c3fc61854a7e7f3a"
     },
     "R/mainTests.r": {
-      "checksum": "185ccda974129657d49428f64d46f5e7"
+      "checksum": "5d6a623b026a093ef9cb382a34d34bb8"
     },
     "R/manual_scripts/debugging.R": {
       "checksum": "e56763afdf3659c7c47cfe0e3262e8cf"
@@ -4220,7 +4220,7 @@
       "checksum": "4bcf543280b896eb5ee9ddc6a5668a09"
     },
     "server.R": {
-      "checksum": "fc511efd8f68babc404da195adc376e4"
+      "checksum": "691007cfd817812537237c278094dbda"
     },
     "tests/testthat.R": {
       "checksum": "12e9b09de5275bdc13bde6ae5a82f8b1"
@@ -4238,7 +4238,7 @@
       "checksum": "3ea50f08fa9d59294094ebbc51e7f0f0"
     },
     "tests/testthat/_snaps/UI-03_additional_qa/additional_qa-001.json": {
-      "checksum": "8bb34a2a3f04fe7dec79b89daf898c34"
+      "checksum": "f43df546dd768762f4fc6caad18862ef"
     },
     "tests/testthat/_snaps/UI-03_additional_qa/additional_qa-002.json": {
       "checksum": "3ed6b252227fbb10a5074204acb444a4"
@@ -4253,7 +4253,7 @@
       "checksum": "0a701ad840159e3259349124125bc541"
     },
     "tests/testthat/_snaps/UI-03_additional_qa/additional_qa-006.json": {
-      "checksum": "fbdabf3ad7bfdef3055037c7c4c1db9d"
+      "checksum": "05789e194037289c899e6f95f59e7504"
     },
     "tests/testthat/_snaps/UI-03_additional_qa/additional_qa-007.json": {
       "checksum": "984e2ca1ab29edfc839bbe0b936c2a95"
@@ -4265,10 +4265,10 @@
       "checksum": "984e2ca1ab29edfc839bbe0b936c2a95"
     },
     "tests/testthat/_snaps/UI-03_additional_qa/additional_qa-010.json": {
-      "checksum": "df318b5bf23088b0ccaac458c8fb9f6e"
+      "checksum": "9d0c070a6be1104e5d3e72ccfe7a0436"
     },
     "tests/testthat/_snaps/UI-03_additional_qa/additional_qa-011.json": {
-      "checksum": "b5af646a95eeb450cf9b812fc5f8e4a4"
+      "checksum": "83198a242c187a51cfb2a1a8688fa595"
     },
     "tests/testthat/fileValidation/data_empty_cols.csv": {
       "checksum": "9751119425e4ee601dd0aff4918876a0"
@@ -4418,22 +4418,16 @@
       "checksum": "df80ff86dbbb685cbcb52c64abf418d1"
     },
     "tests/testthat/mainTests/ethnicity_meets_standards.csv": {
-      "checksum": "ea3ae93e2e22bb6dbc02d1a27265ffa1"
+      "checksum": "083ffbe4629253fcb0a6d9c4e36755f9"
     },
     "tests/testthat/mainTests/ethnicity_meets_standards.meta.csv": {
-      "checksum": "e6a5ab2af9ba45bed5f389292b206ab8"
+      "checksum": "ce0a7d5d38befcaf04f619116404742c"
     },
     "tests/testthat/mainTests/ethnicity_value_advisory.csv": {
       "checksum": "fca062227c85c4da7b53a516311d5ab2"
     },
     "tests/testthat/mainTests/ethnicity_value_advisory.meta.csv": {
       "checksum": "080434b2fa191f58c304bf86c473b5c8"
-    },
-    "tests/testthat/mainTests/ethnicity_wrong_headers.csv": {
-      "checksum": "82c0d5259be5ccb9f2a46187a93b9aa4"
-    },
-    "tests/testthat/mainTests/ethnicity_wrong_headers.meta.csv": {
-      "checksum": "b37317b5b7022757e828d5c2a373df3f"
     },
     "tests/testthat/mainTests/filter_group.csv": {
       "checksum": "9815fa4f1f9416680ef9d5756b73ac19"
@@ -4609,6 +4603,12 @@
     "tests/testthat/mainTests/no_data_symbols.meta.csv": {
       "checksum": "3057f1984836d5e7e4e39cd1209c7e20"
     },
+    "tests/testthat/mainTests/non_standard_headers.csv": {
+      "checksum": "82c0d5259be5ccb9f2a46187a93b9aa4"
+    },
+    "tests/testthat/mainTests/non_standard_headers.meta.csv": {
+      "checksum": "b37317b5b7022757e828d5c2a373df3f"
+    },
     "tests/testthat/mainTests/not_table_tool.csv": {
       "checksum": "2c05e4e98562b46428e4b8ad5e3bcaec"
     },
@@ -4742,10 +4742,10 @@
       "checksum": "62de4df44fa46c6e324bee387747abd9"
     },
     "tests/testthat/otherData/adding_z_locationCode.csv": {
-      "checksum": "4bc0aecfc2e512bce5c0055bf412712e"
+      "checksum": "5de6c18a95f021550a1f6d2ab557e8b6"
     },
     "tests/testthat/otherData/adding_z_locationCode.meta.csv": {
-      "checksum": "fb14aee7a7e0fb0671e5feb4c41af9bf"
+      "checksum": "a1367b6c2c013b4a6fbe35989dba8870"
     },
     "tests/testthat/otherData/blankFilterGroups.csv": {
       "checksum": "13882d495604f94577544fd117188aa8"
@@ -4766,10 +4766,10 @@
       "checksum": "882f2fce79e2aad3555a576d3f665997"
     },
     "tests/testthat/otherData/lad_within_la.csv": {
-      "checksum": "013596ebab17236f2efee8fe70f7c0b7"
+      "checksum": "6b88ef05225c09d92555649abf9eec66"
     },
     "tests/testthat/otherData/lad_within_la.meta.csv": {
-      "checksum": "fb14aee7a7e0fb0671e5feb4c41af9bf"
+      "checksum": "09afa0e2587e334263004ba24cefae6e"
     },
     "tests/testthat/otherData/missing_region_name.csv": {
       "checksum": "307a7ff183aa1eb50f567d2a3d7b6071"
@@ -4784,22 +4784,22 @@
       "checksum": "14992241fc4c1bbd2b74ecc50fe2b0e0"
     },
     "tests/testthat/otherData/name_multiple_levels.csv": {
-      "checksum": "117c45c19917f5e301bb10628d34d429"
+      "checksum": "97b060aa9ebadee3f1d3c531b92b8661"
     },
     "tests/testthat/otherData/name_multiple_levels.meta.csv": {
-      "checksum": "fb14aee7a7e0fb0671e5feb4c41af9bf"
+      "checksum": "a1367b6c2c013b4a6fbe35989dba8870"
     },
     "tests/testthat/otherData/outside_of_england_region.csv": {
-      "checksum": "a42dc54c53b3af258ba11a13aa1d4e3f"
+      "checksum": "b218e92a56fb5fc812f77c045ba73ac2"
     },
     "tests/testthat/otherData/outside_of_england_region.meta.csv": {
-      "checksum": "ccc673589d47996831681ab4e35f3369"
+      "checksum": "9643b9f1b27e4deb34c906aacb7a4cda"
     },
     "tests/testthat/otherData/passes_na_name.csv": {
-      "checksum": "ea6cd13153e9427f8590159a1286d407"
+      "checksum": "ac9aba1d417696aa7d50dc1ab6b5f0cd"
     },
     "tests/testthat/otherData/passes_na_name.meta.csv": {
-      "checksum": "4ec24788f9281d27f214e982d8766832"
+      "checksum": "f5b9c80e4f28132acb20a96a33e0483b"
     },
     "tests/testthat/otherData/provider_col_incorrect.csv": {
       "checksum": "b644366d765196471cdb1e9c6796925a"
@@ -4970,10 +4970,10 @@
       "checksum": "3205486a694d6fc8f282c6a05e47344a"
     },
     "tests/testthat/sch_prov/sch_mixed_levels.csv": {
-      "checksum": "a2c626559f68b7ebf132302b473624c1"
+      "checksum": "fa4e7bea9929351b1d36d8a6fce52218"
     },
     "tests/testthat/sch_prov/sch_mixed_levels.meta.csv": {
-      "checksum": "fb14aee7a7e0fb0671e5feb4c41af9bf"
+      "checksum": "a1367b6c2c013b4a6fbe35989dba8870"
     },
     "tests/testthat/sch_prov/sch_only_filter.csv": {
       "checksum": "9935aa6b8fa0d03c404ed9b480f75577"
@@ -4997,16 +4997,16 @@
       "checksum": "3cf257777accbcd1cad83d825c8d956e"
     },
     "tests/testthat/test-data/data_mandatory_cols.csv": {
-      "checksum": "be07f34cd980f8a9a32abe7c7440d519"
+      "checksum": "085dca2c3f92445b673d85027fc614a5"
     },
     "tests/testthat/test-data/data_mandatory_cols.meta.csv": {
-      "checksum": "f5330238aae98d474c2366c093502fd5"
+      "checksum": "deefe22aeea0b6fa64db5083e12bca80"
     },
     "tests/testthat/test-data/date_format.csv": {
-      "checksum": "483675b6c2059d0b9c7e5f4d1505e34d"
+      "checksum": "ab90860c5f52cf2383816ca0a50f3cfe"
     },
     "tests/testthat/test-data/date_format.meta.csv": {
-      "checksum": "027135827da0c3f17408c0479c116d22"
+      "checksum": "cdc76da1001aa4bae686f55052ddc323"
     },
     "tests/testthat/test-data/fails_allchecks.csv": {
       "checksum": "22064533da7b56b29d59ad98178cd7db"
@@ -5039,16 +5039,16 @@
       "checksum": "8a9e2ea64999e4d5446dc8676ba40bdf"
     },
     "tests/testthat/test-data/filter_groups_mix.csv": {
-      "checksum": "cc411840c61592e165980ca6b18fa200"
+      "checksum": "8088efe4592acc60e92e008804a390a2"
     },
     "tests/testthat/test-data/filter_groups_mix.meta.csv": {
-      "checksum": "a69afbf3e2f31de6cf8dff074dfdb4b0"
+      "checksum": "07912d5c4937941e140daf7958f3edae"
     },
     "tests/testthat/test-data/hyphen.csv": {
-      "checksum": "e51d952540c59f136a5fee64ddadd74d"
+      "checksum": "9a8fe14da0548c07a399c524626f69d4"
     },
     "tests/testthat/test-data/hyphen.meta.csv": {
-      "checksum": "156826ac3bb2adf0d91acff5ca439866"
+      "checksum": "0b8ea3d13ce09e7e48dc3b88e1a6f81b"
     },
     "tests/testthat/test-data/invalid_type.meta.txt": {
       "checksum": "1b7146487185384aa7d321f53ab7eb80"
@@ -5081,10 +5081,10 @@
       "checksum": "0c3314120aca12add10371384a7514cc"
     },
     "tests/testthat/test-data/passes_everything.csv": {
-      "checksum": "7c926457bda759031640cd792ac7522e"
+      "checksum": "5c810c1ab6be8ea4883d95ebb73f4f9e"
     },
     "tests/testthat/test-data/passes_everything.meta.csv": {
-      "checksum": "fb14aee7a7e0fb0671e5feb4c41af9bf"
+      "checksum": "0a3d92a3c6a90936f60bc0d65e0363ed"
     },
     "tests/testthat/test-data/passes_everything.meta.xlsx": {
       "checksum": "24406453569ad4ada9d7ee38b240522e"
@@ -5093,16 +5093,16 @@
       "checksum": "da8bd603ff14301b25b9983819ee392d"
     },
     "tests/testthat/test-data/passes_everything_advisory.csv": {
-      "checksum": "a78760720eeebde4867c5f303c5279ef"
+      "checksum": "7eb9c79ee5c04c18abb11bb27438d28c"
     },
     "tests/testthat/test-data/passes_everything_advisory.meta.csv": {
-      "checksum": "a73baef56e2c31152e7fccc5177736ff"
+      "checksum": "3913bd5cb03e7a559792ea44f96e6ea5"
     },
     "tests/testthat/test-data/passes_everything_ancillary.csv": {
-      "checksum": "e63a4f7ac6df82bde57fe6dff44f231c"
+      "checksum": "1127d84ae4e7f59916cc65ba85ff1963"
     },
     "tests/testthat/test-data/passes_everything_ancillary.meta.csv": {
-      "checksum": "9914f9a7060049aa215ee85de213baf4"
+      "checksum": "1b34547d469fb22a2c364ecf244c1551"
     },
     "tests/testthat/test-function-countActiveTests.R": {
       "checksum": "41a423a4bc68e5ba6c20a11f06092471"
@@ -5117,7 +5117,7 @@
       "checksum": "0ad4c6ef88604b628207156991a92349"
     },
     "tests/testthat/test-function-mainTests.R": {
-      "checksum": "b59462c7d89642ee29bdfcacf0efbb0c"
+      "checksum": "def2be36fe97859696445a59afbb0725"
     },
     "tests/testthat/test-function-preCheck1.R": {
       "checksum": "ecc3826341427734e1a8f097c1e1e6f8"
@@ -5135,7 +5135,7 @@
       "checksum": "e1c273ef462a5f49a60df1e3a5e94fb6"
     },
     "tests/testthat/test-UI-03_additional_qa.R": {
-      "checksum": "82a40f0765550189be42b19c4178ee66"
+      "checksum": "38106a628d936701b3620406f270b5e3"
     },
     "ui.R": {
       "checksum": "52e49b75e9766a106c5653305d382d16"

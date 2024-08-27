@@ -1,4 +1,4 @@
-﻿time_period,time_identifier,geographic_level,country_code,country_name,region_code,region_name,school_phase,num_schools,enrolments,sess_overall_percent,sess_authorised_percent,sess_unauthorised_percent,enrolments_pa_10_exact,enrolments_pa_10_exact_percent
+time_period,time_identifier,geographic_level,country_code,country_name,region_code,region_name,education_phase,school_count,enrolment_count,sess_overall_percent,sess_authorised_percent,sess_unauthorised_percent,enrolments_pa_10_exact,enrolments_pa_10_exact_percent
 201718,Academic year,National,E92000001,England,,,Total,20121,6835059,4.20821,3.01996,1.18824,731047,10.69555
 201718,Academic year,National,E92000001,England,,,Individual,3382,2949285,4.89899,3.45364,1.44535,373305,12.65747
 201718,Academic year,Regional,E92000001,England,z,Outside of England and unknown,Combined,1033,317616,4.62038,3.12503,1.49536,39300,12.37343

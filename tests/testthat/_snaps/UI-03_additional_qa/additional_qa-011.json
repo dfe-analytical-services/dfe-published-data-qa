@@ -262,7 +262,7 @@
             "MISSING TOTAL"
           ]
         ],
-        "container": "<table class=\"table table-bordered\">\n  <thead>\n    <tr>\n      <th>time_period<\/th>\n      <th>school_type<\/th>\n      <th>English devolved area<\/th>\n      <th>Local authority<\/th>\n      <th>Local authority district<\/th>\n      <th>Local enterprise partnership<\/th>\n      <th>Local skills improvement plan area<\/th>\n      <th>MAT<\/th>\n      <th>National<\/th>\n      <th>Parliamentary constituency<\/th>\n      <th>Regional<\/th>\n      <th>School<\/th>\n      <th>Ward<\/th>\n      <th>match<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>",
+        "container": "<table class=\"table table-bordered\">\n  <thead>\n    <tr>\n      <th>time_period<\/th>\n      <th>establishment_type<\/th>\n      <th>English devolved area<\/th>\n      <th>Local authority<\/th>\n      <th>Local authority district<\/th>\n      <th>Local enterprise partnership<\/th>\n      <th>Local skills improvement plan area<\/th>\n      <th>MAT<\/th>\n      <th>National<\/th>\n      <th>Parliamentary constituency<\/th>\n      <th>Regional<\/th>\n      <th>School<\/th>\n      <th>Ward<\/th>\n      <th>match<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>",
         "options": {
           "dom": "Bptl",
           "buttons": [
@@ -296,7 +296,7 @@
               "targets": 0
             },
             {
-              "name": "school_type",
+              "name": "establishment_type",
               "targets": 1
             },
             {

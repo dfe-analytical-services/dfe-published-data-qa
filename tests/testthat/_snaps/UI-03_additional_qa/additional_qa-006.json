@@ -14,11 +14,11 @@
             "National"
           ],
           [
-            "num_schools",
-            "num_schools",
-            "num_schools",
-            "num_schools",
-            "num_schools"
+            "school_count",
+            "school_count",
+            "school_count",
+            "school_count",
+            "school_count"
           ],
           [
             "min",
@@ -253,11 +253,11 @@
             "National"
           ],
           [
-            "enrolments",
-            "enrolments",
-            "enrolments",
-            "enrolments",
-            "enrolments"
+            "enrolment_count",
+            "enrolment_count",
+            "enrolment_count",
+            "enrolment_count",
+            "enrolment_count"
           ],
           [
             "min",
@@ -492,11 +492,11 @@
             "Regional"
           ],
           [
-            "num_schools",
-            "num_schools",
-            "num_schools",
-            "num_schools",
-            "num_schools"
+            "school_count",
+            "school_count",
+            "school_count",
+            "school_count",
+            "school_count"
           ],
           [
             "min",
@@ -731,11 +731,11 @@
             "Regional"
           ],
           [
-            "enrolments",
-            "enrolments",
-            "enrolments",
-            "enrolments",
-            "enrolments"
+            "enrolment_count",
+            "enrolment_count",
+            "enrolment_count",
+            "enrolment_count",
+            "enrolment_count"
           ],
           [
             "min",
@@ -970,11 +970,11 @@
             "Local authority"
           ],
           [
-            "num_schools",
-            "num_schools",
-            "num_schools",
-            "num_schools",
-            "num_schools"
+            "school_count",
+            "school_count",
+            "school_count",
+            "school_count",
+            "school_count"
           ],
           [
             "min",
@@ -1209,11 +1209,11 @@
             "Local authority"
           ],
           [
-            "enrolments",
-            "enrolments",
-            "enrolments",
-            "enrolments",
-            "enrolments"
+            "enrolment_count",
+            "enrolment_count",
+            "enrolment_count",
+            "enrolment_count",
+            "enrolment_count"
           ],
           [
             "min",
@@ -1448,11 +1448,11 @@
             "Local authority district"
           ],
           [
-            "num_schools",
-            "num_schools",
-            "num_schools",
-            "num_schools",
-            "num_schools"
+            "school_count",
+            "school_count",
+            "school_count",
+            "school_count",
+            "school_count"
           ],
           [
             "min",
@@ -1637,11 +1637,11 @@
             "Local authority district"
           ],
           [
-            "enrolments",
-            "enrolments",
-            "enrolments",
-            "enrolments",
-            "enrolments"
+            "enrolment_count",
+            "enrolment_count",
+            "enrolment_count",
+            "enrolment_count",
+            "enrolment_count"
           ],
           [
             "min",
