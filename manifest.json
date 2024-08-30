@@ -4103,7 +4103,7 @@
       "checksum": "e5b9343c9a0e43d83e02b339946591d1"
     },
     ".Rprofile": {
-      "checksum": "e200e44a465a61a276430f26e61ca01c"
+      "checksum": "544647f8a86d46a7602f42978be99150"
     },
     "azure-pipelines-dev.yml": {
       "checksum": "fc2ef843ff5024bcba25ff84eec05f4c"
@@ -4187,7 +4187,7 @@
       "checksum": "dc7fb82f219d00f5c3fc61854a7e7f3a"
     },
     "R/mainTests.r": {
-      "checksum": "a1f632af9b9b046da3ff08a126a0e3a4"
+      "checksum": "3170929afaa7f4757f500b7ecf1cd5a1"
     },
     "R/manual_scripts/debugging.R": {
       "checksum": "e56763afdf3659c7c47cfe0e3262e8cf"

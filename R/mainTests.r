@@ -2586,9 +2586,9 @@ standard_filter_headers <- function(meta) {
         "The column(s) ",
         paste(bad_col_names, collapse = "', '"), " appear to relate to ",
         "contexts that fall under the harmonised data standards. Please verify",
-        " your column headers against the data standards in the <a href='",
-        "https://dfe-analytical-services.github.io/analysts-guide/",
-        "statistics-production/ud.html#common-harmonised-variables",
+        " your column headers against the data standards in the <a href=",
+        "'https://dfe-analytical-services.github.io/analysts-guide/",
+        "statistics-production/ud.html#common-harmonised-variables'",
         ">DfE harmonised data guidance</a>."
       ),
       "result" = "FAIL"
