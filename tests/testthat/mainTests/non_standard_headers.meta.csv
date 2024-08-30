@@ -1,4 +1,4 @@
 col_name,col_type,label,indicator_grouping,indicator_unit,indicator_dp,filter_hint,filter_grouping_column
-major_ethnicity,Filter,Ethnicity Major,,,,Filter by pupil ethnicity,
-minor_ethnicity,Filter,Ethnicity Minor,,,,Filter by pupil ethnicity,
+minor_ethnicity,Filter,Ethnicity Minor,,,,Filter by pupil ethnicity,major_ethnicity
+characteristic_sen_status,Filter,SEN status,,,,,
 headcount,Indicator,Headcount,Pupil counts,,0,,

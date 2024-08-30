@@ -2557,24 +2557,29 @@ indicator_dp_completed <- function(meta) {
 }
 
 standard_filter_headers <- function(meta) {
-  search_strings <- harmonised_col_names %>%
+  # Collapse search terms for bad column names into regex term
+  search_string <- harmonised_col_names %>%
     pull(col_name_search_string) %>%
+    unique() %>%
+    paste(
+      collapse = "|"
+    )
+  # Pivot meta data to arrange col_name and filter_grouping_column together and
+  # then filter for possible non-standard filter names.
+  standard_col_names <- harmonised_col_names %>%
+    pull(col_name_harmonised) %>%
     unique()
-  bad_col_names <- c()
-  for (search_string in search_strings) {
-    standard_headers <- harmonised_col_names %>%
-      filter(col_name_search_string == search_string) %>%
-      pull(col_name_harmonised)
-    bad_cols <- meta %>%
-      filter(
-        grepl(search_string, tolower(col_name)),
-        !(col_name %in% standard_headers)
-      ) %>%
-      pull(col_name)
-    if (length(bad_cols) > 0) {
-      bad_col_names <- c(bad_col_names, bad_cols)
-    }
-  }
+  bad_col_names <- meta %>%
+    select(col_name, filter_grouping_column) %>%
+    pivot_longer(
+      c(col_name, filter_grouping_column),
+      values_to = "col_name"
+    ) %>%
+    filter(
+      grepl(search_string, tolower(col_name)),
+      !(col_name %in% standard_col_names)
+    ) %>%
+    pull(col_name)
   if (length(bad_col_names) == 0) {
     output <- list(
       "message" = "No standardised col_name issues found.",
@@ -2583,8 +2588,8 @@ standard_filter_headers <- function(meta) {
   } else {
     output <- list(
       "message" = paste0(
-        "The column(s) ",
-        paste(bad_col_names, collapse = "', '"), " appear to relate to ",
+        "The column(s) '",
+        paste(bad_col_names, collapse = "', '"), "' appear to relate to ",
         "contexts that fall under the harmonised data standards. Please verify",
         " your column headers against the data standards in the <a href=",
         "'https://dfe-analytical-services.github.io/analysts-guide/",

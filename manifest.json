@@ -4103,7 +4103,7 @@
       "checksum": "e5b9343c9a0e43d83e02b339946591d1"
     },
     ".Rprofile": {
-      "checksum": "544647f8a86d46a7602f42978be99150"
+      "checksum": "b0dfb4c56d72219aa426c4ffd1466821"
     },
     "azure-pipelines-dev.yml": {
       "checksum": "fc2ef843ff5024bcba25ff84eec05f4c"
@@ -4187,7 +4187,7 @@
       "checksum": "dc7fb82f219d00f5c3fc61854a7e7f3a"
     },
     "R/mainTests.r": {
-      "checksum": "3170929afaa7f4757f500b7ecf1cd5a1"
+      "checksum": "c1b707b9db41701430b9ed0740e76044"
     },
     "R/manual_scripts/debugging.R": {
       "checksum": "e56763afdf3659c7c47cfe0e3262e8cf"
@@ -4604,10 +4604,10 @@
       "checksum": "3057f1984836d5e7e4e39cd1209c7e20"
     },
     "tests/testthat/mainTests/non_standard_headers.csv": {
-      "checksum": "82c0d5259be5ccb9f2a46187a93b9aa4"
+      "checksum": "9032541646830d9dbfc3130dcfd5ab2e"
     },
     "tests/testthat/mainTests/non_standard_headers.meta.csv": {
-      "checksum": "b37317b5b7022757e828d5c2a373df3f"
+      "checksum": "08ce61219314cdfb5c14edb87bb66a89"
     },
     "tests/testthat/mainTests/not_table_tool.csv": {
       "checksum": "2c05e4e98562b46428e4b8ad5e3bcaec"
