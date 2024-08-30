@@ -1,12 +1,18 @@
 # mainTests -------------------------------------
 # main tests functions
 
+# TODO: Add test data and test for variable names too long (50)
+# TODO: Add test data and test for location names too long (120)
+# TODO: Add test data and test for filter items too long (120)
+# TODO: Add test data and test for variable labels too long (80)
+
 mainTests <- function(data_character, meta_character, datafile, metafile) {
   as_tibble(t(rbind(
     cbind(
       variable_snake_case(datafile), # active test
       variable_start_letter(datafile), # active test
       variable_characteristic(metafile), # active test
+      variable_name_length(metafile), # TODO
       duplicate_rows(datafile, metafile), # active test
       data_to_meta_crosscheck(datafile, metafile), # active test
       total(datafile, metafile), # active test
@@ -38,10 +44,13 @@ mainTests <- function(data_character, meta_character, datafile, metafile) {
       other_geography_code_duplicates(datafile), # active test
       na_geography(datafile), # active test
       na_geography_code(datafile), # active test
+      location_name_length(datafile), # TODO:
+      filter_item_length(datafile), # TODO:
       col_name_duplicate(metafile), # active test
       col_name_spaces(metafile), # active test
       label(metafile), # active test
       duplicate_label(metafile), # active test
+      variable_label_length(metafile), # TODO:
       geographic_catch(metafile), # active test
       filter_hint(metafile), # active test
       filter_group(metafile), # active test
@@ -154,6 +163,10 @@ variable_characteristic <- function(meta) {
 
   return(output)
 }
+
+# variable_length -------------------------------------------------------------
+
+# TODO: 50 characters
 
 # duplicate_rows -------------------------------------
 # Checking datafile for duplicate rows across ob. units and filters
