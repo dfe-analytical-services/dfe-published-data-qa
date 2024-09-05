@@ -3903,7 +3903,7 @@
       "checksum": "e5b9343c9a0e43d83e02b339946591d1"
     },
     ".Rprofile": {
-      "checksum": "48d983e0bfe75553a940019bee72a138"
+      "checksum": "c2b9d812d5f917f4d8e4dc1db4334eb1"
     },
     "azure-pipelines-dev.yml": {
       "checksum": "fc2ef843ff5024bcba25ff84eec05f4c"
@@ -4341,10 +4341,10 @@
       "checksum": "ed9d3ebd24026a2e795894679395dc10"
     },
     "tests/testthat/mainTests/indicator_unit_validation.csv": {
-      "checksum": "34b34be457d8e3d94c95857cc52d719c"
+      "checksum": "840270c5e0a6fe330046ad63fa3db265"
     },
     "tests/testthat/mainTests/indicator_unit_validation.meta.csv": {
-      "checksum": "4941902672323226dcadc1445db88891"
+      "checksum": "a6e4c62f6e986c7be03ce023471f4196"
     },
     "tests/testthat/mainTests/indicators_smushed.csv": {
       "checksum": "ed524ab3c650cbb27cb31e2d4625b3d9"
@@ -4561,6 +4561,12 @@
     },
     "tests/testthat/otherData/financial_quarter.meta.csv": {
       "checksum": "882f2fce79e2aad3555a576d3f665997"
+    },
+    "tests/testthat/otherData/indicator_units_should_pass.csv": {
+      "checksum": "48f2e6c646ff7288862e9cf86c91ec66"
+    },
+    "tests/testthat/otherData/indicator_units_should_pass.meta.csv": {
+      "checksum": "623560ff6bd6fb4cde9947dc43e1f808"
     },
     "tests/testthat/otherData/lad_within_la.csv": {
       "checksum": "013596ebab17236f2efee8fe70f7c0b7"
@@ -4905,7 +4911,7 @@
       "checksum": "41a423a4bc68e5ba6c20a11f06092471"
     },
     "tests/testthat/test-function-edge_cases.R": {
-      "checksum": "f28bebce557004db15917ee71e2a4fab"
+      "checksum": "967f63745faee40e71b3f5c74a2006e1"
     },
     "tests/testthat/test-function-fileValidation.R": {
       "checksum": "302dd04b308471644c1a6574c3844c81"

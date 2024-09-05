@@ -212,3 +212,9 @@ test_that("Can handle incorrect provider cols", {
 test_that("Can handle missing region_name", {
   expect_no_error(screeningOutput <- testOther("../../tests/testthat/otherData/missing_region_name.csv"))
 })
+
+test_that("all valid indicator units do pass", {
+  screeningOutput <- testOther("../../tests/testthat/otherData/indicator_units_should_pass.csv")
+
+  expect_equal(screeningOutput$results %>% filter(test == "indicator_unit_validation") %>% pull(result) %>% unlist(use.names = FALSE), "PASS")
+})

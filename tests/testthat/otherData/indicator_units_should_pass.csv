@@ -1,0 +1,4 @@
+time_period,time_identifier,geographic_level,country_code,country_name,region_code,region_name,school_phase,school_type,num_schools,enrolments,sess_overall_percent,sess_authorised_percent,sess_unauthorised_percent,enrolments_pa_10_exact,enrolments_pa_10_exact_percent,example_id
+201718,Academic year,Regional,E92000001,England,E12000001,North East,Combined,State-funded primary and secondary,1033,317616,4.62038,3.12503,1.49536,39300,12.37343,19950808
+201718,Academic year,Regional,E92000001,England,E12000001,North East,Individual,State-funded primary,858,175079,3.90145,2.7663,1.13516,18073,10.32277,19950808
+201718,Academic year,Regional,E92000001,England,E12000001,North East,Individual,State-funded secondary,175,142537,5.51279,3.57032,1.94247,21227,14.89227,19950808
