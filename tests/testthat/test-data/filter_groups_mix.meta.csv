@@ -1,6 +1,6 @@
-﻿col_name,col_type,label,indicator_grouping,indicator_unit,indicator_dp,filter_hint,filter_grouping_column
+col_name,col_type,label,indicator_grouping,indicator_unit,indicator_dp,filter_hint,filter_grouping_column
 institution_type,Filter,Institution group,,,,,institution_group
 cohort_level,Filter,Qualification levels,,,,,cohort_level_group
-characteristic,Filter,Student characteristics,,,,,characteristic_group
+breakdown,Filter,Student characteristics,,,,,breakdown_topic
 data_type,Filter,Data type,,,,,
 cohort,Indicator,Number of pupils completing 16-18 study ,,,,,

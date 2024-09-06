@@ -1,0 +1,17 @@
+col_name_search_string,col_name_harmonised
+sen_,sen_status
+sen_,sen_primary_need
+sen_,sen_secondary_need
+sen_,sen_provision
+primary_need,sen_primary_need
+secondary_need,sen_secondary_need
+establishment_type,establishment_type
+establishment_type,establishment_type_group
+provider_type,provider_type
+school_type,establishment_type
+school_type,establishment_type_group
+phase,education_phase
+ethnic,ethnicity_major
+ethnic,ethnicity_minor
+ethnic,ethnicity_detailed
+ethnic,minority_ethnic

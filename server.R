@@ -642,9 +642,15 @@ server <- function(input, output, session) {
                   dplyr::filter(col_name == filter) %>%
                   pull(filter_grouping_column)
 
-                return(data$mainFile %>% select(filter_group, filter) %>% distinct() %>% arrange(!!sym(filter_group), !!sym(filter)))
+                return(data$mainFile %>%
+                  select(all_of(c(filter_group, filter))) %>%
+                  distinct() %>%
+                  arrange(!!sym(filter_group), !!sym(filter)))
               } else {
-                return(data$mainFile %>% select(filter) %>% distinct() %>% arrange(filter))
+                return(data$mainFile %>%
+                  select(filter) %>%
+                  distinct() %>%
+                  arrange(filter))
               }
             }
 

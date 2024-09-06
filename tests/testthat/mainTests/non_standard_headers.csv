@@ -1,0 +1,40 @@
+"time_period","time_identifier","geographic_level","country_code","country_name","region_name","region_code","major_ethnicity","minor_ethnicity","characteristic_sen_status","headcount"
+202122,"Academic year","National","E92000001","England","","","Mixed / Multiple ethnic groups","Any other Mixed / Multiple ethnic background","Total", 213597
+202122,"Academic year","National","E92000001","England","","","Mixed / Multiple ethnic groups","White and Black Caribbean","Total",133504
+202122,"Academic year","National","E92000001","England","","","Unknown","Unknown","Any special educational need",136371
+202122,"Academic year","National","E92000001","England","","","Total","Total","Total",8418013
+202122,"Academic year","Regional","E92000001","England","East Midlands","E12000004","Black / African / Caribbean / Black British","African","Any special educational need",18098
+202122,"Academic year","Regional","E92000001","England","East Midlands","E12000004","Black / African / Caribbean / Black British","Caribbean","No identified special educational need",3112
+202122,"Academic year","Regional","E92000001","England","East Midlands","E12000004","Mixed / Multiple ethnic groups","White and Asian","No identified special educational need",9859
+202122,"Academic year","Regional","E92000001","England","East Midlands","E12000004","White","Gypsy or Irish Traveller","No identified special educational need",2346
+202122,"Academic year","Regional","E92000001","England","East Midlands","E12000004","White","Irish","No identified special educational need",1150
+202122,"Academic year","Regional","E92000001","England","East Midlands","E12000004","White","English / Welsh / Scottish / Northern Irish / British","Any special educational need",516312
+202122,"Academic year","Regional","E92000001","England","East of England","E12000006","Mixed / Multiple ethnic groups","White and Asian","Any special educational need",15694
+202122,"Academic year","Regional","E92000001","England","East of England","E12000006","Unknown","Unknown","Any special educational need",18204
+202122,"Academic year","Regional","E92000001","England","East of England","E12000006","White","Gypsy or Irish Traveller","Total",3005
+202122,"Academic year","Regional","E92000001","England","East of England","E12000006","White","English / Welsh / Scottish / Northern Irish / British","Any special educational need",660612
+202122,"Academic year","Regional","E92000001","England","London","E12000007","Asian / Asian British","Bangladeshi","Any special educational need",79954
+202122,"Academic year","Regional","E92000001","England","London","E12000007","Mixed / Multiple ethnic groups","White and Black African","Total",20290
+202122,"Academic year","Regional","E92000001","England","London","E12000007","White","Any other White background","Total",183941
+202122,"Academic year","Regional","E92000001","England","North East","E12000001","Black / African / Caribbean / Black British","African","Total",5275
+202122,"Academic year","Regional","E92000001","England","North East","E12000001","White","Gypsy or Irish Traveller","No identified special educational need",1351
+202021,"Academic year","National","E92000001","England","","","Asian / Asian British","Indian","No identified special educational need",275106
+202021,"Academic year","National","E92000001","England","","","Black / African / Caribbean / Black British","Any other Black / African / Caribbean background","No identified special educational need",64655
+202021,"Academic year","National","E92000001","England","","","Mixed / Multiple ethnic groups","White and Asian","No identified special educational need",128850
+202021,"Academic year","Regional","E92000001","England","East Midlands","E12000004","Asian / Asian British","Any other Asian background","No identified special educational need",9786
+202021,"Academic year","Regional","E92000001","England","East Midlands","E12000004","Black / African / Caribbean / Black British","Any other Black / African / Caribbean background","No identified special educational need",4367
+202021,"Academic year","Regional","E92000001","England","East Midlands","E12000004","Unknown","Unknown","No identified special educational need",10352
+202021,"Academic year","Regional","E92000001","England","East Midlands","E12000004","White","English / Welsh / Scottish / Northern Irish / British","No identified special educational need",517967
+202021,"Academic year","Regional","E92000001","England","East of England","E12000006","Other ethnic group","Total","No identified special educational need",9581
+202021,"Academic year","Regional","E92000001","England","East of England","E12000006","Black / African / Caribbean / Black British","Any other Black / African / Caribbean background","Total",4937
+202021,"Academic year","Regional","E92000001","England","East of England","E12000006","Black / African / Caribbean / Black British","Caribbean","Total",4756
+202021,"Academic year","Regional","E92000001","England","East of England","E12000006","Mixed / Multiple ethnic groups","Any other Mixed / Multiple ethnic background","Total",21555
+202021,"Academic year","Regional","E92000001","England","East of England","E12000006","White","Gypsy or Irish Traveller","Total",2818
+202021,"Academic year","Regional","E92000001","England","London","E12000007","Asian / Asian British","Indian","No identified special educational need",87031
+202021,"Academic year","Regional","E92000001","England","London","E12000007","Mixed / Multiple ethnic groups","White and Black African","No identified special educational need",19926
+202021,"Academic year","Regional","E92000001","England","London","E12000007","Unknown","Unknown","No identified special educational need",30319
+202021,"Academic year","Regional","E92000001","England","North East","E12000001","Black / African / Caribbean / Black British","Any other Black / African / Caribbean background","No identified special educational need",973
+202021,"Academic year","Regional","E92000001","England","North East","E12000001","Black / African / Caribbean / Black British","African","No identified special educational need",4211
+202021,"Academic year","Regional","E92000001","England","North East","E12000001","Mixed / Multiple ethnic groups","White and Asian","No identified special educational need",3539
+202021,"Academic year","Regional","E92000001","England","North East","E12000001","White","Any other White background","No identified special educational need",8458
+202021,"Academic year","Regional","E92000001","England","North East","E12000001","White","English / Welsh / Scottish / Northern Irish / British","No identified special educational need",343569
