@@ -58,7 +58,7 @@ mainTests <- function(data_character, meta_character, datafile, metafile) {
       indicator_dp(metafile), # active test
       indicator_dp_validation(metafile), # active test
       indicator_dp_completed(metafile), # active test
-      ethnicity_headers(metafile), # active test
+      standard_filter_headers(metafile), # active test
       ethnicity_values(datafile), # active test
       ethnicity_characteristic_group(datafile), # active test
       ethnicity_characteristic_values(datafile), # active test
@@ -2556,36 +2556,45 @@ indicator_dp_completed <- function(meta) {
   return(output)
 }
 
-ethnicity_headers <- function(meta) {
-  # First find any ethnicity type columns that don't have the standard col_names
-  ethnicity_standard_headers <- c("ethnicity_major", "ethnicity_minor", "ethnicity_detailed", "minority_ethnic")
-  ethnicity_columns <- meta %>%
+standard_filter_headers <- function(meta) {
+  # Collapse search terms for bad column names into regex term
+  search_string <- harmonised_col_names %>%
+    pull(col_name_search_string) %>%
+    unique() %>%
+    paste(
+      collapse = "|"
+    )
+  # Pivot meta data to arrange col_name and filter_grouping_column together and
+  # then filter for possible non-standard filter names.
+  standard_col_names <- harmonised_col_names %>%
+    pull(col_name_harmonised) %>%
+    unique()
+  bad_col_names <- meta %>%
+    select(col_name, filter_grouping_column) %>%
+    pivot_longer(
+      c(col_name, filter_grouping_column),
+      values_to = "col_name"
+    ) %>%
     filter(
-      grepl("ethnic", tolower(col_name)),
-      !(col_name %in% ethnicity_standard_headers)
+      grepl(search_string, tolower(col_name)),
+      !(col_name %in% standard_col_names)
     ) %>%
     pull(col_name)
-  if (length(ethnicity_columns) == 0) {
+  if (length(bad_col_names) == 0) {
     output <- list(
-      "message" = "No ethnicity header issues found.",
+      "message" = "No standardised col_name issues found.",
       "result" = "PASS"
-    )
-  } else if (length(ethnicity_columns) == 1) {
-    output <- list(
-      "message" = paste0(
-        paste(ethnicity_columns, collapse = "', '"), " appears to relate to ethnicity data, but does not conform to the standard col_name conventions: ",
-        paste(ethnicity_standard_headers, collapse = ", "),
-        "."
-      ),
-      "result" = "FAIL"
     )
   } else {
     output <- list(
       "message" = paste0(
-        "The following columns appear to relate to ethnicity data, but do not conform to the standard col_name conventions: <br> - '",
-        paste(ethnicity_columns, collapse = "', '"), "'. <br> - These should take the form of one of the following: ",
-        paste(ethnicity_standard_headers, collapse = ", "),
-        "."
+        "The column(s) '",
+        paste(bad_col_names, collapse = "', '"), "' appear to relate to ",
+        "contexts that fall under the harmonised data standards. Please verify",
+        " your column headers against the data standards in the <a href=",
+        "'https://dfe-analytical-services.github.io/analysts-guide/",
+        "statistics-production/ud.html#common-harmonised-variables'",
+        ">DfE harmonised data guidance</a>."
       ),
       "result" = "FAIL"
     )

@@ -27,7 +27,7 @@ test_that("Additional QA tabs", {
   app$expect_values(output = "table_list")
 
   # 4. Explore indicators doesn't break with just indicators
-  app$set_inputs(ind_parameter = "num_schools")
+  app$set_inputs(ind_parameter = "school_count")
   app$set_inputs(submit = "click")
 
   app$expect_values(output = "table_list")
@@ -40,7 +40,7 @@ test_that("Additional QA tabs", {
   app$expect_values(output = "table_list")
 
   # 6. Explore indicators works as expected
-  app$set_inputs(ind_parameter = c("num_schools", "enrolments"))
+  app$set_inputs(ind_parameter = c("school_count", "enrolment_count"))
   app$set_inputs(submit = "click")
 
   app$expect_values(output = c("t_1", "t_2", "t_3", "t_4", "t_5", "t_6", "t_7", "t_8"))
@@ -53,7 +53,7 @@ test_that("Additional QA tabs", {
   app$expect_values(output = "table_outlier_list")
 
   # 8. Outlier check doesn't break with just indicator
-  app$set_inputs(outlier_indicator_parameter = "num_schools")
+  app$set_inputs(outlier_indicator_parameter = "school_count")
   app$set_inputs(submit_outlier = "click")
 
   app$wait_for_idle(50) # this test seems weirdly flaky for unknown reasons
@@ -68,7 +68,7 @@ test_that("Additional QA tabs", {
   app$expect_values(output = "table_outlier_list")
 
   # 10. Outlier check runs as expected
-  app$set_inputs(outlier_indicator_parameter = c("num_schools", "enrolments"))
+  app$set_inputs(outlier_indicator_parameter = c("school_count", "enrolment_count"))
   app$set_inputs(threshold_setting = 5)
   app$set_inputs(submit_outlier = "click")
 
@@ -78,7 +78,7 @@ test_that("Additional QA tabs", {
 
   # 11. Geography check runs as expected
   app$set_inputs(trendy_tabs = "geogTab")
-  app$set_inputs(geog_indicator_parameter = "num_schools")
+  app$set_inputs(geog_indicator_parameter = "school_count")
   app$set_inputs(submit_geographies = "click")
 
   app$wait_for_idle(50) # this test seems weirdly flaky for unknown reasons

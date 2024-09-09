@@ -362,12 +362,12 @@ test_that("indicator_dp_nonInteger", {
   expect_equal(testIndividualTestSeparate(paste0(pathStart, "indicator_dp_nonInteger.csv"), paste0(pathStart, "indicator_dp_nonInteger.meta.csv"), "indicator_dp_validation"), "FAIL")
 })
 
-test_that("ethnicity_headers", {
+test_that("non_standard_headers", {
   expect_equal(
     testIndividualTestSeparate(
-      paste0(pathStart, "ethnicity_wrong_headers.csv"),
-      paste0(pathStart, "ethnicity_wrong_headers.meta.csv"),
-      "ethnicity_headers"
+      paste0(pathStart, "non_standard_headers.csv"),
+      paste0(pathStart, "non_standard_headers.meta.csv"),
+      "standard_filter_headers"
     ),
     "FAIL"
   )
@@ -389,7 +389,7 @@ test_that("ethnicity_headers", {
     testIndividualTestSeparate(
       paste0(pathStart, "ethnicity_meets_standards.csv"),
       paste0(pathStart, "ethnicity_meets_standards.meta.csv"),
-      "ethnicity_headers"
+      "standard_filter_headers"
     ),
     "PASS"
   )

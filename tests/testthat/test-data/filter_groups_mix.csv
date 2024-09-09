@@ -1,4 +1,4 @@
-time_period,time_identifier,geographic_level,country_code,country_name,institution_group,institution_type,cohort_level_group,cohort_level,characteristic_group,characteristic,data_type,version,cohort
+time_period,time_identifier,geographic_level,country_code,country_name,institution_group,institution_type,cohort_level_group,cohort_level,breakdown_topic,breakdown,data_type,version,cohort
 201819,Academic year,National,E92000001,England,State-funded mainstream schools & colleges,Total,Level 2,Level 2 approved,Disadvantage Y11 Status and Ethnicity Major,Disadvantaged White,Number of pupils,Revised,21367
 201819,Academic year,National,E92000001,England,State-funded mainstream schools & colleges,Total,Level 3,Level 3 other,Prior Attainment,Prior Attainment KS2 above L4,Number of pupils,Revised,14258
 201819,Academic year,National,E92000001,England,State-funded mainstream schools & colleges,Total,All other qualifications,Level 1 and entry level,Ethnicity Minor,White Irish,Number of pupils,Revised,84

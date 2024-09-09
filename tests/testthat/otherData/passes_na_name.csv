@@ -1,4 +1,4 @@
-time_period,time_identifier,geographic_level,country_code,country_name,region_code,region_name,lad_code,lad_name,school_type,num_schools,headcount,perm_excl,perm_excl_rate,suspension,susp_rate,one_plus_susp,one_plus_susp_rate
+time_period,time_identifier,geographic_level,country_code,country_name,region_code,region_name,lad_code,lad_name,establishment_type,school_count,pupil_count,perm_excl,perm_excl_rate,suspension,susp_rate,one_plus_susp,one_plus_susp_rate
 201920,Academic year,Local authority district,E92000001,England,E12000001,North East,E08000021,Newcastle upon Tyne,state-funded primary,72,22995,0,0,231,1.00456621,103,0.447923462
 201920,Academic year,Local authority district,E92000001,England,E12000001,North East,E06000004,Stockton-on-Tees,state-funded primary,60,19903,2,0.010048736,144,0.723509019,73,0.366778878
 201920,Academic year,Local authority district,E92000001,England,E12000001,North East,E06000002,Middlesbrough,state-funded primary,41,15920,1,0.006281407,63,0.395728643,40,0.251256281

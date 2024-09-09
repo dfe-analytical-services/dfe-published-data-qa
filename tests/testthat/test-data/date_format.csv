@@ -1,4 +1,4 @@
-time_period,time_identifier,geographic_level,country_code,country_name,date,phase,number_of_teachers_and_school_leaders_on_roll
+time_period,time_identifier,geographic_level,country_code,country_name,date,education_phase,number_of_teachers_and_school_leaders_on_roll
 2020,Week 42,National,E92000001,England,2020-10-12,All state-funded schools,480654
 2020,Week 42,National,E92000001,England,2020-10-12,State-funded alternative provision,5054
 2020,Week 42,National,E92000001,England,2020-10-12,State-funded primary,240218
