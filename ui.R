@@ -158,6 +158,7 @@ fluidPage(
                   textOutput("sum_combined_tests"),
                   textOutput("sum_passed_tests"),
                   textOutput("sum_ignored_tests"),
+                  textOutput("time_taken"),
                   hr(),
                   div(
                     style = "word-break: break-all;",

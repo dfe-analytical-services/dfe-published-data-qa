@@ -121,14 +121,14 @@ server <- function(input, output, session) {
     )
   })
 
-  # Main screening button ------------------------------------------------------------------------
-
   observeEvent(input$screenbutton | values$proceed_with_screening,
     {
       if (input$screenbutton == 0 && is.null(values$proceed_with_screening)) {
         # This prevents it running if no button was pressed to trigger it, required due to `ignoreInit = TRUE`
         return()
       }
+
+      time_start <- Sys.time()
 
       shinyjs::hideElement(id = "guidance")
 
@@ -163,11 +163,11 @@ server <- function(input, output, session) {
 
         # Date and time
         # Doing this to force the time to come out in the right time zone as the server runs on UTC
-        dateTime <- Sys.time() %>% as.POSIXct(., tz = "")
+        dateTime <- time_start %>% as.POSIXct(., tz = "")
         attributes(dateTime)$tzone <- "Europe/London"
 
         output$testtime <- renderText({
-          paste0("Time - ", format(dateTime, "%H:%M, %d %b %Y"), " (Europe/London)")
+          paste0("Time - ", format(dateTime, "%H:%M:%S, %d %b %Y"), " (Europe/London)")
         })
 
         # Size, rows and cols for files
@@ -295,6 +295,9 @@ server <- function(input, output, session) {
           summarise_stats(ignored_tests, "not applicable to the data")
         })
 
+        output$time_taken <- renderText({
+          paste("Screening took ", pretty_time_taken(time_start, Sys.time()))
+        })
 
         # Top lines for results ---------------------------------------------------------------------------------
 
@@ -784,6 +787,7 @@ server <- function(input, output, session) {
 
             return(output)
           }
+
 
           # create a list of tables - with one for each indicator summary
           theList <- eventReactive(input$submit, {
