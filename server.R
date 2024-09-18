@@ -22,6 +22,11 @@ server <- function(input, output, session) {
     environment = config::get("environment") # use "shinyapps" to test alternative behaviour locally
   )
 
+  time_stamps <- reactiveValues(
+    start_time = Sys.time(),
+    end_time = Sys.time()
+  )
+
   # File upload check ----------------------------------------------------------------------------
 
   observe({
@@ -128,7 +133,7 @@ server <- function(input, output, session) {
         return()
       }
 
-      time_start <- Sys.time()
+      time_stamps$start_time <- Sys.time()
 
       shinyjs::hideElement(id = "guidance")
 
@@ -163,7 +168,7 @@ server <- function(input, output, session) {
 
         # Date and time
         # Doing this to force the time to come out in the right time zone as the server runs on UTC
-        dateTime <- time_start %>% as.POSIXct(., tz = "")
+        dateTime <- time_stamps$start_time %>% as.POSIXct(., tz = "")
         attributes(dateTime)$tzone <- "Europe/London"
 
         output$testtime <- renderText({
@@ -295,8 +300,16 @@ server <- function(input, output, session) {
           summarise_stats(ignored_tests, "not applicable to the data")
         })
 
+        time_stamps$end_time <- Sys.time()
+
         output$time_taken <- renderText({
-          paste("Screening took ", pretty_time_taken(time_start, Sys.time()))
+          paste(
+            "Screening took ",
+            pretty_time_taken(
+              time_stamps$start_time,
+              time_stamps$end_time
+            )
+          )
         })
 
         # Top lines for results ---------------------------------------------------------------------------------
