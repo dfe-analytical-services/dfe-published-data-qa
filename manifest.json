@@ -4103,7 +4103,7 @@
       "checksum": "e5b9343c9a0e43d83e02b339946591d1"
     },
     ".Rprofile": {
-      "checksum": "ec83bcb8d0ba55304bc10ad36c84990a"
+      "checksum": "8e048594ec2589248cb03ed2d6147ecd"
     },
     "azure-pipelines-dev.yml": {
       "checksum": "fc2ef843ff5024bcba25ff84eec05f4c"
@@ -5109,12 +5109,6 @@
     },
     "tests/testthat/test-data/passes_everything_ancillary.meta.csv": {
       "checksum": "1b34547d469fb22a2c364ecf244c1551"
-    },
-    "tests/testthat/test-data/wave_2_completions_outcomes_tidy.csv": {
-      "checksum": "67a8aa428b5a8424c2b4988df3a543b4"
-    },
-    "tests/testthat/test-data/wave_2_completions_outcomes_tidy.meta.csv": {
-      "checksum": "a3f58c574839f302110261967212352a"
     },
     "tests/testthat/test-function-countActiveTests.R": {
       "checksum": "41a423a4bc68e5ba6c20a11f06092471"

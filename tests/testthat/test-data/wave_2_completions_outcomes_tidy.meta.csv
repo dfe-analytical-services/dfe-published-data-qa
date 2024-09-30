@@ -1,4 +1,0 @@
-﻿col_name,col_type,label,indicator_grouping,indicator_unit,indicator_dp,filter_hint,filter_grouping_column
-learner_breakdown,Filter,Learner breakdown,,,,,
-completion_count,Indicator,Number of completions,,,0,,
-outcome_count,Indicator,Number of outcomes,,,0,,
