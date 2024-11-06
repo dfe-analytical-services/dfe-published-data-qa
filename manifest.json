@@ -4103,7 +4103,7 @@
       "checksum": "e5b9343c9a0e43d83e02b339946591d1"
     },
     ".Rprofile": {
-      "checksum": "8e048594ec2589248cb03ed2d6147ecd"
+      "checksum": "626878eb4efccd6d366b68fb20cf5b78"
     },
     "azure-pipelines-dev.yml": {
       "checksum": "fc2ef843ff5024bcba25ff84eec05f4c"
@@ -4118,7 +4118,7 @@
       "checksum": "5682faf1ad896a5e6a620b8a0a641bac"
     },
     "data/english_devolved_areas.csv": {
-      "checksum": "fa0a37908f877f60ffa07377ae64e06e"
+      "checksum": "632ba42999991c5c030e23657ac94feb"
     },
     "data/ethnicity.csv": {
       "checksum": "7477c76d8990b16372dc3f19c3e8f045"
@@ -5085,6 +5085,9 @@
     },
     "tests/testthat/test-data/noFilters.meta.csv": {
       "checksum": "0c3314120aca12add10371384a7514cc"
+    },
+    "tests/testthat/test-data/outcomes_full_rounded.zip": {
+      "checksum": "7fe24ca0e4f8637f764fa0fb05bdce57"
     },
     "tests/testthat/test-data/passes_everything.csv": {
       "checksum": "5c810c1ab6be8ea4883d95ebb73f4f9e"
