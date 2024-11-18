@@ -4651,7 +4651,7 @@
       "checksum": "e5b9343c9a0e43d83e02b339946591d1"
     },
     ".Rprofile": {
-      "checksum": "f962559cdda5049a29a9fd5e310c33e6"
+      "checksum": "11a2e59bec31ffc68971cf26544eb735"
     },
     "azure-pipelines-dev.yml": {
       "checksum": "fc2ef843ff5024bcba25ff84eec05f4c"
@@ -4733,6 +4733,9 @@
     },
     "LICENSE": {
       "checksum": "51052a72b54c2e4bdddfb52762638274"
+    },
+    "R/data-dictionary-tests.R": {
+      "checksum": "027deb9124c18286e712843f8cda6ac9"
     },
     "R/fileValidation.r": {
       "checksum": "1c3a5b538aa71e2f377b4733e7c9a580"
