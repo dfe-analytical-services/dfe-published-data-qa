@@ -1699,43 +1699,6 @@
         "RemoteSha": "1.4.1"
       }
     },
-    "git2r": {
-      "Source": "CRAN",
-      "Repository": "https://packagemanager.posit.co/cran/latest",
-      "description": {
-        "Type": "Package",
-        "Package": "git2r",
-        "Title": "Provides Access to Git Repositories",
-        "Authors@R": "c(person(\"Stefan\", \"Widgren\", role = c(\"aut\", \"cre\"),\n                    email = \"stefan.widgren@gmail.com\",\n                    comment = c(ORCID = \"0000-0001-5745-2284\")),\n             person(\"Gabor\", \"Csardi\", role = \"ctb\"),\n             person(\"Gregory\", \"Jefferis\", role = \"ctb\"),\n             person(\"Jennifer\", \"Bryan\", role = \"ctb\"),\n             person(\"Jeroen\", \"Ooms\", role = \"ctb\"),\n             person(\"Jim\", \"Hester\", role = \"ctb\"),\n             person(\"John\", \"Blischak\", role = \"ctb\"),\n             person(\"Karthik\", \"Ram\", role = \"ctb\"),\n             person(\"Peter\", \"Carbonetto\", role = \"ctb\"),\n             person(\"Scott\", \"Chamberlain\", role = \"ctb\"),\n             person(\"Thomas\", \"Rosendal\", role = \"ctb\"))",
-        "Description": "Interface to the 'libgit2' library, which is a pure C\n    implementation of the 'Git' core methods. Provides access to 'Git'\n    repositories to extract data and running some basic 'Git'\n    commands.",
-        "Version": "0.35.0",
-        "License": "GPL-2",
-        "URL": "https://docs.ropensci.org/git2r/,\nhttps://github.com/ropensci/git2r",
-        "BugReports": "https://github.com/ropensci/git2r/issues",
-        "Imports": "graphics, utils",
-        "Depends": "R (>= 4.0)",
-        "Suggests": "getPass",
-        "NeedsCompilation": "yes",
-        "SystemRequirements": "libgit2 (>= 1.0): libgit2-devel (rpm) or\nlibgit2-dev (deb)",
-        "Collate": "'blame.R' 'blob.R' 'branch.R' 'bundle_r_package.R'\n'checkout.R' 'commit.R' 'config.R' 'contributions.R'\n'credential.R' 'diff.R' 'fetch.R' 'git2r.R' 'index.R'\n'libgit2.R' 'merge.R' 'note.R' 'odb.R' 'plot.R' 'pull.R'\n'punch_card.R' 'push.R' 'reference.R' 'reflog.R' 'refspec.R'\n'remote.R' 'repository.R' 'reset.R' 'revparse.R' 'sha.R'\n'signature.R' 'stash.R' 'status.R' 'tag.R' 'time.R' 'tree.R'\n'when.R'",
-        "Encoding": "UTF-8",
-        "RoxygenNote": "7.3.2",
-        "Packaged": "2024-10-20 07:43:12 UTC; stefan",
-        "Author": "Stefan Widgren [aut, cre] (<https://orcid.org/0000-0001-5745-2284>),\n  Gabor Csardi [ctb],\n  Gregory Jefferis [ctb],\n  Jennifer Bryan [ctb],\n  Jeroen Ooms [ctb],\n  Jim Hester [ctb],\n  John Blischak [ctb],\n  Karthik Ram [ctb],\n  Peter Carbonetto [ctb],\n  Scott Chamberlain [ctb],\n  Thomas Rosendal [ctb]",
-        "Maintainer": "Stefan Widgren <stefan.widgren@gmail.com>",
-        "Repository": "CRAN",
-        "Date/Publication": "2024-10-20 23:00:02 UTC",
-        "Built": "R 4.4.1; x86_64-w64-mingw32; 2024-10-20 23:50:34 UTC; windows",
-        "Archs": "x64",
-        "RemoteType": "standard",
-        "RemotePkgRef": "git2r",
-        "RemoteRef": "git2r",
-        "RemoteRepos": "http://cran.rstudio.com",
-        "RemoteReposName": "CRAN",
-        "RemotePkgPlatform": "x86_64-w64-mingw32",
-        "RemoteSha": "0.35.0"
-      }
-    },
     "gitcreds": {
       "Source": "CRAN",
       "Repository": "https://packagemanager.posit.co/cran/latest",
@@ -4648,10 +4611,10 @@
       "checksum": "115cacefa09fd94eb3806813fa4898c8"
     },
     ".hooks/pre-commit.R": {
-      "checksum": "e5b9343c9a0e43d83e02b339946591d1"
+      "checksum": "bf0457763ffb51211605f6b8ef743b08"
     },
     ".Rprofile": {
-      "checksum": "3a49aea00645e695e533301d3bafb180"
+      "checksum": "648e85fab5011dc84291c82509e81595"
     },
     "azure-pipelines-dev.yml": {
       "checksum": "fc2ef843ff5024bcba25ff84eec05f4c"
@@ -4765,7 +4728,7 @@
       "checksum": "49f84962c930a31bd04b66f5ec0855e8"
     },
     "renv.lock": {
-      "checksum": "cd7dc3668bff5703a8ab62dbb1aacb0c"
+      "checksum": "a785896169bf04012cbc71c98d917fa0"
     },
     "server.R": {
       "checksum": "76d87396cd2c1b083696fcac91980a6d"
