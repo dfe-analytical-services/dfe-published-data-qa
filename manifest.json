@@ -1175,7 +1175,7 @@
       "description": {
         "Package": "dfeshiny",
         "Title": "DfE R Shiny Standards",
-        "Version": "0.5.2",
+        "Version": "0.5.1",
         "Authors@R": "c(\n    person(\"Rich\", \"Bielby\", , \"richard.bielby@education.gov.uk\", role = c(\"aut\", \"cre\"),\n           comment = c(ORCID = \"0000-0001-9070-9969\")),\n    person(\"Charlotte\", \"Foster\", , \"charlotte.foster@education.gov.uk\", role = \"aut\"),\n    person(\"Cam\", \"Race\", , \"cameron.race@education.gov.uk\", role = \"aut\")\n  )",
         "Description": "R package containing preferred methods for creating official\n    DfE R-Shiny dashboards.",
         "License": "GPL (>= 3)",
@@ -1192,18 +1192,18 @@
         "RoxygenNote": "7.3.2",
         "Author": "Rich Bielby [aut, cre] (<https://orcid.org/0000-0001-9070-9969>),\n  Charlotte Foster [aut],\n  Cam Race [aut]",
         "Maintainer": "Rich Bielby <richard.bielby@education.gov.uk>",
-        "Built": "R 4.4.1; ; 2024-12-05 16:18:34 UTC; windows",
+        "Built": "R 4.4.2; ; 2024-11-28 09:50:47 UTC; windows",
         "RemoteType": "github",
+        "RemoteHost": "api.github.com",
         "RemoteUsername": "dfe-analytical-services",
         "RemoteRepo": "dfeshiny",
-        "RemoteRef": "main",
-        "RemoteSha": "91f1eb3cbac6e1d2ba64300e22a36c95a73dda25",
-        "RemoteHost": "api.github.com",
+        "RemoteRef": "bff6fef6be5049c7a4a41b350244dba6320ecd7c",
+        "RemoteSha": "bff6fef6be5049c7a4a41b350244dba6320ecd7c",
         "GithubHost": "api.github.com",
         "GithubRepo": "dfeshiny",
         "GithubUsername": "dfe-analytical-services",
-        "GithubRef": "main",
-        "GithubSHA1": "91f1eb3cbac6e1d2ba64300e22a36c95a73dda25"
+        "GithubRef": "bff6fef6be5049c7a4a41b350244dba6320ecd7c",
+        "GithubSHA1": "bff6fef6be5049c7a4a41b350244dba6320ecd7c"
       }
     },
     "diffobj": {
@@ -4593,7 +4593,7 @@
       "checksum": "e5b9343c9a0e43d83e02b339946591d1"
     },
     ".Rprofile": {
-      "checksum": "03f75f661bd4440bbba2f8a6a29f6275"
+      "checksum": "16bba917fd234958f3445be5549f3848"
     },
     "azure-pipelines-dev.yml": {
       "checksum": "fc2ef843ff5024bcba25ff84eec05f4c"
@@ -4704,7 +4704,7 @@
       "checksum": "49f84962c930a31bd04b66f5ec0855e8"
     },
     "renv.lock": {
-      "checksum": "5dadcedb560186afe1d1722446f4b0a7"
+      "checksum": "5fc0dc5ecc524b0dd0de11463c4c0706"
     },
     "server.R": {
       "checksum": "cb4e5dcb2ce3478c42d9841568ea6455"
