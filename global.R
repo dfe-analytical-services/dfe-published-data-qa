@@ -29,6 +29,7 @@ shhh(library(shinyalert))
 shhh(library(shinydisconnect))
 shhh(library(praise))
 shhh(library(dfeR))
+shhh(library(dfeshiny))
 
 # Following are commented out as they are needed for CI / CD or commit hooks but not for running of app
 pigs_will_fly <- FALSE

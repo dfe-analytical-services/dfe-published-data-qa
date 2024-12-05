@@ -27,8 +27,7 @@ jobs:
       - name: Install rsconnect
         shell: Rscript {0}
         run: |
-          if (!requireNamespace("renv", quietly = TRUE)) install.packages("renv")
-          renv::install("rsconnect@0.8.29")
+          renv::install("rsconnect")
           
       - name: Push to shinyApps.io
         run: >
