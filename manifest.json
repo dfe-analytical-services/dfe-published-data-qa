@@ -4240,7 +4240,7 @@
       "checksum": "e8d96d5ffd16a6867fd6d7458bd2f905"
     },
     ".Rprofile": {
-      "checksum": "88a388ef39289d92e5f7c0e96a7306e2"
+      "checksum": "d4addc5b094a70e72827efad2958ff33"
     },
     "azure-pipelines-dev.yml": {
       "checksum": "fc2ef843ff5024bcba25ff84eec05f4c"
@@ -5281,7 +5281,7 @@
       "checksum": "38106a628d936701b3620406f270b5e3"
     },
     "ui.R": {
-      "checksum": "bd4184c80c22d9ce3e1965c7782d1213"
+      "checksum": "88baeb581e4bd597d2e9834ea0c3a7c8"
     },
     "www/acalat_theme.css": {
       "checksum": "e926d2ff3a5799c06d16a5e3c70b47aa"
