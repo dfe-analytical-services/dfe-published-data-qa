@@ -76,7 +76,7 @@ fluidPage(
           br(),
           strong("Notes"),
           br(),
-          "Currently this app works with files up to 500mb. If you have a file that is bigger than this, please contact us - ",
+          paste0("Currently this app works with files up to ", dfeR::pretty_filesize(max_file_size), ". If you have a file that is bigger than this, please contact us at "),
           a(href = "mailto:explore.statistics@education.gov.uk", "explore.statistics@education.gov.uk", .noWS = "after"), ".",
           br(),
           "This app is constantly being developed, please let us know if you have any suggestions to improve it. If you experience any issues, please take screenshots and email them to us with as much information as possible.",
