@@ -1,5 +1,10 @@
 # Max file size ---------------------------------------------------------------------------------
-options(shiny.maxRequestSize = 800 * 1024^2)
+# Set the maximum size you want in megabytes, then this will convert it as needed to
+# - Show the note in the UI 'notes' section
+# - Set the max file upload size for the app
+max_file_size_mb <- 900
+max_file_size <- max_file_size_mb * 1e+6
+options(shiny.maxRequestSize = max_file_size)
 
 # Sanitising error messages (to avoid revealing anything untoward)
 options(shiny.sanitize.errors = TRUE)
