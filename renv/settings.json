@@ -1,9 +1,7 @@
 {
   "bioconductor.version": [],
   "external.libraries": [],
-  "ignored.packages": [
-    "git2r"
-    ],
+  "ignored.packages": [],
   "package.dependency.fields": [
     "Imports",
     "Depends",
