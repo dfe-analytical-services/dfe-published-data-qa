@@ -4233,7 +4233,7 @@
       "checksum": "e8d96d5ffd16a6867fd6d7458bd2f905"
     },
     ".Rprofile": {
-      "checksum": "27de70b9670311feeabe917efcc4b0a5"
+      "checksum": "e03ce981b9f0826e7982db46022bdcc9"
     },
     "azure-pipelines-dev.yml": {
       "checksum": "fc2ef843ff5024bcba25ff84eec05f4c"
@@ -4317,7 +4317,7 @@
       "checksum": "b9db57c3ebf85dabb5b9e96687206282"
     },
     "R/mainTests.r": {
-      "checksum": "c1b707b9db41701430b9ed0740e76044"
+      "checksum": "a84e1dcf84fd92993cbdab3d801e0d18"
     },
     "R/manual_scripts/debugging.R": {
       "checksum": "e56763afdf3659c7c47cfe0e3262e8cf"
@@ -4359,7 +4359,7 @@
       "checksum": "3824e397e0b583a9367e306830fccd72"
     },
     "tests/testthat/_snaps/UI-01_example_files/example_files-002.json": {
-      "checksum": "86cfc414c609ab64a79c1cb7bbdd235b"
+      "checksum": "3cc28aabe707de1cdb7d70fc6d1b0145"
     },
     "tests/testthat/_snaps/UI-02_edge_cases/edge_cases-001.json": {
       "checksum": "75228173459ba6f210f07e7ce363ab5e"
@@ -4853,6 +4853,12 @@
     "tests/testthat/mainTests/variable_characteristic.meta.csv": {
       "checksum": "df80ff86dbbb685cbcb52c64abf418d1"
     },
+    "tests/testthat/mainTests/variable_name_length.csv": {
+      "checksum": "03ba7c7e0cb7a77dd4a00d0d1b66b2c9"
+    },
+    "tests/testthat/mainTests/variable_name_length.meta.csv": {
+      "checksum": "04463d66a3fd9a109ef0867e9e0342e8"
+    },
     "tests/testthat/mainTests/variable_snake_case.csv": {
       "checksum": "98488233ca477f8445d0b193f1d2b212"
     },
@@ -5244,7 +5250,7 @@
       "checksum": "41a423a4bc68e5ba6c20a11f06092471"
     },
     "tests/testthat/test-function-edge_cases.R": {
-      "checksum": "967f63745faee40e71b3f5c74a2006e1"
+      "checksum": "4d43ddb1ccbad14c3cdd3c30ecc9bef4"
     },
     "tests/testthat/test-function-fileValidation.R": {
       "checksum": "302dd04b308471644c1a6574c3844c81"
@@ -5253,7 +5259,7 @@
       "checksum": "0ad4c6ef88604b628207156991a92349"
     },
     "tests/testthat/test-function-mainTests.R": {
-      "checksum": "def2be36fe97859696445a59afbb0725"
+      "checksum": "2de596233de8eecf7e8fbd420badfcba"
     },
     "tests/testthat/test-function-preCheck1.R": {
       "checksum": "ecc3826341427734e1a8f097c1e1e6f8"

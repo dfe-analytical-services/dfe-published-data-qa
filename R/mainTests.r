@@ -62,7 +62,14 @@ mainTests <- function(data_character, meta_character, datafile, metafile) {
       ethnicity_values(datafile), # active test
       ethnicity_characteristic_group(datafile), # active test
       ethnicity_characteristic_values(datafile), # active test
-      indicators_smushed(metafile) # active test
+      indicators_smushed(metafile), # active test
+
+      # API specific tests, though could be standard for everyone at some point
+      variable_name_length(metafile) # active test
+      # variable_label_length(metafile),
+      #  filter_item_length(datafile, metafile),
+      #  location_name_length(datafile),
+      #  location_code_length(datafile)
     ),
     "stage" = "mainTests",
     "test" = c(activeTests$`R/mainTests.r`)
@@ -2797,6 +2804,40 @@ indicators_smushed <- function(meta) {
       "message" = "No indicators found containing typical filter entries.",
       "result" = "PASS"
     )
+  }
+
+  return(output)
+}
+
+#' Length of filters and indicators
+#'
+#' @param data
+#' @param meta
+variable_name_length <- function(meta) {
+  lengths_table <- data.table(
+    "variable_name" = meta$col_name,
+    "length" = nchar(meta$col_name)
+  )
+
+  names_too_long <- lengths_table[length > 50, variable_name]
+
+  if (length(names_too_long) == 0) {
+    output <- list(
+      "message" = "All variable names are 50 characters or fewer.",
+      "result" = "PASS"
+    )
+  } else {
+    if (length(names_too_long) == 1) {
+      output <- list(
+        "message" = paste0("The following variable name is over 50 characters, this will need shortening before this data can be published through the API: '", paste(names_too_long, collapse = "', '"), "'."),
+        "result" = "ADVISORY"
+      )
+    } else {
+      output <- list(
+        "message" = paste0("The following variable names are over 50 characters, these will need shortening before this data can be published through the API: '", paste0(names_too_long, collapse = "', '"), "'."),
+        "result" = "ADVISORY"
+      )
+    }
   }
 
   return(output)
