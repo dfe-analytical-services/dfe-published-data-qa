@@ -1160,7 +1160,7 @@ server <- function(input, output, session) {
             symbol_expected <- data.frame(Symbol = gss_symbols)
 
             suppress_count <- symbol_expected %>%
-              left_join(suppress_count) %>%
+              left_join(suppress_count, by = join_by(Symbol)) %>%
               mutate_all(~ replace(., is.na(.), 0))
 
             output$suppressed_cell_count_table <- DT::renderDT({

@@ -436,18 +436,18 @@ test_that("variable_name_length", {
   expect_equal(testIndividualTest(pathStart, "variable_name_length"), "ADVISORY")
 })
 
-# test_that("variable_label_length", {
-#   expect_equal(testIndividualTest(pathStart, "variable_label_length"), "ADVISORY")
-# })
-#
-# test_that("filter_item_length", {
-#   expect_equal(testIndividualTest(pathStart, "filter_item_length"), "ADVISORY")
-# })
-#
-# test_that("location_name_length", {
-#   expect_equal(testIndividualTest(pathStart, "location_name_length"), "ADVISORY")
-# })
-#
-# test_that("location_code_length", {
-#   expect_equal(testIndividualTest(pathStart, "location_code_length"), "ADVISORY")
-# })
+test_that("variable_label_length", {
+  expect_equal(testIndividualTest(pathStart, "variable_label_length"), "ADVISORY")
+})
+
+test_that("filter_item_length", {
+  expect_equal(testIndividualTest(pathStart, "filter_item_length"), "ADVISORY")
+})
+
+test_that("location_name_length", {
+  expect_equal(testIndividualTest(pathStart, "location_name_length"), "ADVISORY")
+})
+
+test_that("location_code_length", {
+  expect_equal(testIndividualTest(pathStart, "location_code_length"), "ADVISORY")
+})

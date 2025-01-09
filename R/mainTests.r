@@ -65,11 +65,11 @@ mainTests <- function(data_character, meta_character, datafile, metafile) {
       indicators_smushed(metafile), # active test
 
       # API specific tests, though could be standard for everyone at some point
-      variable_name_length(metafile) # active test
-      # variable_label_length(metafile),
-      #  filter_item_length(datafile, metafile),
-      #  location_name_length(datafile),
-      #  location_code_length(datafile)
+      variable_name_length(metafile), # active test
+      variable_label_length(metafile), # active test
+      filter_item_length(datafile, metafile), # active test
+      location_name_length(datafile), # active test
+      location_code_length(datafile) # active test
     ),
     "stage" = "mainTests",
     "test" = c(activeTests$`R/mainTests.r`)
@@ -2809,9 +2809,8 @@ indicators_smushed <- function(meta) {
   return(output)
 }
 
-#' Length of filters and indicators
+#' Validate length of filters and indicators
 #'
-#' @param data
 #' @param meta
 variable_name_length <- function(meta) {
   lengths_table <- data.table(
@@ -2835,6 +2834,159 @@ variable_name_length <- function(meta) {
     } else {
       output <- list(
         "message" = paste0("The following variable names are over 50 characters, these will need shortening before this data can be published through the API: '", paste0(names_too_long, collapse = "', '"), "'."),
+        "result" = "ADVISORY"
+      )
+    }
+  }
+
+  return(output)
+}
+
+#' Validate length of filter and indicator labels
+#'
+#' @param meta
+variable_label_length <- function(meta) {
+  lengths_table <- data.table(
+    "variable_label" = meta$label,
+    "length" = unlist(lapply(meta$label, nchar), use.names = FALSE)
+  )
+
+  labels_too_long <- lengths_table[length > 80, variable_label]
+
+  if (length(labels_too_long) == 0) {
+    output <- list(
+      "message" = "All variable labels are 80 characters or fewer.",
+      "result" = "PASS"
+    )
+  } else {
+    if (length(labels_too_long) == 1) {
+      output <- list(
+        "message" = paste0("The following variable label is over 80 characters, this will need shortening before this data can be published through the API: '", paste(labels_too_long, collapse = "', '"), "'."),
+        "result" = "ADVISORY"
+      )
+    } else {
+      output <- list(
+        "message" = paste0("The following variable labels are over 80 characters, these will need shortening before this data can be published through the API: '", paste0(labels_too_long, collapse = "', '"), "'."),
+        "result" = "ADVISORY"
+      )
+    }
+  }
+
+  return(output)
+}
+
+#' Validate length of filter items
+#'
+#' @param data
+#' @param meta
+filter_item_length <- function(data, meta) {
+  filters <- meta[col_type == "Filter"]$col_name
+
+  filter_items <- data |>
+    select(all_of(filters)) |>
+    unlist(use.names = FALSE)
+
+  lengths_table <- data.frame(
+    "filter_item" = filter_items,
+    "length" = unlist(lapply(filter_items, nchar), use.names = FALSE)
+  )
+
+  lengths_too_long <- lengths_table[lengths_table$length > 120, "filter_item"]
+
+  if (length(lengths_too_long) == 0) {
+    output <- list(
+      "message" = "All filter items are 120 characters or fewer.",
+      "result" = "PASS"
+    )
+  } else {
+    if (length(lengths_too_long) == 1) {
+      output <- list(
+        "message" = paste0("The following filter item is over 120 characters, this will need shortening before this data can be published through the API: '", paste(lengths_too_long, collapse = "', '"), "'."),
+        "result" = "ADVISORY"
+      )
+    } else {
+      output <- list(
+        "message" = paste0("The following filter items are over 120 characters, these will need shortening before this data can be published through the API: '", paste0(lengths_too_long, collapse = "', '"), "'."),
+        "result" = "ADVISORY"
+      )
+    }
+  }
+}
+
+
+#' Validate length of location names
+#'
+#' @param data
+location_name_length <- function(data) {
+  location_names <- data |>
+    select(any_of(geography_dataframe$name_field)) |>
+    unlist(use.names = FALSE) |>
+    purrr::discard(~ is.na(.) | . == "" | . == "NA")
+
+  lengths_table <- data.frame(
+    "location_name" = location_names,
+    "length" = unlist(lapply(location_names, nchar), use.names = FALSE)
+  )
+
+  lengths_too_long <- lengths_table[lengths_table$length > 120, "location_name"]
+
+  if (length(lengths_too_long) == 0) {
+    output <- list(
+      "message" = "All location names are 120 characters or fewer.",
+      "result" = "PASS"
+    )
+  } else {
+    if (length(lengths_too_long) == 1) {
+      output <- list(
+        "message" = paste0("The following location name is over 120 characters, this will need shortening before this data can be published through the API: '", paste(lengths_too_long, collapse = "', '"), "'."),
+        "result" = "ADVISORY"
+      )
+    } else {
+      output <- list(
+        "message" = paste0("The following location names are over 120 characters, these will need shortening before this data can be published through the API: '", paste0(lengths_too_long, collapse = "', '"), "'."),
+        "result" = "ADVISORY"
+      )
+    }
+  }
+
+  return(output)
+}
+
+
+#' Validate length of location codes
+#'
+#' @param data
+location_code_length <- function(data) {
+  location_code_cols <- c(geography_dataframe$code_field, geography_dataframe$code_field_secondary) |>
+    purrr::discard(~ is.na(.) | . == "")
+
+  location_codes <- data |>
+    select(any_of(location_code_cols)) |>
+    unlist(use.names = FALSE) |>
+    purrr::discard(~ is.na(.) | . == "" | . == "NA")
+
+
+  lengths_table <- data.frame(
+    "location_code" = location_codes,
+    "length" = unlist(lapply(location_codes, nchar), use.names = FALSE)
+  )
+
+  lengths_too_long <- lengths_table[lengths_table$length > 30, "location_code"]
+
+  if (length(lengths_too_long) == 0) {
+    output <- list(
+      "message" = "All location codes are 30 characters or fewer.",
+      "result" = "PASS"
+    )
+  } else {
+    if (length(lengths_too_long) == 1) {
+      output <- list(
+        "message" = paste0("The following location code is over 30 characters, this will need shortening before this data can be published through the API: '", paste(lengths_too_long, collapse = "', '"), "'."),
+        "result" = "ADVISORY"
+      )
+    } else {
+      output <- list(
+        "message" = paste0("The following location codes are over 30 characters, these will need shortening before this data can be published through the API: '", paste0(lengths_too_long, collapse = "', '"), "'."),
         "result" = "ADVISORY"
       )
     }
