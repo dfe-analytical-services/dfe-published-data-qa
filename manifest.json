@@ -4233,7 +4233,7 @@
       "checksum": "e8d96d5ffd16a6867fd6d7458bd2f905"
     },
     ".Rprofile": {
-      "checksum": "af944ebe92a5083272cec326769b7541"
+      "checksum": "40589c7283bda37ad178aba8b4c45fa6"
     },
     "azure-pipelines-dev.yml": {
       "checksum": "fc2ef843ff5024bcba25ff84eec05f4c"
@@ -4317,7 +4317,7 @@
       "checksum": "b9db57c3ebf85dabb5b9e96687206282"
     },
     "R/mainTests.r": {
-      "checksum": "8f05516284acd631bf9e58dc6b589931"
+      "checksum": "8c415fe7c1b34c15767a93b36d34327b"
     },
     "R/manual_scripts/debugging.R": {
       "checksum": "e56763afdf3659c7c47cfe0e3262e8cf"
@@ -5283,7 +5283,7 @@
       "checksum": "0ad4c6ef88604b628207156991a92349"
     },
     "tests/testthat/test-function-mainTests.R": {
-      "checksum": "a52bf97201f64f718eb3cc35edfb27b3"
+      "checksum": "cdad605b53d891ce1c2a8494e868fd00"
     },
     "tests/testthat/test-function-preCheck1.R": {
       "checksum": "ecc3826341427734e1a8f097c1e1e6f8"

@@ -433,10 +433,7 @@ test_that("indicators_smushed", {
 })
 
 test_that("variable_name_length", {
-  expect_equal(
-    testIndividualTest(pathStart, "variable_name_length"),
-    "ADVISORY"
-  )
+  expect_equal(testIndividualTest(pathStart, "variable_name_length"), "ADVISORY")
 })
 
 test_that("variable_label_length", {
