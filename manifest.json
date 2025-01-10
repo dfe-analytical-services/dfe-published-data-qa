@@ -4220,6 +4220,9 @@
     }
   },
   "files": {
+    ".gitattributes": {
+      "checksum": "c3177b8a6fff470ce0b0378a0dc4c68e"
+    },
     ".github/PULL_REQUEST_TEMPLATE.md": {
       "checksum": "cbe2be338cd6586dc070e6a77e8e69ab"
     },
@@ -4233,7 +4236,7 @@
       "checksum": "e8d96d5ffd16a6867fd6d7458bd2f905"
     },
     ".Rprofile": {
-      "checksum": "27de70b9670311feeabe917efcc4b0a5"
+      "checksum": "1247aefe829eb8e208797eeed763d57f"
     },
     "azure-pipelines-dev.yml": {
       "checksum": "fc2ef843ff5024bcba25ff84eec05f4c"
@@ -4317,7 +4320,7 @@
       "checksum": "b9db57c3ebf85dabb5b9e96687206282"
     },
     "R/mainTests.r": {
-      "checksum": "c1b707b9db41701430b9ed0740e76044"
+      "checksum": "8f05516284acd631bf9e58dc6b589931"
     },
     "R/manual_scripts/debugging.R": {
       "checksum": "e56763afdf3659c7c47cfe0e3262e8cf"
@@ -4350,7 +4353,7 @@
       "checksum": "4fdd4e1b952cd929d2ba64685af21c88"
     },
     "server.R": {
-      "checksum": "76d87396cd2c1b083696fcac91980a6d"
+      "checksum": "23fc15ec19183749d64db4406219fbc4"
     },
     "tests/testthat.R": {
       "checksum": "12e9b09de5275bdc13bde6ae5a82f8b1"
@@ -4359,7 +4362,7 @@
       "checksum": "3824e397e0b583a9367e306830fccd72"
     },
     "tests/testthat/_snaps/UI-01_example_files/example_files-002.json": {
-      "checksum": "86cfc414c609ab64a79c1cb7bbdd235b"
+      "checksum": "e79a0ba571bfbbe17386b6e9cadaa93d"
     },
     "tests/testthat/_snaps/UI-02_edge_cases/edge_cases-001.json": {
       "checksum": "75228173459ba6f210f07e7ce363ab5e"
@@ -4601,6 +4604,12 @@
     "tests/testthat/mainTests/filter_hint.meta.csv": {
       "checksum": "97346a84a5185b12c5a12e9a6ea7b30d"
     },
+    "tests/testthat/mainTests/filter_item_length.csv": {
+      "checksum": "5acc5c8fe056940ebfe20d8dc15cfc4c"
+    },
+    "tests/testthat/mainTests/filter_item_length.meta.csv": {
+      "checksum": "beb8bedd0c4f3ef9c5d0997405b41c56"
+    },
     "tests/testthat/mainTests/geographic_catch.csv": {
       "checksum": "ff410d317b0ab3a637f6a1e7750141e3"
     },
@@ -4708,6 +4717,18 @@
     },
     "tests/testthat/mainTests/lep_combinations.meta.csv": {
       "checksum": "8ce884f6f73324bd3aacc70567cfcb64"
+    },
+    "tests/testthat/mainTests/location_code_length.csv": {
+      "checksum": "1c441e486859e833f6a75e4ca4fcffec"
+    },
+    "tests/testthat/mainTests/location_code_length.meta.csv": {
+      "checksum": "c1a7a9a5c1d0dc12fd7569b9238b6207"
+    },
+    "tests/testthat/mainTests/location_name_length.csv": {
+      "checksum": "f74bf87c35c3667c43675ee7b9df823f"
+    },
+    "tests/testthat/mainTests/location_name_length.meta.csv": {
+      "checksum": "c1a7a9a5c1d0dc12fd7569b9238b6207"
     },
     "tests/testthat/mainTests/lsip_combinations.csv": {
       "checksum": "9f77ca00f1bdb7855a87600e8581a9bf"
@@ -4852,6 +4873,18 @@
     },
     "tests/testthat/mainTests/variable_characteristic.meta.csv": {
       "checksum": "df80ff86dbbb685cbcb52c64abf418d1"
+    },
+    "tests/testthat/mainTests/variable_label_length.csv": {
+      "checksum": "4fd02e14a65b21b0b41a60bb337dc335"
+    },
+    "tests/testthat/mainTests/variable_label_length.meta.csv": {
+      "checksum": "2aeeb092aadf1aa12f9dd8470cc45cbd"
+    },
+    "tests/testthat/mainTests/variable_name_length.csv": {
+      "checksum": "2c811e8c4808248041ffb50ede344854"
+    },
+    "tests/testthat/mainTests/variable_name_length.meta.csv": {
+      "checksum": "04463d66a3fd9a109ef0867e9e0342e8"
     },
     "tests/testthat/mainTests/variable_snake_case.csv": {
       "checksum": "98488233ca477f8445d0b193f1d2b212"
@@ -5244,7 +5277,7 @@
       "checksum": "41a423a4bc68e5ba6c20a11f06092471"
     },
     "tests/testthat/test-function-edge_cases.R": {
-      "checksum": "967f63745faee40e71b3f5c74a2006e1"
+      "checksum": "4d43ddb1ccbad14c3cdd3c30ecc9bef4"
     },
     "tests/testthat/test-function-fileValidation.R": {
       "checksum": "302dd04b308471644c1a6574c3844c81"
@@ -5253,7 +5286,7 @@
       "checksum": "0ad4c6ef88604b628207156991a92349"
     },
     "tests/testthat/test-function-mainTests.R": {
-      "checksum": "def2be36fe97859696445a59afbb0725"
+      "checksum": "cdad605b53d891ce1c2a8494e868fd00"
     },
     "tests/testthat/test-function-preCheck1.R": {
       "checksum": "ecc3826341427734e1a8f097c1e1e6f8"
@@ -5277,7 +5310,7 @@
       "checksum": "88baeb581e4bd597d2e9834ea0c3a7c8"
     },
     "www/acalat_theme.css": {
-      "checksum": "e926d2ff3a5799c06d16a5e3c70b47aa"
+      "checksum": "8e7009445352b2fd4b44667eac6c48a3"
     },
     "www/builder-duck.PNG": {
       "checksum": "7574642f76936b645e9ce137ec6a99e9"
