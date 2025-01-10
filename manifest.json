@@ -4221,7 +4221,7 @@
   },
   "files": {
     ".gitattributes": {
-      "checksum": "029aefbf40b08410e09aafde89f5f5ce"
+      "checksum": "c3177b8a6fff470ce0b0378a0dc4c68e"
     },
     ".github/PULL_REQUEST_TEMPLATE.md": {
       "checksum": "cbe2be338cd6586dc070e6a77e8e69ab"
@@ -4236,7 +4236,7 @@
       "checksum": "e8d96d5ffd16a6867fd6d7458bd2f905"
     },
     ".Rprofile": {
-      "checksum": "d1c839451d1bd787ee22c5da7b59bb9e"
+      "checksum": "2a3b8a477d5d8ac84b6d778364c539df"
     },
     "azure-pipelines-dev.yml": {
       "checksum": "fc2ef843ff5024bcba25ff84eec05f4c"
@@ -5259,7 +5259,7 @@
       "checksum": "24406453569ad4ada9d7ee38b240522e"
     },
     "tests/testthat/test-data/passes_everything.xlsx": {
-      "checksum": "da8bd603ff14301b25b9983819ee392d"
+      "checksum": "d1b4cd653cec0213bfffc80d1ba6fa81"
     },
     "tests/testthat/test-data/passes_everything_advisory.csv": {
       "checksum": "7eb9c79ee5c04c18abb11bb27438d28c"
@@ -5310,7 +5310,7 @@
       "checksum": "88baeb581e4bd597d2e9834ea0c3a7c8"
     },
     "www/acalat_theme.css": {
-      "checksum": "e926d2ff3a5799c06d16a5e3c70b47aa"
+      "checksum": "8e7009445352b2fd4b44667eac6c48a3"
     },
     "www/builder-duck.PNG": {
       "checksum": "7574642f76936b645e9ce137ec6a99e9"
