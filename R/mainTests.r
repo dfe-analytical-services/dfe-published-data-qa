@@ -1,6 +1,5 @@
 # mainTests -------------------------------------
 # main tests functions
-
 mainTests <- function(data_character, meta_character, datafile, metafile) {
   as_tibble(t(rbind(
     cbind(
