@@ -4220,6 +4220,9 @@
     }
   },
   "files": {
+    ".gitattributes": {
+      "checksum": "029aefbf40b08410e09aafde89f5f5ce"
+    },
     ".github/PULL_REQUEST_TEMPLATE.md": {
       "checksum": "cbe2be338cd6586dc070e6a77e8e69ab"
     },
@@ -4233,7 +4236,7 @@
       "checksum": "e8d96d5ffd16a6867fd6d7458bd2f905"
     },
     ".Rprofile": {
-      "checksum": "851b1d2a65ca01dfc5c8335ef45ec54b"
+      "checksum": "d1c839451d1bd787ee22c5da7b59bb9e"
     },
     "azure-pipelines-dev.yml": {
       "checksum": "fc2ef843ff5024bcba25ff84eec05f4c"

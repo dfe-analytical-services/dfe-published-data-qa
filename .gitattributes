@@ -1,0 +1,2 @@
+# Set default behaviour incase anyone doesn't have core.autocrlf set
+* text eol=crlf
