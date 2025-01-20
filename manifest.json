@@ -4236,7 +4236,7 @@
       "checksum": "e8d96d5ffd16a6867fd6d7458bd2f905"
     },
     ".Rprofile": {
-      "checksum": "1247aefe829eb8e208797eeed763d57f"
+      "checksum": "785b61486133326c8fbd929fb6bec721"
     },
     "azure-pipelines-dev.yml": {
       "checksum": "fc2ef843ff5024bcba25ff84eec05f4c"
@@ -4916,6 +4916,12 @@
     "tests/testthat/otherData/blankFilterGroups.meta.csv": {
       "checksum": "6427c73166a1e36e585dc05b591cf573"
     },
+    "tests/testthat/otherData/filter_hint_indicator_bug.csv": {
+      "checksum": "8f01b90fa96c175c7ccba3d3ee8f3f6f"
+    },
+    "tests/testthat/otherData/filter_hint_indicator_bug.meta.csv": {
+      "checksum": "638a6edc4efffa59fff75b7c85de0460"
+    },
     "tests/testthat/otherData/financial_half.csv": {
       "checksum": "5fc6237a107591f5b130655bbe2743e5"
     },
@@ -5277,7 +5283,7 @@
       "checksum": "41a423a4bc68e5ba6c20a11f06092471"
     },
     "tests/testthat/test-function-edge_cases.R": {
-      "checksum": "4d43ddb1ccbad14c3cdd3c30ecc9bef4"
+      "checksum": "28cf3e12a9697be1b0210450f4874525"
     },
     "tests/testthat/test-function-fileValidation.R": {
       "checksum": "302dd04b308471644c1a6574c3844c81"

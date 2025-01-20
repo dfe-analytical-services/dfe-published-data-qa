@@ -220,3 +220,9 @@ test_that("all valid indicator units do pass", {
 
   expect_equal(screeningOutput$results %>% filter(test == "indicator_unit_validation") %>% pull(result) %>% unlist(use.names = FALSE), "PASS")
 })
+
+test_that("Indicator units don't false fail on filter hints", {
+  screeningOutput <- testOther("../../tests/testthat/otherData/filter_hint_indicator_bug.csv")
+
+  expect_equal(screeningOutput$results %>% filter(test == "filter_hint") %>% pull(result) %>% unlist(use.names = FALSE), "PASS")
+})
