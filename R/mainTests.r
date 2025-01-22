@@ -2062,7 +2062,7 @@ geographic_catch <- function(meta) {
 
 filter_hint <- function(meta) {
   filter_hints <- meta %>%
-    filter(col_type == "Indicator", !is.na(filter_hint)) %>%
+    filter(col_type == "Indicator", !is.na(filter_hint), filter_hint != "") %>%
     pull(filter_hint)
 
   if (length(filter_hints) > 0) {
