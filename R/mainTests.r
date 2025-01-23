@@ -2067,12 +2067,16 @@ filter_hint <- function(meta) {
 
   if (length(filter_hints) > 0) {
     output <- list(
-      "message" = "Indicators should not have a filter_hint value in the metadata file.",
+      "message" = paste0(
+        "Indicators should not have a filter_hint value in the metadata file.",
+        "The following filer_hint values were found in indicator rows:",
+        "<br> - '", paste0(filter_hints, collapse = "', '"), "'."
+      ),
       "result" = "FAIL"
     )
   } else {
     output <- list(
-      "message" = "No indicators have an filter_hint value.",
+      "message" = "No indicators have a filter_hint value.",
       "result" = "PASS"
     )
   }
