@@ -2062,17 +2062,21 @@ geographic_catch <- function(meta) {
 
 filter_hint <- function(meta) {
   filter_hints <- meta %>%
-    filter(col_type == "Indicator", !is.na(filter_hint)) %>%
+    filter(col_type == "Indicator", !is.na(filter_hint), filter_hint != "") %>%
     pull(filter_hint)
 
   if (length(filter_hints) > 0) {
     output <- list(
-      "message" = "Indicators should not have a filter_hint value in the metadata file.",
+      "message" = paste0(
+        "Indicators should not have a filter_hint value in the metadata file. ",
+        "The following filter_hint values were found in indicator rows:",
+        "<br> - '", paste0(filter_hints, collapse = "', '"), "'."
+      ),
       "result" = "FAIL"
     )
   } else {
     output <- list(
-      "message" = "No indicators have an filter_hint value.",
+      "message" = "No indicators have a filter_hint value.",
       "result" = "PASS"
     )
   }
