@@ -2068,8 +2068,8 @@ filter_hint <- function(meta) {
   if (length(filter_hints) > 0) {
     output <- list(
       "message" = paste0(
-        "Indicators should not have a filter_hint value in the metadata file.",
-        "The following filer_hint values were found in indicator rows:",
+        "Indicators should not have a filter_hint value in the metadata file. ",
+        "The following filter_hint values were found in indicator rows:",
         "<br> - '", paste0(filter_hints, collapse = "', '"), "'."
       ),
       "result" = "FAIL"
