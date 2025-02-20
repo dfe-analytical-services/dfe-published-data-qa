@@ -32,7 +32,7 @@ data_dictionary_filter_items <- function(data_dictionary) {
     ) |>
     dplyr::select(col_type, col_name = colname, filter_item = filteritem) |>
     dplyr::distinct() |>
-    dplyr::arrange(col_type, col_name) |>
+    dplyr::arrange(col_type, col_name, filter_item) |>
     dplyr::mutate(standard_col = TRUE)
 }
 
@@ -100,9 +100,10 @@ data_dictionary_filter_item_check <- function(
     group_field = "breakdown_topic",
     filter_field = "breakdown") {
   # First of all grab the filters to be scanned based on the meta data:
-  data_dictionary <- read_data_dictionary()
-  data_dictionary_cols_present <- data_dictionary_match_columns(meta, data_dictionary) |>
+  dd <- read_data_dictionary()
+  dd_cols_present <- data_dictionary_match_columns(meta, dd) |>
     dplyr::filter(!is.na(standard_col), col_type == "Filter")
+  dd_filter_items <- data_dictionary_filter_items(dd)
 
   if (nrow(data_dictionary_cols_present) == 0) {
     output <- list(
@@ -110,9 +111,31 @@ data_dictionary_filter_item_check <- function(
       "result" = "SKIPPED"
     )
   } else {
-    filter_items <- data |>
-      dplyr::select(all_of(data_dictionary_cols_present |> magrittr::extract2("col_name"))) |>
+    non_standard_filter_items <- data |>
+      dplyr::select(all_of(dd_cols_present |> magrittr::extract2("col_name"))) |>
       dplyr::distinct() |>
-      tidyr::pivot_longer(cols = dplyr::everything(), names_to = "col_name", values_to = "filter_item")
+      tidyr::pivot_longer(cols = dplyr::everything(), names_to = "col_name", values_to = "filter_item") |>
+      dplyr::left_join(dd_filter_items, by = dplyr::join_by(col_name, filter_item)) |>
+      dplyr::filter(is.na(standard_col))
+
+    if (nrow(non_standard_filter_items) == 0) {
+      output <- list(
+        "message" = "All col_names are consistent with the data dictionary.",
+        "result" = "PASS"
+      )
+    } else {
+      non_standard_filter_items <- non_standard_filter_items |>
+        dplyr::mutate(col_item_combo = paste0(col_name, "/", filter_item)) |>
+        dplyr::pull(col_item_combo) |>
+        paste(collapse = ", ")
+      output <- list(
+        "message" = paste(
+          "The folling col_name/filter_item combination(s) are not present in the data dictionary",
+          "and should not be used as part of an API data set until resolved:\n",
+          non_standard_filter_items
+        ),
+        "result" = "WARNING"
+      )
+    }
   }
 }
