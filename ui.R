@@ -42,15 +42,23 @@ fluidPage(
       id = "app-content",
 
       # Application title -----------------------------------------------------------------------------------
-
       titlePanel(
-        div(HTML("DfE published data QA <h4>QA your data files before uploading to Explore Education Statistics for publication</h4>")),
+        div(HTML("DfE published data QA <h4>QA your data files before uploading to explore education statistics for publication</h4>")),
       ),
 
       # Initial guidance text -----------------------------------------------------------------------------------
-
       verticalLayout(
-        br(),
+        div(
+          class = "panel panel-info",
+          div(
+            class = "panel-body",
+            style = "padding-left:27px",
+            paste0("Currently this app works with files up to ", dfeR::pretty_filesize(max_file_size), ". If you have a file that is bigger than this, please contact us at "),
+            a(href = "mailto:explore.statistics@education.gov.uk", "explore.statistics@education.gov.uk", .noWS = "after"), ".",
+            br(),
+            "This app is constantly being developed, please let us know if you have any suggestions to improve it. If you experience any issues, please take screenshots and email them to us with as much information as possible.",
+          )
+        ),
         shinyjs::hidden(div(
           id = "guidance",
           "This app allows you to screen your data files against the Department’s ",
@@ -72,14 +80,6 @@ fluidPage(
           "3.  Look through results, amend files in line with any recommendations and re-screen files if necessary.",
           br(),
           "4.  Reset the page if you have another file to check.",
-          br(),
-          br(),
-          strong("Notes"),
-          br(),
-          "Currently this app works with files up to 500mb. If you have a file that is bigger than this, please contact us - ",
-          a(href = "mailto:explore.statistics@education.gov.uk", "explore.statistics@education.gov.uk", .noWS = "after"), ".",
-          br(),
-          "This app is constantly being developed, please let us know if you have any suggestions to improve it. If you experience any issues, please take screenshots and email them to us with as much information as possible.",
           hr()
         )),
 

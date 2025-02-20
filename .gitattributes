@@ -1,0 +1,6 @@
+# Set default behaviour incase anyone doesn't have core.autocrlf set
+* text eol=crlf
+
+# Mark all files in the www folder as binary to avoid messing with non text files
+www/* -text
+tests/testthat/test-data/passes_everything.xlsx -text
