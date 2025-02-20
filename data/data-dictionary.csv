@@ -1,4 +1,4 @@
-col_name,col_type,col_item,col_parent_name,col_parent_item,cbds_code,item_error_flag
+col_name,col_type,filter_item,col_name_parent,filter_item_parent,cbds_code,item_error_flag
 education_type,Filter,Total,education_type_group,Total,,api-only
 education_type,Filter,Total,education_type_group,Apprenticeship,,api-only
 education_type,Filter,Apprenticeship,education_type_group,Apprenticeship,,api-only
