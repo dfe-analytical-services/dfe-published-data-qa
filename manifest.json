@@ -4460,7 +4460,7 @@
       "checksum": "e8d96d5ffd16a6867fd6d7458bd2f905"
     },
     ".Rprofile": {
-      "checksum": "0587530efe121f6a5ba7a0d679c3be20"
+      "checksum": "000b145ea8d4c4f49da3ad663e575d93"
     },
     "azure-pipelines-dev.yml": {
       "checksum": "fc2ef843ff5024bcba25ff84eec05f4c"
@@ -4746,6 +4746,18 @@
     },
     "tests/testthat/mainTests/country_combinations.meta.csv": {
       "checksum": "3057f1984836d5e7e4e39cd1209c7e20"
+    },
+    "tests/testthat/mainTests/data_dictionary_col_name_check.csv": {
+      "checksum": "4de88818abdd6885fe560175a29e893e"
+    },
+    "tests/testthat/mainTests/data_dictionary_col_name_check.meta.csv": {
+      "checksum": "8d4fe59cea8c3e7a7c281a5e2359e8a6"
+    },
+    "tests/testthat/mainTests/data_dictionary_filter_item_check.csv": {
+      "checksum": "6dd34c983e43568d02408b34069e78ba"
+    },
+    "tests/testthat/mainTests/data_dictionary_filter_item_check.meta.csv": {
+      "checksum": "1a0dc0d4c862e8e27768b5f30173fd1c"
     },
     "tests/testthat/mainTests/data_to_meta_crosscheck.csv": {
       "checksum": "2daa16e14ada6bd45076a6e0a3aa31eb"
@@ -5525,7 +5537,7 @@
       "checksum": "0ad4c6ef88604b628207156991a92349"
     },
     "tests/testthat/test-function-mainTests.R": {
-      "checksum": "cdad605b53d891ce1c2a8494e868fd00"
+      "checksum": "d360393750c1b111c8705f5b2b0bee83"
     },
     "tests/testthat/test-function-preCheck1.R": {
       "checksum": "ecc3826341427734e1a8f097c1e1e6f8"

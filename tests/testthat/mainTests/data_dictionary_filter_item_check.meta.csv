@@ -1,0 +1,4 @@
+col_name,col_type,label,indicator_grouping,indicator_unit,indicator_dp,filter_hint,filter_grouping_column
+school_count,Indicator,Number of schools,Absence fields,,0,,
+enrolment_count,Indicator,Number of pupil enrolments,Absence fields,,0,,
+phase_type_grouping,Filter,Establishment type,,,,Filter by school type,education_phase
