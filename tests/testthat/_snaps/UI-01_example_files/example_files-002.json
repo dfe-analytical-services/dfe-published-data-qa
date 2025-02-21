@@ -214,7 +214,7 @@
     }
   },
   "export": {
-    "advisory": 0,
+    "advisory": 1,
     "ancillary": 1,
     "failed": 1,
     "ignored": 17,

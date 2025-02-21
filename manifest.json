@@ -4460,7 +4460,7 @@
       "checksum": "e8d96d5ffd16a6867fd6d7458bd2f905"
     },
     ".Rprofile": {
-      "checksum": "9fceec89fc8b5d52ef7c4c3a93977990"
+      "checksum": "0587530efe121f6a5ba7a0d679c3be20"
     },
     "azure-pipelines-dev.yml": {
       "checksum": "fc2ef843ff5024bcba25ff84eec05f4c"
@@ -4475,10 +4475,10 @@
       "checksum": "5682faf1ad896a5e6a620b8a0a641bac"
     },
     "data/data-dictionary-col_names.csv": {
-      "checksum": "31d565a819730736cbcf5a38959d3398"
+      "checksum": "07bd7f8491206b440b99496f5a4dc43d"
     },
     "data/data-dictionary.csv": {
-      "checksum": "df33bc861055edae73296ea9d988c8e4"
+      "checksum": "8a73e3e7191eac68c369c0596c02c739"
     },
     "data/english_devolved_areas.csv": {
       "checksum": "af2472df19de0019e65403e28aeba279"
@@ -4490,7 +4490,7 @@
       "checksum": "dd655b6a3307ee538cbd412493345790"
     },
     "data/harmonised_col_names.csv": {
-      "checksum": "dbb72bdbeeeeb1fadf893986cd3d5905"
+      "checksum": "41851a6146f99429989752a3c3035f5e"
     },
     "data/lads.csv": {
       "checksum": "a83ae9b20279f744b432e14461bd8f51"
@@ -4543,8 +4543,8 @@
     "LICENSE": {
       "checksum": "51052a72b54c2e4bdddfb52762638274"
     },
-    "R/data-dictionary-tests.R": {
-      "checksum": "f504d58012d8b5b2f6f961d1608f883b"
+    "R/data-dictionary-checks.R": {
+      "checksum": "a10a1014fb3f6511069c330b7897dbff"
     },
     "R/fileValidation.r": {
       "checksum": "1c3a5b538aa71e2f377b4733e7c9a580"
@@ -4553,7 +4553,7 @@
       "checksum": "b9db57c3ebf85dabb5b9e96687206282"
     },
     "R/mainTests.r": {
-      "checksum": "c30889702cb26e49946d4d5052d3d1e9"
+      "checksum": "3279c4307dfea0757373dd1bf096a204"
     },
     "R/manual_scripts/debugging.R": {
       "checksum": "e56763afdf3659c7c47cfe0e3262e8cf"
@@ -4592,10 +4592,10 @@
       "checksum": "12e9b09de5275bdc13bde6ae5a82f8b1"
     },
     "tests/testthat/_snaps/UI-01_example_files/example_files-001.json": {
-      "checksum": "3824e397e0b583a9367e306830fccd72"
+      "checksum": "22ff3d638b5843f1a78622dd025b0718"
     },
     "tests/testthat/_snaps/UI-01_example_files/example_files-002.json": {
-      "checksum": "e79a0ba571bfbbe17386b6e9cadaa93d"
+      "checksum": "b5914fc5d94d8bce89231ee4dc168fec"
     },
     "tests/testthat/_snaps/UI-02_edge_cases/edge_cases-001.json": {
       "checksum": "75228173459ba6f210f07e7ce363ab5e"
@@ -4604,7 +4604,7 @@
       "checksum": "8e82eb783ac5fe41a1696cc821cf7bd8"
     },
     "tests/testthat/_snaps/UI-03_additional_qa/additional_qa-001.json": {
-      "checksum": "3e3031251aa12288bdab317303700581"
+      "checksum": "20c0f5431fdbd89c1ebdc70aeec5ff67"
     },
     "tests/testthat/_snaps/UI-03_additional_qa/additional_qa-002.json": {
       "checksum": "30383522e5488392defacb1599eec450"
@@ -4619,22 +4619,22 @@
       "checksum": "0a701ad840159e3259349124125bc541"
     },
     "tests/testthat/_snaps/UI-03_additional_qa/additional_qa-006.json": {
-      "checksum": "de1d2f7facf53a93501acbe7641fa1e3"
+      "checksum": "b247cb20535dfe732a14f2b9c8d7116c"
     },
     "tests/testthat/_snaps/UI-03_additional_qa/additional_qa-007.json": {
       "checksum": "984e2ca1ab29edfc839bbe0b936c2a95"
     },
     "tests/testthat/_snaps/UI-03_additional_qa/additional_qa-008.json": {
-      "checksum": "e61aabf3bd0318db9d517f6fd6be4a46"
+      "checksum": "7ba8eeb0c3cb2295059cbc1a6c538559"
     },
     "tests/testthat/_snaps/UI-03_additional_qa/additional_qa-009.json": {
       "checksum": "984e2ca1ab29edfc839bbe0b936c2a95"
     },
     "tests/testthat/_snaps/UI-03_additional_qa/additional_qa-010.json": {
-      "checksum": "ddc46b131ec95b0953ef2f4122b4e3a5"
+      "checksum": "d749a327de69b3d033b3d61142489ba0"
     },
     "tests/testthat/_snaps/UI-03_additional_qa/additional_qa-011.json": {
-      "checksum": "26fe7ed262a567297acd4b7d5c09952b"
+      "checksum": "2ec7a27c61caa42d21a78f077fa036a7"
     },
     "tests/testthat/fileValidation/data_empty_cols.csv": {
       "checksum": "9751119425e4ee601dd0aff4918876a0"
@@ -5489,10 +5489,10 @@
       "checksum": "0c3314120aca12add10371384a7514cc"
     },
     "tests/testthat/test-data/passes_everything.csv": {
-      "checksum": "5c810c1ab6be8ea4883d95ebb73f4f9e"
+      "checksum": "479229b899eefe206448d0785e8ec074"
     },
     "tests/testthat/test-data/passes_everything.meta.csv": {
-      "checksum": "0a3d92a3c6a90936f60bc0d65e0363ed"
+      "checksum": "1a0dc0d4c862e8e27768b5f30173fd1c"
     },
     "tests/testthat/test-data/passes_everything.meta.xlsx": {
       "checksum": "24406453569ad4ada9d7ee38b240522e"

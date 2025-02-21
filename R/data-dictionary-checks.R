@@ -1,6 +1,15 @@
 # Data dictionary
 read_data_dictionary <- function() {
-  readr::read_csv("data/data-dictionary.csv")
+  dd_file <- "data/data-dictionary.csv"
+  if (!file.exists(dd_file)) {
+    # Quick fix for running tests from testthat folder. Will be a better way to do this,
+    # but going to wait for someone to tell me what that is rather than spending time on
+    # StackOverflow.
+    # Since realised that it could go in known variables, but part of me wants it here to
+    # make it clearer what needs moving over to the package for these checks.
+    dd_file <- "../../data/data-dictionary.csv"
+  }
+  suppressWarnings(readr::read_csv(dd_file, col_types = cols()))
 }
 
 data_dictionary_col_names <- function(data_dictionary) {
@@ -81,14 +90,14 @@ data_dictionary_col_name_check <- function(meta) {
     output <- list(
       "message" = paste(
         "The folling column(s) are not present in the data dictionary",
-        "and should not be used as part of an API data set until resolved:\n",
+        "and should not be used as part of an API data set until resolved.\n",
         "Indicators:",
         ifelse(non_standard_indicators != "", non_standard_indicators, "PASSED"),
         "\n",
         "Filters:",
         ifelse(non_standard_filters != "", non_standard_filters, "PASSED")
       ),
-      "result" = "WARNING"
+      "result" = "ADVISORY"
     )
   }
   return(output)
@@ -104,8 +113,7 @@ data_dictionary_filter_item_check <- function(
   dd_cols_present <- data_dictionary_match_columns(meta, dd) |>
     dplyr::filter(!is.na(standard_col), col_type == "Filter")
   dd_filter_items <- data_dictionary_filter_items(dd)
-
-  if (nrow(data_dictionary_cols_present) == 0) {
+  if (nrow(dd_cols_present) == 0) {
     output <- list(
       "message" = "No data dictionary columns found.",
       "result" = "SKIPPED"
@@ -127,14 +135,16 @@ data_dictionary_filter_item_check <- function(
       non_standard_filter_items <- non_standard_filter_items |>
         dplyr::mutate(col_item_combo = paste0(col_name, "/", filter_item)) |>
         dplyr::pull(col_item_combo) |>
+        sort() |>
+        unique() |>
         paste(collapse = ", ")
       output <- list(
         "message" = paste(
           "The folling col_name/filter_item combination(s) are not present in the data dictionary",
-          "and should not be used as part of an API data set until resolved:\n",
+          "and should not be used as part of an API data set until resolved.\n",
           non_standard_filter_items
         ),
-        "result" = "WARNING"
+        "result" = "ADVISORY"
       )
     }
   }
