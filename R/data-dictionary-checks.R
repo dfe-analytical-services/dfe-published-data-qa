@@ -91,11 +91,8 @@ data_dictionary_col_name_check <- function(meta) {
       "message" = paste(
         "The folling column(s) are not present in the data dictionary",
         "and should not be used as part of an API data set until resolved.\n",
-        "Indicators:",
-        ifelse(non_standard_indicators != "", non_standard_indicators, "PASSED"),
-        "\n",
-        "Filters:",
-        ifelse(non_standard_filters != "", non_standard_filters, "PASSED")
+        ifelse(non_standard_indicators != "", paste("Indicators:", non_standard_indicators, "\n"), ""),
+        ifelse(non_standard_filters != "", paste("Filters:", non_standard_filters), "")
       ),
       "result" = "ADVISORY"
     )

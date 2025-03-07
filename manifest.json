@@ -4460,7 +4460,7 @@
       "checksum": "e8d96d5ffd16a6867fd6d7458bd2f905"
     },
     ".Rprofile": {
-      "checksum": "000b145ea8d4c4f49da3ad663e575d93"
+      "checksum": "918e6114fb3b0daea93d037cf0739834"
     },
     "azure-pipelines-dev.yml": {
       "checksum": "fc2ef843ff5024bcba25ff84eec05f4c"
@@ -4544,7 +4544,7 @@
       "checksum": "51052a72b54c2e4bdddfb52762638274"
     },
     "R/data-dictionary-checks.R": {
-      "checksum": "a10a1014fb3f6511069c330b7897dbff"
+      "checksum": "09f2fed5171e720f2f7ee43eaa7da84f"
     },
     "R/fileValidation.r": {
       "checksum": "1c3a5b538aa71e2f377b4733e7c9a580"
@@ -4553,7 +4553,7 @@
       "checksum": "b9db57c3ebf85dabb5b9e96687206282"
     },
     "R/mainTests.r": {
-      "checksum": "3279c4307dfea0757373dd1bf096a204"
+      "checksum": "7f7793ca4b5ab54d6dea34b20b754754"
     },
     "R/manual_scripts/debugging.R": {
       "checksum": "e56763afdf3659c7c47cfe0e3262e8cf"
