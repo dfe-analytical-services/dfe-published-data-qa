@@ -130,14 +130,14 @@ data_dictionary_filter_item_check <- function(
       )
     } else {
       non_standard_filter_items <- non_standard_filter_items |>
-        dplyr::mutate(col_item_combo = paste0(col_name, "/", filter_item)) |>
+        dplyr::mutate(col_item_combo = paste(col_name, "/", filter_item)) |>
         dplyr::pull(col_item_combo) |>
         sort() |>
         unique() |>
         paste(collapse = ", ")
       output <- list(
         "message" = paste(
-          "The folling col_name/filter_item combination(s) are not present in the data dictionary",
+          "The following col_name / filter_item combination(s) are not present in the <a href="https://github.com/dfe-analytical-services/dfe-published-data-qa/blob/main/data/data-dictionary.csv">data dictionary</a>",
           "and should not be used as part of an API data set until resolved.\n",
           non_standard_filter_items
         ),
