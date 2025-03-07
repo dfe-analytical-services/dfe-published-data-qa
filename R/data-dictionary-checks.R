@@ -133,7 +133,7 @@ data_dictionary_filter_item_check <- function(
       )
     } else {
       non_standard_filter_items <- non_standard_filter_items |>
-        dplyr::mutate(col_item_combo = paste0(col_name, "/", filter_item)) |>
+        dplyr::mutate(col_item_combo = paste(col_name, "/", filter_item)) |>
         dplyr::pull(col_item_combo) |>
         sort() |>
         unique() |>
