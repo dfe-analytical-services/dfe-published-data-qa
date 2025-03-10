@@ -4451,7 +4451,7 @@
       "checksum": "cbe2be338cd6586dc070e6a77e8e69ab"
     },
     ".github/workflows/automatedTests.yaml": {
-      "checksum": "640914e4ebbf38c8fa78f22b1e13273b"
+      "checksum": "da7874751f246d1b8b156fcffc0c879d"
     },
     ".github/workflows/deployShinyApps.yaml": {
       "checksum": "34dd2ba59d4373f48eb261774a600db1"
@@ -4460,7 +4460,7 @@
       "checksum": "e8d96d5ffd16a6867fd6d7458bd2f905"
     },
     ".Rprofile": {
-      "checksum": "14d362b20fdaa18d2d4560753831893b"
+      "checksum": "bd3c4a9b621a3bca79521d6b17c0b4ff"
     },
     "azure-pipelines-dev.yml": {
       "checksum": "fc2ef843ff5024bcba25ff84eec05f4c"
@@ -4590,6 +4590,51 @@
     },
     "tests/testthat.R": {
       "checksum": "12e9b09de5275bdc13bde6ae5a82f8b1"
+    },
+    "tests/testthat/_snaps/UI-01_example_files/example_files-001.json": {
+      "checksum": "3824e397e0b583a9367e306830fccd72"
+    },
+    "tests/testthat/_snaps/UI-01_example_files/example_files-002.json": {
+      "checksum": "9ac86d2b78d96aacaf8363e804ac1ae5"
+    },
+    "tests/testthat/_snaps/UI-02_edge_cases/edge_cases-001.json": {
+      "checksum": "75228173459ba6f210f07e7ce363ab5e"
+    },
+    "tests/testthat/_snaps/UI-02_edge_cases/edge_cases-002.json": {
+      "checksum": "8e82eb783ac5fe41a1696cc821cf7bd8"
+    },
+    "tests/testthat/_snaps/UI-03_additional_qa/additional_qa-001.json": {
+      "checksum": "7c095ca6b371b86863b21d750beb3b3c"
+    },
+    "tests/testthat/_snaps/UI-03_additional_qa/additional_qa-002.json": {
+      "checksum": "30383522e5488392defacb1599eec450"
+    },
+    "tests/testthat/_snaps/UI-03_additional_qa/additional_qa-003.json": {
+      "checksum": "0a701ad840159e3259349124125bc541"
+    },
+    "tests/testthat/_snaps/UI-03_additional_qa/additional_qa-004.json": {
+      "checksum": "0a701ad840159e3259349124125bc541"
+    },
+    "tests/testthat/_snaps/UI-03_additional_qa/additional_qa-005.json": {
+      "checksum": "0a701ad840159e3259349124125bc541"
+    },
+    "tests/testthat/_snaps/UI-03_additional_qa/additional_qa-006.json": {
+      "checksum": "feadbf5efab6adeebffe076f538cac87"
+    },
+    "tests/testthat/_snaps/UI-03_additional_qa/additional_qa-007.json": {
+      "checksum": "984e2ca1ab29edfc839bbe0b936c2a95"
+    },
+    "tests/testthat/_snaps/UI-03_additional_qa/additional_qa-008.json": {
+      "checksum": "e61aabf3bd0318db9d517f6fd6be4a46"
+    },
+    "tests/testthat/_snaps/UI-03_additional_qa/additional_qa-009.json": {
+      "checksum": "984e2ca1ab29edfc839bbe0b936c2a95"
+    },
+    "tests/testthat/_snaps/UI-03_additional_qa/additional_qa-010.json": {
+      "checksum": "84d5632a6099a8131a23dd74150de51e"
+    },
+    "tests/testthat/_snaps/UI-03_additional_qa/additional_qa-011.json": {
+      "checksum": "d1e7d5133c6d1d5481f37263cf69937a"
     },
     "tests/testthat/fileValidation/data_empty_cols.csv": {
       "checksum": "9751119425e4ee601dd0aff4918876a0"
