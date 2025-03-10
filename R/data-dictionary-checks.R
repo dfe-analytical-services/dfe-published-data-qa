@@ -89,9 +89,11 @@ check_data_dictionary_col_name <- function(meta) {
       paste(collapse = ", ")
     output <- list(
       "message" = paste(
-        "The following column(s) are not present in the <a href="https://github.com/dfe-analytical-services/dfe-published-data-qa/blob/main/data/data-dictionary.csv">data dictionary</a>",
-        "and should not be used as part of an API data set until resolved.\n",
-        ifelse(non_standard_indicators != "", paste("Indicators:", non_standard_indicators, "\n"), ""),
+        "The following column(s) are not present in the",
+        "<a href=\"https://github.com/dfe-analytical-services/dfe-published-data-qa/blob/main/data/data-dictionary.csv\">",
+        "data dictionary</a>",
+        "and should not be used as part of an API data set until resolved.<br>",
+        ifelse(non_standard_indicators != "", paste("Indicators:", non_standard_indicators, "<br>"), ""),
         ifelse(non_standard_filters != "", paste("Filters:", non_standard_filters), "")
       ),
       "result" = "ADVISORY"
@@ -138,7 +140,7 @@ check_data_dictionary_filter_item <- function(
       output <- list(
         "message" = paste(
           "The folling col_name/filter_item combination(s) are not present in the data dictionary",
-          "and should not be used as part of an API data set until resolved.\n",
+          "and should not be used as part of an API data set until resolved.<br>",
           non_standard_filter_items
         ),
         "result" = "ADVISORY"
