@@ -139,7 +139,9 @@ check_data_dictionary_filter_item <- function(
         paste(collapse = ", ")
       output <- list(
         "message" = paste(
-          "The folling col_name/filter_item combination(s) are not present in the data dictionary",
+          "The following col_name / filter_item combination(s) are not present in the",
+          "<a href=\"https://github.com/dfe-analytical-services/dfe-published-data-qa/blob/main/data/data-dictionary.csv\">",
+          "data dictionary</a>",
           "and should not be used as part of an API data set until resolved.<br>",
           non_standard_filter_items
         ),
