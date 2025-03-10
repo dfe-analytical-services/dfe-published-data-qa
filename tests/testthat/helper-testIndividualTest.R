@@ -17,7 +17,29 @@ testIndividualTestSeparate <- function(dataFilePath, metaFilePath, check) {
   inputMeta$name <- basename(inputMeta$datapath)
   data <- readFile(inputData$datapath)
   meta <- readFile(inputMeta$datapath)
-  return(screenFiles(inputData$name, inputMeta$name, data$fileSeparator, meta$fileSeparator, data$fileCharacter, meta$fileCharacter, data$mainFile, meta$mainFile)$results %>% filter(test == check) %>% pull(result) %>% unlist())
+  results <- screenFiles(
+    inputData$name,
+    inputMeta$name,
+    data$fileSeparator,
+    meta$fileSeparator,
+    data$fileCharacter,
+    meta$fileCharacter,
+    data$mainFile,
+    meta$mainFile
+  )$results
+  if (check %in% results$test) {
+    return(
+      results %>%
+        filter(test == check) %>%
+        pull(result) %>%
+        unlist()
+    )
+  } else {
+    warning_message <- paste(check, "not found in results")
+    warning(warning_message)
+    print(results$test |> unlist())
+    return(warning_message)
+  }
 }
 
 testOther <- function(dataFilePath) {

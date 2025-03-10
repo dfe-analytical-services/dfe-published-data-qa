@@ -4460,7 +4460,7 @@
       "checksum": "e8d96d5ffd16a6867fd6d7458bd2f905"
     },
     ".Rprofile": {
-      "checksum": "918e6114fb3b0daea93d037cf0739834"
+      "checksum": "c93034065423921eb0678638d088101f"
     },
     "azure-pipelines-dev.yml": {
       "checksum": "fc2ef843ff5024bcba25ff84eec05f4c"
@@ -4544,7 +4544,7 @@
       "checksum": "51052a72b54c2e4bdddfb52762638274"
     },
     "R/data-dictionary-checks.R": {
-      "checksum": "09f2fed5171e720f2f7ee43eaa7da84f"
+      "checksum": "b5d52ecdf95a4643308d5135daf8fc43"
     },
     "R/fileValidation.r": {
       "checksum": "1c3a5b538aa71e2f377b4733e7c9a580"
@@ -4553,7 +4553,7 @@
       "checksum": "b9db57c3ebf85dabb5b9e96687206282"
     },
     "R/mainTests.r": {
-      "checksum": "7f7793ca4b5ab54d6dea34b20b754754"
+      "checksum": "a646d9a6a563328b8e4bceb72a382a7a"
     },
     "R/manual_scripts/debugging.R": {
       "checksum": "e56763afdf3659c7c47cfe0e3262e8cf"
@@ -4715,7 +4715,7 @@
       "checksum": "3057f1984836d5e7e4e39cd1209c7e20"
     },
     "tests/testthat/helper-testIndividualTest.R": {
-      "checksum": "3d731ada5af263990e44f7a64de6fc29"
+      "checksum": "f05ff5d17c4cfaa94a1cffe6a9057e26"
     },
     "tests/testthat/mainTests/blanks_filters.csv": {
       "checksum": "6c23e80923b01906322026bea5226d40"
@@ -4728,6 +4728,18 @@
     },
     "tests/testthat/mainTests/blanks_indicators.meta.csv": {
       "checksum": "f5330238aae98d474c2366c093502fd5"
+    },
+    "tests/testthat/mainTests/check_data_dictionary_col_name.csv": {
+      "checksum": "1f14c7e80a90d0ec9fe63a621baaff6a"
+    },
+    "tests/testthat/mainTests/check_data_dictionary_col_name.meta.csv": {
+      "checksum": "6787c888ec19aeacdaeaa5066936ecff"
+    },
+    "tests/testthat/mainTests/check_data_dictionary_filter_item.csv": {
+      "checksum": "6dd34c983e43568d02408b34069e78ba"
+    },
+    "tests/testthat/mainTests/check_data_dictionary_filter_item.meta.csv": {
+      "checksum": "1a0dc0d4c862e8e27768b5f30173fd1c"
     },
     "tests/testthat/mainTests/col_name_duplicate.csv": {
       "checksum": "34b34be457d8e3d94c95857cc52d719c"
@@ -4746,18 +4758,6 @@
     },
     "tests/testthat/mainTests/country_combinations.meta.csv": {
       "checksum": "3057f1984836d5e7e4e39cd1209c7e20"
-    },
-    "tests/testthat/mainTests/data_dictionary_col_name_check.csv": {
-      "checksum": "4de88818abdd6885fe560175a29e893e"
-    },
-    "tests/testthat/mainTests/data_dictionary_col_name_check.meta.csv": {
-      "checksum": "8d4fe59cea8c3e7a7c281a5e2359e8a6"
-    },
-    "tests/testthat/mainTests/data_dictionary_filter_item_check.csv": {
-      "checksum": "6dd34c983e43568d02408b34069e78ba"
-    },
-    "tests/testthat/mainTests/data_dictionary_filter_item_check.meta.csv": {
-      "checksum": "1a0dc0d4c862e8e27768b5f30173fd1c"
     },
     "tests/testthat/mainTests/data_to_meta_crosscheck.csv": {
       "checksum": "2daa16e14ada6bd45076a6e0a3aa31eb"
@@ -5537,7 +5537,7 @@
       "checksum": "0ad4c6ef88604b628207156991a92349"
     },
     "tests/testthat/test-function-mainTests.R": {
-      "checksum": "d360393750c1b111c8705f5b2b0bee83"
+      "checksum": "b568f7ba7bdb752e44d7563f8ce328b8"
     },
     "tests/testthat/test-function-preCheck1.R": {
       "checksum": "ecc3826341427734e1a8f097c1e1e6f8"

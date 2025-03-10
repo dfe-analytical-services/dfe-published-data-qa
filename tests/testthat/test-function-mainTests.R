@@ -362,23 +362,23 @@ test_that("indicator_dp_nonInteger", {
   expect_equal(testIndividualTestSeparate(paste0(pathStart, "indicator_dp_nonInteger.csv"), paste0(pathStart, "indicator_dp_nonInteger.meta.csv"), "indicator_dp_validation"), "FAIL")
 })
 
-test_that("data_dictionary_col_name_check", {
+test_that("check_data_dictionary_col_name", {
   expect_equal(
     testIndividualTestSeparate(
-      paste0(pathStart, "data_dictionary_col_name_check.csv"),
-      paste0(pathStart, "data_dictionary_col_name_check.meta.csv"),
-      "data_dictionary_col_name_check"
+      paste0(pathStart, "check_data_dictionary_col_name.csv"),
+      paste0(pathStart, "check_data_dictionary_col_name.meta.csv"),
+      "check_data_dictionary_col_name"
     ),
     "ADVISORY"
   )
 })
 
-test_that("data_dictionary_filter_item_check", {
+test_that("check_data_dictionary_filter_item", {
   expect_equal(
     testIndividualTestSeparate(
-      paste0(pathStart, "data_dictionary_filter_item_check.csv"),
-      paste0(pathStart, "data_dictionary_filter_item_check.meta.csv"),
-      "data_dictionary_filter_item_check"
+      paste0(pathStart, "check_data_dictionary_filter_item.csv"),
+      paste0(pathStart, "check_data_dictionary_filter_item.meta.csv"),
+      "check_data_dictionary_filter_item"
     ),
     "ADVISORY"
   )

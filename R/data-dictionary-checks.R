@@ -67,7 +67,7 @@ data_dictionary_match_columns <- function(meta, data_dictionary) {
 # @description All filter col_names should be correspond to entries in the data
 # dictionary. This function takes a files meta data and validates the col_name
 # entries against the data dictionary.
-data_dictionary_col_name_check <- function(meta) {
+check_data_dictionary_col_name <- function(meta) {
   # Collapse search terms for bad column names into regex term
   data_dictionary <- read_data_dictionary()
   non_standard_col_names <- data_dictionary_match_columns(meta, data_dictionary) |>
@@ -100,7 +100,7 @@ data_dictionary_col_name_check <- function(meta) {
   return(output)
 }
 
-data_dictionary_filter_item_check <- function(
+check_data_dictionary_filter_item <- function(
     data,
     meta,
     group_field = "breakdown_topic",
@@ -130,14 +130,14 @@ data_dictionary_filter_item_check <- function(
       )
     } else {
       non_standard_filter_items <- non_standard_filter_items |>
-        dplyr::mutate(col_item_combo = paste(col_name, "/", filter_item)) |>
+        dplyr::mutate(col_item_combo = paste0(col_name, "/", filter_item)) |>
         dplyr::pull(col_item_combo) |>
         sort() |>
         unique() |>
         paste(collapse = ", ")
       output <- list(
         "message" = paste(
-          "The following col_name / filter_item combination(s) are not present in the <a href="https://github.com/dfe-analytical-services/dfe-published-data-qa/blob/main/data/data-dictionary.csv">data dictionary</a>",
+          "The folling col_name/filter_item combination(s) are not present in the data dictionary",
           "and should not be used as part of an API data set until resolved.\n",
           non_standard_filter_items
         ),
