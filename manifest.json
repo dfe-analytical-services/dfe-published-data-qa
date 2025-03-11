@@ -646,39 +646,40 @@
       }
     },
     "chromote": {
-      "Source": "CRAN",
-      "Repository": "https://packagemanager.posit.co/cran/latest",
+      "Source": "github",
+      "Repository": null,
       "description": {
         "Package": "chromote",
         "Title": "Headless Chrome Web Browser Interface",
-        "Version": "0.3.1",
+        "Version": "0.4.0.9000",
         "Authors@R": "c(\n    person(\"Winston\", \"Chang\", , \"winston@posit.co\", role = c(\"aut\", \"cre\")),\n    person(\"Barret\", \"Schloerke\", , \"barret@posit.co\", role = \"aut\",\n           comment = c(ORCID = \"0000-0001-9986-114X\")),\n    person(\"Garrick\", \"Aden-Buie\", , \"garrick@posit.co\", role = \"aut\",\n           comment = c(ORCID = \"0000-0002-7111-0077\")),\n    person(\"Posit Software, PBC\", role = c(\"cph\", \"fnd\"))\n  )",
         "Description": "An implementation of the 'Chrome DevTools Protocol', for\n    controlling a headless Chrome web browser.",
         "License": "GPL-2",
         "URL": "https://rstudio.github.io/chromote/,\nhttps://github.com/rstudio/chromote",
         "BugReports": "https://github.com/rstudio/chromote/issues",
-        "Imports": "curl, fastmap, jsonlite, later (>= 1.1.0), magrittr, processx,\npromises (>= 1.1.1), R6, rlang, utils, websocket (>= 1.2.0)",
-        "Suggests": "showimage, testthat (>= 3.0.0)",
+        "Imports": "cli,\ncurl,\nfastmap,\njsonlite,\nlater (>= 1.1.0),\nmagrittr,\nprocessx,\npromises (>= 1.1.1),\nR6,\nrlang (>= 1.1.0),\nutils,\nwebsocket (>= 1.2.0),\nwithr,\nzip",
+        "Suggests": "showimage,\ntestthat (>= 3.0.0)",
         "Config/Needs/website": "tidyverse/tidytemplate",
         "Config/testthat/edition": "3",
         "Encoding": "UTF-8",
         "Language": "en-US",
+        "Roxygen": "list(markdown = TRUE)",
         "RoxygenNote": "7.3.2",
         "SystemRequirements": "Google Chrome or other Chromium-based browser.\nchromium: chromium (rpm) or chromium-browser (deb)",
-        "NeedsCompilation": "no",
-        "Packaged": "2024-08-29 17:52:08 UTC; garrick",
         "Author": "Winston Chang [aut, cre],\n  Barret Schloerke [aut] (<https://orcid.org/0000-0001-9986-114X>),\n  Garrick Aden-Buie [aut] (<https://orcid.org/0000-0002-7111-0077>),\n  Posit Software, PBC [cph, fnd]",
         "Maintainer": "Winston Chang <winston@posit.co>",
-        "Repository": "CRAN",
-        "Date/Publication": "2024-08-30 07:10:02 UTC",
-        "Built": "R 4.4.1; ; 2024-09-02 01:06:33 UTC; windows",
-        "RemoteType": "standard",
-        "RemotePkgRef": "chromote",
-        "RemoteRef": "chromote",
-        "RemoteRepos": "https://cran.rstudio.com",
-        "RemoteReposName": "CRAN",
-        "RemotePkgPlatform": "x86_64-w64-mingw32",
-        "RemoteSha": "0.3.1"
+        "Built": "R 4.4.2; ; 2025-03-10 17:40:46 UTC; windows",
+        "RemoteType": "github",
+        "RemoteHost": "api.github.com",
+        "RemoteUsername": "rstudio",
+        "RemoteRepo": "chromote",
+        "RemoteRef": "main",
+        "RemoteSha": "58df8f6dcd3f2578e3daaf0e703e397e5bdbcafd",
+        "GithubHost": "api.github.com",
+        "GithubRepo": "chromote",
+        "GithubUsername": "rstudio",
+        "GithubRef": "main",
+        "GithubSHA1": "58df8f6dcd3f2578e3daaf0e703e397e5bdbcafd"
       }
     },
     "cli": {
@@ -4451,7 +4452,7 @@
       "checksum": "cbe2be338cd6586dc070e6a77e8e69ab"
     },
     ".github/workflows/automatedTests.yaml": {
-      "checksum": "c9fb7a66078b9bade95293daf0a8f135"
+      "checksum": "6df79b2d0466291857128c2ececa620f"
     },
     ".github/workflows/deployShinyApps.yaml": {
       "checksum": "34dd2ba59d4373f48eb261774a600db1"
@@ -4460,7 +4461,7 @@
       "checksum": "e8d96d5ffd16a6867fd6d7458bd2f905"
     },
     ".Rprofile": {
-      "checksum": "e3822090a5613daeb4828055f502d80a"
+      "checksum": "8abdd4d5bee06ef6ccf0b83a3877e2c6"
     },
     "azure-pipelines-dev.yml": {
       "checksum": "fc2ef843ff5024bcba25ff84eec05f4c"
@@ -4583,7 +4584,7 @@
       "checksum": "49f84962c930a31bd04b66f5ec0855e8"
     },
     "renv.lock": {
-      "checksum": "4fdd4e1b952cd929d2ba64685af21c88"
+      "checksum": "f080a47c5395b98c883154316b43a6c3"
     },
     "server.R": {
       "checksum": "23fc15ec19183749d64db4406219fbc4"

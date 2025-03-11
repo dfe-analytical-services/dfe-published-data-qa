@@ -6,4 +6,4 @@ on:
 
 jobs:
   deploy:
-    uses: dfe-analytical-services/dfeshiny/.github/workflows/automated_tests_template.yaml@new-feature/automated-tests-template
+    uses: dfe-analytical-services/dfeshiny/.github/workflows/automated_tests_template.yaml@main
