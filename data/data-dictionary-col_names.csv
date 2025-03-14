@@ -1,0 +1,17 @@
+context,col_name,breakdown_label,known_aliases,search_string
+Establishment characteristics,establishment_type,Establishment type,,
+Establishment characteristics,establishment_type_group,Establishment type group,,
+Establishment characteristics,education_phase,Education phase,school_phase,phase
+Establishment characteristics,establishment_governance,Establishment governance,,
+Establishment characteristics,phase_type_grouping,Phase type grouping,,
+Personal characteristics,ethnicity_major,Ethnicity major,ethnicity|major_ethnicity,ethnic
+Personal characteristics,ethnicity_minor,Ethnicity minor,ethnicity|minor_ethnicity,ethnic
+Personal characteristics,ethnicity_detailed,Ethnicity detailed,ethnicity,ethnic
+Personal characteristics,minority_ethnic,Minority ethnic,,ethnic
+Personal characteristics,sen_provision,SEN provision,,
+Personal characteristics,sen_primary_need,SEN primary need,,
+Personal characteristics,sen_secondary_need,SEN secondary need,,
+Personal characteristics,sen_status,SEN status,,
+Qualifications,education_type_group,Education type group,broad_type_of_higher_education,
+Qualifications,education_type,Education type,type_of_higher_education,
+Qualifications,qualification_level,Qualification level,,

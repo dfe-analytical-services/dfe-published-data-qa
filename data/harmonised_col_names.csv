@@ -10,7 +10,6 @@ establishment_type,establishment_type_group
 provider_type,provider_type
 school_type,establishment_type
 school_type,establishment_type_group
-phase,education_phase
 ethnic,ethnicity_major
 ethnic,ethnicity_minor
 ethnic,ethnicity_detailed

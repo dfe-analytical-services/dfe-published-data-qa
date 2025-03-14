@@ -362,6 +362,29 @@ test_that("indicator_dp_nonInteger", {
   expect_equal(testIndividualTestSeparate(paste0(pathStart, "indicator_dp_nonInteger.csv"), paste0(pathStart, "indicator_dp_nonInteger.meta.csv"), "indicator_dp_validation"), "FAIL")
 })
 
+test_that("check_data_dictionary_col_name", {
+  expect_equal(
+    testIndividualTestSeparate(
+      paste0(pathStart, "check_data_dictionary_col_name.csv"),
+      paste0(pathStart, "check_data_dictionary_col_name.meta.csv"),
+      "check_data_dictionary_col_name"
+    ),
+    "ADVISORY"
+  )
+})
+
+test_that("check_data_dictionary_filter_item", {
+  expect_equal(
+    testIndividualTestSeparate(
+      paste0(pathStart, "check_data_dictionary_filter_item.csv"),
+      paste0(pathStart, "check_data_dictionary_filter_item.meta.csv"),
+      "check_data_dictionary_filter_item"
+    ),
+    "ADVISORY"
+  )
+})
+
+
 test_that("non_standard_headers", {
   expect_equal(
     testIndividualTestSeparate(
