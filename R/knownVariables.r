@@ -182,6 +182,7 @@ las <- suppressMessages(read_csv("data/las.csv"))
 lads <- suppressMessages(read_csv("data/lads.csv"))
 leps <- suppressMessages(read_csv("data/leps.csv"))
 edas <- suppressMessages(read_csv("data/english_devolved_areas.csv"))
+universal <- suppressMessages(read_csv("data/universal_geog_options.csv"))
 
 # PCons, this is quick and dirty, should move to use the ward / PCon / LAD / LA file instead
 # TODO: GitHub issue # 118
@@ -221,7 +222,10 @@ expected_eda_combinations <- unique(paste(
   edas$english_devolved_area_name
 ))
 
-expected_standard_geog_combinations <- c("z Not applicable", "z Unknown")
+expected_standard_geog_combinations <- unique(paste(
+  universal$code,
+  universal$name
+))
 
 # Reg-ex for ob units =================================================================================================
 potential_ob_units_regex <- "(^(sch|prov|inst|estab|reg|la|local|rsc|pcon|lep|mca|oa|ward|mat).*(name|code|urn|ukprn|number|upin|id)$)|(^(laestab|estab|sch|school|schools|prov|provider|providers|inst|institution|institutions|name|code|urn|ukprn|number|upin|id|region|la|lad|rsc|pcon|lep|mca|oa|ward|mat)$)"
