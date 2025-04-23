@@ -83,7 +83,10 @@ mainTests <- function(data_character, meta_character, datafile, metafile) {
 # Checking datafile for whether the variable names are following snake case
 
 variable_snake_case <- function(data) {
-  present_special_characters <- unique(unlist(str_split(gsub("[a-z0-9]|_", "", names(data)), ""), use.names = FALSE))
+  present_special_characters <- unique(unlist(
+    str_split(gsub("[a-z0-9]|_", "", names(data)), ""),
+    use.names = FALSE
+  ))
 
   if (length(present_special_characters) == 0) {
     output <- list(
@@ -93,12 +96,20 @@ variable_snake_case <- function(data) {
   } else {
     if (length(present_special_characters) == 1) {
       output <- list(
-        "message" = paste0("The following invalid character was found in the variable names of the data file: ", paste0("'", present_special_characters, collapse = "', '"), "'. <br> - Variable names should follow the snake_case convention and only contain lowercase letters, underscores or numbers."),
+        "message" = paste0(
+          "The following invalid character was found in the variable names of the data file: ",
+          paste0("'", present_special_characters, collapse = "', '"),
+          "'. <br> - Variable names should follow the snake_case convention and only contain lowercase letters, underscores or numbers."
+        ),
         "result" = "ADVISORY"
       )
     } else {
       output <- list(
-        "message" = paste0("The following invalid characters were found in the variable names of the data file: ", paste0("'", present_special_characters, collapse = "', '"), "'. <br> - Variable names should follow the snake_case convention and only contain lowercase letters, underscores or numbers."),
+        "message" = paste0(
+          "The following invalid characters were found in the variable names of the data file: ",
+          paste0("'", present_special_characters, collapse = "', '"),
+          "'. <br> - Variable names should follow the snake_case convention and only contain lowercase letters, underscores or numbers."
+        ),
         "result" = "ADVISORY"
       )
     }
@@ -128,12 +139,20 @@ variable_start_letter <- function(data) {
   } else {
     if (length(invalid_variables) == 1) {
       output <- list(
-        "message" = paste0("The following variable name starts with a character that isn't a lowercase letter: '", paste0(invalid_variables), "'. <br> - All variable names should start with a lowercase letter."),
+        "message" = paste0(
+          "The following variable name starts with a character that isn't a lowercase letter: '",
+          paste0(invalid_variables),
+          "'. <br> - All variable names should start with a lowercase letter."
+        ),
         "result" = "ADVISORY"
       )
     } else {
       output <- list(
-        "message" = paste0("The following variable names start with a character that isn't a lowercase letter: '", paste0(invalid_variables, collapse = "', '"), "'. <br> - All variable names should start with a lowercase letter."),
+        "message" = paste0(
+          "The following variable names start with a character that isn't a lowercase letter: '",
+          paste0(invalid_variables, collapse = "', '"),
+          "'. <br> - All variable names should start with a lowercase letter."
+        ),
         "result" = "ADVISORY"
       )
     }
@@ -146,7 +165,12 @@ variable_start_letter <- function(data) {
 # Checking datafile for presence of characteristic_group or characteristic filter fields
 
 variable_characteristic <- function(meta) {
-  if ("characteristic" %in% meta$colname | "characteristic_group" %in% meta$colname | "characteristic_group" %in% meta$filter_grouping_column) {
+  if (
+    "characteristic" %in%
+      meta$colname |
+      "characteristic_group" %in% meta$colname |
+      "characteristic_group" %in% meta$filter_grouping_column
+  ) {
     output <- list(
       "message" = paste(
         "The fields characteristic and/or characteristic_group have been included in the data.",
@@ -157,7 +181,9 @@ variable_characteristic <- function(meta) {
     )
   } else {
     output <- list(
-      "message" = paste0("Neither characteristic nor characteristic_group were found as listed filters in the meta data file."),
+      "message" = paste0(
+        "Neither characteristic nor characteristic_group were found as listed filters in the meta data file."
+      ),
       "result" = "PASS"
     )
   }
@@ -177,45 +203,65 @@ duplicate_rows <- function(data, meta) {
     filter(!is.na(filter_grouping_column) & filter_grouping_column != "") %>%
     pull(filter_grouping_column)
 
-  present_obUnits_filters <- intersect(c(acceptable_observational_units, filters, filter_groups), names(data))
+  present_obUnits_filters <- intersect(
+    c(acceptable_observational_units, filters, filter_groups),
+    names(data)
+  )
 
-  if (nrow(data %>% distinct(geographic_level)) == 1 &
-    data$geographic_level[1] %in% c("School", "Provider")
+  if (
+    nrow(data %>% distinct(geographic_level)) == 1 &
+      data$geographic_level[1] %in% c("School", "Provider")
   ) {
-    dupes <- suppressMessages(data %>%
-      filter(geographic_level != "Institution") %>%
-      filter(geographic_level != "Planning area") %>%
-      select(all_of(present_obUnits_filters)) %>%
-      get_dupes())
+    dupes <- suppressMessages(
+      data %>%
+        filter(geographic_level != "Institution") %>%
+        filter(geographic_level != "Planning area") %>%
+        select(all_of(present_obUnits_filters)) %>%
+        get_dupes()
+    )
 
     if (nrow(dupes) > 0) {
       output <- list(
-        "message" = paste("There are", comma_sep(nrow(dupes)), "duplicate rows in the data file. <br> - Note that Institution and Planning area level rows were not included in this test."),
+        "message" = paste(
+          "There are",
+          comma_sep(nrow(dupes)),
+          "duplicate rows in the data file. <br> - Note that Institution and Planning area level rows were not included in this test."
+        ),
         "result" = "FAIL"
       )
     } else {
       output <- list(
-        "message" = paste("There are no duplicate rows in the data file. <br> - Note that Institution and Planning area level rows were not included in this test."),
+        "message" = paste(
+          "There are no duplicate rows in the data file. <br> - Note that Institution and Planning area level rows were not included in this test."
+        ),
         "result" = "PASS"
       )
     }
   } else {
-    dupes <- suppressMessages(data %>%
-      filter(geographic_level != "School") %>%
-      filter(geographic_level != "Provider") %>%
-      filter(geographic_level != "Institution") %>%
-      filter(geographic_level != "Planning area") %>%
-      select(all_of(present_obUnits_filters)) %>%
-      get_dupes())
+    dupes <- suppressMessages(
+      data %>%
+        filter(geographic_level != "School") %>%
+        filter(geographic_level != "Provider") %>%
+        filter(geographic_level != "Institution") %>%
+        filter(geographic_level != "Planning area") %>%
+        select(all_of(present_obUnits_filters)) %>%
+        get_dupes()
+    )
 
     if (nrow(dupes) > 0) {
       output <- list(
-        "message" = paste("There are", comma_sep(nrow(dupes)), "duplicate rows in the data file. <br> - Note that School, Provider, Institution and Planning area level rows were not included in this test."),
+        "message" = paste(
+          "There are",
+          comma_sep(nrow(dupes)),
+          "duplicate rows in the data file. <br> - Note that School, Provider, Institution and Planning area level rows were not included in this test."
+        ),
         "result" = "FAIL"
       )
     } else {
       output <- list(
-        "message" = paste("There are no duplicate rows in the data file. <br> - Note that School, Provider, Institution and Planning area level rows were not included in this test."),
+        "message" = paste(
+          "There are no duplicate rows in the data file. <br> - Note that School, Provider, Institution and Planning area level rows were not included in this test."
+        ),
         "result" = "PASS"
       )
     }
@@ -243,7 +289,11 @@ data_to_meta_crosscheck <- function(data, meta) {
 
   present_ob_units <- c(
     intersect(acceptable_observational_units, names(data)),
-    names(data)[grepl(potential_ob_units_regex, names(data), ignore.case = TRUE)]
+    names(data)[grepl(
+      potential_ob_units_regex,
+      names(data),
+      ignore.case = TRUE
+    )]
   ) %>%
     unique()
 
@@ -265,12 +315,20 @@ data_to_meta_crosscheck <- function(data, meta) {
   } else {
     if (number_of_variables_not_in_meta == 1) {
       output <- list(
-        "message" = paste0("The following variable was found in the data file and isn't an observational unit, has only a single level, nor is represented in the metadata. <br> - Please check if this column is erroneous: '", paste0(data_variables_not_in_meta), "'."),
+        "message" = paste0(
+          "The following variable was found in the data file and isn't an observational unit, has only a single level, nor is represented in the metadata. <br> - Please check if this column is erroneous: '",
+          paste0(data_variables_not_in_meta),
+          "'."
+        ),
         "result" = "ADVISORY"
       )
     } else {
       output <- list(
-        "message" = paste0("The following variables were found in the data file and aren't observational units, have only a single level, nor are represented in the metadata. <br> - Please check if these columns are erroneous: '", paste0(data_variables_not_in_meta, collapse = "', '"), "'."),
+        "message" = paste0(
+          "The following variables were found in the data file and aren't observational units, have only a single level, nor are represented in the metadata. <br> - Please check if these columns are erroneous: '",
+          paste0(data_variables_not_in_meta, collapse = "', '"),
+          "'."
+        ),
         "result" = "ADVISORY"
       )
     }
@@ -321,24 +379,40 @@ total <- function(data, meta) {
 
       if (nrow(pre_result) == 1) {
         output <- list(
-          "message" = paste0("A 'Total' aggregation should be added in '", paste(missing_total, collapse = "', '"), "' if applicable."),
+          "message" = paste0(
+            "A 'Total' aggregation should be added in '",
+            paste(missing_total, collapse = "', '"),
+            "' if applicable."
+          ),
           "result" = "ADVISORY"
         )
       } else {
         if (length(filters) > 0 & length(filter_groups) > 0) {
           output <- list(
-            "message" = paste0("A 'Total' aggregation should be added in the following filters and groups if applicable: '", paste(missing_total, collapse = "', '"), "'."),
+            "message" = paste0(
+              "A 'Total' aggregation should be added in the following filters and groups if applicable: '",
+              paste(missing_total, collapse = "', '"),
+              "'."
+            ),
             "result" = "ADVISORY"
           )
         } else {
           if (length(filters) > 0) {
             output <- list(
-              "message" = paste0("A 'Total' aggregation should be added in the following filters if applicable: '", paste(missing_total, collapse = "', '"), "'."),
+              "message" = paste0(
+                "A 'Total' aggregation should be added in the following filters if applicable: '",
+                paste(missing_total, collapse = "', '"),
+                "'."
+              ),
               "result" = "ADVISORY"
             )
           } else {
             output <- list(
-              "message" = paste0("A 'Total' aggregation should be added in the following filters groups if applicable: '", paste(missing_total, collapse = "', '"), "'."),
+              "message" = paste0(
+                "A 'Total' aggregation should be added in the following filters groups if applicable: '",
+                paste(missing_total, collapse = "', '"),
+                "'."
+              ),
               "result" = "ADVISORY"
             )
           }
@@ -355,7 +429,13 @@ total <- function(data, meta) {
 
 observational_total <- function(data, meta) {
   observational_total_check <- function(i) {
-    if ("Total" %in% data[[i]] || "total" %in% data[[i]] || "all" %in% data[[i]] || "All" %in% data[[i]]) {
+    if (
+      "Total" %in%
+        data[[i]] ||
+        "total" %in% data[[i]] ||
+        "all" %in% data[[i]] ||
+        "All" %in% data[[i]]
+    ) {
       return("FAIL")
     } else {
       return("PASS")
@@ -374,7 +454,11 @@ observational_total <- function(data, meta) {
 
   present_ob_units <- c(
     intersect(acceptable_ob_units_sch_prov_filter, names(data)),
-    names(data)[grepl(potential_ob_units_regex, names(data), ignore.case = TRUE)]
+    names(data)[grepl(
+      potential_ob_units_regex,
+      names(data),
+      ignore.case = TRUE
+    )]
   ) %>%
     unique()
 
@@ -408,12 +492,20 @@ observational_total <- function(data, meta) {
 
     if (length(ob_units_with_total) == 1) {
       output <- list(
-        "message" = paste0("There are Total or All rows in the following observational unit column: '", paste(ob_units_with_total, collapse = "', '"), "'. <br> - These cells should be blank."),
+        "message" = paste0(
+          "There are Total or All rows in the following observational unit column: '",
+          paste(ob_units_with_total, collapse = "', '"),
+          "'. <br> - These cells should be blank."
+        ),
         "result" = "FAIL"
       )
     } else {
       output <- list(
-        "message" = paste0("There are Total or All rows in the following observational unit columns: '", paste(ob_units_with_total, collapse = "', '"), "'. <br> - These cells should be blank."),
+        "message" = paste0(
+          "There are Total or All rows in the following observational unit columns: '",
+          paste(ob_units_with_total, collapse = "', '"),
+          "'. <br> - These cells should be blank."
+        ),
         "result" = "FAIL"
       )
     }
@@ -437,10 +529,21 @@ null <- function(data, meta) {
   if ((TRUE %in% pre_result$data) & (TRUE %in% pre_result$meta)) {
     output <- list(
       "message" = paste0(
-        "The following problematic symbols were found in the data file: '", paste(pre_result %>% filter(data == TRUE) %>% pull(symbol), collapse = "', '"),
-        "'. <br> The following problematic symbols were found in the metadata file: '", paste(pre_result %>% filter(meta == TRUE) %>% pull(symbol), collapse = "', '"),
-        "'. <br> - Please refer to the ", "<a href='https://gss.civilservice.gov.uk/wp-content/uploads/2017/03/GSS-Website-Harmonised-Symbols-Supporting-Documentation.pdf' target='_blank'>GSS guidance document</a>",
-        " if you are unsure of how to represent missing data, or ", "<a href='mailto: explore.statistics@education.gov.uk'>contact us</a>", " for advice."
+        "The following problematic symbols were found in the data file: '",
+        paste(
+          pre_result %>% filter(data == TRUE) %>% pull(symbol),
+          collapse = "', '"
+        ),
+        "'. <br> The following problematic symbols were found in the metadata file: '",
+        paste(
+          pre_result %>% filter(meta == TRUE) %>% pull(symbol),
+          collapse = "', '"
+        ),
+        "'. <br> - Please refer to the ",
+        "<a href='https://gss.civilservice.gov.uk/wp-content/uploads/2017/03/GSS-Website-Harmonised-Symbols-Supporting-Documentation.pdf' target='_blank'>GSS guidance document</a>",
+        " if you are unsure of how to represent missing data, or ",
+        "<a href='mailto: explore.statistics@education.gov.uk'>contact us</a>",
+        " for advice."
       ),
       "result" = "FAIL"
     )
@@ -448,8 +551,13 @@ null <- function(data, meta) {
     if (TRUE %in% pre_result$data) {
       output <- list(
         "message" = paste0(
-          "The following problematic symbols were found in the data file: '", paste(pre_result %>% filter(data == TRUE) %>% pull(symbol), collapse = "', '"),
-          "'. <br> - Please refer to the ", "<a href='https://gss.civilservice.gov.uk/wp-content/uploads/2017/03/GSS-Website-Harmonised-Symbols-Supporting-Documentation.pdf' target='_blank'>GSS guidance document</a>",
+          "The following problematic symbols were found in the data file: '",
+          paste(
+            pre_result %>% filter(data == TRUE) %>% pull(symbol),
+            collapse = "', '"
+          ),
+          "'. <br> - Please refer to the ",
+          "<a href='https://gss.civilservice.gov.uk/wp-content/uploads/2017/03/GSS-Website-Harmonised-Symbols-Supporting-Documentation.pdf' target='_blank'>GSS guidance document</a>",
           " if you are unsure of how to represent missing data."
         ),
         "result" = "FAIL"
@@ -458,9 +566,14 @@ null <- function(data, meta) {
       if (TRUE %in% pre_result$meta) {
         output <- list(
           "message" = paste0(
-            "The following problematic symbols were found in the metadata file: '", paste(pre_result %>% filter(meta == TRUE) %>% pull(symbol), collapse = "', '"),
+            "The following problematic symbols were found in the metadata file: '",
+            paste(
+              pre_result %>% filter(meta == TRUE) %>% pull(symbol),
+              collapse = "', '"
+            ),
             "', please remove these from the file. <br> - If you are unsure on how or what to replace them with, please ",
-            "<a href='mailto: explore.statistics@education.gov.uk'>contact us</a>", " for advice."
+            "<a href='mailto: explore.statistics@education.gov.uk'>contact us</a>",
+            " for advice."
           ),
           "result" = "FAIL"
         )
@@ -496,12 +609,20 @@ obsolete_symbols <- function(data, meta) {
 
   if ("FAIL" %in% pre_result$values) {
     output <- list(
-      "message" = paste0("Obsolete symbols (one or more of ", paste0(legacy_gss_symbols, collapse = ", "), ") found in the indicator values, please refer to the GSS recommended symbols."),
+      "message" = paste0(
+        "Obsolete symbols (one or more of ",
+        paste0(legacy_gss_symbols, collapse = ", "),
+        ") found in the indicator values, please refer to the GSS recommended symbols."
+      ),
       "result" = "ADVISORY"
     )
   } else {
     output <- list(
-      "message" = paste("Obsolete symbols (i.e. ", paste0(legacy_gss_symbols, collapse = ", "), "), are not present in the indicator values."),
+      "message" = paste(
+        "Obsolete symbols (i.e. ",
+        paste0(legacy_gss_symbols, collapse = ", "),
+        "), are not present in the indicator values."
+      ),
       "result" = "PASS"
     )
   }
@@ -515,7 +636,10 @@ obsolete_symbols <- function(data, meta) {
 no_data_symbols <- function(data) {
   old_no_data_symbols <- c("N/A", "n/a", ".", "..", "-")
 
-  pre_result <- as_tibble(cbind("symbol" = old_no_data_symbols, "found" = old_no_data_symbols %in% unlist(data, use.names = FALSE)))
+  pre_result <- as_tibble(cbind(
+    "symbol" = old_no_data_symbols,
+    "found" = old_no_data_symbols %in% unlist(data, use.names = FALSE)
+  ))
 
   if (all(pre_result$found == FALSE)) {
     output <- list(
@@ -529,12 +653,24 @@ no_data_symbols <- function(data) {
 
     if (length(present_legacy_symbols == 1)) {
       output <- list(
-        "message" = paste0("The following legacy symbol was found in the data: '", paste0(present_legacy_symbols, collapse = "', '"), "'. <br> - Please check the ", "<a href='https://gss.civilservice.gov.uk/wp-content/uploads/2017/03/GSS-Website-Harmonised-Symbols-Supporting-Documentation.pdf' target='_blank'>GSS guidance</a>", " for advice on the symbols to use for no data."),
+        "message" = paste0(
+          "The following legacy symbol was found in the data: '",
+          paste0(present_legacy_symbols, collapse = "', '"),
+          "'. <br> - Please check the ",
+          "<a href='https://gss.civilservice.gov.uk/wp-content/uploads/2017/03/GSS-Website-Harmonised-Symbols-Supporting-Documentation.pdf' target='_blank'>GSS guidance</a>",
+          " for advice on the symbols to use for no data."
+        ),
         "result" = "ADVISORY"
       )
     } else {
       output <- list(
-        "message" = paste0("The following legacy symbols have been found in the data: '", paste0(present_legacy_symbols, collapse = "', '"), "'. <br> - Please check the ", "<a href='https://gss.civilservice.gov.uk/wp-content/uploads/2017/03/GSS-Website-Harmonised-Symbols-Supporting-Documentation.pdf' target='_blank'>GSS guidance</a>", " for advice on the symbols to use for no data."),
+        "message" = paste0(
+          "The following legacy symbols have been found in the data: '",
+          paste0(present_legacy_symbols, collapse = "', '"),
+          "'. <br> - Please check the ",
+          "<a href='https://gss.civilservice.gov.uk/wp-content/uploads/2017/03/GSS-Website-Harmonised-Symbols-Supporting-Documentation.pdf' target='_blank'>GSS guidance</a>",
+          " for advice on the symbols to use for no data."
+        ),
         "result" = "ADVISORY"
       )
     }
@@ -580,12 +716,20 @@ blanks_filters <- function(data, meta) {
     } else {
       if (length(filters_with_blanks) == 1) {
         output <- list(
-          "message" = paste0("There are blanks in the following filter or filter group: '", paste(filters_with_blanks, collapse = "', '"), "'. <br> - These cells must have a value. If they represent no specific breakdown, such as 'all genders' then you should use 'Total'."),
+          "message" = paste0(
+            "There are blanks in the following filter or filter group: '",
+            paste(filters_with_blanks, collapse = "', '"),
+            "'. <br> - These cells must have a value. If they represent no specific breakdown, such as 'all genders' then you should use 'Total'."
+          ),
           "result" = "FAIL"
         )
       } else {
         output <- list(
-          "message" = paste0("There are blanks in the following filters or filter groups: '", paste(filters_with_blanks, collapse = "', '"), "'. <br> - These cells must have a value. If they represent no specific breakdown, such as 'all genders' then you should use 'Total'."),
+          "message" = paste0(
+            "There are blanks in the following filters or filter groups: '",
+            paste(filters_with_blanks, collapse = "', '"),
+            "'. <br> - These cells must have a value. If they represent no specific breakdown, such as 'all genders' then you should use 'Total'."
+          ),
           "result" = "FAIL"
         )
       }
@@ -624,12 +768,24 @@ blanks_indicators <- function(data, meta) {
   } else {
     if (length(indicators_with_blanks) == 1) {
       output <- list(
-        "message" = paste0("There are blanks in the following indicator: '", paste(indicators_with_blanks, collapse = "', '"), "'. <br> - Blank cells are problematic and must be avoided. <br> - Please check the ", "<a href='https://gss.civilservice.gov.uk/wp-content/uploads/2017/03/GSS-Website-Harmonised-Symbols-Supporting-Documentation.pdf' target='_blank'>GSS guidance</a>", " for advice on the symbols to use for no data."),
+        "message" = paste0(
+          "There are blanks in the following indicator: '",
+          paste(indicators_with_blanks, collapse = "', '"),
+          "'. <br> - Blank cells are problematic and must be avoided. <br> - Please check the ",
+          "<a href='https://gss.civilservice.gov.uk/wp-content/uploads/2017/03/GSS-Website-Harmonised-Symbols-Supporting-Documentation.pdf' target='_blank'>GSS guidance</a>",
+          " for advice on the symbols to use for no data."
+        ),
         "result" = "FAIL"
       )
     } else {
       output <- list(
-        "message" = paste0("There are blanks in the following indicators: '", paste(indicators_with_blanks, collapse = "', '"), "'. <br> - Blank cells are problematic and must be avoided. <br> - Please check the ", "<a href='https://gss.civilservice.gov.uk/wp-content/uploads/2017/03/GSS-Website-Harmonised-Symbols-Supporting-Documentation.pdf' target='_blank'>GSS guidance</a>", " for advice on the symbols to use for no data."),
+        "message" = paste0(
+          "There are blanks in the following indicators: '",
+          paste(indicators_with_blanks, collapse = "', '"),
+          "'. <br> - Blank cells are problematic and must be avoided. <br> - Please check the ",
+          "<a href='https://gss.civilservice.gov.uk/wp-content/uploads/2017/03/GSS-Website-Harmonised-Symbols-Supporting-Documentation.pdf' target='_blank'>GSS guidance</a>",
+          " for advice on the symbols to use for no data."
+        ),
         "result" = "FAIL"
       )
     }
@@ -647,9 +803,16 @@ time_period <- function(data) {
   time_length[["digits"]] <- str_count(time_length[["time_period"]])
 
   if (base_identifier %in% four_digit_identifiers) {
-    if ((nrow(filter(time_length, digits == 4)) == nrow(time_length)) == FALSE) {
+    if (
+      (nrow(filter(time_length, digits == 4)) == nrow(time_length)) == FALSE
+    ) {
       output <- list(
-        "message" = paste0("The time_period length for '", paste(base_identifier), "' must always be a four digit number. <br> - Please check the ", "<a href='https://dfe-analytical-services.github.io/analysts-guide/statistics-production/ud.html#list-of-allowable-time-values' target='_blank'>guidance website</a> if you are unsure."),
+        "message" = paste0(
+          "The time_period length for '",
+          paste(base_identifier),
+          "' must always be a four digit number. <br> - Please check the ",
+          "<a href='https://dfe-analytical-services.github.io/analysts-guide/statistics-production/ud.html#list-of-allowable-time-values' target='_blank'>guidance website</a> if you are unsure."
+        ),
         "result" = "FAIL"
       )
     } else {
@@ -661,9 +824,16 @@ time_period <- function(data) {
   }
 
   if (base_identifier %in% six_digit_identifiers) {
-    if ((nrow(filter(time_length, digits == 6)) == nrow(time_length)) == FALSE) {
+    if (
+      (nrow(filter(time_length, digits == 6)) == nrow(time_length)) == FALSE
+    ) {
       output <- list(
-        "message" = paste0("The time_period length for '", paste(base_identifier), "' must always be a six digit number. <br> - Please check the ", "<a href='https://dfe-analytical-services.github.io/analysts-guide/statistics-production/ud.html#list-of-allowable-time-values' target='_blank'>guidance website</a> if you are unsure."),
+        "message" = paste0(
+          "The time_period length for '",
+          paste(base_identifier),
+          "' must always be a six digit number. <br> - Please check the ",
+          "<a href='https://dfe-analytical-services.github.io/analysts-guide/statistics-production/ud.html#list-of-allowable-time-values' target='_blank'>guidance website</a> if you are unsure."
+        ),
         "result" = "FAIL"
       )
     } else {
@@ -700,7 +870,10 @@ time_period_six <- function(data) {
     }
   }
 
-  pre_result <- sapply(unique(six_digit_years$time_period), time_period_six_check)
+  pre_result <- sapply(
+    unique(six_digit_years$time_period),
+    time_period_six_check
+  )
 
   if (nrow(filter(time_length, digits == 6)) == 0) {
     output <- list(
@@ -730,7 +903,9 @@ time_period_six <- function(data) {
 region_for_la <- function(data) {
   if (!"Local authority" %in% unique(data$geographic_level)) {
     output <- list(
-      "message" = paste("There is no Local authority level data in the data file."),
+      "message" = paste(
+        "There is no Local authority level data in the data file."
+      ),
       "result" = "IGNORE"
     )
   } else {
@@ -738,7 +913,9 @@ region_for_la <- function(data) {
 
     if (!("region_code" %in% names(data)) | !("region_name" %in% names(data))) {
       output <- list(
-        "message" = paste("Both region_code and region_name are missing from the data file. <br> - Regional information should ideally be given for all Local authority level data."),
+        "message" = paste(
+          "Both region_code and region_name are missing from the data file. <br> - Regional information should ideally be given for all Local authority level data."
+        ),
         "result" = "ADVISORY"
       )
     } else {
@@ -751,12 +928,16 @@ region_for_la <- function(data) {
 
       if (missing_region_codes > 0 & missing_region_names > 0) {
         output <- list(
-          "message" = paste("Both region_code and region_name have missing values for Local authority rows in the data file. <br> - It is recommended to include the information from these columns for Local authority level data."),
+          "message" = paste(
+            "Both region_code and region_name have missing values for Local authority rows in the data file. <br> - It is recommended to include the information from these columns for Local authority level data."
+          ),
           "result" = "ADVISORY"
         )
       } else {
         output <- list(
-          "message" = paste("Both region_code and region_name are completed for all Local authority rows in the data file."),
+          "message" = paste(
+            "Both region_code and region_name are completed for all Local authority rows in the data file."
+          ),
           "result" = "PASS"
         )
       }
@@ -772,7 +953,9 @@ region_for_la <- function(data) {
 region_for_lad <- function(data) {
   if (!"Local authority district" %in% unique(data$geographic_level)) {
     output <- list(
-      "message" = paste("There is no Local authority district level data in the data file."),
+      "message" = paste(
+        "There is no Local authority district level data in the data file."
+      ),
       "result" = "IGNORE"
     )
   } else {
@@ -780,7 +963,9 @@ region_for_lad <- function(data) {
 
     if (!("region_code" %in% names(data)) | !("region_name" %in% names(data))) {
       output <- list(
-        "message" = paste("Both region_code and region_name are missing from the data file. <br> - Regional information should ideally be given for all Local authority district level data."),
+        "message" = paste(
+          "Both region_code and region_name are missing from the data file. <br> - Regional information should ideally be given for all Local authority district level data."
+        ),
         "result" = "ADVISORY"
       )
     } else {
@@ -793,12 +978,16 @@ region_for_lad <- function(data) {
 
       if (missing_region_codes > 0 & missing_region_names > 0) {
         output <- list(
-          "message" = paste("Both region_code and region_name have missing values for Local authority district rows in the data file. <br> - It is recommended to include the information from these columns for Local authority district level data."),
+          "message" = paste(
+            "Both region_code and region_name have missing values for Local authority district rows in the data file. <br> - It is recommended to include the information from these columns for Local authority district level data."
+          ),
           "result" = "ADVISORY"
         )
       } else {
         output <- list(
-          "message" = paste("Both region_code and region_name are completed for all Local authority district rows in the data file."),
+          "message" = paste(
+            "Both region_code and region_name are completed for all Local authority district rows in the data file."
+          ),
           "result" = "PASS"
         )
       }
@@ -838,12 +1027,20 @@ geography_level_completed <- function(data) {
   geography_completed <- geography_dataframe %>%
     select(-row_number) %>%
     mutate(
-      code_field = ifelse(geography_dataframe$code_field == "new_la_code", NA, geography_dataframe$code_field)
+      code_field = ifelse(
+        geography_dataframe$code_field == "new_la_code",
+        NA,
+        geography_dataframe$code_field
+      )
     ) %>% # Filter out new_la_code as that can be legitimately blank for old locations
     filter(!geographic_level %in% c("Planning area")) %>% # Filter out the non table tool rows
     as.matrix()
 
-  incomplete_geographies <- unlist(apply(geography_completed, 1, incomplete_cols))
+  incomplete_geographies <- unlist(apply(
+    geography_completed,
+    1,
+    incomplete_cols
+  ))
 
   if (length(incomplete_geographies) == 0) {
     output <- list(
@@ -853,13 +1050,25 @@ geography_level_completed <- function(data) {
   } else {
     if (length(incomplete_geographies) == 1) {
       output <- list(
-        "message" = paste0("The '", paste(incomplete_geographies), "' column should be completed for all '", paste(col_to_level_lookup %>% filter(cols == incomplete_geographies) %>% pull(levels)), "' rows."),
+        "message" = paste0(
+          "The '",
+          paste(incomplete_geographies),
+          "' column should be completed for all '",
+          paste(
+            col_to_level_lookup %>%
+              filter(cols == incomplete_geographies) %>%
+              pull(levels)
+          ),
+          "' rows."
+        ),
         "result" = "FAIL"
       )
     } else {
       output <- list(
         "message" = paste0(
-          "The following columns should be completed for all rows of the associated level that they refer to: <br> - '", paste0(incomplete_geographies, collapse = "', '"), "' . <br> - If you are unsure of the levels that they refer to, please check the ",
+          "The following columns should be completed for all rows of the associated level that they refer to: <br> - '",
+          paste0(incomplete_geographies, collapse = "', '"),
+          "' . <br> - If you are unsure of the levels that they refer to, please check the ",
           "<a href='https://dfe-analytical-services.github.io/analysts-guide/statistics-production/ud.html#allowable-geographic-levels' target='_blank'>allowable geographic values table</a>."
         ),
         "result" = "FAIL"
@@ -876,24 +1085,32 @@ geography_level_completed <- function(data) {
 region_col_present <- function(data) {
   if (("region_code" %in% names(data)) & ("region_name" %in% names(data))) {
     output <- list(
-      "message" = paste("Where one of region_code or region_name is present, the other column is also present."),
+      "message" = paste(
+        "Where one of region_code or region_name is present, the other column is also present."
+      ),
       "result" = "PASS"
     )
   } else {
     if ("region_name" %in% names(data)) {
       output <- list(
-        "message" = paste("Where region_name is included in the data file, region_code should also be included."),
+        "message" = paste(
+          "Where region_name is included in the data file, region_code should also be included."
+        ),
         "result" = "FAIL"
       )
     } else {
       if ("region_code" %in% names(data)) {
         output <- list(
-          "message" = paste("Where region_code is included in the data file, region_name should also be included."),
+          "message" = paste(
+            "Where region_code is included in the data file, region_name should also be included."
+          ),
           "result" = "FAIL"
         )
       } else {
         output <- list(
-          "message" = paste("No recognised Regional columns are present in this data file."),
+          "message" = paste(
+            "No recognised Regional columns are present in this data file."
+          ),
           "result" = "IGNORE"
         )
       }
@@ -926,7 +1143,10 @@ la_col_present <- function(data) {
             "result" = "FAIL"
           )
         } else {
-          if (!("new_la_code" %in% names(data)) & !("old_la_code" %in% names(data))) {
+          if (
+            !("new_la_code" %in% names(data)) &
+              !("old_la_code" %in% names(data))
+          ) {
             output <- list(
               "message" = "Where la_name is included in the data file, new_la_code and old_la_code should also be included.",
               "result" = "FAIL"
@@ -1007,7 +1227,12 @@ overcompleted_cols <- function(data, meta) {
 
     # Apply over every column in the matrixRow (geographic_level) being tested
     # Return any cols detected as overcompleted
-    pre_output <- sapply(c(1:length(cols)), col_completed, row = matrixRow, level_rows = level_rows)
+    pre_output <- sapply(
+      c(1:length(cols)),
+      col_completed,
+      row = matrixRow,
+      level_rows = level_rows
+    )
 
     return(pre_output)
   }
@@ -1028,7 +1253,12 @@ overcompleted_cols <- function(data, meta) {
 
     # Apply over every column in the matrixRow (geographic_level) being tested
 
-    pre_output <- sapply(c(1:length(cols)), col_completed, row = matrixRow, level_rows = level_rows)
+    pre_output <- sapply(
+      c(1:length(cols)),
+      col_completed,
+      row = matrixRow,
+      level_rows = level_rows
+    )
 
     return(pre_output)
   }
@@ -1056,9 +1286,13 @@ overcompleted_cols <- function(data, meta) {
       pull(filter_grouping_column)
 
     if (
-      matrixRow[3] %in% geography_matrix[14:15, 3] &
+      matrixRow[3] %in%
+        geography_matrix[14:15, 3] &
         length(filters) == 1 &
-        any(filters[1] %in% geography_matrix[14:15, 3], filter_groups[1] %in% geography_matrix[14:15, 3])
+        any(
+          filters[1] %in% geography_matrix[14:15, 3],
+          filter_groups[1] %in% geography_matrix[14:15, 3]
+        )
     ) {
       sch_prov_only_filter <- TRUE
     } else {
@@ -1068,9 +1302,19 @@ overcompleted_cols <- function(data, meta) {
     # Apply over every column in the matrixRow (geographic_level) being tested
 
     if (sch_prov_only_filter == TRUE) {
-      pre_output <- sapply(c(1, 3), col_completed, row = matrixRow, level_rows = level_rows)
+      pre_output <- sapply(
+        c(1, 3),
+        col_completed,
+        row = matrixRow,
+        level_rows = level_rows
+      )
     } else {
-      pre_output <- sapply(c(1:length(cols)), col_completed, row = matrixRow, level_rows = level_rows)
+      pre_output <- sapply(
+        c(1:length(cols)),
+        col_completed,
+        row = matrixRow,
+        level_rows = level_rows
+      )
     }
 
     return(pre_output)
@@ -1081,20 +1325,72 @@ overcompleted_cols <- function(data, meta) {
 
   overcomplete_geographies <- c(
     # Regional
-    unlist(level_overcomplete_cols(2, compatible_levels = c("Regional", "Local skills improvement plan area", "Local authority", "Local enterprise partnership", "Opportunity area", "Local authority district", "Parliamentary constituency", "English devolved area", "Ward", "School", "Provider", "Institution", "Planning area"))),
+    unlist(level_overcomplete_cols(
+      2,
+      compatible_levels = c(
+        "Regional",
+        "Local skills improvement plan area",
+        "Local authority",
+        "Local enterprise partnership",
+        "Opportunity area",
+        "Local authority district",
+        "Parliamentary constituency",
+        "English devolved area",
+        "Ward",
+        "School",
+        "Provider",
+        "Institution",
+        "Planning area"
+      )
+    )),
 
     # Local authority
-    unlist(level_overcomplete_cols(3, compatible_levels = c("Local authority", "Parliamentary constituency", "Local authority district", "Ward", "School", "Provider", "Institution", "Planning area"))),
+    unlist(level_overcomplete_cols(
+      3,
+      compatible_levels = c(
+        "Local authority",
+        "Parliamentary constituency",
+        "Local authority district",
+        "Ward",
+        "School",
+        "Provider",
+        "Institution",
+        "Planning area"
+      )
+    )),
 
     # LAD
-    unlist(level_overcomplete_cols(4, compatible_levels = c("Local authority district", "Ward", "School", "Provider", "Institution"))),
+    unlist(level_overcomplete_cols(
+      4,
+      compatible_levels = c(
+        "Local authority district",
+        "Ward",
+        "School",
+        "Provider",
+        "Institution"
+      )
+    )),
 
     # LSIP
-    unlist(level_overcomplete_cols(7, compatible_levels = c("Local skills improvement plan area", "Local authority district", "School", "Provider", "Institution", "Planning area"))),
+    unlist(level_overcomplete_cols(
+      7,
+      compatible_levels = c(
+        "Local skills improvement plan area",
+        "Local authority district",
+        "School",
+        "Provider",
+        "Institution",
+        "Planning area"
+      )
+    )),
 
     # Other levels tested using old code
     # forcing these into a matrix, otherwise just calling that row returns a vector that breaks the apply function
-    unlist(apply(geography_matrix[c(5, 6, 8:13, 17), ], 1, overcomplete_mid_cols)),
+    unlist(apply(
+      geography_matrix[c(5, 6, 8:13, 17), ],
+      1,
+      overcomplete_mid_cols
+    )),
     unlist(apply(geography_matrix[14:16, ], 1, overcomplete_low_cols))
   )
 
@@ -1106,12 +1402,24 @@ overcompleted_cols <- function(data, meta) {
   } else {
     if (length(overcomplete_geographies) == 1) {
       output <- list(
-        "message" = paste0("The '", paste(overcomplete_geographies), "' column is completed for unexpected geographic_level rows. <br> - Please ", "<a href='mailto: explore.statistics@education.gov.uk'>contact us</a>", " if you are unsure of how to fix this."),
+        "message" = paste0(
+          "The '",
+          paste(overcomplete_geographies),
+          "' column is completed for unexpected geographic_level rows. <br> - Please ",
+          "<a href='mailto: explore.statistics@education.gov.uk'>contact us</a>",
+          " if you are unsure of how to fix this."
+        ),
         "result" = "FAIL"
       )
     } else {
       output <- list(
-        "message" = paste0("The following columns are completed for unexpected geographic_level rows: '", paste0(overcomplete_geographies, collapse = "', '"), "'. <br> - Please ", "<a href='mailto: explore.statistics@education.gov.uk'>contact us</a>", " if you are unsure of how to fix this."),
+        "message" = paste0(
+          "The following columns are completed for unexpected geographic_level rows: '",
+          paste0(overcomplete_geographies, collapse = "', '"),
+          "'. <br> - Please ",
+          "<a href='mailto: explore.statistics@education.gov.uk'>contact us</a>",
+          " if you are unsure of how to fix this."
+        ),
         "result" = "FAIL"
       )
     }
@@ -1136,7 +1444,10 @@ ignored_rows <- function(data) {
     )
   } else {
     potential_ignored_rows <- data %>%
-      filter(geographic_level %in% c("School", "Provider", "Institution", "Planning area")) %>%
+      filter(
+        geographic_level %in%
+          c("School", "Provider", "Institution", "Planning area")
+      ) %>%
       nrow()
 
     if (potential_ignored_rows == 0) {
@@ -1148,22 +1459,33 @@ ignored_rows <- function(data) {
       levels_present <- data %>%
         distinct(geographic_level)
 
-      if (nrow(levels_present) == 1 & data$geographic_level[1] %in% c("School", "Provider")) {
+      if (
+        nrow(levels_present) == 1 &
+          data$geographic_level[1] %in% c("School", "Provider")
+      ) {
         output <- list(
           "message" = "No rows in the file will be ignored by the EES table tool.",
           "result" = "PASS"
         )
       } else {
-        if ("School" %in% levels_present$geographic_level & "Provider" %in% levels_present$geographic_level) {
+        if (
+          "School" %in%
+            levels_present$geographic_level &
+            "Provider" %in% levels_present$geographic_level
+        ) {
           output <- list(
-            "message" = paste("School and Provider data has been mixed - please contact the Explore education statistics platforms team."),
+            "message" = paste(
+              "School and Provider data has been mixed - please contact the Explore education statistics platforms team."
+            ),
             "result" = "FAIL"
           )
         } else {
           output <- list(
             "message" = paste0(
-              potential_ignored_rows, " rows of data will be ignored by the table tool. <br> - These will be at School, Provider, Institution and Planning area level. <br> - Please ",
-              "<a href='mailto: explore.statistics@education.gov.uk'>contact us</a>", " or see our ",
+              potential_ignored_rows,
+              " rows of data will be ignored by the table tool. <br> - These will be at School, Provider, Institution and Planning area level. <br> - Please ",
+              "<a href='mailto: explore.statistics@education.gov.uk'>contact us</a>",
+              " or see our ",
               "<a href='https://dfe-analytical-services.github.io/stats-production-guidance-copy/ud.html#Allowable_geographic_levels' target='_blank'>guidance website</a>", # a message that we should add the option to see those rows in another tab at some point
               " for more information."
             ),
@@ -1180,7 +1502,12 @@ ignored_rows <- function(data) {
 # checking that eda code and name combinations are valid
 
 eda_combinations <- function(data) {
-  if (!all(c("english_devolved_area_name", "english_devolved_area_code") %in% names(data))) {
+  if (
+    !all(
+      c("english_devolved_area_name", "english_devolved_area_code") %in%
+        names(data)
+    )
+  ) {
     output <- list(
       "message" = "This data file does not contain both english devolved area columns.",
       "result" = "IGNORE"
@@ -1189,12 +1516,19 @@ eda_combinations <- function(data) {
     invalid_values <- data %>%
       select("english_devolved_area_name", "english_devolved_area_code") %>%
       unique() %>%
-      .[!is.na(english_devolved_area_name) & !is.na(english_devolved_area_code)] %>%
+      .[
+        !is.na(english_devolved_area_name) & !is.na(english_devolved_area_code)
+      ] %>%
       filter(english_devolved_area_code != "") %>%
       filter(english_devolved_area_code != gssNAvcode) %>%
-      mutate(combo = paste(english_devolved_area_code, english_devolved_area_name)) %>%
+      mutate(
+        combo = paste(english_devolved_area_code, english_devolved_area_name)
+      ) %>%
       pull(combo) %>%
-      .[!(. %in% expected_eda_combinations)]
+      .[
+        !(. %in%
+          c(expected_eda_combinations, expected_standard_geog_combinations))
+      ]
 
     if (length(invalid_values) == 0) {
       output <- list(
@@ -1204,12 +1538,20 @@ eda_combinations <- function(data) {
     } else {
       if (length(invalid_values) == 1) {
         output <- list(
-          "message" = paste0("The following english_devolved_area_code and english_devolved_area_name combination is invalid: '", paste0(invalid_values), "'. <br> - We do not expect any combinations outside of the <a href='https://github.com/dfe-analytical-services/dfe-published-data-qa/blob/main/data/english_devolved_areas.csv' target='_blank'>standard geographies lookup</a> (case sensitive), please check your name and code combinations against this lookup."),
+          "message" = paste0(
+            "The following english_devolved_area_code and english_devolved_area_name combination is invalid: '",
+            paste0(invalid_values),
+            "'. <br> - We do not expect any combinations outside of the <a href='https://github.com/dfe-analytical-services/dfe-published-data-qa/blob/main/data/english_devolved_areas.csv' target='_blank'>standard geographies lookup</a> (case sensitive), please check your name and code combinations against this lookup."
+          ),
           "result" = "FAIL"
         )
       } else {
         output <- list(
-          "message" = paste0("The following english_devolved_area_code and english_devolved_area_name combinations are invalid: '", paste0(invalid_values, collapse = "', '"), "'. <br> - We do not expect any combinations outside of the <a href='https://github.com/dfe-analytical-services/dfe-published-data-qa/blob/main/data/english_devolved_areas.csv' target='_blank'>standard geographies lookup</a> (case sensitive), please check your name and code combinations against this lookup."),
+          "message" = paste0(
+            "The following english_devolved_area_code and english_devolved_area_name combinations are invalid: '",
+            paste0(invalid_values, collapse = "', '"),
+            "'. <br> - We do not expect any combinations outside of the <a href='https://github.com/dfe-analytical-services/dfe-published-data-qa/blob/main/data/english_devolved_areas.csv' target='_blank'>standard geographies lookup</a> (case sensitive), please check your name and code combinations against this lookup."
+          ),
           "result" = "FAIL"
         )
       }
@@ -1223,21 +1565,43 @@ eda_combinations <- function(data) {
 # checking that lep code and name combinations are valid
 
 lep_combinations <- function(data) {
-  if (!all(c("local_enterprise_partnership_name", "local_enterprise_partnership_code") %in% names(data))) {
+  if (
+    !all(
+      c(
+        "local_enterprise_partnership_name",
+        "local_enterprise_partnership_code"
+      ) %in%
+        names(data)
+    )
+  ) {
     output <- list(
       "message" = "This data file does not contain both local enterprise partnership columns.",
       "result" = "IGNORE"
     )
   } else {
     invalid_values <- data %>%
-      select("local_enterprise_partnership_name", "local_enterprise_partnership_code") %>%
+      select(
+        "local_enterprise_partnership_name",
+        "local_enterprise_partnership_code"
+      ) %>%
       unique() %>%
-      .[!is.na(local_enterprise_partnership_name) & !is.na(local_enterprise_partnership_code)] %>%
+      .[
+        !is.na(local_enterprise_partnership_name) &
+          !is.na(local_enterprise_partnership_code)
+      ] %>%
       filter(local_enterprise_partnership_code != "") %>%
       filter(local_enterprise_partnership_code != gssNAvcode) %>%
-      mutate(combo = paste(local_enterprise_partnership_code, local_enterprise_partnership_name)) %>%
+      mutate(
+        combo = paste(
+          local_enterprise_partnership_code,
+          local_enterprise_partnership_name
+        )
+      ) %>%
       pull(combo) %>%
-      .[!(. %in% expected_lep_combinations)]
+      .[
+        !(. %in%
+          c(expected_lep_combinations, expected_standard_geog_combinations))
+      ]
 
     if (length(invalid_values) == 0) {
       output <- list(
@@ -1247,12 +1611,20 @@ lep_combinations <- function(data) {
     } else {
       if (length(invalid_values) == 1) {
         output <- list(
-          "message" = paste0("The following local_enterprise_partnership_code and local_enterprise_partnership_name combination is invalid: '", paste0(invalid_values), "'. <br> - We do not expect any combinations outside of the <a href='https://github.com/dfe-analytical-services/dfe-published-data-qa/blob/main/data/leps.csv' target='_blank'>standard geographies lookup</a> (case sensitive), please check your name and code combinations against this lookup."),
+          "message" = paste0(
+            "The following local_enterprise_partnership_code and local_enterprise_partnership_name combination is invalid: '",
+            paste0(invalid_values),
+            "'. <br> - We do not expect any combinations outside of the <a href='https://github.com/dfe-analytical-services/dfe-published-data-qa/blob/main/data/leps.csv' target='_blank'>standard geographies lookup</a> (case sensitive), please check your name and code combinations against this lookup."
+          ),
           "result" = "FAIL"
         )
       } else {
         output <- list(
-          "message" = paste0("The following local_enterprise_partnership_code and local_enterprise_partnership_name combinations are invalid: '", paste0(invalid_values, collapse = "', '"), "'. <br> - We do not expect any combinations outside of the <a href='https://github.com/dfe-analytical-services/dfe-published-data-qa/blob/main/data/leps.csv' target='_blank'>standard geographies lookup</a> (case sensitive), please check your name and code combinations against this lookup."),
+          "message" = paste0(
+            "The following local_enterprise_partnership_code and local_enterprise_partnership_name combinations are invalid: '",
+            paste0(invalid_values, collapse = "', '"),
+            "'. <br> - We do not expect any combinations outside of the <a href='https://github.com/dfe-analytical-services/dfe-published-data-qa/blob/main/data/leps.csv' target='_blank'>standard geographies lookup</a> (case sensitive), please check your name and code combinations against this lookup."
+          ),
           "result" = "FAIL"
         )
       }
@@ -1280,7 +1652,10 @@ pcon_combinations <- function(data) {
       filter(pcon_code != gssNAvcode) %>%
       mutate(combo = paste(pcon_code, pcon_name)) %>%
       pull(combo) %>%
-      .[!(. %in% expected_pcon_combinations)]
+      .[
+        !(. %in%
+          c(expected_pcon_combinations, expected_standard_geog_combinations))
+      ]
 
     if (length(invalid_values) == 0) {
       output <- list(
@@ -1290,12 +1665,20 @@ pcon_combinations <- function(data) {
     } else {
       if (length(invalid_values) == 1) {
         output <- list(
-          "message" = paste0("The following pcon_code and pcon_name combination is invalid: '", paste0(invalid_values), "'. <br> - We do not expect any combinations outside of the <a href='https://github.com/dfe-analytical-services/dfe-published-data-qa/blob/main/data/pcons.csv' target='_blank'>standard geographies lookup</a> (case sensitive), please check your name and code combinations against this lookup."),
+          "message" = paste0(
+            "The following pcon_code and pcon_name combination is invalid: '",
+            paste0(invalid_values),
+            "'. <br> - We do not expect any combinations outside of the <a href='https://github.com/dfe-analytical-services/dfe-published-data-qa/blob/main/data/pcons.csv' target='_blank'>standard geographies lookup</a> (case sensitive), please check your name and code combinations against this lookup."
+          ),
           "result" = "FAIL"
         )
       } else {
         output <- list(
-          "message" = paste0("The following pcon_code and pcon_name combinations are invalid: '", paste0(invalid_values, collapse = "', '"), "'. <br> - We do not expect any combinations outside of the <a href='https://github.com/dfe-analytical-services/dfe-published-data-qa/blob/main/data/pcons.csv' target='_blank'>standard geographies lookup</a> (case sensitive), please check your name and code combinations against this lookup."),
+          "message" = paste0(
+            "The following pcon_code and pcon_name combinations are invalid: '",
+            paste0(invalid_values, collapse = "', '"),
+            "'. <br> - We do not expect any combinations outside of the <a href='https://github.com/dfe-analytical-services/dfe-published-data-qa/blob/main/data/pcons.csv' target='_blank'>standard geographies lookup</a> (case sensitive), please check your name and code combinations against this lookup."
+          ),
           "result" = "FAIL"
         )
       }
@@ -1323,7 +1706,10 @@ lad_combinations <- function(data) {
       filter(lad_code != gssNAvcode) %>%
       mutate(combo = paste(lad_code, lad_name)) %>%
       pull(combo) %>%
-      .[!(. %in% expected_lad_combinations)]
+      .[
+        !(. %in%
+          c(expected_lad_combinations, expected_standard_geog_combinations))
+      ]
 
     if (length(invalid_values) == 0) {
       output <- list(
@@ -1333,12 +1719,20 @@ lad_combinations <- function(data) {
     } else {
       if (length(invalid_values) == 1) {
         output <- list(
-          "message" = paste0("The following lad_code and lad_name combination is invalid: '", paste0(invalid_values), "'. <br> - We do not expect any combinations outside of the <a href='https://github.com/dfe-analytical-services/dfe-published-data-qa/blob/main/data/lads.csv' target='_blank'>standard geographies lookup</a> (case sensitive), please check your name and code combinations against this lookup."),
+          "message" = paste0(
+            "The following lad_code and lad_name combination is invalid: '",
+            paste0(invalid_values),
+            "'. <br> - We do not expect any combinations outside of the <a href='https://github.com/dfe-analytical-services/dfe-published-data-qa/blob/main/data/lads.csv' target='_blank'>standard geographies lookup</a> (case sensitive), please check your name and code combinations against this lookup."
+          ),
           "result" = "FAIL"
         )
       } else {
         output <- list(
-          "message" = paste0("The following lad_code and lad_name combinations are invalid: '", paste0(invalid_values, collapse = "', '"), "'. <br> - We do not expect any combinations outside of the <a href='https://github.com/dfe-analytical-services/dfe-published-data-qa/blob/main/data/lads.csv' target='_blank'>standard geographies lookup</a> (case sensitive), please check your name and code combinations against this lookup."),
+          "message" = paste0(
+            "The following lad_code and lad_name combinations are invalid: '",
+            paste0(invalid_values, collapse = "', '"),
+            "'. <br> - We do not expect any combinations outside of the <a href='https://github.com/dfe-analytical-services/dfe-published-data-qa/blob/main/data/lads.csv' target='_blank'>standard geographies lookup</a> (case sensitive), please check your name and code combinations against this lookup."
+          ),
           "result" = "FAIL"
         )
       }
@@ -1366,7 +1760,13 @@ la_combinations <- function(data) {
       filter(new_la_code != gssNAvcode) %>%
       mutate(combo = paste(old_la_code, new_la_code, la_name)) %>%
       pull(combo) %>%
-      .[!(. %in% expected_la_combinations)]
+      .[
+        !(. %in%
+          c(
+            expected_la_combinations,
+            paste("z", expected_standard_geog_combinations)
+          ))
+      ]
 
     if (length(invalid_values) == 0) {
       output <- list(
@@ -1376,12 +1776,20 @@ la_combinations <- function(data) {
     } else {
       if (length(invalid_values) == 1) {
         output <- list(
-          "message" = paste0("The following old_la_code, new_la_code and la_name combination is invalid: '", paste0(invalid_values), "'. <br> - We do not expect any combinations outside of the <a href='https://github.com/dfe-analytical-services/dfe-published-data-qa/blob/main/data/las.csv' target='_blank'>standard geographies lookup</a> (case sensitive), please check your name and code combinations against this lookup."),
+          "message" = paste0(
+            "The following old_la_code, new_la_code and la_name combination is invalid: '",
+            paste0(invalid_values),
+            "'. <br> - We do not expect any combinations outside of the <a href='https://github.com/dfe-analytical-services/dfe-published-data-qa/blob/main/data/las.csv' target='_blank'>standard geographies lookup</a> (case sensitive), please check your name and code combinations against this lookup."
+          ),
           "result" = "FAIL"
         )
       } else {
         output <- list(
-          "message" = paste0("The following old_la_code, new_la_code and la_name combinations are invalid: '", paste0(invalid_values, collapse = "', '"), "'. <br> - We do not expect any combinations outside of the <a href='https://github.com/dfe-analytical-services/dfe-published-data-qa/blob/main/data/las.csv' target='_blank'>standard geographies lookup</a> (case sensitive), please check your name and code combinations against this lookup."),
+          "message" = paste0(
+            "The following old_la_code, new_la_code and la_name combinations are invalid: '",
+            paste0(invalid_values, collapse = "', '"),
+            "'. <br> - We do not expect any combinations outside of the <a href='https://github.com/dfe-analytical-services/dfe-published-data-qa/blob/main/data/las.csv' target='_blank'>standard geographies lookup</a> (case sensitive), please check your name and code combinations against this lookup."
+          ),
           "result" = "FAIL"
         )
       }
@@ -1397,10 +1805,14 @@ la_combinations <- function(data) {
 
 lsip_combinations <- function(data) {
   level_description <- "Local skills improvement plan area"
-  level_line <- geography_dataframe %>% filter(geographic_level == level_description)
+  level_line <- geography_dataframe %>%
+    filter(geographic_level == level_description)
   if (!level_line$code_field %in% names(data)) {
     output <- list(
-      "message" = paste(level_line$code_field, "columns are not present in this data file."),
+      "message" = paste(
+        level_line$code_field,
+        "columns are not present in this data file."
+      ),
       "result" = "IGNORE"
     )
   } else {
@@ -1421,7 +1833,10 @@ lsip_combinations <- function(data) {
     ) %>%
       mutate(combo = paste(lsip_code, lsip_name)) %>%
       pull(combo) %>%
-      .[!(. %in% expected_lsip_combinations)]
+      .[
+        !(. %in%
+          c(expected_lsip_combinations, expected_standard_geog_combinations))
+      ]
 
     if (length(invalid_values) == 0) {
       output <- list(
@@ -1431,12 +1846,32 @@ lsip_combinations <- function(data) {
     } else {
       if (length(invalid_values) == 1) {
         output <- list(
-          "message" = paste0("The following ", level_line$code_field, " and ", level_line$name_field, " combination is invalid for rows within the '", level_description, "' geographic_level: '", paste0(invalid_values), "'. <br> - We do not expect any combinations outside of the <a href='https://github.com/dfe-analytical-services/dfe-published-data-qa/blob/main/data/lsips.csv' target='_blank'>standard geographies lookup</a> (case sensitive), please check your name and code combinations against this lookup."),
+          "message" = paste0(
+            "The following ",
+            level_line$code_field,
+            " and ",
+            level_line$name_field,
+            " combination is invalid for rows within the '",
+            level_description,
+            "' geographic_level: '",
+            paste0(invalid_values),
+            "'. <br> - We do not expect any combinations outside of the <a href='https://github.com/dfe-analytical-services/dfe-published-data-qa/blob/main/data/lsips.csv' target='_blank'>standard geographies lookup</a> (case sensitive), please check your name and code combinations against this lookup."
+          ),
           "result" = "FAIL"
         )
       } else {
         output <- list(
-          "message" = paste0("The following ", level_line$code_field, " / ", level_line$name_field, " combinations are invalid for rows within the '", level_description, "' geographic_level: '", paste0(invalid_values, collapse = "', '"), "'. <br> - We do not expect any combinations outside of the <a href='https://github.com/dfe-analytical-services/dfe-published-data-qa/blob/main/data/lsips.csv' target='_blank'>standard geographies lookup</a> (case sensitive), please check your name and code combinations against this lookup."),
+          "message" = paste0(
+            "The following ",
+            level_line$code_field,
+            " / ",
+            level_line$name_field,
+            " combinations are invalid for rows within the '",
+            level_description,
+            "' geographic_level: '",
+            paste0(invalid_values, collapse = "', '"),
+            "'. <br> - We do not expect any combinations outside of the <a href='https://github.com/dfe-analytical-services/dfe-published-data-qa/blob/main/data/lsips.csv' target='_blank'>standard geographies lookup</a> (case sensitive), please check your name and code combinations against this lookup."
+          ),
           "result" = "FAIL"
         )
       }
@@ -1451,10 +1886,14 @@ lsip_combinations <- function(data) {
 
 ward_combinations <- function(data) {
   level_description <- "Ward"
-  level_line <- geography_dataframe %>% filter(geographic_level == level_description)
+  level_line <- geography_dataframe %>%
+    filter(geographic_level == level_description)
   if (!level_line$code_field %in% names(data)) {
     output <- list(
-      "message" = paste(level_line$code_field, "columns are not present in this data file."),
+      "message" = paste(
+        level_line$code_field,
+        "columns are not present in this data file."
+      ),
       "result" = "IGNORE"
     )
   } else {
@@ -1475,7 +1914,10 @@ ward_combinations <- function(data) {
     ) %>%
       mutate(combo = paste(ward_code, ward_name)) %>%
       pull(combo) %>%
-      .[!(. %in% expected_ward_combinations)]
+      .[
+        !(. %in%
+          c(expected_ward_combinations, expected_standard_geog_combinations))
+      ]
 
     if (length(invalid_values) == 0) {
       output <- list(
@@ -1485,12 +1927,32 @@ ward_combinations <- function(data) {
     } else {
       if (length(invalid_values) == 1) {
         output <- list(
-          "message" = paste0("The following ", level_line$code_field, " and ", level_line$name_field, " combination is invalid for rows within the '", level_description, "' geographic_level: '", paste0(invalid_values), "'. <br> - We do not expect any combinations outside of the <a href='https://github.com/dfe-analytical-services/dfe-published-data-qa/blob/main/data/ward_lad.csv' target='_blank'>standard geographies lookup</a> (case sensitive), please check your name and code combinations against this lookup."),
+          "message" = paste0(
+            "The following ",
+            level_line$code_field,
+            " and ",
+            level_line$name_field,
+            " combination is invalid for rows within the '",
+            level_description,
+            "' geographic_level: '",
+            paste0(invalid_values),
+            "'. <br> - We do not expect any combinations outside of the <a href='https://github.com/dfe-analytical-services/dfe-published-data-qa/blob/main/data/ward_lad.csv' target='_blank'>standard geographies lookup</a> (case sensitive), please check your name and code combinations against this lookup."
+          ),
           "result" = "FAIL"
         )
       } else {
         output <- list(
-          "message" = paste0("The following ", level_line$code_field, " / ", level_line$name_field, " combinations are invalid for rows within the '", level_description, "' geographic_level: '", paste0(invalid_values, collapse = "', '"), "'. <br> - We do not expect any combinations outside of the <a href='https://github.com/dfe-analytical-services/dfe-published-data-qa/blob/main/data/ward_lad.csv' target='_blank'>standard geographies lookup</a> (case sensitive), please check your name and code combinations against this lookup."),
+          "message" = paste0(
+            "The following ",
+            level_line$code_field,
+            " / ",
+            level_line$name_field,
+            " combinations are invalid for rows within the '",
+            level_description,
+            "' geographic_level: '",
+            paste0(invalid_values, collapse = "', '"),
+            "'. <br> - We do not expect any combinations outside of the <a href='https://github.com/dfe-analytical-services/dfe-published-data-qa/blob/main/data/ward_lad.csv' target='_blank'>standard geographies lookup</a> (case sensitive), please check your name and code combinations against this lookup."
+          ),
           "result" = "FAIL"
         )
       }
@@ -1529,7 +1991,10 @@ region_combinations <- function(data) {
     ) %>%
       mutate(combo = paste(region_code, region_name)) %>%
       pull(combo) %>%
-      .[!(. %in% expected_region_combinations)]
+      .[
+        !(. %in%
+          c(expected_region_combinations, expected_standard_geog_combinations))
+      ]
 
     if (length(invalid_values) == 0) {
       output <- list(
@@ -1539,12 +2004,20 @@ region_combinations <- function(data) {
     } else {
       if (length(invalid_values) == 1) {
         output <- list(
-          "message" = paste0("The following region_code and region_name combination is invalid for rows within the 'Regional' geographic_level: '", paste0(invalid_values), "'. <br> - We do not expect any combinations outside of the <a href='https://github.com/dfe-analytical-services/dfe-published-data-qa/blob/main/data/regions.csv' target='_blank'>standard geographies lookup</a> (case sensitive), please check your name and code combinations against this lookup."),
+          "message" = paste0(
+            "The following region_code and region_name combination is invalid for rows within the 'Regional' geographic_level: '",
+            paste0(invalid_values),
+            "'. <br> - We do not expect any combinations outside of the <a href='https://github.com/dfe-analytical-services/dfe-published-data-qa/blob/main/data/regions.csv' target='_blank'>standard geographies lookup</a> (case sensitive), please check your name and code combinations against this lookup."
+          ),
           "result" = "FAIL"
         )
       } else {
         output <- list(
-          "message" = paste0("The following region_code / region_name combinations are invalid for rows within the 'Regional' geographic_level: '", paste0(invalid_values, collapse = "', '"), "'. <br> - We do not expect any combinations outside of the <a href='https://github.com/dfe-analytical-services/dfe-published-data-qa/blob/main/data/regions.csv' target='_blank'>standard geographies lookup</a> (case sensitive), please check your name and code combinations against this lookup."),
+          "message" = paste0(
+            "The following region_code / region_name combinations are invalid for rows within the 'Regional' geographic_level: '",
+            paste0(invalid_values, collapse = "', '"),
+            "'. <br> - We do not expect any combinations outside of the <a href='https://github.com/dfe-analytical-services/dfe-published-data-qa/blob/main/data/regions.csv' target='_blank'>standard geographies lookup</a> (case sensitive), please check your name and code combinations against this lookup."
+          ),
           "result" = "FAIL"
         )
       }
@@ -1564,7 +2037,10 @@ country_combinations <- function(data) {
     unique() %>%
     mutate(combo = paste(country_code, country_name)) %>%
     pull(combo) %>%
-    .[!(. %in% expected_country_combinations)]
+    .[
+      !(. %in%
+        c(expected_country_combinations, expected_standard_geog_combinations))
+    ]
 
   if (length(invalid_values) == 0) {
     output <- list(
@@ -1574,12 +2050,20 @@ country_combinations <- function(data) {
   } else {
     if (length(invalid_values) == 1) {
       output <- list(
-        "message" = paste0("The following country_code / country_name combination is invalid: '", paste0(invalid_values), "'. <br> - We do not expect any combinations outside of the <a href='https://github.com/dfe-analytical-services/dfe-published-data-qa/blob/main/data/country.csv' target='_blank'>standard geographies lookup</a> (case sensitive), please check your name and code combinations against this lookup."),
+        "message" = paste0(
+          "The following country_code / country_name combination is invalid: '",
+          paste0(invalid_values),
+          "'. <br> - We do not expect any combinations outside of the <a href='https://github.com/dfe-analytical-services/dfe-published-data-qa/blob/main/data/country.csv' target='_blank'>standard geographies lookup</a> (case sensitive), please check your name and code combinations against this lookup."
+        ),
         "result" = "FAIL"
       )
     } else {
       output <- list(
-        "message" = paste0("The following country_code / country_name combinations are invalid: '", paste0(invalid_values, collapse = "', '"), "'. <br> - We do not expect any combinations outside of the <a href='https://github.com/dfe-analytical-services/dfe-published-data-qa/blob/main/data/country.csv' target='_blank'>standard geographies lookup</a> (case sensitive), please check your name and code combinations against this lookup."),
+        "message" = paste0(
+          "The following country_code / country_name combinations are invalid: '",
+          paste0(invalid_values, collapse = "', '"),
+          "'. <br> - We do not expect any combinations outside of the <a href='https://github.com/dfe-analytical-services/dfe-published-data-qa/blob/main/data/country.csv' target='_blank'>standard geographies lookup</a> (case sensitive), please check your name and code combinations against this lookup."
+        ),
         "result" = "FAIL"
       )
     }
@@ -1599,7 +2083,8 @@ other_geography_duplicates <- function(data) {
   } else {
     geog_data <- data %>%
       select(any_of(c(
-        "geographic_level", lower_level_geog_names
+        "geographic_level",
+        lower_level_geog_names
       ))) %>%
       distinct() %>%
       mutate(ID = 1:n())
@@ -1640,15 +2125,23 @@ other_geography_duplicates <- function(data) {
     } else {
       if (length(multi_count_name) == 1) {
         output <- list(
-          "message" = paste0("The following geography has multiple codes: ", paste0(multi_count_name), ".
-                             <br> - Each geography should have only one code."),
+          "message" = paste0(
+            "The following geography has multiple codes: ",
+            paste0(multi_count_name),
+            ".
+                             <br> - Each geography should have only one code."
+          ),
           "result" = "FAIL"
         )
       } else {
         if (length(multi_count_name) > 1) {
           output <- list(
-            "message" = paste0("The following geographies have multiple codes: ", paste0(multi_count_name, collapse = ", "), ".
-                             <br> - Each geography should have only one code."),
+            "message" = paste0(
+              "The following geographies have multiple codes: ",
+              paste0(multi_count_name, collapse = ", "),
+              ".
+                             <br> - Each geography should have only one code."
+            ),
             "result" = "FAIL"
           )
         }
@@ -1669,7 +2162,8 @@ other_geography_code_duplicates <- function(data) {
   } else {
     geog_data <- data %>%
       select(any_of(c(
-        "geographic_level", lower_level_geog_names
+        "geographic_level",
+        lower_level_geog_names
       ))) %>%
       distinct() %>%
       mutate(ID = 1:n())
@@ -1710,15 +2204,23 @@ other_geography_code_duplicates <- function(data) {
     } else {
       if (length(multi_count_code) == 1) {
         output <- list(
-          "message" = paste0("The following geography code has multiple assigned geographies: ", paste0(multi_count_code), ".
-                             <br> - Each geography code should have only one assigned geography."),
+          "message" = paste0(
+            "The following geography code has multiple assigned geographies: ",
+            paste0(multi_count_code),
+            ".
+                             <br> - Each geography code should have only one assigned geography."
+          ),
           "result" = "FAIL"
         )
       } else {
         if (length(multi_count_code) > 1) {
           output <- list(
-            "message" = paste0("The following geography codes have multiple assigned geographies: ", paste0(multi_count_code, collapse = ", "), ".
-                             <br> - Each geography code should have only one assigned geography."),
+            "message" = paste0(
+              "The following geography codes have multiple assigned geographies: ",
+              paste0(multi_count_code, collapse = ", "),
+              ".
+                             <br> - Each geography code should have only one assigned geography."
+            ),
             "result" = "FAIL"
           )
         }
@@ -1734,9 +2236,17 @@ other_geography_code_duplicates <- function(data) {
 
 na_geography <- function(data) {
   testable_levels <- c(
-    "Local authority district", "Parliamentary constituency",
-    "Local skills improvement plan area", "Local enterprise partnership",
-    "English devolved area", "Opportunity area", "Ward", "MAT", "Sponsor", "School", "Provider"
+    "Local authority district",
+    "Parliamentary constituency",
+    "Local skills improvement plan area",
+    "Local enterprise partnership",
+    "English devolved area",
+    "Opportunity area",
+    "Ward",
+    "MAT",
+    "Sponsor",
+    "School",
+    "Provider"
   )
 
   geography_name_codes <- geography_dataframe %>%
@@ -1746,7 +2256,8 @@ na_geography <- function(data) {
 
   geog_data <- data %>%
     select(any_of(c(
-      "geographic_level", geography_name_codes
+      "geographic_level",
+      geography_name_codes
     ))) %>%
     distinct()
 
@@ -1754,9 +2265,20 @@ na_geography <- function(data) {
     code_col <- geography_matrix[which(geography_matrix[, 1] == level), 2]
     name_col <- geography_matrix[which(geography_matrix[, 1] == level), 3]
 
-    na_locations <- eval(parse(text = paste0(
-      "geog_data %>% distinct(", code_col, ", ", name_col, ") %>% rename(code = ", code_col, ", name = ", name_col, ")"
-    ))) %>% subset(code == gssNAvcode & !(name == "Not available"))
+    na_locations <- eval(parse(
+      text = paste0(
+        "geog_data %>% distinct(",
+        code_col,
+        ", ",
+        name_col,
+        ") %>% rename(code = ",
+        code_col,
+        ", name = ",
+        name_col,
+        ")"
+      )
+    )) %>%
+      subset(code == gssNAvcode & !(name == "Not available"))
 
     if (nrow(na_locations) == 0) {
       return(FALSE)
@@ -1788,7 +2310,8 @@ na_geography <- function(data) {
   }
 
   if (length(testable_levels_present) == 1) {
-    na_names <- na_check(paste(testable_levels_present)) %>% singleLevelTidy(., testable_levels_present)
+    na_names <- na_check(paste(testable_levels_present)) %>%
+      singleLevelTidy(., testable_levels_present)
   } else {
     na_names <- stack(sapply(testable_levels_present, na_check)) %>%
       filter(values == TRUE) %>%
@@ -1797,18 +2320,38 @@ na_geography <- function(data) {
 
   if (length(na_names) == 0) {
     output <- list(
-      "message" = paste0("No tested locations have a code of '", gssNAvcode, "' without the corresponding name 'Not available'."),
+      "message" = paste0(
+        "No tested locations have a code of '",
+        gssNAvcode,
+        "' without the corresponding name 'Not available'."
+      ),
       "result" = "PASS"
     )
   } else {
     if (length(na_names) == 1) {
       output <- list(
-        "message" = paste0("The following geographic level has at least one location with a code of '", gssNAvcode, "', but does not have the corresponding name 'Not available': '", paste0(na_names), ". <br> - The name for '", gssNAvcode, "' should always be 'Not available'."),
+        "message" = paste0(
+          "The following geographic level has at least one location with a code of '",
+          gssNAvcode,
+          "', but does not have the corresponding name 'Not available': '",
+          paste0(na_names),
+          ". <br> - The name for '",
+          gssNAvcode,
+          "' should always be 'Not available'."
+        ),
         "result" = "FAIL"
       )
     } else {
       output <- list(
-        "message" = paste0("The following geographic level has at least one location with a code of '", gssNAvcode, "', but does not have the corresponding name 'Not available': '", paste0(na_names, collapse = "', '"), "'. <br> - The name for '", gssNAvcode, "' should always be 'Not available'."),
+        "message" = paste0(
+          "The following geographic level has at least one location with a code of '",
+          gssNAvcode,
+          "', but does not have the corresponding name 'Not available': '",
+          paste0(na_names, collapse = "', '"),
+          "'. <br> - The name for '",
+          gssNAvcode,
+          "' should always be 'Not available'."
+        ),
         "result" = "FAIL"
       )
     }
@@ -1822,9 +2365,17 @@ na_geography <- function(data) {
 
 na_geography_code <- function(data) {
   testable_levels <- c(
-    "Local authority district", "Parliamentary constituency",
-    "Local skills improvement plan area", "Local enterprise partnership",
-    "English devolved area", "Opportunity area", "Ward", "MAT", "Sponsor", "School", "Provider"
+    "Local authority district",
+    "Parliamentary constituency",
+    "Local skills improvement plan area",
+    "Local enterprise partnership",
+    "English devolved area",
+    "Opportunity area",
+    "Ward",
+    "MAT",
+    "Sponsor",
+    "School",
+    "Provider"
   )
 
   geography_name_codes <- geography_dataframe %>%
@@ -1834,7 +2385,8 @@ na_geography_code <- function(data) {
 
   geog_data <- data %>%
     select(any_of(c(
-      "geographic_level", geography_name_codes
+      "geographic_level",
+      geography_name_codes
     ))) %>%
     distinct()
 
@@ -1842,9 +2394,20 @@ na_geography_code <- function(data) {
     code_col <- geography_matrix[which(geography_matrix[, 1] == level), 2]
     name_col <- geography_matrix[which(geography_matrix[, 1] == level), 3]
 
-    na_locations <- eval(parse(text = paste0(
-      "geog_data %>% distinct(", code_col, ", ", name_col, ") %>% rename(code = ", code_col, ", name = ", name_col, ")"
-    ))) %>% subset(name == "Not available" & !(code == gssNAvcode))
+    na_locations <- eval(parse(
+      text = paste0(
+        "geog_data %>% distinct(",
+        code_col,
+        ", ",
+        name_col,
+        ") %>% rename(code = ",
+        code_col,
+        ", name = ",
+        name_col,
+        ")"
+      )
+    )) %>%
+      subset(name == "Not available" & !(code == gssNAvcode))
 
     if (nrow(na_locations) == 0) {
       return(FALSE)
@@ -1876,7 +2439,8 @@ na_geography_code <- function(data) {
   }
 
   if (length(testable_levels_present) == 1) {
-    na_codes <- na_check(paste(testable_levels_present)) %>% singleLevelTidy(., testable_levels_present)
+    na_codes <- na_check(paste(testable_levels_present)) %>%
+      singleLevelTidy(., testable_levels_present)
   } else {
     na_codes <- sapply(testable_levels_present, na_check) %>%
       stack() %>%
@@ -1886,18 +2450,38 @@ na_geography_code <- function(data) {
 
   if (length(na_codes) == 0) {
     output <- list(
-      "message" = paste0("No tested locations have a name of 'Not available' without the corresponding code '", gssNAvcode, "'."),
+      "message" = paste0(
+        "No tested locations have a name of 'Not available' without the corresponding code '",
+        gssNAvcode,
+        "'."
+      ),
       "result" = "PASS"
     )
   } else {
     if (length(na_codes) == 1) {
       output <- list(
-        "message" = paste0("The following geographic level has at least one location with a name of 'Not available', that does not have the corresponding code '", gssNAvcode, "': '", paste0(na_codes), "'. <br> - The code for 'Not available' should always be '", gssNAvcode, "'."),
+        "message" = paste0(
+          "The following geographic level has at least one location with a name of 'Not available', that does not have the corresponding code '",
+          gssNAvcode,
+          "': '",
+          paste0(na_codes),
+          "'. <br> - The code for 'Not available' should always be '",
+          gssNAvcode,
+          "'."
+        ),
         "result" = "FAIL"
       )
     } else {
       output <- list(
-        "message" = paste0("The following geographic levels have at least one location with a a name of 'Not available', that does not have the corresponding code '", gssNAvcode, "': '", paste0(na_codes, collapse = "', '"), "'. <br> - The code for 'Not available' should always be '", gssNAvcode, "'."),
+        "message" = paste0(
+          "The following geographic levels have at least one location with a a name of 'Not available', that does not have the corresponding code '",
+          gssNAvcode,
+          "': '",
+          paste0(na_codes, collapse = "', '"),
+          "'. <br> - The code for 'Not available' should always be '",
+          gssNAvcode,
+          "'."
+        ),
         "result" = "FAIL"
       )
     }
@@ -1921,12 +2505,20 @@ col_name_duplicate <- function(meta) {
   } else {
     if (length(duplicated_col_names) == 1) {
       output <- list(
-        "message" = paste0("The following col_name value is duplicated in the metadata file: '", paste(duplicated_col_names), "'."),
+        "message" = paste0(
+          "The following col_name value is duplicated in the metadata file: '",
+          paste(duplicated_col_names),
+          "'."
+        ),
         "result" = "FAIL"
       )
     } else {
       output <- list(
-        "message" = paste0("The following col_name values are duplicated in the metadata file: '", paste0(duplicated_col_names, collapse = "', '"), "'."),
+        "message" = paste0(
+          "The following col_name values are duplicated in the metadata file: '",
+          paste0(duplicated_col_names, collapse = "', '"),
+          "'."
+        ),
         "result" = "FAIL"
       )
     }
@@ -1973,12 +2565,20 @@ label <- function(meta) {
   } else {
     if (blank_labels == 1) {
       output <- list(
-        "message" = paste0("There is a label missing in ", paste(blank_labels), " row of the metadata file."),
+        "message" = paste0(
+          "There is a label missing in ",
+          paste(blank_labels),
+          " row of the metadata file."
+        ),
         "result" = "FAIL"
       )
     } else {
       output <- list(
-        "message" = paste0("There are labels missing in ", paste(blank_labels), " rows of the metadata file."),
+        "message" = paste0(
+          "There are labels missing in ",
+          paste(blank_labels),
+          " rows of the metadata file."
+        ),
         "result" = "FAIL"
       )
     }
@@ -2001,12 +2601,20 @@ duplicate_label <- function(meta) {
   } else {
     if (length(duplicated_labels) == 1) {
       output <- list(
-        "message" = paste0("The following label is duplicated in the metadata file: '", paste(duplicated_labels), "'."),
+        "message" = paste0(
+          "The following label is duplicated in the metadata file: '",
+          paste(duplicated_labels),
+          "'."
+        ),
         "result" = "FAIL"
       )
     } else {
       output <- list(
-        "message" = paste0("The following labels are duplicated in the metadata file: '", paste0(duplicated_labels, collapse = "', '"), "'."),
+        "message" = paste0(
+          "The following labels are duplicated in the metadata file: '",
+          paste0(duplicated_labels, collapse = "', '"),
+          "'."
+        ),
         "result" = "FAIL"
       )
     }
@@ -2030,14 +2638,23 @@ geographic_catch <- function(meta) {
 
   if (
     length(filters) == 1 &
-      any(filters[1] %in% c("school_name", "provider_name"), filter_groups[1] %in% c("school_name", "provider_name"))
+      any(
+        filters[1] %in% c("school_name", "provider_name"),
+        filter_groups[1] %in% c("school_name", "provider_name")
+      )
   ) {
-    filters_and_groups <- c(filters, filter_groups)[!c(filters, filter_groups) %in% c("school_name", "provider_name")]
+    filters_and_groups <- c(filters, filter_groups)[
+      !c(filters, filter_groups) %in% c("school_name", "provider_name")
+    ]
   } else {
     filters_and_groups <- c(filters, filter_groups)
   }
 
-  caught_filters <- filters_and_groups[grepl(potential_ob_units_regex, filters_and_groups, ignore.case = TRUE)]
+  caught_filters <- filters_and_groups[grepl(
+    potential_ob_units_regex,
+    filters_and_groups,
+    ignore.case = TRUE
+  )]
 
   if (length(caught_filters) == 0) {
     output <- list(
@@ -2047,12 +2664,24 @@ geographic_catch <- function(meta) {
   } else {
     if (length(caught_filters) == 1) {
       output <- list(
-        "message" = paste0("The following filter appears to be a geographic column and shouldn't be included in the metadata file: '", paste0(caught_filters, collapse = "', '"), "'. ", "<br> - <a href='mailto: explore.statistics@education.gov.uk'>Contact us</a>", " if you are unsure."),
+        "message" = paste0(
+          "The following filter appears to be a geographic column and shouldn't be included in the metadata file: '",
+          paste0(caught_filters, collapse = "', '"),
+          "'. ",
+          "<br> - <a href='mailto: explore.statistics@education.gov.uk'>Contact us</a>",
+          " if you are unsure."
+        ),
         "result" = "FAIL"
       )
     } else {
       output <- list(
-        "message" = paste0("The following filters appear to be geographic columns and shouldn't be included in the metadata file: '", paste0(caught_filters, collapse = "', '"), "'. ", "<br> - <a href='mailto: explore.statistics@education.gov.uk'>Contact us</a>", " if you are unsure."),
+        "message" = paste0(
+          "The following filters appear to be geographic columns and shouldn't be included in the metadata file: '",
+          paste0(caught_filters, collapse = "', '"),
+          "'. ",
+          "<br> - <a href='mailto: explore.statistics@education.gov.uk'>Contact us</a>",
+          " if you are unsure."
+        ),
         "result" = "FAIL"
       )
     }
@@ -2074,7 +2703,9 @@ filter_hint <- function(meta) {
       "message" = paste0(
         "Indicators should not have a filter_hint value in the metadata file. ",
         "The following filter_hint values were found in indicator rows:",
-        "<br> - '", paste0(filter_hints, collapse = "', '"), "'."
+        "<br> - '",
+        paste0(filter_hints, collapse = "', '"),
+        "'."
       ),
       "result" = "FAIL"
     )
@@ -2093,7 +2724,10 @@ filter_hint <- function(meta) {
 
 filter_group <- function(meta) {
   filter_groups <- meta %>%
-    filter(col_type == "Indicator", !is.na(filter_grouping_column) & filter_grouping_column != "") %>%
+    filter(
+      col_type == "Indicator",
+      !is.na(filter_grouping_column) & filter_grouping_column != ""
+    ) %>%
     pull(filter_grouping_column)
 
   if (length(filter_groups) > 0) {
@@ -2115,7 +2749,8 @@ filter_group <- function(meta) {
 # filter groups should be in the vector for column names for the data file
 
 filter_group_match <- function(data, meta) {
-  meta_filter_groups <- meta %>% filter(!is.na(filter_grouping_column) & filter_grouping_column != "")
+  meta_filter_groups <- meta %>%
+    filter(!is.na(filter_grouping_column) & filter_grouping_column != "")
 
   if (nrow(meta_filter_groups) == 0) {
     output <- list(
@@ -2123,7 +2758,10 @@ filter_group_match <- function(data, meta) {
       "result" = "IGNORE"
     )
   } else {
-    filter_groups_not_in_data <- setdiff(meta_filter_groups$filter_grouping_column, names(data))
+    filter_groups_not_in_data <- setdiff(
+      meta_filter_groups$filter_grouping_column,
+      names(data)
+    )
     number_filter_groups_not_in_data <- length(filter_groups_not_in_data)
 
     if (number_filter_groups_not_in_data == 0) {
@@ -2134,12 +2772,20 @@ filter_group_match <- function(data, meta) {
     } else {
       if (number_filter_groups_not_in_data == 1) {
         output <- list(
-          "message" = paste0("The following filter group from the metadata was not found as a variable in the data file: '", paste0(filter_groups_not_in_data, collapse = "', '"), "'."),
+          "message" = paste0(
+            "The following filter group from the metadata was not found as a variable in the data file: '",
+            paste0(filter_groups_not_in_data, collapse = "', '"),
+            "'."
+          ),
           "result" = "FAIL"
         )
       } else {
         output <- list(
-          "message" = paste0("The following filter groups from the metadata were not found as variables in the data file: '", paste0(filter_groups_not_in_data, collapse = "', '"), "'."),
+          "message" = paste0(
+            "The following filter groups from the metadata were not found as variables in the data file: '",
+            paste0(filter_groups_not_in_data, collapse = "', '"),
+            "'."
+          ),
           "result" = "FAIL"
         )
       }
@@ -2154,7 +2800,10 @@ filter_group_match <- function(data, meta) {
 
 filter_group_level <- function(data, meta) {
   meta_filters_and_groups <- meta %>%
-    filter(col_type == "Filter", !is.na(filter_grouping_column) & filter_grouping_column != "") %>%
+    filter(
+      col_type == "Filter",
+      !is.na(filter_grouping_column) & filter_grouping_column != ""
+    ) %>%
     select(col_name, filter_grouping_column)
 
   if (nrow(meta_filters_and_groups) == 0) {
@@ -2170,11 +2819,29 @@ filter_group_level <- function(data, meta) {
         length()
     }
 
-    filter_levels <- stack(sapply(meta_filters_and_groups %>% pull(col_name), get_levels)) %>% rename("col_name" = "ind", "filter_levels" = "values")
+    filter_levels <- stack(sapply(
+      meta_filters_and_groups %>% pull(col_name),
+      get_levels
+    )) %>%
+      rename("col_name" = "ind", "filter_levels" = "values")
 
-    filter_group_levels <- stack(sapply(meta_filters_and_groups %>% pull(filter_grouping_column) %>% unique(), get_levels)) %>% rename("filter_grouping_column" = "ind", "group_levels" = "values")
+    filter_group_levels <- stack(sapply(
+      meta_filters_and_groups %>% pull(filter_grouping_column) %>% unique(),
+      get_levels
+    )) %>%
+      rename("filter_grouping_column" = "ind", "group_levels" = "values")
 
-    extended_meta <- suppressWarnings(suppressMessages(meta_filters_and_groups %>% inner_join(filter_levels) %>% inner_join(filter_group_levels) %>% mutate("pre_result" = case_when(filter_levels >= group_levels ~ "PASS", TRUE ~ "FAIL"))))
+    extended_meta <- suppressWarnings(suppressMessages(
+      meta_filters_and_groups %>%
+        inner_join(filter_levels) %>%
+        inner_join(filter_group_levels) %>%
+        mutate(
+          "pre_result" = case_when(
+            filter_levels >= group_levels ~ "PASS",
+            TRUE ~ "FAIL"
+          )
+        )
+    ))
 
     failed_pairs <- extended_meta %>%
       filter(pre_result == "FAIL")
@@ -2190,12 +2857,26 @@ filter_group_level <- function(data, meta) {
     } else {
       if (number_of_failed_pairs == 1) {
         output <- list(
-          "message" = paste0("The filter group '", paste(failed_pairs$filter_grouping_column), "' has more levels (", paste(failed_pairs$group_levels), ") than its corresponding filter '", paste(failed_pairs$col_name), "' (", paste(failed_pairs$filter_levels), "). <br> - This suggests that the hierarchy is the wrong way around in the metadata."),
+          "message" = paste0(
+            "The filter group '",
+            paste(failed_pairs$filter_grouping_column),
+            "' has more levels (",
+            paste(failed_pairs$group_levels),
+            ") than its corresponding filter '",
+            paste(failed_pairs$col_name),
+            "' (",
+            paste(failed_pairs$filter_levels),
+            "). <br> - This suggests that the hierarchy is the wrong way around in the metadata."
+          ),
           "result" = "FAIL"
         )
       } else {
         output <- list(
-          "message" = paste0("The following filter groups each have more levels than their corresponding filters, check that they are entered the correct way around in the metadata: <br> - '", paste0(failed_pairs$filter_grouping_column, collapse = "', '"), "'."),
+          "message" = paste0(
+            "The following filter groups each have more levels than their corresponding filters, check that they are entered the correct way around in the metadata: <br> - '",
+            paste0(failed_pairs$filter_grouping_column, collapse = "', '"),
+            "'."
+          ),
           "result" = "FAIL"
         )
       }
@@ -2209,7 +2890,12 @@ filter_group_level <- function(data, meta) {
 # Checking that filter groups are not filters
 
 filter_group_not_filter <- function(meta) {
-  if (meta %>% filter(!is.na(filter_grouping_column) & filter_grouping_column != "") %>% nrow() == 0) {
+  if (
+    meta %>%
+      filter(!is.na(filter_grouping_column) & filter_grouping_column != "") %>%
+      nrow() ==
+      0
+  ) {
     output <- list(
       "message" = "There are no filter groups present.",
       "result" = "IGNORE"
@@ -2223,15 +2909,25 @@ filter_group_not_filter <- function(meta) {
       }
     }
 
-    pre_result <- stack(sapply(meta %>%
-      filter(!is.na(filter_grouping_column) & filter_grouping_column != "") %>%
-      pull(filter_grouping_column), filter_group_not_filter_check))
+    pre_result <- stack(sapply(
+      meta %>%
+        filter(
+          !is.na(filter_grouping_column) & filter_grouping_column != ""
+        ) %>%
+        pull(filter_grouping_column),
+      filter_group_not_filter_check
+    ))
 
-    filter_groups_in_col_names <- filter(pre_result, values == "FAIL") %>% pull(ind)
+    filter_groups_in_col_names <- filter(pre_result, values == "FAIL") %>%
+      pull(ind)
 
     if ("FAIL" %in% pre_result$values) {
       output <- list(
-        "message" = paste0("Filter groups should not appear in the col_name column in the metadata file. <br> - Please remove the following from col_name: '", paste(filter_groups_in_col_names, collapse = "', '"), "'."),
+        "message" = paste0(
+          "Filter groups should not appear in the col_name column in the metadata file. <br> - Please remove the following from col_name: '",
+          paste(filter_groups_in_col_names, collapse = "', '"),
+          "'."
+        ),
         "result" = "FAIL"
       )
     } else {
@@ -2249,13 +2945,28 @@ filter_group_not_filter <- function(meta) {
 # Checking that filter groups are not duplicated
 
 filter_group_duplicate <- function(meta) {
-  if (meta %>% filter(!is.na(filter_grouping_column) & filter_grouping_column != "") %>% nrow() == 0) {
+  if (
+    meta %>%
+      filter(!is.na(filter_grouping_column) & filter_grouping_column != "") %>%
+      nrow() ==
+      0
+  ) {
     output <- list(
       "message" = "There are no filter groups present.",
       "result" = "IGNORE"
     )
   } else {
-    if (suppressMessages(meta %>% filter(!is.na(filter_grouping_column) & filter_grouping_column != "") %>% get_dupes(filter_grouping_column) %>% nrow()) != 0) {
+    if (
+      suppressMessages(
+        meta %>%
+          filter(
+            !is.na(filter_grouping_column) & filter_grouping_column != ""
+          ) %>%
+          get_dupes(filter_grouping_column) %>%
+          nrow()
+      ) !=
+        0
+    ) {
       output <- list(
         "message" = "There are duplicated filter_group values.",
         "result" = "FAIL"
@@ -2281,9 +2992,17 @@ whitespace_filters <- function(data, meta) {
 
   test <- data %>%
     mutate_if(is.Date, as.character) %>%
-    select(all_of(filters), any_of(as.character(geography_matrix[, 2:4]) %>% .[!is.na(.)])) %>%
+    select(
+      all_of(filters),
+      any_of(as.character(geography_matrix[, 2:4]) %>% .[!is.na(.)])
+    ) %>%
     mutate_if(is.numeric, as.character) %>%
-    pivot_longer(everything(), values_drop_na = TRUE, names_to = "filter", values_to = "filter_label") %>%
+    pivot_longer(
+      everything(),
+      values_drop_na = TRUE,
+      names_to = "filter",
+      values_to = "filter_label"
+    ) %>%
     # gather(., "filter", "filter_label") %>%
     distinct()
 
@@ -2299,12 +3018,20 @@ whitespace_filters <- function(data, meta) {
   } else {
     if (length(white_spaces) == 1) {
       output <- list(
-        "message" = paste0("The following filter label contains leading or trailing whitespace: '", paste0(white_spaces, collapse = "', '"), "'."),
+        "message" = paste0(
+          "The following filter label contains leading or trailing whitespace: '",
+          paste0(white_spaces, collapse = "', '"),
+          "'."
+        ),
         "result" = "FAIL"
       )
     } else {
       output <- list(
-        "message" = paste0("The following filter labels contain leading or trailing whitespace: '", paste0(white_spaces, collapse = "', '"), "'."),
+        "message" = paste0(
+          "The following filter labels contain leading or trailing whitespace: '",
+          paste0(white_spaces, collapse = "', '"),
+          "'."
+        ),
         "result" = "FAIL"
       )
     }
@@ -2319,7 +3046,11 @@ whitespace_filters <- function(data, meta) {
 
 indicator_grouping <- function(meta) {
   indicator_groups <- meta %>%
-    filter(col_type == "Filter", !is.na(indicator_grouping), indicator_grouping != "") %>%
+    filter(
+      col_type == "Filter",
+      !is.na(indicator_grouping),
+      indicator_grouping != ""
+    ) %>%
     pull(indicator_grouping)
 
   if (length(indicator_groups) > 0) {
@@ -2356,15 +3087,26 @@ filter_group_stripped <- function(data, meta) {
 
     raw_filter_groups <- lapply(filter_group_columns, get_values)
 
-    stripped_filter_groups <- lapply(raw_filter_groups, gsub, pattern = "[^[:alnum:]]", replacement = "") %>% lapply(unique)
+    stripped_filter_groups <- lapply(
+      raw_filter_groups,
+      gsub,
+      pattern = "[^[:alnum:]]",
+      replacement = ""
+    ) %>%
+      lapply(unique)
 
-    comparison <- unlist(lapply(raw_filter_groups, length)) == unlist(lapply(stripped_filter_groups, length))
+    comparison <- unlist(lapply(raw_filter_groups, length)) ==
+      unlist(lapply(stripped_filter_groups, length))
 
     failed_cols <- which(comparison %in% FALSE)
 
     if (length(failed_cols) > 0) {
       output <- list(
-        "message" = paste0("The number of unique filter groups should not change when non-alphanumeric characters are stripped. <br> - please check this list for erroneous filter group values: '", paste0(unlist(raw_filter_groups[failed_cols]), collapse = "', '"), "'."),
+        "message" = paste0(
+          "The number of unique filter groups should not change when non-alphanumeric characters are stripped. <br> - please check this list for erroneous filter group values: '",
+          paste0(unlist(raw_filter_groups[failed_cols]), collapse = "', '"),
+          "'."
+        ),
         "result" = "FAIL"
       )
     } else {
@@ -2393,12 +3135,21 @@ indicator_group_stripped <- function(meta) {
       pull(indicator_grouping) %>%
       unique()
 
-    stripped_indicator_groups <- lapply(raw_indicator_groups, gsub, pattern = "[^[:alnum:]]", replacement = "") %>%
+    stripped_indicator_groups <- lapply(
+      raw_indicator_groups,
+      gsub,
+      pattern = "[^[:alnum:]]",
+      replacement = ""
+    ) %>%
       unique()
 
     if (length(raw_indicator_groups) != length(stripped_indicator_groups)) {
       output <- list(
-        "message" = paste0("The number of unique indicator groups should not change when non-alphanumeric characters and spaces are stripped. <br> - please check this list for erroneous groups: '", paste0(raw_indicator_groups, collapse = "', '"), "'."),
+        "message" = paste0(
+          "The number of unique indicator groups should not change when non-alphanumeric characters and spaces are stripped. <br> - please check this list for erroneous groups: '",
+          paste0(raw_indicator_groups, collapse = "', '"),
+          "'."
+        ),
         "result" = "FAIL"
       )
     } else {
@@ -2418,7 +3169,11 @@ indicator_group_stripped <- function(meta) {
 
 indicator_unit <- function(meta) {
   indicator_units <- meta %>%
-    filter(col_type == "Filter", !is.na(indicator_unit), indicator_unit != "") %>%
+    filter(
+      col_type == "Filter",
+      !is.na(indicator_unit),
+      indicator_unit != ""
+    ) %>%
     pull(indicator_unit)
 
   if (length(indicator_units) > 0) {
@@ -2440,10 +3195,18 @@ indicator_unit <- function(meta) {
 # Validation for the indicator units
 
 indicator_unit_validation <- function(meta) {
-  present_indicatorunits <- filter(meta, col_type == "Indicator", !is.na(indicator_unit), indicator_unit != "") %>%
+  present_indicatorunits <- filter(
+    meta,
+    col_type == "Indicator",
+    !is.na(indicator_unit),
+    indicator_unit != ""
+  ) %>%
     pull(indicator_unit)
 
-  invalid_indicatorunits <- setdiff(unique(present_indicatorunits), acceptable_indicatorunits)
+  invalid_indicatorunits <- setdiff(
+    unique(present_indicatorunits),
+    acceptable_indicatorunits
+  )
 
   if (length(invalid_indicatorunits) == 0) {
     output <- list(
@@ -2453,12 +3216,20 @@ indicator_unit_validation <- function(meta) {
   } else {
     if (length(invalid_indicatorunits) == 1) {
       output <- list(
-        "message" = paste0("The following invalid indicator unit is present in the metadata file: '", paste0(invalid_indicatorunits, collapse = "', '"), "'."),
+        "message" = paste0(
+          "The following invalid indicator unit is present in the metadata file: '",
+          paste0(invalid_indicatorunits, collapse = "', '"),
+          "'."
+        ),
         "result" = "FAIL"
       )
     } else {
       output <- list(
-        "message" = paste0("The following invalid indicator units are present in the metadata file: '", paste0(invalid_indicatorunits, collapse = "', '"), "'."),
+        "message" = paste0(
+          "The following invalid indicator units are present in the metadata file: '",
+          paste0(invalid_indicatorunits, collapse = "', '"),
+          "'."
+        ),
         "result" = "FAIL"
       )
     }
@@ -2556,12 +3327,19 @@ indicator_dp_completed <- function(meta) {
   } else {
     if (length(blankIndicators) == 1) {
       output <- list(
-        "message" = paste0(paste(blankIndicators, collapse = "', '"), " does not have a specified number of dp in the metadata file, this should be explicity stated where possible."),
+        "message" = paste0(
+          paste(blankIndicators, collapse = "', '"),
+          " does not have a specified number of dp in the metadata file, this should be explicity stated where possible."
+        ),
         "result" = "ADVISORY"
       )
     } else {
       output <- list(
-        "message" = paste0("The following indicators do not have a specified number of decimal places in the indicator_dp column of metadata file: <br> - '", paste(blankIndicators, collapse = "', '"), "'. <br> - These should be explicity stated where possible."),
+        "message" = paste0(
+          "The following indicators do not have a specified number of decimal places in the indicator_dp column of metadata file: <br> - '",
+          paste(blankIndicators, collapse = "', '"),
+          "'. <br> - These should be explicity stated where possible."
+        ),
         "result" = "ADVISORY"
       )
     }
@@ -2603,7 +3381,8 @@ standard_filter_headers <- function(meta) {
     output <- list(
       "message" = paste0(
         "The column(s) '",
-        paste(bad_col_names, collapse = "', '"), "' appear to relate to ",
+        paste(bad_col_names, collapse = "', '"),
+        "' appear to relate to ",
         "contexts that fall under the harmonised data standards. Please verify",
         " your column headers against the data standards in the <a href=",
         "'https://dfe-analytical-services.github.io/analysts-guide/",
@@ -2618,35 +3397,54 @@ standard_filter_headers <- function(meta) {
 
 ethnicity_values <- function(data) {
   # First find any ethnicity type columns that don't have the standard col_names
-  if ("ethnicity_major" %in% colnames(data) & "ethnicity_minor" %in% colnames(data)) {
+  if (
+    "ethnicity_major" %in%
+      colnames(data) &
+      "ethnicity_minor" %in% colnames(data)
+  ) {
     ethnicity_nonstandard <- data %>%
-      mutate(ethnicity_combined = paste(ethnicity_major, ethnicity_minor, sep = ", ")) %>%
+      mutate(
+        ethnicity_combined = paste(ethnicity_major, ethnicity_minor, sep = ", ")
+      ) %>%
       select(ethnicity_combined) %>%
       unique() %>%
-      filter(!grepl(
-        paste(paste(ethnicity_standard_values$ethnicity_major, ethnicity_standard_values$ethnicity_minor, sep = ", "), collapse = "|"),
-        ethnicity_combined
-      )) %>%
+      filter(
+        !grepl(
+          paste(
+            paste(
+              ethnicity_standard_values$ethnicity_major,
+              ethnicity_standard_values$ethnicity_minor,
+              sep = ", "
+            ),
+            collapse = "|"
+          ),
+          ethnicity_combined
+        )
+      ) %>%
       pull(ethnicity_combined)
     value_type <- "combination"
   } else if ("ethnicity_major" %in% colnames(data)) {
     ethnicity_nonstandard <- data %>%
       select(ethnicity_major) %>%
       unique() %>%
-      filter(!grepl(
-        paste(ethnicity_standard_values$ethnicity_major, collapse = "|"),
-        ethnicity_major
-      )) %>%
+      filter(
+        !grepl(
+          paste(ethnicity_standard_values$ethnicity_major, collapse = "|"),
+          ethnicity_major
+        )
+      ) %>%
       pull(ethnicity_major)
     value_type <- "value"
   } else if ("ethnicity_minor" %in% colnames(data)) {
     ethnicity_nonstandard <- data %>%
       select(ethnicity_minor) %>%
       unique() %>%
-      filter(!grepl(
-        paste(ethnicity_standard_values$ethnicity_minor, collapse = "|"),
-        ethnicity_minor
-      )) %>%
+      filter(
+        !grepl(
+          paste(ethnicity_standard_values$ethnicity_minor, collapse = "|"),
+          ethnicity_minor
+        )
+      ) %>%
       pull(ethnicity_minor)
     value_type <- "value"
   } else {
@@ -2660,7 +3458,9 @@ ethnicity_values <- function(data) {
   } else if (length(ethnicity_nonstandard) == 1) {
     output <- list(
       "message" = paste0(
-        "The ethnicity filter ", value_type, " '",
+        "The ethnicity filter ",
+        value_type,
+        " '",
         paste(ethnicity_nonstandard, collapse = "', '"),
         "' does not conform to the GSS standards. Please cross check against the <a href='https://dfe-analytical-services.github.io/analysts-guide/statistics-production/ud.html#ethnicity'>published standards</a>."
       ),
@@ -2669,7 +3469,9 @@ ethnicity_values <- function(data) {
   } else {
     output <- list(
       "message" = paste0(
-        "The following ethnicity filter ", value_type, "s do not conform to the GSS standards: <br> - '",
+        "The following ethnicity filter ",
+        value_type,
+        "s do not conform to the GSS standards: <br> - '",
         paste(ethnicity_nonstandard, collapse = "', '"),
         "'. <br> - Please cross check against the <a href='https://dfe-analytical-services.github.io/analysts-guide/statistics-production/ud.html#ethnicity'>published standards</a>."
       ),
@@ -2682,13 +3484,23 @@ ethnicity_values <- function(data) {
 
 ethnicity_characteristic_group <- function(data) {
   # First find any ethnicity type columns that don't have the standard col_names
-  ethnicity_standard_characteristics <- c("Ethnicity Major", "Ethnicity Minor", "Ethnicity Detailed", "Minority Ethnic")
+  ethnicity_standard_characteristics <- c(
+    "Ethnicity Major",
+    "Ethnicity Minor",
+    "Ethnicity Detailed",
+    "Minority Ethnic"
+  )
   if ("characteristic_group" %in% tolower(colnames(data))) {
     ethnicity_chargroups <- data %>%
       select(characteristic_group) %>%
       filter(grepl("ethnic", tolower(characteristic_group))) %>%
       distinct() %>%
-      filter(!grepl(paste(ethnicity_standard_characteristics, collapse = "|"), characteristic_group)) %>%
+      filter(
+        !grepl(
+          paste(ethnicity_standard_characteristics, collapse = "|"),
+          characteristic_group
+        )
+      ) %>%
       pull(characteristic_group)
     if (length(ethnicity_chargroups) == 0) {
       output <- list(
@@ -2698,7 +3510,8 @@ ethnicity_characteristic_group <- function(data) {
     } else if (length(ethnicity_chargroups) == 1) {
       output <- list(
         "message" = paste0(
-          paste(ethnicity_chargroups, collapse = "', '"), " appears to relate to ethnicity data, but does not conform to the standard col_name conventions: ",
+          paste(ethnicity_chargroups, collapse = "', '"),
+          " appears to relate to ethnicity data, but does not conform to the standard col_name conventions: ",
           paste(ethnicity_standard_characteristics, collapse = ", "),
           " (or these combined with other filters with 'and' - e.g. 'Gender and Minority Ethnic')."
         ),
@@ -2708,7 +3521,8 @@ ethnicity_characteristic_group <- function(data) {
       output <- list(
         "message" = paste0(
           "The following columns appear to relate to ethnicity data, but do not conform to the standard col_name conventions: <br> - '",
-          paste(ethnicity_chargroups, collapse = "', '"), "'. <br> - These should take the form of one of the following: ",
+          paste(ethnicity_chargroups, collapse = "', '"),
+          "'. <br> - These should take the form of one of the following: ",
           paste(ethnicity_standard_characteristics, collapse = ", "),
           " (or these combined with other filters with 'and' - e.g. 'Gender and Minority Ethnic')."
         ),
@@ -2726,15 +3540,28 @@ ethnicity_characteristic_group <- function(data) {
 
 ethnicity_characteristic_values <- function(data) {
   # First find any ethnicity type columns that don't have the standard col_names
-  if ("characteristic_group" %in% tolower(colnames(data)) & "characteristic" %in% tolower(colnames(data))) {
+  if (
+    "characteristic_group" %in%
+      tolower(colnames(data)) &
+      "characteristic" %in% tolower(colnames(data))
+  ) {
     ethnicity_nonstandard <- data %>%
       select(characteristic_group, characteristic) %>%
       filter(grepl("ethnic", tolower(characteristic_group))) %>%
       distinct() %>%
-      filter(!grepl(paste(paste(ethnicity_standard_values$ethnicity_major,
-        ethnicity_standard_values$ethnicity_minor,
-        sep = ", "
-      ), collapse = "|"), characteristic)) %>%
+      filter(
+        !grepl(
+          paste(
+            paste(
+              ethnicity_standard_values$ethnicity_major,
+              ethnicity_standard_values$ethnicity_minor,
+              sep = ", "
+            ),
+            collapse = "|"
+          ),
+          characteristic
+        )
+      ) %>%
       pull(characteristic) %>%
       unique()
     if (length(ethnicity_nonstandard) == 0) {
@@ -2782,17 +3609,35 @@ ethnicity_characteristic_values <- function(data) {
 # @return list(message, result)
 indicators_smushed <- function(meta) {
   common_filter_substrings <- c(
-    "male", "female",
-    "asian", "chinese", "indian", "pakistani", "bangladeshi",
-    "black", "african", "caribbean",
-    "white", "roma", "irish", "english", "british", "scottish", "welsh", "northern irish",
+    "male",
+    "female",
+    "asian",
+    "chinese",
+    "indian",
+    "pakistani",
+    "bangladeshi",
+    "black",
+    "african",
+    "caribbean",
+    "white",
+    "roma",
+    "irish",
+    "english",
+    "british",
+    "scottish",
+    "welsh",
+    "northern irish",
     "arab"
   )
 
   indicator_names <- meta %>%
     filter(
       col_type == "Indicator",
-      grepl(paste(common_filter_substrings, collapse = "|"), col_name, ignore.case = TRUE)
+      grepl(
+        paste(common_filter_substrings, collapse = "|"),
+        col_name,
+        ignore.case = TRUE
+      )
     ) %>%
     pull(col_name)
 
@@ -2802,7 +3647,9 @@ indicators_smushed <- function(meta) {
         "The following indicators appear to not conform to tidy data principles: ",
         paste(indicator_names, collapse = ", "),
         ". We recommend pivoting your data longer and adding a filter to contain characteristic choices. ",
-        "Please ", "<a href='mailto: explore.statistics@education.gov.uk'>contact us</a>", " for support on tidy data structures."
+        "Please ",
+        "<a href='mailto: explore.statistics@education.gov.uk'>contact us</a>",
+        " for support on tidy data structures."
       ),
       "result" = "FAIL"
     )
@@ -2835,12 +3682,20 @@ variable_name_length <- function(meta) {
   } else {
     if (length(names_too_long) == 1) {
       output <- list(
-        "message" = paste0("The following variable name is over 50 characters, this will need shortening before this data can be published through the API: '", paste(names_too_long, collapse = "', '"), "'."),
+        "message" = paste0(
+          "The following variable name is over 50 characters, this will need shortening before this data can be published through the API: '",
+          paste(names_too_long, collapse = "', '"),
+          "'."
+        ),
         "result" = "ADVISORY"
       )
     } else {
       output <- list(
-        "message" = paste0("The following variable names are over 50 characters, these will need shortening before this data can be published through the API: '", paste0(names_too_long, collapse = "', '"), "'."),
+        "message" = paste0(
+          "The following variable names are over 50 characters, these will need shortening before this data can be published through the API: '",
+          paste0(names_too_long, collapse = "', '"),
+          "'."
+        ),
         "result" = "ADVISORY"
       )
     }
@@ -2868,12 +3723,20 @@ variable_label_length <- function(meta) {
   } else {
     if (length(labels_too_long) == 1) {
       output <- list(
-        "message" = paste0("The following variable label is over 80 characters, this will need shortening before this data can be published through the API: '", paste(labels_too_long, collapse = "', '"), "'."),
+        "message" = paste0(
+          "The following variable label is over 80 characters, this will need shortening before this data can be published through the API: '",
+          paste(labels_too_long, collapse = "', '"),
+          "'."
+        ),
         "result" = "ADVISORY"
       )
     } else {
       output <- list(
-        "message" = paste0("The following variable labels are over 80 characters, these will need shortening before this data can be published through the API: '", paste0(labels_too_long, collapse = "', '"), "'."),
+        "message" = paste0(
+          "The following variable labels are over 80 characters, these will need shortening before this data can be published through the API: '",
+          paste0(labels_too_long, collapse = "', '"),
+          "'."
+        ),
         "result" = "ADVISORY"
       )
     }
@@ -2908,12 +3771,20 @@ filter_item_length <- function(data, meta) {
   } else {
     if (length(lengths_too_long) == 1) {
       output <- list(
-        "message" = paste0("The following filter item is over 120 characters, this will need shortening before this data can be published through the API: '", paste(lengths_too_long, collapse = "', '"), "'."),
+        "message" = paste0(
+          "The following filter item is over 120 characters, this will need shortening before this data can be published through the API: '",
+          paste(lengths_too_long, collapse = "', '"),
+          "'."
+        ),
         "result" = "ADVISORY"
       )
     } else {
       output <- list(
-        "message" = paste0("The following filter items are over 120 characters, these will need shortening before this data can be published through the API: '", paste0(lengths_too_long, collapse = "', '"), "'."),
+        "message" = paste0(
+          "The following filter items are over 120 characters, these will need shortening before this data can be published through the API: '",
+          paste0(lengths_too_long, collapse = "', '"),
+          "'."
+        ),
         "result" = "ADVISORY"
       )
     }
@@ -2945,12 +3816,20 @@ location_name_length <- function(data) {
   } else {
     if (length(lengths_too_long) == 1) {
       output <- list(
-        "message" = paste0("The following location name is over 120 characters, this will need shortening before this data can be published through the API: '", paste(lengths_too_long, collapse = "', '"), "'."),
+        "message" = paste0(
+          "The following location name is over 120 characters, this will need shortening before this data can be published through the API: '",
+          paste(lengths_too_long, collapse = "', '"),
+          "'."
+        ),
         "result" = "ADVISORY"
       )
     } else {
       output <- list(
-        "message" = paste0("The following location names are over 120 characters, these will need shortening before this data can be published through the API: '", paste0(lengths_too_long, collapse = "', '"), "'."),
+        "message" = paste0(
+          "The following location names are over 120 characters, these will need shortening before this data can be published through the API: '",
+          paste0(lengths_too_long, collapse = "', '"),
+          "'."
+        ),
         "result" = "ADVISORY"
       )
     }
@@ -2964,14 +3843,16 @@ location_name_length <- function(data) {
 #'
 #' @param data
 location_code_length <- function(data) {
-  location_code_cols <- c(geography_dataframe$code_field, geography_dataframe$code_field_secondary) |>
+  location_code_cols <- c(
+    geography_dataframe$code_field,
+    geography_dataframe$code_field_secondary
+  ) |>
     purrr::discard(~ is.na(.) | . == "")
 
   location_codes <- data |>
     select(any_of(location_code_cols)) |>
     unlist(use.names = FALSE) |>
     purrr::discard(~ is.na(.) | . == "" | . == "NA")
-
 
   lengths_table <- data.frame(
     "location_code" = location_codes,
@@ -2988,12 +3869,20 @@ location_code_length <- function(data) {
   } else {
     if (length(lengths_too_long) == 1) {
       output <- list(
-        "message" = paste0("The following location code is over 30 characters, this will need shortening before this data can be published through the API: '", paste(lengths_too_long, collapse = "', '"), "'."),
+        "message" = paste0(
+          "The following location code is over 30 characters, this will need shortening before this data can be published through the API: '",
+          paste(lengths_too_long, collapse = "', '"),
+          "'."
+        ),
         "result" = "ADVISORY"
       )
     } else {
       output <- list(
-        "message" = paste0("The following location codes are over 30 characters, these will need shortening before this data can be published through the API: '", paste0(lengths_too_long, collapse = "', '"), "'."),
+        "message" = paste0(
+          "The following location codes are over 30 characters, these will need shortening before this data can be published through the API: '",
+          paste0(lengths_too_long, collapse = "', '"),
+          "'."
+        ),
         "result" = "ADVISORY"
       )
     }
