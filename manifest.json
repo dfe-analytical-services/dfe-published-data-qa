@@ -4464,7 +4464,7 @@
       "checksum": "e8d96d5ffd16a6867fd6d7458bd2f905"
     },
     ".Rprofile": {
-      "checksum": "7422a1ebb37e40840f49600634f58ba5"
+      "checksum": "662f25a75906cbdbd3646454ea97d8aa"
     },
     "azure-pipelines-dev.yml": {
       "checksum": "fc2ef843ff5024bcba25ff84eec05f4c"
@@ -4476,7 +4476,7 @@
       "checksum": "a00c58b97b9d930c17db2efef6257c30"
     },
     "data/country.csv": {
-      "checksum": "001f76fad537227638e5d5697953abd5"
+      "checksum": "f3fdf59f7ce1eb0859801a712ae40c5e"
     },
     "data/data-dictionary-col_names.csv": {
       "checksum": "31d565a819730736cbcf5a38959d3398"
@@ -4485,7 +4485,7 @@
       "checksum": "356ced779f6fdb0e217ded7f4f3fa733"
     },
     "data/english_devolved_areas.csv": {
-      "checksum": "af2472df19de0019e65403e28aeba279"
+      "checksum": "5d0fd12cc45463e8e544d6fc86064968"
     },
     "data/ethnicity.csv": {
       "checksum": "7477c76d8990b16372dc3f19c3e8f045"
@@ -4497,10 +4497,10 @@
       "checksum": "573d14f67bc6ff3ca36bea644f1e3672"
     },
     "data/lads.csv": {
-      "checksum": "bdb28d1de9b97b1d40b5a247b7f6cb64"
+      "checksum": "d033e382197d48da01411bc591778610"
     },
     "data/las.csv": {
-      "checksum": "2613f8f48fc7063ff0c12e18e3785c66"
+      "checksum": "811e6fd90196819ee4a1b09048596ad3"
     },
     "data/leps.csv": {
       "checksum": "d95b3f968ae9354198c5276964bc8b44"
@@ -4515,7 +4515,7 @@
       "checksum": "c133ff4f33aee39c09dbc06f644905d5"
     },
     "data/pcons.csv": {
-      "checksum": "2e5efa746b7403df7535c0e22bdcae53"
+      "checksum": "53cba1bdb02a9cdfe34cf4fa03c0086e"
     },
     "data/peia_lookup.csv": {
       "checksum": "887db4a5f20ff3326ce279822e9f9b65"
@@ -4524,7 +4524,7 @@
       "checksum": "0b0fffa05a2a9dabe2e74410820f4f12"
     },
     "data/regions.csv": {
-      "checksum": "a9a48d53c632b1125f7f244700d34a4b"
+      "checksum": "bf64c413bb858482077bd8459fdc897c"
     },
     "data/school-types.csv": {
       "checksum": "0e44be43c1ca6a5387f046efe5b3e194"
@@ -4533,7 +4533,7 @@
       "checksum": "84033ca7991efa126715d2e4ec3e4eff"
     },
     "data/universal_geog_options.csv": {
-      "checksum": "bd1d81491a399fbe3345c1c6919b20c6"
+      "checksum": "3ef2f2c00aa4f0aa1458f84cf7641dd5"
     },
     "data/ward_lad_la_pcon_hierarchy.csv": {
       "checksum": "667c7343714869a4ad4884e217112f1f"
@@ -4557,10 +4557,10 @@
       "checksum": "1c3a5b538aa71e2f377b4733e7c9a580"
     },
     "R/knownVariables.r": {
-      "checksum": "a38a30cdbd460f37fb30f9f7bfc515a0"
+      "checksum": "97820bf836ecddc05dcc9242f304d01d"
     },
     "R/mainTests.r": {
-      "checksum": "f4a9c96025d29f4a712e284946029dbf"
+      "checksum": "b12e70a98fd77482758baef520c9ce5f"
     },
     "R/manual_scripts/debugging.R": {
       "checksum": "e56763afdf3659c7c47cfe0e3262e8cf"
@@ -4611,7 +4611,7 @@
       "checksum": "8e82eb783ac5fe41a1696cc821cf7bd8"
     },
     "tests/testthat/_snaps/UI-03_additional_qa/additional_qa-001.json": {
-      "checksum": "04277a2285ff36299d38bacb1399acfb"
+      "checksum": "797e942540190b502061c0594e445c5f"
     },
     "tests/testthat/_snaps/UI-03_additional_qa/additional_qa-002.json": {
       "checksum": "30383522e5488392defacb1599eec450"
@@ -4638,7 +4638,7 @@
       "checksum": "984e2ca1ab29edfc839bbe0b936c2a95"
     },
     "tests/testthat/_snaps/UI-03_additional_qa/additional_qa-010.json": {
-      "checksum": "9263c400afb8217185db9a68f8470157"
+      "checksum": "e85b27cc40e242254ac5d2fe0f243a08"
     },
     "tests/testthat/_snaps/UI-03_additional_qa/additional_qa-011.json": {
       "checksum": "d1e7d5133c6d1d5481f37263cf69937a"
@@ -5508,7 +5508,7 @@
       "checksum": "0c3314120aca12add10371384a7514cc"
     },
     "tests/testthat/test-data/passes_everything.csv": {
-      "checksum": "2f1496f132b1e5cc43e892898403f5e7"
+      "checksum": "8d45b92896058b875d2ed1857bdc66fe"
     },
     "tests/testthat/test-data/passes_everything.meta.csv": {
       "checksum": "f0e1edd9d9605b93ef821a5b717773ff"
