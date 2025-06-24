@@ -23,10 +23,10 @@ education_type_group,Filter,Apprenticeship,qualification_level,Level 7,,api-only
 education_type_group,Filter,Higher education,qualification_level,Level 7,,api-only
 education_type_group,Filter,Total,qualification_level,Level 8,,api-only
 education_type_group,Filter,Higher education,qualification_level,Level 8,,api-only
-phase_type_grouping,Filter,All schools,,,api-only
-phase_type_grouping,Filter,State-funded primary,,,api-only
-phase_type_grouping,Filter,State-funded secondary,,,api-only
-phase_type_grouping,Filter,State-funded primary and secondary,,,api-only
+phase_type_grouping,Filter,All schools,,,,api-only
+phase_type_grouping,Filter,State-funded primary,,,,api-only
+phase_type_grouping,Filter,State-funded secondary,,,,api-only
+phase_type_grouping,Filter,State-funded primary and secondary,,,,api-only
 ethnicity_minor,Filter,Total,ethnicity_major,Total,,any
 ethnicity_minor,Filter,All white,ethnicity_major,White,,any
 ethnicity_minor,Filter,English / Welsh / Scottish / Northern Irish / British,ethnicity_major,White,,any
@@ -94,10 +94,19 @@ sen_secondary_need,Filter,No secondary need,,,,api-only
 sen_secondary_need,Filter,Unknown,,,,api-only
 establishment_type_group,Filter,Academy,,,,api-only
 establishment_type_group,Filter,Total,,,,api-only
-establishment_type_group,Filter,All state funded,,,,api-only
+establishment_type_group,Filter,All state-funded,,,,api-only
 establishment_type_group,Filter,Independent,,,,api-only
 establishment_type_group,Filter,Local authority maintained,,,,api-only
 establishment_type_group,Filter,Non-maintained,,,,api-only
+establishment_type_group,Filter,All schools,,,,api-only
+establishment_type_group,Filter,State-funded schools and alternative provision,,,,api-only
+establishment_type_group,Filter,Alternative provision,,,,api-only
+establishment_type_group,Filter,State-funded mainstream schools,,,,api-only
+establishment_type_group,Filter,State-funded special schools,,,,api-only
+establishment_type_group,Filter,Academies and free schools,,,,api-only
+establishment_type_group,Filter,Academy converter,,,,api-only
+establishment_type_group,Filter,Academy sponsor led,,,,api-only
+establishment_type_group,Filter,Free schools,,,,api-only
 establishment_governance,Filter,Community,,,CO,api-only
 establishment_governance,Filter,Voluntary aided,,,VA,api-only
 establishment_governance,Filter,Voluntary controlled,,,VC,api-only
