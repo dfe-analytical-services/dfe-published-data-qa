@@ -20,25 +20,33 @@ preCheck1 <- function(datafile, metafile) {
 # check for invalid columns in the metadata file
 
 invalid_meta_cols <- function(meta) {
-  if (length(setdiff(names(meta), mandatory_meta_cols)) == 0) {
+  non_valid_meta_cols <- setdiff(
+    names(meta),
+    c(mandatory_meta_cols, optional_meta_cols)
+  )
+  if (length(non_valid_meta_cols) == 0) {
     output <- list(
       "result" = "PASS",
       "message" = "There are no invalid columns in the metadata file."
     )
   } else {
-    if (length(setdiff(names(meta), mandatory_meta_cols)) == 1) {
+    if (length(non_valid_meta_cols) == 1) {
       output <- list(
         "result" = "FAIL",
-        "message" = paste(setdiff(names(meta), mandatory_meta_cols), "is an invalid column in the metadata file.")
+        "message" = paste(
+          non_valid_meta_cols, "is an invalid column in the metadata file."
+        )
       )
     } else {
       output <- list(
         "result" = "FAIL",
-        "message" = paste0("The following are invalid columns in the metadata file: '", paste(setdiff(names(meta), mandatory_meta_cols), collapse = "', '"), "'.")
+        "message" = paste0(
+          "The following are invalid columns in the metadata file: '",
+          paste(non_valid_meta_cols, collapse = "', '"), "'."
+        )
       )
     }
   }
-
   return(output)
 }
 

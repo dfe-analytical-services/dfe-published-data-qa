@@ -236,7 +236,7 @@
         "style": "bootstrap",
         "filter": "none",
         "vertical": false,
-        "container": "<table class=\"table table-bordered\">\n  <thead>\n    <tr>\n      <th>col_name<\/th>\n      <th>col_type<\/th>\n      <th>label<\/th>\n      <th>indicator_grouping<\/th>\n      <th>indicator_unit<\/th>\n      <th>indicator_dp<\/th>\n      <th>filter_hint<\/th>\n      <th>filter_grouping_column<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>",
+        "container": "<table class=\"table table-bordered\">\n  <thead>\n    <tr>\n      <th>col_name<\/th>\n      <th>col_type<\/th>\n      <th>label<\/th>\n      <th>indicator_grouping<\/th>\n      <th>indicator_unit<\/th>\n      <th>indicator_dp<\/th>\n      <th>filter_hint<\/th>\n      <th>filter_grouping_column<\/th>\n      <th>filter_default<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>",
         "options": {
           "dom": "pt",
           "ordering": false,
@@ -279,6 +279,10 @@
             {
               "name": "filter_grouping_column",
               "targets": 7
+            },
+            {
+              "name": "filter_default",
+              "targets": 8
             }
           ],
           "order": [
