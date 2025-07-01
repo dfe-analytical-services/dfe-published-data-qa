@@ -58,6 +58,7 @@ sen_provision,Filter,Total,sen_status,Total,,api-only
 sen_provision,Filter,"Education, health and care plan",sen_status,Any special educational need,,api-only
 sen_provision,Filter,SEN support / SEN without an EHC plan,sen_status,Any special educational need,,api-only
 sen_provision,Filter,No SEN provision,sen_status,No identified special educational need,,api-only
+sen_provision,Filter,SEN unclassified,sen_status,Unclassified special educational need,,api-only
 sen_primary_need,Filter,All primary need,,,,api-only
 sen_primary_need,Filter,Autistic spectrum disorder,,,ASD,api-only
 sen_primary_need,Filter,Hearing impairment,,,HI,api-only
