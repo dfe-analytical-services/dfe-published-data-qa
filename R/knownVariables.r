@@ -20,6 +20,10 @@ mandatory_meta_cols <- c(
   "filter_grouping_column"
 )
 
+optional_meta_cols <- c(
+  "filter_default"
+)
+
 # Acceptable time identifiers =========================================================================================
 terms <- c("Spring term", "Autumn term", "Summer term")
 
