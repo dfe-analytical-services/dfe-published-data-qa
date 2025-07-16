@@ -32,9 +32,12 @@ ethnicity_minor,Filter,All white,ethnicity_major,White,,any
 ethnicity_minor,Filter,English / Welsh / Scottish / Northern Irish / British,ethnicity_major,White,,any
 ethnicity_minor,Filter,Irish,ethnicity_major,White,,any
 ethnicity_minor,Filter,Gypsy or Irish Traveller,ethnicity_major,White,,any
+ethnicity_minor,Filter,Gypsy,ethnicity_major,White,,any
+ethnicity_minor,Filter,Irish Traveller,ethnicity_major,White,,any
 ethnicity_minor,Filter,Roma,ethnicity_major,White,,any
 ethnicity_minor,Filter,Any other White background,ethnicity_major,White,,any
 ethnicity_minor,Filter,Total,ethnicity_major,Mixed / Multiple ethnic groups,,any
+ethnicity_minor,Filter,All Mixed / Multiple ethnic groups,ethnicity_major,Mixed / Multiple ethnic groups,,any
 ethnicity_minor,Filter,White and Black Caribbean,ethnicity_major,Mixed / Multiple ethnic groups,,any
 ethnicity_minor,Filter,White and Black African,ethnicity_major,Mixed / Multiple ethnic groups,,any
 ethnicity_minor,Filter,White and Asian,ethnicity_major,Mixed / Multiple ethnic groups,,any
