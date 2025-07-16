@@ -28,7 +28,7 @@ phase_type_grouping,Filter,State-funded primary,,,,api-only
 phase_type_grouping,Filter,State-funded secondary,,,,api-only
 phase_type_grouping,Filter,State-funded primary and secondary,,,,api-only
 ethnicity_minor,Filter,Total,ethnicity_major,Total,,any
-ethnicity_minor,Filter,All white,ethnicity_major,White,,any
+ethnicity_minor,Filter,All White,ethnicity_major,White,,any
 ethnicity_minor,Filter,English / Welsh / Scottish / Northern Irish / British,ethnicity_major,White,,any
 ethnicity_minor,Filter,Irish,ethnicity_major,White,,any
 ethnicity_minor,Filter,Gypsy or Irish Traveller,ethnicity_major,White,,any
