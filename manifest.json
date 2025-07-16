@@ -1,7 +1,7 @@
 {
   "version": 1,
   "locale": "en_GB",
-  "platform": "4.4.1",
+  "platform": "4.4.2",
   "metadata": {
     "appmode": "shiny",
     "primary_rmd": null,
@@ -782,7 +782,7 @@
         "Packaged": "2024-03-31 18:18:09 UTC; luke",
         "Repository": "CRAN",
         "Date/Publication": "2024-03-31 20:10:06 UTC",
-        "Built": "R 4.4.1; ; 2024-06-14 08:33:57 UTC; windows"
+        "Built": "R 4.4.2; ; 2024-10-31 16:57:50 UTC; windows"
       }
     },
     "colorspace": {
@@ -2246,7 +2246,7 @@
         "Maintainer": "Deepayan Sarkar <deepayan.sarkar@r-project.org>",
         "Repository": "CRAN",
         "Date/Publication": "2024-03-20 06:10:02 UTC",
-        "Built": "R 4.4.1; x86_64-w64-mingw32; 2024-06-14 08:26:06 UTC; windows",
+        "Built": "R 4.4.2; x86_64-w64-mingw32; 2024-10-31 16:49:37 UTC; windows",
         "Archs": "x64"
       }
     },
@@ -2429,7 +2429,7 @@
         "Packaged": "2023-12-20 10:39:06 UTC; sw283",
         "Repository": "CRAN",
         "Date/Publication": "2023-12-21 00:30:02 UTC",
-        "Built": "R 4.4.1; x86_64-w64-mingw32; 2024-06-14 08:34:48 UTC; windows",
+        "Built": "R 4.4.2; x86_64-w64-mingw32; 2024-10-31 16:58:42 UTC; windows",
         "Archs": "x64"
       }
     },
@@ -4471,7 +4471,7 @@
       "checksum": "e8d96d5ffd16a6867fd6d7458bd2f905"
     },
     ".Rprofile": {
-      "checksum": "c928f6fb1b9aa835f3650f5a53445424"
+      "checksum": "7960479df52d4b64c9e3fb5809fe7028"
     },
     "azure-pipelines-dev.yml": {
       "checksum": "fc2ef843ff5024bcba25ff84eec05f4c"
@@ -4489,7 +4489,7 @@
       "checksum": "31d565a819730736cbcf5a38959d3398"
     },
     "data/data-dictionary.csv": {
-      "checksum": "676f2a8702fada6ecf9c72b376276753"
+      "checksum": "af9ef8a9b69d77051106232c10316dfc"
     },
     "data/english_devolved_areas.csv": {
       "checksum": "391e91c38d772d55f98e54fbacfc3b9f"
