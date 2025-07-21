@@ -55,6 +55,7 @@ ethnicity_minor,Filter,Any other ethnic group,ethnicity_major,Other ethnic group
 ethnicity_minor,Filter,Unknown,ethnicity_major,Unknown,,any
 minority_ethnic,Filter,Ethnic minorities (excluding white minorities),,,,api-only
 sen_provision,Filter,Total,sen_status,Total,,api-only
+sen_provision,Filter,All SEN provision,sen_status,Total,,api-only
 sen_provision,Filter,"Education, health and care plan",sen_status,Any special educational need,,api-only
 sen_provision,Filter,SEN support / SEN without an EHC plan,sen_status,Any special educational need,,api-only
 sen_provision,Filter,No SEN provision,sen_status,No identified special educational need,,api-only
