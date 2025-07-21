@@ -136,6 +136,8 @@ education_phase,Filter,Secondary,,,SS,api-only
 education_phase,Filter,Special,,,SP,api-only
 education_phase,Filter,Further education,,,,api-only
 education_phase,Filter,Higher education,,,,api-only
+education_phase,Filter,Junior,,,,api-only
+education_phase,Filter,Other education phase,,,,api-only
 education_phase,Filter,Total,,,,api-only
 establishment_type,Filter,Other independent school,phase_type_grouping,Independent school,,api-only
 establishment_type,Filter,Other independent special school,phase_type_grouping,Independent school,,api-only
