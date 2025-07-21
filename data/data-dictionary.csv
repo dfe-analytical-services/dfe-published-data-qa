@@ -28,30 +28,38 @@ phase_type_grouping,Filter,State-funded primary,,,,api-only
 phase_type_grouping,Filter,State-funded secondary,,,,api-only
 phase_type_grouping,Filter,State-funded primary and secondary,,,,api-only
 ethnicity_minor,Filter,Total,ethnicity_major,Total,,any
-ethnicity_minor,Filter,All white,ethnicity_major,White,,any
+ethnicity_minor,Filter,Total,ethnicity_major,White,,any
+ethnicity_minor,Filter,All White,ethnicity_major,White,,any
 ethnicity_minor,Filter,English / Welsh / Scottish / Northern Irish / British,ethnicity_major,White,,any
 ethnicity_minor,Filter,Irish,ethnicity_major,White,,any
 ethnicity_minor,Filter,Gypsy or Irish Traveller,ethnicity_major,White,,any
+ethnicity_minor,Filter,Gypsy,ethnicity_major,White,,any
+ethnicity_minor,Filter,Irish Traveller,ethnicity_major,White,,any
 ethnicity_minor,Filter,Roma,ethnicity_major,White,,any
 ethnicity_minor,Filter,Any other White background,ethnicity_major,White,,any
 ethnicity_minor,Filter,Total,ethnicity_major,Mixed / Multiple ethnic groups,,any
+ethnicity_minor,Filter,All Mixed / Multiple ethnic groups,ethnicity_major,Mixed / Multiple ethnic groups,,any
 ethnicity_minor,Filter,White and Black Caribbean,ethnicity_major,Mixed / Multiple ethnic groups,,any
 ethnicity_minor,Filter,White and Black African,ethnicity_major,Mixed / Multiple ethnic groups,,any
 ethnicity_minor,Filter,White and Asian,ethnicity_major,Mixed / Multiple ethnic groups,,any
 ethnicity_minor,Filter,Any other Mixed / Multiple ethnic background,ethnicity_major,Mixed / Multiple ethnic groups,,any
+ethnicity_minor,Filter,Total,ethnicity_major,Asian / Asian British,,any
 ethnicity_minor,Filter,All Asian / Asian British,ethnicity_major,Asian / Asian British,,any
 ethnicity_minor,Filter,Indian,ethnicity_major,Asian / Asian British,,any
 ethnicity_minor,Filter,Pakistani,ethnicity_major,Asian / Asian British,,any
 ethnicity_minor,Filter,Bangladeshi,ethnicity_major,Asian / Asian British,,any
 ethnicity_minor,Filter,Chinese,ethnicity_major,Asian / Asian British,,any
 ethnicity_minor,Filter,Any other Asian background,ethnicity_major,Asian / Asian British,,any
+ethnicity_minor,Filter,Total,ethnicity_major,Black / African / Caribbean / Black British,,any
 ethnicity_minor,Filter,All Black / African / Caribbean / Black British,ethnicity_major,Black / African / Caribbean / Black British,,any
 ethnicity_minor,Filter,African,ethnicity_major,Black / African / Caribbean / Black British,,any
 ethnicity_minor,Filter,Caribbean,ethnicity_major,Black / African / Caribbean / Black British,,any
 ethnicity_minor,Filter,Any other Black / African / Caribbean background,ethnicity_major,Black / African / Caribbean / Black British,,any
+ethnicity_minor,Filter,Total,ethnicity_major,Other ethnic group,,any
 ethnicity_minor,Filter,All other ethnic groups,ethnicity_major,Other ethnic group,,any
 ethnicity_minor,Filter,Arab,ethnicity_major,Other ethnic group,,any
 ethnicity_minor,Filter,Any other ethnic group,ethnicity_major,Other ethnic group,,any
+ethnicity_minor,Filter,Total,ethnicity_major,Unknown,,any
 ethnicity_minor,Filter,Unknown,ethnicity_major,Unknown,,any
 minority_ethnic,Filter,Ethnic minorities (excluding white minorities),,,,api-only
 sen_provision,Filter,Total,sen_status,Total,,api-only
