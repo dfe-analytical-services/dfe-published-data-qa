@@ -4464,7 +4464,7 @@
       "checksum": "e8d96d5ffd16a6867fd6d7458bd2f905"
     },
     ".Rprofile": {
-      "checksum": "57c45f12015fc70662dd26f2515ad935"
+      "checksum": "977058e4520442a99afc9c85ca77263b"
     },
     "azure-pipelines-dev.yml": {
       "checksum": "fc2ef843ff5024bcba25ff84eec05f4c"
@@ -4602,7 +4602,7 @@
       "checksum": "3824e397e0b583a9367e306830fccd72"
     },
     "tests/testthat/_snaps/UI-01_example_files/example_files-002.json": {
-      "checksum": "9ac86d2b78d96aacaf8363e804ac1ae5"
+      "checksum": "7319dd843cb59c0b191714371c3a6dab"
     },
     "tests/testthat/_snaps/UI-02_edge_cases/edge_cases-001.json": {
       "checksum": "75228173459ba6f210f07e7ce363ab5e"
