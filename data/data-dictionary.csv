@@ -1,7 +1,7 @@
 col_name,col_type,filter_item,col_name_parent,filter_item_parent,cbds_code,item_error_flag,contexts
-age_group,Filter,19 to 24,age_youth_adult,19 and over,,api-only,
-age_group,Filter,25 and over,age_youth_adult,19 and over,,api-only,
-age_group,Filter,Total,age_youth_adult,19 and over,,api-only,
+age_group,Filter,19 to 24,age_youth_adult,19 plus,,api-only,
+age_group,Filter,25 plus,age_youth_adult,19 plus,,api-only,
+age_group,Filter,Total,age_youth_adult,19 plus,,api-only,
 age_group,Filter,Total,age_youth_adult,Total,,api-only,
 age_group,Filter,Total,age_youth_adult,Under 19,,api-only,
 age_group,Filter,Under 19,age_youth_adult,Under 19,,api-only,
@@ -199,7 +199,7 @@ provider_type,Filter,Private training providers in the FE sector,,,,api-only,
 provider_type,Filter,"School, college, LA and other unclassified group-based providers",,,,api-only,
 provider_type,Filter,Schools,,,,api-only,
 provider_type,Filter,Sixth form college,,,,api-only,
-provider_type,Filter,Specialist college,,,,api-only,
+provider_type,Filter,Special college,,,,api-only,
 provider_type,Filter,Total,,,,api-only,
 provider_type,Filter,Unknown,,,,api-only,
 provider_type,Filter,Voluntary group-based providers,,,,api-only,
@@ -244,7 +244,7 @@ sen_secondary_need,Filter,"Speech, language and communication needs",,,SLCN,api-
 sen_secondary_need,Filter,Unknown,,,,api-only,Special educational needs
 sen_secondary_need,Filter,Vision impairment,,,VI,api-only,Special educational needs
 achievement_count,Indicator,,,,,api-only,Apprenticeships
-achievement_percent,Indicator,,,,,api-only,Apprenticeships
+achievements_percent,Indicator,,,,,api-only,Apprenticeships
 enrolment_count,Indicator,,,,,api-only,
 enrolment_percent,Indicator,,,,,api-only,
 learner_count,Indicator,,,,,api-only,
@@ -257,7 +257,7 @@ pupil_percent,Indicator,,,,,api-only,
 school_count,Indicator,,,,,api-only,
 school_percent,Indicator,,,,,api-only,
 start_count,Indicator,,,,,api-only,Apprenticeships
-start_percent,Indicator,,,,,api-only,Apprenticeships
+starts_percent,Indicator,,,,,api-only,Apprenticeships
 student_count,Indicator,,,,,api-only,
 student_percent,Indicator,,,,,api-only,
 teacher_count,Indicator,,,,,api-only,
