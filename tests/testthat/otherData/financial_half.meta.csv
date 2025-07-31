@@ -1,4 +1,5 @@
-﻿col_name,col_type,label,indicator_grouping,indicator_unit,indicator_dp,filter_hint,filter_grouping_column
-category,Filter,Serious incident notifications by characteristic,,,,,sin_breakdown
+col_name,col_type,label,indicator_grouping,indicator_unit,indicator_dp,filter_hint,filter_grouping_column
+category,Filter,Serious incident notifications category,,,,,sin_breakdown
+sin_breakdown,Filter,Serious incident notifications by characteristic,,,,,
 number,Indicator,Number of serious incident notifications,,,0,,
 percentage,Indicator,Percentage of serious incident notifications,,%,1,,

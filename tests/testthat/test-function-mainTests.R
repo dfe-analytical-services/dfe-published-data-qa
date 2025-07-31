@@ -278,10 +278,10 @@ test_that("filter_group_level", {
   expect_equal(testIndividualTest(pathStart, "filter_group_level"), "FAIL")
 })
 
-# filter_group_not_filter -------------------------------------------------------------------------------------------------------
+# filter_group_is_filter -------------------------------------------------------------------------------------------------------
 
-test_that("filter_group_not_filter", {
-  expect_equal(testIndividualTest(pathStart, "filter_group_not_filter"), "FAIL")
+test_that("filter_group_is_filter", {
+  expect_equal(testIndividualTest(pathStart, "filter_group_is_filter"), "WARNING")
 })
 
 # filter_group_duplicate -------------------------------------------------------------------------------------------------------

@@ -6,5 +6,4 @@ sess_authorised_percent,Indicator,Authorised absence rate,Absence fields,%,1,,
 sess_unauthorised_percent,Indicator,Unauthorised absence rate,Absence fields,%,2,,
 enrolments_pa_10_exact,Indicator,Number of persistent absentees,Absence fields,,0,,
 enrolments_pa_10_exact_percent,Indicator,Percentage of persistent absentees,Absence fields,%,3,,
-school_type,Filter,School type,,,,Filter by school kind,school_kind
-school_kind,Filter,School kind,,,,Filter by school type,
+establishment_type,Filter,School type,,,,Filter by school kind,school_kind
