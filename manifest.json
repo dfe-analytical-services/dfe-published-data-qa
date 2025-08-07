@@ -4464,7 +4464,7 @@
       "checksum": "e8d96d5ffd16a6867fd6d7458bd2f905"
     },
     ".Rprofile": {
-      "checksum": "8b333d9f0b62b59062dd3cba9e6d8090"
+      "checksum": "99cf8a87b3bfb6c59b7c4bbd3d8f2f94"
     },
     "azure-pipelines-dev.yml": {
       "checksum": "fc2ef843ff5024bcba25ff84eec05f4c"
@@ -4482,7 +4482,7 @@
       "checksum": "31d565a819730736cbcf5a38959d3398"
     },
     "data/data-dictionary.csv": {
-      "checksum": "e681ad2e4db7af34f5e312ccf3912fbb"
+      "checksum": "88871626d3b6482226581ad51fd9b6c4"
     },
     "data/english_devolved_areas.csv": {
       "checksum": "391e91c38d772d55f98e54fbacfc3b9f"
@@ -4602,7 +4602,7 @@
       "checksum": "3824e397e0b583a9367e306830fccd72"
     },
     "tests/testthat/_snaps/UI-01_example_files/example_files-002.json": {
-      "checksum": "7319dd843cb59c0b191714371c3a6dab"
+      "checksum": "6b7bd23465cef9449f678a56064223a8"
     },
     "tests/testthat/_snaps/UI-02_edge_cases/edge_cases-001.json": {
       "checksum": "75228173459ba6f210f07e7ce363ab5e"
@@ -4611,7 +4611,7 @@
       "checksum": "8e82eb783ac5fe41a1696cc821cf7bd8"
     },
     "tests/testthat/_snaps/UI-03_additional_qa/additional_qa-001.json": {
-      "checksum": "e42fd7a6e771add71e664e6eeaf02a88"
+      "checksum": "beba3676eeafa1d837ca20278f8e46c2"
     },
     "tests/testthat/_snaps/UI-03_additional_qa/additional_qa-002.json": {
       "checksum": "30383522e5488392defacb1599eec450"
@@ -4638,7 +4638,7 @@
       "checksum": "984e2ca1ab29edfc839bbe0b936c2a95"
     },
     "tests/testthat/_snaps/UI-03_additional_qa/additional_qa-010.json": {
-      "checksum": "e85b27cc40e242254ac5d2fe0f243a08"
+      "checksum": "d6fa119b6885863975f20c6dd33cca54"
     },
     "tests/testthat/_snaps/UI-03_additional_qa/additional_qa-011.json": {
       "checksum": "d1e7d5133c6d1d5481f37263cf69937a"
@@ -5370,7 +5370,7 @@
       "checksum": "ce45333664f1579f8e6a57e82c96efe2"
     },
     "tests/testthat/sch_prov/sch_filter_group.meta.csv": {
-      "checksum": "bd329f63f62d2d86df02b31153d62d5d"
+      "checksum": "77b48323b84cdfeacc593980593bdccc"
     },
     "tests/testthat/sch_prov/sch_filter_grouped.csv": {
       "checksum": "1c38848940693acfe3cc5d68dbce4b97"
@@ -5508,16 +5508,10 @@
       "checksum": "0c3314120aca12add10371384a7514cc"
     },
     "tests/testthat/test-data/passes_everything.csv": {
-      "checksum": "b93f91eff3b321065d9614144735bcbb"
+      "checksum": "c4b0d7f6c67f957881b6869a3a18ad97"
     },
     "tests/testthat/test-data/passes_everything.meta.csv": {
-      "checksum": "574e3c829747fbd4f5d2cff3f164697a"
-    },
-    "tests/testthat/test-data/passes_everything.meta.xlsx": {
-      "checksum": "24406453569ad4ada9d7ee38b240522e"
-    },
-    "tests/testthat/test-data/passes_everything.xlsx": {
-      "checksum": "da8bd603ff14301b25b9983819ee392d"
+      "checksum": "485364d30f37ff5d87ee87c22c157b73"
     },
     "tests/testthat/test-data/passes_everything_advisory.csv": {
       "checksum": "7eb9c79ee5c04c18abb11bb27438d28c"

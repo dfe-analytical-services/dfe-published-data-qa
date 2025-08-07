@@ -1,284 +1,284 @@
-"time_period","time_identifier","geographic_level","country_code","country_name","region_code","region_name","old_la_code","new_la_code","la_name","lad_code","lad_name","school_urn","school_laestab","school_name","lsip_code","lsip_name","local_enterprise_partnership_code","local_enterprise_partnership_name","pcon_code","pcon_name","ward_code","ward_name","english_devolved_area_code","english_devolved_area_name","trust_id","trust_name","education_phase","phase_type_grouping","school_count","enrolment_count"
-"201718","Academic year","National","E92000001","England","","","","","","","","","","","","","","","","","","","","","","","Total","All schools","20121","6835059"
-"201718","Academic year","National","E92000001","England","","","","","","","","","","","","","","","","","","","","","","","Primary","State-funded primary","16739","3885774"
-"201718","Academic year","National","E92000001","England","","","","","","","","","","","","","","","","","","","","","","","Secondary","State-funded secondary","3382","2949285"
-"201718","Academic year","Regional","E92000001","England","z","Unknown","","","","","","","","","","","","","","","","","","","","","Primary","State-funded primary","858","175079"
-"201718","Academic year","Regional","E92000001","England","z","Not applicable","","","","","","","","","","","","","","","","","","","","","Secondary","State-funded secondary","175","142537"
-"201718","Academic year","Regional","E92000001","England","E12000002","North West","","","","","","","","","","","","","","","","","","","","","Primary","State-funded primary","2443","531992"
-"201718","Academic year","Regional","E92000001","England","E12000002","North West","","","","","","","","","","","","","","","","","","","","","Secondary","State-funded secondary","462","399189"
-"201718","Academic year","Regional","E92000001","England","E12000003","Yorkshire and The Humber","","","","","","","","","","","","","","","","","","","","","Primary","State-funded primary","1771","394967"
-"201718","Academic year","Regional","E92000001","England","E12000003","Yorkshire and The Humber","","","","","","","","","","","","","","","","","","","","","Secondary","State-funded secondary","317","298801"
-"201718","Academic year","Regional","E92000001","England","E12000004","East Midlands","","","","","","","","","","","","","","","","","","","","","Primary","State-funded primary","1633","338065"
-"201718","Academic year","Regional","E92000001","England","E12000004","East Midlands","","","","","","","","","","","","","","","","","","","","","Secondary","State-funded secondary","288","254494"
-"201718","Academic year","Regional","E92000001","England","E12000005","West Midlands","","","","","","","","","","","","","","","","","","","","","Primary","State-funded primary","1770","430199"
-"201718","Academic year","Regional","E92000001","England","E12000005","West Midlands","","","","","","","","","","","","","","","","","","","","","Secondary","State-funded secondary","415","337208"
-"201718","Academic year","Regional","E92000001","England","E12000006","East of England","","","","","","","","","","","","","","","","","","","","","Primary","State-funded primary","1988","434786"
-"201718","Academic year","Regional","E92000001","England","E12000006","East of England","","","","","","","","","","","","","","","","","","","","","Secondary","State-funded secondary","382","331375"
-"201718","Academic year","Regional","E92000001","England","E12000008","South East","","","","","","","","","","","","","","","","","","","","","Primary","State-funded primary","2593","621106"
-"201718","Academic year","Regional","E92000001","England","E12000008","South East","","","","","","","","","","","","","","","","","","","","","Secondary","State-funded secondary","504","460609"
-"201718","Academic year","Regional","E92000001","England","E12000009","South West","","","","","","","","","","","","","","","","","","","","","Primary","State-funded primary","1871","356647"
-"201718","Academic year","Regional","E92000001","England","E12000009","South West","","","","","","","","","","","","","","","","","","","","","Secondary","State-funded secondary","339","280443"
-"201718","Academic year","Regional","E92000001","England","E13000001","Inner London","","","","","","","","","","","","","","","","","","","","","Primary","State-funded primary","707","203395"
-"201718","Academic year","Regional","E92000001","England","E13000001","Inner London","","","","","","","","","","","","","","","","","","","","","Secondary","State-funded secondary","179","150394"
-"201718","Academic year","Regional","E92000001","England","E13000002","Outer London","","","","","","","","","","","","","","","","","","","","","Primary","State-funded primary","1105","399538"
-"201718","Academic year","Regional","E92000001","England","E13000002","Outer London","","","","","","","","","","","","","","","","","","","","","Secondary","State-funded secondary","321","294235"
-"201718","Academic year","Local authority","E92000001","England","E13000001","Inner London","z","z","Unknown","","","","","","","","","","","","","","","","","","Primary","State-funded primary","58","16215"
-"201718","Academic year","Local authority","E92000001","England","E13000001","Inner London","z","z","Not applicable","","","","","","","","","","","","","","","","","","Secondary","State-funded secondary","16","12098"
-"201718","Academic year","Local authority","E92000001","England","E13000001","Inner London","208","E09000022","Lambeth","","","","","","","","","","","","","","","","","","Primary","State-funded primary","60","17974"
-"201718","Academic year","Local authority","E92000001","England","E13000001","Inner London","208","E09000022","Lambeth","","","","","","","","","","","","","","","","","","Secondary","State-funded secondary","18","12518"
-"201718","Academic year","Local authority","E92000001","England","E13000002","Outer London","303","E09000004","Bexley","","","","","","","","","","","","","","","","","","Primary","State-funded primary","57","18927"
-"201718","Academic year","Local authority","E92000001","England","E13000002","Outer London","303","E09000004","Bexley","","","","","","","","","","","","","","","","","","Secondary","State-funded secondary","16","17268"
-"201718","Academic year","Local authority","E92000001","England","E13000002","Outer London","310","E09000015","Harrow","","","","","","","","","","","","","","","","","","Primary","State-funded primary","42","18680"
-"201718","Academic year","Local authority","E92000001","England","E13000002","Outer London","310","E09000015","Harrow","","","","","","","","","","","","","","","","","","Secondary","State-funded secondary","13","12629"
-"201718","Academic year","Local authority","E92000001","England","E13000002","Outer London","317","E09000026","Redbridge","","","","","","","","","","","","","","","","","","Primary","State-funded primary","52","24627"
-"201718","Academic year","Local authority","E92000001","England","E13000002","Outer London","317","E09000026","Redbridge","","","","","","","","","","","","","","","","","","Secondary","State-funded secondary","19","21102"
-"201718","Academic year","Local authority","E92000001","England","E12000005","West Midlands","335","E08000030","Walsall","","","","","","","","","","","","","","","","","","Primary","State-funded primary","85","22776"
-"201718","Academic year","Local authority","E92000001","England","E12000005","West Midlands","335","E08000030","Walsall","","","","","","","","","","","","","","","","","","Secondary","State-funded secondary","19","18017"
-"201718","Academic year","Local authority","E92000001","England","E12000002","North West","342","E08000013","St. Helens","","","","","","","","","","","","","","","","","","Primary","State-funded primary","54","12882"
-"201718","Academic year","Local authority","E92000001","England","E12000002","North West","342","E08000013","St. Helens","","","","","","","","","","","","","","","","","","Secondary","State-funded secondary","9","9378"
-"201718","Academic year","Local authority","E92000001","England","E12000001","North East","390","E08000020","Gateshead","","","","","","","","","","","","","","","","","","Primary","State-funded primary","67","13066"
-"201718","Academic year","Local authority","E92000001","England","E12000001","North East","390","E08000020","Gateshead","","","","","","","","","","","","","","","","","","Secondary","State-funded secondary","10","10034"
-"201718","Academic year","Local authority","E92000001","England","E12000003","Yorkshire and The Humber","812","E06000012","North East Lincolnshire","","","","","","","","","","","","","","","","","","Primary","State-funded primary","47","12020"
-"201718","Academic year","Local authority","E92000001","England","E12000003","Yorkshire and The Humber","812","E06000012","North East Lincolnshire","","","","","","","","","","","","","","","","","","Secondary","State-funded secondary","10","8326"
-"201718","Academic year","Local authority","E92000001","England","E12000004","East Midlands","830","E10000007","Derbyshire","","","","","","","","","","","","","","","","","","Primary","State-funded primary","349","52093"
-"201718","Academic year","Local authority","E92000001","England","E12000004","East Midlands","830","E10000007","Derbyshire","","","","","","","","","","","","","","","","","","Secondary","State-funded secondary","45","38593"
-"201718","Academic year","Local authority","E92000001","England","E12000008","South East","870","E06000038","Reading","","","","","","","","","","","","","","","","","","Primary","State-funded primary","39","11880"
-"201718","Academic year","Local authority","E92000001","England","E12000008","South East","870","E06000038","Reading","","","","","","","","","","","","","","","","","","Secondary","State-funded secondary","10","6457"
-"201718","Academic year","Local authority","E92000001","England","E12000006","East of England","881","E10000012","Essex","","","","","","","","","","","","","","","","","","Primary","State-funded primary","447","102579"
-"201718","Academic year","Local authority","E92000001","England","E12000006","East of England","881","E10000012","Essex","","","","","","","","","","","","","","","","","","Secondary","State-funded secondary","76","75881"
-"201718","Academic year","Local authority","E92000001","England","E12000002","North West","895","E06000049","Cheshire East","","","","","","","","","","","","","","","","","","Primary","State-funded primary","124","25720"
-"201718","Academic year","Local authority","E92000001","England","E12000002","North West","895","E06000049","Cheshire East","","","","","","","","","","","","","","","","","","Secondary","State-funded secondary","23","19665"
-"201718","Academic year","Local authority","E92000001","England","E12000009","South West","933","E10000027","Somerset","","","","","","","","","","","","","","","","","","Primary","State-funded primary","216","33304"
-"201718","Academic year","Local authority","E92000001","England","E12000009","South West","933","E10000027","Somerset","","","","","","","","","","","","","","","","","","Secondary","State-funded secondary","38","28320"
-"201617","Academic year","National","E92000001","England","","","","","","","","","","","","","","","","","","","","","","","Primary","State-funded primary","16739","3857918"
-"201617","Academic year","National","E92000001","England","","","","","","","","","","","","","","","","","","","","","","","Secondary","State-funded secondary","3365","2869418"
-"201617","Academic year","Regional","E92000001","England","E12000001","North East","","","","","","","","","","","","","","","","","","","","","Primary","State-funded primary","860","173325"
-"201617","Academic year","Regional","E92000001","England","E12000001","North East","","","","","","","","","","","","","","","","","","","","","Secondary","State-funded secondary","175","140039"
-"201617","Academic year","Regional","E92000001","England","E12000002","North West","","","","","","","","","","","","","","","","","","","","","Primary","State-funded primary","2447","528295"
-"201617","Academic year","Regional","E92000001","England","E12000002","North West","","","","","","","","","","","","","","","","","","","","","Secondary","State-funded secondary","457","387839"
-"201617","Academic year","Regional","E92000001","England","E12000003","Yorkshire and The Humber","","","","","","","","","","","","","","","","","","","","","Primary","State-funded primary","1766","390470"
-"201617","Academic year","Regional","E92000001","England","E12000003","Yorkshire and The Humber","","","","","","","","","","","","","","","","","","","","","Secondary","State-funded secondary","314","291608"
-"201617","Academic year","Regional","E92000001","England","E12000004","East Midlands","","","","","","","","","","","","","","","","","","","","","Primary","State-funded primary","1631","335152"
-"201617","Academic year","Regional","E92000001","England","E12000004","East Midlands","","","","","","","","","","","","","","","","","","","","","Secondary","State-funded secondary","287","247513"
-"201617","Academic year","Regional","E92000001","England","E12000005","West Midlands","","","","","","","","","","","","","","","","","","","","","Primary","State-funded primary","1770","425570"
-"201617","Academic year","Regional","E92000001","England","E12000005","West Midlands","","","","","","","","","","","","","","","","","","","","","Secondary","State-funded secondary","414","326461"
-"201617","Academic year","Regional","E92000001","England","E12000006","East of England","","","","","","","","","","","","","","","","","","","","","Primary","State-funded primary","1989","429764"
-"201617","Academic year","Regional","E92000001","England","E12000006","East of England","","","","","","","","","","","","","","","","","","","","","Secondary","State-funded secondary","386","326125"
-"201617","Academic year","Regional","E92000001","England","E12000008","South East","","","","","","","","","","","","","","","","","","","","","Primary","State-funded primary","2593","617021"
-"201617","Academic year","Regional","E92000001","England","E12000008","South East","","","","","","","","","","","","","","","","","","","","","Secondary","State-funded secondary","501","446132"
-"201617","Academic year","Regional","E92000001","England","E12000009","South West","","","","","","","","","","","","","","","","","","","","","Primary","State-funded primary","1869","354660"
-"201617","Academic year","Regional","E92000001","England","E12000009","South West","","","","","","","","","","","","","","","","","","","","","Secondary","State-funded secondary","339","273320"
-"201617","Academic year","Regional","E92000001","England","E13000001","Inner London","","","","","","","","","","","","","","","","","","","","","Primary","State-funded primary","708","204445"
-"201617","Academic year","Regional","E92000001","England","E13000001","Inner London","","","","","","","","","","","","","","","","","","","","","Secondary","State-funded secondary","179","145586"
-"201617","Academic year","Regional","E92000001","England","E13000002","Outer London","","","","","","","","","","","","","","","","","","","","","Primary","State-funded primary","1106","399216"
-"201617","Academic year","Regional","E92000001","England","E13000002","Outer London","","","","","","","","","","","","","","","","","","","","","Secondary","State-funded secondary","313","284795"
-"201617","Academic year","Local authority","E92000001","England","E13000001","Inner London","204","E09000012","Hackney","","","","","","","","","","","","","","","","","","Primary","State-funded primary","58","16378"
-"201617","Academic year","Local authority","E92000001","England","E13000001","Inner London","204","E09000012","Hackney","","","","","","","","","","","","","","","","","","Secondary","State-funded secondary","16","11700"
-"201617","Academic year","Local authority","E92000001","England","E13000001","Inner London","208","E09000022","Lambeth","","","","","","","","","","","","","","","","","","Primary","State-funded primary","59","17633"
-"201617","Academic year","Local authority","E92000001","England","E13000001","Inner London","208","E09000022","Lambeth","","","","","","","","","","","","","","","","","","Secondary","State-funded secondary","19","12838"
-"201617","Academic year","Local authority","E92000001","England","E13000002","Outer London","303","E09000004","Bexley","","","","","","","","","","","","","","","","","","Primary","State-funded primary","57","18969"
-"201617","Academic year","Local authority","E92000001","England","E13000002","Outer London","303","E09000004","Bexley","","","","","","","","","","","","","","","","","","Secondary","State-funded secondary","16","17009"
-"201617","Academic year","Local authority","E92000001","England","E13000002","Outer London","310","E09000015","Harrow","","","","","","","","","","","","","","","","","","Primary","State-funded primary","42","18302"
-"201617","Academic year","Local authority","E92000001","England","E13000002","Outer London","310","E09000015","Harrow","","","","","","","","","","","","","","","","","","Secondary","State-funded secondary","13","11916"
-"201617","Academic year","Local authority","E92000001","England","E13000002","Outer London","317","E09000026","Redbridge","","","","","","","","","","","","","","","","","","Primary","State-funded primary","51","24471"
-"201617","Academic year","Local authority","E92000001","England","E13000002","Outer London","317","E09000026","Redbridge","","","","","","","","","","","","","","","","","","Secondary","State-funded secondary","19","20391"
-"201617","Academic year","Local authority","E92000001","England","E12000005","West Midlands","335","E08000030","Walsall","","","","","","","","","","","","","","","","","","Primary","State-funded primary","85","22504"
-"201617","Academic year","Local authority","E92000001","England","E12000005","West Midlands","335","E08000030","Walsall","","","","","","","","","","","","","","","","","","Secondary","State-funded secondary","19","17711"
-"201617","Academic year","Local authority","E92000001","England","E12000002","North West","342","E08000013","St. Helens","","","","","","","","","","","","","","","","","","Primary","State-funded primary","54","12871"
-"201617","Academic year","Local authority","E92000001","England","E12000002","North West","342","E08000013","St. Helens","","","","","","","","","","","","","","","","","","Secondary","State-funded secondary","9","9229"
-"201617","Academic year","Local authority","E92000001","England","E12000001","North East","390","E08000020","Gateshead","","","","","","","","","","","","","","","","","","Primary","State-funded primary","67","13052"
-"201617","Academic year","Local authority","E92000001","England","E12000001","North East","390","E08000020","Gateshead","","","","","","","","","","","","","","","","","","Secondary","State-funded secondary","10","9855"
-"201617","Academic year","Local authority","E92000001","England","E12000003","Yorkshire and The Humber","812","E06000012","North East Lincolnshire","","","","","","","","","","","","","","","","","","Primary","State-funded primary","47","11872"
-"201617","Academic year","Local authority","E92000001","England","E12000003","Yorkshire and The Humber","812","E06000012","North East Lincolnshire","","","","","","","","","","","","","","","","","","Secondary","State-funded secondary","10","8248"
-"201617","Academic year","Local authority","E92000001","England","E12000004","East Midlands","830","E10000007","Derbyshire","","","","","","","","","","","","","","","","","","Primary","State-funded primary","350","51928"
-"201617","Academic year","Local authority","E92000001","England","E12000004","East Midlands","830","E10000007","Derbyshire","","","","","","","","","","","","","","","","","","Secondary","State-funded secondary","45","37982"
-"201617","Academic year","Local authority","E92000001","England","E12000008","South East","870","E06000038","Reading","","","","","","","","","","","","","","","","","","Primary","State-funded primary","39","11627"
-"201617","Academic year","Local authority","E92000001","England","E12000008","South East","870","E06000038","Reading","","","","","","","","","","","","","","","","","","Secondary","State-funded secondary","10","6097"
-"201617","Academic year","Local authority","E92000001","England","E12000006","East of England","881","E10000012","Essex","","","","","","","","","","","","","","","","","","Primary","State-funded primary","447","100631"
-"201617","Academic year","Local authority","E92000001","England","E12000006","East of England","881","E10000012","Essex","","","","","","","","","","","","","","","","","","Secondary","State-funded secondary","77","75435"
-"201617","Academic year","Local authority","E92000001","England","E12000002","North West","895","E06000049","Cheshire East","","","","","","","","","","","","","","","","","","Primary","State-funded primary","124","25559"
-"201617","Academic year","Local authority","E92000001","England","E12000002","North West","895","E06000049","Cheshire East","","","","","","","","","","","","","","","","","","Secondary","State-funded secondary","23","19097"
-"201617","Academic year","Local authority","E92000001","England","E12000009","South West","933","E10000027","Somerset","","","","","","","","","","","","","","","","","","Primary","State-funded primary","216","33155"
-"201617","Academic year","Local authority","E92000001","England","E12000009","South West","933","E10000027","Somerset","","","","","","","","","","","","","","","","","","Secondary","State-funded secondary","38","27717"
-"201516","Academic year","National","E92000001","England","","","","","","","","","","","","","","","","","","","","","","","Primary","State-funded primary","16736","3796142"
-"201516","Academic year","National","E92000001","England","","","","","","","","","","","","","","","","","","","","","","","Secondary","State-funded secondary","3371","2817406"
-"201516","Academic year","Regional","E92000001","England","E12000001","North East","","","","","","","","","","","","","","","","","","","","","Primary","State-funded primary","858","170197"
-"201516","Academic year","Regional","E92000001","England","E12000001","North East","","","","","","","","","","","","","","","","","","","","","Secondary","State-funded secondary","183","138277"
-"201516","Academic year","Regional","E92000001","England","E12000002","North West","","","","","","","","","","","","","","","","","","","","","Primary","State-funded primary","2451","520764"
-"201516","Academic year","Regional","E92000001","England","E12000002","North West","","","","","","","","","","","","","","","","","","","","","Secondary","State-funded secondary","458","381963"
-"201516","Academic year","Regional","E92000001","England","E12000003","Yorkshire and The Humber","","","","","","","","","","","","","","","","","","","","","Primary","State-funded primary","1778","386564"
-"201516","Academic year","Regional","E92000001","England","E12000003","Yorkshire and The Humber","","","","","","","","","","","","","","","","","","","","","Secondary","State-funded secondary","310","283224"
-"201516","Academic year","Regional","E92000001","England","E12000004","East Midlands","","","","","","","","","","","","","","","","","","","","","Primary","State-funded primary","1630","327644"
-"201516","Academic year","Regional","E92000001","England","E12000004","East Midlands","","","","","","","","","","","","","","","","","","","","","Secondary","State-funded secondary","287","241595"
-"201516","Academic year","Regional","E92000001","England","E12000005","West Midlands","","","","","","","","","","","","","","","","","","","","","Primary","State-funded primary","1776","418465"
-"201516","Academic year","Regional","E92000001","England","E12000005","West Midlands","","","","","","","","","","","","","","","","","","","","","Secondary","State-funded secondary","417","320311"
-"201516","Academic year","Regional","E92000001","England","E12000006","East of England","","","","","","","","","","","","","","","","","","","","","Primary","State-funded primary","1981","419514"
-"201516","Academic year","Regional","E92000001","England","E12000006","East of England","","","","","","","","","","","","","","","","","","","","","Secondary","State-funded secondary","387","321800"
-"201516","Academic year","Regional","E92000001","England","E12000008","South East","","","","","","","","","","","","","","","","","","","","","Primary","State-funded primary","2593","606516"
-"201516","Academic year","Regional","E92000001","England","E12000008","South East","","","","","","","","","","","","","","","","","","","","","Secondary","State-funded secondary","502","438657"
-"201516","Academic year","Regional","E92000001","England","E12000009","South West","","","","","","","","","","","","","","","","","","","","","Primary","State-funded primary","1864","347876"
-"201516","Academic year","Regional","E92000001","England","E12000009","South West","","","","","","","","","","","","","","","","","","","","","Secondary","State-funded secondary","340","270210"
-"201516","Academic year","Regional","E92000001","England","E13000001","Inner London","","","","","","","","","","","","","","","","","","","","","Primary","State-funded primary","706","204188"
-"201516","Academic year","Regional","E92000001","England","E13000001","Inner London","","","","","","","","","","","","","","","","","","","","","Secondary","State-funded secondary","177","142642"
-"201516","Academic year","Regional","E92000001","England","E13000002","Outer London","","","","","","","","","","","","","","","","","","","","","Primary","State-funded primary","1099","394414"
-"201516","Academic year","Regional","E92000001","England","E13000002","Outer London","","","","","","","","","","","","","","","","","","","","","Secondary","State-funded secondary","310","278727"
-"201516","Academic year","Local authority","E92000001","England","E13000001","Inner London","204","E09000012","Hackney","","","","","","","","","","","","","","","","","","Primary","State-funded primary","58","16317"
-"201516","Academic year","Local authority","E92000001","England","E13000001","Inner London","204","E09000012","Hackney","","","","","","","","","","","","","","","","","","Secondary","State-funded secondary","15","11335"
-"201516","Academic year","Local authority","E92000001","England","E13000001","Inner London","208","E09000022","Lambeth","","","","","","","","","","","","","","","","","","Primary","State-funded primary","59","17652"
-"201516","Academic year","Local authority","E92000001","England","E13000001","Inner London","208","E09000022","Lambeth","","","","","","","","","","","","","","","","","","Secondary","State-funded secondary","19","12343"
-"201516","Academic year","Local authority","E92000001","England","E13000002","Outer London","303","E09000004","Bexley","","","","","","","","","","","","","","","","","","Primary","State-funded primary","57","18558"
-"201516","Academic year","Local authority","E92000001","England","E13000002","Outer London","303","E09000004","Bexley","","","","","","","","","","","","","","","","","","Secondary","State-funded secondary","16","17167"
-"201516","Academic year","Local authority","E92000001","England","E13000002","Outer London","310","E09000015","Harrow","","","","","","","","","","","","","","","","","","Primary","State-funded primary","40","17835"
-"201516","Academic year","Local authority","E92000001","England","E13000002","Outer London","310","E09000015","Harrow","","","","","","","","","","","","","","","","","","Secondary","State-funded secondary","13","11897"
-"201516","Academic year","Local authority","E92000001","England","E13000002","Outer London","317","E09000026","Redbridge","","","","","","","","","","","","","","","","","","Primary","State-funded primary","51","24257"
-"201516","Academic year","Local authority","E92000001","England","E13000002","Outer London","317","E09000026","Redbridge","","","","","","","","","","","","","","","","","","Secondary","State-funded secondary","19","19778"
-"201516","Academic year","Local authority","E92000001","England","E12000005","West Midlands","335","E08000030","Walsall","","","","","","","","","","","","","","","","","","Primary","State-funded primary","85","22257"
-"201516","Academic year","Local authority","E92000001","England","E12000005","West Midlands","335","E08000030","Walsall","","","","","","","","","","","","","","","","","","Secondary","State-funded secondary","19","17226"
-"201516","Academic year","Local authority","E92000001","England","E12000002","North West","342","E08000013","St. Helens","","","","","","","","","","","","","","","","","","Primary","State-funded primary","54","12603"
-"201516","Academic year","Local authority","E92000001","England","E12000002","North West","342","E08000013","St. Helens","","","","","","","","","","","","","","","","","","Secondary","State-funded secondary","9","9008"
-"201516","Academic year","Local authority","E92000001","England","E12000001","North East","390","E08000020","Gateshead","","","","","","","","","","","","","","","","","","Primary","State-funded primary","67","12858"
-"201516","Academic year","Local authority","E92000001","England","E12000001","North East","390","E08000020","Gateshead","","","","","","","","","","","","","","","","","","Secondary","State-funded secondary","10","9799"
-"201516","Academic year","Local authority","E92000001","England","E12000003","Yorkshire and The Humber","812","E06000012","North East Lincolnshire","","","","","","","","","","","","","","","","","","Primary","State-funded primary","47","11662"
-"201516","Academic year","Local authority","E92000001","England","E12000003","Yorkshire and The Humber","812","E06000012","North East Lincolnshire","","","","","","","","","","","","","","","","","","Secondary","State-funded secondary","10","8149"
-"201516","Academic year","Local authority","E92000001","England","E12000004","East Midlands","830","E10000007","Derbyshire","","","","","","","","","","","","","","","","","","Primary","State-funded primary","349","51063"
-"201516","Academic year","Local authority","E92000001","England","E12000004","East Midlands","830","E10000007","Derbyshire","","","","","","","","","","","","","","","","","","Secondary","State-funded secondary","45","37587"
-"201516","Academic year","Local authority","E92000001","England","E12000008","South East","870","E06000038","Reading","","","","","","","","","","","","","","","","","","Primary","State-funded primary","39","11357"
-"201516","Academic year","Local authority","E92000001","England","E12000008","South East","870","E06000038","Reading","","","","","","","","","","","","","","","","","","Secondary","State-funded secondary","10","5816"
-"201516","Academic year","Local authority","E92000001","England","E12000006","East of England","881","E10000012","Essex","","","","","","","","","","","","","","","","","","Primary","State-funded primary","448","99728"
-"201516","Academic year","Local authority","E92000001","England","E12000006","East of England","881","E10000012","Essex","","","","","","","","","","","","","","","","","","Secondary","State-funded secondary","78","74326"
-"201516","Academic year","Local authority","E92000001","England","E12000002","North West","895","E06000049","Cheshire East","","","","","","","","","","","","","","","","","","Primary","State-funded primary","124","25062"
-"201516","Academic year","Local authority","E92000001","England","E12000002","North West","895","E06000049","Cheshire East","","","","","","","","","","","","","","","","","","Secondary","State-funded secondary","23","18733"
-"201516","Academic year","Local authority","E92000001","England","E12000009","South West","933","E10000027","Somerset","","","","","","","","","","","","","","","","","","Primary","State-funded primary","213","32882"
-"201516","Academic year","Local authority","E92000001","England","E12000009","South West","933","E10000027","Somerset","","","","","","","","","","","","","","","","","","Secondary","State-funded secondary","38","27342"
-"201415","Academic year","National","E92000001","England","","","","","","","","","","","","","","","","","","","","","","","Primary","State-funded primary","16723","3713774"
-"201415","Academic year","National","E92000001","England","","","","","","","","","","","","","","","","","","","","","","","Secondary","State-funded secondary","3369","2779710"
-"201415","Academic year","Regional","E92000001","England","E12000001","North East","","","","","","","","","","","","","","","","","","","","","Primary","State-funded primary","864","167125"
-"201415","Academic year","Regional","E92000001","England","E12000001","North East","","","","","","","","","","","","","","","","","","","","","Secondary","State-funded secondary","184","137730"
-"201415","Academic year","Regional","E92000001","England","E12000002","North West","","","","","","","","","","","","","","","","","","","","","Primary","State-funded primary","2443","509502"
-"201415","Academic year","Regional","E92000001","England","E12000002","North West","","","","","","","","","","","","","","","","","","","","","Secondary","State-funded secondary","454","375440"
-"201415","Academic year","Regional","E92000001","England","E12000003","Yorkshire and The Humber","","","","","","","","","","","","","","","","","","","","","Primary","State-funded primary","1783","380934"
-"201415","Academic year","Regional","E92000001","England","E12000003","Yorkshire and The Humber","","","","","","","","","","","","","","","","","","","","","Secondary","State-funded secondary","309","280914"
-"201415","Academic year","Regional","E92000001","England","E12000004","East Midlands","","","","","","","","","","","","","","","","","","","","","Primary","State-funded primary","1632","318818"
-"201415","Academic year","Regional","E92000001","England","E12000004","East Midlands","","","","","","","","","","","","","","","","","","","","","Secondary","State-funded secondary","292","240799"
-"201415","Academic year","Regional","E92000001","England","E12000005","West Midlands","","","","","","","","","","","","","","","","","","","","","Primary","State-funded primary","1771","408186"
-"201415","Academic year","Regional","E92000001","England","E12000005","West Midlands","","","","","","","","","","","","","","","","","","","","","Secondary","State-funded secondary","416","314935"
-"201415","Academic year","Regional","E92000001","England","E12000006","East of England","","","","","","","","","","","","","","","","","","","","","Primary","State-funded primary","1987","409865"
-"201415","Academic year","Regional","E92000001","England","E12000006","East of England","","","","","","","","","","","","","","","","","","","","","Secondary","State-funded secondary","394","318525"
-"201415","Academic year","Regional","E92000001","England","E12000008","South East","","","","","","","","","","","","","","","","","","","","","Primary","State-funded primary","2594","592343"
-"201415","Academic year","Regional","E92000001","England","E12000008","South East","","","","","","","","","","","","","","","","","","","","","Secondary","State-funded secondary","502","432945"
-"201415","Academic year","Regional","E92000001","England","E12000009","South West","","","","","","","","","","","","","","","","","","","","","Primary","State-funded primary","1861","340074"
-"201415","Academic year","Regional","E92000001","England","E12000009","South West","","","","","","","","","","","","","","","","","","","","","Secondary","State-funded secondary","343","267744"
-"201415","Academic year","Regional","E92000001","England","E13000001","Inner London","","","","","","","","","","","","","","","","","","","","","Primary","State-funded primary","704","202311"
-"201415","Academic year","Regional","E92000001","England","E13000001","Inner London","","","","","","","","","","","","","","","","","","","","","Secondary","State-funded secondary","172","138478"
-"201415","Academic year","Regional","E92000001","England","E13000002","Outer London","","","","","","","","","","","","","","","","","","","","","Primary","State-funded primary","1084","384616"
-"201415","Academic year","Regional","E92000001","England","E13000002","Outer London","","","","","","","","","","","","","","","","","","","","","Secondary","State-funded secondary","303","272200"
-"201415","Academic year","Local authority","E92000001","England","E13000001","Inner London","204","E09000012","Hackney","","","","","","","","","","","","","","","","","","Primary","State-funded primary","55","16201"
-"201415","Academic year","Local authority","E92000001","England","E13000001","Inner London","204","E09000012","Hackney","","","","","","","","","","","","","","","","","","Secondary","State-funded secondary","15","11044"
-"201415","Academic year","Local authority","E92000001","England","E13000001","Inner London","208","E09000022","Lambeth","","","","","","","","","","","","","","","","","","Primary","State-funded primary","60","17909"
-"201415","Academic year","Local authority","E92000001","England","E13000001","Inner London","208","E09000022","Lambeth","","","","","","","","","","","","","","","","","","Secondary","State-funded secondary","17","11456"
-"201415","Academic year","Local authority","E92000001","England","E13000002","Outer London","303","E09000004","Bexley","","","","","","","","","","","","","","","","","","Primary","State-funded primary","57","18158"
-"201415","Academic year","Local authority","E92000001","England","E13000002","Outer London","303","E09000004","Bexley","","","","","","","","","","","","","","","","","","Secondary","State-funded secondary","16","17077"
-"201415","Academic year","Local authority","E92000001","England","E13000002","Outer London","310","E09000015","Harrow","","","","","","","","","","","","","","","","","","Primary","State-funded primary","40","17545"
-"201415","Academic year","Local authority","E92000001","England","E13000002","Outer London","310","E09000015","Harrow","","","","","","","","","","","","","","","","","","Secondary","State-funded secondary","12","11466"
-"201415","Academic year","Local authority","E92000001","England","E13000002","Outer London","317","E09000026","Redbridge","","","","","","","","","","","","","","","","","","Primary","State-funded primary","51","23811"
-"201415","Academic year","Local authority","E92000001","England","E13000002","Outer London","317","E09000026","Redbridge","","","","","","","","","","","","","","","","","","Secondary","State-funded secondary","18","18864"
-"201415","Academic year","Local authority","E92000001","England","E12000005","West Midlands","335","E08000030","Walsall","","","","","","","","","","","","","","","","","","Primary","State-funded primary","85","21742"
-"201415","Academic year","Local authority","E92000001","England","E12000005","West Midlands","335","E08000030","Walsall","","","","","","","","","","","","","","","","","","Secondary","State-funded secondary","19","17067"
-"201415","Academic year","Local authority","E92000001","England","E12000002","North West","342","E08000013","St. Helens","","","","","","","","","","","","","","","","","","Primary","State-funded primary","54","12388"
-"201415","Academic year","Local authority","E92000001","England","E12000002","North West","342","E08000013","St. Helens","","","","","","","","","","","","","","","","","","Secondary","State-funded secondary","9","8909"
-"201415","Academic year","Local authority","E92000001","England","E12000001","North East","390","E08000020","Gateshead","","","","","","","","","","","","","","","","","","Primary","State-funded primary","67","12587"
-"201415","Academic year","Local authority","E92000001","England","E12000001","North East","390","E08000020","Gateshead","","","","","","","","","","","","","","","","","","Secondary","State-funded secondary","10","9733"
-"201415","Academic year","Local authority","E92000001","England","E12000003","Yorkshire and The Humber","812","E06000012","North East Lincolnshire","","","","","","","","","","","","","","","","","","Primary","State-funded primary","47","11599"
-"201415","Academic year","Local authority","E92000001","England","E12000003","Yorkshire and The Humber","812","E06000012","North East Lincolnshire","","","","","","","","","","","","","","","","","","Secondary","State-funded secondary","10","8201"
-"201415","Academic year","Local authority","E92000001","England","E12000004","East Midlands","830","E10000007","Derbyshire","","","","","","","","","","","","","","","","","","Primary","State-funded primary","350","50421"
-"201415","Academic year","Local authority","E92000001","England","E12000004","East Midlands","830","E10000007","Derbyshire","","","","","","","","","","","","","","","","","","Secondary","State-funded secondary","45","37621"
-"201415","Academic year","Local authority","E92000001","England","E12000008","South East","870","E06000038","Reading","","","","","","","","","","","","","","","","","","Primary","State-funded primary","38","10858"
-"201415","Academic year","Local authority","E92000001","England","E12000008","South East","870","E06000038","Reading","","","","","","","","","","","","","","","","","","Secondary","State-funded secondary","10","5702"
-"201415","Academic year","Local authority","E92000001","England","E12000006","East of England","881","E10000012","Essex","","","","","","","","","","","","","","","","","","Primary","State-funded primary","448","96938"
-"201415","Academic year","Local authority","E92000001","England","E12000006","East of England","881","E10000012","Essex","","","","","","","","","","","","","","","","","","Secondary","State-funded secondary","79","73719"
-"201415","Academic year","Local authority","E92000001","England","E12000002","North West","895","E06000049","Cheshire East","","","","","","","","","","","","","","","","","","Primary","State-funded primary","124","24550"
-"201415","Academic year","Local authority","E92000001","England","E12000002","North West","895","E06000049","Cheshire East","","","","","","","","","","","","","","","","","","Secondary","State-funded secondary","21","17956"
-"201415","Academic year","Local authority","E92000001","England","E12000009","South West","933","E10000027","Somerset","","","","","","","","","","","","","","","","","","Primary","State-funded primary","211","31939"
-"201415","Academic year","Local authority","E92000001","England","E12000009","South West","933","E10000027","Somerset","","","","","","","","","","","","","","","","","","Secondary","State-funded secondary","39","27402"
-"201314","Academic year","National","E92000001","England","","","","","","","","","","","","","","","","","","","","","","","Primary","State-funded primary","16705","3627985"
-"201314","Academic year","National","E92000001","England","","","","","","","","","","","","","","","","","","","","","","","Secondary","State-funded secondary","3348","2757971"
-"201314","Academic year","Regional","E92000001","England","E12000001","North East","","","","","","","","","","","","","","","","","","","","","Primary","State-funded primary","865","163779"
-"201314","Academic year","Regional","E92000001","England","E12000001","North East","","","","","","","","","","","","","","","","","","","","","Secondary","State-funded secondary","186","137778"
-"201314","Academic year","Regional","E92000001","England","E12000002","North West","","","","","","","","","","","","","","","","","","","","","Primary","State-funded primary","2445","498856"
-"201314","Academic year","Regional","E92000001","England","E12000002","North West","","","","","","","","","","","","","","","","","","","","","Secondary","State-funded secondary","455","374734"
-"201314","Academic year","Regional","E92000001","England","E12000003","Yorkshire and The Humber","","","","","","","","","","","","","","","","","","","","","Primary","State-funded primary","1782","372952"
-"201314","Academic year","Regional","E92000001","England","E12000003","Yorkshire and The Humber","","","","","","","","","","","","","","","","","","","","","Secondary","State-funded secondary","308","279161"
-"201314","Academic year","Regional","E92000001","England","E12000004","East Midlands","","","","","","","","","","","","","","","","","","","","","Primary","State-funded primary","1625","309033"
-"201314","Academic year","Regional","E92000001","England","E12000004","East Midlands","","","","","","","","","","","","","","","","","","","","","Secondary","State-funded secondary","294","239218"
-"201314","Academic year","Regional","E92000001","England","E12000005","West Midlands","","","","","","","","","","","","","","","","","","","","","Primary","State-funded primary","1771","400495"
-"201314","Academic year","Regional","E92000001","England","E12000005","West Midlands","","","","","","","","","","","","","","","","","","","","","Secondary","State-funded secondary","410","310824"
-"201314","Academic year","Regional","E92000001","England","E12000006","East of England","","","","","","","","","","","","","","","","","","","","","Primary","State-funded primary","1986","398353"
-"201314","Academic year","Regional","E92000001","England","E12000006","East of England","","","","","","","","","","","","","","","","","","","","","Secondary","State-funded secondary","397","317371"
-"201314","Academic year","Regional","E92000001","England","E12000008","South East","","","","","","","","","","","","","","","","","","","","","Primary","State-funded primary","2590","579631"
-"201314","Academic year","Regional","E92000001","England","E12000008","South East","","","","","","","","","","","","","","","","","","","","","Secondary","State-funded secondary","497","430236"
-"201314","Academic year","Regional","E92000001","England","E12000009","South West","","","","","","","","","","","","","","","","","","","","","Primary","State-funded primary","1853","330043"
-"201314","Academic year","Regional","E92000001","England","E12000009","South West","","","","","","","","","","","","","","","","","","","","","Secondary","State-funded secondary","334","268340"
-"201314","Academic year","Regional","E92000001","England","E13000001","Inner London","","","","","","","","","","","","","","","","","","","","","Primary","State-funded primary","702","199028"
-"201314","Academic year","Regional","E92000001","England","E13000001","Inner London","","","","","","","","","","","","","","","","","","","","","Secondary","State-funded secondary","172","134301"
-"201314","Academic year","Regional","E92000001","England","E13000002","Outer London","","","","","","","","","","","","","","","","","","","","","Primary","State-funded primary","1086","375815"
-"201314","Academic year","Regional","E92000001","England","E13000002","Outer London","","","","","","","","","","","","","","","","","","","","","Secondary","State-funded secondary","295","266008"
-"201314","Academic year","Local authority","E92000001","England","E13000001","Inner London","204","E09000012","Hackney","","","","","","","","","","","","","","","","","","Primary","State-funded primary","55","15854"
-"201314","Academic year","Local authority","E92000001","England","E13000001","Inner London","204","E09000012","Hackney","","","","","","","","","","","","","","","","","","Secondary","State-funded secondary","16","10706"
-"201314","Academic year","Local authority","E92000001","England","E13000001","Inner London","208","E09000022","Lambeth","","","","","","","","","","","","","","","","","","Primary","State-funded primary","60","17649"
-"201314","Academic year","Local authority","E92000001","England","E13000001","Inner London","208","E09000022","Lambeth","","","","","","","","","","","","","","","","","","Secondary","State-funded secondary","17","11160"
-"201314","Academic year","Local authority","E92000001","England","E13000002","Outer London","303","E09000004","Bexley","","","","","","","","","","","","","","","","","","Primary","State-funded primary","57","17714"
-"201314","Academic year","Local authority","E92000001","England","E13000002","Outer London","303","E09000004","Bexley","","","","","","","","","","","","","","","","","","Secondary","State-funded secondary","16","17080"
-"201314","Academic year","Local authority","E92000001","England","E13000002","Outer London","310","E09000015","Harrow","","","","","","","","","","","","","","","","","","Primary","State-funded primary","44","17124"
-"201314","Academic year","Local authority","E92000001","England","E13000002","Outer London","310","E09000015","Harrow","","","","","","","","","","","","","","","","","","Secondary","State-funded secondary","11","10767"
-"201314","Academic year","Local authority","E92000001","England","E13000002","Outer London","317","E09000026","Redbridge","","","","","","","","","","","","","","","","","","Primary","State-funded primary","52","23468"
-"201314","Academic year","Local authority","E92000001","England","E13000002","Outer London","317","E09000026","Redbridge","","","","","","","","","","","","","","","","","","Secondary","State-funded secondary","18","18157"
-"201314","Academic year","Local authority","E92000001","England","E12000005","West Midlands","335","E08000030","Walsall","","","","","","","","","","","","","","","","","","Primary","State-funded primary","85","21170"
-"201314","Academic year","Local authority","E92000001","England","E12000005","West Midlands","335","E08000030","Walsall","","","","","","","","","","","","","","","","","","Secondary","State-funded secondary","20","16916"
-"201314","Academic year","Local authority","E92000001","England","E12000002","North West","342","E08000013","St. Helens","","","","","","","","","","","","","","","","","","Primary","State-funded primary","54","12279"
-"201314","Academic year","Local authority","E92000001","England","E12000002","North West","342","E08000013","St. Helens","","","","","","","","","","","","","","","","","","Secondary","State-funded secondary","9","9024"
-"201314","Academic year","Local authority","E92000001","England","E12000001","North East","390","E08000020","Gateshead","","","","","","","","","","","","","","","","","","Primary","State-funded primary","67","12435"
-"201314","Academic year","Local authority","E92000001","England","E12000001","North East","390","E08000020","Gateshead","","","","","","","","","","","","","","","","","","Secondary","State-funded secondary","10","9799"
-"201314","Academic year","Local authority","E92000001","England","E12000003","Yorkshire and The Humber","812","E06000012","North East Lincolnshire","","","","","","","","","","","","","","","","","","Primary","State-funded primary","47","11369"
-"201314","Academic year","Local authority","E92000001","England","E12000003","Yorkshire and The Humber","812","E06000012","North East Lincolnshire","","","","","","","","","","","","","","","","","","Secondary","State-funded secondary","10","8466"
-"201314","Academic year","Local authority","E92000001","England","E12000004","East Midlands","830","E10000007","Derbyshire","","","","","","","","","","","","","","","","","","Primary","State-funded primary","350","49654"
-"201314","Academic year","Local authority","E92000001","England","E12000004","East Midlands","830","E10000007","Derbyshire","","","","","","","","","","","","","","","","","","Secondary","State-funded secondary","44","37463"
-"201314","Academic year","Local authority","E92000001","England","E12000008","South East","870","E06000038","Reading","","","","","","","","","","","","","","","","","","Primary","State-funded primary","38","10266"
-"201314","Academic year","Local authority","E92000001","England","E12000008","South East","870","E06000038","Reading","","","","","","","","","","","","","","","","","","Secondary","State-funded secondary","8","5512"
-"201314","Academic year","Local authority","E92000001","England","E12000006","East of England","881","E10000012","Essex","","","","","","","","","","","","","","","","","","Primary","State-funded primary","450","94838"
-"201314","Academic year","Local authority","E92000001","England","E12000006","East of England","881","E10000012","Essex","","","","","","","","","","","","","","","","","","Secondary","State-funded secondary","78","73648"
-"201314","Academic year","Local authority","E92000001","England","E12000002","North West","895","E06000049","Cheshire East","","","","","","","","","","","","","","","","","","Primary","State-funded primary","124","23991"
-"201314","Academic year","Local authority","E92000001","England","E12000002","North West","895","E06000049","Cheshire East","","","","","","","","","","","","","","","","","","Secondary","State-funded secondary","22","18593"
-"201314","Academic year","Local authority","E92000001","England","E12000009","South West","933","E10000027","Somerset","","","","","","","","","","","","","","","","","","Primary","State-funded primary","212","31411"
-"201314","Academic year","Local authority","E92000001","England","E12000009","South West","933","E10000027","Somerset","","","","","","","","","","","","","","","","","","Secondary","State-funded secondary","39","27599"
-"201314","Academic year","Local authority district","E92000001","England","E12000001","North East","","","","E06000004","Stockton-on-Tees","","","","E69000031","Tees Valley","","","","","","","","","","","Secondary","State-funded secondary","-134","23787"
-"201314","Academic year","School","E92000001","England","E12000001","North East","","","","E06000004","Stockton-on-Tees","105135","2036905","St Paul's Academy","E69000031","Tees Valley","","","","","","","","","","","Primary","State-funded primary","129","23996"
-"201314","Academic year","School","E92000001","England","E12000001","North East","","","","E06000004","Stockton-on-Tees","129342","3346905","Grace Academy Solihull","E69000031","Tees Valley","","","","","","","","","","","Secondary","State-funded secondary","27","18598"
-"201314","Academic year","School","E92000001","England","E12000001","North East","","","","E06000004","Stockton-on-Tees","130247","8706905","John Madejski Academy","E69000031","Tees Valley","","","","","","","","","","","Secondary","State-funded secondary","256","59015"
-"201314","Academic year","School","E92000001","England","E12000001","North East","","","","E06000004","Stockton-on-Tees","130908","8066907","Macmillan Academy","E69000031","Tees Valley","","","","","","","","","","","Primary","State-funded primary","217","31416"
-"201314","Academic year","School","E92000001","England","E12000001","North East","","","","E06000004","Stockton-on-Tees","130909","3806905","Dixons City Academy","E69000031","Tees Valley","","","","","","","","","","","Secondary","State-funded secondary","44","27604"
-"201314","Academic year","School","E92000001","England","E12000001","North East","","","","E06000004","Stockton-on-Tees","130912","2136905","Paddington Academy","E69000031","Tees Valley","","","","","","","","","","","Secondary","State-funded secondary","-129","23792"
-"201314","Academic year","School","E92000001","England","E12000001","North East","","","","E06000004","Stockton-on-Tees","131062","2046906","Churchill Academy","E69000031","Tees Valley","","","","","","","","","","","Primary","State-funded primary","134","24001"
-"201314","Academic year","School","E92000001","England","E12000001","North East","","","","E06000004","Stockton-on-Tees","131065","3416906","North Liverpool Academy","E69000031","Tees Valley","","","","","","","","","","","Secondary","State-funded secondary","32","18603"
-"201314","Academic year","School","E92000001","England","E12000001","North East","","","","E06000004","Stockton-on-Tees","131262","2136906","Westminster Academy","E69000031","Tees Valley","","","","","","","","","","","Secondary","State-funded secondary","261","59020"
-"201314","Academic year","Local skills improvement plan area","E92000001","England","","","","","","","","","","","E69000012","Greater Lincolnshire","","","","","","","","","","","Primary","State-funded primary","154","42592"
-"201314","Academic year","Local skills improvement plan area","E92000001","England","","","","","","","","","","","E69000027","South-East Midlands","","","","","","","","","","","Secondary","State-funded secondary","132","23999"
-"201314","Academic year","Local skills improvement plan area","E92000001","England","","","","","","","","","","","E69000010","Essex, Southend-on-Sea and Thurrock","","","","","","","","","","","Primary","State-funded primary","259","59018"
-"201314","Academic year","Local skills improvement plan area","E92000001","England","","","","","","","","","","","E69000016","Hertfordshire","","","","","","","","","","","Secondary","State-funded secondary","220","31419"
-"201314","Academic year","Local enterprise partnership","E92000001","England","E12000001","North East","","","","","","","","","","","E37000047","Greater Cambridge and Greater Peterborough","","","","","","","","","Primary","State-funded primary","154","42592"
-"201314","Academic year","Local enterprise partnership","E92000001","England","E12000001","North East","","","","","","","","","","","E37000049","Humber","","","","","","","","","Secondary","State-funded secondary","132","23999"
-"201314","Academic year","Local enterprise partnership","E92000001","England","E12000001","North East","","","","","","","","","","","E37000058","York, North Yorkshire and East Riding","","","","","","","","","Primary","State-funded primary","259","59018"
-"201314","Academic year","Local enterprise partnership","E92000001","England","E12000001","North East","","","","","","","","","","","E37000004","Coast to Capital","","","","","","","","","Secondary","State-funded secondary","220","31419"
-"201314","Academic year","Parliamentary constituency","E92000001","England","E12000001","North East","","","","","","","","","","","","","E14000718","Greenwich and Woolwich","","","","","","","Primary","State-funded primary","154","42592"
-"201314","Academic year","Parliamentary constituency","E92000001","England","E12000001","North East","","","","","","","","","","","","","E14000690","Eltham","","","","","","","Secondary","State-funded secondary","132","23999"
-"201314","Academic year","Parliamentary constituency","E92000001","England","E12000001","North East","","","","","","","","","","","","","E14000896","Richmond Park","","","","","","","Primary","State-funded primary","259","59018"
-"201314","Academic year","Parliamentary constituency","E92000001","England","E12000001","North East","","","","","","","","","","","","","E14001008","Vauxhall","","","","","","","Secondary","State-funded secondary","220","31419"
-"201314","Academic year","Ward","E92000001","England","E12000001","North East","","","","","","","","","","","","","","","E05009385","Stoke Newington","","","","","Primary","State-funded primary","154","42592"
-"201314","Academic year","Ward","E92000001","England","E12000001","North East","","","","","","","","","","","","","","","E05009386","Victoria","","","","","Secondary","State-funded secondary","132","23999"
-"201314","Academic year","Ward","E92000001","England","E12000001","North East","","","","","","","","","","","","","","","E05009387","Woodberry Down","","","","","Primary","State-funded primary","259","59018"
-"201314","Academic year","Ward","E92000001","England","E12000001","North East","","","","","","","","","","","","","","","E05000201","Haselbury","","","","","Secondary","State-funded secondary","220","31419"
-"201314","Academic year","English devolved area","E92000001","England","","","","","","","","","","","","","","","","","","","E47000001","Greater Manchester","","","Primary","State-funded primary","154","42592"
-"201314","Academic year","English devolved area","E92000001","England","","","","","","","","","","","","","","","","","","","E47000002","Sheffield City Region","","","Secondary","State-funded secondary","132","23999"
-"201314","Academic year","English devolved area","E92000001","England","","","","","","","","","","","","","","","","","","","E47000004","Liverpool City Region","","","Primary","State-funded primary","259","59018"
-"201314","Academic year","English devolved area","E92000001","England","","","","","","","","","","","","","","","","","","","E47000005","North East","","","Secondary","State-funded secondary","220","31419"
-"201314","Academic year","MAT","E92000001","England","","","","","","","","","","","","","","","","","","","","","TR00071","APPLECROFT SCHOOL","Primary","State-funded primary","259","59018"
-"201314","Academic year","MAT","E92000001","England","","","","","","","","","","","","","","","","","","","","","TR02469","ASHLEY HILL MULTI ACADEMY TRUST","Secondary","State-funded secondary","220","31419"
+time_period,time_identifier,geographic_level,country_code,country_name,region_code,region_name,old_la_code,new_la_code,la_name,lad_code,lad_name,school_urn,school_laestab,school_name,lsip_code,lsip_name,local_enterprise_partnership_code,local_enterprise_partnership_name,pcon_code,pcon_name,ward_code,ward_name,english_devolved_area_code,english_devolved_area_name,trust_id,trust_name,education_phase,phase_type_grouping,school_count,enrolment_count
+201718,Academic year,National,E92000001,England,,,,,,,,,,,,,,,,,,,,,,,Total,Total,20121,6835059
+201718,Academic year,National,E92000001,England,,,,,,,,,,,,,,,,,,,,,,,Primary,State-funded primary,16739,3885774
+201718,Academic year,National,E92000001,England,,,,,,,,,,,,,,,,,,,,,,,Secondary,State-funded secondary,3382,2949285
+201718,Academic year,Regional,E92000001,England,z,Unknown,,,,,,,,,,,,,,,,,,,,,Primary,State-funded primary,858,175079
+201718,Academic year,Regional,E92000001,England,z,Not applicable,,,,,,,,,,,,,,,,,,,,,Secondary,State-funded secondary,175,142537
+201718,Academic year,Regional,E92000001,England,E12000002,North West,,,,,,,,,,,,,,,,,,,,,Primary,State-funded primary,2443,531992
+201718,Academic year,Regional,E92000001,England,E12000002,North West,,,,,,,,,,,,,,,,,,,,,Secondary,State-funded secondary,462,399189
+201718,Academic year,Regional,E92000001,England,E12000003,Yorkshire and The Humber,,,,,,,,,,,,,,,,,,,,,Primary,State-funded primary,1771,394967
+201718,Academic year,Regional,E92000001,England,E12000003,Yorkshire and The Humber,,,,,,,,,,,,,,,,,,,,,Secondary,State-funded secondary,317,298801
+201718,Academic year,Regional,E92000001,England,E12000004,East Midlands,,,,,,,,,,,,,,,,,,,,,Primary,State-funded primary,1633,338065
+201718,Academic year,Regional,E92000001,England,E12000004,East Midlands,,,,,,,,,,,,,,,,,,,,,Secondary,State-funded secondary,288,254494
+201718,Academic year,Regional,E92000001,England,E12000005,West Midlands,,,,,,,,,,,,,,,,,,,,,Primary,State-funded primary,1770,430199
+201718,Academic year,Regional,E92000001,England,E12000005,West Midlands,,,,,,,,,,,,,,,,,,,,,Secondary,State-funded secondary,415,337208
+201718,Academic year,Regional,E92000001,England,E12000006,East of England,,,,,,,,,,,,,,,,,,,,,Primary,State-funded primary,1988,434786
+201718,Academic year,Regional,E92000001,England,E12000006,East of England,,,,,,,,,,,,,,,,,,,,,Secondary,State-funded secondary,382,331375
+201718,Academic year,Regional,E92000001,England,E12000008,South East,,,,,,,,,,,,,,,,,,,,,Primary,State-funded primary,2593,621106
+201718,Academic year,Regional,E92000001,England,E12000008,South East,,,,,,,,,,,,,,,,,,,,,Secondary,State-funded secondary,504,460609
+201718,Academic year,Regional,E92000001,England,E12000009,South West,,,,,,,,,,,,,,,,,,,,,Primary,State-funded primary,1871,356647
+201718,Academic year,Regional,E92000001,England,E12000009,South West,,,,,,,,,,,,,,,,,,,,,Secondary,State-funded secondary,339,280443
+201718,Academic year,Regional,E92000001,England,E13000001,Inner London,,,,,,,,,,,,,,,,,,,,,Primary,State-funded primary,707,203395
+201718,Academic year,Regional,E92000001,England,E13000001,Inner London,,,,,,,,,,,,,,,,,,,,,Secondary,State-funded secondary,179,150394
+201718,Academic year,Regional,E92000001,England,E13000002,Outer London,,,,,,,,,,,,,,,,,,,,,Primary,State-funded primary,1105,399538
+201718,Academic year,Regional,E92000001,England,E13000002,Outer London,,,,,,,,,,,,,,,,,,,,,Secondary,State-funded secondary,321,294235
+201718,Academic year,Local authority,E92000001,England,E13000001,Inner London,z,z,Unknown,,,,,,,,,,,,,,,,,,Primary,State-funded primary,58,16215
+201718,Academic year,Local authority,E92000001,England,E13000001,Inner London,z,z,Not applicable,,,,,,,,,,,,,,,,,,Secondary,State-funded secondary,16,12098
+201718,Academic year,Local authority,E92000001,England,E13000001,Inner London,208,E09000022,Lambeth,,,,,,,,,,,,,,,,,,Primary,State-funded primary,60,17974
+201718,Academic year,Local authority,E92000001,England,E13000001,Inner London,208,E09000022,Lambeth,,,,,,,,,,,,,,,,,,Secondary,State-funded secondary,18,12518
+201718,Academic year,Local authority,E92000001,England,E13000002,Outer London,303,E09000004,Bexley,,,,,,,,,,,,,,,,,,Primary,State-funded primary,57,18927
+201718,Academic year,Local authority,E92000001,England,E13000002,Outer London,303,E09000004,Bexley,,,,,,,,,,,,,,,,,,Secondary,State-funded secondary,16,17268
+201718,Academic year,Local authority,E92000001,England,E13000002,Outer London,310,E09000015,Harrow,,,,,,,,,,,,,,,,,,Primary,State-funded primary,42,18680
+201718,Academic year,Local authority,E92000001,England,E13000002,Outer London,310,E09000015,Harrow,,,,,,,,,,,,,,,,,,Secondary,State-funded secondary,13,12629
+201718,Academic year,Local authority,E92000001,England,E13000002,Outer London,317,E09000026,Redbridge,,,,,,,,,,,,,,,,,,Primary,State-funded primary,52,24627
+201718,Academic year,Local authority,E92000001,England,E13000002,Outer London,317,E09000026,Redbridge,,,,,,,,,,,,,,,,,,Secondary,State-funded secondary,19,21102
+201718,Academic year,Local authority,E92000001,England,E12000005,West Midlands,335,E08000030,Walsall,,,,,,,,,,,,,,,,,,Primary,State-funded primary,85,22776
+201718,Academic year,Local authority,E92000001,England,E12000005,West Midlands,335,E08000030,Walsall,,,,,,,,,,,,,,,,,,Secondary,State-funded secondary,19,18017
+201718,Academic year,Local authority,E92000001,England,E12000002,North West,342,E08000013,St. Helens,,,,,,,,,,,,,,,,,,Primary,State-funded primary,54,12882
+201718,Academic year,Local authority,E92000001,England,E12000002,North West,342,E08000013,St. Helens,,,,,,,,,,,,,,,,,,Secondary,State-funded secondary,9,9378
+201718,Academic year,Local authority,E92000001,England,E12000001,North East,390,E08000020,Gateshead,,,,,,,,,,,,,,,,,,Primary,State-funded primary,67,13066
+201718,Academic year,Local authority,E92000001,England,E12000001,North East,390,E08000020,Gateshead,,,,,,,,,,,,,,,,,,Secondary,State-funded secondary,10,10034
+201718,Academic year,Local authority,E92000001,England,E12000003,Yorkshire and The Humber,812,E06000012,North East Lincolnshire,,,,,,,,,,,,,,,,,,Primary,State-funded primary,47,12020
+201718,Academic year,Local authority,E92000001,England,E12000003,Yorkshire and The Humber,812,E06000012,North East Lincolnshire,,,,,,,,,,,,,,,,,,Secondary,State-funded secondary,10,8326
+201718,Academic year,Local authority,E92000001,England,E12000004,East Midlands,830,E10000007,Derbyshire,,,,,,,,,,,,,,,,,,Primary,State-funded primary,349,52093
+201718,Academic year,Local authority,E92000001,England,E12000004,East Midlands,830,E10000007,Derbyshire,,,,,,,,,,,,,,,,,,Secondary,State-funded secondary,45,38593
+201718,Academic year,Local authority,E92000001,England,E12000008,South East,870,E06000038,Reading,,,,,,,,,,,,,,,,,,Primary,State-funded primary,39,11880
+201718,Academic year,Local authority,E92000001,England,E12000008,South East,870,E06000038,Reading,,,,,,,,,,,,,,,,,,Secondary,State-funded secondary,10,6457
+201718,Academic year,Local authority,E92000001,England,E12000006,East of England,881,E10000012,Essex,,,,,,,,,,,,,,,,,,Primary,State-funded primary,447,102579
+201718,Academic year,Local authority,E92000001,England,E12000006,East of England,881,E10000012,Essex,,,,,,,,,,,,,,,,,,Secondary,State-funded secondary,76,75881
+201718,Academic year,Local authority,E92000001,England,E12000002,North West,895,E06000049,Cheshire East,,,,,,,,,,,,,,,,,,Primary,State-funded primary,124,25720
+201718,Academic year,Local authority,E92000001,England,E12000002,North West,895,E06000049,Cheshire East,,,,,,,,,,,,,,,,,,Secondary,State-funded secondary,23,19665
+201718,Academic year,Local authority,E92000001,England,E12000009,South West,933,E10000027,Somerset,,,,,,,,,,,,,,,,,,Primary,State-funded primary,216,33304
+201718,Academic year,Local authority,E92000001,England,E12000009,South West,933,E10000027,Somerset,,,,,,,,,,,,,,,,,,Secondary,State-funded secondary,38,28320
+201617,Academic year,National,E92000001,England,,,,,,,,,,,,,,,,,,,,,,,Primary,State-funded primary,16739,3857918
+201617,Academic year,National,E92000001,England,,,,,,,,,,,,,,,,,,,,,,,Secondary,State-funded secondary,3365,2869418
+201617,Academic year,Regional,E92000001,England,E12000001,North East,,,,,,,,,,,,,,,,,,,,,Primary,State-funded primary,860,173325
+201617,Academic year,Regional,E92000001,England,E12000001,North East,,,,,,,,,,,,,,,,,,,,,Secondary,State-funded secondary,175,140039
+201617,Academic year,Regional,E92000001,England,E12000002,North West,,,,,,,,,,,,,,,,,,,,,Primary,State-funded primary,2447,528295
+201617,Academic year,Regional,E92000001,England,E12000002,North West,,,,,,,,,,,,,,,,,,,,,Secondary,State-funded secondary,457,387839
+201617,Academic year,Regional,E92000001,England,E12000003,Yorkshire and The Humber,,,,,,,,,,,,,,,,,,,,,Primary,State-funded primary,1766,390470
+201617,Academic year,Regional,E92000001,England,E12000003,Yorkshire and The Humber,,,,,,,,,,,,,,,,,,,,,Secondary,State-funded secondary,314,291608
+201617,Academic year,Regional,E92000001,England,E12000004,East Midlands,,,,,,,,,,,,,,,,,,,,,Primary,State-funded primary,1631,335152
+201617,Academic year,Regional,E92000001,England,E12000004,East Midlands,,,,,,,,,,,,,,,,,,,,,Secondary,State-funded secondary,287,247513
+201617,Academic year,Regional,E92000001,England,E12000005,West Midlands,,,,,,,,,,,,,,,,,,,,,Primary,State-funded primary,1770,425570
+201617,Academic year,Regional,E92000001,England,E12000005,West Midlands,,,,,,,,,,,,,,,,,,,,,Secondary,State-funded secondary,414,326461
+201617,Academic year,Regional,E92000001,England,E12000006,East of England,,,,,,,,,,,,,,,,,,,,,Primary,State-funded primary,1989,429764
+201617,Academic year,Regional,E92000001,England,E12000006,East of England,,,,,,,,,,,,,,,,,,,,,Secondary,State-funded secondary,386,326125
+201617,Academic year,Regional,E92000001,England,E12000008,South East,,,,,,,,,,,,,,,,,,,,,Primary,State-funded primary,2593,617021
+201617,Academic year,Regional,E92000001,England,E12000008,South East,,,,,,,,,,,,,,,,,,,,,Secondary,State-funded secondary,501,446132
+201617,Academic year,Regional,E92000001,England,E12000009,South West,,,,,,,,,,,,,,,,,,,,,Primary,State-funded primary,1869,354660
+201617,Academic year,Regional,E92000001,England,E12000009,South West,,,,,,,,,,,,,,,,,,,,,Secondary,State-funded secondary,339,273320
+201617,Academic year,Regional,E92000001,England,E13000001,Inner London,,,,,,,,,,,,,,,,,,,,,Primary,State-funded primary,708,204445
+201617,Academic year,Regional,E92000001,England,E13000001,Inner London,,,,,,,,,,,,,,,,,,,,,Secondary,State-funded secondary,179,145586
+201617,Academic year,Regional,E92000001,England,E13000002,Outer London,,,,,,,,,,,,,,,,,,,,,Primary,State-funded primary,1106,399216
+201617,Academic year,Regional,E92000001,England,E13000002,Outer London,,,,,,,,,,,,,,,,,,,,,Secondary,State-funded secondary,313,284795
+201617,Academic year,Local authority,E92000001,England,E13000001,Inner London,204,E09000012,Hackney,,,,,,,,,,,,,,,,,,Primary,State-funded primary,58,16378
+201617,Academic year,Local authority,E92000001,England,E13000001,Inner London,204,E09000012,Hackney,,,,,,,,,,,,,,,,,,Secondary,State-funded secondary,16,11700
+201617,Academic year,Local authority,E92000001,England,E13000001,Inner London,208,E09000022,Lambeth,,,,,,,,,,,,,,,,,,Primary,State-funded primary,59,17633
+201617,Academic year,Local authority,E92000001,England,E13000001,Inner London,208,E09000022,Lambeth,,,,,,,,,,,,,,,,,,Secondary,State-funded secondary,19,12838
+201617,Academic year,Local authority,E92000001,England,E13000002,Outer London,303,E09000004,Bexley,,,,,,,,,,,,,,,,,,Primary,State-funded primary,57,18969
+201617,Academic year,Local authority,E92000001,England,E13000002,Outer London,303,E09000004,Bexley,,,,,,,,,,,,,,,,,,Secondary,State-funded secondary,16,17009
+201617,Academic year,Local authority,E92000001,England,E13000002,Outer London,310,E09000015,Harrow,,,,,,,,,,,,,,,,,,Primary,State-funded primary,42,18302
+201617,Academic year,Local authority,E92000001,England,E13000002,Outer London,310,E09000015,Harrow,,,,,,,,,,,,,,,,,,Secondary,State-funded secondary,13,11916
+201617,Academic year,Local authority,E92000001,England,E13000002,Outer London,317,E09000026,Redbridge,,,,,,,,,,,,,,,,,,Primary,State-funded primary,51,24471
+201617,Academic year,Local authority,E92000001,England,E13000002,Outer London,317,E09000026,Redbridge,,,,,,,,,,,,,,,,,,Secondary,State-funded secondary,19,20391
+201617,Academic year,Local authority,E92000001,England,E12000005,West Midlands,335,E08000030,Walsall,,,,,,,,,,,,,,,,,,Primary,State-funded primary,85,22504
+201617,Academic year,Local authority,E92000001,England,E12000005,West Midlands,335,E08000030,Walsall,,,,,,,,,,,,,,,,,,Secondary,State-funded secondary,19,17711
+201617,Academic year,Local authority,E92000001,England,E12000002,North West,342,E08000013,St. Helens,,,,,,,,,,,,,,,,,,Primary,State-funded primary,54,12871
+201617,Academic year,Local authority,E92000001,England,E12000002,North West,342,E08000013,St. Helens,,,,,,,,,,,,,,,,,,Secondary,State-funded secondary,9,9229
+201617,Academic year,Local authority,E92000001,England,E12000001,North East,390,E08000020,Gateshead,,,,,,,,,,,,,,,,,,Primary,State-funded primary,67,13052
+201617,Academic year,Local authority,E92000001,England,E12000001,North East,390,E08000020,Gateshead,,,,,,,,,,,,,,,,,,Secondary,State-funded secondary,10,9855
+201617,Academic year,Local authority,E92000001,England,E12000003,Yorkshire and The Humber,812,E06000012,North East Lincolnshire,,,,,,,,,,,,,,,,,,Primary,State-funded primary,47,11872
+201617,Academic year,Local authority,E92000001,England,E12000003,Yorkshire and The Humber,812,E06000012,North East Lincolnshire,,,,,,,,,,,,,,,,,,Secondary,State-funded secondary,10,8248
+201617,Academic year,Local authority,E92000001,England,E12000004,East Midlands,830,E10000007,Derbyshire,,,,,,,,,,,,,,,,,,Primary,State-funded primary,350,51928
+201617,Academic year,Local authority,E92000001,England,E12000004,East Midlands,830,E10000007,Derbyshire,,,,,,,,,,,,,,,,,,Secondary,State-funded secondary,45,37982
+201617,Academic year,Local authority,E92000001,England,E12000008,South East,870,E06000038,Reading,,,,,,,,,,,,,,,,,,Primary,State-funded primary,39,11627
+201617,Academic year,Local authority,E92000001,England,E12000008,South East,870,E06000038,Reading,,,,,,,,,,,,,,,,,,Secondary,State-funded secondary,10,6097
+201617,Academic year,Local authority,E92000001,England,E12000006,East of England,881,E10000012,Essex,,,,,,,,,,,,,,,,,,Primary,State-funded primary,447,100631
+201617,Academic year,Local authority,E92000001,England,E12000006,East of England,881,E10000012,Essex,,,,,,,,,,,,,,,,,,Secondary,State-funded secondary,77,75435
+201617,Academic year,Local authority,E92000001,England,E12000002,North West,895,E06000049,Cheshire East,,,,,,,,,,,,,,,,,,Primary,State-funded primary,124,25559
+201617,Academic year,Local authority,E92000001,England,E12000002,North West,895,E06000049,Cheshire East,,,,,,,,,,,,,,,,,,Secondary,State-funded secondary,23,19097
+201617,Academic year,Local authority,E92000001,England,E12000009,South West,933,E10000027,Somerset,,,,,,,,,,,,,,,,,,Primary,State-funded primary,216,33155
+201617,Academic year,Local authority,E92000001,England,E12000009,South West,933,E10000027,Somerset,,,,,,,,,,,,,,,,,,Secondary,State-funded secondary,38,27717
+201516,Academic year,National,E92000001,England,,,,,,,,,,,,,,,,,,,,,,,Primary,State-funded primary,16736,3796142
+201516,Academic year,National,E92000001,England,,,,,,,,,,,,,,,,,,,,,,,Secondary,State-funded secondary,3371,2817406
+201516,Academic year,Regional,E92000001,England,E12000001,North East,,,,,,,,,,,,,,,,,,,,,Primary,State-funded primary,858,170197
+201516,Academic year,Regional,E92000001,England,E12000001,North East,,,,,,,,,,,,,,,,,,,,,Secondary,State-funded secondary,183,138277
+201516,Academic year,Regional,E92000001,England,E12000002,North West,,,,,,,,,,,,,,,,,,,,,Primary,State-funded primary,2451,520764
+201516,Academic year,Regional,E92000001,England,E12000002,North West,,,,,,,,,,,,,,,,,,,,,Secondary,State-funded secondary,458,381963
+201516,Academic year,Regional,E92000001,England,E12000003,Yorkshire and The Humber,,,,,,,,,,,,,,,,,,,,,Primary,State-funded primary,1778,386564
+201516,Academic year,Regional,E92000001,England,E12000003,Yorkshire and The Humber,,,,,,,,,,,,,,,,,,,,,Secondary,State-funded secondary,310,283224
+201516,Academic year,Regional,E92000001,England,E12000004,East Midlands,,,,,,,,,,,,,,,,,,,,,Primary,State-funded primary,1630,327644
+201516,Academic year,Regional,E92000001,England,E12000004,East Midlands,,,,,,,,,,,,,,,,,,,,,Secondary,State-funded secondary,287,241595
+201516,Academic year,Regional,E92000001,England,E12000005,West Midlands,,,,,,,,,,,,,,,,,,,,,Primary,State-funded primary,1776,418465
+201516,Academic year,Regional,E92000001,England,E12000005,West Midlands,,,,,,,,,,,,,,,,,,,,,Secondary,State-funded secondary,417,320311
+201516,Academic year,Regional,E92000001,England,E12000006,East of England,,,,,,,,,,,,,,,,,,,,,Primary,State-funded primary,1981,419514
+201516,Academic year,Regional,E92000001,England,E12000006,East of England,,,,,,,,,,,,,,,,,,,,,Secondary,State-funded secondary,387,321800
+201516,Academic year,Regional,E92000001,England,E12000008,South East,,,,,,,,,,,,,,,,,,,,,Primary,State-funded primary,2593,606516
+201516,Academic year,Regional,E92000001,England,E12000008,South East,,,,,,,,,,,,,,,,,,,,,Secondary,State-funded secondary,502,438657
+201516,Academic year,Regional,E92000001,England,E12000009,South West,,,,,,,,,,,,,,,,,,,,,Primary,State-funded primary,1864,347876
+201516,Academic year,Regional,E92000001,England,E12000009,South West,,,,,,,,,,,,,,,,,,,,,Secondary,State-funded secondary,340,270210
+201516,Academic year,Regional,E92000001,England,E13000001,Inner London,,,,,,,,,,,,,,,,,,,,,Primary,State-funded primary,706,204188
+201516,Academic year,Regional,E92000001,England,E13000001,Inner London,,,,,,,,,,,,,,,,,,,,,Secondary,State-funded secondary,177,142642
+201516,Academic year,Regional,E92000001,England,E13000002,Outer London,,,,,,,,,,,,,,,,,,,,,Primary,State-funded primary,1099,394414
+201516,Academic year,Regional,E92000001,England,E13000002,Outer London,,,,,,,,,,,,,,,,,,,,,Secondary,State-funded secondary,310,278727
+201516,Academic year,Local authority,E92000001,England,E13000001,Inner London,204,E09000012,Hackney,,,,,,,,,,,,,,,,,,Primary,State-funded primary,58,16317
+201516,Academic year,Local authority,E92000001,England,E13000001,Inner London,204,E09000012,Hackney,,,,,,,,,,,,,,,,,,Secondary,State-funded secondary,15,11335
+201516,Academic year,Local authority,E92000001,England,E13000001,Inner London,208,E09000022,Lambeth,,,,,,,,,,,,,,,,,,Primary,State-funded primary,59,17652
+201516,Academic year,Local authority,E92000001,England,E13000001,Inner London,208,E09000022,Lambeth,,,,,,,,,,,,,,,,,,Secondary,State-funded secondary,19,12343
+201516,Academic year,Local authority,E92000001,England,E13000002,Outer London,303,E09000004,Bexley,,,,,,,,,,,,,,,,,,Primary,State-funded primary,57,18558
+201516,Academic year,Local authority,E92000001,England,E13000002,Outer London,303,E09000004,Bexley,,,,,,,,,,,,,,,,,,Secondary,State-funded secondary,16,17167
+201516,Academic year,Local authority,E92000001,England,E13000002,Outer London,310,E09000015,Harrow,,,,,,,,,,,,,,,,,,Primary,State-funded primary,40,17835
+201516,Academic year,Local authority,E92000001,England,E13000002,Outer London,310,E09000015,Harrow,,,,,,,,,,,,,,,,,,Secondary,State-funded secondary,13,11897
+201516,Academic year,Local authority,E92000001,England,E13000002,Outer London,317,E09000026,Redbridge,,,,,,,,,,,,,,,,,,Primary,State-funded primary,51,24257
+201516,Academic year,Local authority,E92000001,England,E13000002,Outer London,317,E09000026,Redbridge,,,,,,,,,,,,,,,,,,Secondary,State-funded secondary,19,19778
+201516,Academic year,Local authority,E92000001,England,E12000005,West Midlands,335,E08000030,Walsall,,,,,,,,,,,,,,,,,,Primary,State-funded primary,85,22257
+201516,Academic year,Local authority,E92000001,England,E12000005,West Midlands,335,E08000030,Walsall,,,,,,,,,,,,,,,,,,Secondary,State-funded secondary,19,17226
+201516,Academic year,Local authority,E92000001,England,E12000002,North West,342,E08000013,St. Helens,,,,,,,,,,,,,,,,,,Primary,State-funded primary,54,12603
+201516,Academic year,Local authority,E92000001,England,E12000002,North West,342,E08000013,St. Helens,,,,,,,,,,,,,,,,,,Secondary,State-funded secondary,9,9008
+201516,Academic year,Local authority,E92000001,England,E12000001,North East,390,E08000020,Gateshead,,,,,,,,,,,,,,,,,,Primary,State-funded primary,67,12858
+201516,Academic year,Local authority,E92000001,England,E12000001,North East,390,E08000020,Gateshead,,,,,,,,,,,,,,,,,,Secondary,State-funded secondary,10,9799
+201516,Academic year,Local authority,E92000001,England,E12000003,Yorkshire and The Humber,812,E06000012,North East Lincolnshire,,,,,,,,,,,,,,,,,,Primary,State-funded primary,47,11662
+201516,Academic year,Local authority,E92000001,England,E12000003,Yorkshire and The Humber,812,E06000012,North East Lincolnshire,,,,,,,,,,,,,,,,,,Secondary,State-funded secondary,10,8149
+201516,Academic year,Local authority,E92000001,England,E12000004,East Midlands,830,E10000007,Derbyshire,,,,,,,,,,,,,,,,,,Primary,State-funded primary,349,51063
+201516,Academic year,Local authority,E92000001,England,E12000004,East Midlands,830,E10000007,Derbyshire,,,,,,,,,,,,,,,,,,Secondary,State-funded secondary,45,37587
+201516,Academic year,Local authority,E92000001,England,E12000008,South East,870,E06000038,Reading,,,,,,,,,,,,,,,,,,Primary,State-funded primary,39,11357
+201516,Academic year,Local authority,E92000001,England,E12000008,South East,870,E06000038,Reading,,,,,,,,,,,,,,,,,,Secondary,State-funded secondary,10,5816
+201516,Academic year,Local authority,E92000001,England,E12000006,East of England,881,E10000012,Essex,,,,,,,,,,,,,,,,,,Primary,State-funded primary,448,99728
+201516,Academic year,Local authority,E92000001,England,E12000006,East of England,881,E10000012,Essex,,,,,,,,,,,,,,,,,,Secondary,State-funded secondary,78,74326
+201516,Academic year,Local authority,E92000001,England,E12000002,North West,895,E06000049,Cheshire East,,,,,,,,,,,,,,,,,,Primary,State-funded primary,124,25062
+201516,Academic year,Local authority,E92000001,England,E12000002,North West,895,E06000049,Cheshire East,,,,,,,,,,,,,,,,,,Secondary,State-funded secondary,23,18733
+201516,Academic year,Local authority,E92000001,England,E12000009,South West,933,E10000027,Somerset,,,,,,,,,,,,,,,,,,Primary,State-funded primary,213,32882
+201516,Academic year,Local authority,E92000001,England,E12000009,South West,933,E10000027,Somerset,,,,,,,,,,,,,,,,,,Secondary,State-funded secondary,38,27342
+201415,Academic year,National,E92000001,England,,,,,,,,,,,,,,,,,,,,,,,Primary,State-funded primary,16723,3713774
+201415,Academic year,National,E92000001,England,,,,,,,,,,,,,,,,,,,,,,,Secondary,State-funded secondary,3369,2779710
+201415,Academic year,Regional,E92000001,England,E12000001,North East,,,,,,,,,,,,,,,,,,,,,Primary,State-funded primary,864,167125
+201415,Academic year,Regional,E92000001,England,E12000001,North East,,,,,,,,,,,,,,,,,,,,,Secondary,State-funded secondary,184,137730
+201415,Academic year,Regional,E92000001,England,E12000002,North West,,,,,,,,,,,,,,,,,,,,,Primary,State-funded primary,2443,509502
+201415,Academic year,Regional,E92000001,England,E12000002,North West,,,,,,,,,,,,,,,,,,,,,Secondary,State-funded secondary,454,375440
+201415,Academic year,Regional,E92000001,England,E12000003,Yorkshire and The Humber,,,,,,,,,,,,,,,,,,,,,Primary,State-funded primary,1783,380934
+201415,Academic year,Regional,E92000001,England,E12000003,Yorkshire and The Humber,,,,,,,,,,,,,,,,,,,,,Secondary,State-funded secondary,309,280914
+201415,Academic year,Regional,E92000001,England,E12000004,East Midlands,,,,,,,,,,,,,,,,,,,,,Primary,State-funded primary,1632,318818
+201415,Academic year,Regional,E92000001,England,E12000004,East Midlands,,,,,,,,,,,,,,,,,,,,,Secondary,State-funded secondary,292,240799
+201415,Academic year,Regional,E92000001,England,E12000005,West Midlands,,,,,,,,,,,,,,,,,,,,,Primary,State-funded primary,1771,408186
+201415,Academic year,Regional,E92000001,England,E12000005,West Midlands,,,,,,,,,,,,,,,,,,,,,Secondary,State-funded secondary,416,314935
+201415,Academic year,Regional,E92000001,England,E12000006,East of England,,,,,,,,,,,,,,,,,,,,,Primary,State-funded primary,1987,409865
+201415,Academic year,Regional,E92000001,England,E12000006,East of England,,,,,,,,,,,,,,,,,,,,,Secondary,State-funded secondary,394,318525
+201415,Academic year,Regional,E92000001,England,E12000008,South East,,,,,,,,,,,,,,,,,,,,,Primary,State-funded primary,2594,592343
+201415,Academic year,Regional,E92000001,England,E12000008,South East,,,,,,,,,,,,,,,,,,,,,Secondary,State-funded secondary,502,432945
+201415,Academic year,Regional,E92000001,England,E12000009,South West,,,,,,,,,,,,,,,,,,,,,Primary,State-funded primary,1861,340074
+201415,Academic year,Regional,E92000001,England,E12000009,South West,,,,,,,,,,,,,,,,,,,,,Secondary,State-funded secondary,343,267744
+201415,Academic year,Regional,E92000001,England,E13000001,Inner London,,,,,,,,,,,,,,,,,,,,,Primary,State-funded primary,704,202311
+201415,Academic year,Regional,E92000001,England,E13000001,Inner London,,,,,,,,,,,,,,,,,,,,,Secondary,State-funded secondary,172,138478
+201415,Academic year,Regional,E92000001,England,E13000002,Outer London,,,,,,,,,,,,,,,,,,,,,Primary,State-funded primary,1084,384616
+201415,Academic year,Regional,E92000001,England,E13000002,Outer London,,,,,,,,,,,,,,,,,,,,,Secondary,State-funded secondary,303,272200
+201415,Academic year,Local authority,E92000001,England,E13000001,Inner London,204,E09000012,Hackney,,,,,,,,,,,,,,,,,,Primary,State-funded primary,55,16201
+201415,Academic year,Local authority,E92000001,England,E13000001,Inner London,204,E09000012,Hackney,,,,,,,,,,,,,,,,,,Secondary,State-funded secondary,15,11044
+201415,Academic year,Local authority,E92000001,England,E13000001,Inner London,208,E09000022,Lambeth,,,,,,,,,,,,,,,,,,Primary,State-funded primary,60,17909
+201415,Academic year,Local authority,E92000001,England,E13000001,Inner London,208,E09000022,Lambeth,,,,,,,,,,,,,,,,,,Secondary,State-funded secondary,17,11456
+201415,Academic year,Local authority,E92000001,England,E13000002,Outer London,303,E09000004,Bexley,,,,,,,,,,,,,,,,,,Primary,State-funded primary,57,18158
+201415,Academic year,Local authority,E92000001,England,E13000002,Outer London,303,E09000004,Bexley,,,,,,,,,,,,,,,,,,Secondary,State-funded secondary,16,17077
+201415,Academic year,Local authority,E92000001,England,E13000002,Outer London,310,E09000015,Harrow,,,,,,,,,,,,,,,,,,Primary,State-funded primary,40,17545
+201415,Academic year,Local authority,E92000001,England,E13000002,Outer London,310,E09000015,Harrow,,,,,,,,,,,,,,,,,,Secondary,State-funded secondary,12,11466
+201415,Academic year,Local authority,E92000001,England,E13000002,Outer London,317,E09000026,Redbridge,,,,,,,,,,,,,,,,,,Primary,State-funded primary,51,23811
+201415,Academic year,Local authority,E92000001,England,E13000002,Outer London,317,E09000026,Redbridge,,,,,,,,,,,,,,,,,,Secondary,State-funded secondary,18,18864
+201415,Academic year,Local authority,E92000001,England,E12000005,West Midlands,335,E08000030,Walsall,,,,,,,,,,,,,,,,,,Primary,State-funded primary,85,21742
+201415,Academic year,Local authority,E92000001,England,E12000005,West Midlands,335,E08000030,Walsall,,,,,,,,,,,,,,,,,,Secondary,State-funded secondary,19,17067
+201415,Academic year,Local authority,E92000001,England,E12000002,North West,342,E08000013,St. Helens,,,,,,,,,,,,,,,,,,Primary,State-funded primary,54,12388
+201415,Academic year,Local authority,E92000001,England,E12000002,North West,342,E08000013,St. Helens,,,,,,,,,,,,,,,,,,Secondary,State-funded secondary,9,8909
+201415,Academic year,Local authority,E92000001,England,E12000001,North East,390,E08000020,Gateshead,,,,,,,,,,,,,,,,,,Primary,State-funded primary,67,12587
+201415,Academic year,Local authority,E92000001,England,E12000001,North East,390,E08000020,Gateshead,,,,,,,,,,,,,,,,,,Secondary,State-funded secondary,10,9733
+201415,Academic year,Local authority,E92000001,England,E12000003,Yorkshire and The Humber,812,E06000012,North East Lincolnshire,,,,,,,,,,,,,,,,,,Primary,State-funded primary,47,11599
+201415,Academic year,Local authority,E92000001,England,E12000003,Yorkshire and The Humber,812,E06000012,North East Lincolnshire,,,,,,,,,,,,,,,,,,Secondary,State-funded secondary,10,8201
+201415,Academic year,Local authority,E92000001,England,E12000004,East Midlands,830,E10000007,Derbyshire,,,,,,,,,,,,,,,,,,Primary,State-funded primary,350,50421
+201415,Academic year,Local authority,E92000001,England,E12000004,East Midlands,830,E10000007,Derbyshire,,,,,,,,,,,,,,,,,,Secondary,State-funded secondary,45,37621
+201415,Academic year,Local authority,E92000001,England,E12000008,South East,870,E06000038,Reading,,,,,,,,,,,,,,,,,,Primary,State-funded primary,38,10858
+201415,Academic year,Local authority,E92000001,England,E12000008,South East,870,E06000038,Reading,,,,,,,,,,,,,,,,,,Secondary,State-funded secondary,10,5702
+201415,Academic year,Local authority,E92000001,England,E12000006,East of England,881,E10000012,Essex,,,,,,,,,,,,,,,,,,Primary,State-funded primary,448,96938
+201415,Academic year,Local authority,E92000001,England,E12000006,East of England,881,E10000012,Essex,,,,,,,,,,,,,,,,,,Secondary,State-funded secondary,79,73719
+201415,Academic year,Local authority,E92000001,England,E12000002,North West,895,E06000049,Cheshire East,,,,,,,,,,,,,,,,,,Primary,State-funded primary,124,24550
+201415,Academic year,Local authority,E92000001,England,E12000002,North West,895,E06000049,Cheshire East,,,,,,,,,,,,,,,,,,Secondary,State-funded secondary,21,17956
+201415,Academic year,Local authority,E92000001,England,E12000009,South West,933,E10000027,Somerset,,,,,,,,,,,,,,,,,,Primary,State-funded primary,211,31939
+201415,Academic year,Local authority,E92000001,England,E12000009,South West,933,E10000027,Somerset,,,,,,,,,,,,,,,,,,Secondary,State-funded secondary,39,27402
+201314,Academic year,National,E92000001,England,,,,,,,,,,,,,,,,,,,,,,,Primary,State-funded primary,16705,3627985
+201314,Academic year,National,E92000001,England,,,,,,,,,,,,,,,,,,,,,,,Secondary,State-funded secondary,3348,2757971
+201314,Academic year,Regional,E92000001,England,E12000001,North East,,,,,,,,,,,,,,,,,,,,,Primary,State-funded primary,865,163779
+201314,Academic year,Regional,E92000001,England,E12000001,North East,,,,,,,,,,,,,,,,,,,,,Secondary,State-funded secondary,186,137778
+201314,Academic year,Regional,E92000001,England,E12000002,North West,,,,,,,,,,,,,,,,,,,,,Primary,State-funded primary,2445,498856
+201314,Academic year,Regional,E92000001,England,E12000002,North West,,,,,,,,,,,,,,,,,,,,,Secondary,State-funded secondary,455,374734
+201314,Academic year,Regional,E92000001,England,E12000003,Yorkshire and The Humber,,,,,,,,,,,,,,,,,,,,,Primary,State-funded primary,1782,372952
+201314,Academic year,Regional,E92000001,England,E12000003,Yorkshire and The Humber,,,,,,,,,,,,,,,,,,,,,Secondary,State-funded secondary,308,279161
+201314,Academic year,Regional,E92000001,England,E12000004,East Midlands,,,,,,,,,,,,,,,,,,,,,Primary,State-funded primary,1625,309033
+201314,Academic year,Regional,E92000001,England,E12000004,East Midlands,,,,,,,,,,,,,,,,,,,,,Secondary,State-funded secondary,294,239218
+201314,Academic year,Regional,E92000001,England,E12000005,West Midlands,,,,,,,,,,,,,,,,,,,,,Primary,State-funded primary,1771,400495
+201314,Academic year,Regional,E92000001,England,E12000005,West Midlands,,,,,,,,,,,,,,,,,,,,,Secondary,State-funded secondary,410,310824
+201314,Academic year,Regional,E92000001,England,E12000006,East of England,,,,,,,,,,,,,,,,,,,,,Primary,State-funded primary,1986,398353
+201314,Academic year,Regional,E92000001,England,E12000006,East of England,,,,,,,,,,,,,,,,,,,,,Secondary,State-funded secondary,397,317371
+201314,Academic year,Regional,E92000001,England,E12000008,South East,,,,,,,,,,,,,,,,,,,,,Primary,State-funded primary,2590,579631
+201314,Academic year,Regional,E92000001,England,E12000008,South East,,,,,,,,,,,,,,,,,,,,,Secondary,State-funded secondary,497,430236
+201314,Academic year,Regional,E92000001,England,E12000009,South West,,,,,,,,,,,,,,,,,,,,,Primary,State-funded primary,1853,330043
+201314,Academic year,Regional,E92000001,England,E12000009,South West,,,,,,,,,,,,,,,,,,,,,Secondary,State-funded secondary,334,268340
+201314,Academic year,Regional,E92000001,England,E13000001,Inner London,,,,,,,,,,,,,,,,,,,,,Primary,State-funded primary,702,199028
+201314,Academic year,Regional,E92000001,England,E13000001,Inner London,,,,,,,,,,,,,,,,,,,,,Secondary,State-funded secondary,172,134301
+201314,Academic year,Regional,E92000001,England,E13000002,Outer London,,,,,,,,,,,,,,,,,,,,,Primary,State-funded primary,1086,375815
+201314,Academic year,Regional,E92000001,England,E13000002,Outer London,,,,,,,,,,,,,,,,,,,,,Secondary,State-funded secondary,295,266008
+201314,Academic year,Local authority,E92000001,England,E13000001,Inner London,204,E09000012,Hackney,,,,,,,,,,,,,,,,,,Primary,State-funded primary,55,15854
+201314,Academic year,Local authority,E92000001,England,E13000001,Inner London,204,E09000012,Hackney,,,,,,,,,,,,,,,,,,Secondary,State-funded secondary,16,10706
+201314,Academic year,Local authority,E92000001,England,E13000001,Inner London,208,E09000022,Lambeth,,,,,,,,,,,,,,,,,,Primary,State-funded primary,60,17649
+201314,Academic year,Local authority,E92000001,England,E13000001,Inner London,208,E09000022,Lambeth,,,,,,,,,,,,,,,,,,Secondary,State-funded secondary,17,11160
+201314,Academic year,Local authority,E92000001,England,E13000002,Outer London,303,E09000004,Bexley,,,,,,,,,,,,,,,,,,Primary,State-funded primary,57,17714
+201314,Academic year,Local authority,E92000001,England,E13000002,Outer London,303,E09000004,Bexley,,,,,,,,,,,,,,,,,,Secondary,State-funded secondary,16,17080
+201314,Academic year,Local authority,E92000001,England,E13000002,Outer London,310,E09000015,Harrow,,,,,,,,,,,,,,,,,,Primary,State-funded primary,44,17124
+201314,Academic year,Local authority,E92000001,England,E13000002,Outer London,310,E09000015,Harrow,,,,,,,,,,,,,,,,,,Secondary,State-funded secondary,11,10767
+201314,Academic year,Local authority,E92000001,England,E13000002,Outer London,317,E09000026,Redbridge,,,,,,,,,,,,,,,,,,Primary,State-funded primary,52,23468
+201314,Academic year,Local authority,E92000001,England,E13000002,Outer London,317,E09000026,Redbridge,,,,,,,,,,,,,,,,,,Secondary,State-funded secondary,18,18157
+201314,Academic year,Local authority,E92000001,England,E12000005,West Midlands,335,E08000030,Walsall,,,,,,,,,,,,,,,,,,Primary,State-funded primary,85,21170
+201314,Academic year,Local authority,E92000001,England,E12000005,West Midlands,335,E08000030,Walsall,,,,,,,,,,,,,,,,,,Secondary,State-funded secondary,20,16916
+201314,Academic year,Local authority,E92000001,England,E12000002,North West,342,E08000013,St. Helens,,,,,,,,,,,,,,,,,,Primary,State-funded primary,54,12279
+201314,Academic year,Local authority,E92000001,England,E12000002,North West,342,E08000013,St. Helens,,,,,,,,,,,,,,,,,,Secondary,State-funded secondary,9,9024
+201314,Academic year,Local authority,E92000001,England,E12000001,North East,390,E08000020,Gateshead,,,,,,,,,,,,,,,,,,Primary,State-funded primary,67,12435
+201314,Academic year,Local authority,E92000001,England,E12000001,North East,390,E08000020,Gateshead,,,,,,,,,,,,,,,,,,Secondary,State-funded secondary,10,9799
+201314,Academic year,Local authority,E92000001,England,E12000003,Yorkshire and The Humber,812,E06000012,North East Lincolnshire,,,,,,,,,,,,,,,,,,Primary,State-funded primary,47,11369
+201314,Academic year,Local authority,E92000001,England,E12000003,Yorkshire and The Humber,812,E06000012,North East Lincolnshire,,,,,,,,,,,,,,,,,,Secondary,State-funded secondary,10,8466
+201314,Academic year,Local authority,E92000001,England,E12000004,East Midlands,830,E10000007,Derbyshire,,,,,,,,,,,,,,,,,,Primary,State-funded primary,350,49654
+201314,Academic year,Local authority,E92000001,England,E12000004,East Midlands,830,E10000007,Derbyshire,,,,,,,,,,,,,,,,,,Secondary,State-funded secondary,44,37463
+201314,Academic year,Local authority,E92000001,England,E12000008,South East,870,E06000038,Reading,,,,,,,,,,,,,,,,,,Primary,State-funded primary,38,10266
+201314,Academic year,Local authority,E92000001,England,E12000008,South East,870,E06000038,Reading,,,,,,,,,,,,,,,,,,Secondary,State-funded secondary,8,5512
+201314,Academic year,Local authority,E92000001,England,E12000006,East of England,881,E10000012,Essex,,,,,,,,,,,,,,,,,,Primary,State-funded primary,450,94838
+201314,Academic year,Local authority,E92000001,England,E12000006,East of England,881,E10000012,Essex,,,,,,,,,,,,,,,,,,Secondary,State-funded secondary,78,73648
+201314,Academic year,Local authority,E92000001,England,E12000002,North West,895,E06000049,Cheshire East,,,,,,,,,,,,,,,,,,Primary,State-funded primary,124,23991
+201314,Academic year,Local authority,E92000001,England,E12000002,North West,895,E06000049,Cheshire East,,,,,,,,,,,,,,,,,,Secondary,State-funded secondary,22,18593
+201314,Academic year,Local authority,E92000001,England,E12000009,South West,933,E10000027,Somerset,,,,,,,,,,,,,,,,,,Primary,State-funded primary,212,31411
+201314,Academic year,Local authority,E92000001,England,E12000009,South West,933,E10000027,Somerset,,,,,,,,,,,,,,,,,,Secondary,State-funded secondary,39,27599
+201314,Academic year,Local authority district,E92000001,England,E12000001,North East,,,,E06000004,Stockton-on-Tees,,,,E69000031,Tees Valley,,,,,,,,,,,Secondary,State-funded secondary,-134,23787
+201314,Academic year,School,E92000001,England,E12000001,North East,,,,E06000004,Stockton-on-Tees,105135,2036905,St Paul's Academy,E69000031,Tees Valley,,,,,,,,,,,Primary,State-funded primary,129,23996
+201314,Academic year,School,E92000001,England,E12000001,North East,,,,E06000004,Stockton-on-Tees,129342,3346905,Grace Academy Solihull,E69000031,Tees Valley,,,,,,,,,,,Secondary,State-funded secondary,27,18598
+201314,Academic year,School,E92000001,England,E12000001,North East,,,,E06000004,Stockton-on-Tees,130247,8706905,John Madejski Academy,E69000031,Tees Valley,,,,,,,,,,,Secondary,State-funded secondary,256,59015
+201314,Academic year,School,E92000001,England,E12000001,North East,,,,E06000004,Stockton-on-Tees,130908,8066907,Macmillan Academy,E69000031,Tees Valley,,,,,,,,,,,Primary,State-funded primary,217,31416
+201314,Academic year,School,E92000001,England,E12000001,North East,,,,E06000004,Stockton-on-Tees,130909,3806905,Dixons City Academy,E69000031,Tees Valley,,,,,,,,,,,Secondary,State-funded secondary,44,27604
+201314,Academic year,School,E92000001,England,E12000001,North East,,,,E06000004,Stockton-on-Tees,130912,2136905,Paddington Academy,E69000031,Tees Valley,,,,,,,,,,,Secondary,State-funded secondary,-129,23792
+201314,Academic year,School,E92000001,England,E12000001,North East,,,,E06000004,Stockton-on-Tees,131062,2046906,Churchill Academy,E69000031,Tees Valley,,,,,,,,,,,Primary,State-funded primary,134,24001
+201314,Academic year,School,E92000001,England,E12000001,North East,,,,E06000004,Stockton-on-Tees,131065,3416906,North Liverpool Academy,E69000031,Tees Valley,,,,,,,,,,,Secondary,State-funded secondary,32,18603
+201314,Academic year,School,E92000001,England,E12000001,North East,,,,E06000004,Stockton-on-Tees,131262,2136906,Westminster Academy,E69000031,Tees Valley,,,,,,,,,,,Secondary,State-funded secondary,261,59020
+201314,Academic year,Local skills improvement plan area,E92000001,England,,,,,,,,,,,E69000012,Greater Lincolnshire,,,,,,,,,,,Primary,State-funded primary,154,42592
+201314,Academic year,Local skills improvement plan area,E92000001,England,,,,,,,,,,,E69000027,South-East Midlands,,,,,,,,,,,Secondary,State-funded secondary,132,23999
+201314,Academic year,Local skills improvement plan area,E92000001,England,,,,,,,,,,,E69000010,"Essex, Southend-on-Sea and Thurrock",,,,,,,,,,,Primary,State-funded primary,259,59018
+201314,Academic year,Local skills improvement plan area,E92000001,England,,,,,,,,,,,E69000016,Hertfordshire,,,,,,,,,,,Secondary,State-funded secondary,220,31419
+201314,Academic year,Local enterprise partnership,E92000001,England,E12000001,North East,,,,,,,,,,,E37000047,Greater Cambridge and Greater Peterborough,,,,,,,,,Primary,State-funded primary,154,42592
+201314,Academic year,Local enterprise partnership,E92000001,England,E12000001,North East,,,,,,,,,,,E37000049,Humber,,,,,,,,,Secondary,State-funded secondary,132,23999
+201314,Academic year,Local enterprise partnership,E92000001,England,E12000001,North East,,,,,,,,,,,E37000058,"York, North Yorkshire and East Riding",,,,,,,,,Primary,State-funded primary,259,59018
+201314,Academic year,Local enterprise partnership,E92000001,England,E12000001,North East,,,,,,,,,,,E37000004,Coast to Capital,,,,,,,,,Secondary,State-funded secondary,220,31419
+201314,Academic year,Parliamentary constituency,E92000001,England,E12000001,North East,,,,,,,,,,,,,E14000718,Greenwich and Woolwich,,,,,,,Primary,State-funded primary,154,42592
+201314,Academic year,Parliamentary constituency,E92000001,England,E12000001,North East,,,,,,,,,,,,,E14000690,Eltham,,,,,,,Secondary,State-funded secondary,132,23999
+201314,Academic year,Parliamentary constituency,E92000001,England,E12000001,North East,,,,,,,,,,,,,E14000896,Richmond Park,,,,,,,Primary,State-funded primary,259,59018
+201314,Academic year,Parliamentary constituency,E92000001,England,E12000001,North East,,,,,,,,,,,,,E14001008,Vauxhall,,,,,,,Secondary,State-funded secondary,220,31419
+201314,Academic year,Ward,E92000001,England,E12000001,North East,,,,,,,,,,,,,,,E05009385,Stoke Newington,,,,,Primary,State-funded primary,154,42592
+201314,Academic year,Ward,E92000001,England,E12000001,North East,,,,,,,,,,,,,,,E05009386,Victoria,,,,,Secondary,State-funded secondary,132,23999
+201314,Academic year,Ward,E92000001,England,E12000001,North East,,,,,,,,,,,,,,,E05009387,Woodberry Down,,,,,Primary,State-funded primary,259,59018
+201314,Academic year,Ward,E92000001,England,E12000001,North East,,,,,,,,,,,,,,,E05000201,Haselbury,,,,,Secondary,State-funded secondary,220,31419
+201314,Academic year,English devolved area,E92000001,England,,,,,,,,,,,,,,,,,,,E47000001,Greater Manchester,,,Primary,State-funded primary,154,42592
+201314,Academic year,English devolved area,E92000001,England,,,,,,,,,,,,,,,,,,,E47000002,Sheffield City Region,,,Secondary,State-funded secondary,132,23999
+201314,Academic year,English devolved area,E92000001,England,,,,,,,,,,,,,,,,,,,E47000004,Liverpool City Region,,,Primary,State-funded primary,259,59018
+201314,Academic year,English devolved area,E92000001,England,,,,,,,,,,,,,,,,,,,E47000005,North East,,,Secondary,State-funded secondary,220,31419
+201314,Academic year,MAT,E92000001,England,,,,,,,,,,,,,,,,,,,,,TR00071,APPLECROFT SCHOOL,Primary,State-funded primary,259,59018
+201314,Academic year,MAT,E92000001,England,,,,,,,,,,,,,,,,,,,,,TR02469,ASHLEY HILL MULTI ACADEMY TRUST,Secondary,State-funded secondary,220,31419
