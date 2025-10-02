@@ -44,12 +44,20 @@ api_data_checker <- function(files) {
               col_name_parent,
               filter_item_parent
             )
-        )
+        ) |>
+        dplyr::mutate(col_type = "Filter")
     }
   }
   return(
     entries |>
       dplyr::filter(!is.na(col_name)) |>
+      dplyr::select(
+        col_name,
+        col_type,
+        filter_item,
+        col_name_parent,
+        filter_item_parent,
+      ) |>
       dplyr::arrange(
         col_name,
         col_name_parent,
@@ -62,7 +70,16 @@ api_data_checker <- function(files) {
 
 non_dd_rows <- function(listing) {
   dd <- vroom::vroom("data/data-dictionary.csv") |>
-    dplyr::select(col_name, filter_item, col_name_parent, filter_item_parent)
+    dplyr::select(
+      col_name,
+      col_type,
+      filter_item,
+      col_name_parent,
+      filter_item_parent
+    ) |>
+    dplyr::mutate(across(everything(), ~ dplyr::if_else(is.na(.x), "", .x)))
+  print(dd)
+  print(listing)
   listing |>
     dplyr::anti_join(dd)
 }
