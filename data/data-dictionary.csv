@@ -297,17 +297,59 @@ subject,Filter,Writing,,,,api-only,
 young_carer,Filter,Not known to be a young carer,,,,api-only,
 young_carer,Filter,Total,,,,api-only,
 young_carer,Filter,Young carer,,,,api-only,
+absent_pupil_count,Indicator,,,,,api-only,Key stage 2 attainment
+absent_pupil_percent,Indicator,,,,,api-only,Key stage 2 attainment
 achievement_count,Indicator,,,,,api-only,Apprenticeships
 achievements_percent,Indicator,,,,,api-only,Apprenticeships
+average_scaled_score,Indicator,,,,,api-only,Key stage 2 attainment
+below_interim_pre_ks_std_pupil_count,Indicator,,,,,api-only,Key stage 2 attainment
+below_interim_pre_ks_std_pupil_percent,Indicator,,,,,api-only,Key stage 2 attainment
+disapplied_pupil_count,Indicator,,,,,api-only,Key stage 2 attainment
+disapplied_pupil_percent,Indicator,,,,,api-only,Key stage 2 attainment
+early_dev_of_expected_std_pupil_count,Indicator,,,,,api-only,Key stage 2 attainment
+early_dev_of_expected_std_pupil_percent,Indicator,,,,,api-only,Key stage 2 attainment
+eligible_pupil_count,Indicator,,,,,api-only,Key stage 2 attainment
+engagement_model_or_below_pre_ks_std_pupil_count,Indicator,,,,,api-only,Key stage 2 attainment
+engagement_model_or_below_pre_ks_std_pupil_percent,Indicator,,,,,api-only,Key stage 2 attainment
 enrolment_count,Indicator,,,,,api-only,
 enrolment_percent,Indicator,,,,,api-only,
+establishment_count,Indicator,,,,,api-only,Key stage 2 attainment
+expected_standard_pupil_count,Indicator,,,,,api-only,Key stage 2 attainment
+expected_standard_pupil_percent,Indicator,,,,,api-only,Key stage 2 attainment
+foundations_of_expected_std_pupil_count,Indicator,,,,,api-only,Key stage 2 attainment
+foundations_of_expected_std_pupil_percent,Indicator,,,,,api-only,Key stage 2 attainment
+growing_dev_of_expected_std_pupil_count,Indicator,,,,,api-only,Key stage 2 attainment
+growing_dev_of_expected_std_pupil_percent,Indicator,,,,,api-only,Key stage 2 attainment
+higher_standard_pupil_count,Indicator,,,,,api-only,Key stage 2 attainment
+higher_standard_pupil_percent,Indicator,,,,,api-only,Key stage 2 attainment
 learner_count,Indicator,,,,,api-only,
 learner_percent,Indicator,,,,,api-only,
+not_meeting_pupil_count,Indicator,,,,,api-only,Key stage 2 attainment
+not_meeting_pupil_percent,Indicator,,,,,api-only,Key stage 2 attainment
 participation_count,Indicator,,,,,api-only,Apprenticeships
 population_count,Indicator,,,,,api-only,
 population_percent,Indicator,,,,,api-only,
+pre_ks_std_1_pupil_count,Indicator,,,,,api-only,Key stage 2 attainment
+pre_ks_std_1_pupil_percent,Indicator,,,,,api-only,Key stage 2 attainment
+pre_ks_std_2_pupil_count,Indicator,,,,,api-only,Key stage 2 attainment
+pre_ks_std_2_pupil_percent,Indicator,,,,,api-only,Key stage 2 attainment
+pre_ks_std_3_pupil_count,Indicator,,,,,api-only,Key stage 2 attainment
+pre_ks_std_3_pupil_percent,Indicator,,,,,api-only,Key stage 2 attainment
+pre_ks_std_4_pupil_count,Indicator,,,,,api-only,Key stage 2 attainment
+pre_ks_std_4_pupil_percent,Indicator,,,,,api-only,Key stage 2 attainment
+pre_ks_std_5_pupil_count,Indicator,,,,,api-only,Key stage 2 attainment
+pre_ks_std_5_pupil_percent,Indicator,,,,,api-only,Key stage 2 attainment
+pre_ks_std_6_pupil_count,Indicator,,,,,api-only,Key stage 2 attainment
+pre_ks_std_6_pupil_percent,Indicator,,,,,api-only,Key stage 2 attainment
+progress_measure_eligible_pupil_count,Indicator,,,,,api-only,Key stage 2 attainment
+progress_measure_lower_conf_interval,Indicator,,,,,api-only,Key stage 2 attainment
+progress_measure_score,Indicator,,,,,api-only,Key stage 2 attainment
+progress_measure_total_score,Indicator,,,,,api-only,Key stage 2 attainment
+progress_measure_upper_conf_interval,Indicator,,,,,api-only,Key stage 2 attainment
 pupil_count,Indicator,,,,,api-only,
 pupil_percent,Indicator,,,,,api-only,
+scaled_scores_eligible_pupil_count,Indicator,,,,,api-only,Key stage 2 attainment
+scaled_scores_total,Indicator,,,,,api-only,Key stage 2 attainment
 school_count,Indicator,,,,,api-only,
 school_percent,Indicator,,,,,api-only,
 start_count,Indicator,,,,,api-only,Apprenticeships
@@ -316,3 +358,11 @@ student_count,Indicator,,,,,api-only,
 student_percent,Indicator,,,,,api-only,
 teacher_count,Indicator,,,,,api-only,
 teacher_percent,Indicator,,,,,api-only,
+unable_to_access_arrived_pupil_count,Indicator,,,,,api-only,Key stage 2 attainment
+unable_to_access_arrived_pupil_percent,Indicator,,,,,api-only,Key stage 2 attainment
+unable_to_access_pupil_count,Indicator,,,,,api-only,Key stage 2 attainment
+unable_to_access_pupil_percent,Indicator,,,,,api-only,Key stage 2 attainment
+working_below_pupil_count,Indicator,,,,,api-only,Key stage 2 attainment
+working_below_pupil_percent,Indicator,,,,,api-only,Key stage 2 attainment
+working_towards_pupil_count,Indicator,,,,,api-only,Key stage 2 attainment
+working_towards_pupil_percent,Indicator,,,,,api-only,Key stage 2 attainment

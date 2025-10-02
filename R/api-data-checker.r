@@ -6,6 +6,7 @@
 api_data_checker <- function(files) {
   entries <- data.frame(
     col_name = NA,
+    col_type = NA,
     filter_item = NA,
     col_name_parent = NA,
     filter_item_parent = NA
@@ -43,9 +44,13 @@ api_data_checker <- function(files) {
               filter_item = filters$col_name[i],
               col_name_parent,
               filter_item_parent
-            )
+            ) |>
+            dplyr::mutate(col_type = "Filter")
         ) |>
-        dplyr::mutate(col_type = "Filter")
+        dplyr::bind_rows(
+          meta |> dplyr::filter(col_type == "Indicator") |> dplyr::select(col_name, col_type)
+        ) |>
+        dplyr::mutate(across(everything(), ~ dplyr::if_else(is.na(.x), "", .x)))
     }
   }
   return(
@@ -59,6 +64,7 @@ api_data_checker <- function(files) {
         filter_item_parent,
       ) |>
       dplyr::arrange(
+        col_type,
         col_name,
         col_name_parent,
         filter_item_parent,
@@ -78,8 +84,6 @@ non_dd_rows <- function(listing) {
       filter_item_parent
     ) |>
     dplyr::mutate(across(everything(), ~ dplyr::if_else(is.na(.x), "", .x)))
-  print(dd)
-  print(listing)
   listing |>
     dplyr::anti_join(dd)
 }
