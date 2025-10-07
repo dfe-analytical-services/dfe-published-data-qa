@@ -179,7 +179,7 @@ ethnicity_minor,Filter,White and Black African,ethnicity_major,Mixed / Multiple 
 ethnicity_minor,Filter,White and Black Caribbean,ethnicity_major,Mixed / Multiple ethnic groups,,any,
 first_language,Filter,Known or believed to be English,,,,api-only,
 first_language,Filter,Known or believed to be other than English,,,,api-only,
-first_language,Filter,Language unclassified,,,,api-only,
+first_language,Filter,First language unclassified,,,,api-only,
 first_language,Filter,Total,,,,api-only,
 fsm_status,Filter,FSM eligible,,,,api-only,
 fsm_status,Filter,Not known to be FSM eligible,,,,api-only,
