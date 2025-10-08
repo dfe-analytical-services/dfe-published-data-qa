@@ -12,8 +12,8 @@ api_data_checker <- function(files) {
     filter_item_parent = NA
   )
   for (file in files) {
-    data <- vroom::vroom(file)
-    meta <- vroom::vroom(gsub(".csv", ".meta.csv", file))
+    data <- vroom::vroom(file, show_col_types = FALSE)
+    meta <- vroom::vroom(gsub(".csv", ".meta.csv", file), show_col_types = FALSE)
     filters <- meta |>
       dplyr::filter(col_type == "Filter") |>
       dplyr::select("col_name", "filter_grouping_column")
@@ -75,7 +75,7 @@ api_data_checker <- function(files) {
 }
 
 non_dd_rows <- function(listing) {
-  dd <- vroom::vroom("data/data-dictionary.csv") |>
+  dd <- vroom::vroom("data/data-dictionary.csv", show_col_types = FALSE) |>
     dplyr::select(
       col_name,
       col_type,
@@ -89,7 +89,7 @@ non_dd_rows <- function(listing) {
 }
 
 checker_example_run <- function() {
-  dir <- "../../offline-data/ks2_attainment/2025-september/Publication\ files/"
+  dir <- "tests/testthat/test-data/"
   files <- list.files(dir)
   files <- paste0(dir, files[!grepl("meta", files)])
   listing <- api_data_checker(files)
