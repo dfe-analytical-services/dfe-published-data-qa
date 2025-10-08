@@ -143,108 +143,108 @@ establishment_type_group,Filter,State-funded mainstream schools,,,,api-only,Esta
 establishment_type_group,Filter,State-funded schools and alternative provision,,,,api-only,Establishment characteristics
 establishment_type_group,Filter,State-funded special schools,,,,api-only,Establishment characteristics
 establishment_type_group,Filter,Total,,,,api-only,Establishment characteristics
-ethnicity_minor,Filter,African,ethnicity_major,Black / African / Caribbean / Black British,,any,
-ethnicity_minor,Filter,All Asian / Asian British,ethnicity_major,Asian / Asian British,,any,
-ethnicity_minor,Filter,All Black / African / Caribbean / Black British,ethnicity_major,Black / African / Caribbean / Black British,,any,
-ethnicity_minor,Filter,All Mixed / Multiple ethnic groups,ethnicity_major,Mixed / Multiple ethnic groups,,any,
-ethnicity_minor,Filter,All other ethnic groups,ethnicity_major,Other ethnic group,,any,
-ethnicity_minor,Filter,All White,ethnicity_major,White,,any,
-ethnicity_minor,Filter,Any other Asian background,ethnicity_major,Asian / Asian British,,any,
-ethnicity_minor,Filter,Any other Black / African / Caribbean background,ethnicity_major,Black / African / Caribbean / Black British,,any,
-ethnicity_minor,Filter,Any other ethnic group,ethnicity_major,Other ethnic group,,any,
-ethnicity_minor,Filter,Any other Mixed / Multiple ethnic background,ethnicity_major,Mixed / Multiple ethnic groups,,any,
-ethnicity_minor,Filter,Any other White background,ethnicity_major,White,,any,
-ethnicity_minor,Filter,Arab,ethnicity_major,Other ethnic group,,any,
-ethnicity_minor,Filter,Bangladeshi,ethnicity_major,Asian / Asian British,,any,
-ethnicity_minor,Filter,Caribbean,ethnicity_major,Black / African / Caribbean / Black British,,any,
-ethnicity_minor,Filter,Chinese,ethnicity_major,Asian / Asian British,,any,
-ethnicity_minor,Filter,English / Welsh / Scottish / Northern Irish / British,ethnicity_major,White,,any,
-ethnicity_minor,Filter,Gypsy,ethnicity_major,White,,any,
-ethnicity_minor,Filter,Gypsy or Irish Traveller,ethnicity_major,White,,any,
-ethnicity_minor,Filter,Indian,ethnicity_major,Asian / Asian British,,any,
-ethnicity_minor,Filter,Irish,ethnicity_major,White,,any,
-ethnicity_minor,Filter,Irish Traveller,ethnicity_major,White,,any,
-ethnicity_minor,Filter,Pakistani,ethnicity_major,Asian / Asian British,,any,
-ethnicity_minor,Filter,Roma,ethnicity_major,White,,any,
-ethnicity_minor,Filter,Total,ethnicity_major,Asian / Asian British,,any,
-ethnicity_minor,Filter,Total,ethnicity_major,Black / African / Caribbean / Black British,,any,
-ethnicity_minor,Filter,Total,ethnicity_major,Mixed / Multiple ethnic groups,,any,
-ethnicity_minor,Filter,Total,ethnicity_major,Other ethnic group,,any,
-ethnicity_minor,Filter,Total,ethnicity_major,Total,,any,
-ethnicity_minor,Filter,Total,ethnicity_major,Unknown,,any,
-ethnicity_minor,Filter,Total,ethnicity_major,White,,any,
-ethnicity_minor,Filter,Unknown,ethnicity_major,Unknown,,any,
-ethnicity_minor,Filter,White and Asian,ethnicity_major,Mixed / Multiple ethnic groups,,any,
-ethnicity_minor,Filter,White and Black African,ethnicity_major,Mixed / Multiple ethnic groups,,any,
-ethnicity_minor,Filter,White and Black Caribbean,ethnicity_major,Mixed / Multiple ethnic groups,,any,
-first_language,Filter,Known or believed to be English,,,,api-only,
-first_language,Filter,Known or believed to be other than English,,,,api-only,
-first_language,Filter,First language unclassified,,,,api-only,
-first_language,Filter,Total,,,,api-only,
-fsm_status,Filter,FSM eligible,,,,api-only,
-fsm_status,Filter,Not known to be FSM eligible,,,,api-only,
-fsm_status,Filter,Total,,,,api-only,
-funding_type,Filter,Other,,,,api-only,
-funding_type,Filter,Supported by ASA levy funds,,,,api-only,
-funding_type,Filter,Total,,,,api-only,
-minority_ethnic,Filter,Ethnic minorities (excluding white minorities),,,,api-only,
-month_of_birth,Filter,April,,,,api-only,
-month_of_birth,Filter,August,,,,api-only,
-month_of_birth,Filter,December,,,,api-only,
-month_of_birth,Filter,February,,,,api-only,
-month_of_birth,Filter,January,,,,api-only,
-month_of_birth,Filter,July,,,,api-only,
-month_of_birth,Filter,June,,,,api-only,
-month_of_birth,Filter,March,,,,api-only,
-month_of_birth,Filter,May,,,,api-only,
-month_of_birth,Filter,November,,,,api-only,
-month_of_birth,Filter,October,,,,api-only,
-month_of_birth,Filter,September,,,,api-only,
-month_of_birth,Filter,Total,,,,api-only,
-phase_type_grouping,Filter,All schools,,,,api-only,
-phase_type_grouping,Filter,State-funded primary,,,,api-only,
-phase_type_grouping,Filter,State-funded primary and secondary,,,,api-only,
-phase_type_grouping,Filter,State-funded secondary,,,,api-only,
-provider_type,Filter,All group-based providers,,,,api-only,
-provider_type,Filter,All school-based providers,,,,api-only,
-provider_type,Filter,Childminders,,,,api-only,
-provider_type,Filter,Further education colleges,,,,api-only,
-provider_type,Filter,General FE college including tertiary,,,,api-only,
-provider_type,Filter,Higher education providers,,,,api-only,
-provider_type,Filter,Local authorities,,,,api-only,
-provider_type,Filter,Maintained nursery schools,,,,api-only,
-provider_type,Filter,Nursery class childcare settings,,,,api-only,
-provider_type,Filter,Other provider type,,,,api-only,
-provider_type,Filter,Other public funded (LAs and HE),,,,api-only,
-provider_type,Filter,Private group-based providers,,,,api-only,
-provider_type,Filter,Private sector public funded,,,,api-only,
-provider_type,Filter,Private training providers in the FE sector,,,,api-only,
-provider_type,Filter,"School, college, LA and other unclassified group-based providers",,,,api-only,
-provider_type,Filter,Schools,,,,api-only,
-provider_type,Filter,Sixth form college,,,,api-only,
-provider_type,Filter,Special college,,,,api-only,
-provider_type,Filter,Total,,,,api-only,
-provider_type,Filter,Unknown,,,,api-only,
-provider_type,Filter,Voluntary group-based providers,,,,api-only,
-school_cohort_size,Filter,1 to 15 pupils,,,,api-only,
-school_cohort_size,Filter,16 to 30 pupils,,,,api-only,
-school_cohort_size,Filter,31 to 60 pupils,,,,api-only,
-school_cohort_size,Filter,61 to 90 pupils,,,,api-only,
-school_cohort_size,Filter,91+ pupils,,,,api-only,
-school_cohort_size,Filter,Total,,,,api-only,
-school_religious_character,Filter,Church of England,,,,api-only,
-school_religious_character,Filter,Jewish,,,,api-only,
-school_religious_character,Filter,Methodist,,,,api-only,
-school_religious_character,Filter,Muslim,,,,api-only,
-school_religious_character,Filter,No religious character,,,,api-only,
-school_religious_character,Filter,Other Christian faith,,,,api-only,
-school_religious_character,Filter,Other religious character,,,,api-only,
-school_religious_character,Filter,Roman Catholic,,,,api-only,
-school_religious_character,Filter,Sikh,,,,api-only,
-school_religious_character,Filter,Total,,,,api-only,
+ethnicity_minor,Filter,African,ethnicity_major,Black / African / Caribbean / Black British,,any,Personal characteristics
+ethnicity_minor,Filter,All Asian / Asian British,ethnicity_major,Asian / Asian British,,any,Personal characteristics
+ethnicity_minor,Filter,All Black / African / Caribbean / Black British,ethnicity_major,Black / African / Caribbean / Black British,,any,Personal characteristics
+ethnicity_minor,Filter,All Mixed / Multiple ethnic groups,ethnicity_major,Mixed / Multiple ethnic groups,,any,Personal characteristics
+ethnicity_minor,Filter,All other ethnic groups,ethnicity_major,Other ethnic group,,any,Personal characteristics
+ethnicity_minor,Filter,All White,ethnicity_major,White,,any,Personal characteristics
+ethnicity_minor,Filter,Any other Asian background,ethnicity_major,Asian / Asian British,,any,Personal characteristics
+ethnicity_minor,Filter,Any other Black / African / Caribbean background,ethnicity_major,Black / African / Caribbean / Black British,,any,Personal characteristics
+ethnicity_minor,Filter,Any other ethnic group,ethnicity_major,Other ethnic group,,any,Personal characteristics
+ethnicity_minor,Filter,Any other Mixed / Multiple ethnic background,ethnicity_major,Mixed / Multiple ethnic groups,,any,Personal characteristics
+ethnicity_minor,Filter,Any other White background,ethnicity_major,White,,any,Personal characteristics
+ethnicity_minor,Filter,Arab,ethnicity_major,Other ethnic group,,any,Personal characteristics
+ethnicity_minor,Filter,Bangladeshi,ethnicity_major,Asian / Asian British,,any,Personal characteristics
+ethnicity_minor,Filter,Caribbean,ethnicity_major,Black / African / Caribbean / Black British,,any,Personal characteristics
+ethnicity_minor,Filter,Chinese,ethnicity_major,Asian / Asian British,,any,Personal characteristics
+ethnicity_minor,Filter,English / Welsh / Scottish / Northern Irish / British,ethnicity_major,White,,any,Personal characteristics
+ethnicity_minor,Filter,Gypsy,ethnicity_major,White,,any,Personal characteristics
+ethnicity_minor,Filter,Gypsy or Irish Traveller,ethnicity_major,White,,any,Personal characteristics
+ethnicity_minor,Filter,Indian,ethnicity_major,Asian / Asian British,,any,Personal characteristics
+ethnicity_minor,Filter,Irish,ethnicity_major,White,,any,Personal characteristics
+ethnicity_minor,Filter,Irish Traveller,ethnicity_major,White,,any,Personal characteristics
+ethnicity_minor,Filter,Pakistani,ethnicity_major,Asian / Asian British,,any,Personal characteristics
+ethnicity_minor,Filter,Roma,ethnicity_major,White,,any,Personal characteristics
+ethnicity_minor,Filter,Total,ethnicity_major,Asian / Asian British,,any,Personal characteristics
+ethnicity_minor,Filter,Total,ethnicity_major,Black / African / Caribbean / Black British,,any,Personal characteristics
+ethnicity_minor,Filter,Total,ethnicity_major,Mixed / Multiple ethnic groups,,any,Personal characteristics
+ethnicity_minor,Filter,Total,ethnicity_major,Other ethnic group,,any,Personal characteristics
+ethnicity_minor,Filter,Total,ethnicity_major,Total,,any,Personal characteristics
+ethnicity_minor,Filter,Total,ethnicity_major,Unknown,,any,Personal characteristics
+ethnicity_minor,Filter,Total,ethnicity_major,White,,any,Personal characteristics
+ethnicity_minor,Filter,Unknown,ethnicity_major,Unknown,,any,Personal characteristics
+ethnicity_minor,Filter,White and Asian,ethnicity_major,Mixed / Multiple ethnic groups,,any,Personal characteristics
+ethnicity_minor,Filter,White and Black African,ethnicity_major,Mixed / Multiple ethnic groups,,any,Personal characteristics
+ethnicity_minor,Filter,White and Black Caribbean,ethnicity_major,Mixed / Multiple ethnic groups,,any,Personal characteristics
+first_language,Filter,Known or believed to be English,,,,api-only,Personal characteristics
+first_language,Filter,Known or believed to be other than English,,,,api-only,Personal characteristics
+first_language,Filter,First language unclassified,,,,api-only,Personal characteristics
+first_language,Filter,Total,,,,api-only,Personal characteristics
+fsm_status,Filter,FSM eligible,,,,api-only,Personal characteristics
+fsm_status,Filter,Not known to be FSM eligible,,,,api-only,Personal characteristics
+fsm_status,Filter,Total,,,,api-only,Personal characteristics
+funding_type,Filter,Other,,,,api-only,Apprenticeships
+funding_type,Filter,Supported by ASA levy funds,,,,api-only,Apprenticeships
+funding_type,Filter,Total,,,,api-only,Apprenticeships
+minority_ethnic,Filter,Ethnic minorities (excluding white minorities),,,,api-only,Personal characteristics
+month_of_birth,Filter,April,,,,api-only,Personal characteristics
+month_of_birth,Filter,August,,,,api-only,Personal characteristics
+month_of_birth,Filter,December,,,,api-only,Personal characteristics
+month_of_birth,Filter,February,,,,api-only,Personal characteristics
+month_of_birth,Filter,January,,,,api-only,Personal characteristics
+month_of_birth,Filter,July,,,,api-only,Personal characteristics
+month_of_birth,Filter,June,,,,api-only,Personal characteristics
+month_of_birth,Filter,March,,,,api-only,Personal characteristics
+month_of_birth,Filter,May,,,,api-only,Personal characteristics
+month_of_birth,Filter,November,,,,api-only,Personal characteristics
+month_of_birth,Filter,October,,,,api-only,Personal characteristics
+month_of_birth,Filter,September,,,,api-only,Personal characteristics
+month_of_birth,Filter,Total,,,,api-only,Personal characteristics
+phase_type_grouping,Filter,All schools,,,,api-only,Establishment characteristics
+phase_type_grouping,Filter,State-funded primary,,,,api-only,Establishment characteristics
+phase_type_grouping,Filter,State-funded primary and secondary,,,,api-only,Establishment characteristics
+phase_type_grouping,Filter,State-funded secondary,,,,api-only,Establishment characteristics
+provider_type,Filter,All group-based providers,,,,api-only,Establishment characteristics
+provider_type,Filter,All school-based providers,,,,api-only,Establishment characteristics
+provider_type,Filter,Childminders,,,,api-only,Establishment characteristics
+provider_type,Filter,Further education colleges,,,,api-only,Establishment characteristics
+provider_type,Filter,General FE college including tertiary,,,,api-only,Establishment characteristics
+provider_type,Filter,Higher education providers,,,,api-only,Establishment characteristics
+provider_type,Filter,Local authorities,,,,api-only,Establishment characteristics
+provider_type,Filter,Maintained nursery schools,,,,api-only,Establishment characteristics
+provider_type,Filter,Nursery class childcare settings,,,,api-only,Establishment characteristics
+provider_type,Filter,Other provider type,,,,api-only,Establishment characteristics
+provider_type,Filter,Other public funded (LAs and HE),,,,api-only,Establishment characteristics
+provider_type,Filter,Private group-based providers,,,,api-only,Establishment characteristics
+provider_type,Filter,Private sector public funded,,,,api-only,Establishment characteristics
+provider_type,Filter,Private training providers in the FE sector,,,,api-only,Establishment characteristics
+provider_type,Filter,"School, college, LA and other unclassified group-based providers",,,,api-only,Establishment characteristics
+provider_type,Filter,Schools,,,,api-only,Establishment characteristics
+provider_type,Filter,Sixth form college,,,,api-only,Establishment characteristics
+provider_type,Filter,Special college,,,,api-only,Establishment characteristics
+provider_type,Filter,Total,,,,api-only,Establishment characteristics
+provider_type,Filter,Unknown,,,,api-only,Establishment characteristics
+provider_type,Filter,Voluntary group-based providers,,,,api-only,Establishment characteristics
+school_cohort_size,Filter,1 to 15 pupils,,,,api-only,Establishment characteristics
+school_cohort_size,Filter,16 to 30 pupils,,,,api-only,Establishment characteristics
+school_cohort_size,Filter,31 to 60 pupils,,,,api-only,Establishment characteristics
+school_cohort_size,Filter,61 to 90 pupils,,,,api-only,Establishment characteristics
+school_cohort_size,Filter,91+ pupils,,,,api-only,Establishment characteristics
+school_cohort_size,Filter,Total,,,,api-only,Establishment characteristics
+school_religious_character,Filter,Church of England,,,,api-only,Establishment characteristics
+school_religious_character,Filter,Jewish,,,,api-only,Establishment characteristics
+school_religious_character,Filter,Methodist,,,,api-only,Establishment characteristics
+school_religious_character,Filter,Muslim,,,,api-only,Establishment characteristics
+school_religious_character,Filter,No religious character,,,,api-only,Establishment characteristics
+school_religious_character,Filter,Other Christian faith,,,,api-only,Establishment characteristics
+school_religious_character,Filter,Other religious character,,,,api-only,Establishment characteristics
+school_religious_character,Filter,Roman Catholic,,,,api-only,Establishment characteristics
+school_religious_character,Filter,Sikh,,,,api-only,Establishment characteristics
+school_religious_character,Filter,Total,,,,api-only,Establishment characteristics
 sen_primary_need,Filter,All primary need,,,,api-only,Special educational needs
 sen_primary_need,Filter,Autistic spectrum disorder,,,ASD,api-only,Special educational needs
-sen_primary_need,Filter,Down syndrome,,,,,
+sen_primary_need,Filter,Down syndrome,,,,api-only,Special educational needs
 sen_primary_need,Filter,Hearing impairment,,,HI,api-only,Special educational needs
 sen_primary_need,Filter,Moderate learning difficulty,,,MLD,api-only,Special educational needs
 sen_primary_need,Filter,Multi-sensory impairment,,,MSI,api-only,Special educational needs
@@ -258,7 +258,7 @@ sen_primary_need,Filter,Severe learning difficulty,,,SLD,api-only,Special educat
 sen_primary_need,Filter,"Social, emotional and mental health",,,SEMH,api-only,Special educational needs
 sen_primary_need,Filter,Specific learning difficulty,,,SPLD,api-only,Special educational needs
 sen_primary_need,Filter,"Speech, language and communication needs",,,SLCN,api-only,Special educational needs
-sen_primary_need,Filter,Total,,,,api-only,
+sen_primary_need,Filter,Total,,,,api-only,Special educational needs
 sen_primary_need,Filter,Unknown,,,,api-only,Special educational needs
 sen_primary_need,Filter,Vision impairment,,,VI,api-only,Special educational needs
 sen_provision,Filter,All SEN provision,sen_status,Total,,api-only,Special educational needs
@@ -284,19 +284,19 @@ sen_secondary_need,Filter,Specific learning difficulty,,,SPLD,api-only,Special e
 sen_secondary_need,Filter,"Speech, language and communication needs",,,SLCN,api-only,Special educational needs
 sen_secondary_need,Filter,Unknown,,,,api-only,Special educational needs
 sen_secondary_need,Filter,Vision impairment,,,VI,api-only,Special educational needs
-sex,Filter,Boys,,,,api-only,
-sex,Filter,Girls,,,,api-only,
-sex,Filter,Other,,,,api-only,
-sex,Filter,Total,,,,api-only,
-subject,Filter,"Grammar, punctuation and spelling",,,,api-only,
-subject,Filter,Maths,,,,api-only,
-subject,Filter,Reading,,,,api-only,
-subject,Filter,"Reading, writing and maths",,,,api-only,
-subject,Filter,Science,,,,api-only,
-subject,Filter,Writing,,,,api-only,
-young_carer,Filter,Not known to be a young carer,,,,api-only,
-young_carer,Filter,Total,,,,api-only,
-young_carer,Filter,Young carer,,,,api-only,
+sex,Filter,Boys,,,,api-only,Personal characteristics
+sex,Filter,Girls,,,,api-only,Personal characteristics
+sex,Filter,Other,,,,api-only,Personal characteristics
+sex,Filter,Total,,,,api-only,Personal characteristics
+subject,Filter,"Grammar, punctuation and spelling",,,,api-only,Attainment
+subject,Filter,Maths,,,,api-only,Attainment
+subject,Filter,Reading,,,,api-only,Attainment
+subject,Filter,"Reading, writing and maths",,,,api-only,Attainment
+subject,Filter,Science,,,,api-only,Attainment
+subject,Filter,Writing,,,,api-only,Attainment
+young_carer,Filter,Not known to be a young carer,,,,api-only,Personal characteristics
+young_carer,Filter,Total,,,,api-only,Personal characteristics
+young_carer,Filter,Young carer,,,,api-only,Personal characteristics
 absent_pupil_count,Indicator,,,,,api-only,Key stage 2 attainment
 absent_pupil_percent,Indicator,,,,,api-only,Key stage 2 attainment
 achievement_count,Indicator,,,,,api-only,Apprenticeships
@@ -311,8 +311,8 @@ early_dev_of_expected_std_pupil_percent,Indicator,,,,,api-only,Key stage 2 attai
 eligible_pupil_count,Indicator,,,,,api-only,Key stage 2 attainment
 engagement_model_or_below_pre_ks_std_pupil_count,Indicator,,,,,api-only,Key stage 2 attainment
 engagement_model_or_below_pre_ks_std_pupil_percent,Indicator,,,,,api-only,Key stage 2 attainment
-enrolment_count,Indicator,,,,,api-only,
-enrolment_percent,Indicator,,,,,api-only,
+enrolment_count,Indicator,,,,,api-only,Apprenticeships
+enrolment_percent,Indicator,,,,,api-only,Apprenticeships
 establishment_count,Indicator,,,,,api-only,Key stage 2 attainment
 expected_standard_pupil_count,Indicator,,,,,api-only,Key stage 2 attainment
 expected_standard_pupil_percent,Indicator,,,,,api-only,Key stage 2 attainment
@@ -322,13 +322,13 @@ growing_dev_of_expected_std_pupil_count,Indicator,,,,,api-only,Key stage 2 attai
 growing_dev_of_expected_std_pupil_percent,Indicator,,,,,api-only,Key stage 2 attainment
 higher_standard_pupil_count,Indicator,,,,,api-only,Key stage 2 attainment
 higher_standard_pupil_percent,Indicator,,,,,api-only,Key stage 2 attainment
-learner_count,Indicator,,,,,api-only,
-learner_percent,Indicator,,,,,api-only,
+learner_count,Indicator,,,,,api-only,Apprenticeships
+learner_percent,Indicator,,,,,api-only,Apprenticeships
 not_meeting_pupil_count,Indicator,,,,,api-only,Key stage 2 attainment
 not_meeting_pupil_percent,Indicator,,,,,api-only,Key stage 2 attainment
 participation_count,Indicator,,,,,api-only,Apprenticeships
-population_count,Indicator,,,,,api-only,
-population_percent,Indicator,,,,,api-only,
+population_count,Indicator,,,,,api-only,General
+population_percent,Indicator,,,,,api-only,General
 pre_ks_std_1_pupil_count,Indicator,,,,,api-only,Key stage 2 attainment
 pre_ks_std_1_pupil_percent,Indicator,,,,,api-only,Key stage 2 attainment
 pre_ks_std_2_pupil_count,Indicator,,,,,api-only,Key stage 2 attainment
@@ -346,18 +346,18 @@ progress_measure_lower_conf_interval,Indicator,,,,,api-only,Key stage 2 attainme
 progress_measure_score,Indicator,,,,,api-only,Key stage 2 attainment
 progress_measure_total_score,Indicator,,,,,api-only,Key stage 2 attainment
 progress_measure_upper_conf_interval,Indicator,,,,,api-only,Key stage 2 attainment
-pupil_count,Indicator,,,,,api-only,
-pupil_percent,Indicator,,,,,api-only,
+pupil_count,Indicator,,,,,api-only,General
+pupil_percent,Indicator,,,,,api-only,General
 scaled_scores_eligible_pupil_count,Indicator,,,,,api-only,Key stage 2 attainment
 scaled_scores_total,Indicator,,,,,api-only,Key stage 2 attainment
-school_count,Indicator,,,,,api-only,
-school_percent,Indicator,,,,,api-only,
+school_count,Indicator,,,,,api-only,General
+school_percent,Indicator,,,,,api-only,General
 start_count,Indicator,,,,,api-only,Apprenticeships
 starts_percent,Indicator,,,,,api-only,Apprenticeships
-student_count,Indicator,,,,,api-only,
-student_percent,Indicator,,,,,api-only,
-teacher_count,Indicator,,,,,api-only,
-teacher_percent,Indicator,,,,,api-only,
+student_count,Indicator,,,,,api-only,General
+student_percent,Indicator,,,,,api-only,General
+teacher_count,Indicator,,,,,api-only,General
+teacher_percent,Indicator,,,,,api-only,General
 unable_to_access_arrived_pupil_count,Indicator,,,,,api-only,Key stage 2 attainment
 unable_to_access_arrived_pupil_percent,Indicator,,,,,api-only,Key stage 2 attainment
 unable_to_access_pupil_count,Indicator,,,,,api-only,Key stage 2 attainment
