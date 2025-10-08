@@ -4758,7 +4758,7 @@
       "checksum": "e8d96d5ffd16a6867fd6d7458bd2f905"
     },
     ".Rprofile": {
-      "checksum": "e62056f94faf491e49bbf1a1038dabad"
+      "checksum": "e7e0a65da5de9fab40ee7357a63f7626"
     },
     "azure-pipelines-dev.yml": {
       "checksum": "fc2ef843ff5024bcba25ff84eec05f4c"
@@ -4845,7 +4845,7 @@
       "checksum": "51052a72b54c2e4bdddfb52762638274"
     },
     "R/api-data-checker.r": {
-      "checksum": "c7e32b2f28784f35391603c15c4691ee"
+      "checksum": "8f9cee3807268bd49baf6b719fba4501"
     },
     "R/data-dictionary-checks.R": {
       "checksum": "bcc45fcf406142644ce4b8fd21645431"

@@ -3,6 +3,14 @@
 # a set of data files and sort them into a data-dictionary structure with
 # flags as to whether they're currently in the data dictionary or not.
 
+checker_example_run <- function() {
+  dir <- "tests/testthat/test-data/"
+  files <- list.files(dir)
+  files <- paste0(dir, files[!grepl("meta", files)])
+  listing <- api_data_checker(files)
+  return(non_dd_rows(listing))
+}
+
 api_data_checker <- function(files) {
   entries <- data.frame(
     col_name = NA,
@@ -86,12 +94,4 @@ non_dd_rows <- function(listing) {
     dplyr::mutate(across(everything(), ~ dplyr::if_else(is.na(.x), "", .x)))
   listing |>
     dplyr::anti_join(dd)
-}
-
-checker_example_run <- function() {
-  dir <- "tests/testthat/test-data/"
-  files <- list.files(dir)
-  files <- paste0(dir, files[!grepl("meta", files)])
-  listing <- api_data_checker(files)
-  return(non_dd_rows(listing))
 }
