@@ -12,8 +12,8 @@ api_data_checker <- function(files) {
     filter_item_parent = NA
   )
   for (file in files) {
-    data <- vroom::vroom(file)
-    meta <- vroom::vroom(gsub(".csv", ".meta.csv", file))
+    data <- vroom::vroom(file, show_col_types = FALSE)
+    meta <- vroom::vroom(gsub(".csv", ".meta.csv", file), show_col_types = FALSE)
     filters <- meta |>
       dplyr::filter(col_type == "Filter") |>
       dplyr::select("col_name", "filter_grouping_column")
