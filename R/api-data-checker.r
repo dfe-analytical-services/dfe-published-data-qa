@@ -89,7 +89,7 @@ non_dd_rows <- function(listing) {
 }
 
 checker_example_run <- function() {
-  dir <- "../../offline-data/ks2_attainment/2025-september/Publication\ files/"
+  dir <- "tests/testthat/test-data/"
   files <- list.files(dir)
   files <- paste0(dir, files[!grepl("meta", files)])
   listing <- api_data_checker(files)
