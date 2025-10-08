@@ -75,7 +75,7 @@ api_data_checker <- function(files) {
 }
 
 non_dd_rows <- function(listing) {
-  dd <- vroom::vroom("data/data-dictionary.csv") |>
+  dd <- vroom::vroom("data/data-dictionary.csv", show_col_types = FALSE) |>
     dplyr::select(
       col_name,
       col_type,
