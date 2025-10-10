@@ -46,7 +46,7 @@ mainTests <- function(data_character, meta_character, datafile, metafile) {
       filter_group(metafile), # active test
       filter_group_match(datafile, metafile), # active test
       filter_group_level(datafile, metafile), # active test
-      filter_group_not_filter(metafile), # active test
+      filter_group_is_filter(metafile), # active test
       filter_group_duplicate(metafile), # active test
       whitespace_filters(datafile, metafile), # active test
       indicator_grouping(metafile), # active test
@@ -2886,10 +2886,10 @@ filter_group_level <- function(data, meta) {
   return(output)
 }
 
-# filter_group_not_filter -------------------------------------
+# filter_group_is_filter -------------------------------------
 # Checking that filter groups are not filters
 
-filter_group_not_filter <- function(meta) {
+filter_group_is_filter <- function(meta) {
   if (
     meta %>%
       filter(!is.na(filter_grouping_column) & filter_grouping_column != "") %>%
@@ -2901,11 +2901,11 @@ filter_group_not_filter <- function(meta) {
       "result" = "IGNORE"
     )
   } else {
-    filter_group_not_filter_check <- function(i) {
+    filter_group_is_filter_check <- function(i) {
       if (i %in% meta$col_name) {
-        return("FAIL")
-      } else {
         return("PASS")
+      } else {
+        return("WARNING")
       }
     }
 
@@ -2915,24 +2915,24 @@ filter_group_not_filter <- function(meta) {
           !is.na(filter_grouping_column) & filter_grouping_column != ""
         ) %>%
         pull(filter_grouping_column),
-      filter_group_not_filter_check
+      filter_group_is_filter_check
     ))
 
-    filter_groups_in_col_names <- filter(pre_result, values == "FAIL") %>%
+    filter_groups_not_col_names <- filter(pre_result, values == "WARNING") %>%
       pull(ind)
 
-    if ("FAIL" %in% pre_result$values) {
+    if ("WARNING" %in% pre_result$values) {
       output <- list(
         "message" = paste0(
-          "Filter groups should not appear in the col_name column in the metadata file. <br> - Please remove the following from col_name: '",
-          paste(filter_groups_in_col_names, collapse = "', '"),
+          "Filter groups should appear in the col_name column in the metadata file. <br> - Please add rows for the following col_name(s): '",
+          paste(filter_groups_not_col_names, collapse = "', '"),
           "'."
         ),
-        "result" = "FAIL"
+        "result" = "WARNING"
       )
     } else {
       output <- list(
-        "message" = "No filter groups are included in the col_name column.",
+        "message" = "All filter groups are included in the col_name column.",
         "result" = "PASS"
       )
     }

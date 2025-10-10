@@ -4758,7 +4758,7 @@
       "checksum": "e8d96d5ffd16a6867fd6d7458bd2f905"
     },
     ".Rprofile": {
-      "checksum": "e7e0a65da5de9fab40ee7357a63f7626"
+      "checksum": "8eb865955363cf8b8f047809da3ad231"
     },
     "azure-pipelines-dev.yml": {
       "checksum": "fc2ef843ff5024bcba25ff84eec05f4c"
@@ -4845,7 +4845,7 @@
       "checksum": "51052a72b54c2e4bdddfb52762638274"
     },
     "R/api-data-checker.r": {
-      "checksum": "8f9cee3807268bd49baf6b719fba4501"
+      "checksum": "c6039d30435a404685b1ab1f5bf3fa9e"
     },
     "R/data-dictionary-checks.R": {
       "checksum": "bcc45fcf406142644ce4b8fd21645431"
@@ -4857,7 +4857,7 @@
       "checksum": "d92cb4c8e810e9beb0bf6f167f570925"
     },
     "R/mainTests.r": {
-      "checksum": "b12e70a98fd77482758baef520c9ce5f"
+      "checksum": "6fdf683a497347272ee52089c085f56e"
     },
     "R/manual_scripts/debugging.R": {
       "checksum": "e56763afdf3659c7c47cfe0e3262e8cf"
@@ -4905,13 +4905,13 @@
       "checksum": "75228173459ba6f210f07e7ce363ab5e"
     },
     "tests/testthat/_snaps/UI-02_edge_cases/edge_cases-002.json": {
-      "checksum": "ac535cd6adf14d4831c6052ffc9401c4"
+      "checksum": "0c3fc29902031d323fa8e49b1b69b549"
     },
     "tests/testthat/_snaps/UI-03_additional_qa/additional_qa-001.json": {
-      "checksum": "0e8159d2bf183366c3cf3fc361c1de59"
+      "checksum": "025544b9263832c321af5257d32d55c6"
     },
     "tests/testthat/_snaps/UI-03_additional_qa/additional_qa-002.json": {
-      "checksum": "fa6203dca75d2f6dc8c57bc63ee770f0"
+      "checksum": "b0f0dcb1204c5454ed106669ab1eaa0f"
     },
     "tests/testthat/_snaps/UI-03_additional_qa/additional_qa-003.json": {
       "checksum": "0a701ad840159e3259349124125bc541"
@@ -4923,22 +4923,22 @@
       "checksum": "0a701ad840159e3259349124125bc541"
     },
     "tests/testthat/_snaps/UI-03_additional_qa/additional_qa-006.json": {
-      "checksum": "3ab1098581792e9331c558c06f6124c4"
+      "checksum": "d248d5edb35efc070d2c07cf5dc7f5d1"
     },
     "tests/testthat/_snaps/UI-03_additional_qa/additional_qa-007.json": {
       "checksum": "984e2ca1ab29edfc839bbe0b936c2a95"
     },
     "tests/testthat/_snaps/UI-03_additional_qa/additional_qa-008.json": {
-      "checksum": "6d1d9833c03a6712a0824a931060a78e"
+      "checksum": "86c28e39af1c53b3543072843accb6be"
     },
     "tests/testthat/_snaps/UI-03_additional_qa/additional_qa-009.json": {
       "checksum": "984e2ca1ab29edfc839bbe0b936c2a95"
     },
     "tests/testthat/_snaps/UI-03_additional_qa/additional_qa-010.json": {
-      "checksum": "2c52cb97f6059ad5b7dcfb15758206f3"
+      "checksum": "59d07a9ae3edcb8d5a5eb36d4f25b4b3"
     },
     "tests/testthat/_snaps/UI-03_additional_qa/additional_qa-011.json": {
-      "checksum": "3d6e14f461c9a4d01f1bfc15db1128cf"
+      "checksum": "22950bdc812e3441e362fb66032c2fce"
     },
     "tests/testthat/fileValidation/data_empty_cols.csv": {
       "checksum": "9751119425e4ee601dd0aff4918876a0"
@@ -5123,6 +5123,12 @@
     "tests/testthat/mainTests/filter_group_duplicate.meta.csv": {
       "checksum": "a5b596110f590f16a0e5650fbd5d3c05"
     },
+    "tests/testthat/mainTests/filter_group_is_filter.csv": {
+      "checksum": "17ec4e4ce683e7a19263bf2545fc74f9"
+    },
+    "tests/testthat/mainTests/filter_group_is_filter.meta.csv": {
+      "checksum": "fb7187fec923213e13ebe74ba16f7d51"
+    },
     "tests/testthat/mainTests/filter_group_level.csv": {
       "checksum": "0eef86d7abdf5472b348fbdf84fb166d"
     },
@@ -5134,12 +5140,6 @@
     },
     "tests/testthat/mainTests/filter_group_match.meta.csv": {
       "checksum": "a5a4555cc9ae63d955757276845878b0"
-    },
-    "tests/testthat/mainTests/filter_group_not_filter.csv": {
-      "checksum": "0eef86d7abdf5472b348fbdf84fb166d"
-    },
-    "tests/testthat/mainTests/filter_group_not_filter.meta.csv": {
-      "checksum": "cabc4fa2973c27f1b9538cb08769543e"
     },
     "tests/testthat/mainTests/filter_group_stripped.csv": {
       "checksum": "3a71dd74bb45e6a0736f1715a7dd6e72"
@@ -5463,7 +5463,7 @@
       "checksum": "13882d495604f94577544fd117188aa8"
     },
     "tests/testthat/otherData/blankFilterGroups.meta.csv": {
-      "checksum": "6427c73166a1e36e585dc05b591cf573"
+      "checksum": "c04ef25b04e218061152a49016190e37"
     },
     "tests/testthat/otherData/filter_hint_indicator_bug.csv": {
       "checksum": "8f01b90fa96c175c7ccba3d3ee8f3f6f"
@@ -5475,7 +5475,7 @@
       "checksum": "5fc6237a107591f5b130655bbe2743e5"
     },
     "tests/testthat/otherData/financial_half.meta.csv": {
-      "checksum": "9b4347a6d67ed64f218aaa5a895b5c6b"
+      "checksum": "24faf324cb6a2a0a6ec787884df7db27"
     },
     "tests/testthat/otherData/financial_quarter.csv": {
       "checksum": "bcd181d04c1a8a5b70c213d2dea7edbf"
@@ -5808,7 +5808,7 @@
       "checksum": "c4b0d7f6c67f957881b6869a3a18ad97"
     },
     "tests/testthat/test-data/passes_everything.meta.csv": {
-      "checksum": "485364d30f37ff5d87ee87c22c157b73"
+      "checksum": "355119e1d867c20485b520f506a32c4f"
     },
     "tests/testthat/test-data/passes_everything_advisory.csv": {
       "checksum": "7eb9c79ee5c04c18abb11bb27438d28c"
@@ -5835,7 +5835,7 @@
       "checksum": "0ad4c6ef88604b628207156991a92349"
     },
     "tests/testthat/test-function-mainTests.R": {
-      "checksum": "7c71e41e310bba0ea1d569dfada2ac4a"
+      "checksum": "cb7ab3b4eef1a60ee214501f08ca2330"
     },
     "tests/testthat/test-function-preCheck1.R": {
       "checksum": "ecc3826341427734e1a8f097c1e1e6f8"
