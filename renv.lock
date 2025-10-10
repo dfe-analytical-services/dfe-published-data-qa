@@ -396,12 +396,7 @@
     "curl": {
       "Package": "curl",
       "Version": "5.2.3",
-      "Source": "Repository",
-      "Repository": "CRAN",
-      "Requirements": [
-        "R"
-      ],
-      "Hash": "d91263322a58af798f6cf3b13fd56dde"
+      "Source": "Repository"
     },
     "data.table": {
       "Package": "data.table",
@@ -758,38 +753,12 @@
     "httr": {
       "Package": "httr",
       "Version": "1.4.7",
-      "Source": "Repository",
-      "Repository": "CRAN",
-      "Requirements": [
-        "R",
-        "R6",
-        "curl",
-        "jsonlite",
-        "mime",
-        "openssl"
-      ],
-      "Hash": "ac107251d9d9fd72f0ca8049988f1d7f"
+      "Source": "Repository"
     },
     "httr2": {
       "Package": "httr2",
       "Version": "1.0.6",
-      "Source": "Repository",
-      "Repository": "CRAN",
-      "Requirements": [
-        "R",
-        "R6",
-        "cli",
-        "curl",
-        "glue",
-        "lifecycle",
-        "magrittr",
-        "openssl",
-        "rappdirs",
-        "rlang",
-        "vctrs",
-        "withr"
-      ],
-      "Hash": "3ef5d07ec78803475a94367d71b40c41"
+      "Source": "Repository"
     },
     "ini": {
       "Package": "ini",
@@ -970,12 +939,7 @@
     "openssl": {
       "Package": "openssl",
       "Version": "2.2.2",
-      "Source": "Repository",
-      "Repository": "CRAN",
-      "Requirements": [
-        "askpass"
-      ],
-      "Hash": "d413e0fef796c9401a4419485f709ca1"
+      "Source": "Repository"
     },
     "packrat": {
       "Package": "packrat",

@@ -1,210 +1,250 @@
 col_name,col_type,filter_item,col_name_parent,filter_item_parent,cbds_code,item_error_flag,contexts
-age_group,Filter,19 to 24,age_youth_adult,19 plus,,api-only,
-age_group,Filter,25 plus,age_youth_adult,19 plus,,api-only,
-age_group,Filter,Total,age_youth_adult,19 plus,,api-only,
-age_group,Filter,Total,age_youth_adult,Total,,api-only,
-age_group,Filter,Total,age_youth_adult,Under 19,,api-only,
-age_group,Filter,Under 19,age_youth_adult,Under 19,,api-only,
+age_group,Filter,19 to 24,age_youth_adult,19 plus,,api-only,Personal characteristics
+age_group,Filter,25 plus,age_youth_adult,19 plus,,api-only,Personal characteristics
+age_group,Filter,Total,age_youth_adult,19 plus,,api-only,Personal characteristics
+age_group,Filter,Total,age_youth_adult,Total,,api-only,Personal characteristics
+age_group,Filter,Total,age_youth_adult,Under 19,,api-only,Personal characteristics
+age_group,Filter,Under 19,age_youth_adult,Under 19,,api-only,Personal characteristics
 apprenticeship_level,Filter,Advanced Apprenticeship,,,,api-only,Apprenticeships
 apprenticeship_level,Filter,Higher Apprenticeship,,,,api-only,Apprenticeships
 apprenticeship_level,Filter,Intermediate Apprenticeship,,,,api-only,Apprenticeships
 apprenticeship_level,Filter,Total,,,,api-only,Apprenticeships
-education_phase,Filter,All-through,,,AT,api-only,
-education_phase,Filter,Alternative provision,,,PR,api-only,
-education_phase,Filter,Early years settings,,,,api-only,
-education_phase,Filter,Further education,,,,api-only,
-education_phase,Filter,Higher education,,,,api-only,
-education_phase,Filter,Independent school,,,,api-only,
-education_phase,Filter,Junior,,,,api-only,
-education_phase,Filter,Middle (deemed primary),,,MP,api-only,
-education_phase,Filter,Middle (deemed secondary),,,MS,api-only,
-education_phase,Filter,No establishment,,,,api-only,
-education_phase,Filter,Nursery,,,NS,api-only,
-education_phase,Filter,Other education phase,,,,api-only,
-education_phase,Filter,Primary,,,PS,api-only,
-education_phase,Filter,Secondary,,,SS,api-only,
-education_phase,Filter,Special,,,SP,api-only,
-education_phase,Filter,Total,,,,api-only,
-education_type,Filter,Apprenticeship,education_type_group,Apprenticeship,,api-only,
-education_type,Filter,Total,education_type_group,Apprenticeship,,api-only,
-education_type,Filter,Institutional credit in HE providers,education_type_group,Higher education,,api-only,
-education_type,Filter,OfS recognised higher education,education_type_group,Higher education,,api-only,
-education_type,Filter,Other higher level,education_type_group,Higher education,,api-only,
-education_type,Filter,Total,education_type_group,Higher education,,api-only,
-education_type,Filter,Total,education_type_group,Total,,api-only,
-education_type_group,Filter,Apprenticeship,qualification_level,Level 4,,api-only,
-education_type_group,Filter,Higher education,qualification_level,Level 4,,api-only,
-education_type_group,Filter,Total,qualification_level,Level 4,,api-only,
-education_type_group,Filter,Apprenticeship,qualification_level,Level 5,,api-only,
-education_type_group,Filter,Higher education,qualification_level,Level 5,,api-only,
-education_type_group,Filter,Total,qualification_level,Level 5,,api-only,
-education_type_group,Filter,Apprenticeship,qualification_level,Level 6,,api-only,
-education_type_group,Filter,Higher education,qualification_level,Level 6,,api-only,
-education_type_group,Filter,Total,qualification_level,Level 6,,api-only,
-education_type_group,Filter,Apprenticeship,qualification_level,Level 7,,api-only,
-education_type_group,Filter,Higher education,qualification_level,Level 7,,api-only,
-education_type_group,Filter,Total,qualification_level,Level 7,,api-only,
-education_type_group,Filter,Higher education,qualification_level,Level 8,,api-only,
-education_type_group,Filter,Total,qualification_level,Level 8,,api-only,
-education_type_group,Filter,Apprenticeship,qualification_level,Total,,api-only,
-education_type_group,Filter,Higher education,qualification_level,Total,,api-only,
-education_type_group,Filter,Total,qualification_level,Total,,api-only,
-establishment_governance,Filter,Academy,,,CA,api-only,
-establishment_governance,Filter,City technology college,,,CT,api-only,
-establishment_governance,Filter,Community,,,CO,api-only,
-establishment_governance,Filter,Foundation,,,FO,api-only,
-establishment_governance,Filter,Independent,,,IN,api-only,
-establishment_governance,Filter,Non-maintained,,,NM,api-only,
-establishment_governance,Filter,Voluntary aided,,,VA,api-only,
-establishment_governance,Filter,Voluntary controlled,,,VC,api-only,
-establishment_type,Filter,Other independent school,phase_type_grouping,Independent school,,api-only,
-establishment_type,Filter,Other independent special school,phase_type_grouping,Independent school,,api-only,
-establishment_type,Filter,Total,phase_type_grouping,Independent school,,api-only,
-establishment_type,Filter,Non-maintained special school,phase_type_grouping,Non-maintained special school,,api-only,
-establishment_type,Filter,Total,phase_type_grouping,Non-maintained special school,,api-only,
-establishment_type,Filter,Academy alternative provision converter,phase_type_grouping,State-funded alternative provision school,,api-only,
-establishment_type,Filter,Academy alternative provision sponsor led,phase_type_grouping,State-funded alternative provision school,,api-only,
-establishment_type,Filter,Free schools alternative provision,phase_type_grouping,State-funded alternative provision school,,api-only,
-establishment_type,Filter,Total,phase_type_grouping,State-funded alternative provision school,,api-only,
-establishment_type,Filter,Pupil referral unit,phase_type_grouping,State-funded alternative provisionschool,,api-only,
-establishment_type,Filter,Community school,phase_type_grouping,State-funded nursery,,api-only,
-establishment_type,Filter,Local authority nursery school,phase_type_grouping,State-funded nursery,,api-only,
-establishment_type,Filter,Total,phase_type_grouping,State-funded nursery,,api-only,
-establishment_type,Filter,Academy converter,phase_type_grouping,State-funded primary,,api-only,
-establishment_type,Filter,Academy sponsor led,phase_type_grouping,State-funded primary,,api-only,
-establishment_type,Filter,Community school,phase_type_grouping,State-funded primary,,api-only,
-establishment_type,Filter,Foundation school,phase_type_grouping,State-funded primary,,api-only,
-establishment_type,Filter,Free schools,phase_type_grouping,State-funded primary,,api-only,
-establishment_type,Filter,Total,phase_type_grouping,State-funded primary,,api-only,
-establishment_type,Filter,Voluntary aided school,phase_type_grouping,State-funded primary,,api-only,
-establishment_type,Filter,Voluntary controlled school,phase_type_grouping,State-funded primary,,api-only,
-establishment_type,Filter,Academy 16-19 converter,phase_type_grouping,State-funded secondary,,api-only,
-establishment_type,Filter,Academy 16-19 sponsor led,phase_type_grouping,State-funded secondary,,api-only,
-establishment_type,Filter,Academy converter,phase_type_grouping,State-funded secondary,,api-only,
-establishment_type,Filter,Academy sponsor led,phase_type_grouping,State-funded secondary,,api-only,
-establishment_type,Filter,City technology college,phase_type_grouping,State-funded secondary,,api-only,
-establishment_type,Filter,Community school,phase_type_grouping,State-funded secondary,,api-only,
-establishment_type,Filter,Foundation school,phase_type_grouping,State-funded secondary,,api-only,
-establishment_type,Filter,Free schools,phase_type_grouping,State-funded secondary,,api-only,
-establishment_type,Filter,Free schools 16-19,phase_type_grouping,State-funded secondary,,api-only,
-establishment_type,Filter,Studio schools,phase_type_grouping,State-funded secondary,,api-only,
-establishment_type,Filter,Total,phase_type_grouping,State-funded secondary,,api-only,
-establishment_type,Filter,University technical college,phase_type_grouping,State-funded secondary,,api-only,
-establishment_type,Filter,Voluntary aided school,phase_type_grouping,State-funded secondary,,api-only,
-establishment_type,Filter,Voluntary controlled school,phase_type_grouping,State-funded secondary,,api-only,
-establishment_type,Filter,Academy special converter,phase_type_grouping,State-funded special school,,api-only,
-establishment_type,Filter,Academy special sponsor led,phase_type_grouping,State-funded special school,,api-only,
-establishment_type,Filter,Community special school,phase_type_grouping,State-funded special school,,api-only,
-establishment_type,Filter,Foundation special school,phase_type_grouping,State-funded special school,,api-only,
-establishment_type,Filter,Free schools special,phase_type_grouping,State-funded special school,,api-only,
-establishment_type,Filter,Total,phase_type_grouping,State-funded special school,,api-only,
-establishment_type,Filter,Academy 16-19 converter,phase_type_grouping,Total,,api-only,
-establishment_type,Filter,Academy 16-19 sponsor led,phase_type_grouping,Total,,api-only,
-establishment_type,Filter,Academy alternative provision converter,phase_type_grouping,Total,,api-only,
-establishment_type,Filter,Academy alternative provision sponsor led,phase_type_grouping,Total,,api-only,
-establishment_type,Filter,Academy converter,phase_type_grouping,Total,,api-only,
-establishment_type,Filter,Academy special converter,phase_type_grouping,Total,,api-only,
-establishment_type,Filter,Academy special sponsor led,phase_type_grouping,Total,,api-only,
-establishment_type,Filter,Academy sponsor led,phase_type_grouping,Total,,api-only,
-establishment_type,Filter,City technology college,phase_type_grouping,Total,,api-only,
-establishment_type,Filter,Community school,phase_type_grouping,Total,,api-only,
-establishment_type,Filter,Community special school,phase_type_grouping,Total,,api-only,
-establishment_type,Filter,Foundation school,phase_type_grouping,Total,,api-only,
-establishment_type,Filter,Foundation special school,phase_type_grouping,Total,,api-only,
-establishment_type,Filter,Free schools,phase_type_grouping,Total,,api-only,
-establishment_type,Filter,Free schools 16-19,phase_type_grouping,Total,,api-only,
-establishment_type,Filter,Free schools alternative provision,phase_type_grouping,Total,,api-only,
-establishment_type,Filter,Free schools special,phase_type_grouping,Total,,api-only,
-establishment_type,Filter,Local authority nursery school,phase_type_grouping,Total,,api-only,
-establishment_type,Filter,Non-maintained special school,phase_type_grouping,Total,,api-only,
-establishment_type,Filter,Other independent school,phase_type_grouping,Total,,api-only,
-establishment_type,Filter,Other independent special school,phase_type_grouping,Total,,api-only,
-establishment_type,Filter,Pupil referral unit,phase_type_grouping,Total,,api-only,
-establishment_type,Filter,Studio schools,phase_type_grouping,Total,,api-only,
-establishment_type,Filter,Total,phase_type_grouping,Total,,api-only,
-establishment_type,Filter,University technical college,phase_type_grouping,Total,,api-only,
-establishment_type,Filter,Voluntary aided school,phase_type_grouping,Total,,api-only,
-establishment_type,Filter,Voluntary controlled school,phase_type_grouping,Total,,api-only,
-establishment_type_group,Filter,Academies and free schools,,,,api-only,
-establishment_type_group,Filter,Academy,,,,api-only,
-establishment_type_group,Filter,Academy converter,,,,api-only,
-establishment_type_group,Filter,Academy sponsor led,,,,api-only,
-establishment_type_group,Filter,All schools,,,,api-only,
-establishment_type_group,Filter,All state-funded,,,,api-only,
-establishment_type_group,Filter,Alternative provision,,,,api-only,
-establishment_type_group,Filter,Free schools,,,,api-only,
-establishment_type_group,Filter,Independent,,,,api-only,
-establishment_type_group,Filter,Local authority maintained,,,,api-only,
-establishment_type_group,Filter,Non-maintained,,,,api-only,
-establishment_type_group,Filter,State-funded mainstream schools,,,,api-only,
-establishment_type_group,Filter,State-funded schools and alternative provision,,,,api-only,
-establishment_type_group,Filter,State-funded special schools,,,,api-only,
-establishment_type_group,Filter,Total,,,,api-only,
-ethnicity_minor,Filter,All Asian / Asian British,ethnicity_major,Asian / Asian British,,any,
-ethnicity_minor,Filter,Any other Asian background,ethnicity_major,Asian / Asian British,,any,
-ethnicity_minor,Filter,Bangladeshi,ethnicity_major,Asian / Asian British,,any,
-ethnicity_minor,Filter,Chinese,ethnicity_major,Asian / Asian British,,any,
-ethnicity_minor,Filter,Indian,ethnicity_major,Asian / Asian British,,any,
-ethnicity_minor,Filter,Pakistani,ethnicity_major,Asian / Asian British,,any,
-ethnicity_minor,Filter,Total,ethnicity_major,Asian / Asian British,,any,
-ethnicity_minor,Filter,African,ethnicity_major,Black / African / Caribbean / Black British,,any,
-ethnicity_minor,Filter,All Black / African / Caribbean / Black British,ethnicity_major,Black / African / Caribbean / Black British,,any,
-ethnicity_minor,Filter,Any other Black / African / Caribbean background,ethnicity_major,Black / African / Caribbean / Black British,,any,
-ethnicity_minor,Filter,Caribbean,ethnicity_major,Black / African / Caribbean / Black British,,any,
-ethnicity_minor,Filter,Total,ethnicity_major,Black / African / Caribbean / Black British,,any,
-ethnicity_minor,Filter,All Mixed / Multiple ethnic groups,ethnicity_major,Mixed / Multiple ethnic groups,,any,
-ethnicity_minor,Filter,Any other Mixed / Multiple ethnic background,ethnicity_major,Mixed / Multiple ethnic groups,,any,
-ethnicity_minor,Filter,Total,ethnicity_major,Mixed / Multiple ethnic groups,,any,
-ethnicity_minor,Filter,White and Asian,ethnicity_major,Mixed / Multiple ethnic groups,,any,
-ethnicity_minor,Filter,White and Black African,ethnicity_major,Mixed / Multiple ethnic groups,,any,
-ethnicity_minor,Filter,White and Black Caribbean,ethnicity_major,Mixed / Multiple ethnic groups,,any,
-ethnicity_minor,Filter,All other ethnic groups,ethnicity_major,Other ethnic group,,any,
-ethnicity_minor,Filter,Any other ethnic group,ethnicity_major,Other ethnic group,,any,
-ethnicity_minor,Filter,Arab,ethnicity_major,Other ethnic group,,any,
-ethnicity_minor,Filter,Total,ethnicity_major,Other ethnic group,,any,
-ethnicity_minor,Filter,Total,ethnicity_major,Total,,any,
-ethnicity_minor,Filter,Total,ethnicity_major,Unknown,,any,
-ethnicity_minor,Filter,Unknown,ethnicity_major,Unknown,,any,
-ethnicity_minor,Filter,All White,ethnicity_major,White,,any,
-ethnicity_minor,Filter,Any other White background,ethnicity_major,White,,any,
-ethnicity_minor,Filter,English / Welsh / Scottish / Northern Irish / British,ethnicity_major,White,,any,
-ethnicity_minor,Filter,Gypsy,ethnicity_major,White,,any,
-ethnicity_minor,Filter,Gypsy or Irish Traveller,ethnicity_major,White,,any,
-ethnicity_minor,Filter,Irish,ethnicity_major,White,,any,
-ethnicity_minor,Filter,Irish Traveller,ethnicity_major,White,,any,
-ethnicity_minor,Filter,Roma,ethnicity_major,White,,any,
-ethnicity_minor,Filter,Total,ethnicity_major,White,,any,
-funding_type,Filter,Other,,,,api-only,
-funding_type,Filter,Supported by ASA levy funds,,,,api-only,
-funding_type,Filter,Total,,,,api-only,
-minority_ethnic,Filter,Ethnic minorities (excluding white minorities),,,,api-only,
-phase_type_grouping,Filter,All schools,,,,api-only,
-phase_type_grouping,Filter,State-funded primary,,,,api-only,
-phase_type_grouping,Filter,State-funded primary and secondary,,,,api-only,
-phase_type_grouping,Filter,State-funded secondary,,,,api-only,
-provider_type,Filter,All group-based providers,,,,api-only,
-provider_type,Filter,All school-based providers,,,,api-only,
-provider_type,Filter,Childminders,,,,api-only,
-provider_type,Filter,Further education colleges,,,,api-only,
-provider_type,Filter,General FE college including tertiary,,,,api-only,
-provider_type,Filter,Higher education providers,,,,api-only,
-provider_type,Filter,Local authorities,,,,api-only,
-provider_type,Filter,Maintained nursery schools,,,,api-only,
-provider_type,Filter,Nursery class childcare settings,,,,api-only,
-provider_type,Filter,Other provider type,,,,api-only,
-provider_type,Filter,Other public funded (LAs and HE),,,,api-only,
-provider_type,Filter,Private group-based providers,,,,api-only,
-provider_type,Filter,Private sector public funded,,,,api-only,
-provider_type,Filter,Private training providers in the FE sector,,,,api-only,
-provider_type,Filter,"School, college, LA and other unclassified group-based providers",,,,api-only,
-provider_type,Filter,Schools,,,,api-only,
-provider_type,Filter,Sixth form college,,,,api-only,
-provider_type,Filter,Special college,,,,api-only,
-provider_type,Filter,Total,,,,api-only,
-provider_type,Filter,Unknown,,,,api-only,
-provider_type,Filter,Voluntary group-based providers,,,,api-only,
+disadvantage_status,Filter,Disadvantaged,,,,api-only,Personal characteristics
+disadvantage_status,Filter,Not known to be disadvantaged,,,,api-only,Personal characteristics
+disadvantage_status,Filter,Total,,,,api-only,Personal characteristics
+education_phase,Filter,All-through,,,AT,api-only,Establishment characteristics
+education_phase,Filter,Alternative provision,,,PR,api-only,Establishment characteristics
+education_phase,Filter,Early years settings,,,,api-only,Establishment characteristics
+education_phase,Filter,Further education,,,,api-only,Establishment characteristics
+education_phase,Filter,Higher education,,,,api-only,Establishment characteristics
+education_phase,Filter,Independent school,,,,api-only,Establishment characteristics
+education_phase,Filter,Junior,,,,api-only,Establishment characteristics
+education_phase,Filter,Middle (deemed primary),,,MP,api-only,Establishment characteristics
+education_phase,Filter,Middle (deemed secondary),,,MS,api-only,Establishment characteristics
+education_phase,Filter,No establishment,,,,api-only,Establishment characteristics
+education_phase,Filter,Nursery,,,NS,api-only,Establishment characteristics
+education_phase,Filter,Other education phase,,,,api-only,Establishment characteristics
+education_phase,Filter,Primary,,,PS,api-only,Establishment characteristics
+education_phase,Filter,Secondary,,,SS,api-only,Establishment characteristics
+education_phase,Filter,Special,,,SP,api-only,Establishment characteristics
+education_phase,Filter,Total,,,,api-only,Establishment characteristics
+education_type,Filter,Apprenticeship,education_type_group,Apprenticeship,,api-only,Establishment characteristics
+education_type,Filter,Institutional credit in HE providers,education_type_group,Higher education,,api-only,Establishment characteristics
+education_type,Filter,OfS recognised higher education,education_type_group,Higher education,,api-only,Establishment characteristics
+education_type,Filter,Other higher level,education_type_group,Higher education,,api-only,Establishment characteristics
+education_type,Filter,Total,education_type_group,Apprenticeship,,api-only,Establishment characteristics
+education_type,Filter,Total,education_type_group,Higher education,,api-only,Establishment characteristics
+education_type,Filter,Total,education_type_group,Total,,api-only,Establishment characteristics
+education_type_group,Filter,Apprenticeship,qualification_level,Level 4,,api-only,Establishment characteristics
+education_type_group,Filter,Apprenticeship,qualification_level,Level 5,,api-only,Establishment characteristics
+education_type_group,Filter,Apprenticeship,qualification_level,Level 6,,api-only,Establishment characteristics
+education_type_group,Filter,Apprenticeship,qualification_level,Level 7,,api-only,Establishment characteristics
+education_type_group,Filter,Apprenticeship,qualification_level,Total,,api-only,Establishment characteristics
+education_type_group,Filter,Higher education,qualification_level,Level 4,,api-only,Establishment characteristics
+education_type_group,Filter,Higher education,qualification_level,Level 5,,api-only,Establishment characteristics
+education_type_group,Filter,Higher education,qualification_level,Level 6,,api-only,Establishment characteristics
+education_type_group,Filter,Higher education,qualification_level,Level 7,,api-only,Establishment characteristics
+education_type_group,Filter,Higher education,qualification_level,Level 8,,api-only,Establishment characteristics
+education_type_group,Filter,Higher education,qualification_level,Total,,api-only,Establishment characteristics
+education_type_group,Filter,Total,qualification_level,Level 4,,api-only,Establishment characteristics
+education_type_group,Filter,Total,qualification_level,Level 5,,api-only,Establishment characteristics
+education_type_group,Filter,Total,qualification_level,Level 6,,api-only,Establishment characteristics
+education_type_group,Filter,Total,qualification_level,Level 7,,api-only,Establishment characteristics
+education_type_group,Filter,Total,qualification_level,Level 8,,api-only,Establishment characteristics
+education_type_group,Filter,Total,qualification_level,Total,,api-only,Establishment characteristics
+establishment_governance,Filter,Academy,,,CA,api-only,Establishment characteristics
+establishment_governance,Filter,City technology college,,,CT,api-only,Establishment characteristics
+establishment_governance,Filter,Community,,,CO,api-only,Establishment characteristics
+establishment_governance,Filter,Foundation,,,FO,api-only,Establishment characteristics
+establishment_governance,Filter,Independent,,,IN,api-only,Establishment characteristics
+establishment_governance,Filter,Non-maintained,,,NM,api-only,Establishment characteristics
+establishment_governance,Filter,Voluntary aided,,,VA,api-only,Establishment characteristics
+establishment_governance,Filter,Voluntary controlled,,,VC,api-only,Establishment characteristics
+establishment_type,Filter,Academy 16-19 converter,phase_type_grouping,State-funded secondary,,api-only,Establishment characteristics
+establishment_type,Filter,Academy 16-19 converter,phase_type_grouping,Total,,api-only,Establishment characteristics
+establishment_type,Filter,Academy 16-19 sponsor led,phase_type_grouping,State-funded secondary,,api-only,Establishment characteristics
+establishment_type,Filter,Academy 16-19 sponsor led,phase_type_grouping,Total,,api-only,Establishment characteristics
+establishment_type,Filter,Academy alternative provision converter,phase_type_grouping,State-funded alternative provision school,,api-only,Establishment characteristics
+establishment_type,Filter,Academy alternative provision converter,phase_type_grouping,Total,,api-only,Establishment characteristics
+establishment_type,Filter,Academy alternative provision sponsor led,phase_type_grouping,State-funded alternative provision school,,api-only,Establishment characteristics
+establishment_type,Filter,Academy alternative provision sponsor led,phase_type_grouping,Total,,api-only,Establishment characteristics
+establishment_type,Filter,Academy converter,phase_type_grouping,State-funded primary,,api-only,Establishment characteristics
+establishment_type,Filter,Academy converter,phase_type_grouping,State-funded secondary,,api-only,Establishment characteristics
+establishment_type,Filter,Academy converter,phase_type_grouping,Total,,api-only,Establishment characteristics
+establishment_type,Filter,Academy special converter,phase_type_grouping,State-funded special school,,api-only,Establishment characteristics
+establishment_type,Filter,Academy special converter,phase_type_grouping,Total,,api-only,Establishment characteristics
+establishment_type,Filter,Academy special sponsor led,phase_type_grouping,State-funded special school,,api-only,Establishment characteristics
+establishment_type,Filter,Academy special sponsor led,phase_type_grouping,Total,,api-only,Establishment characteristics
+establishment_type,Filter,Academy sponsor led,phase_type_grouping,State-funded primary,,api-only,Establishment characteristics
+establishment_type,Filter,Academy sponsor led,phase_type_grouping,State-funded secondary,,api-only,Establishment characteristics
+establishment_type,Filter,Academy sponsor led,phase_type_grouping,Total,,api-only,Establishment characteristics
+establishment_type,Filter,City technology college,phase_type_grouping,State-funded secondary,,api-only,Establishment characteristics
+establishment_type,Filter,City technology college,phase_type_grouping,Total,,api-only,Establishment characteristics
+establishment_type,Filter,Community school,phase_type_grouping,State-funded nursery,,api-only,Establishment characteristics
+establishment_type,Filter,Community school,phase_type_grouping,State-funded primary,,api-only,Establishment characteristics
+establishment_type,Filter,Community school,phase_type_grouping,State-funded secondary,,api-only,Establishment characteristics
+establishment_type,Filter,Community school,phase_type_grouping,Total,,api-only,Establishment characteristics
+establishment_type,Filter,Community special school,phase_type_grouping,State-funded special school,,api-only,Establishment characteristics
+establishment_type,Filter,Community special school,phase_type_grouping,Total,,api-only,Establishment characteristics
+establishment_type,Filter,Foundation school,phase_type_grouping,State-funded primary,,api-only,Establishment characteristics
+establishment_type,Filter,Foundation school,phase_type_grouping,State-funded secondary,,api-only,Establishment characteristics
+establishment_type,Filter,Foundation school,phase_type_grouping,Total,,api-only,Establishment characteristics
+establishment_type,Filter,Foundation special school,phase_type_grouping,State-funded special school,,api-only,Establishment characteristics
+establishment_type,Filter,Foundation special school,phase_type_grouping,Total,,api-only,Establishment characteristics
+establishment_type,Filter,Free schools,phase_type_grouping,State-funded primary,,api-only,Establishment characteristics
+establishment_type,Filter,Free schools,phase_type_grouping,State-funded secondary,,api-only,Establishment characteristics
+establishment_type,Filter,Free schools,phase_type_grouping,Total,,api-only,Establishment characteristics
+establishment_type,Filter,Free schools 16-19,phase_type_grouping,State-funded secondary,,api-only,Establishment characteristics
+establishment_type,Filter,Free schools 16-19,phase_type_grouping,Total,,api-only,Establishment characteristics
+establishment_type,Filter,Free schools alternative provision,phase_type_grouping,State-funded alternative provision school,,api-only,Establishment characteristics
+establishment_type,Filter,Free schools alternative provision,phase_type_grouping,Total,,api-only,Establishment characteristics
+establishment_type,Filter,Free schools special,phase_type_grouping,State-funded special school,,api-only,Establishment characteristics
+establishment_type,Filter,Free schools special,phase_type_grouping,Total,,api-only,Establishment characteristics
+establishment_type,Filter,Local authority nursery school,phase_type_grouping,State-funded nursery,,api-only,Establishment characteristics
+establishment_type,Filter,Local authority nursery school,phase_type_grouping,Total,,api-only,Establishment characteristics
+establishment_type,Filter,Non-maintained special school,phase_type_grouping,Non-maintained special school,,api-only,Establishment characteristics
+establishment_type,Filter,Non-maintained special school,phase_type_grouping,Total,,api-only,Establishment characteristics
+establishment_type,Filter,Other independent school,phase_type_grouping,Independent school,,api-only,Establishment characteristics
+establishment_type,Filter,Other independent school,phase_type_grouping,Total,,api-only,Establishment characteristics
+establishment_type,Filter,Other independent special school,phase_type_grouping,Independent school,,api-only,Establishment characteristics
+establishment_type,Filter,Other independent special school,phase_type_grouping,Total,,api-only,Establishment characteristics
+establishment_type,Filter,Pupil referral unit,phase_type_grouping,State-funded alternative provisionschool,,api-only,Establishment characteristics
+establishment_type,Filter,Pupil referral unit,phase_type_grouping,Total,,api-only,Establishment characteristics
+establishment_type,Filter,Studio schools,phase_type_grouping,State-funded secondary,,api-only,Establishment characteristics
+establishment_type,Filter,Studio schools,phase_type_grouping,Total,,api-only,Establishment characteristics
+establishment_type,Filter,Total,phase_type_grouping,Independent school,,api-only,Establishment characteristics
+establishment_type,Filter,Total,phase_type_grouping,Non-maintained special school,,api-only,Establishment characteristics
+establishment_type,Filter,Total,phase_type_grouping,State-funded alternative provision school,,api-only,Establishment characteristics
+establishment_type,Filter,Total,phase_type_grouping,State-funded nursery,,api-only,Establishment characteristics
+establishment_type,Filter,Total,phase_type_grouping,State-funded primary,,api-only,Establishment characteristics
+establishment_type,Filter,Total,phase_type_grouping,State-funded secondary,,api-only,Establishment characteristics
+establishment_type,Filter,Total,phase_type_grouping,State-funded special school,,api-only,Establishment characteristics
+establishment_type,Filter,Total,phase_type_grouping,Total,,api-only,Establishment characteristics
+establishment_type,Filter,University technical college,phase_type_grouping,State-funded secondary,,api-only,Establishment characteristics
+establishment_type,Filter,University technical college,phase_type_grouping,Total,,api-only,Establishment characteristics
+establishment_type,Filter,Voluntary aided school,phase_type_grouping,State-funded primary,,api-only,Establishment characteristics
+establishment_type,Filter,Voluntary aided school,phase_type_grouping,State-funded secondary,,api-only,Establishment characteristics
+establishment_type,Filter,Voluntary aided school,phase_type_grouping,Total,,api-only,Establishment characteristics
+establishment_type,Filter,Voluntary controlled school,phase_type_grouping,State-funded primary,,api-only,Establishment characteristics
+establishment_type,Filter,Voluntary controlled school,phase_type_grouping,State-funded secondary,,api-only,Establishment characteristics
+establishment_type,Filter,Voluntary controlled school,phase_type_grouping,Total,,api-only,Establishment characteristics
+establishment_type_group,Filter,Academies and free schools,,,,api-only,Establishment characteristics
+establishment_type_group,Filter,Academy,,,,api-only,Establishment characteristics
+establishment_type_group,Filter,Academy converter,,,,api-only,Establishment characteristics
+establishment_type_group,Filter,Academy sponsor led,,,,api-only,Establishment characteristics
+establishment_type_group,Filter,All schools,,,,api-only,Establishment characteristics
+establishment_type_group,Filter,All state-funded,,,,api-only,Establishment characteristics
+establishment_type_group,Filter,Alternative provision,,,,api-only,Establishment characteristics
+establishment_type_group,Filter,Free schools,,,,api-only,Establishment characteristics
+establishment_type_group,Filter,Independent schools,,,,api-only,Establishment characteristics
+establishment_type_group,Filter,Local authority maintained,,,,api-only,Establishment characteristics
+establishment_type_group,Filter,Non-maintained,,,,api-only,Establishment characteristics
+establishment_type_group,Filter,State-funded mainstream schools,,,,api-only,Establishment characteristics
+establishment_type_group,Filter,State-funded schools and alternative provision,,,,api-only,Establishment characteristics
+establishment_type_group,Filter,State-funded special schools,,,,api-only,Establishment characteristics
+establishment_type_group,Filter,Total,,,,api-only,Establishment characteristics
+ethnicity_minor,Filter,African,ethnicity_major,Black / African / Caribbean / Black British,,any,Personal characteristics
+ethnicity_minor,Filter,All Asian / Asian British,ethnicity_major,Asian / Asian British,,any,Personal characteristics
+ethnicity_minor,Filter,All Black / African / Caribbean / Black British,ethnicity_major,Black / African / Caribbean / Black British,,any,Personal characteristics
+ethnicity_minor,Filter,All Mixed / Multiple ethnic groups,ethnicity_major,Mixed / Multiple ethnic groups,,any,Personal characteristics
+ethnicity_minor,Filter,All other ethnic groups,ethnicity_major,Other ethnic group,,any,Personal characteristics
+ethnicity_minor,Filter,All White,ethnicity_major,White,,any,Personal characteristics
+ethnicity_minor,Filter,Any other Asian background,ethnicity_major,Asian / Asian British,,any,Personal characteristics
+ethnicity_minor,Filter,Any other Black / African / Caribbean background,ethnicity_major,Black / African / Caribbean / Black British,,any,Personal characteristics
+ethnicity_minor,Filter,Any other ethnic group,ethnicity_major,Other ethnic group,,any,Personal characteristics
+ethnicity_minor,Filter,Any other Mixed / Multiple ethnic background,ethnicity_major,Mixed / Multiple ethnic groups,,any,Personal characteristics
+ethnicity_minor,Filter,Any other White background,ethnicity_major,White,,any,Personal characteristics
+ethnicity_minor,Filter,Arab,ethnicity_major,Other ethnic group,,any,Personal characteristics
+ethnicity_minor,Filter,Bangladeshi,ethnicity_major,Asian / Asian British,,any,Personal characteristics
+ethnicity_minor,Filter,Caribbean,ethnicity_major,Black / African / Caribbean / Black British,,any,Personal characteristics
+ethnicity_minor,Filter,Chinese,ethnicity_major,Asian / Asian British,,any,Personal characteristics
+ethnicity_minor,Filter,English / Welsh / Scottish / Northern Irish / British,ethnicity_major,White,,any,Personal characteristics
+ethnicity_minor,Filter,Gypsy,ethnicity_major,White,,any,Personal characteristics
+ethnicity_minor,Filter,Gypsy or Irish Traveller,ethnicity_major,White,,any,Personal characteristics
+ethnicity_minor,Filter,Indian,ethnicity_major,Asian / Asian British,,any,Personal characteristics
+ethnicity_minor,Filter,Irish,ethnicity_major,White,,any,Personal characteristics
+ethnicity_minor,Filter,Irish Traveller,ethnicity_major,White,,any,Personal characteristics
+ethnicity_minor,Filter,Pakistani,ethnicity_major,Asian / Asian British,,any,Personal characteristics
+ethnicity_minor,Filter,Roma,ethnicity_major,White,,any,Personal characteristics
+ethnicity_minor,Filter,Total,ethnicity_major,Asian / Asian British,,any,Personal characteristics
+ethnicity_minor,Filter,Total,ethnicity_major,Black / African / Caribbean / Black British,,any,Personal characteristics
+ethnicity_minor,Filter,Total,ethnicity_major,Mixed / Multiple ethnic groups,,any,Personal characteristics
+ethnicity_minor,Filter,Total,ethnicity_major,Other ethnic group,,any,Personal characteristics
+ethnicity_minor,Filter,Total,ethnicity_major,Total,,any,Personal characteristics
+ethnicity_minor,Filter,Total,ethnicity_major,Unknown,,any,Personal characteristics
+ethnicity_minor,Filter,Total,ethnicity_major,White,,any,Personal characteristics
+ethnicity_minor,Filter,Unknown,ethnicity_major,Unknown,,any,Personal characteristics
+ethnicity_minor,Filter,White and Asian,ethnicity_major,Mixed / Multiple ethnic groups,,any,Personal characteristics
+ethnicity_minor,Filter,White and Black African,ethnicity_major,Mixed / Multiple ethnic groups,,any,Personal characteristics
+ethnicity_minor,Filter,White and Black Caribbean,ethnicity_major,Mixed / Multiple ethnic groups,,any,Personal characteristics
+first_language,Filter,Known or believed to be English,,,,api-only,Personal characteristics
+first_language,Filter,Known or believed to be other than English,,,,api-only,Personal characteristics
+first_language,Filter,First language unclassified,,,,api-only,Personal characteristics
+first_language,Filter,Total,,,,api-only,Personal characteristics
+fsm_status,Filter,FSM eligible,,,,api-only,Personal characteristics
+fsm_status,Filter,Not known to be FSM eligible,,,,api-only,Personal characteristics
+fsm_status,Filter,Total,,,,api-only,Personal characteristics
+funding_type,Filter,Other,,,,api-only,Apprenticeships
+funding_type,Filter,Supported by ASA levy funds,,,,api-only,Apprenticeships
+funding_type,Filter,Total,,,,api-only,Apprenticeships
+minority_ethnic,Filter,Ethnic minorities (excluding white minorities),,,,api-only,Personal characteristics
+month_of_birth,Filter,April,,,,api-only,Personal characteristics
+month_of_birth,Filter,August,,,,api-only,Personal characteristics
+month_of_birth,Filter,December,,,,api-only,Personal characteristics
+month_of_birth,Filter,February,,,,api-only,Personal characteristics
+month_of_birth,Filter,January,,,,api-only,Personal characteristics
+month_of_birth,Filter,July,,,,api-only,Personal characteristics
+month_of_birth,Filter,June,,,,api-only,Personal characteristics
+month_of_birth,Filter,March,,,,api-only,Personal characteristics
+month_of_birth,Filter,May,,,,api-only,Personal characteristics
+month_of_birth,Filter,November,,,,api-only,Personal characteristics
+month_of_birth,Filter,October,,,,api-only,Personal characteristics
+month_of_birth,Filter,September,,,,api-only,Personal characteristics
+month_of_birth,Filter,Total,,,,api-only,Personal characteristics
+phase_type_grouping,Filter,All schools,,,,api-only,Establishment characteristics
+phase_type_grouping,Filter,State-funded primary,,,,api-only,Establishment characteristics
+phase_type_grouping,Filter,State-funded primary and secondary,,,,api-only,Establishment characteristics
+phase_type_grouping,Filter,State-funded secondary,,,,api-only,Establishment characteristics
+provider_type,Filter,All group-based providers,,,,api-only,Establishment characteristics
+provider_type,Filter,All school-based providers,,,,api-only,Establishment characteristics
+provider_type,Filter,Childminders,,,,api-only,Establishment characteristics
+provider_type,Filter,Further education colleges,,,,api-only,Establishment characteristics
+provider_type,Filter,General FE college including tertiary,,,,api-only,Establishment characteristics
+provider_type,Filter,Higher education providers,,,,api-only,Establishment characteristics
+provider_type,Filter,Local authorities,,,,api-only,Establishment characteristics
+provider_type,Filter,Maintained nursery schools,,,,api-only,Establishment characteristics
+provider_type,Filter,Nursery class childcare settings,,,,api-only,Establishment characteristics
+provider_type,Filter,Other provider type,,,,api-only,Establishment characteristics
+provider_type,Filter,Other public funded (LAs and HE),,,,api-only,Establishment characteristics
+provider_type,Filter,Private group-based providers,,,,api-only,Establishment characteristics
+provider_type,Filter,Private sector public funded,,,,api-only,Establishment characteristics
+provider_type,Filter,Private training providers in the FE sector,,,,api-only,Establishment characteristics
+provider_type,Filter,"School, college, LA and other unclassified group-based providers",,,,api-only,Establishment characteristics
+provider_type,Filter,Schools,,,,api-only,Establishment characteristics
+provider_type,Filter,Sixth form college,,,,api-only,Establishment characteristics
+provider_type,Filter,Special college,,,,api-only,Establishment characteristics
+provider_type,Filter,Total,,,,api-only,Establishment characteristics
+provider_type,Filter,Unknown,,,,api-only,Establishment characteristics
+provider_type,Filter,Voluntary group-based providers,,,,api-only,Establishment characteristics
+school_cohort_size,Filter,1 to 15 pupils,,,,api-only,Establishment characteristics
+school_cohort_size,Filter,16 to 30 pupils,,,,api-only,Establishment characteristics
+school_cohort_size,Filter,31 to 60 pupils,,,,api-only,Establishment characteristics
+school_cohort_size,Filter,61 to 90 pupils,,,,api-only,Establishment characteristics
+school_cohort_size,Filter,91+ pupils,,,,api-only,Establishment characteristics
+school_cohort_size,Filter,Total,,,,api-only,Establishment characteristics
+school_religious_character,Filter,Church of England,,,,api-only,Establishment characteristics
+school_religious_character,Filter,Jewish,,,,api-only,Establishment characteristics
+school_religious_character,Filter,Methodist,,,,api-only,Establishment characteristics
+school_religious_character,Filter,Muslim,,,,api-only,Establishment characteristics
+school_religious_character,Filter,No religious character,,,,api-only,Establishment characteristics
+school_religious_character,Filter,Other Christian faith,,,,api-only,Establishment characteristics
+school_religious_character,Filter,Other religious character,,,,api-only,Establishment characteristics
+school_religious_character,Filter,Roman Catholic,,,,api-only,Establishment characteristics
+school_religious_character,Filter,Sikh,,,,api-only,Establishment characteristics
+school_religious_character,Filter,Total,,,,api-only,Establishment characteristics
 sen_primary_need,Filter,All primary need,,,,api-only,Special educational needs
 sen_primary_need,Filter,Autistic spectrum disorder,,,ASD,api-only,Special educational needs
+sen_primary_need,Filter,Down syndrome,,,,api-only,Special educational needs
 sen_primary_need,Filter,Hearing impairment,,,HI,api-only,Special educational needs
 sen_primary_need,Filter,Moderate learning difficulty,,,MLD,api-only,Special educational needs
 sen_primary_need,Filter,Multi-sensory impairment,,,MSI,api-only,Special educational needs
@@ -218,12 +258,13 @@ sen_primary_need,Filter,Severe learning difficulty,,,SLD,api-only,Special educat
 sen_primary_need,Filter,"Social, emotional and mental health",,,SEMH,api-only,Special educational needs
 sen_primary_need,Filter,Specific learning difficulty,,,SPLD,api-only,Special educational needs
 sen_primary_need,Filter,"Speech, language and communication needs",,,SLCN,api-only,Special educational needs
+sen_primary_need,Filter,Total,,,,api-only,Special educational needs
 sen_primary_need,Filter,Unknown,,,,api-only,Special educational needs
 sen_primary_need,Filter,Vision impairment,,,VI,api-only,Special educational needs
-sen_provision,Filter,"Education, health and care plan",sen_status,Any special educational need,,api-only,Special educational needs
-sen_provision,Filter,SEN support / SEN without an EHC plan,sen_status,Any special educational need,,api-only,Special educational needs
-sen_provision,Filter,No SEN provision,sen_status,No identified special educational need,,api-only,Special educational needs
 sen_provision,Filter,All SEN provision,sen_status,Total,,api-only,Special educational needs
+sen_provision,Filter,"Education, health and care plan",sen_status,Any special educational need,,api-only,Special educational needs
+sen_provision,Filter,No SEN provision,sen_status,No identified special educational need,,api-only,Special educational needs
+sen_provision,Filter,SEN support / SEN without an EHC plan,sen_status,Any special educational need,,api-only,Special educational needs
 sen_provision,Filter,Total,sen_status,Total,,api-only,Special educational needs
 sen_provision,Filter,Unknown SEN provision,sen_status,Unclassified special educational need,,api-only,Special educational needs
 sen_secondary_need,Filter,All secondary need,,,,api-only,Special educational needs
@@ -243,22 +284,85 @@ sen_secondary_need,Filter,Specific learning difficulty,,,SPLD,api-only,Special e
 sen_secondary_need,Filter,"Speech, language and communication needs",,,SLCN,api-only,Special educational needs
 sen_secondary_need,Filter,Unknown,,,,api-only,Special educational needs
 sen_secondary_need,Filter,Vision impairment,,,VI,api-only,Special educational needs
+sex,Filter,Boys,,,,api-only,Personal characteristics
+sex,Filter,Girls,,,,api-only,Personal characteristics
+sex,Filter,Other,,,,api-only,Personal characteristics
+sex,Filter,Total,,,,api-only,Personal characteristics
+subject,Filter,"Grammar, punctuation and spelling",,,,api-only,Attainment
+subject,Filter,Maths,,,,api-only,Attainment
+subject,Filter,Reading,,,,api-only,Attainment
+subject,Filter,"Reading, writing and maths",,,,api-only,Attainment
+subject,Filter,Science,,,,api-only,Attainment
+subject,Filter,Writing,,,,api-only,Attainment
+young_carer,Filter,Not known to be a young carer,,,,api-only,Personal characteristics
+young_carer,Filter,Total,,,,api-only,Personal characteristics
+young_carer,Filter,Young carer,,,,api-only,Personal characteristics
+absent_pupil_count,Indicator,,,,,api-only,Key stage 2 attainment
+absent_pupil_percent,Indicator,,,,,api-only,Key stage 2 attainment
 achievement_count,Indicator,,,,,api-only,Apprenticeships
 achievements_percent,Indicator,,,,,api-only,Apprenticeships
-enrolment_count,Indicator,,,,,api-only,
-enrolment_percent,Indicator,,,,,api-only,
-learner_count,Indicator,,,,,api-only,
-learner_percent,Indicator,,,,,api-only,
+average_scaled_score,Indicator,,,,,api-only,Key stage 2 attainment
+below_interim_pre_ks_std_pupil_count,Indicator,,,,,api-only,Key stage 2 attainment
+below_interim_pre_ks_std_pupil_percent,Indicator,,,,,api-only,Key stage 2 attainment
+disapplied_pupil_count,Indicator,,,,,api-only,Key stage 2 attainment
+disapplied_pupil_percent,Indicator,,,,,api-only,Key stage 2 attainment
+early_dev_of_expected_std_pupil_count,Indicator,,,,,api-only,Key stage 2 attainment
+early_dev_of_expected_std_pupil_percent,Indicator,,,,,api-only,Key stage 2 attainment
+eligible_pupil_count,Indicator,,,,,api-only,Key stage 2 attainment
+engagement_model_or_below_pre_ks_std_pupil_count,Indicator,,,,,api-only,Key stage 2 attainment
+engagement_model_or_below_pre_ks_std_pupil_percent,Indicator,,,,,api-only,Key stage 2 attainment
+enrolment_count,Indicator,,,,,api-only,Apprenticeships
+enrolment_percent,Indicator,,,,,api-only,Apprenticeships
+establishment_count,Indicator,,,,,api-only,Key stage 2 attainment
+expected_standard_pupil_count,Indicator,,,,,api-only,Key stage 2 attainment
+expected_standard_pupil_percent,Indicator,,,,,api-only,Key stage 2 attainment
+foundations_of_expected_std_pupil_count,Indicator,,,,,api-only,Key stage 2 attainment
+foundations_of_expected_std_pupil_percent,Indicator,,,,,api-only,Key stage 2 attainment
+growing_dev_of_expected_std_pupil_count,Indicator,,,,,api-only,Key stage 2 attainment
+growing_dev_of_expected_std_pupil_percent,Indicator,,,,,api-only,Key stage 2 attainment
+higher_standard_pupil_count,Indicator,,,,,api-only,Key stage 2 attainment
+higher_standard_pupil_percent,Indicator,,,,,api-only,Key stage 2 attainment
+learner_count,Indicator,,,,,api-only,Apprenticeships
+learner_percent,Indicator,,,,,api-only,Apprenticeships
+not_meeting_pupil_count,Indicator,,,,,api-only,Key stage 2 attainment
+not_meeting_pupil_percent,Indicator,,,,,api-only,Key stage 2 attainment
 participation_count,Indicator,,,,,api-only,Apprenticeships
-population_count,Indicator,,,,,api-only,
-population_percent,Indicator,,,,,api-only,
-pupil_count,Indicator,,,,,api-only,
-pupil_percent,Indicator,,,,,api-only,
-school_count,Indicator,,,,,api-only,
-school_percent,Indicator,,,,,api-only,
+population_count,Indicator,,,,,api-only,General
+population_percent,Indicator,,,,,api-only,General
+pre_ks_std_1_pupil_count,Indicator,,,,,api-only,Key stage 2 attainment
+pre_ks_std_1_pupil_percent,Indicator,,,,,api-only,Key stage 2 attainment
+pre_ks_std_2_pupil_count,Indicator,,,,,api-only,Key stage 2 attainment
+pre_ks_std_2_pupil_percent,Indicator,,,,,api-only,Key stage 2 attainment
+pre_ks_std_3_pupil_count,Indicator,,,,,api-only,Key stage 2 attainment
+pre_ks_std_3_pupil_percent,Indicator,,,,,api-only,Key stage 2 attainment
+pre_ks_std_4_pupil_count,Indicator,,,,,api-only,Key stage 2 attainment
+pre_ks_std_4_pupil_percent,Indicator,,,,,api-only,Key stage 2 attainment
+pre_ks_std_5_pupil_count,Indicator,,,,,api-only,Key stage 2 attainment
+pre_ks_std_5_pupil_percent,Indicator,,,,,api-only,Key stage 2 attainment
+pre_ks_std_6_pupil_count,Indicator,,,,,api-only,Key stage 2 attainment
+pre_ks_std_6_pupil_percent,Indicator,,,,,api-only,Key stage 2 attainment
+progress_measure_eligible_pupil_count,Indicator,,,,,api-only,Key stage 2 attainment
+progress_measure_lower_conf_interval,Indicator,,,,,api-only,Key stage 2 attainment
+progress_measure_score,Indicator,,,,,api-only,Key stage 2 attainment
+progress_measure_total_score,Indicator,,,,,api-only,Key stage 2 attainment
+progress_measure_upper_conf_interval,Indicator,,,,,api-only,Key stage 2 attainment
+pupil_count,Indicator,,,,,api-only,General
+pupil_percent,Indicator,,,,,api-only,General
+scaled_scores_eligible_pupil_count,Indicator,,,,,api-only,Key stage 2 attainment
+scaled_scores_total,Indicator,,,,,api-only,Key stage 2 attainment
+school_count,Indicator,,,,,api-only,General
+school_percent,Indicator,,,,,api-only,General
 start_count,Indicator,,,,,api-only,Apprenticeships
 starts_percent,Indicator,,,,,api-only,Apprenticeships
-student_count,Indicator,,,,,api-only,
-student_percent,Indicator,,,,,api-only,
-teacher_count,Indicator,,,,,api-only,
-teacher_percent,Indicator,,,,,api-only,
+student_count,Indicator,,,,,api-only,General
+student_percent,Indicator,,,,,api-only,General
+teacher_count,Indicator,,,,,api-only,General
+teacher_percent,Indicator,,,,,api-only,General
+unable_to_access_arrived_pupil_count,Indicator,,,,,api-only,Key stage 2 attainment
+unable_to_access_arrived_pupil_percent,Indicator,,,,,api-only,Key stage 2 attainment
+unable_to_access_pupil_count,Indicator,,,,,api-only,Key stage 2 attainment
+unable_to_access_pupil_percent,Indicator,,,,,api-only,Key stage 2 attainment
+working_below_pupil_count,Indicator,,,,,api-only,Key stage 2 attainment
+working_below_pupil_percent,Indicator,,,,,api-only,Key stage 2 attainment
+working_towards_pupil_count,Indicator,,,,,api-only,Key stage 2 attainment
+working_towards_pupil_percent,Indicator,,,,,api-only,Key stage 2 attainment
