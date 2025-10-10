@@ -2890,10 +2890,9 @@ filter_group_level <- function(data, meta) {
 # Checking that filter groups are not filters
 
 filter_group_is_filter <- function(meta) {
-  standard_cols_allowed <- c("school_name")
   if (
     meta %>%
-      filter(!is.na(filter_grouping_column) & filter_grouping_column != "" & !filter_grouping_column %in% standard_cols_allowed) %>%
+      filter(!is.na(filter_grouping_column) & filter_grouping_column != "") %>%
       nrow() ==
       0
   ) {
@@ -2913,7 +2912,7 @@ filter_group_is_filter <- function(meta) {
     pre_result <- stack(sapply(
       meta %>%
         filter(
-          !is.na(filter_grouping_column) & filter_grouping_column != "" & !filter_grouping_column %in% standard_cols_allowed
+          !is.na(filter_grouping_column) & filter_grouping_column != ""
         ) %>%
         pull(filter_grouping_column),
       filter_group_is_filter_check
