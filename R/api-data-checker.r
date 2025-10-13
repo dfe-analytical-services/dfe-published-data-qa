@@ -3,8 +3,7 @@
 # a set of data files and sort them into a data-dictionary structure with
 # flags as to whether they're currently in the data dictionary or not.
 
-checker_example_run <- function() {
-  dir <- "tests/testthat/test-data/"
+checker_example_run <- function(dir = "tests/testthat/test-data/") {
   files <- list.files(dir)
   files <- paste0(dir, files[!grepl("meta", files)])
   listing <- api_data_checker(files)
@@ -20,8 +19,8 @@ api_data_checker <- function(files) {
     filter_item_parent = NA
   )
   for (file in files) {
-    data <- vroom::vroom(file)
-    meta <- vroom::vroom(gsub(".csv", ".meta.csv", file))
+    data <- vroom::vroom(file, show_col_types = FALSE)
+    meta <- vroom::vroom(gsub(".csv", ".meta.csv", file), show_col_types = FALSE)
     print(meta)
     if ("Filter" %in% meta$col_type) {
       filters <- meta |>
