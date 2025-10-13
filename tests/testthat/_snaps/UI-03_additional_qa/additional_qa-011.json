@@ -23,6 +23,19 @@
             201718
           ],
           [
+            "Secondary",
+            "Primary",
+            "Primary",
+            "Secondary",
+            "Primary",
+            "Secondary",
+            "Primary",
+            "Secondary",
+            "Primary",
+            "Secondary",
+            "Total"
+          ],
+          [
             "State-funded secondary",
             "State-funded primary",
             "State-funded primary",
@@ -192,7 +205,7 @@
             "MISSING TOTAL"
           ]
         ],
-        "container": "<table class=\"table table-bordered\">\n  <thead>\n    <tr>\n      <th>time_period<\/th>\n      <th>phase_type_grouping<\/th>\n      <th>English devolved area<\/th>\n      <th>Local authority<\/th>\n      <th>Local authority district<\/th>\n      <th>Local enterprise partnership<\/th>\n      <th>Local skills improvement plan area<\/th>\n      <th>MAT<\/th>\n      <th>National<\/th>\n      <th>Parliamentary constituency<\/th>\n      <th>Regional<\/th>\n      <th>School<\/th>\n      <th>Ward<\/th>\n      <th>match<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>",
+        "container": "<table class=\"table table-bordered\">\n  <thead>\n    <tr>\n      <th>time_period<\/th>\n      <th>education_phase<\/th>\n      <th>phase_type_grouping<\/th>\n      <th>English devolved area<\/th>\n      <th>Local authority<\/th>\n      <th>Local authority district<\/th>\n      <th>Local enterprise partnership<\/th>\n      <th>Local skills improvement plan area<\/th>\n      <th>MAT<\/th>\n      <th>National<\/th>\n      <th>Parliamentary constituency<\/th>\n      <th>Regional<\/th>\n      <th>School<\/th>\n      <th>Ward<\/th>\n      <th>match<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>",
         "options": {
           "dom": "Bptl",
           "buttons": [
@@ -200,7 +213,7 @@
             "copy",
             "colvis"
           ],
-          "rowCallback": "function(row, data, num, index){\n  var $row = $(row);\n    $row.css('background-color', '#454b51');\n    $row.hover(function(){\n      $(this).css('background-color', '#6a737c');\n     }, function(){\n      $(this).css('background-color', '#454b51');\n     }\n    );\nvar value=data[13]; $(this.api().cell(row, 13).node()).css({'background-color':value == \"NO MATCH\" ? \"#910000\" : value == \"MISSING TOTAL\" ? \"#e87421\" : value == \"MATCH\" ? \"#30A104\" : null});\n}",
+          "rowCallback": "function(row, data, num, index){\n  var $row = $(row);\n    $row.css('background-color', '#454b51');\n    $row.hover(function(){\n      $(this).css('background-color', '#6a737c');\n     }, function(){\n      $(this).css('background-color', '#454b51');\n     }\n    );\nvar value=data[14]; $(this.api().cell(row, 14).node()).css({'background-color':value == \"NO MATCH\" ? \"#910000\" : value == \"MISSING TOTAL\" ? \"#e87421\" : value == \"MATCH\" ? \"#30A104\" : null});\n}",
           "initComplete": "function(settings, json) {\n$(this.api().table().header()).css({'background-color': '#232628', 'color': '#c8c8c8'});\n}",
           "scrollX": true,
           "columnDefs": [
@@ -208,7 +221,6 @@
               "className": "dt-right",
               "targets": [
                 0,
-                2,
                 3,
                 4,
                 5,
@@ -218,7 +230,8 @@
                 9,
                 10,
                 11,
-                12
+                12,
+                13
               ]
             },
             {
@@ -226,56 +239,60 @@
               "targets": 0
             },
             {
-              "name": "phase_type_grouping",
+              "name": "education_phase",
               "targets": 1
             },
             {
-              "name": "English devolved area",
+              "name": "phase_type_grouping",
               "targets": 2
             },
             {
-              "name": "Local authority",
+              "name": "English devolved area",
               "targets": 3
             },
             {
-              "name": "Local authority district",
+              "name": "Local authority",
               "targets": 4
             },
             {
-              "name": "Local enterprise partnership",
+              "name": "Local authority district",
               "targets": 5
             },
             {
-              "name": "Local skills improvement plan area",
+              "name": "Local enterprise partnership",
               "targets": 6
             },
             {
-              "name": "MAT",
+              "name": "Local skills improvement plan area",
               "targets": 7
             },
             {
-              "name": "National",
+              "name": "MAT",
               "targets": 8
             },
             {
-              "name": "Parliamentary constituency",
+              "name": "National",
               "targets": 9
             },
             {
-              "name": "Regional",
+              "name": "Parliamentary constituency",
               "targets": 10
             },
             {
-              "name": "School",
+              "name": "Regional",
               "targets": 11
             },
             {
-              "name": "Ward",
+              "name": "School",
               "targets": 12
             },
             {
-              "name": "match",
+              "name": "Ward",
               "targets": 13
+            },
+            {
+              "name": "match",
+              "targets": 14
             }
           ],
           "order": [
@@ -354,9 +371,9 @@
         },
         {
           "name": "crosstalk",
-          "version": "1.2.1",
+          "version": "1.2.2",
           "src": {
-            "href": "crosstalk-1.2.1"
+            "href": "crosstalk-1.2.2"
           },
           "meta": null,
           "script": "js/crosstalk.min.js",

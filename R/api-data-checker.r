@@ -3,6 +3,14 @@
 # a set of data files and sort them into a data-dictionary structure with
 # flags as to whether they're currently in the data dictionary or not.
 
+checker_example_run <- function() {
+  dir <- "tests/testthat/test-data/"
+  files <- list.files(dir)
+  files <- paste0(dir, files[!grepl("meta", files)])
+  listing <- api_data_checker(files)
+  return(non_dd_rows(listing))
+}
+
 api_data_checker <- function(files) {
   entries <- data.frame(
     col_name = NA,
@@ -79,7 +87,7 @@ api_data_checker <- function(files) {
 }
 
 non_dd_rows <- function(listing) {
-  dd <- vroom::vroom("data/data-dictionary.csv") |>
+  dd <- vroom::vroom("data/data-dictionary.csv", show_col_types = FALSE) |>
     dplyr::select(
       col_name,
       col_type,
@@ -101,13 +109,4 @@ col_name_validation <- function(listing) {
   } else {
     message("All col_names within contraint")
   }
-}
-
-checker_example_run <- function(dir) {
-  #  dir <- "../../offline-data/ks2_attainment/2025-september/Publication\ files/"
-  files <- list.files(dir)
-  files <- paste0(dir, files[!grepl("meta", files)])
-  listing <- api_data_checker(files)
-  listing |> col_name_validation()
-  return(non_dd_rows(listing))
 }
