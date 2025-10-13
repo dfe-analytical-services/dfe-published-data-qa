@@ -1115,34 +1115,27 @@
         "Package": "curl",
         "Type": "Package",
         "Title": "A Modern and Flexible Web Client for R",
-        "Version": "7.0.0",
-        "Authors@R": "c(\n    person(\"Jeroen\", \"Ooms\", role = c(\"aut\", \"cre\"), email = \"jeroenooms@gmail.com\",\n      comment = c(ORCID = \"0000-0002-4035-0289\")),\n    person(\"Hadley\", \"Wickham\", role = \"ctb\"),\n    person(\"Posit Software, PBC\", role = \"cph\"))",
-        "Description": "Bindings to 'libcurl' <https://curl.se/libcurl/> for performing fully\n    configurable HTTP/FTP requests where responses can be processed in memory, on\n    disk, or streaming via the callback or connection interfaces. Some knowledge\n    of 'libcurl' is recommended; for a more-user-friendly web client see the \n    'httr2' package which builds on this package with http specific tools and logic.",
+        "Version": "5.2.3",
+        "Authors@R": "c(\n    person(\"Jeroen\", \"Ooms\", role = c(\"aut\", \"cre\"), email = \"jeroenooms@gmail.com\",\n      comment = c(ORCID = \"0000-0002-4035-0289\")),\n    person(\"Hadley\", \"Wickham\", , \"hadley@rstudio.com\", role = \"ctb\"),\n    person(\"RStudio\", role = \"cph\")\n    )",
+        "Description": "The curl() and curl_download() functions provide highly\n    configurable drop-in replacements for base url() and download.file() with\n    better performance, support for encryption (https, ftps), gzip compression,\n    authentication, and other 'libcurl' goodies. The core of the package implements a\n    framework for performing fully customized requests where data can be processed\n    either in memory, on disk, or streaming via the callback or connection\n    interfaces. Some knowledge of 'libcurl' is recommended; for a more-user-friendly\n    web client see the 'httr' package which builds on this package with http\n    specific tools and logic.",
         "License": "MIT + file LICENSE",
-        "SystemRequirements": "libcurl (>= 7.73): libcurl-devel (rpm) or\nlibcurl4-openssl-dev (deb)",
-        "URL": "https://jeroen.r-universe.dev/curl",
+        "SystemRequirements": "libcurl: libcurl-devel (rpm) or\nlibcurl4-openssl-dev (deb).",
+        "URL": "https://jeroen.r-universe.dev/curl https://curl.se/libcurl/",
         "BugReports": "https://github.com/jeroen/curl/issues",
         "Suggests": "spelling, testthat (>= 1.0.0), knitr, jsonlite, later,\nrmarkdown, httpuv (>= 1.4.4), webutils",
         "VignetteBuilder": "knitr",
         "Depends": "R (>= 3.0.0)",
-        "RoxygenNote": "7.3.2",
+        "RoxygenNote": "7.3.0",
         "Encoding": "UTF-8",
         "Language": "en-US",
         "NeedsCompilation": "yes",
-        "Packaged": "2025-08-19 10:05:57 UTC; jeroen",
-        "Author": "Jeroen Ooms [aut, cre] (ORCID: <https://orcid.org/0000-0002-4035-0289>),\n  Hadley Wickham [ctb],\n  Posit Software, PBC [cph]",
+        "Packaged": "2024-09-19 15:43:51 UTC; jeroen",
+        "Author": "Jeroen Ooms [aut, cre] (<https://orcid.org/0000-0002-4035-0289>),\n  Hadley Wickham [ctb],\n  RStudio [cph]",
         "Maintainer": "Jeroen Ooms <jeroenooms@gmail.com>",
         "Repository": "RSPM",
-        "Date/Publication": "2025-08-19 22:40:02 UTC",
-        "Built": "R 4.5.0; x86_64-w64-mingw32; 2025-08-20 04:42:02 UTC; windows",
-        "Archs": "x64",
-        "RemoteType": "standard",
-        "RemotePkgRef": "curl",
-        "RemoteRef": "curl",
-        "RemoteRepos": "https://packagemanager.posit.co/cran/latest",
-        "RemoteReposName": "CRAN",
-        "RemotePkgPlatform": "x86_64-w64-mingw32",
-        "RemoteSha": "7.0.0"
+        "Date/Publication": "2024-09-20 11:50:24 UTC",
+        "Built": "R 4.5.1; x86_64-w64-mingw32; 2025-10-07 10:42:56 UTC; windows",
+        "Archs": "x64"
       }
     },
     "data.table": {
@@ -2106,15 +2099,15 @@
       "description": {
         "Package": "httr2",
         "Title": "Perform HTTP Requests and Process the Responses",
-        "Version": "1.2.1",
+        "Version": "1.0.6",
         "Authors@R": "c(\n    person(\"Hadley\", \"Wickham\", , \"hadley@posit.co\", role = c(\"aut\", \"cre\")),\n    person(\"Posit Software, PBC\", role = c(\"cph\", \"fnd\")),\n    person(\"Maximilian\", \"Girlich\", role = \"ctb\")\n  )",
         "Description": "Tools for creating and modifying HTTP requests, then\n    performing them and processing the results. 'httr2' is a modern\n    re-imagining of 'httr' that uses a pipe-based interface and solves\n    more of the problems that API wrapping packages face.",
         "License": "MIT + file LICENSE",
         "URL": "https://httr2.r-lib.org, https://github.com/r-lib/httr2",
         "BugReports": "https://github.com/r-lib/httr2/issues",
-        "Depends": "R (>= 4.1)",
-        "Imports": "cli (>= 3.0.0), curl (>= 6.4.0), glue, lifecycle, magrittr,\nopenssl, R6, rappdirs, rlang (>= 1.1.0), vctrs (>= 0.6.3),\nwithr",
-        "Suggests": "askpass, bench, clipr, covr, docopt, httpuv, jose, jsonlite,\nknitr, later (>= 1.4.0), nanonext, paws.common, promises,\nrmarkdown, testthat (>= 3.1.8), tibble, webfakes (>= 1.4.0),\nxml2",
+        "Depends": "R (>= 4.0)",
+        "Imports": "cli (>= 3.0.0), curl (>= 5.2.2), glue, lifecycle, magrittr,\nopenssl, R6, rappdirs, rlang (>= 1.1.0), vctrs (>= 0.6.3),\nwithr",
+        "Suggests": "askpass, bench, clipr, covr, docopt, httpuv, jose, jsonlite,\nknitr, later, paws.common, promises, rmarkdown, testthat (>=\n3.1.8), tibble, webfakes, xml2",
         "VignetteBuilder": "knitr",
         "Config/Needs/website": "tidyverse/tidytemplate",
         "Config/testthat/edition": "3",
@@ -2123,19 +2116,12 @@
         "Encoding": "UTF-8",
         "RoxygenNote": "7.3.2",
         "NeedsCompilation": "no",
-        "Packaged": "2025-07-21 17:36:04 UTC; hadleywickham",
+        "Packaged": "2024-11-04 13:29:28 UTC; hadleywickham",
         "Author": "Hadley Wickham [aut, cre],\n  Posit Software, PBC [cph, fnd],\n  Maximilian Girlich [ctb]",
         "Maintainer": "Hadley Wickham <hadley@posit.co>",
         "Repository": "RSPM",
-        "Date/Publication": "2025-07-22 04:40:55 UTC",
-        "Built": "R 4.5.0; ; 2025-07-23 04:41:29 UTC; windows",
-        "RemoteType": "standard",
-        "RemotePkgRef": "httr2",
-        "RemoteRef": "httr2",
-        "RemoteRepos": "https://packagemanager.posit.co/cran/latest",
-        "RemoteReposName": "CRAN",
-        "RemotePkgPlatform": "x86_64-w64-mingw32",
-        "RemoteSha": "1.2.1"
+        "Date/Publication": "2024-11-04 16:30:02 UTC",
+        "Built": "R 4.5.1; ; 2025-10-07 10:44:30 UTC; windows"
       }
     },
     "ini": {
@@ -2654,7 +2640,7 @@
         "Package": "openssl",
         "Type": "Package",
         "Title": "Toolkit for Encryption, Signatures and Certificates Based on\nOpenSSL",
-        "Version": "2.3.3",
+        "Version": "2.2.2",
         "Authors@R": "c(person(\"Jeroen\", \"Ooms\", role = c(\"aut\", \"cre\"), email = \"jeroenooms@gmail.com\",\n    comment = c(ORCID = \"0000-0002-4035-0289\")),\n    person(\"Oliver\", \"Keyes\", role = \"ctb\"))",
         "Description": "Bindings to OpenSSL libssl and libcrypto, plus custom SSH key parsers.\n    Supports RSA, DSA and EC curves P-256, P-384, P-521, and curve25519. Cryptographic\n    signatures can either be created and verified manually or via x509 certificates. \n    AES can be used in cbc, ctr or gcm mode for symmetric encryption; RSA for asymmetric\n    (public key) encryption or EC for Diffie Hellman. High-level envelope functions \n    combine RSA and AES for encrypting arbitrary sized data. Other utilities include key\n    generators, hash functions (md5, sha1, sha256, etc), base64 encoder, a secure random\n    number generator, and 'bignum' math methods for manually performing crypto \n    calculations on large multibyte integers.",
         "License": "MIT + file LICENSE",
@@ -2667,12 +2653,12 @@
         "RoxygenNote": "7.3.2",
         "Encoding": "UTF-8",
         "NeedsCompilation": "yes",
-        "Packaged": "2025-05-26 09:13:50 UTC; jeroen",
-        "Author": "Jeroen Ooms [aut, cre] (ORCID: <https://orcid.org/0000-0002-4035-0289>),\n  Oliver Keyes [ctb]",
+        "Packaged": "2024-09-19 16:09:16 UTC; jeroen",
+        "Author": "Jeroen Ooms [aut, cre] (<https://orcid.org/0000-0002-4035-0289>),\n  Oliver Keyes [ctb]",
         "Maintainer": "Jeroen Ooms <jeroenooms@gmail.com>",
         "Repository": "RSPM",
-        "Date/Publication": "2025-05-26 13:00:02 UTC",
-        "Built": "R 4.5.0; x86_64-w64-mingw32; 2025-05-27 04:54:12 UTC; windows",
+        "Date/Publication": "2024-09-20 08:40:05 UTC",
+        "Built": "R 4.5.1; x86_64-w64-mingw32; 2025-10-07 11:11:59 UTC; windows",
         "Archs": "x64"
       }
     },
@@ -4772,7 +4758,7 @@
       "checksum": "e8d96d5ffd16a6867fd6d7458bd2f905"
     },
     ".Rprofile": {
-      "checksum": "54b3494a4b3c8488e85a1db61b6a8149"
+      "checksum": "8eb865955363cf8b8f047809da3ad231"
     },
     "azure-pipelines-dev.yml": {
       "checksum": "fc2ef843ff5024bcba25ff84eec05f4c"
@@ -4790,7 +4776,7 @@
       "checksum": "31d565a819730736cbcf5a38959d3398"
     },
     "data/data-dictionary.csv": {
-      "checksum": "0dc6ba041bfd836db4255d633c2031d6"
+      "checksum": "557eedc9a4d27abb857772052980d650"
     },
     "data/english_devolved_areas.csv": {
       "checksum": "391e91c38d772d55f98e54fbacfc3b9f"
@@ -4850,7 +4836,7 @@
       "checksum": "1ea100d0ef960637370ed334f4884d01"
     },
     "global.R": {
-      "checksum": "c98956a6afc024db8a9742a69396a474"
+      "checksum": "bff3af1b26839c561b38dd02726ac4f9"
     },
     "google-analytics.html": {
       "checksum": "b5154a3fdf38d73d0194c2e37a2a5f47"
@@ -4859,7 +4845,7 @@
       "checksum": "51052a72b54c2e4bdddfb52762638274"
     },
     "R/api-data-checker.r": {
-      "checksum": "3e229478dc02092aff607f4002ba2e0a"
+      "checksum": "c6039d30435a404685b1ab1f5bf3fa9e"
     },
     "R/data-dictionary-checks.R": {
       "checksum": "bcc45fcf406142644ce4b8fd21645431"
@@ -4871,7 +4857,7 @@
       "checksum": "d92cb4c8e810e9beb0bf6f167f570925"
     },
     "R/mainTests.r": {
-      "checksum": "b12e70a98fd77482758baef520c9ce5f"
+      "checksum": "6fdf683a497347272ee52089c085f56e"
     },
     "R/manual_scripts/debugging.R": {
       "checksum": "e56763afdf3659c7c47cfe0e3262e8cf"
@@ -4901,7 +4887,7 @@
       "checksum": "49f84962c930a31bd04b66f5ec0855e8"
     },
     "renv.lock": {
-      "checksum": "b1c9b7f44e48eb5df6c3a04c75757c1f"
+      "checksum": "4a019a4617343ffca7a68a80b6f07fc5"
     },
     "server.R": {
       "checksum": "23fc15ec19183749d64db4406219fbc4"
@@ -4910,22 +4896,22 @@
       "checksum": "12e9b09de5275bdc13bde6ae5a82f8b1"
     },
     "tests/testthat/_snaps/UI-01_example_files/example_files-001.json": {
-      "checksum": "3824e397e0b583a9367e306830fccd72"
+      "checksum": "22ff3d638b5843f1a78622dd025b0718"
     },
     "tests/testthat/_snaps/UI-01_example_files/example_files-002.json": {
-      "checksum": "6b7bd23465cef9449f678a56064223a8"
+      "checksum": "7319dd843cb59c0b191714371c3a6dab"
     },
     "tests/testthat/_snaps/UI-02_edge_cases/edge_cases-001.json": {
       "checksum": "75228173459ba6f210f07e7ce363ab5e"
     },
     "tests/testthat/_snaps/UI-02_edge_cases/edge_cases-002.json": {
-      "checksum": "8e82eb783ac5fe41a1696cc821cf7bd8"
+      "checksum": "0c3fc29902031d323fa8e49b1b69b549"
     },
     "tests/testthat/_snaps/UI-03_additional_qa/additional_qa-001.json": {
-      "checksum": "beba3676eeafa1d837ca20278f8e46c2"
+      "checksum": "025544b9263832c321af5257d32d55c6"
     },
     "tests/testthat/_snaps/UI-03_additional_qa/additional_qa-002.json": {
-      "checksum": "30383522e5488392defacb1599eec450"
+      "checksum": "b0f0dcb1204c5454ed106669ab1eaa0f"
     },
     "tests/testthat/_snaps/UI-03_additional_qa/additional_qa-003.json": {
       "checksum": "0a701ad840159e3259349124125bc541"
@@ -4937,22 +4923,22 @@
       "checksum": "0a701ad840159e3259349124125bc541"
     },
     "tests/testthat/_snaps/UI-03_additional_qa/additional_qa-006.json": {
-      "checksum": "feadbf5efab6adeebffe076f538cac87"
+      "checksum": "d248d5edb35efc070d2c07cf5dc7f5d1"
     },
     "tests/testthat/_snaps/UI-03_additional_qa/additional_qa-007.json": {
       "checksum": "984e2ca1ab29edfc839bbe0b936c2a95"
     },
     "tests/testthat/_snaps/UI-03_additional_qa/additional_qa-008.json": {
-      "checksum": "e61aabf3bd0318db9d517f6fd6be4a46"
+      "checksum": "86c28e39af1c53b3543072843accb6be"
     },
     "tests/testthat/_snaps/UI-03_additional_qa/additional_qa-009.json": {
       "checksum": "984e2ca1ab29edfc839bbe0b936c2a95"
     },
     "tests/testthat/_snaps/UI-03_additional_qa/additional_qa-010.json": {
-      "checksum": "32798691f823ba062b40c071d8d939bd"
+      "checksum": "59d07a9ae3edcb8d5a5eb36d4f25b4b3"
     },
     "tests/testthat/_snaps/UI-03_additional_qa/additional_qa-011.json": {
-      "checksum": "d1e7d5133c6d1d5481f37263cf69937a"
+      "checksum": "22950bdc812e3441e362fb66032c2fce"
     },
     "tests/testthat/fileValidation/data_empty_cols.csv": {
       "checksum": "9751119425e4ee601dd0aff4918876a0"
@@ -5137,6 +5123,12 @@
     "tests/testthat/mainTests/filter_group_duplicate.meta.csv": {
       "checksum": "a5b596110f590f16a0e5650fbd5d3c05"
     },
+    "tests/testthat/mainTests/filter_group_is_filter.csv": {
+      "checksum": "17ec4e4ce683e7a19263bf2545fc74f9"
+    },
+    "tests/testthat/mainTests/filter_group_is_filter.meta.csv": {
+      "checksum": "fb7187fec923213e13ebe74ba16f7d51"
+    },
     "tests/testthat/mainTests/filter_group_level.csv": {
       "checksum": "0eef86d7abdf5472b348fbdf84fb166d"
     },
@@ -5148,12 +5140,6 @@
     },
     "tests/testthat/mainTests/filter_group_match.meta.csv": {
       "checksum": "a5a4555cc9ae63d955757276845878b0"
-    },
-    "tests/testthat/mainTests/filter_group_not_filter.csv": {
-      "checksum": "0eef86d7abdf5472b348fbdf84fb166d"
-    },
-    "tests/testthat/mainTests/filter_group_not_filter.meta.csv": {
-      "checksum": "cabc4fa2973c27f1b9538cb08769543e"
     },
     "tests/testthat/mainTests/filter_group_stripped.csv": {
       "checksum": "3a71dd74bb45e6a0736f1715a7dd6e72"
@@ -5477,7 +5463,7 @@
       "checksum": "13882d495604f94577544fd117188aa8"
     },
     "tests/testthat/otherData/blankFilterGroups.meta.csv": {
-      "checksum": "6427c73166a1e36e585dc05b591cf573"
+      "checksum": "c04ef25b04e218061152a49016190e37"
     },
     "tests/testthat/otherData/filter_hint_indicator_bug.csv": {
       "checksum": "8f01b90fa96c175c7ccba3d3ee8f3f6f"
@@ -5489,7 +5475,7 @@
       "checksum": "5fc6237a107591f5b130655bbe2743e5"
     },
     "tests/testthat/otherData/financial_half.meta.csv": {
-      "checksum": "9b4347a6d67ed64f218aaa5a895b5c6b"
+      "checksum": "24faf324cb6a2a0a6ec787884df7db27"
     },
     "tests/testthat/otherData/financial_quarter.csv": {
       "checksum": "bcd181d04c1a8a5b70c213d2dea7edbf"
@@ -5822,7 +5808,7 @@
       "checksum": "c4b0d7f6c67f957881b6869a3a18ad97"
     },
     "tests/testthat/test-data/passes_everything.meta.csv": {
-      "checksum": "485364d30f37ff5d87ee87c22c157b73"
+      "checksum": "355119e1d867c20485b520f506a32c4f"
     },
     "tests/testthat/test-data/passes_everything_advisory.csv": {
       "checksum": "7eb9c79ee5c04c18abb11bb27438d28c"
@@ -5849,7 +5835,7 @@
       "checksum": "0ad4c6ef88604b628207156991a92349"
     },
     "tests/testthat/test-function-mainTests.R": {
-      "checksum": "7c71e41e310bba0ea1d569dfada2ac4a"
+      "checksum": "cb7ab3b4eef1a60ee214501f08ca2330"
     },
     "tests/testthat/test-function-preCheck1.R": {
       "checksum": "ecc3826341427734e1a8f097c1e1e6f8"
