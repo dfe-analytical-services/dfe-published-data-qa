@@ -5,12 +5,12 @@
 
 checker_example_run <- function(dir = "tests/testthat/test-data/") {
   files <- list.files(dir)
-  files <- paste0(dir, files[!grepl("meta", files)])
+  files <- paste0(dir, files[grepl(".csv", files) & !grepl("meta", files)])
   listing <- api_data_checker(files)
   return(non_dd_rows(listing))
 }
 
-api_data_checker <- function(files) {
+api_data_checker <- function(files, verbose = FALSE) {
   entries <- data.frame(
     col_name = NA,
     col_type = NA,
@@ -21,11 +21,18 @@ api_data_checker <- function(files) {
   for (file in files) {
     data <- vroom::vroom(file, show_col_types = FALSE)
     meta <- vroom::vroom(gsub(".csv", ".meta.csv", file), show_col_types = FALSE)
-    print(meta)
+    message("Scanning ", file)
     if ("Filter" %in% meta$col_type) {
       filters <- meta |>
         dplyr::filter(col_type == "Filter") |>
         dplyr::select("col_name", "filter_grouping_column")
+      missing_filters <- filters |>
+        dplyr::filter(!(col_name %in% names(data)))
+      if (nrow(missing_filters) > 0) {
+        warning("Some filters found in the meta file are not present in the data file: ", paste(missing_filters$col_name, collapse = ", "))
+        filters <- filters |>
+          dplyr::filter((col_name %in% names(data)))
+      }
       for (i in 1:nrow(filters)) {
         columns <- c(
           filters$col_name[i],
@@ -44,6 +51,9 @@ api_data_checker <- function(files) {
         } else {
           filter_info <- filter_info |>
             dplyr::mutate(filter_item_parent = "", col_name_parent = "")
+        }
+        if (verbose) {
+          print(filter_info, n = 100)
         }
         entries <- entries |>
           dplyr::bind_rows(

@@ -4758,7 +4758,7 @@
       "checksum": "e8d96d5ffd16a6867fd6d7458bd2f905"
     },
     ".Rprofile": {
-      "checksum": "8eb865955363cf8b8f047809da3ad231"
+      "checksum": "1834955cbb7c57b8f7c5b6feef1a0eae"
     },
     "azure-pipelines-dev.yml": {
       "checksum": "fc2ef843ff5024bcba25ff84eec05f4c"
@@ -4776,7 +4776,7 @@
       "checksum": "31d565a819730736cbcf5a38959d3398"
     },
     "data/data-dictionary.csv": {
-      "checksum": "557eedc9a4d27abb857772052980d650"
+      "checksum": "c464208eff2acb9a8cec645f72693b15"
     },
     "data/english_devolved_areas.csv": {
       "checksum": "391e91c38d772d55f98e54fbacfc3b9f"
@@ -4845,7 +4845,7 @@
       "checksum": "51052a72b54c2e4bdddfb52762638274"
     },
     "R/api-data-checker.r": {
-      "checksum": "c6039d30435a404685b1ab1f5bf3fa9e"
+      "checksum": "04e562c6489306e9981e35c7385985e5"
     },
     "R/data-dictionary-checks.R": {
       "checksum": "bcc45fcf406142644ce4b8fd21645431"
@@ -4911,7 +4911,7 @@
       "checksum": "025544b9263832c321af5257d32d55c6"
     },
     "tests/testthat/_snaps/UI-03_additional_qa/additional_qa-002.json": {
-      "checksum": "b0f0dcb1204c5454ed106669ab1eaa0f"
+      "checksum": "6e1c676dfd0cc9bf05a9f05ad7ace1de"
     },
     "tests/testthat/_snaps/UI-03_additional_qa/additional_qa-003.json": {
       "checksum": "0a701ad840159e3259349124125bc541"
