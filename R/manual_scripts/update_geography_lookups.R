@@ -33,7 +33,7 @@ write_updated_lookup(
 
 write_updated_lookup(
   new_lookup = tidy_downloaded_lookup(
-    open_geography_file = "data/downloaded_source_data/LAD_to_Local_skills_improvement_plan_areas_(August_2023)_Lookup_in_England.csv",
+    open_geography_file = "data/downloaded_source_data/LAD_to_Local_skills_improvement_plan_areas_(October_2025)_Lookup_in_England.csv",
     shorthand_lookup = open_geog_shorthand_lookup
   ),
   lookup_filepath = "data/lsip_lad_hierarchy.csv"

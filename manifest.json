@@ -4758,7 +4758,7 @@
       "checksum": "e8d96d5ffd16a6867fd6d7458bd2f905"
     },
     ".Rprofile": {
-      "checksum": "2a41d94ae45b803608d3e627fe2ad8cf"
+      "checksum": "2698d94fb3d9c68a4bfff0b1f72191df"
     },
     "azure-pipelines-dev.yml": {
       "checksum": "fc2ef843ff5024bcba25ff84eec05f4c"
@@ -4777,6 +4777,9 @@
     },
     "data/data-dictionary.csv": {
       "checksum": "557eedc9a4d27abb857772052980d650"
+    },
+    "data/downloaded_source_data/LAD_to_Local_skills_improvement_plan_areas_(October_2025)_Lookup_in_England.csv": {
+      "checksum": "5d8145c5bb0f73c2a5bcc73c08d3c764"
     },
     "data/english_devolved_areas.csv": {
       "checksum": "391e91c38d772d55f98e54fbacfc3b9f"
@@ -4800,7 +4803,7 @@
       "checksum": "d95b3f968ae9354198c5276964bc8b44"
     },
     "data/lsip_lad_hierarchy.csv": {
-      "checksum": "10de510467660473f9a8ed0e7e879dfd"
+      "checksum": "87c894503f4c3bbe4679229e06c49c65"
     },
     "data/lsips.csv": {
       "checksum": "aaf15367fb8688cf0d5f8ccf04799a15"
@@ -4866,7 +4869,7 @@
       "checksum": "4dc8717876735d0a105687d14f56c0b8"
     },
     "R/manual_scripts/update_geography_lookups.R": {
-      "checksum": "8d7b3d434bc5a56b066db93162a66bf6"
+      "checksum": "f361c0c22b866d4d8e5c5f927f9cfcc6"
     },
     "R/manual_scripts/utils.R": {
       "checksum": "d6b8b38e20481a0d68d54d659d79900d"
