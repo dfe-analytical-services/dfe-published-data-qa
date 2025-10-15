@@ -4758,7 +4758,7 @@
       "checksum": "e8d96d5ffd16a6867fd6d7458bd2f905"
     },
     ".Rprofile": {
-      "checksum": "2698d94fb3d9c68a4bfff0b1f72191df"
+      "checksum": "d141f8d7488d03df929925ca7a6439cd"
     },
     "azure-pipelines-dev.yml": {
       "checksum": "fc2ef843ff5024bcba25ff84eec05f4c"
@@ -4777,9 +4777,6 @@
     },
     "data/data-dictionary.csv": {
       "checksum": "557eedc9a4d27abb857772052980d650"
-    },
-    "data/downloaded_source_data/LAD_to_Local_skills_improvement_plan_areas_(October_2025)_Lookup_in_England.csv": {
-      "checksum": "5d8145c5bb0f73c2a5bcc73c08d3c764"
     },
     "data/english_devolved_areas.csv": {
       "checksum": "391e91c38d772d55f98e54fbacfc3b9f"
