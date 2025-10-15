@@ -1,10 +1,4 @@
 col_name,col_type,filter_item,col_name_parent,filter_item_parent,cbds_code,item_error_flag,contexts
-absent_pupil_count,Indicator,,,,,api-only,Key stage 2 attainment
-absent_pupil_percent,Indicator,,,,,api-only,Key stage 2 attainment
-achievement_count,Indicator,,,,,api-only,Apprenticeships
-achievements_percent,Indicator,,,,,api-only,Apprenticeships
-achieving_count,Indicator,,,,,api-only,Attainment - Key stage 4
-achieving_percent,Indicator,,,,,api-only,Attainment - Key stage 4
 age_group,Filter,19 to 24,age_youth_adult,19 plus,,api-only,Personal characteristics
 age_group,Filter,25 plus,age_youth_adult,19 plus,,api-only,Personal characteristics
 age_group,Filter,Total,age_youth_adult,19 plus,,api-only,Personal characteristics
@@ -15,74 +9,44 @@ apprenticeship_level,Filter,Advanced Apprenticeship,,,,api-only,Apprenticeships
 apprenticeship_level,Filter,Higher Apprenticeship,,,,api-only,Apprenticeships
 apprenticeship_level,Filter,Intermediate Apprenticeship,,,,api-only,Apprenticeships
 apprenticeship_level,Filter,Total,,,,api-only,Apprenticeships
-art_qual_entering_percent,Indicator,,,,,api-only,Attainment - Key stage 4
-art_qual_entering_total,Indicator,,,,,api-only,Attainment - Key stage 4
-art_subject_entering_percent,Indicator,,,,,api-only,Attainment - Key stage 4
-art_subject_entering_total,Indicator,,,,,api-only,Attainment - Key stage 4
-attainment8_average,Indicator,,,,,api-only,Attainment - Key stage 4
-attainment8_sum,Indicator,,,,,api-only,Attainment - Key stage 4
-attainment8ebacc_average,Indicator,,,,,api-only,Attainment - Key stage 4
-attainment8ebacc_slotfill_average,Indicator,,,,,api-only,Attainment - Key stage 4
-attainment8ebacc_slotfill_total,Indicator,,,,,api-only,Attainment - Key stage 4
-attainment8ebacc_sum,Indicator,,,,,api-only,Attainment - Key stage 4
-attainment8eng_average,Indicator,,,,,api-only,Attainment - Key stage 4
-attainment8eng_sum,Indicator,,,,,api-only,Attainment - Key stage 4
-attainment8mat_average,Indicator,,,,,api-only,Attainment - Key stage 4
-attainment8mat_sum,Indicator,,,,,api-only,Attainment - Key stage 4
-attainment8open_average,Indicator,,,,,api-only,Attainment - Key stage 4
-attainment8open_gcse_average,Indicator,,,,,api-only,Attainment - Key stage 4
-attainment8open_gcse_sum,Indicator,,,,,api-only,Attainment - Key stage 4
-attainment8open_nongcse_average,Indicator,,,,,api-only,Attainment - Key stage 4
-attainment8open_nongcse_sum,Indicator,,,,,api-only,Attainment - Key stage 4
-attainment8open_slotfill_average,Indicator,,,,,api-only,Attainment - Key stage 4
-attainment8open_slotfill_total,Indicator,,,,,api-only,Attainment - Key stage 4
-attainment8open_sum,Indicator,,,,,api-only,Attainment - Key stage 4
-average_scaled_score,Indicator,,,,,api-only,Key stage 2 attainment
-below_interim_pre_ks_std_pupil_count,Indicator,,,,,api-only,Key stage 2 attainment
-below_interim_pre_ks_std_pupil_percent,Indicator,,,,,api-only,Key stage 2 attainment
-breakdown,Filter,Total,breakdown_topic,Total,,api-only,General
-breakdown,Filter,Boys,breakdown_topic,Sex,,api-only,Personal characteristics
-breakdown,Filter,Disadvantaged,breakdown_topic,Disadvantage status,,api-only,Personal characteristics
-breakdown,Filter,FSM eligible,breakdown_topic,FSM status,,api-only,Personal characteristics
-breakdown,Filter,Girls,breakdown_topic,Sex,,api-only,Personal characteristics
-breakdown,Filter,Known or believed to be English,breakdown_topic,First language,,api-only,Personal characteristics
-breakdown,Filter,Known or believed to be other than English,breakdown_topic,First language,,api-only,Personal characteristics
-breakdown,Filter,Not known to be disadvantaged,breakdown_topic,Disadvantage status,,api-only,Personal characteristics
-breakdown,Filter,Not known to be FSM eligible,breakdown_topic,FSM status,,api-only,Personal characteristics
 breakdown,Filter,African,breakdown_topic,Ethnicity,,api-only,Personal characteristics - Ethnicity
 breakdown,Filter,All Asian / Asian British,breakdown_topic,Ethnicity,,api-only,Personal characteristics - Ethnicity
 breakdown,Filter,All Black / African / Caribbean / Black British,breakdown_topic,Ethnicity,,api-only,Personal characteristics - Ethnicity
 breakdown,Filter,All Mixed / Multiple ethnic groups,breakdown_topic,Ethnicity,,api-only,Personal characteristics - Ethnicity
 breakdown,Filter,All other ethnic groups,breakdown_topic,Ethnicity,,api-only,Personal characteristics - Ethnicity
+breakdown,Filter,All SEN provision,breakdown_topic,SEN provision,,api-only,Special educational needs
 breakdown,Filter,All White,breakdown_topic,Ethnicity,,api-only,Personal characteristics - Ethnicity
 breakdown,Filter,Any other Asian background,breakdown_topic,Ethnicity,,api-only,Personal characteristics - Ethnicity
 breakdown,Filter,Any other Black / African / Caribbean background,breakdown_topic,Ethnicity,,api-only,Personal characteristics - Ethnicity
 breakdown,Filter,Any other Mixed / Multiple ethnic background,breakdown_topic,Ethnicity,,api-only,Personal characteristics - Ethnicity
 breakdown,Filter,Any other White background,breakdown_topic,Ethnicity,,api-only,Personal characteristics - Ethnicity
+breakdown,Filter,Autistic spectrum disorder,breakdown_topic,SEN primary need,ASD,api-only,Special educational needs
 breakdown,Filter,Bangladeshi,breakdown_topic,Ethnicity,,api-only,Personal characteristics - Ethnicity
 breakdown,Filter,Black Caribbean,breakdown_topic,Ethnicity,,api-only,Personal characteristics - Ethnicity
+breakdown,Filter,Boys,breakdown_topic,Sex,,api-only,Personal characteristics
 breakdown,Filter,Chinese,breakdown_topic,Ethnicity,,api-only,Personal characteristics - Ethnicity
+breakdown,Filter,Disadvantaged,breakdown_topic,Disadvantage status,,api-only,Personal characteristics
+breakdown,Filter,Down syndrome,breakdown_topic,SEN primary need,,api-only,Special educational needs
+breakdown,Filter,"Education, health and care plan",breakdown_topic,SEN provision,,api-only,Special educational needs
 breakdown,Filter,English / Welsh / Scottish / Northern Irish / British,breakdown_topic,Ethnicity,,api-only,Personal characteristics - Ethnicity
+breakdown,Filter,FSM eligible,breakdown_topic,FSM status,,api-only,Personal characteristics
+breakdown,Filter,Girls,breakdown_topic,Sex,,api-only,Personal characteristics
 breakdown,Filter,Gypsy,breakdown_topic,Ethnicity,,api-only,Personal characteristics - Ethnicity
+breakdown,Filter,Hearing impairment,breakdown_topic,SEN primary need,HI,api-only,Special educational needs
 breakdown,Filter,Indian,breakdown_topic,Ethnicity,,api-only,Personal characteristics - Ethnicity
 breakdown,Filter,Irish,breakdown_topic,Ethnicity,,api-only,Personal characteristics - Ethnicity
 breakdown,Filter,Irish Traveller,breakdown_topic,Ethnicity,,api-only,Personal characteristics - Ethnicity
-breakdown,Filter,Pakistani,breakdown_topic,Ethnicity,,api-only,Personal characteristics - Ethnicity
-breakdown,Filter,Unknown,breakdown_topic,Ethnicity,,api-only,Personal characteristics - Ethnicity
-breakdown,Filter,White and Asian,breakdown_topic,Ethnicity,,api-only,Personal characteristics - Ethnicity
-breakdown,Filter,White and Black African,breakdown_topic,Ethnicity,,api-only,Personal characteristics - Ethnicity
-breakdown,Filter,White and Black Caribbean,breakdown_topic,Ethnicity,,api-only,Personal characteristics - Ethnicity
-breakdown,Filter,Multi-sensory impairment,breakdown_topic,SEN primary need,,api-only,SEN provision
-breakdown,Filter,Physical disability,breakdown_topic,SEN primary need,,api-only,SEN provision
-breakdown,Filter,All SEN provision,breakdown_topic,SEN provision,,api-only,Special educational needs
-breakdown,Filter,Autistic spectrum disorder,breakdown_topic,SEN primary need,ASD,api-only,Special educational needs
-breakdown,Filter,Down syndrome,breakdown_topic,SEN primary need,,api-only,Special educational needs
-breakdown,Filter,"Education, health and care plan",breakdown_topic,SEN provision,,api-only,Special educational needs
-breakdown,Filter,Hearing impairment,breakdown_topic,SEN primary need,HI,api-only,Special educational needs
+breakdown,Filter,Known or believed to be English,breakdown_topic,First language,,api-only,Personal characteristics
+breakdown,Filter,Known or believed to be other than English,breakdown_topic,First language,,api-only,Personal characteristics
 breakdown,Filter,Moderate learning difficulty,breakdown_topic,SEN primary need,MLD,api-only,Special educational needs
+breakdown,Filter,Multi-sensory impairment,breakdown_topic,SEN primary need,,api-only,SEN provision
 breakdown,Filter,No primary need,breakdown_topic,SEN primary need,,api-only,Special educational needs
 breakdown,Filter,No SEN provision,breakdown_topic,SEN provision,,api-only,Special educational needs
+breakdown,Filter,Not known to be disadvantaged,breakdown_topic,Disadvantage status,,api-only,Personal characteristics
+breakdown,Filter,Not known to be FSM eligible,breakdown_topic,FSM status,,api-only,Personal characteristics
 breakdown,Filter,Other difficulty or disability,breakdown_topic,SEN primary need,OTH,api-only,Special educational needs
+breakdown,Filter,Pakistani,breakdown_topic,Ethnicity,,api-only,Personal characteristics - Ethnicity
+breakdown,Filter,Physical disability,breakdown_topic,SEN primary need,,api-only,SEN provision
 breakdown,Filter,Profound and multiple learning difficulty,breakdown_topic,SEN primary need,PMLD,api-only,Special educational needs
 breakdown,Filter,SEN support / SEN without an EHC plan,breakdown_topic,SEN provision,,api-only,Special educational needs
 breakdown,Filter,SEN support but no specialist assessment of type of need,breakdown_topic,SEN primary need,,api-only,Special educational needs
@@ -90,90 +54,16 @@ breakdown,Filter,Severe learning difficulty,breakdown_topic,SEN primary need,SLD
 breakdown,Filter,"Social, emotional and mental health",breakdown_topic,SEN primary need,SEMH,api-only,Special educational needs
 breakdown,Filter,Specific learning difficulty,breakdown_topic,SEN primary need,SPLD,api-only,Special educational needs
 breakdown,Filter,"Speech, language and communication needs",breakdown_topic,SEN primary need,SLCN,api-only,Special educational needs
+breakdown,Filter,Total,breakdown_topic,Total,,api-only,General
+breakdown,Filter,Unknown,breakdown_topic,Ethnicity,,api-only,Personal characteristics - Ethnicity
 breakdown,Filter,Unknown,breakdown_topic,SEN primary need,,api-only,Special educational needs
 breakdown,Filter,Vision impairment,breakdown_topic,SEN primary need,VI,api-only,Special educational needs
-disadvantage_gap_index,Indicator,,,,,api-only,Attainment - Key stage 4
+breakdown,Filter,White and Asian,breakdown_topic,Ethnicity,,api-only,Personal characteristics - Ethnicity
+breakdown,Filter,White and Black African,breakdown_topic,Ethnicity,,api-only,Personal characteristics - Ethnicity
+breakdown,Filter,White and Black Caribbean,breakdown_topic,Ethnicity,,api-only,Personal characteristics - Ethnicity
 disadvantage_status,Filter,Disadvantaged,,,,api-only,Personal characteristics
 disadvantage_status,Filter,Not known to be disadvantaged,,,,api-only,Personal characteristics
 disadvantage_status,Filter,Total,,,,api-only,Personal characteristics
-disapplied_pupil_count,Indicator,,,,,api-only,Key stage 2 attainment
-disapplied_pupil_percent,Indicator,,,,,api-only,Key stage 2 attainment
-early_dev_of_expected_std_pupil_count,Indicator,,,,,api-only,Key stage 2 attainment
-early_dev_of_expected_std_pupil_percent,Indicator,,,,,api-only,Key stage 2 attainment
-ebacc_91_percent,Indicator,,,,,api-only,Attainment - Key stage 4
-ebacc_91_total,Indicator,,,,,api-only,Attainment - Key stage 4
-ebacc_94_percent,Indicator,,,,,api-only,Attainment - Key stage 4
-ebacc_94_total,Indicator,,,,,api-only,Attainment - Key stage 4
-ebacc_95_percent,Indicator,,,,,api-only,Attainment - Key stage 4
-ebacc_95_total,Indicator,,,,,api-only,Attainment - Key stage 4
-ebacc_aps_average,Indicator,,,,,api-only,Attainment - Key stage 4
-ebacc_aps_sum,Indicator,,,,,api-only,Attainment - Key stage 4
-ebacc_entering_0pillar_percent,Indicator,,,,,api-only,Attainment - Key stage 4
-ebacc_entering_0pillar_total,Indicator,,,,,api-only,Attainment - Key stage 4
-ebacc_entering_1pillar_percent,Indicator,,,,,api-only,Attainment - Key stage 4
-ebacc_entering_1pillar_total,Indicator,,,,,api-only,Attainment - Key stage 4
-ebacc_entering_2pillar_percent,Indicator,,,,,api-only,Attainment - Key stage 4
-ebacc_entering_2pillar_total,Indicator,,,,,api-only,Attainment - Key stage 4
-ebacc_entering_3pillar_percent,Indicator,,,,,api-only,Attainment - Key stage 4
-ebacc_entering_3pillar_total,Indicator,,,,,api-only,Attainment - Key stage 4
-ebacc_entering_4pillar_percent,Indicator,,,,,api-only,Attainment - Key stage 4
-ebacc_entering_4pillar_total,Indicator,,,,,api-only,Attainment - Key stage 4
-ebacc_entering_percent,Indicator,,,,,api-only,Attainment - Key stage 4
-ebacc_entering_total,Indicator,,,,,api-only,Attainment - Key stage 4
-ebacceng_91_percent,Indicator,,,,,api-only,Attainment - Key stage 4
-ebacceng_91_total,Indicator,,,,,api-only,Attainment - Key stage 4
-ebacceng_94_percent,Indicator,,,,,api-only,Attainment - Key stage 4
-ebacceng_94_total,Indicator,,,,,api-only,Attainment - Key stage 4
-ebacceng_95_percent,Indicator,,,,,api-only,Attainment - Key stage 4
-ebacceng_95_total,Indicator,,,,,api-only,Attainment - Key stage 4
-ebacceng_aps_average,Indicator,,,,,api-only,Attainment - Key stage 4
-ebacceng_aps_sum,Indicator,,,,,api-only,Attainment - Key stage 4
-ebacceng_entering_percent,Indicator,,,,,api-only,Attainment - Key stage 4
-ebacceng_entering_total,Indicator,,,,,api-only,Attainment - Key stage 4
-ebacchum_91_percent,Indicator,,,,,api-only,Attainment - Key stage 4
-ebacchum_91_total,Indicator,,,,,api-only,Attainment - Key stage 4
-ebacchum_94_percent,Indicator,,,,,api-only,Attainment - Key stage 4
-ebacchum_94_total,Indicator,,,,,api-only,Attainment - Key stage 4
-ebacchum_95_percent,Indicator,,,,,api-only,Attainment - Key stage 4
-ebacchum_95_total,Indicator,,,,,api-only,Attainment - Key stage 4
-ebacchum_aps_average,Indicator,,,,,api-only,Attainment - Key stage 4
-ebacchum_aps_sum,Indicator,,,,,api-only,Attainment - Key stage 4
-ebacchum_entering_percent,Indicator,,,,,api-only,Attainment - Key stage 4
-ebacchum_entering_total,Indicator,,,,,api-only,Attainment - Key stage 4
-ebacclan_91_percent,Indicator,,,,,api-only,Attainment - Key stage 4
-ebacclan_91_total,Indicator,,,,,api-only,Attainment - Key stage 4
-ebacclan_94_percent,Indicator,,,,,api-only,Attainment - Key stage 4
-ebacclan_94_total,Indicator,,,,,api-only,Attainment - Key stage 4
-ebacclan_95_percent,Indicator,,,,,api-only,Attainment - Key stage 4
-ebacclan_95_total,Indicator,,,,,api-only,Attainment - Key stage 4
-ebacclan_aps_average,Indicator,,,,,api-only,Attainment - Key stage 4
-ebacclan_aps_sum,Indicator,,,,,api-only,Attainment - Key stage 4
-ebacclan_entering_percent,Indicator,,,,,api-only,Attainment - Key stage 4
-ebacclan_entering_total,Indicator,,,,,api-only,Attainment - Key stage 4
-ebaccmat_91_percent,Indicator,,,,,api-only,Attainment - Key stage 4
-ebaccmat_91_total,Indicator,,,,,api-only,Attainment - Key stage 4
-ebaccmat_94_percent,Indicator,,,,,api-only,Attainment - Key stage 4
-ebaccmat_94_total,Indicator,,,,,api-only,Attainment - Key stage 4
-ebaccmat_95_percent,Indicator,,,,,api-only,Attainment - Key stage 4
-ebaccmat_95_total,Indicator,,,,,api-only,Attainment - Key stage 4
-ebaccmat_aps_average,Indicator,,,,,api-only,Attainment - Key stage 4
-ebaccmat_aps_sum,Indicator,,,,,api-only,Attainment - Key stage 4
-ebaccmat_entering_percent,Indicator,,,,,api-only,Attainment - Key stage 4
-ebaccmat_entering_total,Indicator,,,,,api-only,Attainment - Key stage 4
-ebaccsci_91_percent,Indicator,,,,,api-only,Attainment - Key stage 4
-ebaccsci_91_total,Indicator,,,,,api-only,Attainment - Key stage 4
-ebaccsci_94_percent,Indicator,,,,,api-only,Attainment - Key stage 4
-ebaccsci_94_total,Indicator,,,,,api-only,Attainment - Key stage 4
-ebaccsci_95_percent,Indicator,,,,,api-only,Attainment - Key stage 4
-ebaccsci_95_total,Indicator,,,,,api-only,Attainment - Key stage 4
-ebaccsci_aps_average,Indicator,,,,,api-only,Attainment - Key stage 4
-ebaccsci_aps_sum,Indicator,,,,,api-only,Attainment - Key stage 4
-ebaccsci_combpath_entering_percent,Indicator,,,,,api-only,Attainment - Key stage 4
-ebaccsci_combpath_entering_total,Indicator,,,,,api-only,Attainment - Key stage 4
-ebaccsci_entering_percent,Indicator,,,,,api-only,Attainment - Key stage 4
-ebaccsci_entering_total,Indicator,,,,,api-only,Attainment - Key stage 4
-ebaccsci_indpath_entering_percent,Indicator,,,,,api-only,Attainment - Key stage 4
-ebaccsci_indpath_entering_total,Indicator,,,,,api-only,Attainment - Key stage 4
 education_phase,Filter,All-through,,,AT,api-only,Establishment characteristics
 education_phase,Filter,Alternative provision,,,PR,api-only,Establishment characteristics
 education_phase,Filter,Early years settings,,,,api-only,Establishment characteristics
@@ -214,19 +104,6 @@ education_type_group,Filter,Total,qualification_level,Level 6,,api-only,Establis
 education_type_group,Filter,Total,qualification_level,Level 7,,api-only,Establishment characteristics
 education_type_group,Filter,Total,qualification_level,Level 8,,api-only,Establishment characteristics
 education_type_group,Filter,Total,qualification_level,Total,,api-only,Establishment characteristics
-eligible_pupil_count,Indicator,,,,,api-only,Key stage 2 attainment
-engagement_model_or_below_pre_ks_std_pupil_count,Indicator,,,,,api-only,Key stage 2 attainment
-engagement_model_or_below_pre_ks_std_pupil_percent,Indicator,,,,,api-only,Key stage 2 attainment
-engmath_94_percent,Indicator,,,,,api-only,Attainment - Key stage 4
-engmath_94_total,Indicator,,,,,api-only,Attainment - Key stage 4
-engmath_95_percent,Indicator,,,,,api-only,Attainment - Key stage 4
-engmath_95_total,Indicator,,,,,api-only,Attainment - Key stage 4
-engmath_entering_percent,Indicator,,,,,api-only,Attainment - Key stage 4
-engmath_entering_total,Indicator,,,,,api-only,Attainment - Key stage 4
-enrolment_count,Indicator,,,,,api-only,Apprenticeships
-enrolment_percent,Indicator,,,,,api-only,Apprenticeships
-entries_count,Indicator,,,,,api-only,Attainment - Key stage 4
-establishment_count,Indicator,,,,,api-only,Key stage 2 attainment
 establishment_governance,Filter,Academy,,,CA,api-only,Establishment characteristics
 establishment_governance,Filter,City technology college,,,CT,api-only,Establishment characteristics
 establishment_governance,Filter,Community,,,CO,api-only,Establishment characteristics
@@ -342,6 +219,7 @@ ethnicity_major,Filter,Black / African / Caribbean / Black British,,,,any,Person
 ethnicity_major,Filter,Black / African / Caribbean / Black British,,,,any,Personal characteristics - Ethnicity
 ethnicity_major,Filter,Mixed / Multiple ethnic groups,,,,any,Personal characteristics - Ethnicity
 ethnicity_major,Filter,Other ethnic group,,,,any,Personal characteristics - Ethnicity
+ethnicity_major,Filter,Total,,,,any,Personal characteristics - Ethnicity
 ethnicity_major,Filter,Unknown,,,,any,Personal characteristics - Ethnicity
 ethnicity_major,Filter,White,,,,any,Personal characteristics - Ethnicity
 ethnicity_minor,Filter,African,ethnicity_major,Black / African / Caribbean / Black British,,any,Personal characteristics - Ethnicity
@@ -378,73 +256,105 @@ ethnicity_minor,Filter,Unknown,ethnicity_major,Unknown,,any,Personal characteris
 ethnicity_minor,Filter,White and Asian,ethnicity_major,Mixed / Multiple ethnic groups,,any,Personal characteristics - Ethnicity
 ethnicity_minor,Filter,White and Black African,ethnicity_major,Mixed / Multiple ethnic groups,,any,Personal characteristics - Ethnicity
 ethnicity_minor,Filter,White and Black Caribbean,ethnicity_major,Mixed / Multiple ethnic groups,,any,Personal characteristics - Ethnicity
-expected_standard_pupil_count,Indicator,,,,,api-only,Key stage 2 attainment
-expected_standard_pupil_percent,Indicator,,,,,api-only,Key stage 2 attainment
 first_language,Filter,First language unclassified,,,,api-only,Personal characteristics
 first_language,Filter,Known or believed to be English,,,,api-only,Personal characteristics
 first_language,Filter,Known or believed to be other than English,,,,api-only,Personal characteristics
 first_language,Filter,Total,,,,api-only,Personal characteristics
-foundations_of_expected_std_pupil_count,Indicator,,,,,api-only,Key stage 2 attainment
-foundations_of_expected_std_pupil_percent,Indicator,,,,,api-only,Key stage 2 attainment
 fsm_status,Filter,FSM eligible,,,,api-only,Personal characteristics
 fsm_status,Filter,Not known to be FSM eligible,,,,api-only,Personal characteristics
 fsm_status,Filter,Total,,,,api-only,Personal characteristics
 funding_type,Filter,Other,,,,api-only,Apprenticeships
 funding_type,Filter,Supported by ASA levy funds,,,,api-only,Apprenticeships
 funding_type,Filter,Total,,,,api-only,Apprenticeships
-gcse_91_percent,Indicator,,,,,api-only,Attainment - Key stage 4
-gcse_91_total,Indicator,,,,,api-only,Attainment - Key stage 4
-gcse_entering_percent,Indicator,,,,,api-only,Attainment - Key stage 4
-gcse_entering_total,Indicator,,,,,api-only,Attainment - Key stage 4
-gcse_entries_average,Indicator,,,,,api-only,Attainment - Key stage 4
-gcse_entries_sum,Indicator,,,,,api-only,Attainment - Key stage 4
-gcse_five_engmath_percent,Indicator,,,,,api-only,Attainment - Key stage 4
-gcse_five_engmath_total,Indicator,,,,,api-only,Attainment - Key stage 4
-geoghist_entering_percent,Indicator,,,,,api-only,Attainment - Key stage 4
-geoghist_entering_total,Indicator,,,,,api-only,Attainment - Key stage 4
 geography_basis,Filter,Pupil residency,,,,api-only,Attainnment
 geography_basis,Filter,School location,,,,api-only,Attainnment
 grade,Filter,1,qualification_detailed,GCSE (9-1) Full Course,,api-only,Attainnment
+grade,Filter,1,,,,api-only,Attainnment
 grade,Filter,2,qualification_detailed,GCSE (9-1) Full Course,,api-only,Attainnment
+grade,Filter,2,,,,api-only,Attainnment
 grade,Filter,3,qualification_detailed,GCSE (9-1) Full Course,,api-only,Attainnment
+grade,Filter,3,,,,api-only,Attainnment
 grade,Filter,4,qualification_detailed,GCSE (9-1) Full Course,,api-only,Attainnment
+grade,Filter,4,,,,api-only,Attainnment
 grade,Filter,5,qualification_detailed,GCSE (9-1) Full Course,,api-only,Attainnment
+grade,Filter,5,,,,api-only,Attainnment
 grade,Filter,6,qualification_detailed,GCSE (9-1) Full Course,,api-only,Attainnment
+grade,Filter,6,,,,api-only,Attainnment
 grade,Filter,7,qualification_detailed,GCSE (9-1) Full Course,,api-only,Attainnment
+grade,Filter,7,,,,api-only,Attainnment
 grade,Filter,8,qualification_detailed,GCSE (9-1) Full Course,,api-only,Attainnment
+grade,Filter,8,,,,api-only,Attainnment
 grade,Filter,9,qualification_detailed,GCSE (9-1) Full Course,,api-only,Attainnment
+grade,Filter,9,,,,api-only,Attainnment
 grade,Filter,11,qualification_detailed,GCSE (9-1) Full Course (Double Award),,api-only,Attainnment
+grade,Filter,11,,,,api-only,Attainnment
 grade,Filter,21,qualification_detailed,GCSE (9-1) Full Course (Double Award),,api-only,Attainnment
+grade,Filter,21,,,,api-only,Attainnment
 grade,Filter,22,qualification_detailed,GCSE (9-1) Full Course (Double Award),,api-only,Attainnment
+grade,Filter,22,,,,api-only,Attainnment
 grade,Filter,32,qualification_detailed,GCSE (9-1) Full Course (Double Award),,api-only,Attainnment
+grade,Filter,32,,,,api-only,Attainnment
 grade,Filter,33,qualification_detailed,GCSE (9-1) Full Course (Double Award),,api-only,Attainnment
+grade,Filter,33,,,,api-only,Attainnment
 grade,Filter,43,qualification_detailed,GCSE (9-1) Full Course (Double Award),,api-only,Attainnment
+grade,Filter,43,,,,api-only,Attainnment
 grade,Filter,44,qualification_detailed,GCSE (9-1) Full Course (Double Award),,api-only,Attainnment
+grade,Filter,44,,,,api-only,Attainnment
 grade,Filter,54,qualification_detailed,GCSE (9-1) Full Course (Double Award),,api-only,Attainnment
+grade,Filter,54,,,,api-only,Attainnment
 grade,Filter,55,qualification_detailed,GCSE (9-1) Full Course (Double Award),,api-only,Attainnment
+grade,Filter,55,,,,api-only,Attainnment
 grade,Filter,65,qualification_detailed,GCSE (9-1) Full Course (Double Award),,api-only,Attainnment
+grade,Filter,65,,,,api-only,Attainnment
 grade,Filter,66,qualification_detailed,GCSE (9-1) Full Course (Double Award),,api-only,Attainnment
+grade,Filter,66,,,,api-only,Attainnment
 grade,Filter,76,qualification_detailed,GCSE (9-1) Full Course (Double Award),,api-only,Attainnment
+grade,Filter,76,,,,api-only,Attainnment
 grade,Filter,77,qualification_detailed,GCSE (9-1) Full Course (Double Award),,api-only,Attainnment
+grade,Filter,77,,,,api-only,Attainnment
 grade,Filter,87,qualification_detailed,GCSE (9-1) Full Course (Double Award),,api-only,Attainnment
+grade,Filter,87,,,,api-only,Attainnment
 grade,Filter,88,qualification_detailed,GCSE (9-1) Full Course (Double Award),,api-only,Attainnment
+grade,Filter,88,,,,api-only,Attainnment
 grade,Filter,98,qualification_detailed,GCSE (9-1) Full Course (Double Award),,api-only,Attainnment
+grade,Filter,98,,,,api-only,Attainnment
 grade,Filter,99,qualification_detailed,GCSE (9-1) Full Course (Double Award),,api-only,Attainnment
+grade,Filter,99,,,,api-only,Attainnment
+grade,Filter,*,,,,api-only,Attainnment
+grade,Filter,9 to 1,,,,api-only,Attainnment
+grade,Filter,9 to 1 / A* to G,,,,api-only,Attainnment
+grade,Filter,9 to 4,,,,api-only,Attainnment
+grade,Filter,9 to 4 / A* to C,,,,api-only,Attainnment
+grade,Filter,9 to 5,,,,api-only,Attainnment
+grade,Filter,9 to 7 / A* to A,,,,api-only,Attainnment
 grade,Filter,A,qualification_detailed,Free standing Maths Qual Level 3,,api-only,Attainnment
 grade,Filter,A,qualification_detailed,GCE AS level,,api-only,Attainnment
+grade,Filter,A,,,,api-only,Attainnment
+grade,Filter,A to B,,,,api-only,Attainnment
+grade,Filter,A to E,,,,api-only,Attainnment
+grade,Filter,Achieving level 1 pass,,,,api-only,Attainnment
+grade,Filter,Achieving level 2 pass,,,,api-only,Attainnment
+grade,Filter,Achieving pass,,,,api-only,Attainnment
 grade,Filter,B,qualification_detailed,Free standing Maths Qual Level 3,,api-only,Attainnment
 grade,Filter,B,qualification_detailed,GCE AS level,,api-only,Attainnment
+grade,Filter,B,,,,api-only,Attainnment
 grade,Filter,C,qualification_detailed,Free standing Maths Qual Level 3,,api-only,Attainnment
 grade,Filter,C,qualification_detailed,GCE AS level,,api-only,Attainnment
+grade,Filter,C,,,,api-only,Attainnment
 grade,Filter,Covid impacted,qualification_detailed,GCSE (9-1) Full Course,,api-only,Attainnment
+grade,Filter,Covid impacted,,,,api-only,Attainnment
 grade,Filter,D,qualification_detailed,Free standing Maths Qual Level 3,,api-only,Attainnment
 grade,Filter,D,qualification_detailed,GCE AS level,,api-only,Attainnment
+grade,Filter,D,,,,api-only,Attainnment
 grade,Filter,Distinction,qualification_detailed,Grade 6 Music or Dance,,api-only,Attainnment
 grade,Filter,Distinction,qualification_detailed,Grade 7 Drama Music Lit Speech,,api-only,Attainnment
 grade,Filter,Distinction,qualification_detailed,Grade 7 Music or Dance,,api-only,Attainnment
 grade,Filter,Distinction,qualification_detailed,Grade 8 Music or Dance,,api-only,Attainnment
 grade,Filter,E,qualification_detailed,Free standing Maths Qual Level 3,,api-only,Attainnment
 grade,Filter,E,qualification_detailed,GCE AS level,,api-only,Attainnment
+grade,Filter,E,,,,api-only,Attainnment
+grade,Filter,F,,,,api-only,Attainnment
+grade,Filter,G,,,,api-only,Attainnment
 grade,Filter,Level 1 distinction,qualification_detailed,BTEC Technical Award L1 / 2 - Band C - P-D*,,api-only,Attainnment
 grade,Filter,Level 1 distinction,qualification_detailed,Level 1 / Level 2 vocational qualification (any AO and grade structure),,api-only,Attainnment
 grade,Filter,Level 1 distinction,qualification_detailed,OCR Level 1 / 2 Cambridge National Certificate,,api-only,Attainnment
@@ -494,6 +404,7 @@ grade,Filter,Total exam entries,qualification_detailed,Grade 8 Music or Dance,,a
 grade,Filter,Total exam entries,qualification_detailed,Level 1 / Level 2 vocational qualification (any AO and grade structure),,api-only,Attainnment
 grade,Filter,Total exam entries,qualification_detailed,OCR Level 1 / 2 Cambridge National Certificate,,api-only,Attainnment
 grade,Filter,Total exam entries,qualification_detailed,VRQ Level 2,,api-only,Attainnment
+grade,Filter,Total pupil entries,,,,api-only,Attainnment
 grade,Filter,U,qualification_detailed,BTEC Technical Award L1 / 2 - Band C - P-D*,,api-only,Attainnment
 grade,Filter,U,qualification_detailed,Free standing Maths Qual Level 3,,api-only,Attainnment
 grade,Filter,U,qualification_detailed,GCE AS level,,api-only,Attainnment
@@ -509,58 +420,6 @@ grade,Filter,X,qualification_detailed,GCSE (9-1) Full Course (Double Award),,api
 grade,Filter,X,qualification_detailed,Level 1 / Level 2 vocational qualification (any AO and grade structure),,api-only,Attainnment
 grade,Filter,X,qualification_detailed,OCR Level 1 / 2 Cambridge National Certificate,,api-only,Attainnment
 grade,Filter,X,qualification_detailed,VRQ Level 2,,api-only,Attainnment
-grade,Filter,1,,,,api-only,Attainnment
-grade,Filter,2,,,,api-only,Attainnment
-grade,Filter,3,,,,api-only,Attainnment
-grade,Filter,4,,,,api-only,Attainnment
-grade,Filter,5,,,,api-only,Attainnment
-grade,Filter,6,,,,api-only,Attainnment
-grade,Filter,7,,,,api-only,Attainnment
-grade,Filter,8,,,,api-only,Attainnment
-grade,Filter,9,,,,api-only,Attainnment
-grade,Filter,11,,,,api-only,Attainnment
-grade,Filter,21,,,,api-only,Attainnment
-grade,Filter,22,,,,api-only,Attainnment
-grade,Filter,32,,,,api-only,Attainnment
-grade,Filter,33,,,,api-only,Attainnment
-grade,Filter,43,,,,api-only,Attainnment
-grade,Filter,44,,,,api-only,Attainnment
-grade,Filter,54,,,,api-only,Attainnment
-grade,Filter,55,,,,api-only,Attainnment
-grade,Filter,65,,,,api-only,Attainnment
-grade,Filter,66,,,,api-only,Attainnment
-grade,Filter,76,,,,api-only,Attainnment
-grade,Filter,77,,,,api-only,Attainnment
-grade,Filter,87,,,,api-only,Attainnment
-grade,Filter,88,,,,api-only,Attainnment
-grade,Filter,98,,,,api-only,Attainnment
-grade,Filter,99,,,,api-only,Attainnment
-grade,Filter,*,,,,api-only,Attainnment
-grade,Filter,9 to 1,,,,api-only,Attainnment
-grade,Filter,9 to 1 / A* to G,,,,api-only,Attainnment
-grade,Filter,9 to 4,,,,api-only,Attainnment
-grade,Filter,9 to 4 / A* to C,,,,api-only,Attainnment
-grade,Filter,9 to 5,,,,api-only,Attainnment
-grade,Filter,9 to 7 / A* to A,,,,api-only,Attainnment
-grade,Filter,A,,,,api-only,Attainnment
-grade,Filter,A to B,,,,api-only,Attainnment
-grade,Filter,A to E,,,,api-only,Attainnment
-grade,Filter,Achieving level 1 pass,,,,api-only,Attainnment
-grade,Filter,Achieving level 2 pass,,,,api-only,Attainnment
-grade,Filter,Achieving pass,,,,api-only,Attainnment
-grade,Filter,B,,,,api-only,Attainnment
-grade,Filter,C,,,,api-only,Attainnment
-grade,Filter,Covid impacted,,,,api-only,Attainnment
-grade,Filter,D,,,,api-only,Attainnment
-grade,Filter,E,,,,api-only,Attainnment
-grade,Filter,F,,,,api-only,Attainnment
-grade,Filter,G,,,,api-only,Attainnment
-grade,Filter,Total pupil entries,,,,api-only,Attainnment
-grade_average,Indicator,,,,,api-only,Attainment - Key stage 4
-growing_dev_of_expected_std_pupil_count,Indicator,,,,,api-only,Key stage 2 attainment
-growing_dev_of_expected_std_pupil_percent,Indicator,,,,,api-only,Key stage 2 attainment
-higher_standard_pupil_count,Indicator,,,,,api-only,Key stage 2 attainment
-higher_standard_pupil_percent,Indicator,,,,,api-only,Key stage 2 attainment
 idaci_decile,Filter,0 - 10%,,,,api-only,Personal characteristics
 idaci_decile,Filter,10 - 20%,,,,api-only,Personal characteristics
 idaci_decile,Filter,20 - 30%,,,,api-only,Personal characteristics
@@ -589,10 +448,6 @@ ks2_scaled_score_group,Filter,All mid prior attainment,,,,api-only,Attainment
 ks2_scaled_score_group,Filter,Less than 80,,,,api-only,Attainment
 ks2_scaled_score_group,Filter,No scaled score,,,,api-only,Attainment
 ks2_scaled_score_group,Filter,Total,,,,api-only,Attainment
-lan_multiple_entering_percent,Indicator,,,,,api-only,Attainment - Key stage 4
-lan_multiple_entering_total,Indicator,,,,,api-only,Attainment - Key stage 4
-learner_count,Indicator,,,,,api-only,Apprenticeships
-learner_percent,Indicator,,,,,api-only,Apprenticeships
 minority_ethnic,Filter,Ethnic minorities (excluding white minorities),,,,api-only,Personal characteristics
 mobility,Filter,Mobile,,,,api-only,Personal characteristics
 mobility,Filter,Non mobile,,,,api-only,Personal characteristics
@@ -610,67 +465,14 @@ month_of_birth,Filter,November,,,,api-only,Personal characteristics
 month_of_birth,Filter,October,,,,api-only,Personal characteristics
 month_of_birth,Filter,September,,,,api-only,Personal characteristics
 month_of_birth,Filter,Total,,,,api-only,Personal characteristics
-music_qual_entering_percent,Indicator,,,,,api-only,Attainment - Key stage 4
-music_qual_entering_total,Indicator,,,,,api-only,Attainment - Key stage 4
-not_meeting_pupil_count,Indicator,,,,,api-only,Key stage 2 attainment
-not_meeting_pupil_percent,Indicator,,,,,api-only,Key stage 2 attainment
-participation_count,Indicator,,,,,api-only,Apprenticeships
-percentage,Indicator,,,,,api-only,Attainment - Key stage 4
 phase_type_grouping,Filter,All schools,,,,api-only,Establishment characteristics
 phase_type_grouping,Filter,State-funded primary,,,,api-only,Establishment characteristics
 phase_type_grouping,Filter,State-funded primary and secondary,,,,api-only,Establishment characteristics
 phase_type_grouping,Filter,State-funded secondary,,,,api-only,Establishment characteristics
-population_count,Indicator,,,,,api-only,General
-population_percent,Indicator,,,,,api-only,General
-pre_ks_std_1_pupil_count,Indicator,,,,,api-only,Key stage 2 attainment
-pre_ks_std_1_pupil_percent,Indicator,,,,,api-only,Key stage 2 attainment
-pre_ks_std_2_pupil_count,Indicator,,,,,api-only,Key stage 2 attainment
-pre_ks_std_2_pupil_percent,Indicator,,,,,api-only,Key stage 2 attainment
-pre_ks_std_3_pupil_count,Indicator,,,,,api-only,Key stage 2 attainment
-pre_ks_std_3_pupil_percent,Indicator,,,,,api-only,Key stage 2 attainment
-pre_ks_std_4_pupil_count,Indicator,,,,,api-only,Key stage 2 attainment
-pre_ks_std_4_pupil_percent,Indicator,,,,,api-only,Key stage 2 attainment
-pre_ks_std_5_pupil_count,Indicator,,,,,api-only,Key stage 2 attainment
-pre_ks_std_5_pupil_percent,Indicator,,,,,api-only,Key stage 2 attainment
-pre_ks_std_6_pupil_count,Indicator,,,,,api-only,Key stage 2 attainment
-pre_ks_std_6_pupil_percent,Indicator,,,,,api-only,Key stage 2 attainment
 prior_attainment,Filter,High prior attainment,,,,api-only,Attainment
 prior_attainment,Filter,Low prior attainment,,,,api-only,Attainment
 prior_attainment,Filter,Mid prior attainment,,,,api-only,Attainment
 prior_attainment,Filter,Total,,,,api-only,Attainment
-progress_measure_eligible_pupil_count,Indicator,,,,,api-only,Key stage 2 attainment
-progress_measure_lower_conf_interval,Indicator,,,,,api-only,Key stage 2 attainment
-progress_measure_score,Indicator,,,,,api-only,Key stage 2 attainment
-progress_measure_total_score,Indicator,,,,,api-only,Key stage 2 attainment
-progress_measure_upper_conf_interval,Indicator,,,,,api-only,Key stage 2 attainment
-progress8_adjusted_percent,Indicator,,,,,api-only,Attainment - Key stage 4
-progress8_adjusted_total,Indicator,,,,,api-only,Attainment - Key stage 4
-progress8_average,Indicator,,,,,api-only,Attainment - Key stage 4
-progress8_lower_95_ci,Indicator,,,,,api-only,Attainment - Key stage 4
-progress8_pupil_count,Indicator,,,,,api-only,Attainment - Key stage 4
-progress8_pupil_percent,Indicator,,,,,api-only,Attainment - Key stage 4
-progress8_sum,Indicator,,,,,api-only,Attainment - Key stage 4
-progress8_upper_95_ci,Indicator,,,,,api-only,Attainment - Key stage 4
-progress8ebacc_average,Indicator,,,,,api-only,Attainment - Key stage 4
-progress8ebacc_lower_95_ci,Indicator,,,,,api-only,Attainment - Key stage 4
-progress8ebacc_sum,Indicator,,,,,api-only,Attainment - Key stage 4
-progress8ebacc_upper_95_ci,Indicator,,,,,api-only,Attainment - Key stage 4
-progress8eng_average,Indicator,,,,,api-only,Attainment - Key stage 4
-progress8eng_lower_95_ci,Indicator,,,,,api-only,Attainment - Key stage 4
-progress8eng_sum,Indicator,,,,,api-only,Attainment - Key stage 4
-progress8eng_upper_95_ci,Indicator,,,,,api-only,Attainment - Key stage 4
-progress8mat_average,Indicator,,,,,api-only,Attainment - Key stage 4
-progress8mat_lower_95_ci,Indicator,,,,,api-only,Attainment - Key stage 4
-progress8mat_sum,Indicator,,,,,api-only,Attainment - Key stage 4
-progress8mat_upper_95_ci,Indicator,,,,,api-only,Attainment - Key stage 4
-progress8open_average,Indicator,,,,,api-only,Attainment - Key stage 4
-progress8open_lower_95_ci,Indicator,,,,,api-only,Attainment - Key stage 4
-progress8open_sum,Indicator,,,,,api-only,Attainment - Key stage 4
-progress8open_upper_95_ci,Indicator,,,,,api-only,Attainment - Key stage 4
-progress8original_average,Indicator,,,,,api-only,Attainment - Key stage 4
-progress8original_lower_95_ci,Indicator,,,,,api-only,Attainment - Key stage 4
-progress8original_sum,Indicator,,,,,api-only,Attainment - Key stage 4
-progress8original_upper_95_ci,Indicator,,,,,api-only,Attainment - Key stage 4
 provider_type,Filter,All group-based providers,,,,api-only,Establishment characteristics
 provider_type,Filter,All school-based providers,,,,api-only,Establishment characteristics
 provider_type,Filter,Childminders,,,,api-only,Establishment characteristics
@@ -692,14 +494,6 @@ provider_type,Filter,Special college,,,,api-only,Establishment characteristics
 provider_type,Filter,Total,,,,api-only,Establishment characteristics
 provider_type,Filter,Unknown,,,,api-only,Establishment characteristics
 provider_type,Filter,Voluntary group-based providers,,,,api-only,Establishment characteristics
-pupil_count,Indicator,,,,,api-only,General
-pupil_percent,Indicator,,,,,api-only,General
-qual_covid_impacted_percent,Indicator,,,,,api-only,Attainment - Key stage 4
-qual_covid_impacted_sum,Indicator,,,,,api-only,Attainment - Key stage 4
-qual_entries_average,Indicator,,,,,api-only,Attainment - Key stage 4
-qual_entries_sum,Indicator,,,,,api-only,Attainment - Key stage 4
-qual_entries_without_discounting_average,Indicator,,,,,api-only,Attainment - Key stage 4
-qual_entries_without_discounting_sum,Indicator,,,,,api-only,Attainment - Key stage 4
 qualification_type,Filter,AS level,,,,api-only,Attainment
 qualification_type,Filter,FSMQ,,,,api-only,Attainment
 qualification_type,Filter,GCSE,,,,api-only,Attainment
@@ -718,8 +512,6 @@ relative_access,Filter,Nearer to a major town or city,rurality,Larger rural sett
 relative_access,Filter,Nearer to a major town or city,rurality,Smaller rural settlement,,api-only,Personal characteristics
 relative_access,Filter,Nearer to a major town or city,rurality,Urban,,api-only,Personal characteristics
 relative_access,Filter,Total,rurality,Total,,api-only,Personal characteristics
-scaled_scores_eligible_pupil_count,Indicator,,,,,api-only,Key stage 2 attainment
-scaled_scores_total,Indicator,,,,,api-only,Key stage 2 attainment
 school_admission_type,Filter,Non-selective schools in highly selective areas,,,,api-only,Establishment characteristics
 school_admission_type,Filter,Non-selective schools in other areas,,,,api-only,Establishment characteristics
 school_admission_type,Filter,Selective schools,,,,api-only,Establishment characteristics
@@ -730,8 +522,6 @@ school_cohort_size,Filter,31 to 60 pupils,,,,api-only,Establishment characterist
 school_cohort_size,Filter,61 to 90 pupils,,,,api-only,Establishment characteristics
 school_cohort_size,Filter,91+ pupils,,,,api-only,Establishment characteristics
 school_cohort_size,Filter,Total,,,,api-only,Establishment characteristics
-school_count,Indicator,,,,,api-only,General
-school_percent,Indicator,,,,,api-only,General
 school_religious_character,Filter,Church of England,,,,api-only,Establishment characteristics
 school_religious_character,Filter,Hindu,,,,api-only,Establishment characteristics
 school_religious_character,Filter,Jewish,,,,api-only,Establishment characteristics
@@ -745,8 +535,6 @@ school_religious_character,Filter,Roman catholic,,,,api-only,Establishment chara
 school_religious_character,Filter,Roman Catholic,,,,api-only,Establishment characteristics
 school_religious_character,Filter,Sikh,,,,api-only,Establishment characteristics
 school_religious_character,Filter,Total,,,,api-only,Establishment characteristics
-sci_triple_entering_percent,Indicator,,,,,api-only,Attainment - Key stage 4
-sci_triple_entering_total,Indicator,,,,,api-only,Attainment - Key stage 4
 sen_primary_need,Filter,All primary need,,,,api-only,Special educational needs
 sen_primary_need,Filter,Autistic spectrum disorder,,,ASD,api-only,Special educational needs
 sen_primary_need,Filter,Down syndrome,,,,api-only,Special educational needs
@@ -797,10 +585,6 @@ sex,Filter,Boys,,,,api-only,Personal characteristics
 sex,Filter,Girls,,,,api-only,Personal characteristics
 sex,Filter,Other,,,,api-only,Personal characteristics
 sex,Filter,Total,,,,api-only,Personal characteristics
-start_count,Indicator,,,,,api-only,Apprenticeships
-starts_percent,Indicator,,,,,api-only,Apprenticeships
-student_count,Indicator,,,,,api-only,General
-student_percent,Indicator,,,,,api-only,General
 subject,Filter,All Subjects,,,,api-only,Attainment
 subject,Filter,Ancient History,,,,api-only,Attainment
 subject,Filter,Animal Care,,,,api-only,Attainment
@@ -959,38 +743,9 @@ subject_discount_group,Filter,Theory of Music,subject,Music,,api-only,Attainment
 subject_discount_group,Filter,Tourism,subject,Tourism,,api-only,Attainment
 subject_discount_group,Filter,Turkish,subject,Other Modern Languages,,api-only,Attainment
 subject_discount_group,Filter,Urdu,subject,Other Modern Languages,,api-only,Attainment
-teacher_count,Indicator,,,,,api-only,General
-teacher_percent,Indicator,,,,,api-only,General
 test_year,Filter,Final year,,,,api-only,Attainment
 test_year,Filter,Penultimate year,,,,api-only,Attainment
 test_year,Filter,Total,,,,api-only,Attainment
-total_exam_entries,Indicator,,,,,api-only,Attainment - Key stage 4
-unable_to_access_arrived_pupil_count,Indicator,,,,,api-only,Key stage 2 attainment
-unable_to_access_arrived_pupil_percent,Indicator,,,,,api-only,Key stage 2 attainment
-unable_to_access_pupil_count,Indicator,,,,,api-only,Key stage 2 attainment
-unable_to_access_pupil_percent,Indicator,,,,,api-only,Key stage 2 attainment
-valueaddedhum_average,Indicator,,,,,api-only,Attainment - Key stage 4
-valueaddedhum_lower_95_ci,Indicator,,,,,api-only,Attainment - Key stage 4
-valueaddedhum_pupil_count,Indicator,,,,,api-only,Attainment - Key stage 4
-valueaddedhum_pupil_percent,Indicator,,,,,api-only,Attainment - Key stage 4
-valueaddedhum_sum,Indicator,,,,,api-only,Attainment - Key stage 4
-valueaddedhum_upper_95_ci,Indicator,,,,,api-only,Attainment - Key stage 4
-valueaddedlan_average,Indicator,,,,,api-only,Attainment - Key stage 4
-valueaddedlan_lower_95_ci,Indicator,,,,,api-only,Attainment - Key stage 4
-valueaddedlan_pupil_count,Indicator,,,,,api-only,Attainment - Key stage 4
-valueaddedlan_pupil_percent,Indicator,,,,,api-only,Attainment - Key stage 4
-valueaddedlan_sum,Indicator,,,,,api-only,Attainment - Key stage 4
-valueaddedlan_upper_95_ci,Indicator,,,,,api-only,Attainment - Key stage 4
-valueaddedsci_average,Indicator,,,,,api-only,Attainment - Key stage 4
-valueaddedsci_lower_95_ci,Indicator,,,,,api-only,Attainment - Key stage 4
-valueaddedsci_pupil_count,Indicator,,,,,api-only,Attainment - Key stage 4
-valueaddedsci_pupil_percent,Indicator,,,,,api-only,Attainment - Key stage 4
-valueaddedsci_sum,Indicator,,,,,api-only,Attainment - Key stage 4
-valueaddedsci_upper_95_ci,Indicator,,,,,api-only,Attainment - Key stage 4
-working_below_pupil_count,Indicator,,,,,api-only,Key stage 2 attainment
-working_below_pupil_percent,Indicator,,,,,api-only,Key stage 2 attainment
-working_towards_pupil_count,Indicator,,,,,api-only,Key stage 2 attainment
-working_towards_pupil_percent,Indicator,,,,,api-only,Key stage 2 attainment
 years_open,Filter,1 year,,,,api-only,Establishment characteristics
 years_open,Filter,10 years,,,,api-only,Establishment characteristics
 years_open,Filter,11 years,,,,api-only,Establishment characteristics
@@ -1018,3 +773,249 @@ years_open,Filter,Total,,,,api-only,Establishment characteristics
 young_carer,Filter,Not known to be a young carer,,,,api-only,Personal characteristics
 young_carer,Filter,Total,,,,api-only,Personal characteristics
 young_carer,Filter,Young carer,,,,api-only,Personal characteristics
+absent_pupil_count,Indicator,,,,,api-only,Key stage 2 attainment
+absent_pupil_percent,Indicator,,,,,api-only,Key stage 2 attainment
+achievement_count,Indicator,,,,,api-only,Apprenticeships
+achievements_percent,Indicator,,,,,api-only,Apprenticeships
+achieving_count,Indicator,,,,,api-only,Attainment - Key stage 4
+achieving_percent,Indicator,,,,,api-only,Attainment - Key stage 4
+art_qual_entering_percent,Indicator,,,,,api-only,Attainment - Key stage 4
+art_qual_entering_total,Indicator,,,,,api-only,Attainment - Key stage 4
+art_subject_entering_percent,Indicator,,,,,api-only,Attainment - Key stage 4
+art_subject_entering_total,Indicator,,,,,api-only,Attainment - Key stage 4
+attainment8_average,Indicator,,,,,api-only,Attainment - Key stage 4
+attainment8_sum,Indicator,,,,,api-only,Attainment - Key stage 4
+attainment8ebacc_average,Indicator,,,,,api-only,Attainment - Key stage 4
+attainment8ebacc_slotfill_average,Indicator,,,,,api-only,Attainment - Key stage 4
+attainment8ebacc_slotfill_total,Indicator,,,,,api-only,Attainment - Key stage 4
+attainment8ebacc_sum,Indicator,,,,,api-only,Attainment - Key stage 4
+attainment8eng_average,Indicator,,,,,api-only,Attainment - Key stage 4
+attainment8eng_sum,Indicator,,,,,api-only,Attainment - Key stage 4
+attainment8mat_average,Indicator,,,,,api-only,Attainment - Key stage 4
+attainment8mat_sum,Indicator,,,,,api-only,Attainment - Key stage 4
+attainment8open_average,Indicator,,,,,api-only,Attainment - Key stage 4
+attainment8open_gcse_average,Indicator,,,,,api-only,Attainment - Key stage 4
+attainment8open_gcse_sum,Indicator,,,,,api-only,Attainment - Key stage 4
+attainment8open_nongcse_average,Indicator,,,,,api-only,Attainment - Key stage 4
+attainment8open_nongcse_sum,Indicator,,,,,api-only,Attainment - Key stage 4
+attainment8open_slotfill_average,Indicator,,,,,api-only,Attainment - Key stage 4
+attainment8open_slotfill_total,Indicator,,,,,api-only,Attainment - Key stage 4
+attainment8open_sum,Indicator,,,,,api-only,Attainment - Key stage 4
+average_scaled_score,Indicator,,,,,api-only,Key stage 2 attainment
+below_interim_pre_ks_std_pupil_count,Indicator,,,,,api-only,Key stage 2 attainment
+below_interim_pre_ks_std_pupil_percent,Indicator,,,,,api-only,Key stage 2 attainment
+disadvantage_gap_index,Indicator,,,,,api-only,Attainment - Key stage 4
+disapplied_pupil_count,Indicator,,,,,api-only,Key stage 2 attainment
+disapplied_pupil_percent,Indicator,,,,,api-only,Key stage 2 attainment
+early_dev_of_expected_std_pupil_count,Indicator,,,,,api-only,Key stage 2 attainment
+early_dev_of_expected_std_pupil_percent,Indicator,,,,,api-only,Key stage 2 attainment
+ebacc_91_percent,Indicator,,,,,api-only,Attainment - Key stage 4
+ebacc_91_total,Indicator,,,,,api-only,Attainment - Key stage 4
+ebacc_94_percent,Indicator,,,,,api-only,Attainment - Key stage 4
+ebacc_94_total,Indicator,,,,,api-only,Attainment - Key stage 4
+ebacc_95_percent,Indicator,,,,,api-only,Attainment - Key stage 4
+ebacc_95_total,Indicator,,,,,api-only,Attainment - Key stage 4
+ebacc_aps_average,Indicator,,,,,api-only,Attainment - Key stage 4
+ebacc_aps_sum,Indicator,,,,,api-only,Attainment - Key stage 4
+ebacc_entering_0pillar_percent,Indicator,,,,,api-only,Attainment - Key stage 4
+ebacc_entering_0pillar_total,Indicator,,,,,api-only,Attainment - Key stage 4
+ebacc_entering_1pillar_percent,Indicator,,,,,api-only,Attainment - Key stage 4
+ebacc_entering_1pillar_total,Indicator,,,,,api-only,Attainment - Key stage 4
+ebacc_entering_2pillar_percent,Indicator,,,,,api-only,Attainment - Key stage 4
+ebacc_entering_2pillar_total,Indicator,,,,,api-only,Attainment - Key stage 4
+ebacc_entering_3pillar_percent,Indicator,,,,,api-only,Attainment - Key stage 4
+ebacc_entering_3pillar_total,Indicator,,,,,api-only,Attainment - Key stage 4
+ebacc_entering_4pillar_percent,Indicator,,,,,api-only,Attainment - Key stage 4
+ebacc_entering_4pillar_total,Indicator,,,,,api-only,Attainment - Key stage 4
+ebacc_entering_percent,Indicator,,,,,api-only,Attainment - Key stage 4
+ebacc_entering_total,Indicator,,,,,api-only,Attainment - Key stage 4
+ebacceng_91_percent,Indicator,,,,,api-only,Attainment - Key stage 4
+ebacceng_91_total,Indicator,,,,,api-only,Attainment - Key stage 4
+ebacceng_94_percent,Indicator,,,,,api-only,Attainment - Key stage 4
+ebacceng_94_total,Indicator,,,,,api-only,Attainment - Key stage 4
+ebacceng_95_percent,Indicator,,,,,api-only,Attainment - Key stage 4
+ebacceng_95_total,Indicator,,,,,api-only,Attainment - Key stage 4
+ebacceng_aps_average,Indicator,,,,,api-only,Attainment - Key stage 4
+ebacceng_aps_sum,Indicator,,,,,api-only,Attainment - Key stage 4
+ebacceng_entering_percent,Indicator,,,,,api-only,Attainment - Key stage 4
+ebacceng_entering_total,Indicator,,,,,api-only,Attainment - Key stage 4
+ebacchum_91_percent,Indicator,,,,,api-only,Attainment - Key stage 4
+ebacchum_91_total,Indicator,,,,,api-only,Attainment - Key stage 4
+ebacchum_94_percent,Indicator,,,,,api-only,Attainment - Key stage 4
+ebacchum_94_total,Indicator,,,,,api-only,Attainment - Key stage 4
+ebacchum_95_percent,Indicator,,,,,api-only,Attainment - Key stage 4
+ebacchum_95_total,Indicator,,,,,api-only,Attainment - Key stage 4
+ebacchum_aps_average,Indicator,,,,,api-only,Attainment - Key stage 4
+ebacchum_aps_sum,Indicator,,,,,api-only,Attainment - Key stage 4
+ebacchum_entering_percent,Indicator,,,,,api-only,Attainment - Key stage 4
+ebacchum_entering_total,Indicator,,,,,api-only,Attainment - Key stage 4
+ebacclan_91_percent,Indicator,,,,,api-only,Attainment - Key stage 4
+ebacclan_91_total,Indicator,,,,,api-only,Attainment - Key stage 4
+ebacclan_94_percent,Indicator,,,,,api-only,Attainment - Key stage 4
+ebacclan_94_total,Indicator,,,,,api-only,Attainment - Key stage 4
+ebacclan_95_percent,Indicator,,,,,api-only,Attainment - Key stage 4
+ebacclan_95_total,Indicator,,,,,api-only,Attainment - Key stage 4
+ebacclan_aps_average,Indicator,,,,,api-only,Attainment - Key stage 4
+ebacclan_aps_sum,Indicator,,,,,api-only,Attainment - Key stage 4
+ebacclan_entering_percent,Indicator,,,,,api-only,Attainment - Key stage 4
+ebacclan_entering_total,Indicator,,,,,api-only,Attainment - Key stage 4
+ebaccmat_91_percent,Indicator,,,,,api-only,Attainment - Key stage 4
+ebaccmat_91_total,Indicator,,,,,api-only,Attainment - Key stage 4
+ebaccmat_94_percent,Indicator,,,,,api-only,Attainment - Key stage 4
+ebaccmat_94_total,Indicator,,,,,api-only,Attainment - Key stage 4
+ebaccmat_95_percent,Indicator,,,,,api-only,Attainment - Key stage 4
+ebaccmat_95_total,Indicator,,,,,api-only,Attainment - Key stage 4
+ebaccmat_aps_average,Indicator,,,,,api-only,Attainment - Key stage 4
+ebaccmat_aps_sum,Indicator,,,,,api-only,Attainment - Key stage 4
+ebaccmat_entering_percent,Indicator,,,,,api-only,Attainment - Key stage 4
+ebaccmat_entering_total,Indicator,,,,,api-only,Attainment - Key stage 4
+ebaccsci_91_percent,Indicator,,,,,api-only,Attainment - Key stage 4
+ebaccsci_91_total,Indicator,,,,,api-only,Attainment - Key stage 4
+ebaccsci_94_percent,Indicator,,,,,api-only,Attainment - Key stage 4
+ebaccsci_94_total,Indicator,,,,,api-only,Attainment - Key stage 4
+ebaccsci_95_percent,Indicator,,,,,api-only,Attainment - Key stage 4
+ebaccsci_95_total,Indicator,,,,,api-only,Attainment - Key stage 4
+ebaccsci_aps_average,Indicator,,,,,api-only,Attainment - Key stage 4
+ebaccsci_aps_sum,Indicator,,,,,api-only,Attainment - Key stage 4
+ebaccsci_combpath_entering_percent,Indicator,,,,,api-only,Attainment - Key stage 4
+ebaccsci_combpath_entering_total,Indicator,,,,,api-only,Attainment - Key stage 4
+ebaccsci_entering_percent,Indicator,,,,,api-only,Attainment - Key stage 4
+ebaccsci_entering_total,Indicator,,,,,api-only,Attainment - Key stage 4
+ebaccsci_indpath_entering_percent,Indicator,,,,,api-only,Attainment - Key stage 4
+ebaccsci_indpath_entering_total,Indicator,,,,,api-only,Attainment - Key stage 4
+eligible_pupil_count,Indicator,,,,,api-only,Key stage 2 attainment
+engagement_model_or_below_pre_ks_std_pupil_count,Indicator,,,,,api-only,Key stage 2 attainment
+engagement_model_or_below_pre_ks_std_pupil_percent,Indicator,,,,,api-only,Key stage 2 attainment
+engmath_94_percent,Indicator,,,,,api-only,Attainment - Key stage 4
+engmath_94_total,Indicator,,,,,api-only,Attainment - Key stage 4
+engmath_95_percent,Indicator,,,,,api-only,Attainment - Key stage 4
+engmath_95_total,Indicator,,,,,api-only,Attainment - Key stage 4
+engmath_entering_percent,Indicator,,,,,api-only,Attainment - Key stage 4
+engmath_entering_total,Indicator,,,,,api-only,Attainment - Key stage 4
+enrolment_count,Indicator,,,,,api-only,Apprenticeships
+enrolment_percent,Indicator,,,,,api-only,Apprenticeships
+entries_count,Indicator,,,,,api-only,Attainment - Key stage 4
+establishment_count,Indicator,,,,,api-only,Key stage 2 attainment
+expected_standard_pupil_count,Indicator,,,,,api-only,Key stage 2 attainment
+expected_standard_pupil_percent,Indicator,,,,,api-only,Key stage 2 attainment
+foundations_of_expected_std_pupil_count,Indicator,,,,,api-only,Key stage 2 attainment
+foundations_of_expected_std_pupil_percent,Indicator,,,,,api-only,Key stage 2 attainment
+gcse_91_percent,Indicator,,,,,api-only,Attainment - Key stage 4
+gcse_91_total,Indicator,,,,,api-only,Attainment - Key stage 4
+gcse_entering_percent,Indicator,,,,,api-only,Attainment - Key stage 4
+gcse_entering_total,Indicator,,,,,api-only,Attainment - Key stage 4
+gcse_entries_average,Indicator,,,,,api-only,Attainment - Key stage 4
+gcse_entries_sum,Indicator,,,,,api-only,Attainment - Key stage 4
+gcse_five_engmath_percent,Indicator,,,,,api-only,Attainment - Key stage 4
+gcse_five_engmath_total,Indicator,,,,,api-only,Attainment - Key stage 4
+geoghist_entering_percent,Indicator,,,,,api-only,Attainment - Key stage 4
+geoghist_entering_total,Indicator,,,,,api-only,Attainment - Key stage 4
+grade_average,Indicator,,,,,api-only,Attainment - Key stage 4
+growing_dev_of_expected_std_pupil_count,Indicator,,,,,api-only,Key stage 2 attainment
+growing_dev_of_expected_std_pupil_percent,Indicator,,,,,api-only,Key stage 2 attainment
+higher_standard_pupil_count,Indicator,,,,,api-only,Key stage 2 attainment
+higher_standard_pupil_percent,Indicator,,,,,api-only,Key stage 2 attainment
+lan_multiple_entering_percent,Indicator,,,,,api-only,Attainment - Key stage 4
+lan_multiple_entering_total,Indicator,,,,,api-only,Attainment - Key stage 4
+learner_count,Indicator,,,,,api-only,Apprenticeships
+learner_percent,Indicator,,,,,api-only,Apprenticeships
+music_qual_entering_percent,Indicator,,,,,api-only,Attainment - Key stage 4
+music_qual_entering_total,Indicator,,,,,api-only,Attainment - Key stage 4
+not_meeting_pupil_count,Indicator,,,,,api-only,Key stage 2 attainment
+not_meeting_pupil_percent,Indicator,,,,,api-only,Key stage 2 attainment
+participation_count,Indicator,,,,,api-only,Apprenticeships
+percentage,Indicator,,,,,api-only,Attainment - Key stage 4
+population_count,Indicator,,,,,api-only,General
+population_percent,Indicator,,,,,api-only,General
+pre_ks_std_1_pupil_count,Indicator,,,,,api-only,Key stage 2 attainment
+pre_ks_std_1_pupil_percent,Indicator,,,,,api-only,Key stage 2 attainment
+pre_ks_std_2_pupil_count,Indicator,,,,,api-only,Key stage 2 attainment
+pre_ks_std_2_pupil_percent,Indicator,,,,,api-only,Key stage 2 attainment
+pre_ks_std_3_pupil_count,Indicator,,,,,api-only,Key stage 2 attainment
+pre_ks_std_3_pupil_percent,Indicator,,,,,api-only,Key stage 2 attainment
+pre_ks_std_4_pupil_count,Indicator,,,,,api-only,Key stage 2 attainment
+pre_ks_std_4_pupil_percent,Indicator,,,,,api-only,Key stage 2 attainment
+pre_ks_std_5_pupil_count,Indicator,,,,,api-only,Key stage 2 attainment
+pre_ks_std_5_pupil_percent,Indicator,,,,,api-only,Key stage 2 attainment
+pre_ks_std_6_pupil_count,Indicator,,,,,api-only,Key stage 2 attainment
+pre_ks_std_6_pupil_percent,Indicator,,,,,api-only,Key stage 2 attainment
+progress_measure_eligible_pupil_count,Indicator,,,,,api-only,Key stage 2 attainment
+progress_measure_lower_conf_interval,Indicator,,,,,api-only,Key stage 2 attainment
+progress_measure_score,Indicator,,,,,api-only,Key stage 2 attainment
+progress_measure_total_score,Indicator,,,,,api-only,Key stage 2 attainment
+progress_measure_upper_conf_interval,Indicator,,,,,api-only,Key stage 2 attainment
+progress8_adjusted_percent,Indicator,,,,,api-only,Attainment - Key stage 4
+progress8_adjusted_total,Indicator,,,,,api-only,Attainment - Key stage 4
+progress8_average,Indicator,,,,,api-only,Attainment - Key stage 4
+progress8_lower_95_ci,Indicator,,,,,api-only,Attainment - Key stage 4
+progress8_pupil_count,Indicator,,,,,api-only,Attainment - Key stage 4
+progress8_pupil_percent,Indicator,,,,,api-only,Attainment - Key stage 4
+progress8_sum,Indicator,,,,,api-only,Attainment - Key stage 4
+progress8_upper_95_ci,Indicator,,,,,api-only,Attainment - Key stage 4
+progress8ebacc_average,Indicator,,,,,api-only,Attainment - Key stage 4
+progress8ebacc_lower_95_ci,Indicator,,,,,api-only,Attainment - Key stage 4
+progress8ebacc_sum,Indicator,,,,,api-only,Attainment - Key stage 4
+progress8ebacc_upper_95_ci,Indicator,,,,,api-only,Attainment - Key stage 4
+progress8eng_average,Indicator,,,,,api-only,Attainment - Key stage 4
+progress8eng_lower_95_ci,Indicator,,,,,api-only,Attainment - Key stage 4
+progress8eng_sum,Indicator,,,,,api-only,Attainment - Key stage 4
+progress8eng_upper_95_ci,Indicator,,,,,api-only,Attainment - Key stage 4
+progress8mat_average,Indicator,,,,,api-only,Attainment - Key stage 4
+progress8mat_lower_95_ci,Indicator,,,,,api-only,Attainment - Key stage 4
+progress8mat_sum,Indicator,,,,,api-only,Attainment - Key stage 4
+progress8mat_upper_95_ci,Indicator,,,,,api-only,Attainment - Key stage 4
+progress8open_average,Indicator,,,,,api-only,Attainment - Key stage 4
+progress8open_lower_95_ci,Indicator,,,,,api-only,Attainment - Key stage 4
+progress8open_sum,Indicator,,,,,api-only,Attainment - Key stage 4
+progress8open_upper_95_ci,Indicator,,,,,api-only,Attainment - Key stage 4
+progress8original_average,Indicator,,,,,api-only,Attainment - Key stage 4
+progress8original_lower_95_ci,Indicator,,,,,api-only,Attainment - Key stage 4
+progress8original_sum,Indicator,,,,,api-only,Attainment - Key stage 4
+progress8original_upper_95_ci,Indicator,,,,,api-only,Attainment - Key stage 4
+pupil_count,Indicator,,,,,api-only,General
+pupil_percent,Indicator,,,,,api-only,General
+qual_covid_impacted_percent,Indicator,,,,,api-only,Attainment - Key stage 4
+qual_covid_impacted_sum,Indicator,,,,,api-only,Attainment - Key stage 4
+qual_entries_average,Indicator,,,,,api-only,Attainment - Key stage 4
+qual_entries_sum,Indicator,,,,,api-only,Attainment - Key stage 4
+qual_entries_without_discounting_average,Indicator,,,,,api-only,Attainment - Key stage 4
+qual_entries_without_discounting_sum,Indicator,,,,,api-only,Attainment - Key stage 4
+scaled_scores_eligible_pupil_count,Indicator,,,,,api-only,Key stage 2 attainment
+scaled_scores_total,Indicator,,,,,api-only,Key stage 2 attainment
+school_count,Indicator,,,,,api-only,General
+school_percent,Indicator,,,,,api-only,General
+sci_triple_entering_percent,Indicator,,,,,api-only,Attainment - Key stage 4
+sci_triple_entering_total,Indicator,,,,,api-only,Attainment - Key stage 4
+start_count,Indicator,,,,,api-only,Apprenticeships
+starts_percent,Indicator,,,,,api-only,Apprenticeships
+student_count,Indicator,,,,,api-only,General
+student_percent,Indicator,,,,,api-only,General
+teacher_count,Indicator,,,,,api-only,General
+teacher_percent,Indicator,,,,,api-only,General
+total_exam_entries,Indicator,,,,,api-only,Attainment - Key stage 4
+unable_to_access_arrived_pupil_count,Indicator,,,,,api-only,Key stage 2 attainment
+unable_to_access_arrived_pupil_percent,Indicator,,,,,api-only,Key stage 2 attainment
+unable_to_access_pupil_count,Indicator,,,,,api-only,Key stage 2 attainment
+unable_to_access_pupil_percent,Indicator,,,,,api-only,Key stage 2 attainment
+valueaddedhum_average,Indicator,,,,,api-only,Attainment - Key stage 4
+valueaddedhum_lower_95_ci,Indicator,,,,,api-only,Attainment - Key stage 4
+valueaddedhum_pupil_count,Indicator,,,,,api-only,Attainment - Key stage 4
+valueaddedhum_pupil_percent,Indicator,,,,,api-only,Attainment - Key stage 4
+valueaddedhum_sum,Indicator,,,,,api-only,Attainment - Key stage 4
+valueaddedhum_upper_95_ci,Indicator,,,,,api-only,Attainment - Key stage 4
+valueaddedlan_average,Indicator,,,,,api-only,Attainment - Key stage 4
+valueaddedlan_lower_95_ci,Indicator,,,,,api-only,Attainment - Key stage 4
+valueaddedlan_pupil_count,Indicator,,,,,api-only,Attainment - Key stage 4
+valueaddedlan_pupil_percent,Indicator,,,,,api-only,Attainment - Key stage 4
+valueaddedlan_sum,Indicator,,,,,api-only,Attainment - Key stage 4
+valueaddedlan_upper_95_ci,Indicator,,,,,api-only,Attainment - Key stage 4
+valueaddedsci_average,Indicator,,,,,api-only,Attainment - Key stage 4
+valueaddedsci_lower_95_ci,Indicator,,,,,api-only,Attainment - Key stage 4
+valueaddedsci_pupil_count,Indicator,,,,,api-only,Attainment - Key stage 4
+valueaddedsci_pupil_percent,Indicator,,,,,api-only,Attainment - Key stage 4
+valueaddedsci_sum,Indicator,,,,,api-only,Attainment - Key stage 4
+valueaddedsci_upper_95_ci,Indicator,,,,,api-only,Attainment - Key stage 4
+working_below_pupil_count,Indicator,,,,,api-only,Key stage 2 attainment
+working_below_pupil_percent,Indicator,,,,,api-only,Key stage 2 attainment
+working_towards_pupil_count,Indicator,,,,,api-only,Key stage 2 attainment
+working_towards_pupil_percent,Indicator,,,,,api-only,Key stage 2 attainment
