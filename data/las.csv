@@ -41,10 +41,10 @@ E08000012,Liverpool,01/01/2009,,E12000002,E08,Metropolitan Districts,live,341
 E08000013,St. Helens,01/01/2009,,E12000002,E08,Metropolitan Districts,live,342
 E08000014,Sefton,01/01/2009,,E12000002,E08,Metropolitan Districts,live,343
 E08000015,Wirral,01/01/2009,,E12000002,E08,Metropolitan Districts,live,344
-E08000016,Barnsley,01/01/2009,,E12000003,E08,Metropolitan Districts,live,370
+E08000016,Barnsley,01/01/2009,30/04/2025,E12000003,E08,Metropolitan Districts,terminated,370
 E08000017,Doncaster,01/01/2009,,E12000003,E08,Metropolitan Districts,live,371
 E08000018,Rotherham,01/01/2009,,E12000003,E08,Metropolitan Districts,live,372
-E08000019,Sheffield,01/01/2009,,E12000003,E08,Metropolitan Districts,live,373
+E08000019,Sheffield,01/01/2009,30/04/2025,E12000003,E08,Metropolitan Districts,terminated,373
 E08000020,Gateshead,01/01/2009,31/03/2013,E12000001,E08,Metropolitan Districts,terminated,390
 E08000021,Newcastle upon Tyne,01/01/2009,,E12000001,E08,Metropolitan Districts,live,391
 E08000022,North Tyneside,01/01/2009,,E12000001,E08,Metropolitan Districts,live,392
@@ -62,6 +62,9 @@ E08000033,Calderdale,01/01/2009,,E12000003,E08,Metropolitan Districts,live,381
 E08000034,Kirklees,01/01/2009,,E12000003,E08,Metropolitan Districts,live,382
 E08000035,Leeds,01/01/2009,,E12000003,E08,Metropolitan Districts,live,383
 E08000036,Wakefield,01/01/2009,,E12000003,E08,Metropolitan Districts,live,384
+E08000037,Gateshead,01/04/2013,,E12000001,E08,Metropolitan Districts,live,390
+E08000038,Barnsley,01/05/2025,,E12000003,E08,Metropolitan Districts,live,370
+E08000039,Sheffield,01/05/2025,,E12000003,E08,Metropolitan Districts,live,373
 E10000001,Bedfordshire,01/01/2009,31/03/2009,E12000006,E10,Counties,terminated,x
 E10000002,Buckinghamshire,01/01/2009,31/03/2020,E12000008,E10,Counties,terminated,825
 E10000003,Cambridgeshire,01/01/2009,,E12000006,E10,Counties,live,873
@@ -165,7 +168,6 @@ E06000064,Westmorland and Furness,01/04/2023,,E12000002,E06,Unitary Authorities,
 E06000063 / E06000064,Cumberland / Westmorland and Furness,01/04/2023,,E12000002,E06,Unitary Authorities,live,942 / 943
 E06000065,North Yorkshire,01/04/2023,,E12000003,E06,Unitary Authorities,live,815
 E06000066,Somerset,01/04/2023,,E12000009,E06,Unitary Authorities,live,933
-E08000037,Gateshead,01/04/2013,,E12000001,E08,Metropolitan Districts,live,390
 E06000058,"Bournemouth, Christchurch and Poole",01/04/2019,,E12000009,E06,Unitary Authorities,live,839
 E06000059,Dorset,01/04/2019,,E12000009,E06,Unitary Authorities,live,838
 E06000060,Buckinghamshire,01/04/2020,,E12000008,E06,Unitary Authorities,live,825

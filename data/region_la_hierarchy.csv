@@ -1,180 +1,182 @@
-"region_code","region_name","old_la_code","la_name","new_la_code"
-"E12000001","North East","840","County Durham","E06000047"
-"E12000001","North East","841","Darlington","E06000005"
-"E12000001","North East","x","Durham","E10000010"
-"E12000001","North East","390","Gateshead","E08000020"
-"E12000001","North East","390","Gateshead","E08000037"
-"E12000001","North East","805","Hartlepool","E06000001"
-"E12000001","North East","806","Middlesbrough","E06000002"
-"E12000001","North East","391","Newcastle upon Tyne","E08000021"
-"E12000001","North East","392","North Tyneside","E08000022"
-"E12000001","North East","x","Northumberland","E10000022"
-"E12000001","North East","929","Northumberland","E06000048"
-"E12000001","North East","929","Northumberland","E06000057"
-"E12000001","North East","807","Redcar and Cleveland","E06000003"
-"E12000001","North East","393","South Tyneside","E08000023"
-"E12000001","North East","808","Stockton-on-Tees","E06000004"
-"E12000001","North East","394","Sunderland","E08000024"
-"E12000002","North West","889","Blackburn with Darwen","E06000008"
-"E12000002","North West","890","Blackpool","E06000009"
-"E12000002","North West","350","Bolton","E08000001"
-"E12000002","North West","351","Bury","E08000002"
-"E12000002","North West","x","Cheshire","E10000004"
-"E12000002","North West","895","Cheshire East","E06000049"
-"E12000002","North West","896","Cheshire West and Chester","E06000050"
-"E12000002","North West","909","Cumbria","E10000006"
-"E12000002","North West","942","Cumberland","E06000063"
-"E12000002","North West","943","Westmorland and Furness","E06000064"
-"E12000002","North West","942 / 943","Cumberland / Westmorland and Furness","E06000063 / E06000064"
-"E12000002","North West","876","Halton","E06000006"
-"E12000002","North West","340","Knowsley","E08000011"
-"E12000002","North West","888","Lancashire","E10000017"
-"E12000002","North West","341","Liverpool","E08000012"
-"E12000002","North West","352","Manchester","E08000003"
-"E12000002","North West","353","Oldham","E08000004"
-"E12000002","North West","354","Rochdale","E08000005"
-"E12000002","North West","355","Salford","E08000006"
-"E12000002","North West","343","Sefton","E08000014"
-"E12000002","North West","342","St. Helens","E08000013"
-"E12000002","North West","356","Stockport","E08000007"
-"E12000002","North West","357","Tameside","E08000008"
-"E12000002","North West","358","Trafford","E08000009"
-"E12000002","North West","877","Warrington","E06000007"
-"E12000002","North West","359","Wigan","E08000010"
-"E12000002","North West","344","Wirral","E08000015"
-"E12000003","Yorkshire and The Humber","370","Barnsley","E08000016"
-"E12000003","Yorkshire and The Humber","380","Bradford","E08000032"
-"E12000003","Yorkshire and The Humber","381","Calderdale","E08000033"
-"E12000003","Yorkshire and The Humber","371","Doncaster","E08000017"
-"E12000003","Yorkshire and The Humber","811","East Riding of Yorkshire","E06000011"
-"E12000003","Yorkshire and The Humber","810","Kingston upon Hull, City of","E06000010"
-"E12000003","Yorkshire and The Humber","382","Kirklees","E08000034"
-"E12000003","Yorkshire and The Humber","383","Leeds","E08000035"
-"E12000003","Yorkshire and The Humber","812","North East Lincolnshire","E06000012"
-"E12000003","Yorkshire and The Humber","813","North Lincolnshire","E06000013"
-"E12000003","Yorkshire and The Humber","815","North Yorkshire","E10000023"
-"E12000003","Yorkshire and The Humber","815","North Yorkshire","E06000065"
-"E12000003","Yorkshire and The Humber","372","Rotherham","E08000018"
-"E12000003","Yorkshire and The Humber","373","Sheffield","E08000019"
-"E12000003","Yorkshire and The Humber","384","Wakefield","E08000036"
-"E12000003","Yorkshire and The Humber","816","York","E06000014"
-"E12000004","East Midlands","831","Derby","E06000015"
-"E12000004","East Midlands","830","Derbyshire","E10000007"
-"E12000004","East Midlands","856","Leicester","E06000016"
-"E12000004","East Midlands","855","Leicestershire","E10000018"
-"E12000004","East Midlands","925","Lincolnshire","E10000019"
-"E12000004","East Midlands","940","North Northamptonshire","E06000061"
-"E12000004","East Midlands","940 / 941","North Northamptonshire / West Northamptonshire","E06000061 / E06000062"
-"E12000004","East Midlands","928","Northamptonshire","E10000021"
-"E12000004","East Midlands","892","Nottingham","E06000018"
-"E12000004","East Midlands","891","Nottinghamshire","E10000024"
-"E12000004","East Midlands","857","Rutland","E06000017"
-"E12000004","East Midlands","941","West Northamptonshire","E06000062"
-"E12000005","West Midlands","330","Birmingham","E08000025"
-"E12000005","West Midlands","331","Coventry","E08000026"
-"E12000005","West Midlands","332","Dudley","E08000027"
-"E12000005","West Midlands","884","Herefordshire, County of","E06000019"
-"E12000005","West Midlands","333","Sandwell","E08000028"
-"E12000005","West Midlands","x","Shropshire","E10000026"
-"E12000005","West Midlands","893","Shropshire","E06000051"
-"E12000005","West Midlands","334","Solihull","E08000029"
-"E12000005","West Midlands","860","Staffordshire","E10000028"
-"E12000005","West Midlands","861","Stoke-on-Trent","E06000021"
-"E12000005","West Midlands","894","Telford and Wrekin","E06000020"
-"E12000005","West Midlands","335","Walsall","E08000030"
-"E12000005","West Midlands","937","Warwickshire","E10000031"
-"E12000005","West Midlands","336","Wolverhampton","E08000031"
-"E12000005","West Midlands","885","Worcestershire","E10000034"
-"E12000006","East of England","822","Bedford","E06000055"
-"E12000006","East of England","x","Bedfordshire","E10000001"
-"E12000006","East of England","873","Cambridgeshire","E10000003"
-"E12000006","East of England","823","Central Bedfordshire","E06000056"
-"E12000006","East of England","881","Essex","E10000012"
-"E12000006","East of England","919","Hertfordshire","E10000015"
-"E12000006","East of England","821","Luton","E06000032"
-"E12000006","East of England","926","Norfolk","E10000020"
-"E12000006","East of England","874","Peterborough","E06000031"
-"E12000006","East of England","882","Southend-on-Sea","E06000033"
-"E12000006","East of England","935","Suffolk","E10000029"
-"E12000006","East of England","883","Thurrock","E06000034"
-"E12000007","London","301","Barking and Dagenham","E09000002"
-"E12000007","London","302","Barnet","E09000003"
-"E12000007","London","303","Bexley","E09000004"
-"E12000007","London","304","Brent","E09000005"
-"E12000007","London","305","Bromley","E09000006"
-"E12000007","London","202","Camden","E09000007"
-"E12000007","London","201","City of London","E09000001"
-"E12000007","London","306","Croydon","E09000008"
-"E12000007","London","307","Ealing","E09000009"
-"E12000007","London","308","Enfield","E09000010"
-"E12000007","London","203","Greenwich","E09000011"
-"E12000007","London","204","Hackney","E09000012"
-"E12000007","London","205","Hammersmith and Fulham","E09000013"
-"E12000007","London","309","Haringey","E09000014"
-"E12000007","London","310","Harrow","E09000015"
-"E12000007","London","311","Havering","E09000016"
-"E12000007","London","312","Hillingdon","E09000017"
-"E12000007","London","313","Hounslow","E09000018"
-"E12000007","London","206","Islington","E09000019"
-"E12000007","London","207","Kensington and Chelsea","E09000020"
-"E12000007","London","314","Kingston upon Thames","E09000021"
-"E12000007","London","314 / 318","Kingston upon Thames / Richmond upon Thames","E09000021 / E09000027"
-"E12000007","London","208","Lambeth","E09000022"
-"E12000007","London","209","Lewisham","E09000023"
-"E12000007","London","315","Merton","E09000024"
-"E12000007","London","316","Newham","E09000025"
-"E12000007","London","317","Redbridge","E09000026"
-"E12000007","London","318","Richmond upon Thames","E09000027"
-"E12000007","London","210","Southwark","E09000028"
-"E12000007","London","319","Sutton","E09000029"
-"E12000007","London","211","Tower Hamlets","E09000030"
-"E12000007","London","320","Waltham Forest","E09000031"
-"E12000007","London","212","Wandsworth","E09000032"
-"E12000007","London","213","Westminster","E09000033"
-"E12000008","South East","867","Bracknell Forest","E06000036"
-"E12000008","South East","846","Brighton and Hove","E06000043"
-"E12000008","South East","825","Buckinghamshire","E10000002"
-"E12000008","South East","825","Buckinghamshire","E06000060"
-"E12000008","South East","845","East Sussex","E10000011"
-"E12000008","South East","850","Hampshire","E10000014"
-"E12000008","South East","921","Isle of Wight","E06000046"
-"E12000008","South East","886","Kent","E10000016"
-"E12000008","South East","887","Medway","E06000035"
-"E12000008","South East","826","Milton Keynes","E06000042"
-"E12000008","South East","931","Oxfordshire","E10000025"
-"E12000008","South East","851","Portsmouth","E06000044"
-"E12000008","South East","870","Reading","E06000038"
-"E12000008","South East","871","Slough","E06000039"
-"E12000008","South East","852","Southampton","E06000045"
-"E12000008","South East","936","Surrey","E10000030"
-"E12000008","South East","869","West Berkshire","E06000037"
-"E12000008","South East","938","West Sussex","E10000032"
-"E12000008","South East","868","Windsor and Maidenhead","E06000040"
-"E12000008","South East","872","Wokingham","E06000041"
-"E12000009","South West","800","Bath and North East Somerset","E06000022"
-"E12000009","South West","837","Bournemouth","E06000028"
-"E12000009","South West","839","Bournemouth, Christchurch and Poole","E06000058"
-"E12000009","South West","801","Bristol, City of","E06000023"
-"E12000009","South West","908","Cornwall","E06000052"
-"E12000009","South West","x","Cornwall and Isles of Scilly","E10000005"
-"E12000009","South West","878","Devon","E10000008"
-"E12000009","South West","835","Dorset","E10000009"
-"E12000009","South West","838","Dorset","E06000059"
-"E12000009","South West","916","Gloucestershire","E10000013"
-"E12000009","South West","420","Isles of Scilly","E06000053"
-"E12000009","South West","802","North Somerset","E06000024"
-"E12000009","South West","879","Plymouth","E06000026"
-"E12000009","South West","836","Poole","E06000029"
-"E12000009","South West","933","Somerset","E10000027"
-"E12000009","South West","933","Somerset","E06000066"
-"E12000009","South West","803","South Gloucestershire","E06000025"
-"E12000009","South West","866","Swindon","E06000030"
-"E12000009","South West","880","Torbay","E06000027"
-"E12000009","South West","x","Wiltshire","E10000033"
-"E12000009","South West","865","Wiltshire","E06000054"
-"z","Outside of England and unknown","z","Outside of England and unknown","z"
-"z","Outside of the United Kingdom and unknown","z","Outside of the United Kingdom and unknown","z"
-"z","Outside of England","z","Outside of England","z"
-"z","Outside of the United Kingdom","z","Outside of the United Kingdom","z"
-"z","Outside of the United Kingdom","702","British Forces Post Office overseas establishments","z"
-"z","Unknown","z","Unknown","z"
+region_code,region_name,old_la_code,la_name,new_la_code
+E12000001,North East,840,County Durham,E06000047
+E12000001,North East,841,Darlington,E06000005
+E12000001,North East,x,Durham,E10000010
+E12000001,North East,390,Gateshead,E08000020
+E12000001,North East,390,Gateshead,E08000037
+E12000001,North East,805,Hartlepool,E06000001
+E12000001,North East,806,Middlesbrough,E06000002
+E12000001,North East,391,Newcastle upon Tyne,E08000021
+E12000001,North East,392,North Tyneside,E08000022
+E12000001,North East,x,Northumberland,E10000022
+E12000001,North East,929,Northumberland,E06000048
+E12000001,North East,929,Northumberland,E06000057
+E12000001,North East,807,Redcar and Cleveland,E06000003
+E12000001,North East,393,South Tyneside,E08000023
+E12000001,North East,808,Stockton-on-Tees,E06000004
+E12000001,North East,394,Sunderland,E08000024
+E12000002,North West,889,Blackburn with Darwen,E06000008
+E12000002,North West,890,Blackpool,E06000009
+E12000002,North West,350,Bolton,E08000001
+E12000002,North West,351,Bury,E08000002
+E12000002,North West,x,Cheshire,E10000004
+E12000002,North West,895,Cheshire East,E06000049
+E12000002,North West,896,Cheshire West and Chester,E06000050
+E12000002,North West,909,Cumbria,E10000006
+E12000002,North West,942,Cumberland,E06000063
+E12000002,North West,943,Westmorland and Furness,E06000064
+E12000002,North West,942 / 943,Cumberland / Westmorland and Furness,E06000063 / E06000064
+E12000002,North West,876,Halton,E06000006
+E12000002,North West,340,Knowsley,E08000011
+E12000002,North West,888,Lancashire,E10000017
+E12000002,North West,341,Liverpool,E08000012
+E12000002,North West,352,Manchester,E08000003
+E12000002,North West,353,Oldham,E08000004
+E12000002,North West,354,Rochdale,E08000005
+E12000002,North West,355,Salford,E08000006
+E12000002,North West,343,Sefton,E08000014
+E12000002,North West,342,St. Helens,E08000013
+E12000002,North West,356,Stockport,E08000007
+E12000002,North West,357,Tameside,E08000008
+E12000002,North West,358,Trafford,E08000009
+E12000002,North West,877,Warrington,E06000007
+E12000002,North West,359,Wigan,E08000010
+E12000002,North West,344,Wirral,E08000015
+E12000003,Yorkshire and The Humber,370,Barnsley,E08000016
+E12000003,Yorkshire and The Humber,370,Barnsley,E08000038
+E12000003,Yorkshire and The Humber,380,Bradford,E08000032
+E12000003,Yorkshire and The Humber,381,Calderdale,E08000033
+E12000003,Yorkshire and The Humber,371,Doncaster,E08000017
+E12000003,Yorkshire and The Humber,811,East Riding of Yorkshire,E06000011
+E12000003,Yorkshire and The Humber,810,"Kingston upon Hull, City of",E06000010
+E12000003,Yorkshire and The Humber,382,Kirklees,E08000034
+E12000003,Yorkshire and The Humber,383,Leeds,E08000035
+E12000003,Yorkshire and The Humber,812,North East Lincolnshire,E06000012
+E12000003,Yorkshire and The Humber,813,North Lincolnshire,E06000013
+E12000003,Yorkshire and The Humber,815,North Yorkshire,E10000023
+E12000003,Yorkshire and The Humber,815,North Yorkshire,E06000065
+E12000003,Yorkshire and The Humber,372,Rotherham,E08000018
+E12000003,Yorkshire and The Humber,373,Sheffield,E08000019
+E12000003,Yorkshire and The Humber,373,Sheffield,E08000039
+E12000003,Yorkshire and The Humber,384,Wakefield,E08000036
+E12000003,Yorkshire and The Humber,816,York,E06000014
+E12000004,East Midlands,831,Derby,E06000015
+E12000004,East Midlands,830,Derbyshire,E10000007
+E12000004,East Midlands,856,Leicester,E06000016
+E12000004,East Midlands,855,Leicestershire,E10000018
+E12000004,East Midlands,925,Lincolnshire,E10000019
+E12000004,East Midlands,940,North Northamptonshire,E06000061
+E12000004,East Midlands,940 / 941,North Northamptonshire / West Northamptonshire,E06000061 / E06000062
+E12000004,East Midlands,928,Northamptonshire,E10000021
+E12000004,East Midlands,892,Nottingham,E06000018
+E12000004,East Midlands,891,Nottinghamshire,E10000024
+E12000004,East Midlands,857,Rutland,E06000017
+E12000004,East Midlands,941,West Northamptonshire,E06000062
+E12000005,West Midlands,330,Birmingham,E08000025
+E12000005,West Midlands,331,Coventry,E08000026
+E12000005,West Midlands,332,Dudley,E08000027
+E12000005,West Midlands,884,"Herefordshire, County of",E06000019
+E12000005,West Midlands,333,Sandwell,E08000028
+E12000005,West Midlands,x,Shropshire,E10000026
+E12000005,West Midlands,893,Shropshire,E06000051
+E12000005,West Midlands,334,Solihull,E08000029
+E12000005,West Midlands,860,Staffordshire,E10000028
+E12000005,West Midlands,861,Stoke-on-Trent,E06000021
+E12000005,West Midlands,894,Telford and Wrekin,E06000020
+E12000005,West Midlands,335,Walsall,E08000030
+E12000005,West Midlands,937,Warwickshire,E10000031
+E12000005,West Midlands,336,Wolverhampton,E08000031
+E12000005,West Midlands,885,Worcestershire,E10000034
+E12000006,East of England,822,Bedford,E06000055
+E12000006,East of England,x,Bedfordshire,E10000001
+E12000006,East of England,873,Cambridgeshire,E10000003
+E12000006,East of England,823,Central Bedfordshire,E06000056
+E12000006,East of England,881,Essex,E10000012
+E12000006,East of England,919,Hertfordshire,E10000015
+E12000006,East of England,821,Luton,E06000032
+E12000006,East of England,926,Norfolk,E10000020
+E12000006,East of England,874,Peterborough,E06000031
+E12000006,East of England,882,Southend-on-Sea,E06000033
+E12000006,East of England,935,Suffolk,E10000029
+E12000006,East of England,883,Thurrock,E06000034
+E12000007,London,301,Barking and Dagenham,E09000002
+E12000007,London,302,Barnet,E09000003
+E12000007,London,303,Bexley,E09000004
+E12000007,London,304,Brent,E09000005
+E12000007,London,305,Bromley,E09000006
+E12000007,London,202,Camden,E09000007
+E12000007,London,201,City of London,E09000001
+E12000007,London,306,Croydon,E09000008
+E12000007,London,307,Ealing,E09000009
+E12000007,London,308,Enfield,E09000010
+E12000007,London,203,Greenwich,E09000011
+E12000007,London,204,Hackney,E09000012
+E12000007,London,205,Hammersmith and Fulham,E09000013
+E12000007,London,309,Haringey,E09000014
+E12000007,London,310,Harrow,E09000015
+E12000007,London,311,Havering,E09000016
+E12000007,London,312,Hillingdon,E09000017
+E12000007,London,313,Hounslow,E09000018
+E12000007,London,206,Islington,E09000019
+E12000007,London,207,Kensington and Chelsea,E09000020
+E12000007,London,314,Kingston upon Thames,E09000021
+E12000007,London,314 / 318,Kingston upon Thames / Richmond upon Thames,E09000021 / E09000027
+E12000007,London,208,Lambeth,E09000022
+E12000007,London,209,Lewisham,E09000023
+E12000007,London,315,Merton,E09000024
+E12000007,London,316,Newham,E09000025
+E12000007,London,317,Redbridge,E09000026
+E12000007,London,318,Richmond upon Thames,E09000027
+E12000007,London,210,Southwark,E09000028
+E12000007,London,319,Sutton,E09000029
+E12000007,London,211,Tower Hamlets,E09000030
+E12000007,London,320,Waltham Forest,E09000031
+E12000007,London,212,Wandsworth,E09000032
+E12000007,London,213,Westminster,E09000033
+E12000008,South East,867,Bracknell Forest,E06000036
+E12000008,South East,846,Brighton and Hove,E06000043
+E12000008,South East,825,Buckinghamshire,E10000002
+E12000008,South East,825,Buckinghamshire,E06000060
+E12000008,South East,845,East Sussex,E10000011
+E12000008,South East,850,Hampshire,E10000014
+E12000008,South East,921,Isle of Wight,E06000046
+E12000008,South East,886,Kent,E10000016
+E12000008,South East,887,Medway,E06000035
+E12000008,South East,826,Milton Keynes,E06000042
+E12000008,South East,931,Oxfordshire,E10000025
+E12000008,South East,851,Portsmouth,E06000044
+E12000008,South East,870,Reading,E06000038
+E12000008,South East,871,Slough,E06000039
+E12000008,South East,852,Southampton,E06000045
+E12000008,South East,936,Surrey,E10000030
+E12000008,South East,869,West Berkshire,E06000037
+E12000008,South East,938,West Sussex,E10000032
+E12000008,South East,868,Windsor and Maidenhead,E06000040
+E12000008,South East,872,Wokingham,E06000041
+E12000009,South West,800,Bath and North East Somerset,E06000022
+E12000009,South West,837,Bournemouth,E06000028
+E12000009,South West,839,"Bournemouth, Christchurch and Poole",E06000058
+E12000009,South West,801,"Bristol, City of",E06000023
+E12000009,South West,908,Cornwall,E06000052
+E12000009,South West,x,Cornwall and Isles of Scilly,E10000005
+E12000009,South West,878,Devon,E10000008
+E12000009,South West,835,Dorset,E10000009
+E12000009,South West,838,Dorset,E06000059
+E12000009,South West,916,Gloucestershire,E10000013
+E12000009,South West,420,Isles of Scilly,E06000053
+E12000009,South West,802,North Somerset,E06000024
+E12000009,South West,879,Plymouth,E06000026
+E12000009,South West,836,Poole,E06000029
+E12000009,South West,933,Somerset,E10000027
+E12000009,South West,933,Somerset,E06000066
+E12000009,South West,803,South Gloucestershire,E06000025
+E12000009,South West,866,Swindon,E06000030
+E12000009,South West,880,Torbay,E06000027
+E12000009,South West,x,Wiltshire,E10000033
+E12000009,South West,865,Wiltshire,E06000054
+z,Outside of England and unknown,z,Outside of England and unknown,z
+z,Outside of the United Kingdom and unknown,z,Outside of the United Kingdom and unknown,z
+z,Outside of England,z,Outside of England,z
+z,Outside of the United Kingdom,z,Outside of the United Kingdom,z
+z,Outside of the United Kingdom,702,British Forces Post Office overseas establishments,z
+z,Unknown,z,Unknown,z
