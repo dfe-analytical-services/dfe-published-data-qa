@@ -4492,16 +4492,16 @@
       "checksum": "d033e382197d48da01411bc591778610"
     },
     "data/las.csv": {
-      "checksum": "811e6fd90196819ee4a1b09048596ad3"
+      "checksum": "f2b618d5a2e507e1ac182c1e98419a74"
     },
     "data/leps.csv": {
       "checksum": "d95b3f968ae9354198c5276964bc8b44"
     },
     "data/lsip_lad_hierarchy.csv": {
-      "checksum": "10de510467660473f9a8ed0e7e879dfd"
+      "checksum": "87c894503f4c3bbe4679229e06c49c65"
     },
     "data/lsips.csv": {
-      "checksum": "3784ae71dfeb549402700e6ef12bac46"
+      "checksum": "aaf15367fb8688cf0d5f8ccf04799a15"
     },
     "data/pcon_2024_v2.csv": {
       "checksum": "c133ff4f33aee39c09dbc06f644905d5"
@@ -4513,7 +4513,7 @@
       "checksum": "887db4a5f20ff3326ce279822e9f9b65"
     },
     "data/region_la_hierarchy.csv": {
-      "checksum": "0b0fffa05a2a9dabe2e74410820f4f12"
+      "checksum": "8d2b5b6fb99376fa2d65d96a20df6166"
     },
     "data/regions.csv": {
       "checksum": "bf64c413bb858482077bd8459fdc897c"
@@ -4564,7 +4564,7 @@
       "checksum": "4dc8717876735d0a105687d14f56c0b8"
     },
     "R/manual_scripts/update_geography_lookups.R": {
-      "checksum": "8d7b3d434bc5a56b066db93162a66bf6"
+      "checksum": "f361c0c22b866d4d8e5c5f927f9cfcc6"
     },
     "R/manual_scripts/utils.R": {
       "checksum": "d6b8b38e20481a0d68d54d659d79900d"

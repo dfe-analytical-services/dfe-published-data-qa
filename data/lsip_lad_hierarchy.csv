@@ -1,297 +1,467 @@
-"lad_code","lad_name","lsip_code","lsip_name","first_available_year_included","most_recent_year_included"
-"E06000043","Brighton and Hove","E69000001","Brighton and Hove, East Sussex, West Sussex","2023","2023"
-"E07000061","Eastbourne","E69000001","Brighton and Hove, East Sussex, West Sussex","2023","2023"
-"E07000062","Hastings","E69000001","Brighton and Hove, East Sussex, West Sussex","2023","2023"
-"E07000063","Lewes","E69000001","Brighton and Hove, East Sussex, West Sussex","2023","2023"
-"E07000064","Rother","E69000001","Brighton and Hove, East Sussex, West Sussex","2023","2023"
-"E07000065","Wealden","E69000001","Brighton and Hove, East Sussex, West Sussex","2023","2023"
-"E07000223","Adur","E69000001","Brighton and Hove, East Sussex, West Sussex","2023","2023"
-"E07000224","Arun","E69000001","Brighton and Hove, East Sussex, West Sussex","2023","2023"
-"E07000225","Chichester","E69000001","Brighton and Hove, East Sussex, West Sussex","2023","2023"
-"E07000226","Crawley","E69000001","Brighton and Hove, East Sussex, West Sussex","2023","2023"
-"E07000227","Horsham","E69000001","Brighton and Hove, East Sussex, West Sussex","2023","2023"
-"E07000228","Mid Sussex","E69000001","Brighton and Hove, East Sussex, West Sussex","2023","2023"
-"E07000229","Worthing","E69000001","Brighton and Hove, East Sussex, West Sussex","2023","2023"
-"E06000060","Buckinghamshire","E69000002","Buckinghamshire","2023","2023"
-"E06000031","Peterborough","E69000003","Cambridgeshire and Peterborough","2023","2023"
-"E07000008","Cambridge","E69000003","Cambridgeshire and Peterborough","2023","2023"
-"E07000009","East Cambridgeshire","E69000003","Cambridgeshire and Peterborough","2023","2023"
-"E07000010","Fenland","E69000003","Cambridgeshire and Peterborough","2023","2023"
-"E07000011","Huntingdonshire","E69000003","Cambridgeshire and Peterborough","2023","2023"
-"E07000012","South Cambridgeshire","E69000003","Cambridgeshire and Peterborough","2023","2023"
-"E06000007","Warrington","E69000004","Cheshire and Warrington","2023","2023"
-"E06000049","Cheshire East","E69000004","Cheshire and Warrington","2023","2023"
-"E06000050","Cheshire West and Chester","E69000004","Cheshire and Warrington","2023","2023"
-"E06000052","Cornwall","E69000005","Cornwall and the Isles of Scilly","2023","2023"
-"E06000053","Isles of Scilly","E69000005","Cornwall and the Isles of Scilly","2023","2023"
-"E06000063","Cumberland","E69000006","Cumbria","2023","2023"
-"E06000064","Westmorland and Furness","E69000006","Cumbria","2023","2023"
-"E06000015","Derby","E69000007","Derbyshire and Nottinghamshire","2023","2023"
-"E06000018","Nottingham","E69000007","Derbyshire and Nottinghamshire","2023","2023"
-"E07000032","Amber Valley","E69000007","Derbyshire and Nottinghamshire","2023","2023"
-"E07000033","Bolsover","E69000007","Derbyshire and Nottinghamshire","2023","2023"
-"E07000034","Chesterfield","E69000007","Derbyshire and Nottinghamshire","2023","2023"
-"E07000035","Derbyshire Dales","E69000007","Derbyshire and Nottinghamshire","2023","2023"
-"E07000036","Erewash","E69000007","Derbyshire and Nottinghamshire","2023","2023"
-"E07000037","High Peak","E69000007","Derbyshire and Nottinghamshire","2023","2023"
-"E07000038","North East Derbyshire","E69000007","Derbyshire and Nottinghamshire","2023","2023"
-"E07000039","South Derbyshire","E69000007","Derbyshire and Nottinghamshire","2023","2023"
-"E07000170","Ashfield","E69000007","Derbyshire and Nottinghamshire","2023","2023"
-"E07000171","Bassetlaw","E69000007","Derbyshire and Nottinghamshire","2023","2023"
-"E07000172","Broxtowe","E69000007","Derbyshire and Nottinghamshire","2023","2023"
-"E07000173","Gedling","E69000007","Derbyshire and Nottinghamshire","2023","2023"
-"E07000174","Mansfield","E69000007","Derbyshire and Nottinghamshire","2023","2023"
-"E07000175","Newark and Sherwood","E69000007","Derbyshire and Nottinghamshire","2023","2023"
-"E07000176","Rushcliffe","E69000007","Derbyshire and Nottinghamshire","2023","2023"
-"E06000058","Bournemouth, Christchurch and Poole","E69000008","Dorset","2023","2023"
-"E06000059","Dorset","E69000008","Dorset","2023","2023"
-"E07000084","Basingstoke and Deane","E69000009","Enterprise M3","2023","2023"
-"E07000085","East Hampshire","E69000009","Enterprise M3","2023","2023"
-"E07000089","Hart","E69000009","Enterprise M3","2023","2023"
-"E07000092","Rushmoor","E69000009","Enterprise M3","2023","2023"
-"E07000093","Test Valley","E69000009","Enterprise M3","2023","2023"
-"E07000094","Winchester","E69000009","Enterprise M3","2023","2023"
-"E07000207","Elmbridge","E69000009","Enterprise M3","2023","2023"
-"E07000208","Epsom and Ewell","E69000009","Enterprise M3","2023","2023"
-"E07000209","Guildford","E69000009","Enterprise M3","2023","2023"
-"E07000210","Mole Valley","E69000009","Enterprise M3","2023","2023"
-"E07000211","Reigate and Banstead","E69000009","Enterprise M3","2023","2023"
-"E07000212","Runnymede","E69000009","Enterprise M3","2023","2023"
-"E07000213","Spelthorne","E69000009","Enterprise M3","2023","2023"
-"E07000214","Surrey Heath","E69000009","Enterprise M3","2023","2023"
-"E07000215","Tandridge","E69000009","Enterprise M3","2023","2023"
-"E07000216","Waverley","E69000009","Enterprise M3","2023","2023"
-"E07000217","Woking","E69000009","Enterprise M3","2023","2023"
-"E06000033","Southend-on-Sea","E69000010","Essex, Southend-on-Sea and Thurrock","2023","2023"
-"E06000034","Thurrock","E69000010","Essex, Southend-on-Sea and Thurrock","2023","2023"
-"E07000066","Basildon","E69000010","Essex, Southend-on-Sea and Thurrock","2023","2023"
-"E07000067","Braintree","E69000010","Essex, Southend-on-Sea and Thurrock","2023","2023"
-"E07000068","Brentwood","E69000010","Essex, Southend-on-Sea and Thurrock","2023","2023"
-"E07000069","Castle Point","E69000010","Essex, Southend-on-Sea and Thurrock","2023","2023"
-"E07000070","Chelmsford","E69000010","Essex, Southend-on-Sea and Thurrock","2023","2023"
-"E07000071","Colchester","E69000010","Essex, Southend-on-Sea and Thurrock","2023","2023"
-"E07000072","Epping Forest","E69000010","Essex, Southend-on-Sea and Thurrock","2023","2023"
-"E07000073","Harlow","E69000010","Essex, Southend-on-Sea and Thurrock","2023","2023"
-"E07000074","Maldon","E69000010","Essex, Southend-on-Sea and Thurrock","2023","2023"
-"E07000075","Rochford","E69000010","Essex, Southend-on-Sea and Thurrock","2023","2023"
-"E07000076","Tendring","E69000010","Essex, Southend-on-Sea and Thurrock","2023","2023"
-"E07000077","Uttlesford","E69000010","Essex, Southend-on-Sea and Thurrock","2023","2023"
-"E07000078","Cheltenham","E69000011","G First (Gloucestershire)","2023","2023"
-"E07000079","Cotswold","E69000011","G First (Gloucestershire)","2023","2023"
-"E07000080","Forest of Dean","E69000011","G First (Gloucestershire)","2023","2023"
-"E07000081","Gloucester","E69000011","G First (Gloucestershire)","2023","2023"
-"E07000082","Stroud","E69000011","G First (Gloucestershire)","2023","2023"
-"E07000083","Tewkesbury","E69000011","G First (Gloucestershire)","2023","2023"
-"E06000012","North East Lincolnshire","E69000012","Greater Lincolnshire","2023","2023"
-"E06000013","North Lincolnshire","E69000012","Greater Lincolnshire","2023","2023"
-"E06000017","Rutland","E69000012","Greater Lincolnshire","2023","2023"
-"E07000136","Boston","E69000012","Greater Lincolnshire","2023","2023"
-"E07000137","East Lindsey","E69000012","Greater Lincolnshire","2023","2023"
-"E07000138","Lincoln","E69000012","Greater Lincolnshire","2023","2023"
-"E07000139","North Kesteven","E69000012","Greater Lincolnshire","2023","2023"
-"E07000140","South Holland","E69000012","Greater Lincolnshire","2023","2023"
-"E07000141","South Kesteven","E69000012","Greater Lincolnshire","2023","2023"
-"E07000142","West Lindsey","E69000012","Greater Lincolnshire","2023","2023"
-"E09000001","City of London","E69000013","Greater London","2023","2023"
-"E09000002","Barking and Dagenham","E69000013","Greater London","2023","2023"
-"E09000003","Barnet","E69000013","Greater London","2023","2023"
-"E09000004","Bexley","E69000013","Greater London","2023","2023"
-"E09000005","Brent","E69000013","Greater London","2023","2023"
-"E09000006","Bromley","E69000013","Greater London","2023","2023"
-"E09000007","Camden","E69000013","Greater London","2023","2023"
-"E09000008","Croydon","E69000013","Greater London","2023","2023"
-"E09000009","Ealing","E69000013","Greater London","2023","2023"
-"E09000010","Enfield","E69000013","Greater London","2023","2023"
-"E09000011","Greenwich","E69000013","Greater London","2023","2023"
-"E09000012","Hackney","E69000013","Greater London","2023","2023"
-"E09000013","Hammersmith and Fulham","E69000013","Greater London","2023","2023"
-"E09000014","Haringey","E69000013","Greater London","2023","2023"
-"E09000015","Harrow","E69000013","Greater London","2023","2023"
-"E09000016","Havering","E69000013","Greater London","2023","2023"
-"E09000017","Hillingdon","E69000013","Greater London","2023","2023"
-"E09000018","Hounslow","E69000013","Greater London","2023","2023"
-"E09000019","Islington","E69000013","Greater London","2023","2023"
-"E09000020","Kensington and Chelsea","E69000013","Greater London","2023","2023"
-"E09000021","Kingston upon Thames","E69000013","Greater London","2023","2023"
-"E09000022","Lambeth","E69000013","Greater London","2023","2023"
-"E09000023","Lewisham","E69000013","Greater London","2023","2023"
-"E09000024","Merton","E69000013","Greater London","2023","2023"
-"E09000025","Newham","E69000013","Greater London","2023","2023"
-"E09000026","Redbridge","E69000013","Greater London","2023","2023"
-"E09000027","Richmond upon Thames","E69000013","Greater London","2023","2023"
-"E09000028","Southwark","E69000013","Greater London","2023","2023"
-"E09000029","Sutton","E69000013","Greater London","2023","2023"
-"E09000030","Tower Hamlets","E69000013","Greater London","2023","2023"
-"E09000031","Waltham Forest","E69000013","Greater London","2023","2023"
-"E09000032","Wandsworth","E69000013","Greater London","2023","2023"
-"E09000033","Westminster","E69000013","Greater London","2023","2023"
-"E08000001","Bolton","E69000014","Greater Manchester","2023","2023"
-"E08000002","Bury","E69000014","Greater Manchester","2023","2023"
-"E08000003","Manchester","E69000014","Greater Manchester","2023","2023"
-"E08000004","Oldham","E69000014","Greater Manchester","2023","2023"
-"E08000005","Rochdale","E69000014","Greater Manchester","2023","2023"
-"E08000006","Salford","E69000014","Greater Manchester","2023","2023"
-"E08000007","Stockport","E69000014","Greater Manchester","2023","2023"
-"E08000008","Tameside","E69000014","Greater Manchester","2023","2023"
-"E08000009","Trafford","E69000014","Greater Manchester","2023","2023"
-"E08000010","Wigan","E69000014","Greater Manchester","2023","2023"
-"E06000026","Plymouth","E69000015","Heart of the South-West","2023","2023"
-"E06000027","Torbay","E69000015","Heart of the South-West","2023","2023"
-"E06000066","Somerset","E69000015","Heart of the South-West","2023","2023"
-"E07000040","East Devon","E69000015","Heart of the South-West","2023","2023"
-"E07000041","Exeter","E69000015","Heart of the South-West","2023","2023"
-"E07000042","Mid Devon","E69000015","Heart of the South-West","2023","2023"
-"E07000043","North Devon","E69000015","Heart of the South-West","2023","2023"
-"E07000044","South Hams","E69000015","Heart of the South-West","2023","2023"
-"E07000045","Teignbridge","E69000015","Heart of the South-West","2023","2023"
-"E07000046","Torridge","E69000015","Heart of the South-West","2023","2023"
-"E07000047","West Devon","E69000015","Heart of the South-West","2023","2023"
-"E07000095","Broxbourne","E69000016","Hertfordshire","2023","2023"
-"E07000096","Dacorum","E69000016","Hertfordshire","2023","2023"
-"E07000098","Hertsmere","E69000016","Hertfordshire","2023","2023"
-"E07000099","North Hertfordshire","E69000016","Hertfordshire","2023","2023"
-"E07000102","Three Rivers","E69000016","Hertfordshire","2023","2023"
-"E07000103","Watford","E69000016","Hertfordshire","2023","2023"
-"E07000240","St Albans","E69000016","Hertfordshire","2023","2023"
-"E07000241","Welwyn Hatfield","E69000016","Hertfordshire","2023","2023"
-"E07000242","East Hertfordshire","E69000016","Hertfordshire","2023","2023"
-"E07000243","Stevenage","E69000016","Hertfordshire","2023","2023"
-"E06000010","Kingston upon Hull, City of","E69000017","Hull and East Yorkshire","2023","2023"
-"E06000011","East Riding of Yorkshire","E69000017","Hull and East Yorkshire","2023","2023"
-"E06000035","Medway","E69000018","Kent and Medway","2023","2023"
-"E07000105","Ashford","E69000018","Kent and Medway","2023","2023"
-"E07000106","Canterbury","E69000018","Kent and Medway","2023","2023"
-"E07000107","Dartford","E69000018","Kent and Medway","2023","2023"
-"E07000108","Dover","E69000018","Kent and Medway","2023","2023"
-"E07000109","Gravesham","E69000018","Kent and Medway","2023","2023"
-"E07000110","Maidstone","E69000018","Kent and Medway","2023","2023"
-"E07000111","Sevenoaks","E69000018","Kent and Medway","2023","2023"
-"E07000112","Folkestone and Hythe","E69000018","Kent and Medway","2023","2023"
-"E07000113","Swale","E69000018","Kent and Medway","2023","2023"
-"E07000114","Thanet","E69000018","Kent and Medway","2023","2023"
-"E07000115","Tonbridge and Malling","E69000018","Kent and Medway","2023","2023"
-"E07000116","Tunbridge Wells","E69000018","Kent and Medway","2023","2023"
-"E06000008","Blackburn with Darwen","E69000019","Lancashire","2023","2023"
-"E06000009","Blackpool","E69000019","Lancashire","2023","2023"
-"E07000117","Burnley","E69000019","Lancashire","2023","2023"
-"E07000118","Chorley","E69000019","Lancashire","2023","2023"
-"E07000119","Fylde","E69000019","Lancashire","2023","2023"
-"E07000120","Hyndburn","E69000019","Lancashire","2023","2023"
-"E07000121","Lancaster","E69000019","Lancashire","2023","2023"
-"E07000122","Pendle","E69000019","Lancashire","2023","2023"
-"E07000123","Preston","E69000019","Lancashire","2023","2023"
-"E07000124","Ribble Valley","E69000019","Lancashire","2023","2023"
-"E07000125","Rossendale","E69000019","Lancashire","2023","2023"
-"E07000126","South Ribble","E69000019","Lancashire","2023","2023"
-"E07000127","West Lancashire","E69000019","Lancashire","2023","2023"
-"E07000128","Wyre","E69000019","Lancashire","2023","2023"
-"E06000016","Leicester","E69000020","Leicester and Leicestershire","2023","2023"
-"E07000129","Blaby","E69000020","Leicester and Leicestershire","2023","2023"
-"E07000130","Charnwood","E69000020","Leicester and Leicestershire","2023","2023"
-"E07000131","Harborough","E69000020","Leicester and Leicestershire","2023","2023"
-"E07000132","Hinckley and Bosworth","E69000020","Leicester and Leicestershire","2023","2023"
-"E07000133","Melton","E69000020","Leicester and Leicestershire","2023","2023"
-"E07000134","North West Leicestershire","E69000020","Leicester and Leicestershire","2023","2023"
-"E07000135","Oadby and Wigston","E69000020","Leicester and Leicestershire","2023","2023"
-"E06000006","Halton","E69000021","Liverpool City Region","2023","2023"
-"E08000011","Knowsley","E69000021","Liverpool City Region","2023","2023"
-"E08000012","Liverpool","E69000021","Liverpool City Region","2023","2023"
-"E08000013","St. Helens","E69000021","Liverpool City Region","2023","2023"
-"E08000014","Sefton","E69000021","Liverpool City Region","2023","2023"
-"E08000015","Wirral","E69000021","Liverpool City Region","2023","2023"
-"E07000143","Breckland","E69000022","New Anglia","2023","2023"
-"E07000144","Broadland","E69000022","New Anglia","2023","2023"
-"E07000145","Great Yarmouth","E69000022","New Anglia","2023","2023"
-"E07000146","King's Lynn and West Norfolk","E69000022","New Anglia","2023","2023"
-"E07000147","North Norfolk","E69000022","New Anglia","2023","2023"
-"E07000148","Norwich","E69000022","New Anglia","2023","2023"
-"E07000149","South Norfolk","E69000022","New Anglia","2023","2023"
-"E07000200","Babergh","E69000022","New Anglia","2023","2023"
-"E07000202","Ipswich","E69000022","New Anglia","2023","2023"
-"E07000203","Mid Suffolk","E69000022","New Anglia","2023","2023"
-"E07000244","East Suffolk","E69000022","New Anglia","2023","2023"
-"E07000245","West Suffolk","E69000022","New Anglia","2023","2023"
-"E06000047","County Durham","E69000023","North East","2023","2023"
-"E08000023","South Tyneside","E69000023","North East","2023","2023"
-"E08000024","Sunderland","E69000023","North East","2023","2023"
-"E08000037","Gateshead","E69000023","North East","2023","2023"
-"E06000057","Northumberland","E69000024","North of Tyne","2023","2023"
-"E08000021","Newcastle upon Tyne","E69000024","North of Tyne","2023","2023"
-"E08000022","North Tyneside","E69000024","North of Tyne","2023","2023"
-"E07000177","Cherwell","E69000025","Oxfordshire","2023","2023"
-"E07000178","Oxford","E69000025","Oxfordshire","2023","2023"
-"E07000179","South Oxfordshire","E69000025","Oxfordshire","2023","2023"
-"E07000180","Vale of White Horse","E69000025","Oxfordshire","2023","2023"
-"E07000181","West Oxfordshire","E69000025","Oxfordshire","2023","2023"
-"E06000044","Portsmouth","E69000026","Solent","2023","2023"
-"E06000045","Southampton","E69000026","Solent","2023","2023"
-"E06000046","Isle of Wight","E69000026","Solent","2023","2023"
-"E07000086","Eastleigh","E69000026","Solent","2023","2023"
-"E07000087","Fareham","E69000026","Solent","2023","2023"
-"E07000088","Gosport","E69000026","Solent","2023","2023"
-"E07000090","Havant","E69000026","Solent","2023","2023"
-"E07000091","New Forest","E69000026","Solent","2023","2023"
-"E06000032","Luton","E69000027","South-East Midlands","2023","2023"
-"E06000042","Milton Keynes","E69000027","South-East Midlands","2023","2023"
-"E06000055","Bedford","E69000027","South-East Midlands","2023","2023"
-"E06000056","Central Bedfordshire","E69000027","South-East Midlands","2023","2023"
-"E06000061","North Northamptonshire","E69000027","South-East Midlands","2023","2023"
-"E06000062","West Northamptonshire","E69000027","South-East Midlands","2023","2023"
-"E08000016","Barnsley","E69000028","South Yorkshire","2023","2023"
-"E08000017","Doncaster","E69000028","South Yorkshire","2023","2023"
-"E08000018","Rotherham","E69000028","South Yorkshire","2023","2023"
-"E08000019","Sheffield","E69000028","South Yorkshire","2023","2023"
-"E06000021","Stoke-on-Trent","E69000029","Stoke-on-Trent and Staffordshire","2023","2023"
-"E07000192","Cannock Chase","E69000029","Stoke-on-Trent and Staffordshire","2023","2023"
-"E07000193","East Staffordshire","E69000029","Stoke-on-Trent and Staffordshire","2023","2023"
-"E07000194","Lichfield","E69000029","Stoke-on-Trent and Staffordshire","2023","2023"
-"E07000195","Newcastle-under-Lyme","E69000029","Stoke-on-Trent and Staffordshire","2023","2023"
-"E07000196","South Staffordshire","E69000029","Stoke-on-Trent and Staffordshire","2023","2023"
-"E07000197","Stafford","E69000029","Stoke-on-Trent and Staffordshire","2023","2023"
-"E07000198","Staffordshire Moorlands","E69000029","Stoke-on-Trent and Staffordshire","2023","2023"
-"E07000199","Tamworth","E69000029","Stoke-on-Trent and Staffordshire","2023","2023"
-"E06000030","Swindon","E69000030","Swindon and Wiltshire","2023","2023"
-"E06000054","Wiltshire","E69000030","Swindon and Wiltshire","2023","2023"
-"E06000001","Hartlepool","E69000031","Tees Valley","2023","2023"
-"E06000002","Middlesbrough","E69000031","Tees Valley","2023","2023"
-"E06000003","Redcar and Cleveland","E69000031","Tees Valley","2023","2023"
-"E06000004","Stockton-on-Tees","E69000031","Tees Valley","2023","2023"
-"E06000005","Darlington","E69000031","Tees Valley","2023","2023"
-"E06000036","Bracknell Forest","E69000032","Thames Valley Berkshire","2023","2023"
-"E06000037","West Berkshire","E69000032","Thames Valley Berkshire","2023","2023"
-"E06000038","Reading","E69000032","Thames Valley Berkshire","2023","2023"
-"E06000039","Slough","E69000032","Thames Valley Berkshire","2023","2023"
-"E06000040","Windsor and Maidenhead","E69000032","Thames Valley Berkshire","2023","2023"
-"E06000041","Wokingham","E69000032","Thames Valley Berkshire","2023","2023"
-"E06000019","Herefordshire, County of","E69000033","The Marches","2023","2023"
-"E06000020","Telford and Wrekin","E69000033","The Marches","2023","2023"
-"E06000051","Shropshire","E69000033","The Marches","2023","2023"
-"E07000218","North Warwickshire","E69000034","West Midlands and Warwickshire","2023","2023"
-"E07000219","Nuneaton and Bedworth","E69000034","West Midlands and Warwickshire","2023","2023"
-"E07000220","Rugby","E69000034","West Midlands and Warwickshire","2023","2023"
-"E07000221","Stratford-on-Avon","E69000034","West Midlands and Warwickshire","2023","2023"
-"E07000222","Warwick","E69000034","West Midlands and Warwickshire","2023","2023"
-"E08000025","Birmingham","E69000034","West Midlands and Warwickshire","2023","2023"
-"E08000026","Coventry","E69000034","West Midlands and Warwickshire","2023","2023"
-"E08000027","Dudley","E69000034","West Midlands and Warwickshire","2023","2023"
-"E08000028","Sandwell","E69000034","West Midlands and Warwickshire","2023","2023"
-"E08000029","Solihull","E69000034","West Midlands and Warwickshire","2023","2023"
-"E08000030","Walsall","E69000034","West Midlands and Warwickshire","2023","2023"
-"E08000031","Wolverhampton","E69000034","West Midlands and Warwickshire","2023","2023"
-"E07000234","Bromsgrove","E69000035","Worcestershire","2023","2023"
-"E07000235","Malvern Hills","E69000035","Worcestershire","2023","2023"
-"E07000236","Redditch","E69000035","Worcestershire","2023","2023"
-"E07000237","Worcester","E69000035","Worcestershire","2023","2023"
-"E07000238","Wychavon","E69000035","Worcestershire","2023","2023"
-"E07000239","Wyre Forest","E69000035","Worcestershire","2023","2023"
-"E06000022","Bath and North East Somerset","E69000036","West of England and North Somerset","2023","2023"
-"E06000023","Bristol, City of","E69000036","West of England and North Somerset","2023","2023"
-"E06000024","North Somerset","E69000036","West of England and North Somerset","2023","2023"
-"E06000025","South Gloucestershire","E69000036","West of England and North Somerset","2023","2023"
-"E08000032","Bradford","E69000037","West Yorkshire","2023","2023"
-"E08000033","Calderdale","E69000037","West Yorkshire","2023","2023"
-"E08000034","Kirklees","E69000037","West Yorkshire","2023","2023"
-"E08000035","Leeds","E69000037","West Yorkshire","2023","2023"
-"E08000036","Wakefield","E69000037","West Yorkshire","2023","2023"
-"E06000014","York","E69000038","York and North Yorkshire","2023","2023"
-"E06000065","North Yorkshire","E69000038","York and North Yorkshire","2023","2023"
+first_available_year_included,most_recent_year_included,lad_name,lsip_name,lad_code,lsip_code
+2023,2025,Buckinghamshire,Buckinghamshire,E06000060,E69000002
+2023,2025,Peterborough,Cambridgeshire and Peterborough,E06000031,E69000003
+2023,2025,Cambridge,Cambridgeshire and Peterborough,E07000008,E69000003
+2023,2025,East Cambridgeshire,Cambridgeshire and Peterborough,E07000009,E69000003
+2023,2025,Fenland,Cambridgeshire and Peterborough,E07000010,E69000003
+2023,2025,Huntingdonshire,Cambridgeshire and Peterborough,E07000011,E69000003
+2023,2025,South Cambridgeshire,Cambridgeshire and Peterborough,E07000012,E69000003
+2023,2025,Warrington,Cheshire and Warrington,E06000007,E69000004
+2023,2025,Cheshire East,Cheshire and Warrington,E06000049,E69000004
+2023,2025,Cheshire West and Chester,Cheshire and Warrington,E06000050,E69000004
+2023,2025,Cornwall,Cornwall and the Isles of Scilly,E06000052,E69000005
+2023,2025,Isles of Scilly,Cornwall and the Isles of Scilly,E06000053,E69000005
+2023,2025,Cumberland,Cumbria,E06000063,E69000006
+2023,2025,Westmorland and Furness,Cumbria,E06000064,E69000006
+2023,2025,"Bournemouth, Christchurch and Poole",Dorset,E06000058,E69000008
+2023,2025,Dorset,Dorset,E06000059,E69000008
+2023,2025,Bolton,Greater Manchester,E08000001,E69000014
+2023,2025,Bury,Greater Manchester,E08000002,E69000014
+2023,2025,Manchester,Greater Manchester,E08000003,E69000014
+2023,2025,Oldham,Greater Manchester,E08000004,E69000014
+2023,2025,Rochdale,Greater Manchester,E08000005,E69000014
+2023,2025,Salford,Greater Manchester,E08000006,E69000014
+2023,2025,Stockport,Greater Manchester,E08000007,E69000014
+2023,2025,Tameside,Greater Manchester,E08000008,E69000014
+2023,2025,Trafford,Greater Manchester,E08000009,E69000014
+2023,2025,Wigan,Greater Manchester,E08000010,E69000014
+2023,2025,Broxbourne,Hertfordshire,E07000095,E69000016
+2023,2025,Dacorum,Hertfordshire,E07000096,E69000016
+2023,2025,Hertsmere,Hertfordshire,E07000098,E69000016
+2023,2025,North Hertfordshire,Hertfordshire,E07000099,E69000016
+2023,2025,Three Rivers,Hertfordshire,E07000102,E69000016
+2023,2025,Watford,Hertfordshire,E07000103,E69000016
+2023,2025,St Albans,Hertfordshire,E07000240,E69000016
+2023,2025,Welwyn Hatfield,Hertfordshire,E07000241,E69000016
+2023,2025,East Hertfordshire,Hertfordshire,E07000242,E69000016
+2023,2025,Stevenage,Hertfordshire,E07000243,E69000016
+2023,2025,"Kingston upon Hull, City of",Hull and East Yorkshire,E06000010,E69000017
+2023,2025,East Riding of Yorkshire,Hull and East Yorkshire,E06000011,E69000017
+2023,2025,Medway,Kent and Medway,E06000035,E69000018
+2023,2025,Ashford,Kent and Medway,E07000105,E69000018
+2023,2025,Canterbury,Kent and Medway,E07000106,E69000018
+2023,2025,Dartford,Kent and Medway,E07000107,E69000018
+2023,2025,Dover,Kent and Medway,E07000108,E69000018
+2023,2025,Gravesham,Kent and Medway,E07000109,E69000018
+2023,2025,Maidstone,Kent and Medway,E07000110,E69000018
+2023,2025,Sevenoaks,Kent and Medway,E07000111,E69000018
+2023,2025,Folkestone and Hythe,Kent and Medway,E07000112,E69000018
+2023,2025,Swale,Kent and Medway,E07000113,E69000018
+2023,2025,Thanet,Kent and Medway,E07000114,E69000018
+2023,2025,Tonbridge and Malling,Kent and Medway,E07000115,E69000018
+2023,2025,Tunbridge Wells,Kent and Medway,E07000116,E69000018
+2023,2025,Blackburn with Darwen,Lancashire,E06000008,E69000019
+2023,2025,Blackpool,Lancashire,E06000009,E69000019
+2023,2025,Burnley,Lancashire,E07000117,E69000019
+2023,2025,Chorley,Lancashire,E07000118,E69000019
+2023,2025,Fylde,Lancashire,E07000119,E69000019
+2023,2025,Hyndburn,Lancashire,E07000120,E69000019
+2023,2025,Lancaster,Lancashire,E07000121,E69000019
+2023,2025,Pendle,Lancashire,E07000122,E69000019
+2023,2025,Preston,Lancashire,E07000123,E69000019
+2023,2025,Ribble Valley,Lancashire,E07000124,E69000019
+2023,2025,Rossendale,Lancashire,E07000125,E69000019
+2023,2025,South Ribble,Lancashire,E07000126,E69000019
+2023,2025,West Lancashire,Lancashire,E07000127,E69000019
+2023,2025,Wyre,Lancashire,E07000128,E69000019
+2023,2025,Halton,Liverpool City Region,E06000006,E69000021
+2023,2025,Knowsley,Liverpool City Region,E08000011,E69000021
+2023,2025,Liverpool,Liverpool City Region,E08000012,E69000021
+2023,2025,St. Helens,Liverpool City Region,E08000013,E69000021
+2023,2025,Sefton,Liverpool City Region,E08000014,E69000021
+2023,2025,Wirral,Liverpool City Region,E08000015,E69000021
+2023,2025,Cherwell,Oxfordshire,E07000177,E69000025
+2023,2025,Oxford,Oxfordshire,E07000178,E69000025
+2023,2025,South Oxfordshire,Oxfordshire,E07000179,E69000025
+2023,2025,Vale of White Horse,Oxfordshire,E07000180,E69000025
+2023,2025,West Oxfordshire,Oxfordshire,E07000181,E69000025
+2023,2025,Luton,South-East Midlands,E06000032,E69000027
+2023,2025,Milton Keynes,South-East Midlands,E06000042,E69000027
+2023,2025,Bedford,South-East Midlands,E06000055,E69000027
+2023,2025,Central Bedfordshire,South-East Midlands,E06000056,E69000027
+2023,2025,North Northamptonshire,South-East Midlands,E06000061,E69000027
+2023,2025,West Northamptonshire,South-East Midlands,E06000062,E69000027
+2023,2025,Doncaster,South Yorkshire,E08000017,E69000028
+2023,2025,Rotherham,South Yorkshire,E08000018,E69000028
+2023,2025,Stoke-on-Trent,Stoke-on-Trent and Staffordshire,E06000021,E69000029
+2023,2025,Cannock Chase,Stoke-on-Trent and Staffordshire,E07000192,E69000029
+2023,2025,East Staffordshire,Stoke-on-Trent and Staffordshire,E07000193,E69000029
+2023,2025,Lichfield,Stoke-on-Trent and Staffordshire,E07000194,E69000029
+2023,2025,Newcastle-under-Lyme,Stoke-on-Trent and Staffordshire,E07000195,E69000029
+2023,2025,South Staffordshire,Stoke-on-Trent and Staffordshire,E07000196,E69000029
+2023,2025,Stafford,Stoke-on-Trent and Staffordshire,E07000197,E69000029
+2023,2025,Staffordshire Moorlands,Stoke-on-Trent and Staffordshire,E07000198,E69000029
+2023,2025,Tamworth,Stoke-on-Trent and Staffordshire,E07000199,E69000029
+2023,2025,Swindon,Swindon and Wiltshire,E06000030,E69000030
+2023,2025,Wiltshire,Swindon and Wiltshire,E06000054,E69000030
+2023,2025,Hartlepool,Tees Valley,E06000001,E69000031
+2023,2025,Middlesbrough,Tees Valley,E06000002,E69000031
+2023,2025,Redcar and Cleveland,Tees Valley,E06000003,E69000031
+2023,2025,Stockton-on-Tees,Tees Valley,E06000004,E69000031
+2023,2025,Darlington,Tees Valley,E06000005,E69000031
+2023,2025,Bracknell Forest,Thames Valley Berkshire,E06000036,E69000032
+2023,2025,West Berkshire,Thames Valley Berkshire,E06000037,E69000032
+2023,2025,Reading,Thames Valley Berkshire,E06000038,E69000032
+2023,2025,Slough,Thames Valley Berkshire,E06000039,E69000032
+2023,2025,Windsor and Maidenhead,Thames Valley Berkshire,E06000040,E69000032
+2023,2025,Wokingham,Thames Valley Berkshire,E06000041,E69000032
+2023,2025,"Herefordshire, County of",The Marches,E06000019,E69000033
+2023,2025,Telford and Wrekin,The Marches,E06000020,E69000033
+2023,2025,Shropshire,The Marches,E06000051,E69000033
+2023,2025,Bromsgrove,Worcestershire,E07000234,E69000035
+2023,2025,Malvern Hills,Worcestershire,E07000235,E69000035
+2023,2025,Redditch,Worcestershire,E07000236,E69000035
+2023,2025,Worcester,Worcestershire,E07000237,E69000035
+2023,2025,Wychavon,Worcestershire,E07000238,E69000035
+2023,2025,Wyre Forest,Worcestershire,E07000239,E69000035
+2023,2025,Bath and North East Somerset,West of England and North Somerset,E06000022,E69000036
+2023,2025,"Bristol, City of",West of England and North Somerset,E06000023,E69000036
+2023,2025,North Somerset,West of England and North Somerset,E06000024,E69000036
+2023,2025,South Gloucestershire,West of England and North Somerset,E06000025,E69000036
+2023,2025,Bradford,West Yorkshire,E08000032,E69000037
+2023,2025,Calderdale,West Yorkshire,E08000033,E69000037
+2023,2025,Kirklees,West Yorkshire,E08000034,E69000037
+2023,2025,Leeds,West Yorkshire,E08000035,E69000037
+2023,2025,Wakefield,West Yorkshire,E08000036,E69000037
+2023,2025,York,York and North Yorkshire,E06000014,E69000038
+2023,2025,North Yorkshire,York and North Yorkshire,E06000065,E69000038
+2025,2025,Brighton and Hove,Sussex and Brighton,E06000043,E69000001
+2025,2025,Eastbourne,Sussex and Brighton,E07000061,E69000001
+2025,2025,Hastings,Sussex and Brighton,E07000062,E69000001
+2025,2025,Lewes,Sussex and Brighton,E07000063,E69000001
+2025,2025,Rother,Sussex and Brighton,E07000064,E69000001
+2025,2025,Wealden,Sussex and Brighton,E07000065,E69000001
+2025,2025,Adur,Sussex and Brighton,E07000223,E69000001
+2025,2025,Arun,Sussex and Brighton,E07000224,E69000001
+2025,2025,Chichester,Sussex and Brighton,E07000225,E69000001
+2025,2025,Crawley,Sussex and Brighton,E07000226,E69000001
+2025,2025,Horsham,Sussex and Brighton,E07000227,E69000001
+2025,2025,Mid Sussex,Sussex and Brighton,E07000228,E69000001
+2025,2025,Worthing,Sussex and Brighton,E07000229,E69000001
+2025,2025,Derby,East Midlands,E06000015,E69000007
+2025,2025,Nottingham,East Midlands,E06000018,E69000007
+2025,2025,Amber Valley,East Midlands,E07000032,E69000007
+2025,2025,Bolsover,East Midlands,E07000033,E69000007
+2025,2025,Chesterfield,East Midlands,E07000034,E69000007
+2025,2025,Derbyshire Dales,East Midlands,E07000035,E69000007
+2025,2025,Erewash,East Midlands,E07000036,E69000007
+2025,2025,High Peak,East Midlands,E07000037,E69000007
+2025,2025,North East Derbyshire,East Midlands,E07000038,E69000007
+2025,2025,South Derbyshire,East Midlands,E07000039,E69000007
+2025,2025,Ashfield,East Midlands,E07000170,E69000007
+2025,2025,Bassetlaw,East Midlands,E07000171,E69000007
+2025,2025,Broxtowe,East Midlands,E07000172,E69000007
+2025,2025,Gedling,East Midlands,E07000173,E69000007
+2025,2025,Mansfield,East Midlands,E07000174,E69000007
+2025,2025,Newark and Sherwood,East Midlands,E07000175,E69000007
+2025,2025,Rushcliffe,East Midlands,E07000176,E69000007
+2025,2025,Southend-on-Sea,Greater Essex,E06000033,E69000010
+2025,2025,Thurrock,Greater Essex,E06000034,E69000010
+2025,2025,Basildon,Greater Essex,E07000066,E69000010
+2025,2025,Braintree,Greater Essex,E07000067,E69000010
+2025,2025,Brentwood,Greater Essex,E07000068,E69000010
+2025,2025,Castle Point,Greater Essex,E07000069,E69000010
+2025,2025,Chelmsford,Greater Essex,E07000070,E69000010
+2025,2025,Colchester,Greater Essex,E07000071,E69000010
+2025,2025,Epping Forest,Greater Essex,E07000072,E69000010
+2025,2025,Harlow,Greater Essex,E07000073,E69000010
+2025,2025,Maldon,Greater Essex,E07000074,E69000010
+2025,2025,Rochford,Greater Essex,E07000075,E69000010
+2025,2025,Tendring,Greater Essex,E07000076,E69000010
+2025,2025,Uttlesford,Greater Essex,E07000077,E69000010
+2025,2025,Southwark,Central London Forward,E09000028,E69000039
+2025,2025,Tower Hamlets,Central London Forward,E09000030,E69000039
+2025,2025,Wandsworth,Central London Forward,E09000032,E69000039
+2025,2025,Westminster,Central London Forward,E09000033,E69000039
+2025,2025,City of London,Central London Forward,E09000001,E69000039
+2025,2025,Camden,Central London Forward,E09000007,E69000039
+2025,2025,Hackney,Central London Forward,E09000012,E69000039
+2025,2025,Haringey,Central London Forward,E09000014,E69000039
+2025,2025,Islington,Central London Forward,E09000019,E69000039
+2025,2025,Kensington and Chelsea,Central London Forward,E09000020,E69000039
+2025,2025,Lambeth,Central London Forward,E09000022,E69000039
+2025,2025,Lewisham,Central London Forward,E09000023,E69000039
+2025,2025,Plymouth,Greater Devon,E06000026,E69000040
+2025,2025,Torbay,Greater Devon,E06000027,E69000040
+2025,2025,East Devon,Greater Devon,E07000040,E69000040
+2025,2025,Exeter,Greater Devon,E07000041,E69000040
+2025,2025,Mid Devon,Greater Devon,E07000042,E69000040
+2025,2025,North Devon,Greater Devon,E07000043,E69000040
+2025,2025,South Hams,Greater Devon,E07000044,E69000040
+2025,2025,Teignbridge,Greater Devon,E07000045,E69000040
+2025,2025,Torridge,Greater Devon,E07000046,E69000040
+2025,2025,West Devon,Greater Devon,E07000047,E69000040
+2025,2025,North East Lincolnshire,Greater Lincolnshire,E06000012,E69000041
+2025,2025,North Lincolnshire,Greater Lincolnshire,E06000013,E69000041
+2025,2025,Boston,Greater Lincolnshire,E07000136,E69000041
+2025,2025,East Lindsey,Greater Lincolnshire,E07000137,E69000041
+2025,2025,Lincoln,Greater Lincolnshire,E07000138,E69000041
+2025,2025,North Kesteven,Greater Lincolnshire,E07000139,E69000041
+2025,2025,South Holland,Greater Lincolnshire,E07000140,E69000041
+2025,2025,South Kesteven,Greater Lincolnshire,E07000141,E69000041
+2025,2025,West Lindsey,Greater Lincolnshire,E07000142,E69000041
+2025,2025,Basingstoke and Deane,Hampshire and the Solent,E07000084,E69000042
+2025,2025,East Hampshire,Hampshire and the Solent,E07000085,E69000042
+2025,2025,Hart,Hampshire and the Solent,E07000089,E69000042
+2025,2025,Rushmoor,Hampshire and the Solent,E07000092,E69000042
+2025,2025,Test Valley,Hampshire and the Solent,E07000093,E69000042
+2025,2025,Winchester,Hampshire and the Solent,E07000094,E69000042
+2025,2025,Portsmouth,Hampshire and the Solent,E06000044,E69000042
+2025,2025,Southampton,Hampshire and the Solent,E06000045,E69000042
+2025,2025,Isle of Wight,Hampshire and the Solent,E06000046,E69000042
+2025,2025,Eastleigh,Hampshire and the Solent,E07000086,E69000042
+2025,2025,Fareham,Hampshire and the Solent,E07000087,E69000042
+2025,2025,Gosport,Hampshire and the Solent,E07000088,E69000042
+2025,2025,Havant,Hampshire and the Solent,E07000090,E69000042
+2025,2025,New Forest,Hampshire and the Solent,E07000091,E69000042
+2025,2025,Rutland,"Leicester, Leicestershire and Rutland",E06000017,E69000043
+2025,2025,Leicester,"Leicester, Leicestershire and Rutland",E06000016,E69000043
+2025,2025,Blaby,"Leicester, Leicestershire and Rutland",E07000129,E69000043
+2025,2025,Charnwood,"Leicester, Leicestershire and Rutland",E07000130,E69000043
+2025,2025,Harborough,"Leicester, Leicestershire and Rutland",E07000131,E69000043
+2025,2025,Cheltenham,Gloucestershire,E07000078,E69000011
+2025,2025,Cotswold,Gloucestershire,E07000079,E69000011
+2025,2025,Forest of Dean,Gloucestershire,E07000080,E69000011
+2025,2025,Gloucester,Gloucestershire,E07000081,E69000011
+2025,2025,Stroud,Gloucestershire,E07000082,E69000011
+2025,2025,Tewkesbury,Gloucestershire,E07000083,E69000011
+2025,2025,Hinckley and Bosworth,"Leicester, Leicestershire and Rutland",E07000132,E69000043
+2025,2025,Melton,"Leicester, Leicestershire and Rutland",E07000133,E69000043
+2025,2025,North West Leicestershire,"Leicester, Leicestershire and Rutland",E07000134,E69000043
+2025,2025,Oadby and Wigston,"Leicester, Leicestershire and Rutland",E07000135,E69000043
+2025,2025,Waltham Forest,Local London,E09000031,E69000044
+2025,2025,Barking and Dagenham,Local London,E09000002,E69000044
+2025,2025,Bexley,Local London,E09000004,E69000044
+2025,2025,Bromley,Local London,E09000006,E69000044
+2025,2025,Enfield,Local London,E09000010,E69000044
+2025,2025,Greenwich,Local London,E09000011,E69000044
+2025,2025,Havering,Local London,E09000016,E69000044
+2025,2025,Newham,Local London,E09000025,E69000044
+2025,2025,Redbridge,Local London,E09000026,E69000044
+2025,2025,County Durham,North East,E06000047,E69000045
+2025,2025,South Tyneside,North East,E08000023,E69000045
+2025,2025,Sunderland,North East,E08000024,E69000045
+2025,2025,Gateshead,North East,E08000037,E69000045
+2025,2025,Northumberland,North East,E06000057,E69000045
+2025,2025,Newcastle upon Tyne,North East,E08000021,E69000045
+2025,2025,North Tyneside,North East,E08000022,E69000045
+2025,2025,Somerset,Somerset,E06000066,E69000046
+2025,2025,Sutton,South London Partnership,E09000029,E69000047
+2025,2025,Croydon,South London Partnership,E09000008,E69000047
+2025,2025,Kingston upon Thames,South London Partnership,E09000021,E69000047
+2025,2025,Merton,South London Partnership,E09000024,E69000047
+2025,2025,Richmond upon Thames,South London Partnership,E09000027,E69000047
+2025,2025,Elmbridge,Surrey,E07000207,E69000048
+2025,2025,Epsom and Ewell,Surrey,E07000208,E69000048
+2025,2025,Guildford,Surrey,E07000209,E69000048
+2025,2025,Mole Valley,Surrey,E07000210,E69000048
+2025,2025,Reigate and Banstead,Surrey,E07000211,E69000048
+2025,2025,Runnymede,Surrey,E07000212,E69000048
+2025,2025,Spelthorne,Surrey,E07000213,E69000048
+2025,2025,Surrey Heath,Surrey,E07000214,E69000048
+2025,2025,Tandridge,Surrey,E07000215,E69000048
+2025,2025,Waverley,Surrey,E07000216,E69000048
+2025,2025,Woking,Surrey,E07000217,E69000048
+2025,2025,North Warwickshire,Warwickshire,E07000218,E69000049
+2025,2025,Nuneaton and Bedworth,Warwickshire,E07000219,E69000049
+2025,2025,Rugby,Warwickshire,E07000220,E69000049
+2025,2025,Stratford-on-Avon,Warwickshire,E07000221,E69000049
+2025,2025,Warwick,Warwickshire,E07000222,E69000049
+2025,2025,Barnet,West London Alliance,E09000003,E69000050
+2025,2025,Brent,West London Alliance,E09000005,E69000050
+2025,2025,Ealing,West London Alliance,E09000009,E69000050
+2025,2025,Hammersmith and Fulham,West London Alliance,E09000013,E69000050
+2025,2025,Harrow,West London Alliance,E09000015,E69000050
+2025,2025,Hillingdon,West London Alliance,E09000017,E69000050
+2025,2025,Hounslow,West London Alliance,E09000018,E69000050
+2025,2025,Birmingham,West Midlands,E08000025,E69000051
+2025,2025,Coventry,West Midlands,E08000026,E69000051
+2025,2025,Dudley,West Midlands,E08000027,E69000051
+2025,2025,Sandwell,West Midlands,E08000028,E69000051
+2025,2025,Solihull,West Midlands,E08000029,E69000051
+2025,2025,Walsall,West Midlands,E08000030,E69000051
+2025,2025,Wolverhampton,West Midlands,E08000031,E69000051
+2025,2025,Breckland,Norfolk and Suffolk,E07000143,E69000022
+2025,2025,Broadland,Norfolk and Suffolk,E07000144,E69000022
+2025,2025,Great Yarmouth,Norfolk and Suffolk,E07000145,E69000022
+2025,2025,King's Lynn and West Norfolk,Norfolk and Suffolk,E07000146,E69000022
+2025,2025,North Norfolk,Norfolk and Suffolk,E07000147,E69000022
+2025,2025,Norwich,Norfolk and Suffolk,E07000148,E69000022
+2025,2025,South Norfolk,Norfolk and Suffolk,E07000149,E69000022
+2025,2025,Babergh,Norfolk and Suffolk,E07000200,E69000022
+2025,2025,Ipswich,Norfolk and Suffolk,E07000202,E69000022
+2025,2025,Mid Suffolk,Norfolk and Suffolk,E07000203,E69000022
+2025,2025,East Suffolk,Norfolk and Suffolk,E07000244,E69000022
+2025,2025,West Suffolk,Norfolk and Suffolk,E07000245,E69000022
+2025,2025,Barnsley,South Yorkshire,E08000038,E69000028
+2025,2025,Sheffield,South Yorkshire,E08000039,E69000028
+2023,2023,Brighton and Hove,"Brighton and Hove, East Sussex, West Sussex",E06000043,E69000001
+2023,2023,Eastbourne,"Brighton and Hove, East Sussex, West Sussex",E07000061,E69000001
+2023,2023,Hastings,"Brighton and Hove, East Sussex, West Sussex",E07000062,E69000001
+2023,2023,Lewes,"Brighton and Hove, East Sussex, West Sussex",E07000063,E69000001
+2023,2023,Rother,"Brighton and Hove, East Sussex, West Sussex",E07000064,E69000001
+2023,2023,Wealden,"Brighton and Hove, East Sussex, West Sussex",E07000065,E69000001
+2023,2023,Adur,"Brighton and Hove, East Sussex, West Sussex",E07000223,E69000001
+2023,2023,Arun,"Brighton and Hove, East Sussex, West Sussex",E07000224,E69000001
+2023,2023,Chichester,"Brighton and Hove, East Sussex, West Sussex",E07000225,E69000001
+2023,2023,Crawley,"Brighton and Hove, East Sussex, West Sussex",E07000226,E69000001
+2023,2023,Horsham,"Brighton and Hove, East Sussex, West Sussex",E07000227,E69000001
+2023,2023,Mid Sussex,"Brighton and Hove, East Sussex, West Sussex",E07000228,E69000001
+2023,2023,Worthing,"Brighton and Hove, East Sussex, West Sussex",E07000229,E69000001
+2023,2023,Derby,Derbyshire and Nottinghamshire,E06000015,E69000007
+2023,2023,Nottingham,Derbyshire and Nottinghamshire,E06000018,E69000007
+2023,2023,Amber Valley,Derbyshire and Nottinghamshire,E07000032,E69000007
+2023,2023,Bolsover,Derbyshire and Nottinghamshire,E07000033,E69000007
+2023,2023,Chesterfield,Derbyshire and Nottinghamshire,E07000034,E69000007
+2023,2023,Derbyshire Dales,Derbyshire and Nottinghamshire,E07000035,E69000007
+2023,2023,Erewash,Derbyshire and Nottinghamshire,E07000036,E69000007
+2023,2023,High Peak,Derbyshire and Nottinghamshire,E07000037,E69000007
+2023,2023,North East Derbyshire,Derbyshire and Nottinghamshire,E07000038,E69000007
+2023,2023,South Derbyshire,Derbyshire and Nottinghamshire,E07000039,E69000007
+2023,2023,Ashfield,Derbyshire and Nottinghamshire,E07000170,E69000007
+2023,2023,Bassetlaw,Derbyshire and Nottinghamshire,E07000171,E69000007
+2023,2023,Broxtowe,Derbyshire and Nottinghamshire,E07000172,E69000007
+2023,2023,Gedling,Derbyshire and Nottinghamshire,E07000173,E69000007
+2023,2023,Mansfield,Derbyshire and Nottinghamshire,E07000174,E69000007
+2023,2023,Newark and Sherwood,Derbyshire and Nottinghamshire,E07000175,E69000007
+2023,2023,Rushcliffe,Derbyshire and Nottinghamshire,E07000176,E69000007
+2023,2023,Basingstoke and Deane,Enterprise M3,E07000084,E69000009
+2023,2023,East Hampshire,Enterprise M3,E07000085,E69000009
+2023,2023,Hart,Enterprise M3,E07000089,E69000009
+2023,2023,Rushmoor,Enterprise M3,E07000092,E69000009
+2023,2023,Test Valley,Enterprise M3,E07000093,E69000009
+2023,2023,Winchester,Enterprise M3,E07000094,E69000009
+2023,2023,Elmbridge,Enterprise M3,E07000207,E69000009
+2023,2023,Epsom and Ewell,Enterprise M3,E07000208,E69000009
+2023,2023,Guildford,Enterprise M3,E07000209,E69000009
+2023,2023,Mole Valley,Enterprise M3,E07000210,E69000009
+2023,2023,Reigate and Banstead,Enterprise M3,E07000211,E69000009
+2023,2023,Runnymede,Enterprise M3,E07000212,E69000009
+2023,2023,Spelthorne,Enterprise M3,E07000213,E69000009
+2023,2023,Surrey Heath,Enterprise M3,E07000214,E69000009
+2023,2023,Tandridge,Enterprise M3,E07000215,E69000009
+2023,2023,Waverley,Enterprise M3,E07000216,E69000009
+2023,2023,Woking,Enterprise M3,E07000217,E69000009
+2023,2023,Southend-on-Sea,"Essex, Southend-on-Sea and Thurrock",E06000033,E69000010
+2023,2023,Thurrock,"Essex, Southend-on-Sea and Thurrock",E06000034,E69000010
+2023,2023,Basildon,"Essex, Southend-on-Sea and Thurrock",E07000066,E69000010
+2023,2023,Braintree,"Essex, Southend-on-Sea and Thurrock",E07000067,E69000010
+2023,2023,Brentwood,"Essex, Southend-on-Sea and Thurrock",E07000068,E69000010
+2023,2023,Castle Point,"Essex, Southend-on-Sea and Thurrock",E07000069,E69000010
+2023,2023,Chelmsford,"Essex, Southend-on-Sea and Thurrock",E07000070,E69000010
+2023,2023,Colchester,"Essex, Southend-on-Sea and Thurrock",E07000071,E69000010
+2023,2023,Epping Forest,"Essex, Southend-on-Sea and Thurrock",E07000072,E69000010
+2023,2023,Harlow,"Essex, Southend-on-Sea and Thurrock",E07000073,E69000010
+2023,2023,Maldon,"Essex, Southend-on-Sea and Thurrock",E07000074,E69000010
+2023,2023,Rochford,"Essex, Southend-on-Sea and Thurrock",E07000075,E69000010
+2023,2023,Tendring,"Essex, Southend-on-Sea and Thurrock",E07000076,E69000010
+2023,2023,Uttlesford,"Essex, Southend-on-Sea and Thurrock",E07000077,E69000010
+2023,2023,Cheltenham,G First (Gloucestershire),E07000078,E69000011
+2023,2023,Cotswold,G First (Gloucestershire),E07000079,E69000011
+2023,2023,Forest of Dean,G First (Gloucestershire),E07000080,E69000011
+2023,2023,Gloucester,G First (Gloucestershire),E07000081,E69000011
+2023,2023,Stroud,G First (Gloucestershire),E07000082,E69000011
+2023,2023,Tewkesbury,G First (Gloucestershire),E07000083,E69000011
+2023,2023,North East Lincolnshire,Greater Lincolnshire,E06000012,E69000012
+2023,2023,North Lincolnshire,Greater Lincolnshire,E06000013,E69000012
+2023,2023,Rutland,Greater Lincolnshire,E06000017,E69000012
+2023,2023,Boston,Greater Lincolnshire,E07000136,E69000012
+2023,2023,East Lindsey,Greater Lincolnshire,E07000137,E69000012
+2023,2023,Lincoln,Greater Lincolnshire,E07000138,E69000012
+2023,2023,North Kesteven,Greater Lincolnshire,E07000139,E69000012
+2023,2023,South Holland,Greater Lincolnshire,E07000140,E69000012
+2023,2023,South Kesteven,Greater Lincolnshire,E07000141,E69000012
+2023,2023,West Lindsey,Greater Lincolnshire,E07000142,E69000012
+2023,2023,City of London,Greater London,E09000001,E69000013
+2023,2023,Barking and Dagenham,Greater London,E09000002,E69000013
+2023,2023,Barnet,Greater London,E09000003,E69000013
+2023,2023,Bexley,Greater London,E09000004,E69000013
+2023,2023,Brent,Greater London,E09000005,E69000013
+2023,2023,Bromley,Greater London,E09000006,E69000013
+2023,2023,Camden,Greater London,E09000007,E69000013
+2023,2023,Croydon,Greater London,E09000008,E69000013
+2023,2023,Ealing,Greater London,E09000009,E69000013
+2023,2023,Enfield,Greater London,E09000010,E69000013
+2023,2023,Greenwich,Greater London,E09000011,E69000013
+2023,2023,Hackney,Greater London,E09000012,E69000013
+2023,2023,Hammersmith and Fulham,Greater London,E09000013,E69000013
+2023,2023,Haringey,Greater London,E09000014,E69000013
+2023,2023,Harrow,Greater London,E09000015,E69000013
+2023,2023,Havering,Greater London,E09000016,E69000013
+2023,2023,Hillingdon,Greater London,E09000017,E69000013
+2023,2023,Hounslow,Greater London,E09000018,E69000013
+2023,2023,Islington,Greater London,E09000019,E69000013
+2023,2023,Kensington and Chelsea,Greater London,E09000020,E69000013
+2023,2023,Kingston upon Thames,Greater London,E09000021,E69000013
+2023,2023,Lambeth,Greater London,E09000022,E69000013
+2023,2023,Lewisham,Greater London,E09000023,E69000013
+2023,2023,Merton,Greater London,E09000024,E69000013
+2023,2023,Newham,Greater London,E09000025,E69000013
+2023,2023,Redbridge,Greater London,E09000026,E69000013
+2023,2023,Richmond upon Thames,Greater London,E09000027,E69000013
+2023,2023,Southwark,Greater London,E09000028,E69000013
+2023,2023,Sutton,Greater London,E09000029,E69000013
+2023,2023,Tower Hamlets,Greater London,E09000030,E69000013
+2023,2023,Waltham Forest,Greater London,E09000031,E69000013
+2023,2023,Wandsworth,Greater London,E09000032,E69000013
+2023,2023,Westminster,Greater London,E09000033,E69000013
+2023,2023,Plymouth,Heart of the South-West,E06000026,E69000015
+2023,2023,Torbay,Heart of the South-West,E06000027,E69000015
+2023,2023,Somerset,Heart of the South-West,E06000066,E69000015
+2023,2023,East Devon,Heart of the South-West,E07000040,E69000015
+2023,2023,Exeter,Heart of the South-West,E07000041,E69000015
+2023,2023,Mid Devon,Heart of the South-West,E07000042,E69000015
+2023,2023,North Devon,Heart of the South-West,E07000043,E69000015
+2023,2023,South Hams,Heart of the South-West,E07000044,E69000015
+2023,2023,Teignbridge,Heart of the South-West,E07000045,E69000015
+2023,2023,Torridge,Heart of the South-West,E07000046,E69000015
+2023,2023,West Devon,Heart of the South-West,E07000047,E69000015
+2023,2023,Leicester,Leicester and Leicestershire,E06000016,E69000020
+2023,2023,Blaby,Leicester and Leicestershire,E07000129,E69000020
+2023,2023,Charnwood,Leicester and Leicestershire,E07000130,E69000020
+2023,2023,Harborough,Leicester and Leicestershire,E07000131,E69000020
+2023,2023,Hinckley and Bosworth,Leicester and Leicestershire,E07000132,E69000020
+2023,2023,Melton,Leicester and Leicestershire,E07000133,E69000020
+2023,2023,North West Leicestershire,Leicester and Leicestershire,E07000134,E69000020
+2023,2023,Oadby and Wigston,Leicester and Leicestershire,E07000135,E69000020
+2023,2023,Breckland,New Anglia,E07000143,E69000022
+2023,2023,Broadland,New Anglia,E07000144,E69000022
+2023,2023,Great Yarmouth,New Anglia,E07000145,E69000022
+2023,2023,King's Lynn and West Norfolk,New Anglia,E07000146,E69000022
+2023,2023,North Norfolk,New Anglia,E07000147,E69000022
+2023,2023,Norwich,New Anglia,E07000148,E69000022
+2023,2023,South Norfolk,New Anglia,E07000149,E69000022
+2023,2023,Babergh,New Anglia,E07000200,E69000022
+2023,2023,Ipswich,New Anglia,E07000202,E69000022
+2023,2023,Mid Suffolk,New Anglia,E07000203,E69000022
+2023,2023,East Suffolk,New Anglia,E07000244,E69000022
+2023,2023,West Suffolk,New Anglia,E07000245,E69000022
+2023,2023,County Durham,North East,E06000047,E69000023
+2023,2023,South Tyneside,North East,E08000023,E69000023
+2023,2023,Sunderland,North East,E08000024,E69000023
+2023,2023,Gateshead,North East,E08000037,E69000023
+2023,2023,Northumberland,North of Tyne,E06000057,E69000024
+2023,2023,Newcastle upon Tyne,North of Tyne,E08000021,E69000024
+2023,2023,North Tyneside,North of Tyne,E08000022,E69000024
+2023,2023,Portsmouth,Solent,E06000044,E69000026
+2023,2023,Southampton,Solent,E06000045,E69000026
+2023,2023,Isle of Wight,Solent,E06000046,E69000026
+2023,2023,Eastleigh,Solent,E07000086,E69000026
+2023,2023,Fareham,Solent,E07000087,E69000026
+2023,2023,Gosport,Solent,E07000088,E69000026
+2023,2023,Havant,Solent,E07000090,E69000026
+2023,2023,New Forest,Solent,E07000091,E69000026
+2023,2023,Barnsley,South Yorkshire,E08000016,E69000028
+2023,2023,Sheffield,South Yorkshire,E08000019,E69000028
+2023,2023,North Warwickshire,West Midlands and Warwickshire,E07000218,E69000034
+2023,2023,Nuneaton and Bedworth,West Midlands and Warwickshire,E07000219,E69000034
+2023,2023,Rugby,West Midlands and Warwickshire,E07000220,E69000034
+2023,2023,Stratford-on-Avon,West Midlands and Warwickshire,E07000221,E69000034
+2023,2023,Warwick,West Midlands and Warwickshire,E07000222,E69000034
+2023,2023,Birmingham,West Midlands and Warwickshire,E08000025,E69000034
+2023,2023,Coventry,West Midlands and Warwickshire,E08000026,E69000034
+2023,2023,Dudley,West Midlands and Warwickshire,E08000027,E69000034
+2023,2023,Sandwell,West Midlands and Warwickshire,E08000028,E69000034
+2023,2023,Solihull,West Midlands and Warwickshire,E08000029,E69000034
+2023,2023,Walsall,West Midlands and Warwickshire,E08000030,E69000034
+2023,2023,Wolverhampton,West Midlands and Warwickshire,E08000031,E69000034
