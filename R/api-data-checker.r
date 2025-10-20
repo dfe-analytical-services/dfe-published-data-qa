@@ -3,7 +3,7 @@
 # a set of data files and sort them into a data-dictionary structure with
 # flags as to whether they're currently in the data dictionary or not.
 
-checker_example_run <- function(dir = "tests/testthat/test-data/") {
+checker_dir_run <- function(dir = "tests/testthat/test-data/") {
   files <- list.files(dir)
   files <- paste0(dir, files[grepl(".csv", files) & !grepl("meta", files)])
   listing <- api_data_checker(files)
