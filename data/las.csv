@@ -1,31 +1,72 @@
 new_la_code,la_name,date_of_operation,date_of_termination,parent_geography_code,entity_code,entity_description,status,old_la_code
-E09000008,Croydon,01/01/2009,,E12000007,E09,London Boroughs,live,306
-E09000009,Ealing,01/01/2009,,E12000007,E09,London Boroughs,live,307
-E09000010,Enfield,01/01/2009,,E12000007,E09,London Boroughs,live,308
-E09000011,Greenwich,01/01/2009,,E12000007,E09,London Boroughs,live,203
-E09000012,Hackney,01/01/2009,,E12000007,E09,London Boroughs,live,204
-E09000013,Hammersmith and Fulham,01/01/2009,,E12000007,E09,London Boroughs,live,205
-E09000014,Haringey,01/01/2009,,E12000007,E09,London Boroughs,live,309
-E09000015,Harrow,01/01/2009,,E12000007,E09,London Boroughs,live,310
-E09000016,Havering,01/01/2009,,E12000007,E09,London Boroughs,live,311
-E09000017,Hillingdon,01/01/2009,,E12000007,E09,London Boroughs,live,312
-E09000018,Hounslow,01/01/2009,,E12000007,E09,London Boroughs,live,313
-E09000019,Islington,01/01/2009,,E12000007,E09,London Boroughs,live,206
-E09000020,Kensington and Chelsea,01/01/2009,,E12000007,E09,London Boroughs,live,207
-E09000021,Kingston upon Thames,01/01/2009,,E12000007,E09,London Boroughs,live,314
-E09000022,Lambeth,01/01/2009,,E12000007,E09,London Boroughs,live,208
-E09000023,Lewisham,01/01/2009,,E12000007,E09,London Boroughs,live,209
-E09000024,Merton,01/01/2009,,E12000007,E09,London Boroughs,live,315
-E09000025,Newham,01/01/2009,,E12000007,E09,London Boroughs,live,316
-E09000026,Redbridge,01/01/2009,,E12000007,E09,London Boroughs,live,317
-E09000027,Richmond upon Thames,01/01/2009,,E12000007,E09,London Boroughs,live,318
-E09000021 / E09000027,Kingston upon Thames / Richmond upon Thames,01/01/2009,,E12000007,E09,London Boroughs,live,314 / 318
-E09000028,Southwark,01/01/2009,,E12000007,E09,London Boroughs,live,210
-E09000029,Sutton,01/01/2009,,E12000007,E09,London Boroughs,live,319
-E09000030,Tower Hamlets,01/01/2009,,E12000007,E09,London Boroughs,live,211
-E09000031,Waltham Forest,01/01/2009,,E12000007,E09,London Boroughs,live,320
-E09000032,Wandsworth,01/01/2009,,E12000007,E09,London Boroughs,live,212
-E09000033,Westminster,01/01/2009,,E12000007,E09,London Boroughs,live,213
+E06000001,Hartlepool,01/01/2009,,E12000001,E06,Unitary Authorities,live,805
+E06000002,Middlesbrough,01/01/2009,,E12000001,E06,Unitary Authorities,live,806
+E06000003,Redcar and Cleveland,01/01/2009,,E12000001,E06,Unitary Authorities,live,807
+E06000004,Stockton-on-Tees,01/01/2009,,E12000001,E06,Unitary Authorities,live,808
+E06000005,Darlington,01/01/2009,,E12000001,E06,Unitary Authorities,live,841
+E06000006,Halton,01/01/2009,,E12000002,E06,Unitary Authorities,live,876
+E06000007,Warrington,01/01/2009,,E12000002,E06,Unitary Authorities,live,877
+E06000008,Blackburn with Darwen,01/01/2009,,E12000002,E06,Unitary Authorities,live,889
+E06000009,Blackpool,01/01/2009,,E12000002,E06,Unitary Authorities,live,890
+E06000010,"Kingston upon Hull, City of",01/01/2009,,E12000003,E06,Unitary Authorities,live,810
+E06000011,East Riding of Yorkshire,01/01/2009,,E12000003,E06,Unitary Authorities,live,811
+E06000012,North East Lincolnshire,01/01/2009,,E12000003,E06,Unitary Authorities,live,812
+E06000013,North Lincolnshire,01/01/2009,,E12000003,E06,Unitary Authorities,live,813
+E06000014,York,01/01/2009,,E12000003,E06,Unitary Authorities,live,816
+E06000015,Derby,01/01/2009,,E12000004,E06,Unitary Authorities,live,831
+E06000016,Leicester,01/01/2009,,E12000004,E06,Unitary Authorities,live,856
+E06000017,Rutland,01/01/2009,,E12000004,E06,Unitary Authorities,live,857
+E06000018,Nottingham,01/01/2009,,E12000004,E06,Unitary Authorities,live,892
+E06000019,"Herefordshire, County of",01/01/2009,,E12000005,E06,Unitary Authorities,live,884
+E06000020,Telford and Wrekin,01/01/2009,,E12000005,E06,Unitary Authorities,live,894
+E06000021,Stoke-on-Trent,01/01/2009,,E12000005,E06,Unitary Authorities,live,861
+E06000022,Bath and North East Somerset,01/01/2009,,E12000009,E06,Unitary Authorities,live,800
+E06000023,"Bristol, City of",01/01/2009,,E12000009,E06,Unitary Authorities,live,801
+E06000024,North Somerset,01/01/2009,,E12000009,E06,Unitary Authorities,live,802
+E06000025,South Gloucestershire,01/01/2009,,E12000009,E06,Unitary Authorities,live,803
+E06000026,Plymouth,01/01/2009,,E12000009,E06,Unitary Authorities,live,879
+E06000027,Torbay,01/01/2009,,E12000009,E06,Unitary Authorities,live,880
+E06000028,Bournemouth,01/01/2009,31/03/2019,E12000009,E06,Unitary Authorities,terminated,837
+E06000029,Poole,01/01/2009,31/03/2019,E12000009,E06,Unitary Authorities,terminated,836
+E06000030,Swindon,01/01/2009,,E12000009,E06,Unitary Authorities,live,866
+E06000031,Peterborough,01/01/2009,,E12000006,E06,Unitary Authorities,live,874
+E06000032,Luton,01/01/2009,,E12000006,E06,Unitary Authorities,live,821
+E06000033,Southend-on-Sea,01/01/2009,,E12000006,E06,Unitary Authorities,live,882
+E06000034,Thurrock,01/01/2009,,E12000006,E06,Unitary Authorities,live,883
+E06000035,Medway,01/01/2009,,E12000008,E06,Unitary Authorities,live,887
+E06000036,Bracknell Forest,01/01/2009,,E12000008,E06,Unitary Authorities,live,867
+E06000037,West Berkshire,01/01/2009,,E12000008,E06,Unitary Authorities,live,869
+E06000038,Reading,01/01/2009,,E12000008,E06,Unitary Authorities,live,870
+E06000039,Slough,01/01/2009,,E12000008,E06,Unitary Authorities,live,871
+E06000040,Windsor and Maidenhead,01/01/2009,,E12000008,E06,Unitary Authorities,live,868
+E06000041,Wokingham,01/01/2009,,E12000008,E06,Unitary Authorities,live,872
+E06000042,Milton Keynes,01/01/2009,,E12000008,E06,Unitary Authorities,live,826
+E06000043,Brighton and Hove,01/01/2009,,E12000008,E06,Unitary Authorities,live,846
+E06000044,Portsmouth,01/01/2009,,E12000008,E06,Unitary Authorities,live,851
+E06000045,Southampton,01/01/2009,,E12000008,E06,Unitary Authorities,live,852
+E06000046,Isle of Wight,01/01/2009,,E12000008,E06,Unitary Authorities,live,921
+E06000047,County Durham,01/04/2009,,E12000001,E06,Unitary Authorities,live,840
+E06000048,Northumberland,01/04/2009,31/03/2013,E12000001,E06,Unitary Authorities,terminated,929
+E06000049,Cheshire East,01/04/2009,,E12000002,E06,Unitary Authorities,live,895
+E06000050,Cheshire West and Chester,01/04/2009,,E12000002,E06,Unitary Authorities,live,896
+E06000051,Shropshire,01/04/2009,,E12000005,E06,Unitary Authorities,live,893
+E06000052,Cornwall,01/04/2009,,E12000009,E06,Unitary Authorities,live,908
+E06000053,Isles of Scilly,01/04/2009,,E12000009,E06,Unitary Authorities,live,420
+E06000054,Wiltshire,01/04/2009,,E12000009,E06,Unitary Authorities,live,865
+E06000055,Bedford,01/04/2009,,E12000006,E06,Unitary Authorities,live,822
+E06000056,Central Bedfordshire,01/04/2009,,E12000006,E06,Unitary Authorities,live,823
+E06000057,Northumberland,01/04/2013,,E12000001,E06,Unitary Authorities,live,929
+E06000058,"Bournemouth, Christchurch and Poole",01/04/2019,,E12000009,E06,Unitary Authorities,live,839
+E06000059,Dorset,01/04/2019,,E12000009,E06,Unitary Authorities,live,838
+E06000060,Buckinghamshire,01/04/2020,,E12000008,E06,Unitary Authorities,live,825
+E06000061,North Northamptonshire,01/04/2021,,E12000004,E06,Unitary Authorities,live,940
+E06000061 / E06000062,North Northamptonshire / West Northamptonshire,01/04/2021,,E12000004,E06,Unitary Authorities,live,940 / 941
+E06000062,West Northamptonshire,01/04/2021,,E12000004,E06,Unitary Authorities,live,941
+E06000063,Cumberland,01/04/2023,,E12000002,E06,Unitary Authorities,live,942
+E06000063 / E06000064,Cumberland / Westmorland and Furness,01/04/2023,,E12000002,E06,Unitary Authorities,live,942 / 943
+E06000064,Westmorland and Furness,01/04/2023,,E12000002,E06,Unitary Authorities,live,943
+E06000065,North Yorkshire,01/04/2023,,E12000003,E06,Unitary Authorities,live,815
+E06000066,Somerset,01/04/2023,,E12000009,E06,Unitary Authorities,live,933
 E08000001,Bolton,01/01/2009,,E12000002,E08,Metropolitan Districts,live,350
 E08000002,Bury,01/01/2009,,E12000002,E08,Metropolitan Districts,live,351
 E08000003,Manchester,01/01/2009,,E12000002,E08,Metropolitan Districts,live,352
@@ -65,6 +106,40 @@ E08000036,Wakefield,01/01/2009,,E12000003,E08,Metropolitan Districts,live,384
 E08000037,Gateshead,01/04/2013,,E12000001,E08,Metropolitan Districts,live,390
 E08000038,Barnsley,01/05/2025,,E12000003,E08,Metropolitan Districts,live,370
 E08000039,Sheffield,01/05/2025,,E12000003,E08,Metropolitan Districts,live,373
+E09000001,City of London,01/01/2009,,E12000007,E09,London Boroughs,live,201
+E09000002,Barking and Dagenham,01/01/2009,,E12000007,E09,London Boroughs,live,301
+E09000003,Barnet,01/01/2009,,E12000007,E09,London Boroughs,live,302
+E09000004,Bexley,01/01/2009,,E12000007,E09,London Boroughs,live,303
+E09000005,Brent,01/01/2009,,E12000007,E09,London Boroughs,live,304
+E09000006,Bromley,01/01/2009,,E12000007,E09,London Boroughs,live,305
+E09000007,Camden,01/01/2009,,E12000007,E09,London Boroughs,live,202
+E09000008,Croydon,01/01/2009,,E12000007,E09,London Boroughs,live,306
+E09000009,Ealing,01/01/2009,,E12000007,E09,London Boroughs,live,307
+E09000010,Enfield,01/01/2009,,E12000007,E09,London Boroughs,live,308
+E09000011,Greenwich,01/01/2009,,E12000007,E09,London Boroughs,live,203
+E09000012,Hackney,01/01/2009,,E12000007,E09,London Boroughs,live,204
+E09000013,Hammersmith and Fulham,01/01/2009,,E12000007,E09,London Boroughs,live,205
+E09000014,Haringey,01/01/2009,,E12000007,E09,London Boroughs,live,309
+E09000015,Harrow,01/01/2009,,E12000007,E09,London Boroughs,live,310
+E09000016,Havering,01/01/2009,,E12000007,E09,London Boroughs,live,311
+E09000017,Hillingdon,01/01/2009,,E12000007,E09,London Boroughs,live,312
+E09000018,Hounslow,01/01/2009,,E12000007,E09,London Boroughs,live,313
+E09000019,Islington,01/01/2009,,E12000007,E09,London Boroughs,live,206
+E09000020,Kensington and Chelsea,01/01/2009,,E12000007,E09,London Boroughs,live,207
+E09000021,Kingston upon Thames,01/01/2009,,E12000007,E09,London Boroughs,live,314
+E09000021 / E09000027,Kingston upon Thames / Richmond upon Thames,01/01/2009,,E12000007,E09,London Boroughs,live,314 / 318
+E09000022,Lambeth,01/01/2009,,E12000007,E09,London Boroughs,live,208
+E09000023,Lewisham,01/01/2009,,E12000007,E09,London Boroughs,live,209
+E09000024,Merton,01/01/2009,,E12000007,E09,London Boroughs,live,315
+E09000025,Newham,01/01/2009,,E12000007,E09,London Boroughs,live,316
+E09000026,Redbridge,01/01/2009,,E12000007,E09,London Boroughs,live,317
+E09000027,Richmond upon Thames,01/01/2009,,E12000007,E09,London Boroughs,live,318
+E09000028,Southwark,01/01/2009,,E12000007,E09,London Boroughs,live,210
+E09000029,Sutton,01/01/2009,,E12000007,E09,London Boroughs,live,319
+E09000030,Tower Hamlets,01/01/2009,,E12000007,E09,London Boroughs,live,211
+E09000031,Waltham Forest,01/01/2009,,E12000007,E09,London Boroughs,live,320
+E09000032,Wandsworth,01/01/2009,,E12000007,E09,London Boroughs,live,212
+E09000033,Westminster,01/01/2009,,E12000007,E09,London Boroughs,live,213
 E10000001,Bedfordshire,01/01/2009,31/03/2009,E12000006,E10,Counties,terminated,x
 E10000002,Buckinghamshire,01/01/2009,31/03/2020,E12000008,E10,Counties,terminated,825
 E10000003,Cambridgeshire,01/01/2009,,E12000006,E10,Counties,live,873
@@ -99,79 +174,4 @@ E10000031,Warwickshire,01/01/2009,,E12000005,E10,Counties,live,937
 E10000032,West Sussex,01/01/2009,,E12000008,E10,Counties,live,938
 E10000033,Wiltshire,01/01/2009,31/03/2009,E12000009,E10,Counties,terminated,x
 E10000034,Worcestershire,01/01/2009,,E12000005,E10,Counties,live,885
-E06000032,Luton,01/01/2009,,E12000006,E06,Unitary Authorities,live,821
-E06000033,Southend-on-Sea,01/01/2009,,E12000006,E06,Unitary Authorities,live,882
-E06000034,Thurrock,01/01/2009,,E12000006,E06,Unitary Authorities,live,883
-E06000035,Medway,01/01/2009,,E12000008,E06,Unitary Authorities,live,887
-E06000036,Bracknell Forest,01/01/2009,,E12000008,E06,Unitary Authorities,live,867
-E06000037,West Berkshire,01/01/2009,,E12000008,E06,Unitary Authorities,live,869
-E06000038,Reading,01/01/2009,,E12000008,E06,Unitary Authorities,live,870
-E06000039,Slough,01/01/2009,,E12000008,E06,Unitary Authorities,live,871
-E06000040,Windsor and Maidenhead,01/01/2009,,E12000008,E06,Unitary Authorities,live,868
-E06000041,Wokingham,01/01/2009,,E12000008,E06,Unitary Authorities,live,872
-E06000042,Milton Keynes,01/01/2009,,E12000008,E06,Unitary Authorities,live,826
-E06000043,Brighton and Hove,01/01/2009,,E12000008,E06,Unitary Authorities,live,846
-E06000044,Portsmouth,01/01/2009,,E12000008,E06,Unitary Authorities,live,851
-E06000045,Southampton,01/01/2009,,E12000008,E06,Unitary Authorities,live,852
-E06000046,Isle of Wight,01/01/2009,,E12000008,E06,Unitary Authorities,live,921
-E09000001,City of London,01/01/2009,,E12000007,E09,London Boroughs,live,201
-E09000002,Barking and Dagenham,01/01/2009,,E12000007,E09,London Boroughs,live,301
-E09000003,Barnet,01/01/2009,,E12000007,E09,London Boroughs,live,302
-E09000004,Bexley,01/01/2009,,E12000007,E09,London Boroughs,live,303
-E09000005,Brent,01/01/2009,,E12000007,E09,London Boroughs,live,304
-E09000006,Bromley,01/01/2009,,E12000007,E09,London Boroughs,live,305
-E09000007,Camden,01/01/2009,,E12000007,E09,London Boroughs,live,202
-E06000001,Hartlepool,01/01/2009,,E12000001,E06,Unitary Authorities,live,805
-E06000002,Middlesbrough,01/01/2009,,E12000001,E06,Unitary Authorities,live,806
-E06000003,Redcar and Cleveland,01/01/2009,,E12000001,E06,Unitary Authorities,live,807
-E06000004,Stockton-on-Tees,01/01/2009,,E12000001,E06,Unitary Authorities,live,808
-E06000005,Darlington,01/01/2009,,E12000001,E06,Unitary Authorities,live,841
-E06000006,Halton,01/01/2009,,E12000002,E06,Unitary Authorities,live,876
-E06000007,Warrington,01/01/2009,,E12000002,E06,Unitary Authorities,live,877
-E06000008,Blackburn with Darwen,01/01/2009,,E12000002,E06,Unitary Authorities,live,889
-E06000009,Blackpool,01/01/2009,,E12000002,E06,Unitary Authorities,live,890
-E06000010,"Kingston upon Hull, City of",01/01/2009,,E12000003,E06,Unitary Authorities,live,810
-E06000011,East Riding of Yorkshire,01/01/2009,,E12000003,E06,Unitary Authorities,live,811
-E06000012,North East Lincolnshire,01/01/2009,,E12000003,E06,Unitary Authorities,live,812
-E06000013,North Lincolnshire,01/01/2009,,E12000003,E06,Unitary Authorities,live,813
-E06000014,York,01/01/2009,,E12000003,E06,Unitary Authorities,live,816
-E06000015,Derby,01/01/2009,,E12000004,E06,Unitary Authorities,live,831
-E06000016,Leicester,01/01/2009,,E12000004,E06,Unitary Authorities,live,856
-E06000017,Rutland,01/01/2009,,E12000004,E06,Unitary Authorities,live,857
-E06000018,Nottingham,01/01/2009,,E12000004,E06,Unitary Authorities,live,892
-E06000019,"Herefordshire, County of",01/01/2009,,E12000005,E06,Unitary Authorities,live,884
-E06000020,Telford and Wrekin,01/01/2009,,E12000005,E06,Unitary Authorities,live,894
-E06000021,Stoke-on-Trent,01/01/2009,,E12000005,E06,Unitary Authorities,live,861
-E06000022,Bath and North East Somerset,01/01/2009,,E12000009,E06,Unitary Authorities,live,800
-E06000023,"Bristol, City of",01/01/2009,,E12000009,E06,Unitary Authorities,live,801
-E06000024,North Somerset,01/01/2009,,E12000009,E06,Unitary Authorities,live,802
-E06000025,South Gloucestershire,01/01/2009,,E12000009,E06,Unitary Authorities,live,803
-E06000026,Plymouth,01/01/2009,,E12000009,E06,Unitary Authorities,live,879
-E06000027,Torbay,01/01/2009,,E12000009,E06,Unitary Authorities,live,880
-E06000028,Bournemouth,01/01/2009,31/03/2019,E12000009,E06,Unitary Authorities,terminated,837
-E06000029,Poole,01/01/2009,31/03/2019,E12000009,E06,Unitary Authorities,terminated,836
-E06000030,Swindon,01/01/2009,,E12000009,E06,Unitary Authorities,live,866
-E06000031,Peterborough,01/01/2009,,E12000006,E06,Unitary Authorities,live,874
-E06000047,County Durham,01/04/2009,,E12000001,E06,Unitary Authorities,live,840
-E06000048,Northumberland,01/04/2009,31/03/2013,E12000001,E06,Unitary Authorities,terminated,929
-E06000049,Cheshire East,01/04/2009,,E12000002,E06,Unitary Authorities,live,895
-E06000050,Cheshire West and Chester,01/04/2009,,E12000002,E06,Unitary Authorities,live,896
-E06000051,Shropshire,01/04/2009,,E12000005,E06,Unitary Authorities,live,893
-E06000052,Cornwall,01/04/2009,,E12000009,E06,Unitary Authorities,live,908
-E06000053,Isles of Scilly,01/04/2009,,E12000009,E06,Unitary Authorities,live,420
-E06000054,Wiltshire,01/04/2009,,E12000009,E06,Unitary Authorities,live,865
-E06000055,Bedford,01/04/2009,,E12000006,E06,Unitary Authorities,live,822
-E06000056,Central Bedfordshire,01/04/2009,,E12000006,E06,Unitary Authorities,live,823
-E06000057,Northumberland,01/04/2013,,E12000001,E06,Unitary Authorities,live,929
-E06000063,Cumberland,01/04/2023,,E12000002,E06,Unitary Authorities,live,942
-E06000064,Westmorland and Furness,01/04/2023,,E12000002,E06,Unitary Authorities,live,943
-E06000063 / E06000064,Cumberland / Westmorland and Furness,01/04/2023,,E12000002,E06,Unitary Authorities,live,942 / 943
-E06000065,North Yorkshire,01/04/2023,,E12000003,E06,Unitary Authorities,live,815
-E06000066,Somerset,01/04/2023,,E12000009,E06,Unitary Authorities,live,933
-E06000058,"Bournemouth, Christchurch and Poole",01/04/2019,,E12000009,E06,Unitary Authorities,live,839
-E06000059,Dorset,01/04/2019,,E12000009,E06,Unitary Authorities,live,838
-E06000060,Buckinghamshire,01/04/2020,,E12000008,E06,Unitary Authorities,live,825
-E06000061 / E06000062,North Northamptonshire / West Northamptonshire,01/04/2021,,E12000004,E06,Unitary Authorities,live,940 / 941
-E06000061,North Northamptonshire,01/04/2021,,E12000004,E06,Unitary Authorities,live,940
-E06000062,West Northamptonshire,01/04/2021,,E12000004,E06,Unitary Authorities,live,941
 z,British Forces Post Office overseas establishments,,,,,,live,702
