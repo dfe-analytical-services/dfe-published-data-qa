@@ -4456,7 +4456,7 @@
       "checksum": "e8d96d5ffd16a6867fd6d7458bd2f905"
     },
     ".Rprofile": {
-      "checksum": "011bf9f45d6165e68cc5a5c376fa1220"
+      "checksum": "2e247d758da85d89981f46e9c06e0d8d"
     },
     "azure-pipelines-dev.yml": {
       "checksum": "fc2ef843ff5024bcba25ff84eec05f4c"
@@ -4489,10 +4489,10 @@
       "checksum": "573d14f67bc6ff3ca36bea644f1e3672"
     },
     "data/lads.csv": {
-      "checksum": "e4b84958d7415862a791f3d50af42628"
+      "checksum": "ecd0b637a1c6aba0f73188d04379fd6a"
     },
     "data/las.csv": {
-      "checksum": "f2b618d5a2e507e1ac182c1e98419a74"
+      "checksum": "9e86a839c69df692083524e262bde554"
     },
     "data/leps.csv": {
       "checksum": "d95b3f968ae9354198c5276964bc8b44"
@@ -5417,6 +5417,9 @@
     },
     "tests/testthat/setup-shinytest2.R": {
       "checksum": "3cf257777accbcd1cad83d825c8d956e"
+    },
+    "tests/testthat/test-data-geographies.R": {
+      "checksum": "dcae0519d9a7074cf3fc508bda1d5626"
     },
     "tests/testthat/test-data/data_mandatory_cols.csv": {
       "checksum": "085dca2c3f92445b673d85027fc614a5"
