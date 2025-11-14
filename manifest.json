@@ -4456,7 +4456,7 @@
       "checksum": "e8d96d5ffd16a6867fd6d7458bd2f905"
     },
     ".Rprofile": {
-      "checksum": "2e247d758da85d89981f46e9c06e0d8d"
+      "checksum": "adf40c7a55c7971de1843e61d3786168"
     },
     "azure-pipelines-dev.yml": {
       "checksum": "fc2ef843ff5024bcba25ff84eec05f4c"
@@ -4592,12 +4592,6 @@
     },
     "tests/testthat.R": {
       "checksum": "12e9b09de5275bdc13bde6ae5a82f8b1"
-    },
-    "tests/testthat/_snaps/UI-01_example_files/example_files-001.json": {
-      "checksum": "22ff3d638b5843f1a78622dd025b0718"
-    },
-    "tests/testthat/_snaps/UI-01_example_files/example_files-002.json": {
-      "checksum": "7319dd843cb59c0b191714371c3a6dab"
     },
     "tests/testthat/_snaps/UI-02_edge_cases/edge_cases-001.json": {
       "checksum": "75228173459ba6f210f07e7ce363ab5e"
@@ -5419,7 +5413,7 @@
       "checksum": "3cf257777accbcd1cad83d825c8d956e"
     },
     "tests/testthat/test-data-geographies.R": {
-      "checksum": "dcae0519d9a7074cf3fc508bda1d5626"
+      "checksum": "d27ab619fd919bc5f9a79eff0b8326d2"
     },
     "tests/testthat/test-data/data_mandatory_cols.csv": {
       "checksum": "085dca2c3f92445b673d85027fc614a5"

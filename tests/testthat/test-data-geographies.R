@@ -1,10 +1,5 @@
-las <- read.csv("../../data/las.csv") |>
-  dplyr::select(new_la_code, la_name) |>
-  dplyr::filter(grepl("E06", new_la_code))
-lads <- read.csv("../../data/lads.csv") |>
-  dplyr::select(lad_code, lad_name) |>
-  dplyr::filter(grepl("E06", lad_code))
-
+las <- read.csv("../../data/las.csv")
+lads <- read.csv("../../data/lads.csv")
 
 test_that("Unitary authorities (E06) match between LA and LAD look-ups", {
   expect_equal(
