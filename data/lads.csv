@@ -1,120 +1,161 @@
 lad_code,lad_name,date_of_introduction,date_of_termination,status
-E06000058,"Bournemouth, Christchurch and Poole",2019-04-01,,live
 E06000001,Hartlepool,,,live
-E06000059,Dorset,2019-04-01,,live
 E06000002,Middlesbrough,,,live
 E06000003,Redcar and Cleveland,,,live
-E06000060,Buckinghamshire,2020-04-01,,live
-E06000061,North Northamptonshire,2021-04-01,,live
 E06000004,Stockton-on-Tees,,,live
 E06000005,Darlington,,,live
-E06000062,West Northamptonshire,2021-04-01,,live
-E07000008,Cambridge,,,live
 E06000006,Halton,,,live
 E06000007,Warrington,,,live
-E07000009,East Cambridgeshire,,,live
-E07000010,Fenland,,,live
 E06000008,Blackburn with Darwen,,,live
 E06000009,Blackpool,,,live
-E07000011,Huntingdonshire,,,live
-E07000012,South Cambridgeshire,,,live
 E06000010,"Kingston upon Hull, City of",,,live
 E06000011,East Riding of Yorkshire,,,live
-E06000063,Cumberland,2023-04-01,,live
-E06000064,Westmorland and Furness,2023-04-01,,live
-E07000026,Allerdale,,2023-03-31,terminated
-E07000027,Barrow-in-Furness,,2023-03-31,terminated
 E06000012,North East Lincolnshire,,,live
 E06000013,North Lincolnshire,,,live
-E07000028,Carlisle,,2023-03-31,terminated
-E07000029,Copeland,,2023-03-31,terminated
 E06000014,York,,,live
 E06000015,Derby,,,live
-E07000030,Eden,,2023-03-31,terminated
-E07000031,South Lakeland,,2023-03-31,terminated
 E06000016,Leicester,,,live
 E06000017,Rutland,,,live
-E07000032,Amber Valley,,,live
-E07000033,Bolsover,,,live
 E06000018,Nottingham,,,live
 E06000019,"Herefordshire, County of",,,live
-E07000034,Chesterfield,,,live
-E07000035,Derbyshire Dales,,,live
 E06000020,Telford and Wrekin,,,live
 E06000021,Stoke-on-Trent,,,live
-E07000036,Erewash,,,live
-E07000083,Tewkesbury,,,live
-E07000037,High Peak,,,live
 E06000022,Bath and North East Somerset,,,live
 E06000023,"Bristol, City of",,,live
-E07000084,Basingstoke and Deane,,,live
-E07000038,North East Derbyshire,,,live
-E07000039,South Derbyshire,,,live
 E06000024,North Somerset,,,live
-E07000085,East Hampshire,,,live
-E07000086,Eastleigh,,,live
-E07000040,East Devon,,,live
 E06000025,South Gloucestershire,,,live
 E06000026,Plymouth,,,live
-E07000087,Fareham,,,live
-E07000041,Exeter,,,live
-E07000042,Mid Devon,,,live
 E06000027,Torbay,,,live
-E07000088,Gosport,,,live
-E07000089,Hart,,,live
-E07000043,North Devon,,,live
+E06000028,Bournemouth,,01/12/2018,terminated
+E06000029,Poole,,01/12/2018,terminated
 E06000030,Swindon,,,live
 E06000031,Peterborough,,,live
-E07000090,Havant,,,live
+E06000032,Luton,,,live
+E06000033,Southend-on-Sea,,,live
+E06000034,Thurrock,,,live
+E06000035,Medway,,,live
+E06000036,Bracknell Forest,,,live
+E06000037,West Berkshire,,,live
+E06000038,Reading,,,live
+E06000039,Slough,,,live
+E06000040,Windsor and Maidenhead,,,live
+E06000041,Wokingham,,,live
+E06000042,Milton Keynes,,,live
+E06000043,Brighton and Hove,,,live
+E06000044,Portsmouth,,,live
+E06000045,Southampton,,,live
+E06000046,Isle of Wight,,,live
+E06000047,County Durham,,,live
+E06000048,Northumberland,,01/12/2011,terminated
+E06000049,Cheshire East,,,live
+E06000050,Cheshire West and Chester,,,live
+E06000051,Shropshire,,,live
+E06000052,Cornwall,,,live
+E06000053,Isles of Scilly,,,live
+E06000054,Wiltshire,,,live
+E06000055,Bedford,,,live
+E06000056,Central Bedfordshire,,,live
+E06000057,Northumberland,01/04/2015,,live
+E06000058,"Bournemouth, Christchurch and Poole",01/04/2019,,live
+E06000059,Dorset,01/04/2019,,live
+E06000060,Buckinghamshire,01/04/2020,,live
+E06000061,North Northamptonshire,01/04/2021,,live
+E06000062,West Northamptonshire,01/04/2021,,live
+E06000063,Cumberland,01/04/2023,,live
+E06000064,Westmorland and Furness,01/04/2023,,live
+E06000065,North Yorkshire,01/04/2023,,live
+E06000066,Somerset,01/04/2023,,live
+E07000004,Aylesbury Vale,,01/12/2019,terminated
+E07000005,Chiltern,,01/12/2019,terminated
+E07000006,South Bucks,,01/12/2019,terminated
+E07000007,Wycombe,,01/12/2019,terminated
+E07000008,Cambridge,,,live
+E07000009,East Cambridgeshire,,,live
+E07000010,Fenland,,,live
+E07000010 / E07000009,Fenland / East Cambridgeshire,,,
+E07000011,Huntingdonshire,,,live
+E07000012,South Cambridgeshire,,,live
+E07000026,Allerdale,,31/03/2023,terminated
+E07000027,Barrow-in-Furness,,31/03/2023,terminated
+E07000028,Carlisle,,31/03/2023,terminated
+E07000029,Copeland,,31/03/2023,terminated
+E07000030,Eden,,31/03/2023,terminated
+E07000031,South Lakeland,,31/03/2023,terminated
+E07000032,Amber Valley,,,live
+E07000033,Bolsover,,,live
+E07000034,Chesterfield,,,live
+E07000035,Derbyshire Dales,,,live
+E07000036,Erewash,,,live
+E07000037,High Peak,,,live
+E07000038,North East Derbyshire,,,live
+E07000039,South Derbyshire,,,live
+E07000040,East Devon,,,live
+E07000041,Exeter,,,live
+E07000042,Mid Devon,,,live
+E07000043,North Devon,,,live
 E07000044,South Hams,,,live
 E07000045,Teignbridge,,,live
-E06000032,Luton,,,live
+E07000046,Torridge,,,live
+E07000047,West Devon,,,live
+E07000048,Christchurch,,01/12/2018,terminated
+E07000049,East Dorset,,01/12/2018,terminated
+E07000050,North Dorset,,01/12/2018,terminated
+E07000051,Purbeck,,01/12/2018,terminated
+E07000052,West Dorset,,01/12/2018,terminated
+E07000053,Weymouth and Portland,,01/12/2018,terminated
+E07000061,Eastbourne,,,live
+E07000062,Hastings,,,live
+E07000063,Lewes,,,live
+E07000064,Rother,,,live
+E07000065,Wealden,,,live
+E07000066,Basildon,,,live
+E07000067,Braintree,,,live
+E07000068,Brentwood,,,live
+E07000069,Castle Point,,,live
+E07000070,Chelmsford,,,live
+E07000071,Colchester,,,live
+E07000072,Epping Forest,,,live
+E07000073,Harlow,,,live
+E07000074,Maldon,,,live
+E07000075,Rochford,,,live
+E07000076,Tendring,,,live
+E07000077,Uttlesford,,,live
+E07000078,Cheltenham,,,live
+E07000079,Cotswold,,,live
+E07000080,Forest of Dean,,,live
+E07000081,Gloucester,,,live
+E07000082,Stroud,,,live
+E07000083,Tewkesbury,,,live
+E07000084,Basingstoke and Deane,,,live
+E07000085,East Hampshire,,,live
+E07000086,Eastleigh,,,live
+E07000087,Fareham,,,live
+E07000088,Gosport,,,live
+E07000089,Hart,,,live
+E07000090,Havant,,,live
 E07000091,New Forest,,,live
 E07000092,Rushmoor,,,live
-E07000046,Torridge,,,live
-E06000033,Southend-on-Sea,,,live
 E07000093,Test Valley,,,live
-E07000047,West Devon,,,live
-E06000034,Thurrock,,,live
 E07000094,Winchester,,,live
-E07000061,Eastbourne,,,live
-E06000035,Medway,,,live
 E07000095,Broxbourne,,,live
-E07000062,Hastings,,,live
-E06000036,Bracknell Forest,,,live
 E07000096,Dacorum,,,live
-E07000063,Lewes,,,live
-E06000037,West Berkshire,,,live
+E07000097,East Hertfordshire,,01/12/2011,terminated
 E07000098,Hertsmere,,,live
-E07000064,Rother,,,live
-E06000038,Reading,,,live
 E07000099,North Hertfordshire,,,live
-E07000065,Wealden,,,live
-E06000039,Slough,,,live
+E07000100,St Albans,,01/12/2011,terminated
+E07000101,Stevenage,,01/12/2011,terminated
 E07000102,Three Rivers,,,live
-E07000066,Basildon,,,live
-E06000040,Windsor and Maidenhead,,,live
 E07000103,Watford,,,live
-E07000067,Braintree,,,live
-E06000041,Wokingham,,,live
+E07000104,Welwyn Hatfield,,01/12/2011,terminated
 E07000105,Ashford,,,live
-E07000068,Brentwood,,,live
-E06000042,Milton Keynes,,,live
 E07000106,Canterbury,,,live
-E07000069,Castle Point,,,live
-E06000043,Brighton and Hove,,,live
 E07000107,Dartford,,,live
-E07000070,Chelmsford,,,live
-E06000044,Portsmouth,,,live
 E07000108,Dover,,,live
-E07000071,Colchester,,,live
-E06000045,Southampton,,,live
 E07000109,Gravesham,,,live
-E07000072,Epping Forest,,,live
-E06000046,Isle of Wight,,,live
 E07000110,Maidstone,,,live
 E07000111,Sevenoaks,,,live
-E07000112,Folkestone and Hythe,2018-12-01,,live
+E07000112,Folkestone and Hythe,01/12/2018,,live
+E07000112,Shepway,,01/12/2017,terminated
 E07000113,Swale,,,live
 E07000114,Thanet,,,live
 E07000115,Tonbridge and Malling,,,live
@@ -143,26 +184,73 @@ E07000137,East Lindsey,,,live
 E07000138,Lincoln,,,live
 E07000139,North Kesteven,,,live
 E07000140,South Holland,,,live
-E06000047,County Durham,,,live
-E07000073,Harlow,,,live
-E06000049,Cheshire East,,,live
-E07000074,Maldon,,,live
-E06000050,Cheshire West and Chester,,,live
-E07000075,Rochford,,,live
-E06000051,Shropshire,,,live
-E07000076,Tendring,,,live
-E06000052,Cornwall,,,live
-E07000077,Uttlesford,,,live
-E06000053,Isles of Scilly,,,live
-E07000078,Cheltenham,,,live
-E06000054,Wiltshire,,,live
-E07000079,Cotswold,,,live
-E06000055,Bedford,,,live
-E07000080,Forest of Dean,,,live
-E06000056,Central Bedfordshire,,,live
-E07000081,Gloucester,,,live
-E06000057,Northumberland,2015-04-01,,live
-E07000082,Stroud,,,live
+E07000141,South Kesteven,,,live
+E07000142,West Lindsey,,,live
+E07000143,Breckland,,,live
+E07000144,Broadland,,,live
+E07000145,Great Yarmouth,,,live
+E07000146,King's Lynn and West Norfolk,,,live
+E07000147,North Norfolk,,,live
+E07000148,Norwich,,,live
+E07000149,South Norfolk,,,live
+E07000150,Corby,,01/12/2020,terminated
+E07000151,Daventry,,01/12/2020,terminated
+E07000152,East Northamptonshire,,01/12/2020,terminated
+E07000153,Kettering,,01/12/2020,terminated
+E07000154,Northampton,,01/12/2020,terminated
+E07000155,South Northamptonshire,,01/12/2020,terminated
+E07000156,Wellingborough,,01/12/2020,terminated
+E07000163,Craven,,31/03/2023,terminated
+E07000164,Hambleton,,31/03/2023,terminated
+E07000165,Harrogate,,31/03/2023,terminated
+E07000166,Richmondshire,,31/03/2023,terminated
+E07000167,Ryedale,,31/03/2023,terminated
+E07000168,Scarborough,,31/03/2023,terminated
+E07000169,Selby,,31/03/2023,terminated
+E07000170,Ashfield,,,live
+E07000171,Bassetlaw,,,live
+E07000172,Broxtowe,,,live
+E07000173,Gedling,,,live
+E07000174,Mansfield,,,live
+E07000175,Newark and Sherwood,,,live
+E07000176,Rushcliffe,,,live
+E07000177,Cherwell,,,live
+E07000178,Oxford,,,live
+E07000179,South Oxfordshire,,,live
+E07000180,Vale of White Horse,,,live
+E07000181,West Oxfordshire,,,live
+E07000187,Mendip,,31/03/2023,terminated
+E07000188,Sedgemoor,,31/03/2023,terminated
+E07000189,South Somerset,,31/03/2023,terminated
+E07000190,Taunton Deane,,01/12/2018,terminated
+E07000191,West Somerset,,01/12/2018,terminated
+E07000192,Cannock Chase,,,live
+E07000193,East Staffordshire,,,live
+E07000194,Lichfield,,,live
+E07000195,Newcastle-under-Lyme,,,live
+E07000196,South Staffordshire,,,live
+E07000197,Stafford,,,live
+E07000198,Staffordshire Moorlands,,,live
+E07000199,Tamworth,,,live
+E07000200,Babergh,,,live
+E07000201,Forest Heath,,01/12/2018,terminated
+E07000202,Ipswich,,,live
+E07000203,Mid Suffolk,,,live
+E07000204,St Edmundsbury,,01/12/2018,terminated
+E07000205,Suffolk Coastal,,01/12/2018,terminated
+E07000206,Waveney,,01/12/2018,terminated
+E07000207,Elmbridge,,,live
+E07000208,Epsom and Ewell,,,live
+E07000209,Guildford,,,live
+E07000210,Mole Valley,,,live
+E07000211,Reigate and Banstead,,,live
+E07000212,Runnymede,,,live
+E07000213,Spelthorne,,,live
+E07000214,Surrey Heath,,,live
+E07000215,Tandridge,,,live
+E07000216,Waverley,,,live
+E07000217,Woking,,,live
+E07000218,North Warwickshire,,,live
 E07000219,Nuneaton and Bedworth,,,live
 E07000220,Rugby,,,live
 E07000221,Stratford-on-Avon,,,live
@@ -180,86 +268,33 @@ E07000236,Redditch,,,live
 E07000237,Worcester,,,live
 E07000238,Wychavon,,,live
 E07000239,Wyre Forest,,,live
-E07000240,St Albans,2015-04-01,,live
-E07000241,Welwyn Hatfield,2015-04-01,,live
-E07000141,South Kesteven,,,live
-E07000242,East Hertfordshire,2015-04-01,,live
-E07000243,Stevenage,2015-04-01,,live
-E07000244,East Suffolk,2019-04-01,,live
-E07000245,West Suffolk,2019-04-01,,live
-E07000142,West Lindsey,,,live
-E07000246,Somerset West and Taunton,2019-04-01,2023-03-31,terminated
-E07000143,Breckland,,,live
+E07000240,St Albans,01/04/2015,,live
+E07000241,Welwyn Hatfield,01/04/2015,,live
+E07000242,East Hertfordshire,01/04/2015,,live
+E07000243,Stevenage,01/04/2015,,live
+E07000244,East Suffolk,01/04/2019,,live
+E07000245,West Suffolk,01/04/2019,,live
+E07000246,Somerset West and Taunton,01/04/2019,31/03/2023,terminated
 E08000001,Bolton,,,live
-E07000144,Broadland,,,live
 E08000002,Bury,,,live
-E07000145,Great Yarmouth,,,live
 E08000003,Manchester,,,live
-E07000146,King's Lynn and West Norfolk,,,live
 E08000004,Oldham,,,live
-E07000147,North Norfolk,,,live
 E08000005,Rochdale,,,live
-E07000148,Norwich,,,live
 E08000006,Salford,,,live
-E07000149,South Norfolk,,,live
 E08000007,Stockport,,,live
-E07000163,Craven,,2023-03-31,terminated
 E08000008,Tameside,,,live
-E07000164,Hambleton,,2023-03-31,terminated
 E08000009,Trafford,,,live
-E07000165,Harrogate,,2023-03-31,terminated
 E08000010,Wigan,,,live
-E07000166,Richmondshire,,2023-03-31,terminated
 E08000011,Knowsley,,,live
-E07000167,Ryedale,,2023-03-31,terminated
 E08000012,Liverpool,,,live
-E07000168,Scarborough,,2023-03-31,terminated
 E08000013,St. Helens,,,live
-E07000169,Selby,,2023-03-31,terminated
 E08000014,Sefton,,,live
-E07000170,Ashfield,,,live
 E08000015,Wirral,,,live
-E07000171,Bassetlaw,,,live
-E08000016,Barnsley,,,live
-E07000172,Broxtowe,,,live
+E08000016,Barnsley,01/01/2009,30/04/2025,terminated
 E08000017,Doncaster,,,live
-E07000173,Gedling,,,live
-E07000174,Mansfield,,,live
-E07000175,Newark and Sherwood,,,live
-E07000176,Rushcliffe,,,live
-E07000177,Cherwell,,,live
-E07000178,Oxford,,,live
-E07000179,South Oxfordshire,,,live
-E07000180,Vale of White Horse,,,live
-E07000181,West Oxfordshire,,,live
-E07000187,Mendip,,2023-03-31,terminated
-E07000188,Sedgemoor,,2023-03-31,terminated
-E07000189,South Somerset,,2023-03-31,terminated
-E07000192,Cannock Chase,,,live
-E07000193,East Staffordshire,,,live
-E07000194,Lichfield,,,live
-E07000195,Newcastle-under-Lyme,,,live
-E07000196,South Staffordshire,,,live
-E07000197,Stafford,,,live
-E07000198,Staffordshire Moorlands,,,live
-E07000199,Tamworth,,,live
-E07000200,Babergh,,,live
-E07000202,Ipswich,,,live
-E07000203,Mid Suffolk,,,live
-E07000207,Elmbridge,,,live
-E07000208,Epsom and Ewell,,,live
-E07000209,Guildford,,,live
-E07000210,Mole Valley,,,live
-E07000211,Reigate and Banstead,,,live
-E07000212,Runnymede,,,live
-E07000213,Spelthorne,,,live
-E07000214,Surrey Heath,,,live
-E07000215,Tandridge,,,live
-E07000216,Waverley,,,live
-E07000217,Woking,,,live
-E07000218,North Warwickshire,,,live
 E08000018,Rotherham,,,live
-E08000019,Sheffield,,,live
+E08000019,Sheffield,01/01/2009,30/04/2025,terminated
+E08000020,Gateshead,,01/12/2011,terminated
 E08000021,Newcastle upon Tyne,,,live
 E08000022,North Tyneside,,,live
 E08000023,South Tyneside,,,live
@@ -276,7 +311,9 @@ E08000033,Calderdale,,,live
 E08000034,Kirklees,,,live
 E08000035,Leeds,,,live
 E08000036,Wakefield,,,live
-E08000037,Gateshead,2015-04-01,,live
+E08000037,Gateshead,01/04/2015,,live
+E08000038,Barnsley,01/05/2025,,live
+E08000039,Sheffield,01/05/2025,,live
 E09000001,City of London,,,live
 E09000002,Barking and Dagenham,,,live
 E09000003,Barnet,,,live
@@ -310,38 +347,3 @@ E09000030,Tower Hamlets,,,live
 E09000031,Waltham Forest,,,live
 E09000032,Wandsworth,,,live
 E09000033,Westminster,,,live
-E06000065,North Yorkshire,2023-04-01,,live
-E06000066,Somerset,2023-04-01,,live
-E07000150,Corby,,2020-12-01,terminated
-E07000151,Daventry,,2020-12-01,terminated
-E07000152,East Northamptonshire,,2020-12-01,terminated
-E07000153,Kettering,,2020-12-01,terminated
-E07000154,Northampton,,2020-12-01,terminated
-E07000155,South Northamptonshire,,2020-12-01,terminated
-E07000156,Wellingborough,,2020-12-01,terminated
-E07000004,Aylesbury Vale,,2019-12-01,terminated
-E07000005,Chiltern,,2019-12-01,terminated
-E07000006,South Bucks,,2019-12-01,terminated
-E07000007,Wycombe,,2019-12-01,terminated
-E06000028,Bournemouth,,2018-12-01,terminated
-E06000029,Poole,,2018-12-01,terminated
-E07000190,Taunton Deane,,2018-12-01,terminated
-E07000191,West Somerset,,2018-12-01,terminated
-E07000201,Forest Heath,,2018-12-01,terminated
-E07000204,St Edmundsbury,,2018-12-01,terminated
-E07000205,Suffolk Coastal,,2018-12-01,terminated
-E07000206,Waveney,,2018-12-01,terminated
-E07000048,Christchurch,,2018-12-01,terminated
-E07000049,East Dorset,,2018-12-01,terminated
-E07000050,North Dorset,,2018-12-01,terminated
-E07000051,Purbeck,,2018-12-01,terminated
-E07000052,West Dorset,,2018-12-01,terminated
-E07000053,Weymouth and Portland,,2018-12-01,terminated
-E07000112,Shepway,,2017-12-01,terminated
-E06000048,Northumberland,,2011-12-01,terminated
-E07000097,East Hertfordshire,,2011-12-01,terminated
-E07000100,St Albans,,2011-12-01,terminated
-E07000101,Stevenage,,2011-12-01,terminated
-E07000104,Welwyn Hatfield,,2011-12-01,terminated
-E08000020,Gateshead,,2011-12-01,terminated
-E07000010 / E07000009,Fenland / East Cambridgeshire,,,
