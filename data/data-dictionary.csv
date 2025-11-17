@@ -60,47 +60,47 @@ establishment_governance,Filter,Independent,,,IN,api-only,Establishment characte
 establishment_governance,Filter,Non-maintained,,,NM,api-only,Establishment characteristics
 establishment_governance,Filter,Voluntary aided,,,VA,api-only,Establishment characteristics
 establishment_governance,Filter,Voluntary controlled,,,VC,api-only,Establishment characteristics
-establishment_type,Filter,Academy 16-19 converter,phase_type_grouping,State-funded secondary,,api-only,Establishment characteristics
+establishment_type,Filter,Academy 16-19 converter,phase_type_grouping,State funded secondary,,api-only,Establishment characteristics
 establishment_type,Filter,Academy 16-19 converter,phase_type_grouping,Total,,api-only,Establishment characteristics
-establishment_type,Filter,Academy 16-19 sponsor led,phase_type_grouping,State-funded secondary,,api-only,Establishment characteristics
+establishment_type,Filter,Academy 16-19 sponsor led,phase_type_grouping,State funded secondary,,api-only,Establishment characteristics
 establishment_type,Filter,Academy 16-19 sponsor led,phase_type_grouping,Total,,api-only,Establishment characteristics
-establishment_type,Filter,Academy alternative provision converter,phase_type_grouping,State-funded alternative provision school,,api-only,Establishment characteristics
+establishment_type,Filter,Academy alternative provision converter,phase_type_grouping,State funded alternative provision school,,api-only,Establishment characteristics
 establishment_type,Filter,Academy alternative provision converter,phase_type_grouping,Total,,api-only,Establishment characteristics
-establishment_type,Filter,Academy alternative provision sponsor led,phase_type_grouping,State-funded alternative provision school,,api-only,Establishment characteristics
+establishment_type,Filter,Academy alternative provision sponsor led,phase_type_grouping,State funded alternative provision school,,api-only,Establishment characteristics
 establishment_type,Filter,Academy alternative provision sponsor led,phase_type_grouping,Total,,api-only,Establishment characteristics
-establishment_type,Filter,Academy converter,phase_type_grouping,State-funded primary,,api-only,Establishment characteristics
-establishment_type,Filter,Academy converter,phase_type_grouping,State-funded secondary,,api-only,Establishment characteristics
+establishment_type,Filter,Academy converter,phase_type_grouping,State funded primary,,api-only,Establishment characteristics
+establishment_type,Filter,Academy converter,phase_type_grouping,State funded secondary,,api-only,Establishment characteristics
 establishment_type,Filter,Academy converter,phase_type_grouping,Total,,api-only,Establishment characteristics
-establishment_type,Filter,Academy special converter,phase_type_grouping,State-funded special school,,api-only,Establishment characteristics
+establishment_type,Filter,Academy special converter,phase_type_grouping,State funded special school,,api-only,Establishment characteristics
 establishment_type,Filter,Academy special converter,phase_type_grouping,Total,,api-only,Establishment characteristics
-establishment_type,Filter,Academy special sponsor led,phase_type_grouping,State-funded special school,,api-only,Establishment characteristics
+establishment_type,Filter,Academy special sponsor led,phase_type_grouping,State funded special school,,api-only,Establishment characteristics
 establishment_type,Filter,Academy special sponsor led,phase_type_grouping,Total,,api-only,Establishment characteristics
-establishment_type,Filter,Academy sponsor led,phase_type_grouping,State-funded primary,,api-only,Establishment characteristics
-establishment_type,Filter,Academy sponsor led,phase_type_grouping,State-funded secondary,,api-only,Establishment characteristics
+establishment_type,Filter,Academy sponsor led,phase_type_grouping,State funded primary,,api-only,Establishment characteristics
+establishment_type,Filter,Academy sponsor led,phase_type_grouping,State funded secondary,,api-only,Establishment characteristics
 establishment_type,Filter,Academy sponsor led,phase_type_grouping,Total,,api-only,Establishment characteristics
-establishment_type,Filter,City technology college,phase_type_grouping,State-funded secondary,,api-only,Establishment characteristics
+establishment_type,Filter,City technology college,phase_type_grouping,State funded secondary,,api-only,Establishment characteristics
 establishment_type,Filter,City technology college,phase_type_grouping,Total,,api-only,Establishment characteristics
-establishment_type,Filter,Community school,phase_type_grouping,State-funded nursery,,api-only,Establishment characteristics
-establishment_type,Filter,Community school,phase_type_grouping,State-funded primary,,api-only,Establishment characteristics
-establishment_type,Filter,Community school,phase_type_grouping,State-funded secondary,,api-only,Establishment characteristics
+establishment_type,Filter,Community school,phase_type_grouping,State funded nursery,,api-only,Establishment characteristics
+establishment_type,Filter,Community school,phase_type_grouping,State funded primary,,api-only,Establishment characteristics
+establishment_type,Filter,Community school,phase_type_grouping,State funded secondary,,api-only,Establishment characteristics
 establishment_type,Filter,Community school,phase_type_grouping,Total,,api-only,Establishment characteristics
-establishment_type,Filter,Community special school,phase_type_grouping,State-funded special school,,api-only,Establishment characteristics
+establishment_type,Filter,Community special school,phase_type_grouping,State funded special school,,api-only,Establishment characteristics
 establishment_type,Filter,Community special school,phase_type_grouping,Total,,api-only,Establishment characteristics
-establishment_type,Filter,Foundation school,phase_type_grouping,State-funded primary,,api-only,Establishment characteristics
-establishment_type,Filter,Foundation school,phase_type_grouping,State-funded secondary,,api-only,Establishment characteristics
+establishment_type,Filter,Foundation school,phase_type_grouping,State funded primary,,api-only,Establishment characteristics
+establishment_type,Filter,Foundation school,phase_type_grouping,State funded secondary,,api-only,Establishment characteristics
 establishment_type,Filter,Foundation school,phase_type_grouping,Total,,api-only,Establishment characteristics
-establishment_type,Filter,Foundation special school,phase_type_grouping,State-funded special school,,api-only,Establishment characteristics
+establishment_type,Filter,Foundation special school,phase_type_grouping,State funded special school,,api-only,Establishment characteristics
 establishment_type,Filter,Foundation special school,phase_type_grouping,Total,,api-only,Establishment characteristics
-establishment_type,Filter,Free schools,phase_type_grouping,State-funded primary,,api-only,Establishment characteristics
-establishment_type,Filter,Free schools,phase_type_grouping,State-funded secondary,,api-only,Establishment characteristics
+establishment_type,Filter,Free schools,phase_type_grouping,State funded primary,,api-only,Establishment characteristics
+establishment_type,Filter,Free schools,phase_type_grouping,State funded secondary,,api-only,Establishment characteristics
 establishment_type,Filter,Free schools,phase_type_grouping,Total,,api-only,Establishment characteristics
-establishment_type,Filter,Free schools 16-19,phase_type_grouping,State-funded secondary,,api-only,Establishment characteristics
+establishment_type,Filter,Free schools 16-19,phase_type_grouping,State funded secondary,,api-only,Establishment characteristics
 establishment_type,Filter,Free schools 16-19,phase_type_grouping,Total,,api-only,Establishment characteristics
-establishment_type,Filter,Free schools alternative provision,phase_type_grouping,State-funded alternative provision school,,api-only,Establishment characteristics
+establishment_type,Filter,Free schools alternative provision,phase_type_grouping,State funded alternative provision school,,api-only,Establishment characteristics
 establishment_type,Filter,Free schools alternative provision,phase_type_grouping,Total,,api-only,Establishment characteristics
-establishment_type,Filter,Free schools special,phase_type_grouping,State-funded special school,,api-only,Establishment characteristics
+establishment_type,Filter,Free schools special,phase_type_grouping,State funded special school,,api-only,Establishment characteristics
 establishment_type,Filter,Free schools special,phase_type_grouping,Total,,api-only,Establishment characteristics
-establishment_type,Filter,Local authority nursery school,phase_type_grouping,State-funded nursery,,api-only,Establishment characteristics
+establishment_type,Filter,Local authority nursery school,phase_type_grouping,State funded nursery,,api-only,Establishment characteristics
 establishment_type,Filter,Local authority nursery school,phase_type_grouping,Total,,api-only,Establishment characteristics
 establishment_type,Filter,Non-maintained special school,phase_type_grouping,Non-maintained special school,,api-only,Establishment characteristics
 establishment_type,Filter,Non-maintained special school,phase_type_grouping,Total,,api-only,Establishment characteristics
@@ -108,40 +108,40 @@ establishment_type,Filter,Other independent school,phase_type_grouping,Independe
 establishment_type,Filter,Other independent school,phase_type_grouping,Total,,api-only,Establishment characteristics
 establishment_type,Filter,Other independent special school,phase_type_grouping,Independent school,,api-only,Establishment characteristics
 establishment_type,Filter,Other independent special school,phase_type_grouping,Total,,api-only,Establishment characteristics
-establishment_type,Filter,Pupil referral unit,phase_type_grouping,State-funded alternative provisionschool,,api-only,Establishment characteristics
+establishment_type,Filter,Pupil referral unit,phase_type_grouping,State funded alternative provisionschool,,api-only,Establishment characteristics
 establishment_type,Filter,Pupil referral unit,phase_type_grouping,Total,,api-only,Establishment characteristics
-establishment_type,Filter,Studio schools,phase_type_grouping,State-funded secondary,,api-only,Establishment characteristics
+establishment_type,Filter,Studio schools,phase_type_grouping,State funded secondary,,api-only,Establishment characteristics
 establishment_type,Filter,Studio schools,phase_type_grouping,Total,,api-only,Establishment characteristics
 establishment_type,Filter,Total,phase_type_grouping,Independent school,,api-only,Establishment characteristics
 establishment_type,Filter,Total,phase_type_grouping,Non-maintained special school,,api-only,Establishment characteristics
-establishment_type,Filter,Total,phase_type_grouping,State-funded alternative provision school,,api-only,Establishment characteristics
-establishment_type,Filter,Total,phase_type_grouping,State-funded nursery,,api-only,Establishment characteristics
-establishment_type,Filter,Total,phase_type_grouping,State-funded primary,,api-only,Establishment characteristics
-establishment_type,Filter,Total,phase_type_grouping,State-funded secondary,,api-only,Establishment characteristics
-establishment_type,Filter,Total,phase_type_grouping,State-funded special school,,api-only,Establishment characteristics
+establishment_type,Filter,Total,phase_type_grouping,State funded alternative provision school,,api-only,Establishment characteristics
+establishment_type,Filter,Total,phase_type_grouping,State funded nursery,,api-only,Establishment characteristics
+establishment_type,Filter,Total,phase_type_grouping,State funded primary,,api-only,Establishment characteristics
+establishment_type,Filter,Total,phase_type_grouping,State funded secondary,,api-only,Establishment characteristics
+establishment_type,Filter,Total,phase_type_grouping,State funded special school,,api-only,Establishment characteristics
 establishment_type,Filter,Total,phase_type_grouping,Total,,api-only,Establishment characteristics
-establishment_type,Filter,University technical college,phase_type_grouping,State-funded secondary,,api-only,Establishment characteristics
+establishment_type,Filter,University technical college,phase_type_grouping,State funded secondary,,api-only,Establishment characteristics
 establishment_type,Filter,University technical college,phase_type_grouping,Total,,api-only,Establishment characteristics
-establishment_type,Filter,Voluntary aided school,phase_type_grouping,State-funded primary,,api-only,Establishment characteristics
-establishment_type,Filter,Voluntary aided school,phase_type_grouping,State-funded secondary,,api-only,Establishment characteristics
+establishment_type,Filter,Voluntary aided school,phase_type_grouping,State funded primary,,api-only,Establishment characteristics
+establishment_type,Filter,Voluntary aided school,phase_type_grouping,State funded secondary,,api-only,Establishment characteristics
 establishment_type,Filter,Voluntary aided school,phase_type_grouping,Total,,api-only,Establishment characteristics
-establishment_type,Filter,Voluntary controlled school,phase_type_grouping,State-funded primary,,api-only,Establishment characteristics
-establishment_type,Filter,Voluntary controlled school,phase_type_grouping,State-funded secondary,,api-only,Establishment characteristics
+establishment_type,Filter,Voluntary controlled school,phase_type_grouping,State funded primary,,api-only,Establishment characteristics
+establishment_type,Filter,Voluntary controlled school,phase_type_grouping,State funded secondary,,api-only,Establishment characteristics
 establishment_type,Filter,Voluntary controlled school,phase_type_grouping,Total,,api-only,Establishment characteristics
 establishment_type_group,Filter,Academies and free schools,,,,api-only,Establishment characteristics
 establishment_type_group,Filter,Academy,,,,api-only,Establishment characteristics
 establishment_type_group,Filter,Academy converter,,,,api-only,Establishment characteristics
 establishment_type_group,Filter,Academy sponsor led,,,,api-only,Establishment characteristics
 establishment_type_group,Filter,All schools,,,,api-only,Establishment characteristics
-establishment_type_group,Filter,All state-funded,,,,api-only,Establishment characteristics
+establishment_type_group,Filter,All state funded,,,,api-only,Establishment characteristics
 establishment_type_group,Filter,Alternative provision,,,,api-only,Establishment characteristics
 establishment_type_group,Filter,Free schools,,,,api-only,Establishment characteristics
 establishment_type_group,Filter,Independent schools,,,,api-only,Establishment characteristics
 establishment_type_group,Filter,Local authority maintained,,,,api-only,Establishment characteristics
 establishment_type_group,Filter,Non-maintained,,,,api-only,Establishment characteristics
-establishment_type_group,Filter,State-funded mainstream schools,,,,api-only,Establishment characteristics
-establishment_type_group,Filter,State-funded schools and alternative provision,,,,api-only,Establishment characteristics
-establishment_type_group,Filter,State-funded special schools,,,,api-only,Establishment characteristics
+establishment_type_group,Filter,State funded mainstream schools,,,,api-only,Establishment characteristics
+establishment_type_group,Filter,State funded schools and alternative provision,,,,api-only,Establishment characteristics
+establishment_type_group,Filter,State funded special schools,,,,api-only,Establishment characteristics
 establishment_type_group,Filter,Total,,,,api-only,Establishment characteristics
 ethnicity_minor,Filter,African,ethnicity_major,Black / African / Caribbean / Black British,,any,Personal characteristics
 ethnicity_minor,Filter,All Asian / Asian British,ethnicity_major,Asian / Asian British,,any,Personal characteristics
@@ -202,9 +202,9 @@ month_of_birth,Filter,October,,,,api-only,Personal characteristics
 month_of_birth,Filter,September,,,,api-only,Personal characteristics
 month_of_birth,Filter,Total,,,,api-only,Personal characteristics
 phase_type_grouping,Filter,All schools,,,,api-only,Establishment characteristics
-phase_type_grouping,Filter,State-funded primary,,,,api-only,Establishment characteristics
-phase_type_grouping,Filter,State-funded primary and secondary,,,,api-only,Establishment characteristics
-phase_type_grouping,Filter,State-funded secondary,,,,api-only,Establishment characteristics
+phase_type_grouping,Filter,State funded primary,,,,api-only,Establishment characteristics
+phase_type_grouping,Filter,State funded primary and secondary,,,,api-only,Establishment characteristics
+phase_type_grouping,Filter,State funded secondary,,,,api-only,Establishment characteristics
 provider_type,Filter,All group-based providers,,,,api-only,Establishment characteristics
 provider_type,Filter,All school-based providers,,,,api-only,Establishment characteristics
 provider_type,Filter,Childminders,,,,api-only,Establishment characteristics
