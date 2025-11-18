@@ -483,10 +483,10 @@ provider_type,Filter,Childminders,,,,api-only,Establishment characteristics
 provider_type,Filter,Further education colleges,,,,api-only,Establishment characteristics
 provider_type,Filter,General FE college including tertiary,,,,api-only,Establishment characteristics
 provider_type,Filter,Higher education providers,,,,api-only,Establishment characteristics
-provider_type,Filter,Local authorities,,,,api-only,Establishment characteristics
+provider_type,Filter,Local authority,,,,api-only,Establishment characteristics
 provider_type,Filter,Maintained nursery schools,,,,api-only,Establishment characteristics
 provider_type,Filter,Nursery class childcare settings,,,,api-only,Establishment characteristics
-provider_type,Filter,Other provider type,,,,api-only,Establishment characteristics
+provider_type,Filter,Other,,,,api-only,Establishment characteristics
 provider_type,Filter,Other public funded (LAs and HE),,,,api-only,Establishment characteristics
 provider_type,Filter,Private group-based providers,,,,api-only,Establishment characteristics
 provider_type,Filter,Private sector public funded,,,,api-only,Establishment characteristics
