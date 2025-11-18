@@ -4453,7 +4453,7 @@
       "checksum": "34dd2ba59d4373f48eb261774a600db1"
     },
     ".hooks/pre-commit.R": {
-      "checksum": "e8d96d5ffd16a6867fd6d7458bd2f905"
+      "checksum": "c1d6b214017ea01fb7141a0b0e228e02"
     },
     ".Rprofile": {
       "checksum": "adf40c7a55c7971de1843e61d3786168"
@@ -4542,9 +4542,6 @@
     "LICENSE": {
       "checksum": "51052a72b54c2e4bdddfb52762638274"
     },
-    "R/api-data-checker.r": {
-      "checksum": "c6039d30435a404685b1ab1f5bf3fa9e"
-    },
     "R/data-dictionary-checks.R": {
       "checksum": "bcc45fcf406142644ce4b8fd21645431"
     },
@@ -4556,6 +4553,9 @@
     },
     "R/mainTests.r": {
       "checksum": "6fdf683a497347272ee52089c085f56e"
+    },
+    "R/manual_scripts/api-data-checker.r": {
+      "checksum": "e03fcc51d479b00ffb8ce2b7abd89805"
     },
     "R/manual_scripts/debugging.R": {
       "checksum": "e56763afdf3659c7c47cfe0e3262e8cf"
