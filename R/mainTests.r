@@ -28,6 +28,7 @@ mainTests <- function(data_character, meta_character, datafile, metafile) {
       lsip_combinations(datafile), # active test
       ward_combinations(datafile), # active test
       lep_combinations(datafile), # active test
+      pfa_combinations(datafile), # active test
       pcon_combinations(datafile), # active test
       lad_combinations(datafile), # active test
       la_combinations(datafile), # active test
@@ -1874,6 +1875,57 @@ lsip_combinations <- function(data) {
             "' geographic_level: '",
             paste0(invalid_values, collapse = "', '"),
             "'. <br> - We do not expect any combinations outside of the <a href='https://github.com/dfe-analytical-services/dfe-published-data-qa/blob/main/data/lsips.csv' target='_blank'>standard geographies lookup</a> (case sensitive), please check your name and code combinations against this lookup."
+          ),
+          "result" = "FAIL"
+        )
+      }
+    }
+  }
+
+  return(output)
+}
+
+pfa_combinations <- function(data) {
+  if (!all(c("pfa_name", "pfa_code") %in% names(data))) {
+    output <- list(
+      "message" = "This data file does not contain police force area columns.",
+      "result" = "IGNORE"
+    )
+  } else {
+    invalid_values <- data %>%
+      select("pfa_name", "pfa_code") %>%
+      unique() %>%
+      .[!is.na(pfa_name) & !is.na(pfa_code)] %>%
+      filter(pfa_code != "") %>%
+      filter(pfa_code != gssNAvcode) %>%
+      mutate(combo = paste(pfa_code, pfa_name)) %>%
+      pull(combo) %>%
+      .[
+        !(. %in%
+          c(expected_pfa_combinations, expected_standard_geog_combinations))
+      ]
+
+    if (length(invalid_values) == 0) {
+      output <- list(
+        "message" = "All pfa_code and pfa_name combinations are valid.",
+        "result" = "PASS"
+      )
+    } else {
+      if (length(invalid_values) == 1) {
+        output <- list(
+          "message" = paste0(
+            "The following pfa_code and pfa_name combination is invalid: '",
+            paste0(invalid_values),
+            "'. <br> - We do not expect any combinations outside of the <a href='https://github.com/dfe-analytical-services/dfe-published-data-qa/blob/main/data/police-force-areas.csv' target='_blank'>standard geographies lookup</a> (case sensitive), please check your name and code combinations against this lookup."
+          ),
+          "result" = "FAIL"
+        )
+      } else {
+        output <- list(
+          "message" = paste0(
+            "The following pfa_code and pfa_name combinations are invalid: '",
+            paste0(invalid_values, collapse = "', '"),
+            "'. <br> - We do not expect any combinations outside of the <a href='https://github.com/dfe-analytical-services/dfe-published-data-qa/blob/main/data/police-force-areas.csv' target='_blank'>standard geographies lookup</a> (case sensitive), please check your name and code combinations against this lookup."
           ),
           "result" = "FAIL"
         )

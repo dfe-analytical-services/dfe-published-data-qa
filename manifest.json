@@ -4456,7 +4456,7 @@
       "checksum": "e8d96d5ffd16a6867fd6d7458bd2f905"
     },
     ".Rprofile": {
-      "checksum": "5e55885f6d19cbc986643ed8f2ef5b4b"
+      "checksum": "af3b5e480dcc1ca1573e1e5aea3d6fe5"
     },
     "azure-pipelines-dev.yml": {
       "checksum": "fc2ef843ff5024bcba25ff84eec05f4c"
@@ -4555,10 +4555,10 @@
       "checksum": "1c3a5b538aa71e2f377b4733e7c9a580"
     },
     "R/knownVariables.r": {
-      "checksum": "d92cb4c8e810e9beb0bf6f167f570925"
+      "checksum": "9420965ddce28911fe1fc528a6f57bcb"
     },
     "R/mainTests.r": {
-      "checksum": "4e8da63e73e388113920c07fa274a240"
+      "checksum": "08b8657e6d4ac139069320c6dda69010"
     },
     "R/manual_scripts/debugging.R": {
       "checksum": "e56763afdf3659c7c47cfe0e3262e8cf"
@@ -4600,7 +4600,7 @@
       "checksum": "22ff3d638b5843f1a78622dd025b0718"
     },
     "tests/testthat/_snaps/UI-01_example_files/example_files-002.json": {
-      "checksum": "7319dd843cb59c0b191714371c3a6dab"
+      "checksum": "3f758be2237e6e9ef0d8b621097ab5cb"
     },
     "tests/testthat/_snaps/UI-02_edge_cases/edge_cases-001.json": {
       "checksum": "75228173459ba6f210f07e7ce363ab5e"

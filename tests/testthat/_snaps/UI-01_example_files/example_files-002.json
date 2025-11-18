@@ -217,7 +217,7 @@
     "advisory": 2,
     "ancillary": 1,
     "failed": 1,
-    "ignored": 17,
+    "ignored": 18,
     "info": 0,
     "passed": 71,
     "progress_message": "Made it to the full screening checks but failed"
