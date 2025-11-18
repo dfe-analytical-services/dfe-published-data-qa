@@ -177,9 +177,9 @@ ethnicity_minor,Filter,Unknown,ethnicity_major,Unknown,,any,Personal characteris
 ethnicity_minor,Filter,White and Asian,ethnicity_major,Mixed / Multiple ethnic groups,,any,Personal characteristics
 ethnicity_minor,Filter,White and Black African,ethnicity_major,Mixed / Multiple ethnic groups,,any,Personal characteristics
 ethnicity_minor,Filter,White and Black Caribbean,ethnicity_major,Mixed / Multiple ethnic groups,,any,Personal characteristics
+first_language,Filter,First language unclassified,,,,api-only,Personal characteristics
 first_language,Filter,Known or believed to be English,,,,api-only,Personal characteristics
 first_language,Filter,Known or believed to be other than English,,,,api-only,Personal characteristics
-first_language,Filter,First language unclassified,,,,api-only,Personal characteristics
 first_language,Filter,Total,,,,api-only,Personal characteristics
 fsm_status,Filter,FSM eligible,,,,api-only,Personal characteristics
 fsm_status,Filter,Not known to be FSM eligible,,,,api-only,Personal characteristics
@@ -331,6 +331,10 @@ higher_standard_pupil_count,Indicator,,,,,api-only,Key stage 2 attainment
 higher_standard_pupil_percent,Indicator,,,,,api-only,Key stage 2 attainment
 learner_count,Indicator,,,,,api-only,Apprenticeships
 learner_percent,Indicator,,,,,api-only,Apprenticeships
+no_further_action_count,Indicator,,,,,api-only,Children in Need
+no_further_action_percent,Indicator,,,,,api-only,Children in Need
+not_in_need_count,Indicator,,,,,api-only,Children in Need
+not_in_need_percent,Indicator,,,,,api-only,Children in Need
 not_meeting_pupil_count,Indicator,,,,,api-only,Key stage 2 attainment
 not_meeting_pupil_percent,Indicator,,,,,api-only,Key stage 2 attainment
 participation_count,Indicator,,,,,api-only,Apprenticeships
@@ -355,6 +359,12 @@ progress_measure_total_score,Indicator,,,,,api-only,Key stage 2 attainment
 progress_measure_upper_conf_interval,Indicator,,,,,api-only,Key stage 2 attainment
 pupil_count,Indicator,,,,,api-only,General
 pupil_percent,Indicator,,,,,api-only,General
+referral_child_count,Indicator,,,,,api-only,Children in Need
+referral_count,Indicator,,,,,api-only,Children in Need
+rereferral_child_count,Indicator,,,,,api-only,Children in Need
+rereferral_child_percent,Indicator,,,,,api-only,Children in Need
+rereferral_count,Indicator,,,,,api-only,Children in Need
+rereferral_percent,Indicator,,,,,api-only,Children in Need
 scaled_scores_eligible_pupil_count,Indicator,,,,,api-only,Key stage 2 attainment
 scaled_scores_total,Indicator,,,,,api-only,Key stage 2 attainment
 school_count,Indicator,,,,,api-only,General
