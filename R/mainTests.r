@@ -1340,7 +1340,8 @@ overcompleted_cols <- function(data, meta) {
         "School",
         "Provider",
         "Institution",
-        "Planning area"
+        "Planning area",
+        "Police force area"
       )
     )),
 
@@ -1355,7 +1356,8 @@ overcompleted_cols <- function(data, meta) {
         "School",
         "Provider",
         "Institution",
-        "Planning area"
+        "Planning area",
+        "Police force area"
       )
     )),
 
@@ -1367,7 +1369,8 @@ overcompleted_cols <- function(data, meta) {
         "Ward",
         "School",
         "Provider",
-        "Institution"
+        "Institution",
+        "Police force area"
       )
     )),
 
@@ -1387,7 +1390,7 @@ overcompleted_cols <- function(data, meta) {
     # Other levels tested using old code
     # forcing these into a matrix, otherwise just calling that row returns a vector that breaks the apply function
     unlist(apply(
-      geography_matrix[c(5, 6, 8:13, 17), ],
+      geography_matrix[c(5, 6, 8:13, 17, 18), ],
       1,
       overcomplete_mid_cols
     )),
