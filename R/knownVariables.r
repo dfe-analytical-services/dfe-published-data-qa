@@ -186,6 +186,7 @@ las <- suppressMessages(read_csv("data/las.csv"))
 lads <- suppressMessages(read_csv("data/lads.csv"))
 leps <- suppressMessages(read_csv("data/leps.csv"))
 edas <- suppressMessages(read_csv("data/english_devolved_areas.csv"))
+pfas <- suppressMessages(read_csv("data/police-force-areas.csv"))
 universal <- suppressMessages(read_csv("data/universal_geog_options.csv"))
 
 # PCons, this is quick and dirty, should move to use the ward / PCon / LAD / LA file instead
@@ -217,6 +218,10 @@ expected_pcon_combinations <- unique(paste(
   combined_pcons$pcon_code,
   combined_pcons$pcon_name
 ))
+expected_pfa_combinations <- unique(paste(
+  pfas$pfa_code,
+  pfas$pfa_name
+))
 expected_lep_combinations <- unique(paste(
   leps$local_enterprise_partnership_code,
   leps$local_enterprise_partnership_name
@@ -232,7 +237,7 @@ expected_standard_geog_combinations <- unique(paste(
 ))
 
 # Reg-ex for ob units =================================================================================================
-potential_ob_units_regex <- "(^(sch|prov|inst|estab|reg|la|local|rsc|pcon|lep|mca|oa|ward|mat).*(name|code|urn|ukprn|number|upin|id)$)|(^(laestab|estab|sch|school|schools|prov|provider|providers|inst|institution|institutions|name|code|urn|ukprn|number|upin|id|region|la|lad|rsc|pcon|lep|mca|oa|ward|mat)$)"
+potential_ob_units_regex <- "(^(sch|prov|inst|estab|reg|la|local|rsc|pfa|pcon|lep|mca|oa|ward|mat).*(name|code|urn|ukprn|number|upin|id)$)|(^(laestab|estab|sch|school|schools|prov|provider|providers|inst|institution|institutions|name|code|urn|ukprn|number|upin|id|region|la|lad|rsc|pcon|lep|mca|oa|ward|mat)$)"
 
 # Indicator units =====================================================================================================
 acceptable_indicatorunits <- c("%", "pp", "£", "£m", "numberstring")
