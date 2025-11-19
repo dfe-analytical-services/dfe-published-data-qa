@@ -205,6 +205,12 @@ phase_type_grouping,Filter,All schools,,,,api-only,Establishment characteristics
 phase_type_grouping,Filter,State-funded primary,,,,api-only,Establishment characteristics
 phase_type_grouping,Filter,State-funded primary and secondary,,,,api-only,Establishment characteristics
 phase_type_grouping,Filter,State-funded secondary,,,,api-only,Establishment characteristics
+cla_group,Filter,Children ceasing to be looked after during the year,,,,api-only,Children Looked After
+cla_group,Filter,Children looked after on 31 March,,,,api-only,Children Looked After
+cla_group,Filter,Children looked after on 31 March excluding unaccompanied asylum-seeking children,,,,api-only,Children Looked After
+cla_group,Filter,Children looked after on 31 March who were unaccompanied asylum-seeking children,,,,api-only,Children Looked After
+cla_group,Filter,Children looked after who were adopted during the year,,,,api-only,Children Looked After
+cla_group,Filter,Children starting to be looked after during the year,,,,api-only,Children Looked After
 provider_type,Filter,All group-based providers,,,,api-only,Establishment characteristics
 provider_type,Filter,All school-based providers,,,,api-only,Establishment characteristics
 provider_type,Filter,Childminders,,,,api-only,Establishment characteristics
@@ -304,6 +310,7 @@ achievements_percent,Indicator,,,,,api-only,Apprenticeships
 average_scaled_score,Indicator,,,,,api-only,Key stage 2 attainment
 below_interim_pre_ks_std_pupil_count,Indicator,,,,,api-only,Key stage 2 attainment
 below_interim_pre_ks_std_pupil_percent,Indicator,,,,,api-only,Key stage 2 attainment
+children_count,Indicator,,,,,api-only,Children Looked After
 disapplied_pupil_count,Indicator,,,,,api-only,Key stage 2 attainment
 disapplied_pupil_percent,Indicator,,,,,api-only,Key stage 2 attainment
 early_dev_of_expected_std_pupil_count,Indicator,,,,,api-only,Key stage 2 attainment
