@@ -181,9 +181,15 @@ first_language,Filter,First language unclassified,,,,api-only,Personal character
 first_language,Filter,Known or believed to be English,,,,api-only,Personal characteristics
 first_language,Filter,Known or believed to be other than English,,,,api-only,Personal characteristics
 first_language,Filter,Total,,,,api-only,Personal characteristics
+first_language,Filter,English,,,,api-only,Personal characteristics
+first_language,Filter,Other than English,,,,api-only,Personal characteristics
+first_language,Filter,Unknown,,,,api-only,Personal characteristics
 fsm_status,Filter,FSM eligible,,,,api-only,Personal characteristics
 fsm_status,Filter,Not known to be FSM eligible,,,,api-only,Personal characteristics
 fsm_status,Filter,Total,,,,api-only,Personal characteristics
+fsm_status,Filter,Eligible for free school meals,,,,api-only,Personal characteristics
+fsm_status,Filter,Not eligible for free school meals,,,,api-only,Personal characteristics
+fsm_status,Filter,Unknown,,,,api-only,Personal characteristics
 funding_type,Filter,Other,,,,api-only,Apprenticeships
 funding_type,Filter,Supported by ASA levy funds,,,,api-only,Apprenticeships
 funding_type,Filter,Total,,,,api-only,Apprenticeships
@@ -267,6 +273,7 @@ sen_provision,Filter,No SEN provision,sen_status,No identified special education
 sen_provision,Filter,SEN support / SEN without an EHC plan,sen_status,Any special educational need,,api-only,Special educational needs
 sen_provision,Filter,Total,sen_status,Total,,api-only,Special educational needs
 sen_provision,Filter,Unknown SEN provision,sen_status,Unclassified special educational need,,api-only,Special educational needs
+sen_provision,Filter,Unknown,sen_status,Unclassified special educational need,,api-only,Special educational needs
 sen_secondary_need,Filter,All secondary need,,,,api-only,Special educational needs
 sen_secondary_need,Filter,Autistic spectrum disorder,,,ASD,api-only,Special educational needs
 sen_secondary_need,Filter,Hearing impairment,,,HI,api-only,Special educational needs
@@ -288,6 +295,10 @@ sex,Filter,Boys,,,,api-only,Personal characteristics
 sex,Filter,Girls,,,,api-only,Personal characteristics
 sex,Filter,Other,,,,api-only,Personal characteristics
 sex,Filter,Total,,,,api-only,Personal characteristics
+term_of_birth,Filter,Autumn-born,,,,api-only,Personal characteristics
+term_of_birth,Filter,Spring-born,,,,api-only,Personal characteristics
+term_of_birth,Filter,Summer-born,,,,api-only,Personal characteristics
+term_of_birth,Filter,Total,,,,api-only,Personal characteristics
 subject,Filter,"Grammar, punctuation and spelling",,,,api-only,Attainment
 subject,Filter,Maths,,,,api-only,Attainment
 subject,Filter,Reading,,,,api-only,Attainment
@@ -376,3 +387,35 @@ working_below_pupil_count,Indicator,,,,,api-only,Key stage 2 attainment
 working_below_pupil_percent,Indicator,,,,,api-only,Key stage 2 attainment
 working_towards_pupil_count,Indicator,,,,,api-only,Key stage 2 attainment
 working_towards_pupil_percent,Indicator,,,,,api-only,Key stage 2 attainment
+children_count,Indicator,,,,,api-only,Early years foundation stage profile results
+elgs_expected_average,Indicator,,,,,api-only,Early years foundation stage profile results
+all_elgs_expected_children_count,Indicator,,,,,api-only,Early years foundation stage profile results
+all_elgs_expected_children_percent,Indicator,,,,,api-only,Early years foundation stage profile results
+comm_lang_lit_expected_children_count,Indicator,,,,,api-only,Early years foundation stage profile results
+comm_lang_lit_expected_children_percent,Indicator,,,,,api-only,Early years foundation stage profile results
+gld_children_count,Indicator,,,,,api-only,Early years foundation stage profile results
+gld_children_percent,Indicator,,,,,api-only,Early years foundation stage profile results
+early_learning_goal,Indicator,,,,,api-only,Early years foundation stage profile results
+emerging_children_count,Indicator,,,,,api-only,Early years foundation stage profile results
+emerging_children_percent,Indicator,,,,,api-only,Early years foundation stage profile results
+expected_children_count,Indicator,,,,,api-only,Early years foundation stage profile results
+expected_children_percent,Indicator,,,,,api-only,Early years foundation stage profile results
+headline_measure,Indicator,,,,,api-only,Early years foundation stage profile results
+elgs_expected_number,Indicator,,,,,api-only,Early years foundation stage profile results
+children_percent,Indicator,,,,,api-only,Early years foundation stage profile results
+children_percent_change,Indicator,,,,,api-only,Early years foundation stage profile results
+area_of_learning,Indicator,,,,,api-only,Early years foundation stage profile results
+listening_attention_understanding,Indicator,,,,,api-only,Early years foundation stage profile results
+speaking,Indicator,,,,,api-only,Early years foundation stage profile results
+self_regulation,Indicator,,,,,api-only,Early years foundation stage profile results
+managing_self,Indicator,,,,,api-only,Early years foundation stage profile results
+building_relationships,Indicator,,,,,api-only,Early years foundation stage profile results
+gross_motor_skills,Indicator,,,,,api-only,Early years foundation stage profile results
+fine_motor_skills,Indicator,,,,,api-only,Early years foundation stage profile results
+comprehension,Indicator,,,,,api-only,Early years foundation stage profile results
+word_reading,Indicator,,,,,api-only,Early years foundation stage profile results
+writing,Indicator,,,,,api-only,Early years foundation stage profile results
+number,Indicator,,,,,api-only,Early years foundation stage profile results
+numerical_patterns,Indicator,,,,,api-only,Early years foundation stage profile results
+elg_number_total_pupils_count,Indicator,,,,,api-only,Early years foundation stage profile results
+elg_number_total_pupils_percent,Indicator,,,,,api-only,Early years foundation stage profile results
