@@ -16,3 +16,4 @@ row_number,geographic_level,code_field,name_field,code_field_secondary
 15,Provider,provider_ukprn,provider_name,NA
 16,Institution,institution_id,institution_name,NA
 17,Planning area,planning_area_code,planning_area_name,NA
+18,Police force area,pfa_code,pfa_name,NA
