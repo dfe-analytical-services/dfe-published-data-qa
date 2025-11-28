@@ -293,6 +293,8 @@ sen_secondary_need,Filter,Unknown,,,,api-only,Special educational needs
 sen_secondary_need,Filter,Vision impairment,,,VI,api-only,Special educational needs
 sex,Filter,Boys,,,,api-only,Personal characteristics
 sex,Filter,Girls,,,,api-only,Personal characteristics
+sex,Filter,Male,,,,api-only,Personal characteristics
+sex,Filter,Female,,,,api-only,Personal characteristics
 sex,Filter,Other,,,,api-only,Personal characteristics
 sex,Filter,Total,,,,api-only,Personal characteristics
 term_of_birth,Filter,Autumn-born,,,,api-only,Personal characteristics
@@ -308,6 +310,90 @@ subject,Filter,Writing,,,,api-only,Attainment
 young_carer,Filter,Not known to be a young carer,,,,api-only,Personal characteristics
 young_carer,Filter,Total,,,,api-only,Personal characteristics
 young_carer,Filter,Young carer,,,,api-only,Personal characteristics
+early_learning_goal_measure,Filter,All early learning goals,,,,api-only,Early years foundation stage profile results
+early_learning_goal_measure,Filter,All ELGs contributing to GLD,,,,api-only,Early years foundation stage profile results
+early_learning_goal,Filter,All early learning goals,,,,api-only,Early years foundation stage profile results
+early_learning_goal,Filter,"Listening, attention and understanding",,,,api-only,Early years foundation stage profile results
+early_learning_goal,Filter,Speaking,,,,api-only,Early years foundation stage profile results
+early_learning_goal,Filter,Being imaginative and expressive,,,,api-only,Early years foundation stage profile results
+early_learning_goal,Filter,Creating with materials,,,,api-only,Early years foundation stage profile results
+early_learning_goal,Filter,Comprehension,,,,api-only,Early years foundation stage profile results
+early_learning_goal,Filter,Word reading,,,,api-only,Early years foundation stage profile results
+early_learning_goal,Filter,Writing,,,,api-only,Early years foundation stage profile results
+early_learning_goal,Filter,Number,,,,api-only,Early years foundation stage profile results
+early_learning_goal,Filter,Numerical patterns,,,,api-only,Early years foundation stage profile results
+early_learning_goal,Filter,Building relationships,,,,api-only,Early years foundation stage profile results
+early_learning_goal,Filter,Managing self,,,,api-only,Early years foundation stage profile results
+early_learning_goal,Filter,Self-regulation,,,,api-only,Early years foundation stage profile results
+early_learning_goal,Filter,Fine motor skills,,,,api-only,Early years foundation stage profile results
+early_learning_goal,Filter,Gross motor skills,,,,api-only,Early years foundation stage profile results
+early_learning_goal,Filter,Past and present,,,,api-only,Early years foundation stage profile results
+early_learning_goal,Filter,"People, culture and communities",,,,api-only,Early years foundation stage profile results
+early_learning_goal,Filter,The natural world,,,,api-only,Early years foundation stage profile results
+elgs_expected_number,Filter,Total,,,,api-only,Early years foundation stage profile results
+elgs_expected_number,Filter,0,,,,api-only,Early years foundation stage profile results
+elgs_expected_number,Filter,1,,,,api-only,Early years foundation stage profile results
+elgs_expected_number,Filter,2,,,,api-only,Early years foundation stage profile results
+elgs_expected_number,Filter,3,,,,api-only,Early years foundation stage profile results
+elgs_expected_number,Filter,4,,,,api-only,Early years foundation stage profile results
+elgs_expected_number,Filter,5,,,,api-only,Early years foundation stage profile results
+elgs_expected_number,Filter,6,,,,api-only,Early years foundation stage profile results
+elgs_expected_number,Filter,7,,,,api-only,Early years foundation stage profile results
+elgs_expected_number,Filter,8,,,,api-only,Early years foundation stage profile results
+elgs_expected_number,Filter,9,,,,api-only,Early years foundation stage profile results
+elgs_expected_number,Filter,10,,,,api-only,Early years foundation stage profile results
+elgs_expected_number,Filter,11,,,,api-only,Early years foundation stage profile results
+elgs_expected_number,Filter,12,,,,api-only,Early years foundation stage profile results
+elgs_expected_number,Filter,13,,,,api-only,Early years foundation stage profile results
+elgs_expected_number,Filter,14,,,,api-only,Early years foundation stage profile results
+elgs_expected_number,Filter,15,,,,api-only,Early years foundation stage profile results
+elgs_expected_number,Filter,16,,,,api-only,Early years foundation stage profile results
+elgs_expected_number,Filter,17,,,,api-only,Early years foundation stage profile results
+idaci_decile,Filter,Total,,,,api-only,Early years foundation stage profile results
+idaci_decile,Filter,1,,,,api-only,Early years foundation stage profile results
+idaci_decile,Filter,2,,,,api-only,Early years foundation stage profile results
+idaci_decile,Filter,3,,,,api-only,Early years foundation stage profile results
+idaci_decile,Filter,4,,,,api-only,Early years foundation stage profile results
+idaci_decile,Filter,5,,,,api-only,Early years foundation stage profile results
+idaci_decile,Filter,6,,,,api-only,Early years foundation stage profile results
+idaci_decile,Filter,7,,,,api-only,Early years foundation stage profile results
+idaci_decile,Filter,8,,,,api-only,Early years foundation stage profile results
+idaci_decile,Filter,9,,,,api-only,Early years foundation stage profile results
+idaci_decile,Filter,10,,,,api-only,Early years foundation stage profile results
+area_of_learning,Filter,All prime areas,,,,api-only,Early years foundation stage profile results
+area_of_learning,Filter,All specific areas,,,,api-only,Early years foundation stage profile results
+area_of_learning,Filter,Communication and language,,,,api-only,Early years foundation stage profile results
+area_of_learning,Filter,Expressive arts and design,,,,api-only,Early years foundation stage profile results
+area_of_learning,Filter,Literacy,,,,api-only,Early years foundation stage profile results
+area_of_learning,Filter,Mathematics,,,,api-only,Early years foundation stage profile results
+area_of_learning,Filter,"Personal, social and emotional development",,,,api-only,Early years foundation stage profile results
+area_of_learning,Filter,Physical development,,,,api-only,Early years foundation stage profile results
+area_of_learning,Filter,Understanding the world,,,,api-only,Early years foundation stage profile results
+icadi_decile,Filter,Total,,,,api-only,Early years foundation stage profile results
+elg_listening_attention_understanding,Filter,Emerging,,,,api-only,Early years foundation stage profile results
+elg_listening_attention_understanding,Filter,Expected,,,,api-only,Early years foundation stage profile results
+elg_speaking,Filter,Emerging,,,,api-only,Early years foundation stage profile results
+elg_speaking,Filter,Expected,,,,api-only,Early years foundation stage profile results
+elg_self_regulation,Filter,Emerging,,,,api-only,Early years foundation stage profile results
+elg_self_regulation,Filter,Expected,,,,api-only,Early years foundation stage profile results
+elg_managing_self,Filter,Emerging,,,,api-only,Early years foundation stage profile results
+elg_managing_self,Filter,Expected,,,,api-only,Early years foundation stage profile results
+elg_building_relationships,Filter,Emerging,,,,api-only,Early years foundation stage profile results
+elg_building_relationships,Filter,Expected,,,,api-only,Early years foundation stage profile results
+elg_gross_motor_skills,Filter,Emerging,,,,api-only,Early years foundation stage profile results
+elg_gross_motor_skills,Filter,Expected,,,,api-only,Early years foundation stage profile results
+elg_fine_motor_skills,Filter,Emerging,,,,api-only,Early years foundation stage profile results
+elg_fine_motor_skills,Filter,Expected,,,,api-only,Early years foundation stage profile results
+elg_comprehension,Filter,Emerging,,,,api-only,Early years foundation stage profile results
+elg_comprehension,Filter,Expected,,,,api-only,Early years foundation stage profile results
+elg_word_reading,Filter,Emerging,,,,api-only,Early years foundation stage profile results
+elg_word_reading,Filter,Expected,,,,api-only,Early years foundation stage profile results
+elg_writing,Filter,Emerging,,,,api-only,Early years foundation stage profile results
+elg_writing,Filter,Expected,,,,api-only,Early years foundation stage profile results
+elg_number,Filter,Emerging,,,,api-only,Early years foundation stage profile results
+elg_number,Filter,Expected,,,,api-only,Early years foundation stage profile results
+elg_numerical_patterns,Filter,Emerging,,,,api-only,Early years foundation stage profile results
+elg_numerical_patterns,Filter,Expected,,,,api-only,Early years foundation stage profile results
 absent_pupil_count,Indicator,,,,,api-only,Key stage 2 attainment
 absent_pupil_percent,Indicator,,,,,api-only,Key stage 2 attainment
 achievement_count,Indicator,,,,,api-only,Apprenticeships
@@ -395,27 +481,12 @@ comm_lang_lit_expected_children_count,Indicator,,,,,api-only,Early years foundat
 comm_lang_lit_expected_children_percent,Indicator,,,,,api-only,Early years foundation stage profile results
 gld_children_count,Indicator,,,,,api-only,Early years foundation stage profile results
 gld_children_percent,Indicator,,,,,api-only,Early years foundation stage profile results
-early_learning_goal,Indicator,,,,,api-only,Early years foundation stage profile results
 emerging_children_count,Indicator,,,,,api-only,Early years foundation stage profile results
 emerging_children_percent,Indicator,,,,,api-only,Early years foundation stage profile results
 expected_children_count,Indicator,,,,,api-only,Early years foundation stage profile results
 expected_children_percent,Indicator,,,,,api-only,Early years foundation stage profile results
-headline_measure,Indicator,,,,,api-only,Early years foundation stage profile results
-elgs_expected_number,Indicator,,,,,api-only,Early years foundation stage profile results
 children_percent,Indicator,,,,,api-only,Early years foundation stage profile results
 children_percent_change,Indicator,,,,,api-only,Early years foundation stage profile results
-area_of_learning,Indicator,,,,,api-only,Early years foundation stage profile results
-listening_attention_understanding,Indicator,,,,,api-only,Early years foundation stage profile results
-speaking,Indicator,,,,,api-only,Early years foundation stage profile results
-self_regulation,Indicator,,,,,api-only,Early years foundation stage profile results
-managing_self,Indicator,,,,,api-only,Early years foundation stage profile results
-building_relationships,Indicator,,,,,api-only,Early years foundation stage profile results
-gross_motor_skills,Indicator,,,,,api-only,Early years foundation stage profile results
-fine_motor_skills,Indicator,,,,,api-only,Early years foundation stage profile results
-comprehension,Indicator,,,,,api-only,Early years foundation stage profile results
-word_reading,Indicator,,,,,api-only,Early years foundation stage profile results
-writing,Indicator,,,,,api-only,Early years foundation stage profile results
-number,Indicator,,,,,api-only,Early years foundation stage profile results
-numerical_patterns,Indicator,,,,,api-only,Early years foundation stage profile results
-elg_number_total_pupils_count,Indicator,,,,,api-only,Early years foundation stage profile results
-elg_number_total_pupils_percent,Indicator,,,,,api-only,Early years foundation stage profile results
+elg_combination_children_count,Indicator,,,,,api-only,Early years foundation stage profile results
+elg_number_children_count,Indicator,,,,,api-only,Early years foundation stage profile results
+elg_combination_number_children_percent,Indicator,,,,,api-only,Early years foundation stage profile results
