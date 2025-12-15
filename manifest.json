@@ -4483,7 +4483,7 @@
       "checksum": "7477c76d8990b16372dc3f19c3e8f045"
     },
     "data/geography_matrix.csv": {
-      "checksum": "dd655b6a3307ee538cbd412493345790"
+      "checksum": "3f5b6dbd939993a05b9faa50d9328e9a"
     },
     "data/harmonised_col_names.csv": {
       "checksum": "573d14f67bc6ff3ca36bea644f1e3672"
@@ -4511,6 +4511,9 @@
     },
     "data/peia_lookup.csv": {
       "checksum": "887db4a5f20ff3326ce279822e9f9b65"
+    },
+    "data/police-force-areas.csv": {
+      "checksum": "cf6339632c7568dc14a65346372ba38d"
     },
     "data/region_la_hierarchy.csv": {
       "checksum": "8d2b5b6fb99376fa2d65d96a20df6166"
@@ -4549,10 +4552,13 @@
       "checksum": "1c3a5b538aa71e2f377b4733e7c9a580"
     },
     "R/knownVariables.r": {
-      "checksum": "d92cb4c8e810e9beb0bf6f167f570925"
+      "checksum": "9420965ddce28911fe1fc528a6f57bcb"
     },
     "R/mainTests.r": {
-      "checksum": "6fdf683a497347272ee52089c085f56e"
+      "checksum": "08b8657e6d4ac139069320c6dda69010"
+    },
+    "R/manual_scripts/api-data-checker.r": {
+      "checksum": "e03fcc51d479b00ffb8ce2b7abd89805"
     },
     "R/manual_scripts/api-data-checker.r": {
       "checksum": "e03fcc51d479b00ffb8ce2b7abd89805"
@@ -4593,6 +4599,12 @@
     "tests/testthat.R": {
       "checksum": "12e9b09de5275bdc13bde6ae5a82f8b1"
     },
+    "tests/testthat/_snaps/UI-01_example_files/example_files-001.json": {
+      "checksum": "3824e397e0b583a9367e306830fccd72"
+    },
+    "tests/testthat/_snaps/UI-01_example_files/example_files-002.json": {
+      "checksum": "2d7c57ccba3887c66d3b24a4a1ae570f"
+    },
     "tests/testthat/_snaps/UI-02_edge_cases/edge_cases-001.json": {
       "checksum": "75228173459ba6f210f07e7ce363ab5e"
     },
@@ -4600,7 +4612,7 @@
       "checksum": "0c3fc29902031d323fa8e49b1b69b549"
     },
     "tests/testthat/_snaps/UI-03_additional_qa/additional_qa-001.json": {
-      "checksum": "025544b9263832c321af5257d32d55c6"
+      "checksum": "a8a0ab0e8c113921038f3a1a8a5e58a4"
     },
     "tests/testthat/_snaps/UI-03_additional_qa/additional_qa-002.json": {
       "checksum": "6e1c676dfd0cc9bf05a9f05ad7ace1de"
@@ -4627,10 +4639,10 @@
       "checksum": "984e2ca1ab29edfc839bbe0b936c2a95"
     },
     "tests/testthat/_snaps/UI-03_additional_qa/additional_qa-010.json": {
-      "checksum": "59d07a9ae3edcb8d5a5eb36d4f25b4b3"
+      "checksum": "e47c3d331b8347980affc664e2c1cae1"
     },
     "tests/testthat/_snaps/UI-03_additional_qa/additional_qa-011.json": {
-      "checksum": "22950bdc812e3441e362fb66032c2fce"
+      "checksum": "8e44e04fa8ae4be9b9bae76633b83342"
     },
     "tests/testthat/fileValidation/data_empty_cols.csv": {
       "checksum": "9751119425e4ee601dd0aff4918876a0"
@@ -5500,7 +5512,7 @@
       "checksum": "0c3314120aca12add10371384a7514cc"
     },
     "tests/testthat/test-data/passes_everything.csv": {
-      "checksum": "c4b0d7f6c67f957881b6869a3a18ad97"
+      "checksum": "579add85f189e049a557196262591aaa"
     },
     "tests/testthat/test-data/passes_everything.meta.csv": {
       "checksum": "355119e1d867c20485b520f506a32c4f"
@@ -5542,7 +5554,7 @@
       "checksum": "7475e572db815ee6eed8ba435c1c0e72"
     },
     "tests/testthat/test-UI-01_example_files.R": {
-      "checksum": "50e670106b83054d5fdd59dffea3f47d"
+      "checksum": "0cf8d0b31b2fc9ca807dd642b19e8017"
     },
     "tests/testthat/test-UI-02_edge_cases.R": {
       "checksum": "e1c273ef462a5f49a60df1e3a5e94fb6"

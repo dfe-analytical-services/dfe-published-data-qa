@@ -9,9 +9,76 @@ apprenticeship_level,Filter,Advanced Apprenticeship,,,,api-only,Apprenticeships
 apprenticeship_level,Filter,Higher Apprenticeship,,,,api-only,Apprenticeships
 apprenticeship_level,Filter,Intermediate Apprenticeship,,,,api-only,Apprenticeships
 apprenticeship_level,Filter,Total,,,,api-only,Apprenticeships
+attendance_reason,Filter,All approved educational activity,attendance_type,Approved educational activity,,,Pupil attendance
+attendance_reason,Filter,All authorised,attendance_type,Authorised,,,Pupil attendance
+attendance_reason,Filter,All late sessions,attendance_type,All late sessions,,api-only,Pupil attendance
+attendance_reason,Filter,All possible sessions,attendance_type,All possible sessions,,api-only,Pupil attendance
+attendance_reason,Filter,All present,attendance_type,Present,,,Pupil attendance
+attendance_reason,Filter,All unauthorised,attendance_type,Unauthorised,,,Pupil attendance
+attendance_reason,Filter,Approved sporting activity (p),attendance_type,Approved educational activity,,api-only,Pupil attendance
+attendance_reason,Filter,Authorised holiday (h),attendance_type,Authorised,,,Pupil attendance
+attendance_reason,Filter,Closed session cancelled (y4),attendance_type,Management and legacy codes,,,Pupil attendance
+attendance_reason,Filter,Detention sentence (y5),attendance_type,Management and legacy codes,,,Pupil attendance
+attendance_reason,Filter,Dual registration (d),attendance_type,Management and legacy codes,,,Pupil attendance
+attendance_reason,Filter,Education arranged by LA (k),attendance_type,Approved educational activity,,,Pupil attendance
+attendance_reason,Filter,Education off site (b),attendance_type,Approved educational activity,,,Pupil attendance
+attendance_reason,Filter,Educational visit trip (v),attendance_type,Approved educational activity,,,Pupil attendance
+attendance_reason,Filter,Excluded (e),attendance_type,Authorised,,,Pupil attendance
+attendance_reason,Filter,Illness (i),attendance_type,Authorised,,,Pupil attendance
+attendance_reason,Filter,Interview (j),attendance_type,Approved educational activity,,,Pupil attendance
+attendance_reason,Filter,Interview (j1),attendance_type,Authorised,,,Pupil attendance
+attendance_reason,Filter,LA arrangements (q),attendance_type,Management and legacy codes,,,Pupil attendance
+attendance_reason,Filter,Late after registers closed (u),attendance_type,Unauthorised,,,Pupil attendance
+attendance_reason,Filter,Legacy family holiday (f),attendance_type,Management and legacy codes,,,Pupil attendance
+attendance_reason,Filter,Medical dental (m),attendance_type,Authorised,,,Pupil attendance
+attendance_reason,Filter,Mobile child (t),attendance_type,Authorised,,,Pupil attendance
+attendance_reason,Filter,No reason yet (n),attendance_type,Unauthorised,,,Pupil attendance
+attendance_reason,Filter,Not attending enforced closure (y),attendance_type,Management and legacy codes,,,Pupil attendance
+attendance_reason,Filter,Not attending not on roll (z),attendance_type,Management and legacy codes,,,Pupil attendance
+attendance_reason,Filter,Not attending planned closed,attendance_type,Management and legacy codes,,,Pupil attendance
+attendance_reason,Filter,Other authorised (c),attendance_type,Authorised,,,Pupil attendance
+attendance_reason,Filter,Other unauthorised (o),attendance_type,Unauthorised,,,Pupil attendance
+attendance_reason,Filter,Overall absence,attendance_type,Overall absence,,,Pupil attendance
+attendance_reason,Filter,Overall attendance,attendance_type,Overall attendance,,,Pupil attendance
+attendance_reason,Filter,Premises out of use (y3),attendance_type,Management and legacy codes,,,Pupil attendance
+attendance_reason,Filter,Present,attendance_type,Present,,,Pupil attendance
+attendance_reason,Filter,Present am,attendance_type,Present,,,Pupil attendance
+attendance_reason,Filter,Present late before registers closed (l),attendance_type,Present,,,Pupil attendance
+attendance_reason,Filter,Present pm,attendance_type,Present,,,Pupil attendance
+attendance_reason,Filter,Prohibited infection disease (y6),attendance_type,Management and legacy codes,,,Pupil attendance
+attendance_reason,Filter,Regulated performance (c1),attendance_type,Authorised,,,Pupil attendance
+attendance_reason,Filter,Religious observance (r),attendance_type,Authorised,,,Pupil attendance
+attendance_reason,Filter,Study leave (s),attendance_type,Authorised,,,Pupil attendance
+attendance_reason,Filter,Temporary reduced timetable (c2),attendance_type,Authorised,,,Pupil attendance
+attendance_reason,Filter,Transport not provided (y1),attendance_type,Management and legacy codes,,,Pupil attendance
+attendance_reason,Filter,Travel disruption (y2),attendance_type,Management and legacy codes,,,Pupil attendance
+attendance_reason,Filter,Unauthorised holiday (g),attendance_type,Unauthorised,,,Pupil attendance
+attendance_reason,Filter,Unavoidable cause (y7),attendance_type,Management and legacy codes,,,Pupil attendance
+attendance_reason,Filter,Work experience (w),attendance_type,Approved educational activity,,,Pupil attendance
+attendance_status,Filter,Absence,,,,,Pupil attendance
+attendance_status,Filter,Attendance,,,,,Pupil attendance
+attendance_status,Filter,Late sessions,,,,,Pupil attendance
+attendance_status,Filter,Management and legacy codes,,,,,Pupil attendance
+attendance_status,Filter,Possible sessions,,,,,Pupil attendance
+attendance_type,Filter,All late sessions,attendance_status,Late sessions,,,Pupil attendance
+attendance_type,Filter,All possible sessions,attendance_status,Possible sessions,,,Pupil attendance
+attendance_type,Filter,Approved educational activity,attendance_status,Attendance,,,Pupil attendance
+attendance_type,Filter,Authorised,attendance_status,Absence,,,Pupil attendance
+attendance_type,Filter,Management and legacy codes,attendance_status,Management and legacy codes,,,Pupil attendance
+attendance_type,Filter,Overall absence,attendance_status,Absence,,,Pupil attendance
+attendance_type,Filter,Overall attendance,attendance_status,Attendance,,,Pupil attendance
+attendance_type,Filter,Present,attendance_status,Attendance,,,Pupil attendance
+attendance_type,Filter,Unauthorised,attendance_status,Absence,,,Pupil attendance
+cla_group,Filter,Children ceasing to be looked after during the year,,,,api-only,Children Looked After
+cla_group,Filter,Children looked after on 31 March,,,,api-only,Children Looked After
+cla_group,Filter,Children looked after on 31 March excluding unaccompanied asylum-seeking children,,,,api-only,Children Looked After
+cla_group,Filter,Children looked after on 31 March who were unaccompanied asylum-seeking children,,,,api-only,Children Looked After
+cla_group,Filter,Children looked after who were adopted during the year,,,,api-only,Children Looked After
+cla_group,Filter,Children starting to be looked after during the year,,,,api-only,Children Looked After
 disadvantage_status,Filter,Disadvantaged,,,,api-only,Personal characteristics
 disadvantage_status,Filter,Not known to be disadvantaged,,,,api-only,Personal characteristics
 disadvantage_status,Filter,Total,,,,api-only,Personal characteristics
+education_phase,Filter,All schools,,,,,Pupil attendance
 education_phase,Filter,All-through,,,AT,api-only,Establishment characteristics
 education_phase,Filter,Alternative provision,,,PR,api-only,Establishment characteristics
 education_phase,Filter,Early years settings,,,,api-only,Establishment characteristics
@@ -180,7 +247,7 @@ ethnicity_minor,Filter,Unknown,ethnicity_major,Unknown,,any,Personal characteris
 ethnicity_minor,Filter,White and Asian,ethnicity_major,Mixed / Multiple ethnic groups,,any,Personal characteristics
 ethnicity_minor,Filter,White and Black African,ethnicity_major,Mixed / Multiple ethnic groups,,any,Personal characteristics
 ethnicity_minor,Filter,White and Black Caribbean,ethnicity_major,Mixed / Multiple ethnic groups,,any,Personal characteristics
-first_language,Filter,First language unknown,,,,api-only,Key stage 2 attainment
+first_language,Filter,First language unclassified,,,,api-only,Personal characteristics
 first_language,Filter,Known or believed to be English,,,,api-only,Personal characteristics
 first_language,Filter,Known or believed to be other than English,,,,api-only,Personal characteristics
 first_language,Filter,Total,,,,api-only,Personal characteristics
@@ -330,6 +397,13 @@ subject,Filter,Reading,,,,api-only,Attainment
 subject,Filter,"Reading, writing and maths",,,,api-only,Attainment
 subject,Filter,Science,,,,api-only,Attainment
 subject,Filter,Writing,,,,api-only,Attainment
+time_frame,Filter,Friday,,,,,Pupil attendance
+time_frame,Filter,Monday,,,,,Pupil attendance
+time_frame,Filter,Thursday,,,,,Pupil attendance
+time_frame,Filter,Tuesday,,,,,Pupil attendance
+time_frame,Filter,Wednesday,,,,,Pupil attendance
+time_frame,Filter,Week,,,,,Pupil attendance
+time_frame,Filter,Year to date,,,,,Pupil attendance
 young_carer,Filter,Not known to be a young carer,,,,api-only,Personal characteristics
 young_carer,Filter,Total,,,,api-only,Personal characteristics
 young_carer,Filter,Young carer,,,,api-only,Personal characteristics
@@ -344,6 +418,7 @@ completed_check_pupil_count,Indicator,,,,,api-only,Key stage 2 attainment
 completed_check_pupil_percent,Indicator,,,,,api-only,Key stage 2 attainment
 cumulative_pupil_count,Indicator,,,,,api-only,Key stage 2 attainment
 cumulative_pupil_percent,Indicator,,,,,api-only,Key stage 2 attainment
+children_count,Indicator,,,,,api-only,Children Looked After
 disapplied_pupil_count,Indicator,,,,,api-only,Key stage 2 attainment
 disapplied_pupil_percent,Indicator,,,,,api-only,Key stage 2 attainment
 early_dev_of_expected_std_pupil_count,Indicator,,,,,api-only,Key stage 2 attainment
@@ -424,6 +499,10 @@ mtc_score_average,Indicator,,,,,api-only,Key stage 2 attainment
 mtc_score_total,Indicator,,,,,api-only,Key stage 2 attainment
 not_completed_check_pupil_count,Indicator,,,,,api-only,Key stage 2 attainment
 not_completed_check_pupil_percent,Indicator,,,,,api-only,Key stage 2 attainment
+no_further_action_count,Indicator,,,,,api-only,Children in Need
+no_further_action_percent,Indicator,,,,,api-only,Children in Need
+not_in_need_count,Indicator,,,,,api-only,Children in Need
+not_in_need_percent,Indicator,,,,,api-only,Children in Need
 not_meeting_pupil_count,Indicator,,,,,api-only,Key stage 2 attainment
 not_meeting_pupil_percent,Indicator,,,,,api-only,Key stage 2 attainment
 participation_count,Indicator,,,,,api-only,Apprenticeships
@@ -448,10 +527,21 @@ progress_measure_total_score,Indicator,,,,,api-only,Key stage 2 attainment
 progress_measure_upper_conf_interval,Indicator,,,,,api-only,Key stage 2 attainment
 pupil_count,Indicator,,,,,api-only,General
 pupil_percent,Indicator,,,,,api-only,General
+reference_date,Indicator,,,,,,Pupil attendance
+referral_child_count,Indicator,,,,,api-only,Children in Need
+referral_count,Indicator,,,,,api-only,Children in Need
+rereferral_child_count,Indicator,,,,,api-only,Children in Need
+rereferral_child_percent,Indicator,,,,,api-only,Children in Need
+rereferral_count,Indicator,,,,,api-only,Children in Need
+rereferral_percent,Indicator,,,,,api-only,Children in Need
 scaled_scores_eligible_pupil_count,Indicator,,,,,api-only,Key stage 2 attainment
 scaled_scores_total,Indicator,,,,,api-only,Key stage 2 attainment
+school_all_count,Indicator,,,,,api-only,Pupil attendance
 school_count,Indicator,,,,,api-only,General
 school_percent,Indicator,,,,,api-only,General
+school_submitted_count,Indicator,,,,,api-only,Pupil attendance
+session_count,Indicator,,,,,,Pupil attendance
+session_percent,Indicator,,,,,,Pupil attendance
 start_count,Indicator,,,,,api-only,Apprenticeships
 starts_percent,Indicator,,,,,api-only,Apprenticeships
 student_count,Indicator,,,,,api-only,General
