@@ -9,6 +9,11 @@ apprenticeship_level,Filter,Advanced Apprenticeship,,,,api-only,Apprenticeships
 apprenticeship_level,Filter,Higher Apprenticeship,,,,api-only,Apprenticeships
 apprenticeship_level,Filter,Intermediate Apprenticeship,,,,api-only,Apprenticeships
 apprenticeship_level,Filter,Total,,,,api-only,Apprenticeships
+disability_status,Filter,Disability,,,,,
+disability_status,Filter,No known disability,,,,,
+disability_status,Filter,Not disclosed,,,,,
+disability_status,Filter,No disability,,,,,
+disability_status,Filter,Total,,,,,
 disadvantage_status,Filter,Disadvantaged,,,,api-only,Personal characteristics
 disadvantage_status,Filter,Not known to be disadvantaged,,,,api-only,Personal characteristics
 disadvantage_status,Filter,Total,,,,api-only,Personal characteristics
@@ -329,6 +334,10 @@ growing_dev_of_expected_std_pupil_count,Indicator,,,,,api-only,Key stage 2 attai
 growing_dev_of_expected_std_pupil_percent,Indicator,,,,,api-only,Key stage 2 attainment
 higher_standard_pupil_count,Indicator,,,,,api-only,Key stage 2 attainment
 higher_standard_pupil_percent,Indicator,,,,,api-only,Key stage 2 attainment
+learning_difficulty_disability,Filter,With learning difficulty / disability,,,,,,
+learning_difficulty_disability,Filter,No learning difficulty / disability,,,,,,
+learning_difficulty_disability,Filter,Unknown,,,,,,
+learning_difficulty_disability,Filter,Total,,,,,,
 learner_count,Indicator,,,,,api-only,Apprenticeships
 learner_percent,Indicator,,,,,api-only,Apprenticeships
 no_further_action_count,Indicator,,,,,api-only,Children in Need

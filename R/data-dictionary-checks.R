@@ -103,10 +103,11 @@ check_data_dictionary_col_name <- function(meta) {
 }
 
 check_data_dictionary_filter_item <- function(
-    data,
-    meta,
-    group_field = "breakdown_topic",
-    filter_field = "breakdown") {
+  data,
+  meta,
+  group_field = "breakdown_topic",
+  filter_field = "breakdown"
+) {
   # First of all grab the filters to be scanned based on the meta data:
   dd <- read_data_dictionary()
   dd_cols_present <- data_dictionary_match_columns(meta, dd) |>
