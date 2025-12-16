@@ -42,9 +42,8 @@ potential_cols <- c(
 #'
 #' @return a data frame of a tidied lookup file
 tidy_downloaded_lookup <- function(
-  open_geography_file,
-  shorthand_lookup
-) {
+    open_geography_file,
+    shorthand_lookup) {
   # Read in the downloaded open geography file --------------------------------
   message("Reading in new data from: ", open_geography_file)
   new_data <- read_csv(open_geography_file, show_col_types = FALSE) %>%
@@ -171,9 +170,8 @@ tidy_downloaded_lookup <- function(
 #' @return message confirming if the CSV file has been successfully written
 
 write_updated_lookup <- function(
-  new_lookup,
-  lookup_filepath
-) {
+    new_lookup,
+    lookup_filepath) {
   # If a lookup file exists already read it in
   if (file.exists(lookup_filepath)) {
     message("Reading data from existing file: ", lookup_filepath)
