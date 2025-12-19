@@ -4456,7 +4456,7 @@
       "checksum": "e8d96d5ffd16a6867fd6d7458bd2f905"
     },
     ".Rprofile": {
-      "checksum": "1cfaed25b9e0cdb54b15b742488b897a"
+      "checksum": "a326e60d5f794224772981669e22d2b6"
     },
     "azure-pipelines-dev.yml": {
       "checksum": "fc2ef843ff5024bcba25ff84eec05f4c"
@@ -4474,7 +4474,7 @@
       "checksum": "31d565a819730736cbcf5a38959d3398"
     },
     "data/data-dictionary.csv": {
-      "checksum": "2b83f9bfaeb0841a879bee713c504e56"
+      "checksum": "3d6edf66188ec5beeaeffd7f46fc3cc7"
     },
     "data/english_devolved_areas.csv": {
       "checksum": "391e91c38d772d55f98e54fbacfc3b9f"
@@ -4545,9 +4545,6 @@
     "LICENSE": {
       "checksum": "51052a72b54c2e4bdddfb52762638274"
     },
-    "R/api-data-checker.r": {
-      "checksum": "c6039d30435a404685b1ab1f5bf3fa9e"
-    },
     "R/data-dictionary-checks.R": {
       "checksum": "bcc45fcf406142644ce4b8fd21645431"
     },
@@ -4559,6 +4556,9 @@
     },
     "R/mainTests.r": {
       "checksum": "08b8657e6d4ac139069320c6dda69010"
+    },
+    "R/manual_scripts/api-data-checker.r": {
+      "checksum": "e03fcc51d479b00ffb8ce2b7abd89805"
     },
     "R/manual_scripts/api-data-checker.r": {
       "checksum": "e03fcc51d479b00ffb8ce2b7abd89805"
