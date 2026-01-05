@@ -1,4 +1,4 @@
-col_name,col_type,filter_item,col_name_parent,filter_item_parent,cbds_code,item_error_flag,contexts
+﻿col_name,col_type,filter_item,col_name_parent,filter_item_parent,cbds_code,item_error_flag,contexts
 age_group,Filter,19 to 24,age_youth_adult,19 plus,,api-only,Personal characteristics
 age_group,Filter,25 plus,age_youth_adult,19 plus,,api-only,Personal characteristics
 age_group,Filter,Total,age_youth_adult,19 plus,,api-only,Personal characteristics
@@ -89,6 +89,9 @@ education_phase,Filter,Alternative provision,,,PR,api-only,Establishment charact
 education_phase,Filter,Early years settings,,,,api-only,Establishment characteristics
 education_phase,Filter,Further education,,,,api-only,Establishment characteristics
 education_phase,Filter,Higher education,,,,api-only,Establishment characteristics
+education_phase,Filter,Highest statutory age 7,,,,api-only,Establishment characteristics
+education_phase,Filter,Highest statutory age 8 to 11,,,,api-only,Establishment characteristics
+education_phase,Filter,Highest statutory age greater than 11,,,,api-only,Establishment characteristics
 education_phase,Filter,Independent school,,,,api-only,Establishment characteristics
 education_phase,Filter,Junior,,,,api-only,Establishment characteristics
 education_phase,Filter,Middle (deemed primary),,,MP,api-only,Establishment characteristics
@@ -273,6 +276,33 @@ month_of_birth,Filter,November,,,,api-only,Personal characteristics
 month_of_birth,Filter,October,,,,api-only,Personal characteristics
 month_of_birth,Filter,September,,,,api-only,Personal characteristics
 month_of_birth,Filter,Total,,,,api-only,Personal characteristics
+mtc_score,Filter,0,,,,api-only,Key stage 2 attainment
+mtc_score,Filter,1,,,,api-only,Key stage 2 attainment
+mtc_score,Filter,2,,,,api-only,Key stage 2 attainment
+mtc_score,Filter,3,,,,api-only,Key stage 2 attainment
+mtc_score,Filter,4,,,,api-only,Key stage 2 attainment
+mtc_score,Filter,5,,,,api-only,Key stage 2 attainment
+mtc_score,Filter,6,,,,api-only,Key stage 2 attainment
+mtc_score,Filter,7,,,,api-only,Key stage 2 attainment
+mtc_score,Filter,8,,,,api-only,Key stage 2 attainment
+mtc_score,Filter,9,,,,api-only,Key stage 2 attainment
+mtc_score,Filter,10,,,,api-only,Key stage 2 attainment
+mtc_score,Filter,11,,,,api-only,Key stage 2 attainment
+mtc_score,Filter,12,,,,api-only,Key stage 2 attainment
+mtc_score,Filter,13,,,,api-only,Key stage 2 attainment
+mtc_score,Filter,14,,,,api-only,Key stage 2 attainment
+mtc_score,Filter,15,,,,api-only,Key stage 2 attainment
+mtc_score,Filter,16,,,,api-only,Key stage 2 attainment
+mtc_score,Filter,17,,,,api-only,Key stage 2 attainment
+mtc_score,Filter,18,,,,api-only,Key stage 2 attainment
+mtc_score,Filter,19,,,,api-only,Key stage 2 attainment
+mtc_score,Filter,20,,,,api-only,Key stage 2 attainment
+mtc_score,Filter,21,,,,api-only,Key stage 2 attainment
+mtc_score,Filter,22,,,,api-only,Key stage 2 attainment
+mtc_score,Filter,23,,,,api-only,Key stage 2 attainment
+mtc_score,Filter,24,,,,api-only,Key stage 2 attainment
+mtc_score,Filter,25,,,,api-only,Key stage 2 attainment
+mtc_score,Filter,Did not take check,,,,,
 phase_type_grouping,Filter,All schools,,,,api-only,Establishment characteristics
 phase_type_grouping,Filter,State-funded primary,,,,api-only,Establishment characteristics
 phase_type_grouping,Filter,State-funded primary and secondary,,,,api-only,Establishment characteristics
@@ -334,11 +364,17 @@ sen_primary_need,Filter,Total,,,,api-only,Special educational needs
 sen_primary_need,Filter,Unknown,,,,api-only,Special educational needs
 sen_primary_need,Filter,Vision impairment,,,VI,api-only,Special educational needs
 sen_provision,Filter,All SEN provision,sen_status,Total,,api-only,Special educational needs
+sen_provision,Filter,All SEN provision,,,,api-only,Special educational needs
 sen_provision,Filter,"Education, health and care plan",sen_status,Any special educational need,,api-only,Special educational needs
+sen_provision,Filter,"Education, health and care plan",,,,api-only,Special educational needs
 sen_provision,Filter,No SEN provision,sen_status,No identified special educational need,,api-only,Special educational needs
+sen_provision,Filter,No SEN provision,,,,api-only,Special educational needs
 sen_provision,Filter,SEN support / SEN without an EHC plan,sen_status,Any special educational need,,api-only,Special educational needs
+sen_provision,Filter,SEN support / SEN without an EHC plan,,,,api-only,Special educational needs
 sen_provision,Filter,Total,sen_status,Total,,api-only,Special educational needs
+sen_provision,Filter,Total,,,,api-only,Special educational needs
 sen_provision,Filter,Unknown SEN provision,sen_status,Unclassified special educational need,,api-only,Special educational needs
+sen_provision,Filter,Unknown SEN provision,,,,api-only,Special educational needs
 sen_secondary_need,Filter,All secondary need,,,,api-only,Special educational needs
 sen_secondary_need,Filter,Autistic spectrum disorder,,,ASD,api-only,Special educational needs
 sen_secondary_need,Filter,Hearing impairment,,,HI,api-only,Special educational needs
@@ -383,6 +419,10 @@ achievements_percent,Indicator,,,,,api-only,Apprenticeships
 average_scaled_score,Indicator,,,,,api-only,Key stage 2 attainment
 below_interim_pre_ks_std_pupil_count,Indicator,,,,,api-only,Key stage 2 attainment
 below_interim_pre_ks_std_pupil_percent,Indicator,,,,,api-only,Key stage 2 attainment
+completed_check_pupil_count,Indicator,,,,,api-only,Key stage 2 attainment
+completed_check_pupil_percent,Indicator,,,,,api-only,Key stage 2 attainment
+cumulative_pupil_count,Indicator,,,,,api-only,Key stage 2 attainment
+cumulative_pupil_percent,Indicator,,,,,api-only,Key stage 2 attainment
 children_count,Indicator,,,,,api-only,Children Looked After
 disapplied_pupil_count,Indicator,,,,,api-only,Key stage 2 attainment
 disapplied_pupil_percent,Indicator,,,,,api-only,Key stage 2 attainment
@@ -406,8 +446,68 @@ learning_difficulty_disability,Filter,With learning difficulty / disability,,,,,
 learning_difficulty_disability,Filter,No learning difficulty / disability,,,,,,
 learning_difficulty_disability,Filter,Unknown,,,,,,
 learning_difficulty_disability,Filter,Total,,,,,,
+just_arrived_pupil_count,Indicator,,,,,api-only,Key stage 2 attainment
+just_arrived_pupil_percent,Indicator,,,,,api-only,Key stage 2 attainment
 learner_count,Indicator,,,,,api-only,Apprenticeships
 learner_percent,Indicator,,,,,api-only,Apprenticeships
+missing_reason_pupil_count,Indicator,,,,,api-only,Key stage 2 attainment
+missing_reason_pupil_percent,Indicator,,,,,api-only,Key stage 2 attainment
+mtc_score_0_pupil_count,Indicator,,,,,api-only,Key stage 2 attainment
+mtc_score_0_pupil_percent,Indicator,,,,,api-only,Key stage 2 attainment
+mtc_score_1_pupil_count,Indicator,,,,,api-only,Key stage 2 attainment
+mtc_score_1_pupil_percent,Indicator,,,,,api-only,Key stage 2 attainment
+mtc_score_10_pupil_count,Indicator,,,,,api-only,Key stage 2 attainment
+mtc_score_10_pupil_percent,Indicator,,,,,api-only,Key stage 2 attainment
+mtc_score_11_pupil_count,Indicator,,,,,api-only,Key stage 2 attainment
+mtc_score_11_pupil_percent,Indicator,,,,,api-only,Key stage 2 attainment
+mtc_score_12_pupil_count,Indicator,,,,,api-only,Key stage 2 attainment
+mtc_score_12_pupil_percent,Indicator,,,,,api-only,Key stage 2 attainment
+mtc_score_13_pupil_count,Indicator,,,,,api-only,Key stage 2 attainment
+mtc_score_13_pupil_percent,Indicator,,,,,api-only,Key stage 2 attainment
+mtc_score_14_pupil_count,Indicator,,,,,api-only,Key stage 2 attainment
+mtc_score_14_pupil_percent,Indicator,,,,,api-only,Key stage 2 attainment
+mtc_score_15_pupil_count,Indicator,,,,,api-only,Key stage 2 attainment
+mtc_score_15_pupil_percent,Indicator,,,,,api-only,Key stage 2 attainment
+mtc_score_16_pupil_count,Indicator,,,,,api-only,Key stage 2 attainment
+mtc_score_16_pupil_percent,Indicator,,,,,api-only,Key stage 2 attainment
+mtc_score_17_pupil_count,Indicator,,,,,api-only,Key stage 2 attainment
+mtc_score_17_pupil_percent,Indicator,,,,,api-only,Key stage 2 attainment
+mtc_score_18_pupil_count,Indicator,,,,,api-only,Key stage 2 attainment
+mtc_score_18_pupil_percent,Indicator,,,,,api-only,Key stage 2 attainment
+mtc_score_19_pupil_count,Indicator,,,,,api-only,Key stage 2 attainment
+mtc_score_19_pupil_percent,Indicator,,,,,api-only,Key stage 2 attainment
+mtc_score_2_pupil_count,Indicator,,,,,api-only,Key stage 2 attainment
+mtc_score_2_pupil_percent,Indicator,,,,,api-only,Key stage 2 attainment
+mtc_score_20_pupil_count,Indicator,,,,,api-only,Key stage 2 attainment
+mtc_score_20_pupil_percent,Indicator,,,,,api-only,Key stage 2 attainment
+mtc_score_21_pupil_count,Indicator,,,,,api-only,Key stage 2 attainment
+mtc_score_21_pupil_percent,Indicator,,,,,api-only,Key stage 2 attainment
+mtc_score_22_pupil_count,Indicator,,,,,api-only,Key stage 2 attainment
+mtc_score_22_pupil_percent,Indicator,,,,,api-only,Key stage 2 attainment
+mtc_score_23_pupil_count,Indicator,,,,,api-only,Key stage 2 attainment
+mtc_score_23_pupil_percent,Indicator,,,,,api-only,Key stage 2 attainment
+mtc_score_24_pupil_count,Indicator,,,,,api-only,Key stage 2 attainment
+mtc_score_24_pupil_percent,Indicator,,,,,api-only,Key stage 2 attainment
+mtc_score_25_pupil_count,Indicator,,,,,api-only,Key stage 2 attainment
+mtc_score_25_pupil_percent,Indicator,,,,,api-only,Key stage 2 attainment
+mtc_score_3_pupil_count,Indicator,,,,,api-only,Key stage 2 attainment
+mtc_score_3_pupil_percent,Indicator,,,,,api-only,Key stage 2 attainment
+mtc_score_4_pupil_count,Indicator,,,,,api-only,Key stage 2 attainment
+mtc_score_4_pupil_percent,Indicator,,,,,api-only,Key stage 2 attainment
+mtc_score_5_pupil_count,Indicator,,,,,api-only,Key stage 2 attainment
+mtc_score_5_pupil_percent,Indicator,,,,,api-only,Key stage 2 attainment
+mtc_score_6_pupil_count,Indicator,,,,,api-only,Key stage 2 attainment
+mtc_score_6_pupil_percent,Indicator,,,,,api-only,Key stage 2 attainment
+mtc_score_7_pupil_count,Indicator,,,,,api-only,Key stage 2 attainment
+mtc_score_7_pupil_percent,Indicator,,,,,api-only,Key stage 2 attainment
+mtc_score_8_pupil_count,Indicator,,,,,api-only,Key stage 2 attainment
+mtc_score_8_pupil_percent,Indicator,,,,,api-only,Key stage 2 attainment
+mtc_score_9_pupil_count,Indicator,,,,,api-only,Key stage 2 attainment
+mtc_score_9_pupil_percent,Indicator,,,,,api-only,Key stage 2 attainment
+mtc_score_average,Indicator,,,,,api-only,Key stage 2 attainment
+mtc_score_total,Indicator,,,,,api-only,Key stage 2 attainment
+not_completed_check_pupil_count,Indicator,,,,,api-only,Key stage 2 attainment
+not_completed_check_pupil_percent,Indicator,,,,,api-only,Key stage 2 attainment
 no_further_action_count,Indicator,,,,,api-only,Children in Need
 no_further_action_percent,Indicator,,,,,api-only,Children in Need
 not_in_need_count,Indicator,,,,,api-only,Children in Need
@@ -461,6 +561,8 @@ unable_to_access_arrived_pupil_count,Indicator,,,,,api-only,Key stage 2 attainme
 unable_to_access_arrived_pupil_percent,Indicator,,,,,api-only,Key stage 2 attainment
 unable_to_access_pupil_count,Indicator,,,,,api-only,Key stage 2 attainment
 unable_to_access_pupil_percent,Indicator,,,,,api-only,Key stage 2 attainment
+unable_to_participate_pupil_count,Indicator,,,,,api-only,Key stage 2 attainment
+unable_to_participate_pupil_percent,Indicator,,,,,api-only,Key stage 2 attainment
 working_below_pupil_count,Indicator,,,,,api-only,Key stage 2 attainment
 working_below_pupil_percent,Indicator,,,,,api-only,Key stage 2 attainment
 working_towards_pupil_count,Indicator,,,,,api-only,Key stage 2 attainment
