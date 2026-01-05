@@ -9,6 +9,61 @@ apprenticeship_level,Filter,Advanced Apprenticeship,,,,api-only,Apprenticeships
 apprenticeship_level,Filter,Higher Apprenticeship,,,,api-only,Apprenticeships
 apprenticeship_level,Filter,Intermediate Apprenticeship,,,,api-only,Apprenticeships
 apprenticeship_level,Filter,Total,,,,api-only,Apprenticeships
+breakdown,Filter,Total,breakdown_topic,Total,,api-only,Personal characteristics
+breakdown,Filter,Female,breakdown_topic,Sex,,api-only,Personal characteristics
+breakdown,Filter,Male,breakdown_topic,Sex,,api-only,Personal characteristics
+breakdown,Filter,White,breakdown_topic,Ethnicity major,,api-only,Personal characteristics
+breakdown,Filter,Mixed / Multiple ethnic groups,breakdown_topic,Ethnicity major,,api-only,Personal characteristics
+breakdown,Filter,Asian / Asian British,breakdown_topic,Ethnicity major,,api-only,Personal characteristics
+breakdown,Filter,Black / African / Caribbean / Black British,breakdown_topic,Ethnicity major,,api-only,Personal characteristics
+breakdown,Filter,Other ethnic group,breakdown_topic,Ethnicity major,,api-only,Personal characteristics
+breakdown,Filter,Unknown,breakdown_topic,Ethnicity major,,api-only,Personal characteristics
+breakdown,Filter,English / Welsh / Scottish / Northern Irish / British,breakdown_topic,Ethnicity minor,,api-only,Personal characteristics
+breakdown,Filter,Irish,breakdown_topic,Ethnicity minor,,api-only,Personal characteristics
+breakdown,Filter,Irish Traveller,breakdown_topic,Ethnicity minor,,api-only,Personal characteristics
+breakdown,Filter,Gypsy / Roma,breakdown_topic,Ethnicity minor,,api-only,Personal characteristics
+breakdown,Filter,Any other White background,breakdown_topic,Ethnicity minor,,api-only,Personal characteristics
+breakdown,Filter,White and Black Caribbean,breakdown_topic,Ethnicity minor,,api-only,Personal characteristics
+breakdown,Filter,White and Black African,breakdown_topic,Ethnicity minor,,api-only,Personal characteristics
+breakdown,Filter,White and Asian,breakdown_topic,Ethnicity minor,,api-only,Personal characteristics
+breakdown,Filter,Any other Mixed / Multiple ethnic background,breakdown_topic,Ethnicity minor,,api-only,Personal characteristics
+breakdown,Filter,Indian,breakdown_topic,Ethnicity minor,,api-only,Personal characteristics
+breakdown,Filter,Pakistani,breakdown_topic,Ethnicity minor,,api-only,Personal characteristics
+breakdown,Filter,Bangladeshi,breakdown_topic,Ethnicity minor,,api-only,Personal characteristics
+breakdown,Filter,Chinese,breakdown_topic,Ethnicity minor,,api-only,Personal characteristics
+breakdown,Filter,Any other Asian background,breakdown_topic,Ethnicity minor,,api-only,Personal characteristics
+breakdown,Filter,Caribbean,breakdown_topic,Ethnicity minor,,api-only,Personal characteristics
+breakdown,Filter,African,breakdown_topic,Ethnicity minor,,api-only,Personal characteristics
+breakdown,Filter,Any other Black / African / Caribbean background,breakdown_topic,Ethnicity minor,,api-only,Personal characteristics
+breakdown,Filter,Any other ethnic group,breakdown_topic,Ethnicity minor,,api-only,Personal characteristics
+breakdown,Filter,Unknown,breakdown_topic,Ethnicity minor,,api-only,Personal characteristics
+breakdown,Filter,English,breakdown_topic,First language,,api-only,Personal characteristics
+breakdown,Filter,Other than English,breakdown_topic,First language,,api-only,Personal characteristics
+breakdown,Filter,Unknown,breakdown_topic,First language,,api-only,Personal characteristics
+breakdown,Filter,Eligible for free school meals,breakdown_topic,Free school meal eligibility,,api-only,Personal characteristics
+breakdown,Filter,Not eligible for free school meals,breakdown_topic,Free school meal eligibility,,api-only,Personal characteristics
+breakdown,Filter,Unknown,breakdown_topic,Free school meal eligibility,,api-only,Personal characteristics
+breakdown,Filter,Autumn-born,breakdown_topic,Term of birth,,api-only,Personal characteristics
+breakdown,Filter,Spring-born,breakdown_topic,Term of birth,,api-only,Personal characteristics
+breakdown,Filter,Summer-born,breakdown_topic,Term of birth,,api-only,Personal characteristics
+breakdown,Filter,No SEN provision,breakdown_topic,SEN provision,,api-only,Personal characteristics
+breakdown,Filter,All SEN provision,breakdown_topic,SEN provision,,api-only,Personal characteristics
+breakdown,Filter,SEN support / SEN without an EHC plan,breakdown_topic,SEN provision,,api-only,Personal characteristics
+breakdown,Filter,"Education, health and care plan",breakdown_topic,SEN provision,,api-only,Personal characteristics
+breakdown,Filter,Unknown,breakdown_topic,SEN provision,,api-only,Personal characteristics
+breakdown,Filter,Specific learning difficulty,breakdown_topic,SEN primary need,,api-only,Personal characteristics
+breakdown,Filter,Moderate learning difficulty,breakdown_topic,SEN primary need,,api-only,Personal characteristics
+breakdown,Filter,Severe learning difficulty,breakdown_topic,SEN primary need,,api-only,Personal characteristics
+breakdown,Filter,Profound and multiple learning difficulty,breakdown_topic,SEN primary need,,api-only,Personal characteristics
+breakdown,Filter,"Social, emotional and mental health",breakdown_topic,SEN primary need,,api-only,Personal characteristics
+breakdown,Filter,"Speech, language and communication needs",breakdown_topic,SEN primary need,,api-only,Personal characteristics
+breakdown,Filter,Hearing impairment,breakdown_topic,SEN primary need,,api-only,Personal characteristics
+breakdown,Filter,Vision impairment,breakdown_topic,SEN primary need,,api-only,Personal characteristics
+breakdown,Filter,Multi-sensory impairment,breakdown_topic,SEN primary need,,api-only,Personal characteristics
+breakdown,Filter,Physical disability,breakdown_topic,SEN primary need,,api-only,Personal characteristics
+breakdown,Filter,Autistic spectrum disorder,breakdown_topic,SEN primary need,,api-only,Personal characteristics
+breakdown,Filter,Other difficulty or disability,breakdown_topic,SEN primary need,,api-only,Personal characteristics
+breakdown,Filter,SEN support but no specialist assessment of type of need,breakdown_topic,SEN primary need,,api-only,Personal characteristics
 disadvantage_status,Filter,Disadvantaged,,,,api-only,Personal characteristics
 disadvantage_status,Filter,Not known to be disadvantaged,,,,api-only,Personal characteristics
 disadvantage_status,Filter,Total,,,,api-only,Personal characteristics
