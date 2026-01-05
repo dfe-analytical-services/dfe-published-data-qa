@@ -160,6 +160,7 @@ ethnicity_minor,Filter,Caribbean,ethnicity_major,Black / African / Caribbean / B
 ethnicity_minor,Filter,Chinese,ethnicity_major,Asian / Asian British,,any,Personal characteristics
 ethnicity_minor,Filter,English / Welsh / Scottish / Northern Irish / British,ethnicity_major,White,,any,Personal characteristics
 ethnicity_minor,Filter,Gypsy,ethnicity_major,White,,any,Personal characteristics
+ethnicity_minor,Filter,Gypsy / Roma,ethnicity_major,White,,any,Personal characteristics
 ethnicity_minor,Filter,Gypsy or Irish Traveller,ethnicity_major,White,,any,Personal characteristics
 ethnicity_minor,Filter,Indian,ethnicity_major,Asian / Asian British,,any,Personal characteristics
 ethnicity_minor,Filter,Irish,ethnicity_major,White,,any,Personal characteristics
@@ -187,9 +188,10 @@ first_language,Filter,Unknown,,,,api-only,Personal characteristics
 fsm_status,Filter,FSM eligible,,,,api-only,Personal characteristics
 fsm_status,Filter,Not known to be FSM eligible,,,,api-only,Personal characteristics
 fsm_status,Filter,Total,,,,api-only,Personal characteristics
-fsm_status,Filter,Eligible for free school meals,,,,api-only,Personal characteristics
-fsm_status,Filter,Not eligible for free school meals,,,,api-only,Personal characteristics
-fsm_status,Filter,Unknown,,,,api-only,Personal characteristics
+fsm_eligibility,Filter,Eligible for free school meals,,,,api-only,Personal characteristics
+fsm_eligibility,Filter,Not eligible for free school meals,,,,api-only,Personal characteristics
+fsm_eligibility,Filter,Total,,,,api-only,Personal characteristics
+fsm_eligibility,Filter,Unknown,,,,api-only,Personal characteristics
 funding_type,Filter,Other,,,,api-only,Apprenticeships
 funding_type,Filter,Supported by ASA levy funds,,,,api-only,Apprenticeships
 funding_type,Filter,Total,,,,api-only,Apprenticeships
@@ -369,7 +371,6 @@ area_of_learning,Filter,Mathematics,,,,api-only,Early years foundation stage pro
 area_of_learning,Filter,"Personal, social and emotional development",,,,api-only,Early years foundation stage profile results
 area_of_learning,Filter,Physical development,,,,api-only,Early years foundation stage profile results
 area_of_learning,Filter,Understanding the world,,,,api-only,Early years foundation stage profile results
-icadi_decile,Filter,Total,,,,api-only,Early years foundation stage profile results
 elg_listening_attention_understanding,Filter,Emerging,,,,api-only,Early years foundation stage profile results
 elg_listening_attention_understanding,Filter,Expected,,,,api-only,Early years foundation stage profile results
 elg_speaking,Filter,Emerging,,,,api-only,Early years foundation stage profile results
