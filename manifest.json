@@ -4453,10 +4453,10 @@
       "checksum": "34dd2ba59d4373f48eb261774a600db1"
     },
     ".hooks/pre-commit.R": {
-      "checksum": "e8d96d5ffd16a6867fd6d7458bd2f905"
+      "checksum": "c1d6b214017ea01fb7141a0b0e228e02"
     },
     ".Rprofile": {
-      "checksum": "a326e60d5f794224772981669e22d2b6"
+      "checksum": "4261d5f99a5da52978114cbee45e03f5"
     },
     "azure-pipelines-dev.yml": {
       "checksum": "fc2ef843ff5024bcba25ff84eec05f4c"
@@ -4474,7 +4474,7 @@
       "checksum": "31d565a819730736cbcf5a38959d3398"
     },
     "data/data-dictionary.csv": {
-      "checksum": "3d6edf66188ec5beeaeffd7f46fc3cc7"
+      "checksum": "4b3529c7906c8becca7301996ff330a5"
     },
     "data/english_devolved_areas.csv": {
       "checksum": "391e91c38d772d55f98e54fbacfc3b9f"
@@ -4556,9 +4556,6 @@
     },
     "R/mainTests.r": {
       "checksum": "08b8657e6d4ac139069320c6dda69010"
-    },
-    "R/manual_scripts/api-data-checker.r": {
-      "checksum": "e03fcc51d479b00ffb8ce2b7abd89805"
     },
     "R/manual_scripts/api-data-checker.r": {
       "checksum": "e03fcc51d479b00ffb8ce2b7abd89805"
@@ -5423,6 +5420,9 @@
     },
     "tests/testthat/setup-shinytest2.R": {
       "checksum": "3cf257777accbcd1cad83d825c8d956e"
+    },
+    "tests/testthat/test-data-dictionary.R": {
+      "checksum": "45897781991527b8fe855be326416710"
     },
     "tests/testthat/test-data-geographies.R": {
       "checksum": "d27ab619fd919bc5f9a79eff0b8326d2"
