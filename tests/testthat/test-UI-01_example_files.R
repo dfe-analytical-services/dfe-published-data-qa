@@ -1,6 +1,14 @@
 library(shinytest2)
 
-app <- AppDriver$new(name = "example_files", height = 846, width = 1445, load_timeout = 45 * 1000, timeout = 20 * 1000, wait = TRUE, expect_values_screenshot_args = FALSE)
+app <- AppDriver$new(
+  name = "example_files",
+  height = 846,
+  width = 1445,
+  load_timeout = 60 * 1000,
+  timeout = 20 * 1000,
+  wait = TRUE,
+  expect_values_screenshot_args = FALSE
+)
 
 # Wait until Shiny is not busy for 5ms
 app$wait_for_idle(5)

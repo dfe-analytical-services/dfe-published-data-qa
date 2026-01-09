@@ -85,6 +85,12 @@
             null
           ],
           [
+            null
+          ],
+          [
+            null
+          ],
+          [
             "Secondary"
           ],
           [
@@ -97,7 +103,7 @@
             18
           ]
         ],
-        "container": "<table class=\"table table-bordered\">\n  <thead>\n    <tr>\n      <th>geographic_level<\/th>\n      <th>country_code<\/th>\n      <th>country_name<\/th>\n      <th>region_code<\/th>\n      <th>region_name<\/th>\n      <th>old_la_code<\/th>\n      <th>new_la_code<\/th>\n      <th>la_name<\/th>\n      <th>lad_code<\/th>\n      <th>lad_name<\/th>\n      <th>school_urn<\/th>\n      <th>school_laestab<\/th>\n      <th>school_name<\/th>\n      <th>lsip_code<\/th>\n      <th>lsip_name<\/th>\n      <th>local_enterprise_partnership_code<\/th>\n      <th>local_enterprise_partnership_name<\/th>\n      <th>pcon_code<\/th>\n      <th>pcon_name<\/th>\n      <th>ward_code<\/th>\n      <th>ward_name<\/th>\n      <th>english_devolved_area_code<\/th>\n      <th>english_devolved_area_name<\/th>\n      <th>trust_id<\/th>\n      <th>trust_name<\/th>\n      <th>education_phase<\/th>\n      <th>phase_type_grouping<\/th>\n      <th>201617<\/th>\n      <th>201718<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>",
+        "container": "<table class=\"table table-bordered\">\n  <thead>\n    <tr>\n      <th>geographic_level<\/th>\n      <th>country_code<\/th>\n      <th>country_name<\/th>\n      <th>region_code<\/th>\n      <th>region_name<\/th>\n      <th>old_la_code<\/th>\n      <th>new_la_code<\/th>\n      <th>la_name<\/th>\n      <th>lad_code<\/th>\n      <th>lad_name<\/th>\n      <th>school_urn<\/th>\n      <th>school_laestab<\/th>\n      <th>school_name<\/th>\n      <th>pfa_code<\/th>\n      <th>pfa_name<\/th>\n      <th>lsip_code<\/th>\n      <th>lsip_name<\/th>\n      <th>local_enterprise_partnership_code<\/th>\n      <th>local_enterprise_partnership_name<\/th>\n      <th>pcon_code<\/th>\n      <th>pcon_name<\/th>\n      <th>ward_code<\/th>\n      <th>ward_name<\/th>\n      <th>english_devolved_area_code<\/th>\n      <th>english_devolved_area_name<\/th>\n      <th>trust_id<\/th>\n      <th>trust_name<\/th>\n      <th>education_phase<\/th>\n      <th>phase_type_grouping<\/th>\n      <th>201617<\/th>\n      <th>201718<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>",
         "options": {
           "dom": "Bptl",
           "buttons": [
@@ -114,8 +120,8 @@
               "targets": [
                 10,
                 11,
-                27,
-                28
+                29,
+                30
               ]
             },
             {
@@ -171,68 +177,76 @@
               "targets": 12
             },
             {
-              "name": "lsip_code",
+              "name": "pfa_code",
               "targets": 13
             },
             {
-              "name": "lsip_name",
+              "name": "pfa_name",
               "targets": 14
             },
             {
-              "name": "local_enterprise_partnership_code",
+              "name": "lsip_code",
               "targets": 15
             },
             {
-              "name": "local_enterprise_partnership_name",
+              "name": "lsip_name",
               "targets": 16
             },
             {
-              "name": "pcon_code",
+              "name": "local_enterprise_partnership_code",
               "targets": 17
             },
             {
-              "name": "pcon_name",
+              "name": "local_enterprise_partnership_name",
               "targets": 18
             },
             {
-              "name": "ward_code",
+              "name": "pcon_code",
               "targets": 19
             },
             {
-              "name": "ward_name",
+              "name": "pcon_name",
               "targets": 20
             },
             {
-              "name": "english_devolved_area_code",
+              "name": "ward_code",
               "targets": 21
             },
             {
-              "name": "english_devolved_area_name",
+              "name": "ward_name",
               "targets": 22
             },
             {
-              "name": "trust_id",
+              "name": "english_devolved_area_code",
               "targets": 23
             },
             {
-              "name": "trust_name",
+              "name": "english_devolved_area_name",
               "targets": 24
             },
             {
-              "name": "education_phase",
+              "name": "trust_id",
               "targets": 25
             },
             {
-              "name": "phase_type_grouping",
+              "name": "trust_name",
               "targets": 26
             },
             {
-              "name": "201617",
+              "name": "education_phase",
               "targets": 27
             },
             {
-              "name": "201718",
+              "name": "phase_type_grouping",
               "targets": 28
+            },
+            {
+              "name": "201617",
+              "targets": 29
+            },
+            {
+              "name": "201718",
+              "targets": 30
             }
           ],
           "order": [
@@ -434,6 +448,14 @@
             null
           ],
           [
+            null,
+            null
+          ],
+          [
+            null,
+            null
+          ],
+          [
             "Secondary",
             "Secondary"
           ],
@@ -450,7 +472,7 @@
             12629
           ]
         ],
-        "container": "<table class=\"table table-bordered\">\n  <thead>\n    <tr>\n      <th>geographic_level<\/th>\n      <th>country_code<\/th>\n      <th>country_name<\/th>\n      <th>region_code<\/th>\n      <th>region_name<\/th>\n      <th>old_la_code<\/th>\n      <th>new_la_code<\/th>\n      <th>la_name<\/th>\n      <th>lad_code<\/th>\n      <th>lad_name<\/th>\n      <th>school_urn<\/th>\n      <th>school_laestab<\/th>\n      <th>school_name<\/th>\n      <th>lsip_code<\/th>\n      <th>lsip_name<\/th>\n      <th>local_enterprise_partnership_code<\/th>\n      <th>local_enterprise_partnership_name<\/th>\n      <th>pcon_code<\/th>\n      <th>pcon_name<\/th>\n      <th>ward_code<\/th>\n      <th>ward_name<\/th>\n      <th>english_devolved_area_code<\/th>\n      <th>english_devolved_area_name<\/th>\n      <th>trust_id<\/th>\n      <th>trust_name<\/th>\n      <th>education_phase<\/th>\n      <th>phase_type_grouping<\/th>\n      <th>201617<\/th>\n      <th>201718<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>",
+        "container": "<table class=\"table table-bordered\">\n  <thead>\n    <tr>\n      <th>geographic_level<\/th>\n      <th>country_code<\/th>\n      <th>country_name<\/th>\n      <th>region_code<\/th>\n      <th>region_name<\/th>\n      <th>old_la_code<\/th>\n      <th>new_la_code<\/th>\n      <th>la_name<\/th>\n      <th>lad_code<\/th>\n      <th>lad_name<\/th>\n      <th>school_urn<\/th>\n      <th>school_laestab<\/th>\n      <th>school_name<\/th>\n      <th>pfa_code<\/th>\n      <th>pfa_name<\/th>\n      <th>lsip_code<\/th>\n      <th>lsip_name<\/th>\n      <th>local_enterprise_partnership_code<\/th>\n      <th>local_enterprise_partnership_name<\/th>\n      <th>pcon_code<\/th>\n      <th>pcon_name<\/th>\n      <th>ward_code<\/th>\n      <th>ward_name<\/th>\n      <th>english_devolved_area_code<\/th>\n      <th>english_devolved_area_name<\/th>\n      <th>trust_id<\/th>\n      <th>trust_name<\/th>\n      <th>education_phase<\/th>\n      <th>phase_type_grouping<\/th>\n      <th>201617<\/th>\n      <th>201718<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>",
         "options": {
           "dom": "Bptl",
           "buttons": [
@@ -467,8 +489,8 @@
               "targets": [
                 10,
                 11,
-                27,
-                28
+                29,
+                30
               ]
             },
             {
@@ -524,68 +546,76 @@
               "targets": 12
             },
             {
-              "name": "lsip_code",
+              "name": "pfa_code",
               "targets": 13
             },
             {
-              "name": "lsip_name",
+              "name": "pfa_name",
               "targets": 14
             },
             {
-              "name": "local_enterprise_partnership_code",
+              "name": "lsip_code",
               "targets": 15
             },
             {
-              "name": "local_enterprise_partnership_name",
+              "name": "lsip_name",
               "targets": 16
             },
             {
-              "name": "pcon_code",
+              "name": "local_enterprise_partnership_code",
               "targets": 17
             },
             {
-              "name": "pcon_name",
+              "name": "local_enterprise_partnership_name",
               "targets": 18
             },
             {
-              "name": "ward_code",
+              "name": "pcon_code",
               "targets": 19
             },
             {
-              "name": "ward_name",
+              "name": "pcon_name",
               "targets": 20
             },
             {
-              "name": "english_devolved_area_code",
+              "name": "ward_code",
               "targets": 21
             },
             {
-              "name": "english_devolved_area_name",
+              "name": "ward_name",
               "targets": 22
             },
             {
-              "name": "trust_id",
+              "name": "english_devolved_area_code",
               "targets": 23
             },
             {
-              "name": "trust_name",
+              "name": "english_devolved_area_name",
               "targets": 24
             },
             {
-              "name": "education_phase",
+              "name": "trust_id",
               "targets": 25
             },
             {
-              "name": "phase_type_grouping",
+              "name": "trust_name",
               "targets": 26
             },
             {
-              "name": "201617",
+              "name": "education_phase",
               "targets": 27
             },
             {
-              "name": "201718",
+              "name": "phase_type_grouping",
               "targets": 28
+            },
+            {
+              "name": "201617",
+              "targets": 29
+            },
+            {
+              "name": "201718",
+              "targets": 30
             }
           ],
           "order": [
