@@ -9,62 +9,6 @@ apprenticeship_level,Filter,Advanced Apprenticeship,,,,api-only,Apprenticeships
 apprenticeship_level,Filter,Higher Apprenticeship,,,,api-only,Apprenticeships
 apprenticeship_level,Filter,Intermediate Apprenticeship,,,,api-only,Apprenticeships
 apprenticeship_level,Filter,Total,,,,api-only,Apprenticeships
-breakdown,Filter,African,breakdown_topic,Ethnicity,,api-only,Personal characteristics - Ethnicity
-breakdown,Filter,All Asian / Asian British,breakdown_topic,Ethnicity,,api-only,Personal characteristics - Ethnicity
-breakdown,Filter,All Black / African / Caribbean / Black British,breakdown_topic,Ethnicity,,api-only,Personal characteristics - Ethnicity
-breakdown,Filter,All Mixed / Multiple ethnic groups,breakdown_topic,Ethnicity,,api-only,Personal characteristics - Ethnicity
-breakdown,Filter,All other ethnic groups,breakdown_topic,Ethnicity,,api-only,Personal characteristics - Ethnicity
-breakdown,Filter,All SEN provision,breakdown_topic,SEN provision,,api-only,Special educational needs
-breakdown,Filter,All White,breakdown_topic,Ethnicity,,api-only,Personal characteristics - Ethnicity
-breakdown,Filter,Any other Asian background,breakdown_topic,Ethnicity,,api-only,Personal characteristics - Ethnicity
-breakdown,Filter,Any other Black / African / Caribbean background,breakdown_topic,Ethnicity,,api-only,Personal characteristics - Ethnicity
-breakdown,Filter,Any other Mixed / Multiple ethnic background,breakdown_topic,Ethnicity,,api-only,Personal characteristics - Ethnicity
-breakdown,Filter,Any other White background,breakdown_topic,Ethnicity,,api-only,Personal characteristics - Ethnicity
-breakdown,Filter,Autistic spectrum disorder,breakdown_topic,SEN primary need,ASD,api-only,Special educational needs
-breakdown,Filter,Bangladeshi,breakdown_topic,Ethnicity,,api-only,Personal characteristics - Ethnicity
-breakdown,Filter,Black Caribbean,breakdown_topic,Ethnicity,,api-only,Personal characteristics - Ethnicity
-breakdown,Filter,Boys,breakdown_topic,Sex,,api-only,Personal characteristics
-breakdown,Filter,Chinese,breakdown_topic,Ethnicity,,api-only,Personal characteristics - Ethnicity
-breakdown,Filter,Disadvantaged,breakdown_topic,Disadvantage status,,api-only,Personal characteristics
-breakdown,Filter,Down syndrome,breakdown_topic,SEN primary need,,api-only,Special educational needs
-breakdown,Filter,"Education, health and care plan",breakdown_topic,SEN provision,,api-only,Special educational needs
-breakdown,Filter,English / Welsh / Scottish / Northern Irish / British,breakdown_topic,Ethnicity,,api-only,Personal characteristics - Ethnicity
-breakdown,Filter,FSM eligible,breakdown_topic,FSM status,,api-only,Personal characteristics
-breakdown,Filter,Girls,breakdown_topic,Sex,,api-only,Personal characteristics
-breakdown,Filter,Gypsy,breakdown_topic,Ethnicity,,api-only,Personal characteristics - Ethnicity
-breakdown,Filter,Hearing impairment,breakdown_topic,SEN primary need,HI,api-only,Special educational needs
-breakdown,Filter,High attainment at key stage 2,breakdown_topic,Prior attainment,,api-only,Attainment
-breakdown,Filter,Indian,breakdown_topic,Ethnicity,,api-only,Personal characteristics - Ethnicity
-breakdown,Filter,Irish,breakdown_topic,Ethnicity,,api-only,Personal characteristics - Ethnicity
-breakdown,Filter,Irish Traveller,breakdown_topic,Ethnicity,,api-only,Personal characteristics - Ethnicity
-breakdown,Filter,Known or believed to be English,breakdown_topic,First language,,api-only,Personal characteristics
-breakdown,Filter,Known or believed to be other than English,breakdown_topic,First language,,api-only,Personal characteristics
-breakdown,Filter,Low attainment at key stage 2,breakdown_topic,Prior attainment,,api-only,Attainment
-breakdown,Filter,Mid attainment at key stage 2,breakdown_topic,Prior attainment,,api-only,Attainment
-breakdown,Filter,Moderate learning difficulty,breakdown_topic,SEN primary need,MLD,api-only,Special educational needs
-breakdown,Filter,Multi-sensory impairment,breakdown_topic,SEN primary need,,api-only,Special educational needs
-breakdown,Filter,No primary need,breakdown_topic,SEN primary need,,api-only,Special educational needs
-breakdown,Filter,No SEN provision,breakdown_topic,SEN provision,,api-only,Special educational needs
-breakdown,Filter,Not known to be disadvantaged,breakdown_topic,Disadvantage status,,api-only,Personal characteristics
-breakdown,Filter,Not known to be FSM eligible,breakdown_topic,FSM status,,api-only,Personal characteristics
-breakdown,Filter,Other difficulty or disability,breakdown_topic,SEN primary need,OTH,api-only,Special educational needs
-breakdown,Filter,Pakistani,breakdown_topic,Ethnicity,,api-only,Personal characteristics - Ethnicity
-breakdown,Filter,Physical disability,breakdown_topic,SEN primary need,,api-only,Special educational needs
-breakdown,Filter,Profound and multiple learning difficulty,breakdown_topic,SEN primary need,PMLD,api-only,Special educational needs
-breakdown,Filter,SEN support / SEN without an EHC plan,breakdown_topic,SEN provision,,api-only,Special educational needs
-breakdown,Filter,SEN support but no specialist assessment of type of need,breakdown_topic,SEN primary need,,api-only,Special educational needs
-breakdown,Filter,Severe learning difficulty,breakdown_topic,SEN primary need,SLD,api-only,Special educational needs
-breakdown,Filter,"Social, emotional and mental health",breakdown_topic,SEN primary need,SEMH,api-only,Special educational needs
-breakdown,Filter,Specific learning difficulty,breakdown_topic,SEN primary need,SPLD,api-only,Special educational needs
-breakdown,Filter,"Speech, language and communication needs",breakdown_topic,SEN primary need,SLCN,api-only,Special educational needs
-breakdown,Filter,Total,breakdown_topic,Prior attainment,,api-only,Attainment
-breakdown,Filter,Total,breakdown_topic,Total,,api-only,General
-breakdown,Filter,Unknown,breakdown_topic,Ethnicity,,api-only,Personal characteristics - Ethnicity
-breakdown,Filter,Unknown,breakdown_topic,SEN primary need,,api-only,Special educational needs
-breakdown,Filter,Vision impairment,breakdown_topic,SEN primary need,VI,api-only,Special educational needs
-breakdown,Filter,White and Asian,breakdown_topic,Ethnicity,,api-only,Personal characteristics - Ethnicity
-breakdown,Filter,White and Black African,breakdown_topic,Ethnicity,,api-only,Personal characteristics - Ethnicity
-breakdown,Filter,White and Black Caribbean,breakdown_topic,Ethnicity,,api-only,Personal characteristics - Ethnicity
 attendance_reason,Filter,All approved educational activity,attendance_type,Approved educational activity,,,Pupil attendance
 attendance_reason,Filter,All authorised,attendance_type,Authorised,,,Pupil attendance
 attendance_reason,Filter,All late sessions,attendance_type,All late sessions,,api-only,Pupil attendance
@@ -125,6 +69,62 @@ attendance_type,Filter,Overall absence,attendance_status,Absence,,,Pupil attenda
 attendance_type,Filter,Overall attendance,attendance_status,Attendance,,,Pupil attendance
 attendance_type,Filter,Present,attendance_status,Attendance,,,Pupil attendance
 attendance_type,Filter,Unauthorised,attendance_status,Absence,,,Pupil attendance
+breakdown,Filter,African,breakdown_topic,Ethnicity,,api-only,Personal characteristics - Ethnicity
+breakdown,Filter,All Asian / Asian British,breakdown_topic,Ethnicity,,api-only,Personal characteristics - Ethnicity
+breakdown,Filter,All Black / African / Caribbean / Black British,breakdown_topic,Ethnicity,,api-only,Personal characteristics - Ethnicity
+breakdown,Filter,All Mixed / Multiple ethnic groups,breakdown_topic,Ethnicity,,api-only,Personal characteristics - Ethnicity
+breakdown,Filter,All other ethnic groups,breakdown_topic,Ethnicity,,api-only,Personal characteristics - Ethnicity
+breakdown,Filter,All SEN provision,breakdown_topic,SEN provision,,api-only,Special educational needs
+breakdown,Filter,All White,breakdown_topic,Ethnicity,,api-only,Personal characteristics - Ethnicity
+breakdown,Filter,Any other Asian background,breakdown_topic,Ethnicity,,api-only,Personal characteristics - Ethnicity
+breakdown,Filter,Any other Black / African / Caribbean background,breakdown_topic,Ethnicity,,api-only,Personal characteristics - Ethnicity
+breakdown,Filter,Any other Mixed / Multiple ethnic background,breakdown_topic,Ethnicity,,api-only,Personal characteristics - Ethnicity
+breakdown,Filter,Any other White background,breakdown_topic,Ethnicity,,api-only,Personal characteristics - Ethnicity
+breakdown,Filter,Autistic spectrum disorder,breakdown_topic,SEN primary need,ASD,api-only,Special educational needs
+breakdown,Filter,Bangladeshi,breakdown_topic,Ethnicity,,api-only,Personal characteristics - Ethnicity
+breakdown,Filter,Black Caribbean,breakdown_topic,Ethnicity,,api-only,Personal characteristics - Ethnicity
+breakdown,Filter,Boys,breakdown_topic,Sex,,api-only,Personal characteristics
+breakdown,Filter,Chinese,breakdown_topic,Ethnicity,,api-only,Personal characteristics - Ethnicity
+breakdown,Filter,Disadvantaged,breakdown_topic,Disadvantage status,,api-only,Personal characteristics
+breakdown,Filter,Down syndrome,breakdown_topic,SEN primary need,,api-only,Special educational needs
+breakdown,Filter,"Education, health and care plan",breakdown_topic,SEN provision,,api-only,Special educational needs
+breakdown,Filter,English / Welsh / Scottish / Northern Irish / British,breakdown_topic,Ethnicity,,api-only,Personal characteristics - Ethnicity
+breakdown,Filter,FSM eligible,breakdown_topic,FSM status,,api-only,Personal characteristics
+breakdown,Filter,Girls,breakdown_topic,Sex,,api-only,Personal characteristics
+breakdown,Filter,Gypsy,breakdown_topic,Ethnicity,,api-only,Personal characteristics - Ethnicity
+breakdown,Filter,Hearing impairment,breakdown_topic,SEN primary need,HI,api-only,Special educational needs
+breakdown,Filter,High attainment at key stage 2,breakdown_topic,Prior attainment,,api-only,Attainment
+breakdown,Filter,Indian,breakdown_topic,Ethnicity,,api-only,Personal characteristics - Ethnicity
+breakdown,Filter,Irish,breakdown_topic,Ethnicity,,api-only,Personal characteristics - Ethnicity
+breakdown,Filter,Irish Traveller,breakdown_topic,Ethnicity,,api-only,Personal characteristics - Ethnicity
+breakdown,Filter,Known or believed to be English,breakdown_topic,First language,,api-only,Personal characteristics
+breakdown,Filter,Known or believed to be other than English,breakdown_topic,First language,,api-only,Personal characteristics
+breakdown,Filter,Low attainment at key stage 2,breakdown_topic,Prior attainment,,api-only,Attainment
+breakdown,Filter,Mid attainment at key stage 2,breakdown_topic,Prior attainment,,api-only,Attainment
+breakdown,Filter,Moderate learning difficulty,breakdown_topic,SEN primary need,MLD,api-only,Special educational needs
+breakdown,Filter,Multi-sensory impairment,breakdown_topic,SEN primary need,,api-only,Special educational needs
+breakdown,Filter,No primary need,breakdown_topic,SEN primary need,,api-only,Special educational needs
+breakdown,Filter,No SEN provision,breakdown_topic,SEN provision,,api-only,Special educational needs
+breakdown,Filter,Not known to be disadvantaged,breakdown_topic,Disadvantage status,,api-only,Personal characteristics
+breakdown,Filter,Not known to be FSM eligible,breakdown_topic,FSM status,,api-only,Personal characteristics
+breakdown,Filter,Other difficulty or disability,breakdown_topic,SEN primary need,OTH,api-only,Special educational needs
+breakdown,Filter,Pakistani,breakdown_topic,Ethnicity,,api-only,Personal characteristics - Ethnicity
+breakdown,Filter,Physical disability,breakdown_topic,SEN primary need,,api-only,Special educational needs
+breakdown,Filter,Profound and multiple learning difficulty,breakdown_topic,SEN primary need,PMLD,api-only,Special educational needs
+breakdown,Filter,SEN support / SEN without an EHC plan,breakdown_topic,SEN provision,,api-only,Special educational needs
+breakdown,Filter,SEN support but no specialist assessment of type of need,breakdown_topic,SEN primary need,,api-only,Special educational needs
+breakdown,Filter,Severe learning difficulty,breakdown_topic,SEN primary need,SLD,api-only,Special educational needs
+breakdown,Filter,"Social, emotional and mental health",breakdown_topic,SEN primary need,SEMH,api-only,Special educational needs
+breakdown,Filter,Specific learning difficulty,breakdown_topic,SEN primary need,SPLD,api-only,Special educational needs
+breakdown,Filter,"Speech, language and communication needs",breakdown_topic,SEN primary need,SLCN,api-only,Special educational needs
+breakdown,Filter,Total,breakdown_topic,Prior attainment,,api-only,Attainment
+breakdown,Filter,Total,breakdown_topic,Total,,api-only,General
+breakdown,Filter,Unknown,breakdown_topic,Ethnicity,,api-only,Personal characteristics - Ethnicity
+breakdown,Filter,Unknown,breakdown_topic,SEN primary need,,api-only,Special educational needs
+breakdown,Filter,Vision impairment,breakdown_topic,SEN primary need,VI,api-only,Special educational needs
+breakdown,Filter,White and Asian,breakdown_topic,Ethnicity,,api-only,Personal characteristics - Ethnicity
+breakdown,Filter,White and Black African,breakdown_topic,Ethnicity,,api-only,Personal characteristics - Ethnicity
+breakdown,Filter,White and Black Caribbean,breakdown_topic,Ethnicity,,api-only,Personal characteristics - Ethnicity
 cla_group,Filter,Children ceasing to be looked after during the year,,,,api-only,Children Looked After
 cla_group,Filter,Children looked after on 31 March,,,,api-only,Children Looked After
 cla_group,Filter,Children looked after on 31 March excluding unaccompanied asylum-seeking children,,,,api-only,Children Looked After
@@ -290,13 +290,12 @@ establishment_type_group,Filter,Voluntary aided school,,,,api-only,Establishment
 establishment_type_group,Filter,Voluntary controlled school,,,,api-only,Establishment characteristics
 ethnicity_major,Filter,Asian / Asian British,,,,any,Personal characteristics - Ethnicity
 ethnicity_major,Filter,Black / African / Caribbean / Black British,,,,any,Personal characteristics - Ethnicity
-ethnicity_major,Filter,Black / African / Caribbean / Black British,,,,any,Personal characteristics - Ethnicity
 ethnicity_major,Filter,Mixed / Multiple ethnic groups,,,,any,Personal characteristics - Ethnicity
 ethnicity_major,Filter,Other ethnic group,,,,any,Personal characteristics - Ethnicity
 ethnicity_major,Filter,Total,,,,any,Personal characteristics - Ethnicity
 ethnicity_major,Filter,Unknown,,,,any,Personal characteristics - Ethnicity
 ethnicity_major,Filter,White,,,,any,Personal characteristics - Ethnicity
-ethnicity_minor,Filter,African,ethnicity_major,Black / African / Caribbean / Black British,,any,Personal characteristics - Ethnicity
+ethnicity_minor,Filter,African,ethnicity_major,Black / African / Caribbean / Black British,,any,Personal characteristics
 ethnicity_minor,Filter,All Asian / Asian British,ethnicity_major,Asian / Asian British,,any,Personal characteristics - Ethnicity
 ethnicity_minor,Filter,All Black / African / Caribbean / Black British,ethnicity_major,Black / African / Caribbean / Black British,,any,Personal characteristics - Ethnicity
 ethnicity_minor,Filter,All Mixed / Multiple ethnic groups,ethnicity_major,Mixed / Multiple ethnic groups,,any,Personal characteristics - Ethnicity
@@ -330,40 +329,6 @@ ethnicity_minor,Filter,Unknown,ethnicity_major,Unknown,,any,Personal characteris
 ethnicity_minor,Filter,White and Asian,ethnicity_major,Mixed / Multiple ethnic groups,,any,Personal characteristics - Ethnicity
 ethnicity_minor,Filter,White and Black African,ethnicity_major,Mixed / Multiple ethnic groups,,any,Personal characteristics - Ethnicity
 ethnicity_minor,Filter,White and Black Caribbean,ethnicity_major,Mixed / Multiple ethnic groups,,any,Personal characteristics - Ethnicity
-ethnicity_minor,Filter,African,ethnicity_major,Black / African / Caribbean / Black British,,any,Personal characteristics
-ethnicity_minor,Filter,All Asian / Asian British,ethnicity_major,Asian / Asian British,,any,Personal characteristics
-ethnicity_minor,Filter,All Black / African / Caribbean / Black British,ethnicity_major,Black / African / Caribbean / Black British,,any,Personal characteristics
-ethnicity_minor,Filter,All Mixed / Multiple ethnic groups,ethnicity_major,Mixed / Multiple ethnic groups,,any,Personal characteristics
-ethnicity_minor,Filter,All other ethnic groups,ethnicity_major,Other ethnic group,,any,Personal characteristics
-ethnicity_minor,Filter,All White,ethnicity_major,White,,any,Personal characteristics
-ethnicity_minor,Filter,Any other Asian background,ethnicity_major,Asian / Asian British,,any,Personal characteristics
-ethnicity_minor,Filter,Any other Black / African / Caribbean background,ethnicity_major,Black / African / Caribbean / Black British,,any,Personal characteristics
-ethnicity_minor,Filter,Any other ethnic group,ethnicity_major,Other ethnic group,,any,Personal characteristics
-ethnicity_minor,Filter,Any other Mixed / Multiple ethnic background,ethnicity_major,Mixed / Multiple ethnic groups,,any,Personal characteristics
-ethnicity_minor,Filter,Any other White background,ethnicity_major,White,,any,Personal characteristics
-ethnicity_minor,Filter,Arab,ethnicity_major,Other ethnic group,,any,Personal characteristics
-ethnicity_minor,Filter,Bangladeshi,ethnicity_major,Asian / Asian British,,any,Personal characteristics
-ethnicity_minor,Filter,Caribbean,ethnicity_major,Black / African / Caribbean / Black British,,any,Personal characteristics
-ethnicity_minor,Filter,Chinese,ethnicity_major,Asian / Asian British,,any,Personal characteristics
-ethnicity_minor,Filter,English / Welsh / Scottish / Northern Irish / British,ethnicity_major,White,,any,Personal characteristics
-ethnicity_minor,Filter,Gypsy,ethnicity_major,White,,any,Personal characteristics
-ethnicity_minor,Filter,Gypsy or Irish Traveller,ethnicity_major,White,,any,Personal characteristics
-ethnicity_minor,Filter,Indian,ethnicity_major,Asian / Asian British,,any,Personal characteristics
-ethnicity_minor,Filter,Irish,ethnicity_major,White,,any,Personal characteristics
-ethnicity_minor,Filter,Irish Traveller,ethnicity_major,White,,any,Personal characteristics
-ethnicity_minor,Filter,Pakistani,ethnicity_major,Asian / Asian British,,any,Personal characteristics
-ethnicity_minor,Filter,Roma,ethnicity_major,White,,any,Personal characteristics
-ethnicity_minor,Filter,Total,ethnicity_major,Asian / Asian British,,any,Personal characteristics
-ethnicity_minor,Filter,Total,ethnicity_major,Black / African / Caribbean / Black British,,any,Personal characteristics
-ethnicity_minor,Filter,Total,ethnicity_major,Mixed / Multiple ethnic groups,,any,Personal characteristics
-ethnicity_minor,Filter,Total,ethnicity_major,Other ethnic group,,any,Personal characteristics
-ethnicity_minor,Filter,Total,ethnicity_major,Total,,any,Personal characteristics
-ethnicity_minor,Filter,Total,ethnicity_major,Unknown,,any,Personal characteristics
-ethnicity_minor,Filter,Total,ethnicity_major,White,,any,Personal characteristics
-ethnicity_minor,Filter,Unknown,ethnicity_major,Unknown,,any,Personal characteristics
-ethnicity_minor,Filter,White and Asian,ethnicity_major,Mixed / Multiple ethnic groups,,any,Personal characteristics
-ethnicity_minor,Filter,White and Black African,ethnicity_major,Mixed / Multiple ethnic groups,,any,Personal characteristics
-ethnicity_minor,Filter,White and Black Caribbean,ethnicity_major,Mixed / Multiple ethnic groups,,any,Personal characteristics
 first_language,Filter,First language unclassified,,,,api-only,Personal characteristics
 first_language,Filter,Known or believed to be English,,,,api-only,Personal characteristics
 first_language,Filter,Known or believed to be other than English,,,,api-only,Personal characteristics
@@ -647,6 +612,9 @@ relative_access,Filter,Nearer to a major town or city,rurality,Larger rural sett
 relative_access,Filter,Nearer to a major town or city,rurality,Smaller rural settlement,,api-only,Personal characteristics
 relative_access,Filter,Nearer to a major town or city,rurality,Urban,,api-only,Personal characteristics
 relative_access,Filter,Total,rurality,Total,,api-only,Personal characteristics
+rurality,Filter,Larger rural settlement,,,,api-only,Personal characteristics
+rurality,Filter,Smaller rural settlement,,,,api-only,Personal characteristics
+rurality,Filter,Unknown,,,,api-only,Personal characteristics
 school_admission_type,Filter,Non-selective schools in highly selective areas,,,,api-only,Establishment characteristics
 school_admission_type,Filter,Non-selective schools in other areas,,,,api-only,Establishment characteristics
 school_admission_type,Filter,Selective schools,,,,api-only,Establishment characteristics
@@ -883,6 +851,13 @@ subject_discount_group,Filter,Urdu,subject,Other Modern Languages,,api-only,Atta
 test_year,Filter,Final year,,,,api-only,Attainment
 test_year,Filter,Penultimate year,,,,api-only,Attainment
 test_year,Filter,Total,,,,api-only,Attainment
+time_frame,Filter,Friday,,,,,Pupil attendance
+time_frame,Filter,Monday,,,,,Pupil attendance
+time_frame,Filter,Thursday,,,,,Pupil attendance
+time_frame,Filter,Tuesday,,,,,Pupil attendance
+time_frame,Filter,Wednesday,,,,,Pupil attendance
+time_frame,Filter,Week,,,,,Pupil attendance
+time_frame,Filter,Year to date,,,,,Pupil attendance
 years_open,Filter,1 year,,,,api-only,Establishment characteristics
 years_open,Filter,10 years,,,,api-only,Establishment characteristics
 years_open,Filter,11 years,,,,api-only,Establishment characteristics
@@ -907,13 +882,6 @@ years_open,Filter,7 years,,,,api-only,Establishment characteristics
 years_open,Filter,8 years,,,,api-only,Establishment characteristics
 years_open,Filter,9 years,,,,api-only,Establishment characteristics
 years_open,Filter,Total,,,,api-only,Establishment characteristics
-time_frame,Filter,Friday,,,,,Pupil attendance
-time_frame,Filter,Monday,,,,,Pupil attendance
-time_frame,Filter,Thursday,,,,,Pupil attendance
-time_frame,Filter,Tuesday,,,,,Pupil attendance
-time_frame,Filter,Wednesday,,,,,Pupil attendance
-time_frame,Filter,Week,,,,,Pupil attendance
-time_frame,Filter,Year to date,,,,,Pupil attendance
 young_carer,Filter,Not known to be a young carer,,,,api-only,Personal characteristics
 young_carer,Filter,Total,,,,api-only,Personal characteristics
 young_carer,Filter,Young carer,,,,api-only,Personal characteristics
@@ -948,6 +916,11 @@ attainment8open_sum,Indicator,,,,,api-only,Attainment - Key stage 4
 average_scaled_score,Indicator,,,,,api-only,Attainment - Key stage 2
 below_interim_pre_ks_std_pupil_count,Indicator,,,,,api-only,Attainment - Key stage 2
 below_interim_pre_ks_std_pupil_percent,Indicator,,,,,api-only,Attainment - Key stage 2
+children_count,Indicator,,,,,api-only,Children Looked After
+completed_check_pupil_count,Indicator,,,,,api-only,Key stage 2 attainment
+completed_check_pupil_percent,Indicator,,,,,api-only,Key stage 2 attainment
+cumulative_pupil_count,Indicator,,,,,api-only,Key stage 2 attainment
+cumulative_pupil_percent,Indicator,,,,,api-only,Key stage 2 attainment
 disadvantage_gap_index,Indicator,,,,,api-only,Attainment - Key stage 4
 disapplied_pupil_count,Indicator,,,,,api-only,Attainment - Key stage 2
 disapplied_pupil_percent,Indicator,,,,,api-only,Attainment - Key stage 2
@@ -1028,6 +1001,7 @@ ebaccsci_entering_total,Indicator,,,,,api-only,Attainment - Key stage 4
 ebaccsci_indpath_entering_percent,Indicator,,,,,api-only,Attainment - Key stage 4
 ebaccsci_indpath_entering_total,Indicator,,,,,api-only,Attainment - Key stage 4
 eligible_pupil_count,Indicator,,,,,api-only,Attainment - Key stage 2
+eligible_pupil_count,Indicator,,,,,api-only,Key stage 2 attainment
 engagement_model_or_below_pre_ks_std_pupil_count,Indicator,,,,,api-only,Attainment - Key stage 2
 engagement_model_or_below_pre_ks_std_pupil_percent,Indicator,,,,,api-only,Attainment - Key stage 2
 engmath_94_percent,Indicator,,,,,api-only,Attainment - Key stage 4
@@ -1037,6 +1011,8 @@ engmath_95_total,Indicator,,,,,api-only,Attainment - Key stage 4
 engmath_entering_percent,Indicator,,,,,api-only,Attainment - Key stage 4
 engmath_entering_total,Indicator,,,,,api-only,Attainment - Key stage 4
 enrolment_count,Indicator,,,,,api-only,Apprenticeships
+enrolment_count,Indicator,,,,,api-only,Apprenticeships
+enrolment_percent,Indicator,,,,,api-only,Apprenticeships
 enrolment_percent,Indicator,,,,,api-only,Apprenticeships
 entries_count,Indicator,,,,,api-only,Attainment - Key stage 4
 establishment_count,Indicator,,,,,api-only,Attainment - Key stage 2
@@ -1059,43 +1035,13 @@ growing_dev_of_expected_std_pupil_count,Indicator,,,,,api-only,Attainment - Key 
 growing_dev_of_expected_std_pupil_percent,Indicator,,,,,api-only,Attainment - Key stage 2
 higher_standard_pupil_count,Indicator,,,,,api-only,Attainment - Key stage 2
 higher_standard_pupil_percent,Indicator,,,,,api-only,Attainment - Key stage 2
+just_arrived_pupil_count,Indicator,,,,,api-only,Key stage 2 attainment
+just_arrived_pupil_percent,Indicator,,,,,api-only,Key stage 2 attainment
 lan_multiple_entering_percent,Indicator,,,,,api-only,Attainment - Key stage 4
 lan_multiple_entering_total,Indicator,,,,,api-only,Attainment - Key stage 4
 learner_count,Indicator,,,,,api-only,Apprenticeships
-learner_percent,Indicator,,,,,api-only,Apprenticeships
-music_qual_entering_percent,Indicator,,,,,api-only,Attainment - Key stage 4
-music_qual_entering_total,Indicator,,,,,api-only,Attainment - Key stage 4
-not_meeting_pupil_count,Indicator,,,,,api-only,Attainment - Key stage 2
-not_meeting_pupil_percent,Indicator,,,,,api-only,Attainment - Key stage 2
-average_scaled_score,Indicator,,,,,api-only,Key stage 2 attainment
-below_interim_pre_ks_std_pupil_count,Indicator,,,,,api-only,Key stage 2 attainment
-below_interim_pre_ks_std_pupil_percent,Indicator,,,,,api-only,Key stage 2 attainment
-completed_check_pupil_count,Indicator,,,,,api-only,Key stage 2 attainment
-completed_check_pupil_percent,Indicator,,,,,api-only,Key stage 2 attainment
-cumulative_pupil_count,Indicator,,,,,api-only,Key stage 2 attainment
-cumulative_pupil_percent,Indicator,,,,,api-only,Key stage 2 attainment
-children_count,Indicator,,,,,api-only,Children Looked After
-disapplied_pupil_count,Indicator,,,,,api-only,Key stage 2 attainment
-disapplied_pupil_percent,Indicator,,,,,api-only,Key stage 2 attainment
-early_dev_of_expected_std_pupil_count,Indicator,,,,,api-only,Key stage 2 attainment
-early_dev_of_expected_std_pupil_percent,Indicator,,,,,api-only,Key stage 2 attainment
-eligible_pupil_count,Indicator,,,,,api-only,Key stage 2 attainment
-engagement_model_or_below_pre_ks_std_pupil_count,Indicator,,,,,api-only,Key stage 2 attainment
-engagement_model_or_below_pre_ks_std_pupil_percent,Indicator,,,,,api-only,Key stage 2 attainment
-enrolment_count,Indicator,,,,,api-only,Apprenticeships
-enrolment_percent,Indicator,,,,,api-only,Apprenticeships
-establishment_count,Indicator,,,,,api-only,Key stage 2 attainment
-expected_standard_pupil_count,Indicator,,,,,api-only,Key stage 2 attainment
-expected_standard_pupil_percent,Indicator,,,,,api-only,Key stage 2 attainment
-foundations_of_expected_std_pupil_count,Indicator,,,,,api-only,Key stage 2 attainment
-foundations_of_expected_std_pupil_percent,Indicator,,,,,api-only,Key stage 2 attainment
-growing_dev_of_expected_std_pupil_count,Indicator,,,,,api-only,Key stage 2 attainment
-growing_dev_of_expected_std_pupil_percent,Indicator,,,,,api-only,Key stage 2 attainment
-higher_standard_pupil_count,Indicator,,,,,api-only,Key stage 2 attainment
-higher_standard_pupil_percent,Indicator,,,,,api-only,Key stage 2 attainment
-just_arrived_pupil_count,Indicator,,,,,api-only,Key stage 2 attainment
-just_arrived_pupil_percent,Indicator,,,,,api-only,Key stage 2 attainment
 learner_count,Indicator,,,,,api-only,Apprenticeships
+learner_percent,Indicator,,,,,api-only,Apprenticeships
 learner_percent,Indicator,,,,,api-only,Apprenticeships
 missing_reason_pupil_count,Indicator,,,,,api-only,Key stage 2 attainment
 missing_reason_pupil_percent,Indicator,,,,,api-only,Key stage 2 attainment
@@ -1153,14 +1099,16 @@ mtc_score_9_pupil_count,Indicator,,,,,api-only,Key stage 2 attainment
 mtc_score_9_pupil_percent,Indicator,,,,,api-only,Key stage 2 attainment
 mtc_score_average,Indicator,,,,,api-only,Key stage 2 attainment
 mtc_score_total,Indicator,,,,,api-only,Key stage 2 attainment
-not_completed_check_pupil_count,Indicator,,,,,api-only,Key stage 2 attainment
-not_completed_check_pupil_percent,Indicator,,,,,api-only,Key stage 2 attainment
+music_qual_entering_percent,Indicator,,,,,api-only,Attainment - Key stage 4
+music_qual_entering_total,Indicator,,,,,api-only,Attainment - Key stage 4
 no_further_action_count,Indicator,,,,,api-only,Children in Need
 no_further_action_percent,Indicator,,,,,api-only,Children in Need
+not_completed_check_pupil_count,Indicator,,,,,api-only,Key stage 2 attainment
+not_completed_check_pupil_percent,Indicator,,,,,api-only,Key stage 2 attainment
 not_in_need_count,Indicator,,,,,api-only,Children in Need
 not_in_need_percent,Indicator,,,,,api-only,Children in Need
-not_meeting_pupil_count,Indicator,,,,,api-only,Key stage 2 attainment
-not_meeting_pupil_percent,Indicator,,,,,api-only,Key stage 2 attainment
+not_meeting_pupil_count,Indicator,,,,,api-only,Attainment - Key stage 2
+not_meeting_pupil_percent,Indicator,,,,,api-only,Attainment - Key stage 2
 participation_count,Indicator,,,,,api-only,Apprenticeships
 percentage,Indicator,,,,,api-only,Attainment - Key stage 4
 population_count,Indicator,,,,,api-only,General
@@ -1218,12 +1166,6 @@ qual_entries_average,Indicator,,,,,api-only,Attainment - Key stage 4
 qual_entries_sum,Indicator,,,,,api-only,Attainment - Key stage 4
 qual_entries_without_discounting_average,Indicator,,,,,api-only,Attainment - Key stage 4
 qual_entries_without_discounting_sum,Indicator,,,,,api-only,Attainment - Key stage 4
-scaled_scores_eligible_pupil_count,Indicator,,,,,api-only,Attainment - Key stage 2
-scaled_scores_total,Indicator,,,,,api-only,Attainment - Key stage 2
-school_count,Indicator,,,,,api-only,General
-school_percent,Indicator,,,,,api-only,General
-sci_triple_entering_percent,Indicator,,,,,api-only,Attainment - Key stage 4
-sci_triple_entering_total,Indicator,,,,,api-only,Attainment - Key stage 4
 reference_date,Indicator,,,,,,Pupil attendance
 referral_child_count,Indicator,,,,,api-only,Children in Need
 referral_count,Indicator,,,,,api-only,Children in Need
@@ -1231,12 +1173,16 @@ rereferral_child_count,Indicator,,,,,api-only,Children in Need
 rereferral_child_percent,Indicator,,,,,api-only,Children in Need
 rereferral_count,Indicator,,,,,api-only,Children in Need
 rereferral_percent,Indicator,,,,,api-only,Children in Need
-scaled_scores_eligible_pupil_count,Indicator,,,,,api-only,Key stage 2 attainment
-scaled_scores_total,Indicator,,,,,api-only,Key stage 2 attainment
+scaled_scores_eligible_pupil_count,Indicator,,,,,api-only,Attainment - Key stage 2
+scaled_scores_total,Indicator,,,,,api-only,Attainment - Key stage 2
 school_all_count,Indicator,,,,,api-only,Pupil attendance
 school_count,Indicator,,,,,api-only,General
+school_count,Indicator,,,,,api-only,General
+school_percent,Indicator,,,,,api-only,General
 school_percent,Indicator,,,,,api-only,General
 school_submitted_count,Indicator,,,,,api-only,Pupil attendance
+sci_triple_entering_percent,Indicator,,,,,api-only,Attainment - Key stage 4
+sci_triple_entering_total,Indicator,,,,,api-only,Attainment - Key stage 4
 session_count,Indicator,,,,,,Pupil attendance
 session_percent,Indicator,,,,,,Pupil attendance
 start_count,Indicator,,,,,api-only,Apprenticeships
@@ -1250,6 +1196,8 @@ unable_to_access_arrived_pupil_count,Indicator,,,,,api-only,Attainment - Key sta
 unable_to_access_arrived_pupil_percent,Indicator,,,,,api-only,Attainment - Key stage 2
 unable_to_access_pupil_count,Indicator,,,,,api-only,Attainment - Key stage 2
 unable_to_access_pupil_percent,Indicator,,,,,api-only,Attainment - Key stage 2
+unable_to_participate_pupil_count,Indicator,,,,,api-only,Key stage 2 attainment
+unable_to_participate_pupil_percent,Indicator,,,,,api-only,Key stage 2 attainment
 valueaddedhum_average,Indicator,,,,,api-only,Attainment - Key stage 4
 valueaddedhum_lower_95_ci,Indicator,,,,,api-only,Attainment - Key stage 4
 valueaddedhum_pupil_count,Indicator,,,,,api-only,Attainment - Key stage 4
@@ -1272,13 +1220,3 @@ working_below_pupil_count,Indicator,,,,,api-only,Attainment - Key stage 2
 working_below_pupil_percent,Indicator,,,,,api-only,Attainment - Key stage 2
 working_towards_pupil_count,Indicator,,,,,api-only,Attainment - Key stage 2
 working_towards_pupil_percent,Indicator,,,,,api-only,Attainment - Key stage 2
-unable_to_access_arrived_pupil_count,Indicator,,,,,api-only,Key stage 2 attainment
-unable_to_access_arrived_pupil_percent,Indicator,,,,,api-only,Key stage 2 attainment
-unable_to_access_pupil_count,Indicator,,,,,api-only,Key stage 2 attainment
-unable_to_access_pupil_percent,Indicator,,,,,api-only,Key stage 2 attainment
-unable_to_participate_pupil_count,Indicator,,,,,api-only,Key stage 2 attainment
-unable_to_participate_pupil_percent,Indicator,,,,,api-only,Key stage 2 attainment
-working_below_pupil_count,Indicator,,,,,api-only,Key stage 2 attainment
-working_below_pupil_percent,Indicator,,,,,api-only,Key stage 2 attainment
-working_towards_pupil_count,Indicator,,,,,api-only,Key stage 2 attainment
-working_towards_pupil_percent,Indicator,,,,,api-only,Key stage 2 attainment
