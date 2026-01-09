@@ -1001,7 +1001,6 @@ ebaccsci_entering_total,Indicator,,,,,api-only,Attainment - Key stage 4
 ebaccsci_indpath_entering_percent,Indicator,,,,,api-only,Attainment - Key stage 4
 ebaccsci_indpath_entering_total,Indicator,,,,,api-only,Attainment - Key stage 4
 eligible_pupil_count,Indicator,,,,,api-only,Attainment - Key stage 2
-eligible_pupil_count,Indicator,,,,,api-only,Key stage 2 attainment
 engagement_model_or_below_pre_ks_std_pupil_count,Indicator,,,,,api-only,Attainment - Key stage 2
 engagement_model_or_below_pre_ks_std_pupil_percent,Indicator,,,,,api-only,Attainment - Key stage 2
 engmath_94_percent,Indicator,,,,,api-only,Attainment - Key stage 4
@@ -1011,8 +1010,6 @@ engmath_95_total,Indicator,,,,,api-only,Attainment - Key stage 4
 engmath_entering_percent,Indicator,,,,,api-only,Attainment - Key stage 4
 engmath_entering_total,Indicator,,,,,api-only,Attainment - Key stage 4
 enrolment_count,Indicator,,,,,api-only,Apprenticeships
-enrolment_count,Indicator,,,,,api-only,Apprenticeships
-enrolment_percent,Indicator,,,,,api-only,Apprenticeships
 enrolment_percent,Indicator,,,,,api-only,Apprenticeships
 entries_count,Indicator,,,,,api-only,Attainment - Key stage 4
 establishment_count,Indicator,,,,,api-only,Attainment - Key stage 2
@@ -1040,8 +1037,6 @@ just_arrived_pupil_percent,Indicator,,,,,api-only,Key stage 2 attainment
 lan_multiple_entering_percent,Indicator,,,,,api-only,Attainment - Key stage 4
 lan_multiple_entering_total,Indicator,,,,,api-only,Attainment - Key stage 4
 learner_count,Indicator,,,,,api-only,Apprenticeships
-learner_count,Indicator,,,,,api-only,Apprenticeships
-learner_percent,Indicator,,,,,api-only,Apprenticeships
 learner_percent,Indicator,,,,,api-only,Apprenticeships
 missing_reason_pupil_count,Indicator,,,,,api-only,Key stage 2 attainment
 missing_reason_pupil_percent,Indicator,,,,,api-only,Key stage 2 attainment
@@ -1177,8 +1172,6 @@ scaled_scores_eligible_pupil_count,Indicator,,,,,api-only,Attainment - Key stage
 scaled_scores_total,Indicator,,,,,api-only,Attainment - Key stage 2
 school_all_count,Indicator,,,,,api-only,Pupil attendance
 school_count,Indicator,,,,,api-only,General
-school_count,Indicator,,,,,api-only,General
-school_percent,Indicator,,,,,api-only,General
 school_percent,Indicator,,,,,api-only,General
 school_submitted_count,Indicator,,,,,api-only,Pupil attendance
 sci_triple_entering_percent,Indicator,,,,,api-only,Attainment - Key stage 4
