@@ -1,4 +1,13 @@
-dd <- read.csv("../../data/data-dictionary.csv")
+dd <- read_csv("../../data/data-dictionary.csv")
+
+test_that("Check for any problems on data dictionary read-in (e.g. blank extra columns)", {
+  expect_equal(
+    dd |>
+      problems() |>
+      nrow(),
+    0
+  )
+})
 
 
 test_that("Duplicate row test", {
