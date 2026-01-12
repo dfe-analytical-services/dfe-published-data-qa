@@ -1043,10 +1043,10 @@ lan_multiple_entering_percent,Indicator,,,,,api-only,Attainment - Key stage 4
 lan_multiple_entering_total,Indicator,,,,,api-only,Attainment - Key stage 4
 learner_count,Indicator,,,,,api-only,Apprenticeships
 learner_percent,Indicator,,,,,api-only,Apprenticeships
-learning_difficulty_disability,Filter,With learning difficulty / disability,,,,,,
-learning_difficulty_disability,Filter,No learning difficulty / disability,,,,,,
-learning_difficulty_disability,Filter,Unknown,,,,,,
-learning_difficulty_disability,Filter,Total,,,,,,
+learning_difficulty_disability,Filter,With learning difficulty / disability,,,,,
+learning_difficulty_disability,Filter,No learning difficulty / disability,,,,,
+learning_difficulty_disability,Filter,Unknown,,,,,
+learning_difficulty_disability,Filter,Total,,,,,
 missing_reason_pupil_count,Indicator,,,,,api-only,Key stage 2 attainment
 missing_reason_pupil_percent,Indicator,,,,,api-only,Key stage 2 attainment
 mtc_score_0_pupil_count,Indicator,,,,,api-only,Key stage 2 attainment
