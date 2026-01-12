@@ -131,6 +131,11 @@ cla_group,Filter,Children looked after on 31 March excluding unaccompanied asylu
 cla_group,Filter,Children looked after on 31 March who were unaccompanied asylum-seeking children,,,,api-only,Children Looked After
 cla_group,Filter,Children looked after who were adopted during the year,,,,api-only,Children Looked After
 cla_group,Filter,Children starting to be looked after during the year,,,,api-only,Children Looked After
+disability_status,Filter,Disability,,,,,
+disability_status,Filter,No known disability,,,,,
+disability_status,Filter,Not disclosed,,,,,
+disability_status,Filter,No disability,,,,,
+disability_status,Filter,Total,,,,,
 disadvantage_status,Filter,Disadvantaged,,,,api-only,Personal characteristics
 disadvantage_status,Filter,Not known to be disadvantaged,,,,api-only,Personal characteristics
 disadvantage_status,Filter,Total,,,,api-only,Personal characteristics
@@ -1038,6 +1043,10 @@ lan_multiple_entering_percent,Indicator,,,,,api-only,Attainment - Key stage 4
 lan_multiple_entering_total,Indicator,,,,,api-only,Attainment - Key stage 4
 learner_count,Indicator,,,,,api-only,Apprenticeships
 learner_percent,Indicator,,,,,api-only,Apprenticeships
+learning_difficulty_disability,Filter,With learning difficulty / disability,,,,,,
+learning_difficulty_disability,Filter,No learning difficulty / disability,,,,,,
+learning_difficulty_disability,Filter,Unknown,,,,,,
+learning_difficulty_disability,Filter,Total,,,,,,
 missing_reason_pupil_count,Indicator,,,,,api-only,Key stage 2 attainment
 missing_reason_pupil_percent,Indicator,,,,,api-only,Key stage 2 attainment
 mtc_score_0_pupil_count,Indicator,,,,,api-only,Key stage 2 attainment
