@@ -125,6 +125,50 @@ breakdown,Filter,Vision impairment,breakdown_topic,SEN primary need,VI,api-only,
 breakdown,Filter,White and Asian,breakdown_topic,Ethnicity,,api-only,Personal characteristics - Ethnicity
 breakdown,Filter,White and Black African,breakdown_topic,Ethnicity,,api-only,Personal characteristics - Ethnicity
 breakdown,Filter,White and Black Caribbean,breakdown_topic,Ethnicity,,api-only,Personal characteristics - Ethnicity
+breakdown,Filter,Male,breakdown_topic,Sex,,api-only,Personal characteristics
+breakdown,Filter,Female,breakdown_topic,Sex,,api-only,Personal characteristics
+breakdown,Filter,Unknown,breakdown_topic,Sex,,api-only,Personal characteristics
+breakdown,Filter,Reception,breakdown_topic,Year group,,api-only, Personal characteristics
+breakdown,Filter,Year 1,breakdown_topic,Year group,,api-only, Personal characteristics
+breakdown,Filter,Year 2,breakdown_topic,Year group,,api-only, Personal characteristics
+breakdown,Filter,Year 3,breakdown_topic,Year group,,api-only, Personal characteristics
+breakdown,Filter,Year 4,breakdown_topic,Year group,,api-only, Personal characteristics
+breakdown,Filter,Year 5,breakdown_topic,Year group,,api-only, Personal characteristics
+breakdown,Filter,Year 6,breakdown_topic,Year group,,api-only, Personal characteristics
+breakdown,Filter,Year 7,breakdown_topic,Year group,,api-only, Personal characteristics
+breakdown,Filter,Year 8,breakdown_topic,Year group,,api-only, Personal characteristics
+breakdown,Filter,Year 9,breakdown_topic,Year group,,api-only, Personal characteristics
+breakdown,Filter,Year 10,breakdown_topic,Year group,,api-only, Personal characteristics
+breakdown,Filter,Year 11,breakdown_topic,Year group,,api-only, Personal characteristics
+breakdown,Filter,Unknown,breakdown_topic,Year group,,api-only, Personal characteristics
+breakdown,Filter,Less than 2 weeks,breakdown_topic,Duration,,api-only, Children missing education
+breakdown,Filter,2 to 4 weeks,breakdown_topic,Duration,,api-only, Children missing education
+breakdown,Filter,4 to 8 weeks,breakdown_topic,Duration,,api-only, Children missing education
+breakdown,Filter,8 to 12 weeks,breakdown_topic,Duration,,api-only, Children missing education
+breakdown,Filter,12 to 26 weeks,breakdown_topic,Duration,,api-only, Children missing education
+breakdown,Filter,26 to 52 weeks,breakdown_topic,Duration,,api-only, Children missing education
+breakdown,Filter,Over 52 weeks,breakdown_topic,Duration,,api-only, Children missing education
+breakdown,Filter,Unknown,breakdown_topic,Duration,,api-only, Children missing education
+breakdown,Filter,Moved in from another local authority,breakdown_topic,Reason,,api-only, Children missing education
+breakdown,Filter,Moved in from another country,breakdown_topic,Reason,,api-only, Children missing education
+breakdown,Filter,School application awaiting outcome,breakdown_topic,Reason,,api-only, Children missing education
+breakdown,Filter,Offered school place but not yet accepted,breakdown_topic,Reason,,api-only, Children missing education
+breakdown,Filter,Waiting school start,breakdown_topic,Reason,,api-only, Children missing education
+breakdown,Filter,Did not get school preference,breakdown_topic,Reason,,api-only, Children missing education
+breakdown,Filter,Unsuitable elective home education,breakdown_topic,Reason,,api-only, Children missing education
+breakdown,Filter,Difficulty accessing suitable school place,breakdown_topic,Reason,,api-only, Children missing education
+breakdown,Filter,School dissatisfaction general,breakdown_topic,Reason,,api-only, Children missing education
+breakdown,Filter,School dissatisfaction SEND,breakdown_topic,Reason,,api-only, Children missing education
+breakdown,Filter,Mental health,breakdown_topic,Reason,,api-only, Children missing education
+breakdown,Filter,Physical health,breakdown_topic,Reason,,api-only, Children missing education
+breakdown,Filter,Parental decision not to register at school,breakdown_topic,Reason,,api-only, Children missing education
+breakdown,Filter,Did not apply for school place at compulsory school age,breakdown_topic,Reason,,api-only, Children missing education
+breakdown,Filter,Challenging school attendance order,breakdown_topic,Reason,,api-only, Children missing education
+breakdown,Filter,Believed to have moved to another local authority,breakdown_topic,Reason,,api-only, Children missing education
+breakdown,Filter,Believed to have moved to another country,breakdown_topic,Reason,,api-only, Children missing education
+breakdown,Filter,Unknown,breakdown_topic,Reason,,api-only, Children missing education
+breakdown,Filter,Not recorded,breakdown_topic,Reason,,api-only, Children missing education
+breakdown,Filter,Other,breakdown_topic,Reason,,api-only, Children missing education
 cla_group,Filter,Children ceasing to be looked after during the year,,,,api-only,Children Looked After
 cla_group,Filter,Children looked after on 31 March,,,,api-only,Children Looked After
 cla_group,Filter,Children looked after on 31 March excluding unaccompanied asylum-seeking children,,,,api-only,Children Looked After
@@ -1222,3 +1266,6 @@ working_below_pupil_count,Indicator,,,,,api-only,Attainment - Key stage 2
 working_below_pupil_percent,Indicator,,,,,api-only,Attainment - Key stage 2
 working_towards_pupil_count,Indicator,,,,,api-only,Attainment - Key stage 2
 working_towards_pupil_percent,Indicator,,,,,api-only,Attainment - Key stage 2
+child_count,Indicator,,,,,api-only, General
+child_percent,Indicator,,,,,api-only, General
+rate_per_100,Indicator,,,,,api-only, General
