@@ -1,6 +1,10 @@
 #!/usr/bin/env Rscript
 message("\nRunning commit hooks...")
 
+if (!renv::status()$synchronized) {
+  renv::restore()
+}
+
 message("\n")
 
 message("1. Checking code styling...\n")

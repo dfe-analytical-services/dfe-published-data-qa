@@ -124,7 +124,6 @@ fluidPage(
         # Main panel showing results -----------------------------------------------------------------------------------
 
         fluidRow(
-
           # Loading screen that appears while tests are running -----------------------------------------------------------------------------------
           shinyjs::hidden(div(
             id = "loading",
@@ -187,7 +186,6 @@ fluidPage(
                     textOutput("meta_cols")
                   )
                 ),
-
 
 
                 # Individual check results tables -----------------------------------------------------------------------------------
