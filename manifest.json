@@ -4456,7 +4456,7 @@
       "checksum": "c1d6b214017ea01fb7141a0b0e228e02"
     },
     ".Rprofile": {
-      "checksum": "d4acba8d6cb3762899bec03ca2e054aa"
+      "checksum": "955d9ca7c80482567fed0bfdb5d69cd4"
     },
     "azure-pipelines-dev.yml": {
       "checksum": "fc2ef843ff5024bcba25ff84eec05f4c"
@@ -4558,10 +4558,13 @@
       "checksum": "08b8657e6d4ac139069320c6dda69010"
     },
     "R/manual_scripts/api-data-checker.r": {
-      "checksum": "e03fcc51d479b00ffb8ce2b7abd89805"
+      "checksum": "8e25d9ed96355fabf1f0d06593250a8e"
     },
     "R/manual_scripts/debugging.R": {
       "checksum": "e56763afdf3659c7c47cfe0e3262e8cf"
+    },
+    "R/manual_scripts/duplicate_finder.R": {
+      "checksum": "632d493a0107c603ce22ce1391ac2db4"
     },
     "R/manual_scripts/profiling_code.r": {
       "checksum": "4dc8717876735d0a105687d14f56c0b8"

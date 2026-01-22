@@ -19,7 +19,8 @@ api_data_checker <- function(files, verbose = FALSE) {
     filter_item_parent = NA
   )
   for (file in files) {
-    data <- vroom::vroom(file, show_col_types = FALSE)
+    data <- vroom::vroom(file, show_col_types = FALSE) |>
+      dplyr::mutate(across(everything(), as.character))
     meta <- vroom::vroom(gsub(".csv", ".meta.csv", file), show_col_types = FALSE)
     message("Scanning ", file)
     if ("Filter" %in% meta$col_type) {
