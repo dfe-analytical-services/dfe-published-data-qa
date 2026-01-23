@@ -1,4 +1,4 @@
-﻿col_name,col_type,filter_item,col_name_parent,filter_item_parent,cbds_code,item_error_flag,contexts
+col_name,col_type,filter_item,col_name_parent,filter_item_parent,cbds_code,item_error_flag,contexts
 age_group,Filter,19 to 24,age_youth_adult,19 plus,,api-only,Personal characteristics
 age_group,Filter,25 plus,age_youth_adult,19 plus,,api-only,Personal characteristics
 age_group,Filter,Total,age_youth_adult,19 plus,,api-only,Personal characteristics
@@ -934,6 +934,21 @@ years_open,Filter,Total,,,,api-only,Establishment characteristics
 young_carer,Filter,Not known to be a young carer,,,,api-only,Personal characteristics
 young_carer,Filter,Total,,,,api-only,Personal characteristics
 young_carer,Filter,Young carer,,,,api-only,Personal characteristics
+setting_prior_to_ehe,Filter,Early years setting,ehe_status,Started EHE during the year,,api-only,Elective Home Education
+setting_prior_to_ehe,Filter,No prior establishment,ehe_status,Started EHE during the year,,api-only,Elective Home Education
+setting_prior_to_ehe,Filter,Local authority maintained,ehe_status,Started EHE during the year,,api-only,Elective Home Education
+setting_prior_to_ehe,Filter,Academy,ehe_status,Started EHE during the year,,api-only,Elective Home Education
+setting_prior_to_ehe,Filter,Free school,ehe_status,Started EHE during the year,,api-only,Elective Home Education
+setting_prior_to_ehe,Filter,Independent,ehe_status,Started EHE during the year,,api-only,Elective Home Education
+setting_prior_to_ehe,Filter,Special,ehe_status,Started EHE during the year,,api-only,Elective Home Education
+setting_prior_to_ehe,Filter,Alternative provision,ehe_status,Started EHE during the year,,api-only,Elective Home Education
+setting_prior_to_ehe,Filter,Pupil referral unit,ehe_status,Started EHE during the year,,api-only,Elective Home Education
+setting_prior_to_ehe,Filter,Home educated outside the local authority,ehe_status,Started EHE during the year,,api-only,Elective Home Education
+setting_prior_to_ehe,Filter,Elsewhere/Unknown,ehe_status,Started EHE during the year,,api-only,Elective Home Education
+setting_prior_to_ehe,Filter,Total,ehe_status,Started EHE during the year,,api-only,Elective Home Education
+setting_prior_to_ehe,Filter,Total,ehe_status,Returned to EHE during the year,,api-only,Elective Home Education
+setting_prior_to_ehe,Filter,Total,ehe_status,Left the local authority in EHE during the year,,api-only,Elective Home Education
+setting_prior_to_ehe,Filter,Total,ehe_status,In EHE at any point during the year,,api-only,Elective Home Education
 absent_pupil_count,Indicator,,,,,api-only,Attainment - Key stage 2
 absent_pupil_percent,Indicator,,,,,api-only,Attainment - Key stage 2
 achievement_count,Indicator,,,,,api-only,Apprenticeships
@@ -1269,3 +1284,6 @@ working_towards_pupil_percent,Indicator,,,,,api-only,Attainment - Key stage 2
 child_count,Indicator,,,,,api-only,General
 child_percent,Indicator,,,,,api-only,General
 rate_per_100,Indicator,,,,,api-only,General
+section_437_notice_issued_count,Indicator,,,,,api-only,Elective Home Education
+sao_order_issued_count,Indicator,,,,,api-only,Elective Home Education
+sao_order_revoked_count,Indicator,,,,,api-only,Elective Home Education
