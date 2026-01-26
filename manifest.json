@@ -4412,6 +4412,7 @@
     },
     ".Rprofile": {
       "checksum": "87625d5c0e2a419252ebb92891c81b12"
+      "checksum": "d4acba8d6cb3762899bec03ca2e054aa"
     },
     "azure-pipelines-dev.yml": {
       "checksum": "fc2ef843ff5024bcba25ff84eec05f4c"
@@ -4430,6 +4431,7 @@
     },
     "data/data-dictionary.csv": {
       "checksum": "72ef0ad55de59557f0d7268ab122d900"
+      "checksum": "d9ea5613f35fc968c6dc72cb9e552d49"
     },
     "data/english_devolved_areas.csv": {
       "checksum": "391e91c38d772d55f98e54fbacfc3b9f"
