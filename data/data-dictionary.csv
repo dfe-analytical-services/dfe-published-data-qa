@@ -153,8 +153,6 @@ breakdown,Filter,Vision impairment,breakdown_topic,SEN primary need,VI,api-only,
 breakdown,Filter,White and Asian,breakdown_topic,Ethnicity,,api-only,Personal characteristics - Ethnicity
 breakdown,Filter,White and Black African,breakdown_topic,Ethnicity,,api-only,Personal characteristics - Ethnicity
 breakdown,Filter,White and Black Caribbean,breakdown_topic,Ethnicity,,api-only,Personal characteristics - Ethnicity
-breakdown,Filter,Male,breakdown_topic,Sex,,api-only,Personal characteristics
-breakdown,Filter,Female,breakdown_topic,Sex,,api-only,Personal characteristics
 breakdown,Filter,Unknown,breakdown_topic,Sex,,api-only,Personal characteristics
 breakdown,Filter,Reception,breakdown_topic,Year group,,api-only,Personal characteristics
 breakdown,Filter,Year 1,breakdown_topic,Year group,,api-only,Personal characteristics
