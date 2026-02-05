@@ -1,4 +1,4 @@
-﻿col_name,col_type,filter_item,col_name_parent,filter_item_parent,cbds_code,item_error_flag,contexts
+col_name,col_type,filter_item,col_name_parent,filter_item_parent,cbds_code,item_error_flag,contexts
 age_group,Filter,19 to 24,age_youth_adult,19 plus,,api-only,Personal characteristics
 age_group,Filter,25 plus,age_youth_adult,19 plus,,api-only,Personal characteristics
 age_group,Filter,Total,age_youth_adult,19 plus,,api-only,Personal characteristics
@@ -150,6 +150,48 @@ breakdown,Filter,Unknown,breakdown_topic,Free school meal eligibility,,api-only,
 breakdown,Filter,Unknown,breakdown_topic,SEN primary need,,api-only,Special educational needs
 breakdown,Filter,Unknown,breakdown_topic,SEN provision,,api-only,Personal characteristics
 breakdown,Filter,Vision impairment,breakdown_topic,SEN primary need,VI,api-only,Special educational needs
+breakdown,Filter,Unknown,breakdown_topic,Sex,,api-only,Personal characteristics
+breakdown,Filter,Reception,breakdown_topic,Year group,,api-only,Personal characteristics
+breakdown,Filter,Year 1,breakdown_topic,Year group,,api-only,Personal characteristics
+breakdown,Filter,Year 2,breakdown_topic,Year group,,api-only,Personal characteristics
+breakdown,Filter,Year 3,breakdown_topic,Year group,,api-only,Personal characteristics
+breakdown,Filter,Year 4,breakdown_topic,Year group,,api-only,Personal characteristics
+breakdown,Filter,Year 5,breakdown_topic,Year group,,api-only,Personal characteristics
+breakdown,Filter,Year 6,breakdown_topic,Year group,,api-only,Personal characteristics
+breakdown,Filter,Year 7,breakdown_topic,Year group,,api-only,Personal characteristics
+breakdown,Filter,Year 8,breakdown_topic,Year group,,api-only,Personal characteristics
+breakdown,Filter,Year 9,breakdown_topic,Year group,,api-only,Personal characteristics
+breakdown,Filter,Year 10,breakdown_topic,Year group,,api-only,Personal characteristics
+breakdown,Filter,Year 11,breakdown_topic,Year group,,api-only,Personal characteristics
+breakdown,Filter,Unknown,breakdown_topic,Year group,,api-only,Personal characteristics
+breakdown,Filter,Less than 2 weeks,breakdown_topic,Duration,,api-only,Children missing education
+breakdown,Filter,2 to 4 weeks,breakdown_topic,Duration,,api-only,Children missing education
+breakdown,Filter,4 to 8 weeks,breakdown_topic,Duration,,api-only,Children missing education
+breakdown,Filter,8 to 12 weeks,breakdown_topic,Duration,,api-only,Children missing education
+breakdown,Filter,12 to 26 weeks,breakdown_topic,Duration,,api-only,Children missing education
+breakdown,Filter,26 to 52 weeks,breakdown_topic,Duration,,api-only,Children missing education
+breakdown,Filter,Over 52 weeks,breakdown_topic,Duration,,api-only,Children missing education
+breakdown,Filter,Unknown,breakdown_topic,Duration,,api-only,Children missing education
+breakdown,Filter,Moved in from another local authority,breakdown_topic,Reason,,api-only,Children missing education
+breakdown,Filter,Moved in from another country,breakdown_topic,Reason,,api-only,Children missing education
+breakdown,Filter,School application awaiting outcome,breakdown_topic,Reason,,api-only,Children missing education
+breakdown,Filter,Offered school place but not yet accepted,breakdown_topic,Reason,,api-only,Children missing education
+breakdown,Filter,Waiting school start,breakdown_topic,Reason,,api-only,Children missing education
+breakdown,Filter,Did not get school preference,breakdown_topic,Reason,,api-only,Children missing education
+breakdown,Filter,Unsuitable elective home education,breakdown_topic,Reason,,api-only,Children missing education
+breakdown,Filter,Difficulty accessing suitable school place,breakdown_topic,Reason,,api-only,Children missing education
+breakdown,Filter,School dissatisfaction general,breakdown_topic,Reason,,api-only,Children missing education
+breakdown,Filter,School dissatisfaction SEND,breakdown_topic,Reason,,api-only,Children missing education
+breakdown,Filter,Mental health,breakdown_topic,Reason,,api-only,Children missing education
+breakdown,Filter,Physical health,breakdown_topic,Reason,,api-only,Children missing education
+breakdown,Filter,Parental decision not to register at school,breakdown_topic,Reason,,api-only,Children missing education
+breakdown,Filter,Did not apply for school place at compulsory school age,breakdown_topic,Reason,,api-only,Children missing education
+breakdown,Filter,Challenging school attendance order,breakdown_topic,Reason,,api-only,Children missing education
+breakdown,Filter,Believed to have moved to another local authority,breakdown_topic,Reason,,api-only,Children missing education
+breakdown,Filter,Believed to have moved to another country,breakdown_topic,Reason,,api-only,Children missing education
+breakdown,Filter,Unknown,breakdown_topic,Reason,,api-only,Children missing education
+breakdown,Filter,Not recorded,breakdown_topic,Reason,,api-only,Children missing education
+breakdown,Filter,Other,breakdown_topic,Reason,,api-only,Children missing education
 breakdown,Filter,White,breakdown_topic,Ethnicity major,,api-only,Personal characteristics
 breakdown,Filter,White and Asian,breakdown_topic,Ethnicity minor,,api-only,Personal characteristics
 breakdown,Filter,White and Black African,breakdown_topic,Ethnicity minor,,api-only,Personal characteristics
@@ -1001,6 +1043,21 @@ years_open,Filter,Total,,,,api-only,Establishment characteristics
 young_carer,Filter,Not known to be a young carer,,,,api-only,Personal characteristics
 young_carer,Filter,Total,,,,api-only,Personal characteristics
 young_carer,Filter,Young carer,,,,api-only,Personal characteristics
+setting_prior_to_ehe,Filter,Early years setting,ehe_status,Started EHE during the year,,api-only,Elective Home Education
+setting_prior_to_ehe,Filter,No prior establishment,ehe_status,Started EHE during the year,,api-only,Elective Home Education
+setting_prior_to_ehe,Filter,Local authority maintained,ehe_status,Started EHE during the year,,api-only,Elective Home Education
+setting_prior_to_ehe,Filter,Academy,ehe_status,Started EHE during the year,,api-only,Elective Home Education
+setting_prior_to_ehe,Filter,Free school,ehe_status,Started EHE during the year,,api-only,Elective Home Education
+setting_prior_to_ehe,Filter,Independent,ehe_status,Started EHE during the year,,api-only,Elective Home Education
+setting_prior_to_ehe,Filter,Special,ehe_status,Started EHE during the year,,api-only,Elective Home Education
+setting_prior_to_ehe,Filter,Alternative provision,ehe_status,Started EHE during the year,,api-only,Elective Home Education
+setting_prior_to_ehe,Filter,Pupil referral unit,ehe_status,Started EHE during the year,,api-only,Elective Home Education
+setting_prior_to_ehe,Filter,Home educated outside the local authority,ehe_status,Started EHE during the year,,api-only,Elective Home Education
+setting_prior_to_ehe,Filter,Elsewhere/Unknown,ehe_status,Started EHE during the year,,api-only,Elective Home Education
+setting_prior_to_ehe,Filter,Total,ehe_status,Started EHE during the year,,api-only,Elective Home Education
+setting_prior_to_ehe,Filter,Total,ehe_status,Returned to EHE during the year,,api-only,Elective Home Education
+setting_prior_to_ehe,Filter,Total,ehe_status,Left the local authority in EHE during the year,,api-only,Elective Home Education
+setting_prior_to_ehe,Filter,Total,ehe_status,In EHE at any point during the year,,api-only,Elective Home Education
 absent_pupil_count,Indicator,,,,,api-only,Attainment - Key stage 2
 absent_pupil_percent,Indicator,,,,,api-only,Attainment - Key stage 2
 achievement_count,Indicator,,,,,api-only,Apprenticeships
@@ -1344,3 +1401,9 @@ working_below_pupil_count,Indicator,,,,,api-only,Attainment - Key stage 2
 working_below_pupil_percent,Indicator,,,,,api-only,Attainment - Key stage 2
 working_towards_pupil_count,Indicator,,,,,api-only,Attainment - Key stage 2
 working_towards_pupil_percent,Indicator,,,,,api-only,Attainment - Key stage 2
+child_count,Indicator,,,,,api-only,General
+child_percent,Indicator,,,,,api-only,General
+child_rate_per_100,Indicator,,,,,api-only,General
+section_437_notice_issued_count,Indicator,,,,,api-only,Elective Home Education
+sao_order_issued_count,Indicator,,,,,api-only,Elective Home Education
+sao_order_revoked_count,Indicator,,,,,api-only,Elective Home Education
