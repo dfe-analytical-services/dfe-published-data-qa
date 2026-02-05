@@ -150,9 +150,6 @@ breakdown,Filter,Unknown,breakdown_topic,Free school meal eligibility,,api-only,
 breakdown,Filter,Unknown,breakdown_topic,SEN primary need,,api-only,Special educational needs
 breakdown,Filter,Unknown,breakdown_topic,SEN provision,,api-only,Personal characteristics
 breakdown,Filter,Vision impairment,breakdown_topic,SEN primary need,VI,api-only,Special educational needs
-breakdown,Filter,White and Asian,breakdown_topic,Ethnicity,,api-only,Personal characteristics - Ethnicity
-breakdown,Filter,White and Black African,breakdown_topic,Ethnicity,,api-only,Personal characteristics - Ethnicity
-breakdown,Filter,White and Black Caribbean,breakdown_topic,Ethnicity,,api-only,Personal characteristics - Ethnicity
 breakdown,Filter,Unknown,breakdown_topic,Sex,,api-only,Personal characteristics
 breakdown,Filter,Reception,breakdown_topic,Year group,,api-only,Personal characteristics
 breakdown,Filter,Year 1,breakdown_topic,Year group,,api-only,Personal characteristics
@@ -1406,7 +1403,7 @@ working_towards_pupil_count,Indicator,,,,,api-only,Attainment - Key stage 2
 working_towards_pupil_percent,Indicator,,,,,api-only,Attainment - Key stage 2
 child_count,Indicator,,,,,api-only,General
 child_percent,Indicator,,,,,api-only,General
-rate_per_100,Indicator,,,,,api-only,General
+child_rate_per_100,Indicator,,,,,api-only,General
 section_437_notice_issued_count,Indicator,,,,,api-only,Elective Home Education
 sao_order_issued_count,Indicator,,,,,api-only,Elective Home Education
 sao_order_revoked_count,Indicator,,,,,api-only,Elective Home Education
