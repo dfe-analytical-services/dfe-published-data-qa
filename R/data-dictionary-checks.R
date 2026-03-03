@@ -70,7 +70,10 @@ data_dictionary_match_columns <- function(meta, data_dictionary) {
 check_data_dictionary_col_name <- function(meta) {
   # Collapse search terms for bad column names into regex term
   data_dictionary <- read_data_dictionary()
-  non_standard_col_names <- data_dictionary_match_columns(meta, data_dictionary) |>
+  non_standard_col_names <- data_dictionary_match_columns(
+    meta,
+    data_dictionary
+  ) |>
     dplyr::filter(is.na(standard_col))
 
   if (nrow(non_standard_col_names) == 0) {
@@ -93,8 +96,16 @@ check_data_dictionary_col_name <- function(meta) {
         "<a href=\"https://github.com/dfe-analytical-services/dfe-published-data-qa/blob/main/data/data-dictionary.csv\">",
         "data dictionary</a>",
         "and should not be used as part of an API data set until resolved.<br>",
-        ifelse(non_standard_indicators != "", paste("Indicators:", non_standard_indicators, "<br>"), ""),
-        ifelse(non_standard_filters != "", paste("Filters:", non_standard_filters), "")
+        ifelse(
+          non_standard_indicators != "",
+          paste("Indicators:", non_standard_indicators, "<br>"),
+          ""
+        ),
+        ifelse(
+          non_standard_filters != "",
+          paste("Filters:", non_standard_filters),
+          ""
+        )
       ),
       "result" = "ADVISORY"
     )
@@ -119,10 +130,20 @@ check_data_dictionary_filter_item <- function(
     )
   } else {
     non_standard_filter_items <- data |>
-      dplyr::select(all_of(dd_cols_present |> magrittr::extract2("col_name"))) |>
+      dplyr::select(all_of(
+        dd_cols_present |> magrittr::extract2("col_name")
+      )) |>
       dplyr::distinct() |>
-      tidyr::pivot_longer(cols = dplyr::everything(), names_to = "col_name", values_to = "filter_item") |>
-      dplyr::left_join(dd_filter_items, by = dplyr::join_by(col_name, filter_item)) |>
+      dplyr::mutate(across(everything(), as.character)) |>
+      tidyr::pivot_longer(
+        cols = dplyr::everything(),
+        names_to = "col_name",
+        values_to = "filter_item"
+      ) |>
+      dplyr::left_join(
+        dd_filter_items,
+        by = dplyr::join_by(col_name, filter_item)
+      ) |>
       dplyr::filter(is.na(standard_col))
 
     if (nrow(non_standard_filter_items) == 0) {

@@ -1,6 +1,14 @@
 library(shinytest2)
 
-app <- AppDriver$new(name = "edge_cases", height = 846, width = 1445, load_timeout = 45 * 1000, timeout = 20 * 1000, wait = TRUE, expect_values_screenshot_args = FALSE)
+app <- AppDriver$new(
+  name = "edge_cases",
+  height = 846,
+  width = 1445,
+  load_timeout = 45 * 1000,
+  timeout = 20 * 1000,
+  wait = TRUE,
+  expect_values_screenshot_args = FALSE
+)
 
 # Wait until Shiny is not busy for 5ms
 app$wait_for_idle(5)
@@ -12,7 +20,10 @@ test_that("Edge cases", {
   app$upload_file(metafile = "test-data/date_format.meta.csv")
   app$set_inputs(screenbutton = "click")
 
-  expect_true(app$get_value(export = "progress_message") == "Made it to the full screening checks and passed")
+  expect_true(
+    app$get_value(export = "progress_message") ==
+      "Made it to the full screening checks and passed"
+  )
 
   app$set_inputs(resetbutton = "click") # Reset app
 
@@ -21,7 +32,10 @@ test_that("Edge cases", {
   app$upload_file(metafile = "test-data/data_mandatory_cols.meta.csv")
   app$set_inputs(screenbutton = "click")
 
-  expect_true(app$get_value(export = "progress_message") == "Failed at file validation stage, fix it then screen again")
+  expect_true(
+    app$get_value(export = "progress_message") ==
+      "Failed at file validation stage, fix it then screen again"
+  )
   expect_true(app$get_value(export = "failed") == 1)
 
   app$set_inputs(resetbutton = "click") # Reset app
@@ -31,7 +45,10 @@ test_that("Edge cases", {
   app$upload_file(metafile = "test-data/filter_groups_mix.meta.csv")
   app$set_inputs(screenbutton = "click")
 
-  expect_true(app$get_value(export = "progress_message") == "Made it to the full screening checks and passed")
+  expect_true(
+    app$get_value(export = "progress_message") ==
+      "Made it to the full screening checks and passed"
+  )
 
   app$set_inputs(resetbutton = "click") # Reset app
 
@@ -40,7 +57,10 @@ test_that("Edge cases", {
   app$upload_file(metafile = "test-data/hyphen.meta.csv")
   app$set_inputs(screenbutton = "click")
 
-  expect_true(app$get_value(export = "progress_message") == "Made it to the full screening checks and passed")
+  expect_true(
+    app$get_value(export = "progress_message") ==
+      "Made it to the full screening checks and passed"
+  )
   expect_true(app$get_value(export = "advisory") > 0)
 
   # Extra check on the on the QA tabs

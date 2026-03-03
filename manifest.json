@@ -4456,7 +4456,7 @@
       "checksum": "c1d6b214017ea01fb7141a0b0e228e02"
     },
     ".Rprofile": {
-      "checksum": "27ea6ab6918de193076e55841792e4be"
+      "checksum": "1445eb0af774de3bd44023ec0175aa66"
     },
     "azure-pipelines-dev.yml": {
       "checksum": "fc2ef843ff5024bcba25ff84eec05f4c"
@@ -4546,10 +4546,10 @@
       "checksum": "51052a72b54c2e4bdddfb52762638274"
     },
     "R/data-dictionary-checks.R": {
-      "checksum": "bcc45fcf406142644ce4b8fd21645431"
+      "checksum": "7d84e4b69e625c5904cb7b67629a3413"
     },
     "R/fileValidation.r": {
-      "checksum": "1c3a5b538aa71e2f377b4733e7c9a580"
+      "checksum": "14b38b66ddedf735f9faae03bac60bbc"
     },
     "R/knownVariables.r": {
       "checksum": "9420965ddce28911fe1fc528a6f57bcb"
@@ -4558,7 +4558,7 @@
       "checksum": "08b8657e6d4ac139069320c6dda69010"
     },
     "R/manual_scripts/api-data-checker.r": {
-      "checksum": "e03fcc51d479b00ffb8ce2b7abd89805"
+      "checksum": "bcc8eb046e8218c86311bad693672907"
     },
     "R/manual_scripts/debugging.R": {
       "checksum": "e56763afdf3659c7c47cfe0e3262e8cf"
@@ -4570,19 +4570,19 @@
       "checksum": "f361c0c22b866d4d8e5c5f927f9cfcc6"
     },
     "R/manual_scripts/utils.R": {
-      "checksum": "d6b8b38e20481a0d68d54d659d79900d"
+      "checksum": "d961ae4789aac67c6b9aecdc10e7a15d"
     },
     "R/preCheck1.r": {
-      "checksum": "218370c65e4d6ff42be0a5fc82c364f2"
+      "checksum": "58f5236ac761d271577b389aff12abe0"
     },
     "R/preCheck2.r": {
-      "checksum": "e2d59f939910ad38e9867f7a41686f4c"
+      "checksum": "0ed72e5b25a85bd4a8dbc41973004875"
     },
     "R/readFile.r": {
-      "checksum": "23d3c726936fede5e8139667d4a4dd6a"
+      "checksum": "bc16d57042e393388dbe539316687bfa"
     },
     "R/screenFiles.r": {
-      "checksum": "98fe876938a64018a332891bce1148a1"
+      "checksum": "ff5e3d022fafd914cdde2b121e4543e7"
     },
     "README.md": {
       "checksum": "49f84962c930a31bd04b66f5ec0855e8"
@@ -4603,10 +4603,10 @@
       "checksum": "2d7c57ccba3887c66d3b24a4a1ae570f"
     },
     "tests/testthat/_snaps/UI-02_edge_cases/edge_cases-001.json": {
-      "checksum": "75228173459ba6f210f07e7ce363ab5e"
+      "checksum": "5152edd9c29dc78704add265190def19"
     },
     "tests/testthat/_snaps/UI-02_edge_cases/edge_cases-002.json": {
-      "checksum": "0c3fc29902031d323fa8e49b1b69b549"
+      "checksum": "ac535cd6adf14d4831c6052ffc9401c4"
     },
     "tests/testthat/_snaps/UI-03_additional_qa/additional_qa-001.json": {
       "checksum": "a8a0ab0e8c113921038f3a1a8a5e58a4"
@@ -4720,7 +4720,7 @@
       "checksum": "3057f1984836d5e7e4e39cd1209c7e20"
     },
     "tests/testthat/helper-testIndividualTest.R": {
-      "checksum": "4ae0c3dfcd3aa8eeb45e8f91ee6617a1"
+      "checksum": "0ad47e9cd732aedefaebe3b1f687154c"
     },
     "tests/testthat/mainTests/blanks_filters.csv": {
       "checksum": "6c23e80923b01906322026bea5226d40"
@@ -5530,37 +5530,37 @@
       "checksum": "1b34547d469fb22a2c364ecf244c1551"
     },
     "tests/testthat/test-function-countActiveTests.R": {
-      "checksum": "41a423a4bc68e5ba6c20a11f06092471"
+      "checksum": "7ef4bca91ae8b1291afc298085f27c92"
     },
     "tests/testthat/test-function-edge_cases.R": {
-      "checksum": "28cf3e12a9697be1b0210450f4874525"
+      "checksum": "a829d0c39430cea13c4d51159b274278"
     },
     "tests/testthat/test-function-fileValidation.R": {
-      "checksum": "302dd04b308471644c1a6574c3844c81"
+      "checksum": "edb4cadf2f0f4842a145ef5a4d6ae5d1"
     },
     "tests/testthat/test-function-geography_matrix.R": {
-      "checksum": "0ad4c6ef88604b628207156991a92349"
+      "checksum": "df5320f3e50db5391018f7ae8e7d7ea1"
     },
     "tests/testthat/test-function-mainTests.R": {
-      "checksum": "cb7ab3b4eef1a60ee214501f08ca2330"
+      "checksum": "b78e9a9c84f309de5a377b98d01d1730"
     },
     "tests/testthat/test-function-preCheck1.R": {
-      "checksum": "ecc3826341427734e1a8f097c1e1e6f8"
+      "checksum": "2d883c63f6022c34f77c2de583379fb0"
     },
     "tests/testthat/test-function-preCheck2.R": {
-      "checksum": "23ab8e9946705de7d7649ea5ec59134e"
+      "checksum": "868ceed8576dc7b539b7ffd232ee693b"
     },
     "tests/testthat/test-function-readFile.r": {
-      "checksum": "7475e572db815ee6eed8ba435c1c0e72"
+      "checksum": "83f4429c7cfa3da8465c6a29ffcbfcc4"
     },
     "tests/testthat/test-UI-01_example_files.R": {
-      "checksum": "0cf8d0b31b2fc9ca807dd642b19e8017"
+      "checksum": "5ea3904cd7718bbcc5cf1000c5f9a295"
     },
     "tests/testthat/test-UI-02_edge_cases.R": {
-      "checksum": "e1c273ef462a5f49a60df1e3a5e94fb6"
+      "checksum": "84ba4b57f9e486df5708da44f5f8c1ac"
     },
     "tests/testthat/test-UI-03_additional_qa.R": {
-      "checksum": "38106a628d936701b3620406f270b5e3"
+      "checksum": "9a7c8950c9e1837670cacc0efde2c982"
     },
     "ui.R": {
       "checksum": "b52ab48ee255cc88624a034db31296c6"
