@@ -1,4 +1,20 @@
-col_name,col_type,filter_item,col_name_parent,filter_item_parent,cbds_code,item_error_flag,contexts
+﻿col_name,col_type,filter_item,col_name_parent,filter_item_parent,cbds_code,item_error_flag,contexts
+age,Filter,16,,,,api-only,Personal characteristics
+age,Filter,17,,,,api-only,Personal characteristics
+age,Filter,18,,,,api-only,Personal characteristics
+age,Filter,19,,,,api-only,Personal characteristics
+age,Filter,20,,,,api-only,Personal characteristics
+age,Filter,21,,,,api-only,Personal characteristics
+age,Filter,22,,,,api-only,Personal characteristics
+age,Filter,23,,,,api-only,Personal characteristics
+age,Filter,24,,,,api-only,Personal characteristics
+age,Filter,16 to 17,,,,api-only,Personal characteristics
+age,Filter,16 to 18,,,,api-only,Personal characteristics
+age,Filter,16 to 21,,,,api-only,Personal characteristics
+age,Filter,16 to 24,,,,api-only,Personal characteristics
+age,Filter,18 to 21,,,,api-only,Personal characteristics
+age,Filter,18 to 24,,,,api-only,Personal characteristics
+age,Filter,19 to 24,,,,api-only,Personal characteristics
 age_group,Filter,19 to 24,age_youth_adult,19 plus,,api-only,Personal characteristics
 age_group,Filter,25 plus,age_youth_adult,19 plus,,api-only,Personal characteristics
 age_group,Filter,Total,age_youth_adult,19 plus,,api-only,Personal characteristics
@@ -78,6 +94,11 @@ attendance_type,Filter,Overall absence,attendance_status,Absence,,,Pupil attenda
 attendance_type,Filter,Overall attendance,attendance_status,Attendance,,,Pupil attendance
 attendance_type,Filter,Present,attendance_status,Attendance,,,Pupil attendance
 attendance_type,Filter,Unauthorised,attendance_status,Absence,,,Pupil attendance
+breakdown,Filter,12 to 26 weeks,breakdown_topic,Duration,,api-only,Children missing education
+breakdown,Filter,2 to 4 weeks,breakdown_topic,Duration,,api-only,Children missing education
+breakdown,Filter,26 to 52 weeks,breakdown_topic,Duration,,api-only,Children missing education
+breakdown,Filter,4 to 8 weeks,breakdown_topic,Duration,,api-only,Children missing education
+breakdown,Filter,8 to 12 weeks,breakdown_topic,Duration,,api-only,Children missing education
 breakdown,Filter,African,breakdown_topic,Ethnicity minor,,api-only,Personal characteristics
 breakdown,Filter,All Asian / Asian British,breakdown_topic,Ethnicity minor,,api-only,Personal characteristics - Ethnicity
 breakdown,Filter,All Black / African / Caribbean / Black British,breakdown_topic,Ethnicity minor,,api-only,Personal characteristics - Ethnicity
@@ -94,10 +115,16 @@ breakdown,Filter,Asian / Asian British,breakdown_topic,Ethnicity major,,api-only
 breakdown,Filter,Autistic spectrum disorder,breakdown_topic,SEN primary need,ASD,api-only,Special educational needs
 breakdown,Filter,Autumn-born,breakdown_topic,Term of birth,,api-only,Personal characteristics
 breakdown,Filter,Bangladeshi,breakdown_topic,Ethnicity minor,,api-only,Personal characteristics
+breakdown,Filter,Believed to have moved to another country,breakdown_topic,Reason,,api-only,Children missing education
+breakdown,Filter,Believed to have moved to another local authority,breakdown_topic,Reason,,api-only,Children missing education
 breakdown,Filter,Black / African / Caribbean / Black British,breakdown_topic,Ethnicity major,,api-only,Personal characteristics
 breakdown,Filter,Boys,breakdown_topic,Sex,,api-only,Personal characteristics
 breakdown,Filter,Caribbean,breakdown_topic,Ethnicity minor,,api-only,Personal characteristics
+breakdown,Filter,Challenging school attendance order,breakdown_topic,Reason,,api-only,Children missing education
 breakdown,Filter,Chinese,breakdown_topic,Ethnicity minor,,api-only,Personal characteristics
+breakdown,Filter,Did not apply for school place at compulsory school age,breakdown_topic,Reason,,api-only,Children missing education
+breakdown,Filter,Did not get school preference,breakdown_topic,Reason,,api-only,Children missing education
+breakdown,Filter,Difficulty accessing suitable school place,breakdown_topic,Reason,,api-only,Children missing education
 breakdown,Filter,Disadvantaged,breakdown_topic,Disadvantage status,,api-only,Personal characteristics
 breakdown,Filter,Down syndrome,breakdown_topic,SEN primary need,,api-only,Special educational needs
 breakdown,Filter,"Education, health and care plan",breakdown_topic,SEN provision,,api-only,Personal characteristics
@@ -116,23 +143,37 @@ breakdown,Filter,Irish,breakdown_topic,Ethnicity minor,,api-only,Personal charac
 breakdown,Filter,Irish Traveller,breakdown_topic,Ethnicity minor,,api-only,Personal characteristics
 breakdown,Filter,Known or believed to be English,breakdown_topic,First language,,api-only,Personal characteristics
 breakdown,Filter,Known or believed to be other than English,breakdown_topic,First language,,api-only,Personal characteristics
+breakdown,Filter,Less than 2 weeks,breakdown_topic,Duration,,api-only,Children missing education
 breakdown,Filter,Low attainment at key stage 2,breakdown_topic,Prior attainment,,api-only,Attainment
 breakdown,Filter,Male,breakdown_topic,Sex,,api-only,Personal characteristics
+breakdown,Filter,Mental health,breakdown_topic,Reason,,api-only,Children missing education
 breakdown,Filter,Mid attainment at key stage 2,breakdown_topic,Prior attainment,,api-only,Attainment
 breakdown,Filter,Mixed / Multiple ethnic groups,breakdown_topic,Ethnicity major,,api-only,Personal characteristics
 breakdown,Filter,Moderate learning difficulty,breakdown_topic,SEN primary need,MLD,api-only,Special educational needs
+breakdown,Filter,Moved in from another country,breakdown_topic,Reason,,api-only,Children missing education
+breakdown,Filter,Moved in from another local authority,breakdown_topic,Reason,,api-only,Children missing education
 breakdown,Filter,Multi-sensory impairment,breakdown_topic,SEN primary need,,api-only,Personal characteristics
 breakdown,Filter,No primary need,breakdown_topic,SEN primary need,,api-only,Special educational needs
 breakdown,Filter,No SEN provision,breakdown_topic,SEN provision,,api-only,Personal characteristics
 breakdown,Filter,Not eligible for free school meals,breakdown_topic,Free school meal eligibility,,api-only,Personal characteristics
 breakdown,Filter,Not known to be disadvantaged,breakdown_topic,Disadvantage status,,api-only,Personal characteristics
 breakdown,Filter,Not known to be FSM eligible,breakdown_topic,FSM status,,api-only,Personal characteristics
+breakdown,Filter,Not recorded,breakdown_topic,Reason,,api-only,Children missing education
+breakdown,Filter,Offered school place but not yet accepted,breakdown_topic,Reason,,api-only,Children missing education
+breakdown,Filter,Other,breakdown_topic,Reason,,api-only,Children missing education
 breakdown,Filter,Other difficulty or disability,breakdown_topic,SEN primary need,OTH,api-only,Special educational needs
 breakdown,Filter,Other ethnic group,breakdown_topic,Ethnicity major,,api-only,Personal characteristics
 breakdown,Filter,Other than English,breakdown_topic,First language,,api-only,Personal characteristics
+breakdown,Filter,Over 52 weeks,breakdown_topic,Duration,,api-only,Children missing education
 breakdown,Filter,Pakistani,breakdown_topic,Ethnicity minor,,api-only,Personal characteristics
+breakdown,Filter,Parental decision not to register at school,breakdown_topic,Reason,,api-only,Children missing education
 breakdown,Filter,Physical disability,breakdown_topic,SEN primary need,,api-only,Special educational needs
+breakdown,Filter,Physical health,breakdown_topic,Reason,,api-only,Children missing education
 breakdown,Filter,Profound and multiple learning difficulty,breakdown_topic,SEN primary need,PMLD,api-only,Special educational needs
+breakdown,Filter,Reception,breakdown_topic,Year group,,api-only,Personal characteristics
+breakdown,Filter,School application awaiting outcome,breakdown_topic,Reason,,api-only,Children missing education
+breakdown,Filter,School dissatisfaction general,breakdown_topic,Reason,,api-only,Children missing education
+breakdown,Filter,School dissatisfaction SEND,breakdown_topic,Reason,,api-only,Children missing education
 breakdown,Filter,SEN support / SEN without an EHC plan,breakdown_topic,SEN provision,,api-only,Special educational needs
 breakdown,Filter,SEN support but no specialist assessment of type of need,breakdown_topic,SEN primary need,,api-only,Special educational needs
 breakdown,Filter,Severe learning difficulty,breakdown_topic,SEN primary need,SLD,api-only,Special educational needs
@@ -143,16 +184,26 @@ breakdown,Filter,Spring-born,breakdown_topic,Term of birth,,api-only,Personal ch
 breakdown,Filter,Summer-born,breakdown_topic,Term of birth,,api-only,Personal characteristics
 breakdown,Filter,Total,breakdown_topic,Prior attainment,,api-only,Attainment
 breakdown,Filter,Total,breakdown_topic,Total,,api-only,Personal characteristics
+breakdown,Filter,Unknown,breakdown_topic,Duration,,api-only,Children missing education
 breakdown,Filter,Unknown,breakdown_topic,Ethnicity major,,api-only,Personal characteristics
 breakdown,Filter,Unknown,breakdown_topic,Ethnicity minor,,api-only,Personal characteristics
 breakdown,Filter,Unknown,breakdown_topic,First language,,api-only,Personal characteristics
 breakdown,Filter,Unknown,breakdown_topic,Free school meal eligibility,,api-only,Personal characteristics
+breakdown,Filter,Unknown,breakdown_topic,Reason,,api-only,Children missing education
 breakdown,Filter,Unknown,breakdown_topic,SEN primary need,,api-only,Special educational needs
 breakdown,Filter,Unknown,breakdown_topic,SEN provision,,api-only,Personal characteristics
-breakdown,Filter,Vision impairment,breakdown_topic,SEN primary need,VI,api-only,Special educational needs
 breakdown,Filter,Unknown,breakdown_topic,Sex,,api-only,Personal characteristics
-breakdown,Filter,Reception,breakdown_topic,Year group,,api-only,Personal characteristics
+breakdown,Filter,Unknown,breakdown_topic,Year group,,api-only,Personal characteristics
+breakdown,Filter,Unsuitable elective home education,breakdown_topic,Reason,,api-only,Children missing education
+breakdown,Filter,Vision impairment,breakdown_topic,SEN primary need,VI,api-only,Special educational needs
+breakdown,Filter,Waiting school start,breakdown_topic,Reason,,api-only,Children missing education
+breakdown,Filter,White,breakdown_topic,Ethnicity major,,api-only,Personal characteristics
+breakdown,Filter,White and Asian,breakdown_topic,Ethnicity minor,,api-only,Personal characteristics
+breakdown,Filter,White and Black African,breakdown_topic,Ethnicity minor,,api-only,Personal characteristics
+breakdown,Filter,White and Black Caribbean,breakdown_topic,Ethnicity minor,,api-only,Personal characteristics
 breakdown,Filter,Year 1,breakdown_topic,Year group,,api-only,Personal characteristics
+breakdown,Filter,Year 10,breakdown_topic,Year group,,api-only,Personal characteristics
+breakdown,Filter,Year 11,breakdown_topic,Year group,,api-only,Personal characteristics
 breakdown,Filter,Year 2,breakdown_topic,Year group,,api-only,Personal characteristics
 breakdown,Filter,Year 3,breakdown_topic,Year group,,api-only,Personal characteristics
 breakdown,Filter,Year 4,breakdown_topic,Year group,,api-only,Personal characteristics
@@ -161,52 +212,17 @@ breakdown,Filter,Year 6,breakdown_topic,Year group,,api-only,Personal characteri
 breakdown,Filter,Year 7,breakdown_topic,Year group,,api-only,Personal characteristics
 breakdown,Filter,Year 8,breakdown_topic,Year group,,api-only,Personal characteristics
 breakdown,Filter,Year 9,breakdown_topic,Year group,,api-only,Personal characteristics
-breakdown,Filter,Year 10,breakdown_topic,Year group,,api-only,Personal characteristics
-breakdown,Filter,Year 11,breakdown_topic,Year group,,api-only,Personal characteristics
-breakdown,Filter,Unknown,breakdown_topic,Year group,,api-only,Personal characteristics
-breakdown,Filter,Less than 2 weeks,breakdown_topic,Duration,,api-only,Children missing education
-breakdown,Filter,2 to 4 weeks,breakdown_topic,Duration,,api-only,Children missing education
-breakdown,Filter,4 to 8 weeks,breakdown_topic,Duration,,api-only,Children missing education
-breakdown,Filter,8 to 12 weeks,breakdown_topic,Duration,,api-only,Children missing education
-breakdown,Filter,12 to 26 weeks,breakdown_topic,Duration,,api-only,Children missing education
-breakdown,Filter,26 to 52 weeks,breakdown_topic,Duration,,api-only,Children missing education
-breakdown,Filter,Over 52 weeks,breakdown_topic,Duration,,api-only,Children missing education
-breakdown,Filter,Unknown,breakdown_topic,Duration,,api-only,Children missing education
-breakdown,Filter,Moved in from another local authority,breakdown_topic,Reason,,api-only,Children missing education
-breakdown,Filter,Moved in from another country,breakdown_topic,Reason,,api-only,Children missing education
-breakdown,Filter,School application awaiting outcome,breakdown_topic,Reason,,api-only,Children missing education
-breakdown,Filter,Offered school place but not yet accepted,breakdown_topic,Reason,,api-only,Children missing education
-breakdown,Filter,Waiting school start,breakdown_topic,Reason,,api-only,Children missing education
-breakdown,Filter,Did not get school preference,breakdown_topic,Reason,,api-only,Children missing education
-breakdown,Filter,Unsuitable elective home education,breakdown_topic,Reason,,api-only,Children missing education
-breakdown,Filter,Difficulty accessing suitable school place,breakdown_topic,Reason,,api-only,Children missing education
-breakdown,Filter,School dissatisfaction general,breakdown_topic,Reason,,api-only,Children missing education
-breakdown,Filter,School dissatisfaction SEND,breakdown_topic,Reason,,api-only,Children missing education
-breakdown,Filter,Mental health,breakdown_topic,Reason,,api-only,Children missing education
-breakdown,Filter,Physical health,breakdown_topic,Reason,,api-only,Children missing education
-breakdown,Filter,Parental decision not to register at school,breakdown_topic,Reason,,api-only,Children missing education
-breakdown,Filter,Did not apply for school place at compulsory school age,breakdown_topic,Reason,,api-only,Children missing education
-breakdown,Filter,Challenging school attendance order,breakdown_topic,Reason,,api-only,Children missing education
-breakdown,Filter,Believed to have moved to another local authority,breakdown_topic,Reason,,api-only,Children missing education
-breakdown,Filter,Believed to have moved to another country,breakdown_topic,Reason,,api-only,Children missing education
-breakdown,Filter,Unknown,breakdown_topic,Reason,,api-only,Children missing education
-breakdown,Filter,Not recorded,breakdown_topic,Reason,,api-only,Children missing education
-breakdown,Filter,Other,breakdown_topic,Reason,,api-only,Children missing education
-breakdown,Filter,White,breakdown_topic,Ethnicity major,,api-only,Personal characteristics
-breakdown,Filter,White and Asian,breakdown_topic,Ethnicity minor,,api-only,Personal characteristics
-breakdown,Filter,White and Black African,breakdown_topic,Ethnicity minor,,api-only,Personal characteristics
-breakdown,Filter,White and Black Caribbean,breakdown_topic,Ethnicity minor,,api-only,Personal characteristics
 cla_group,Filter,Children ceasing to be looked after during the year,,,,api-only,Children Looked After
 cla_group,Filter,Children looked after on 31 March,,,,api-only,Children Looked After
 cla_group,Filter,Children looked after on 31 March excluding unaccompanied asylum-seeking children,,,,api-only,Children Looked After
 cla_group,Filter,Children looked after on 31 March who were unaccompanied asylum-seeking children,,,,api-only,Children Looked After
 cla_group,Filter,Children looked after who were adopted during the year,,,,api-only,Children Looked After
 cla_group,Filter,Children starting to be looked after during the year,,,,api-only,Children Looked After
-disability_status,Filter,Disability,,,,,
-disability_status,Filter,No disability,,,,,
-disability_status,Filter,No known disability,,,,,
-disability_status,Filter,Not disclosed,,,,,
-disability_status,Filter,Total,,,,,
+disability_status,Filter,Disability,,,,api-only,Personal characteristics
+disability_status,Filter,No disability,,,,api-only,Personal characteristics
+disability_status,Filter,No known disability,,,,api-only,Personal characteristics
+disability_status,Filter,Not disclosed,,,,api-only,Personal characteristics
+disability_status,Filter,Total,,,,api-only,Personal characteristics
 disadvantage_status,Filter,Disadvantaged,,,,api-only,Personal characteristics
 disadvantage_status,Filter,Not known to be disadvantaged,,,,api-only,Personal characteristics
 disadvantage_status,Filter,Total,,,,api-only,Personal characteristics
@@ -230,7 +246,7 @@ early_learning_goal,Filter,Word reading,,,,api-only,Early years foundation stage
 early_learning_goal,Filter,Writing,,,,api-only,Early years foundation stage profile results
 early_learning_goal_measure,Filter,All early learning goals,,,,api-only,Early years foundation stage profile results
 early_learning_goal_measure,Filter,All ELGs contributing to GLD,,,,api-only,Early years foundation stage profile results
-education_phase,Filter,All schools,,,,,Pupil attendance
+education_phase,Filter,All schools,,,,api-only,Pupil attendance
 education_phase,Filter,All-through,,,AT,api-only,Establishment characteristics
 education_phase,Filter,Alternative provision,,,PR,api-only,Establishment characteristics
 education_phase,Filter,Early years settings,,,,api-only,Establishment characteristics
@@ -640,6 +656,17 @@ grade,Filter,X,qualification_detailed,GCSE (9-1) Full Course (Double Award),,api
 grade,Filter,X,qualification_detailed,Level 1 / Level 2 vocational qualification (any AO and grade structure),,api-only,Attainment
 grade,Filter,X,qualification_detailed,OCR Level 1 / 2 Cambridge National Certificate,,api-only,Attainment
 grade,Filter,X,qualification_detailed,VRQ Level 2,,api-only,Attainment
+health_condition,Filter,Any health condition,health_condition_grouping,B - Headlines,,api-only,NEET
+health_condition,Filter,Blood or circulatory problems or stomach / liver / kidney / digestive problems or diabetes,health_condition_grouping,D - All health conditions,,api-only,NEET
+health_condition,Filter,"Depression, mental problems and nervous disorders",health_condition_grouping,D - All health conditions,,api-only,NEET
+health_condition,Filter,Difficulty in seeing or hearing,health_condition_grouping,D - All health conditions,,api-only,NEET
+health_condition,Filter,"Learning difficulties, Autism",health_condition_grouping,D - All health conditions,,api-only,NEET
+health_condition,Filter,Mental health condition,health_condition_grouping,C - Type of health condition - mental or other,,api-only,NEET
+health_condition,Filter,No health condition,health_condition_grouping,B - Headlines,,api-only,NEET
+health_condition,Filter,Non-mental health condition,health_condition_grouping,C - Type of health condition - mental or other,,api-only,NEET
+health_condition,Filter,Problems or disabilities connected with arms / legs / hands / feet / back or neck,health_condition_grouping,D - All health conditions,,api-only,NEET
+health_condition,Filter,"Skin conditions, epilepsy, other progressive illnesses and other health problems",health_condition_grouping,D - All health conditions,,api-only,NEET
+health_condition,Filter,Total,health_condition_grouping,A - Total,,api-only,NEET
 idaci_decile,Filter,0 - 10%,,,,api-only,Personal characteristics
 idaci_decile,Filter,10 - 20%,,,,api-only,Personal characteristics
 idaci_decile,Filter,20 - 30%,,,,api-only,Personal characteristics
@@ -668,10 +695,10 @@ ks2_scaled_score_group,Filter,All mid prior attainment,,,,api-only,Attainment
 ks2_scaled_score_group,Filter,Less than 80,,,,api-only,Attainment
 ks2_scaled_score_group,Filter,No scaled score,,,,api-only,Attainment
 ks2_scaled_score_group,Filter,Total,,,,api-only,Attainment
-learning_difficulty_disability,Filter,No learning difficulty / disability,,,,,
-learning_difficulty_disability,Filter,Total,,,,,
-learning_difficulty_disability,Filter,Unknown,,,,,
-learning_difficulty_disability,Filter,With learning difficulty / disability,,,,,
+learning_difficulty_disability,Filter,No learning difficulty / disability,,,,api-only,Personal characteristics
+learning_difficulty_disability,Filter,Total,,,,api-only,Personal characteristics
+learning_difficulty_disability,Filter,Unknown,,,,api-only,Personal characteristics
+learning_difficulty_disability,Filter,With learning difficulty / disability,,,,api-only,Personal characteristics
 minority_ethnic,Filter,Ethnic minorities (excluding white minorities),,,,api-only,Personal characteristics
 mobility,Filter,Mobile,,,,api-only,Personal characteristics
 mobility,Filter,Non mobile,,,,api-only,Personal characteristics
@@ -715,7 +742,7 @@ mtc_score,Filter,22,,,,api-only,Attainment - Key stage 2
 mtc_score,Filter,23,,,,api-only,Attainment - Key stage 2
 mtc_score,Filter,24,,,,api-only,Attainment - Key stage 2
 mtc_score,Filter,25,,,,api-only,Attainment - Key stage 2
-mtc_score,Filter,Did not take check,,,,,
+mtc_score,Filter,Did not take check,,,,api-only,Attainment - Key stage 2
 phase_type_grouping,Filter,All schools,,,,api-only,Establishment characteristics
 phase_type_grouping,Filter,State-funded primary,,,,api-only,Establishment characteristics
 phase_type_grouping,Filter,State-funded primary and secondary,,,,api-only,Establishment characteristics
@@ -752,6 +779,10 @@ qualification_type,Filter,Grade 6 Performing Arts Graded Examination,,,,api-only
 qualification_type,Filter,Grade 7 Performing Arts Graded Examination,,,,api-only,Attainment
 qualification_type,Filter,Grade 8 Performing Arts Graded Examination,,,,api-only,Attainment
 qualification_type,Filter,Vocational,,,,api-only,Attainment
+quarter,Filter,Q1,,,,api-only,Additional time info
+quarter,Filter,Q2,,,,api-only,Additional time info
+quarter,Filter,Q3,,,,api-only,Additional time info
+quarter,Filter,Q4,,,,api-only,Additional time info
 relative_access,Filter,All larger rural settlements,rurality,Larger rural settlement,,api-only,Personal characteristics
 relative_access,Filter,All smaller rural settlements,rurality,Smaller rural settlement,,api-only,Personal characteristics
 relative_access,Filter,All unknown,rurality,Unknown,,api-only,Personal characteristics
@@ -841,6 +872,21 @@ sen_secondary_need,Filter,Vision impairment,,,VI,api-only,Special educational ne
 sen_status,Filter,Any special educational need,,,,api-only,Special educational needs
 sen_status,Filter,No identified special educational need,,,,api-only,Special educational needs
 sen_status,Filter,Total,,,,api-only,Special educational needs
+setting_prior_to_ehe,Filter,Academy,ehe_status,Started EHE during the year,,api-only,Elective Home Education
+setting_prior_to_ehe,Filter,Alternative provision,ehe_status,Started EHE during the year,,api-only,Elective Home Education
+setting_prior_to_ehe,Filter,Early years setting,ehe_status,Started EHE during the year,,api-only,Elective Home Education
+setting_prior_to_ehe,Filter,Elsewhere/Unknown,ehe_status,Started EHE during the year,,api-only,Elective Home Education
+setting_prior_to_ehe,Filter,Free school,ehe_status,Started EHE during the year,,api-only,Elective Home Education
+setting_prior_to_ehe,Filter,Home educated outside the local authority,ehe_status,Started EHE during the year,,api-only,Elective Home Education
+setting_prior_to_ehe,Filter,Independent,ehe_status,Started EHE during the year,,api-only,Elective Home Education
+setting_prior_to_ehe,Filter,Local authority maintained,ehe_status,Started EHE during the year,,api-only,Elective Home Education
+setting_prior_to_ehe,Filter,No prior establishment,ehe_status,Started EHE during the year,,api-only,Elective Home Education
+setting_prior_to_ehe,Filter,Pupil referral unit,ehe_status,Started EHE during the year,,api-only,Elective Home Education
+setting_prior_to_ehe,Filter,Special,ehe_status,Started EHE during the year,,api-only,Elective Home Education
+setting_prior_to_ehe,Filter,Total,ehe_status,In EHE at any point during the year,,api-only,Elective Home Education
+setting_prior_to_ehe,Filter,Total,ehe_status,Left the local authority in EHE during the year,,api-only,Elective Home Education
+setting_prior_to_ehe,Filter,Total,ehe_status,Returned to EHE during the year,,api-only,Elective Home Education
+setting_prior_to_ehe,Filter,Total,ehe_status,Started EHE during the year,,api-only,Elective Home Education
 sex,Filter,Boys,,,,api-only,Personal characteristics
 sex,Filter,Female,,,,api-only,Personal characteristics
 sex,Filter,Girls,,,,api-only,Personal characteristics
@@ -1009,13 +1055,16 @@ term_of_birth,Filter,Total,,,,api-only,Personal characteristics
 test_year,Filter,Final year,,,,api-only,Attainment
 test_year,Filter,Penultimate year,,,,api-only,Attainment
 test_year,Filter,Total,,,,api-only,Attainment
-time_frame,Filter,Friday,,,,,Pupil attendance
-time_frame,Filter,Monday,,,,,Pupil attendance
-time_frame,Filter,Thursday,,,,,Pupil attendance
-time_frame,Filter,Tuesday,,,,,Pupil attendance
-time_frame,Filter,Wednesday,,,,,Pupil attendance
-time_frame,Filter,Week,,,,,Pupil attendance
-time_frame,Filter,Year to date,,,,,Pupil attendance
+time_frame,Filter,Friday,,,,api-only,Pupil attendance
+time_frame,Filter,Monday,,,,api-only,Pupil attendance
+time_frame,Filter,Thursday,,,,api-only,Pupil attendance
+time_frame,Filter,Tuesday,,,,api-only,Pupil attendance
+time_frame,Filter,Wednesday,,,,api-only,Pupil attendance
+time_frame,Filter,Week,,,,api-only,Pupil attendance
+time_frame,Filter,Year to date,,,,api-only,Pupil attendance
+total_neet_net,Filter,NEET,,,,api-only,NEET
+total_neet_net,Filter,NET,,,,api-only,NEET
+total_neet_net,Filter,Total,,,,api-only,NEET
 years_open,Filter,1 year,,,,api-only,Establishment characteristics
 years_open,Filter,10 years,,,,api-only,Establishment characteristics
 years_open,Filter,11 years,,,,api-only,Establishment characteristics
@@ -1043,21 +1092,6 @@ years_open,Filter,Total,,,,api-only,Establishment characteristics
 young_carer,Filter,Not known to be a young carer,,,,api-only,Personal characteristics
 young_carer,Filter,Total,,,,api-only,Personal characteristics
 young_carer,Filter,Young carer,,,,api-only,Personal characteristics
-setting_prior_to_ehe,Filter,Early years setting,ehe_status,Started EHE during the year,,api-only,Elective Home Education
-setting_prior_to_ehe,Filter,No prior establishment,ehe_status,Started EHE during the year,,api-only,Elective Home Education
-setting_prior_to_ehe,Filter,Local authority maintained,ehe_status,Started EHE during the year,,api-only,Elective Home Education
-setting_prior_to_ehe,Filter,Academy,ehe_status,Started EHE during the year,,api-only,Elective Home Education
-setting_prior_to_ehe,Filter,Free school,ehe_status,Started EHE during the year,,api-only,Elective Home Education
-setting_prior_to_ehe,Filter,Independent,ehe_status,Started EHE during the year,,api-only,Elective Home Education
-setting_prior_to_ehe,Filter,Special,ehe_status,Started EHE during the year,,api-only,Elective Home Education
-setting_prior_to_ehe,Filter,Alternative provision,ehe_status,Started EHE during the year,,api-only,Elective Home Education
-setting_prior_to_ehe,Filter,Pupil referral unit,ehe_status,Started EHE during the year,,api-only,Elective Home Education
-setting_prior_to_ehe,Filter,Home educated outside the local authority,ehe_status,Started EHE during the year,,api-only,Elective Home Education
-setting_prior_to_ehe,Filter,Elsewhere/Unknown,ehe_status,Started EHE during the year,,api-only,Elective Home Education
-setting_prior_to_ehe,Filter,Total,ehe_status,Started EHE during the year,,api-only,Elective Home Education
-setting_prior_to_ehe,Filter,Total,ehe_status,Returned to EHE during the year,,api-only,Elective Home Education
-setting_prior_to_ehe,Filter,Total,ehe_status,Left the local authority in EHE during the year,,api-only,Elective Home Education
-setting_prior_to_ehe,Filter,Total,ehe_status,In EHE at any point during the year,,api-only,Elective Home Education
 absent_pupil_count,Indicator,,,,,api-only,Attainment - Key stage 2
 absent_pupil_percent,Indicator,,,,,api-only,Attainment - Key stage 2
 achievement_count,Indicator,,,,,api-only,Apprenticeships
@@ -1091,6 +1125,9 @@ attainment8open_sum,Indicator,,,,,api-only,Attainment - Key stage 4
 average_scaled_score,Indicator,,,,,api-only,Attainment - Key stage 2
 below_interim_pre_ks_std_pupil_count,Indicator,,,,,api-only,Attainment - Key stage 2
 below_interim_pre_ks_std_pupil_percent,Indicator,,,,,api-only,Attainment - Key stage 2
+child_count,Indicator,,,,,api-only,General
+child_percent,Indicator,,,,,api-only,General
+child_rate_per_100,Indicator,,,,,api-only,General
 children_count,Indicator,,,,,api-only,Children Looked After
 children_percent,Indicator,,,,,api-only,Early years foundation stage profile results
 children_percent_change,Indicator,,,,,api-only,Early years foundation stage profile results
@@ -1186,6 +1223,10 @@ elgs_expected_average,Indicator,,,,,api-only,Early years foundation stage profil
 eligible_pupil_count,Indicator,,,,,api-only,Attainment - Key stage 2
 emerging_children_count,Indicator,,,,,api-only,Early years foundation stage profile results
 emerging_children_percent,Indicator,,,,,api-only,Early years foundation stage profile results
+employment_rate_net_percent,Indicator,,,,,api-only,NEET
+employment_rate_net_percent_ci_plusminus,Indicator,,,,,api-only,NEET
+employment_rate_net_percent_lower,Indicator,,,,,api-only,NEET
+employment_rate_net_percent_upper,Indicator,,,,,api-only,NEET
 engagement_model_or_below_pre_ks_std_pupil_count,Indicator,,,,,api-only,Attainment - Key stage 2
 engagement_model_or_below_pre_ks_std_pupil_percent,Indicator,,,,,api-only,Attainment - Key stage 2
 engmath_94_percent,Indicator,,,,,api-only,Attainment - Key stage 4
@@ -1221,6 +1262,70 @@ growing_dev_of_expected_std_pupil_count,Indicator,,,,,api-only,Attainment - Key 
 growing_dev_of_expected_std_pupil_percent,Indicator,,,,,api-only,Attainment - Key stage 2
 higher_standard_pupil_count,Indicator,,,,,api-only,Attainment - Key stage 2
 higher_standard_pupil_percent,Indicator,,,,,api-only,Attainment - Key stage 2
+ilo_unemployed_less_6months_count,Indicator,,,,,api-only,NEET
+ilo_unemployed_less_6months_count_ci_plusminus,Indicator,,,,,api-only,NEET
+ilo_unemployed_less_6months_count_lower,Indicator,,,,,api-only,NEET
+ilo_unemployed_less_6months_count_upper,Indicator,,,,,api-only,NEET
+ilo_unemployed_less_6months_percent,Indicator,,,,,api-only,NEET
+ilo_unemployed_less_6months_percent_ci_plusminus,Indicator,,,,,api-only,NEET
+ilo_unemployed_less_6months_percent_lower,Indicator,,,,,api-only,NEET
+ilo_unemployed_less_6months_percent_upper,Indicator,,,,,api-only,NEET
+ilo_unemployed_more_12months_count,Indicator,,,,,api-only,NEET
+ilo_unemployed_more_12months_count_ci_plusminus,Indicator,,,,,api-only,NEET
+ilo_unemployed_more_12months_count_lower,Indicator,,,,,api-only,NEET
+ilo_unemployed_more_12months_count_upper,Indicator,,,,,api-only,NEET
+ilo_unemployed_more_12months_percent,Indicator,,,,,api-only,NEET
+ilo_unemployed_more_12months_percent_ci_plusminus,Indicator,,,,,api-only,NEET
+ilo_unemployed_more_12months_percent_lower,Indicator,,,,,api-only,NEET
+ilo_unemployed_more_12months_percent_upper,Indicator,,,,,api-only,NEET
+ilo_unemployed_more_6months_count,Indicator,,,,,api-only,NEET
+ilo_unemployed_more_6months_count_ci_plusminus,Indicator,,,,,api-only,NEET
+ilo_unemployed_more_6months_count_lower,Indicator,,,,,api-only,NEET
+ilo_unemployed_more_6months_count_upper,Indicator,,,,,api-only,NEET
+ilo_unemployed_more_6months_percent,Indicator,,,,,api-only,NEET
+ilo_unemployed_more_6months_percent_ci_plusminus,Indicator,,,,,api-only,NEET
+ilo_unemployed_more_6months_percent_lower,Indicator,,,,,api-only,NEET
+ilo_unemployed_more_6months_percent_upper,Indicator,,,,,api-only,NEET
+inactive_does_not_want_a_job_count,Indicator,,,,,api-only,NEET
+inactive_does_not_want_a_job_count_ci_plusminus,Indicator,,,,,api-only,NEET
+inactive_does_not_want_a_job_count_lower,Indicator,,,,,api-only,NEET
+inactive_does_not_want_a_job_count_upper,Indicator,,,,,api-only,NEET
+inactive_does_not_want_a_job_percent,Indicator,,,,,api-only,NEET
+inactive_does_not_want_a_job_percent_ci_plusminus,Indicator,,,,,api-only,NEET
+inactive_does_not_want_a_job_percent_lower,Indicator,,,,,api-only,NEET
+inactive_does_not_want_a_job_percent_upper,Indicator,,,,,api-only,NEET
+inactive_longterm_temp_sick_count,Indicator,,,,,api-only,NEET
+inactive_longterm_temp_sick_count_ci_plusminus,Indicator,,,,,api-only,NEET
+inactive_longterm_temp_sick_count_lower,Indicator,,,,,api-only,NEET
+inactive_longterm_temp_sick_count_upper,Indicator,,,,,api-only,NEET
+inactive_longterm_temp_sick_percent,Indicator,,,,,api-only,NEET
+inactive_longterm_temp_sick_percent_ci_plusminus,Indicator,,,,,api-only,NEET
+inactive_longterm_temp_sick_percent_lower,Indicator,,,,,api-only,NEET
+inactive_longterm_temp_sick_percent_upper,Indicator,,,,,api-only,NEET
+inactive_look_after_fam_home_count,Indicator,,,,,api-only,NEET
+inactive_look_after_fam_home_count_ci_plusminus,Indicator,,,,,api-only,NEET
+inactive_look_after_fam_home_count_lower,Indicator,,,,,api-only,NEET
+inactive_look_after_fam_home_count_upper,Indicator,,,,,api-only,NEET
+inactive_look_after_fam_home_percent,Indicator,,,,,api-only,NEET
+inactive_look_after_fam_home_percent_ci_plusminus,Indicator,,,,,api-only,NEET
+inactive_look_after_fam_home_percent_lower,Indicator,,,,,api-only,NEET
+inactive_look_after_fam_home_percent_upper,Indicator,,,,,api-only,NEET
+inactive_other_count,Indicator,,,,,api-only,NEET
+inactive_other_count_ci_plusminus,Indicator,,,,,api-only,NEET
+inactive_other_count_lower,Indicator,,,,,api-only,NEET
+inactive_other_count_upper,Indicator,,,,,api-only,NEET
+inactive_other_percent,Indicator,,,,,api-only,NEET
+inactive_other_percent_ci_plusminus,Indicator,,,,,api-only,NEET
+inactive_other_percent_lower,Indicator,,,,,api-only,NEET
+inactive_other_percent_upper,Indicator,,,,,api-only,NEET
+inactive_wants_a_job_count,Indicator,,,,,api-only,NEET
+inactive_wants_a_job_count_ci_plusminus,Indicator,,,,,api-only,NEET
+inactive_wants_a_job_count_lower,Indicator,,,,,api-only,NEET
+inactive_wants_a_job_count_upper,Indicator,,,,,api-only,NEET
+inactive_wants_a_job_lower,Indicator,,,,,api-only,NEET
+inactive_wants_a_job_percent,Indicator,,,,,api-only,NEET
+inactive_wants_a_job_percent_ci_plusminus,Indicator,,,,,api-only,NEET
+inactive_wants_a_job_upper,Indicator,,,,,api-only,NEET
 just_arrived_pupil_count,Indicator,,,,,api-only,Attainment - Key stage 2
 just_arrived_pupil_percent,Indicator,,,,,api-only,Attainment - Key stage 2
 lan_multiple_entering_percent,Indicator,,,,,api-only,Attainment - Key stage 4
@@ -1285,6 +1390,30 @@ mtc_score_average,Indicator,,,,,api-only,Attainment - Key stage 2
 mtc_score_total,Indicator,,,,,api-only,Attainment - Key stage 2
 music_qual_entering_percent,Indicator,,,,,api-only,Attainment - Key stage 4
 music_qual_entering_total,Indicator,,,,,api-only,Attainment - Key stage 4
+neet_count,Indicator,,,,,api-only,NEET
+neet_count_ci_plusminus,Indicator,,,,,api-only,NEET
+neet_count_lower,Indicator,,,,,api-only,NEET
+neet_count_upper,Indicator,,,,,api-only,NEET
+neet_percent,Indicator,,,,,api-only,NEET
+neet_percent_annual_change,Indicator,,,,,api-only,NEET
+neet_percent_annual_change_ci_plusminus,Indicator,,,,,api-only,NEET
+neet_percent_annual_change_lower,Indicator,,,,,api-only,NEET
+neet_percent_annual_change_upper,Indicator,,,,,api-only,NEET
+neet_percent_ci_plusminus,Indicator,,,,,api-only,NEET
+neet_percent_lower,Indicator,,,,,api-only,NEET
+neet_percent_upper,Indicator,,,,,api-only,NEET
+net_count,Indicator,,,,,api-only,NEET
+net_count_ci_plusminus,Indicator,,,,,api-only,NEET
+net_count_lower,Indicator,,,,,api-only,NEET
+net_count_upper,Indicator,,,,,api-only,NEET
+net_percent,Indicator,,,,,api-only,NEET
+net_percent_annual_change,Indicator,,,,,api-only,NEET
+net_percent_annual_change_ci_plusminus,Indicator,,,,,api-only,NEET
+net_percent_annual_change_lower,Indicator,,,,,api-only,NEET
+net_percent_annual_change_upper,Indicator,,,,,api-only,NEET
+net_percent_ci_plusminus,Indicator,,,,,api-only,NEET
+net_percent_lower,Indicator,,,,,api-only,NEET
+net_percent_upper,Indicator,,,,,api-only,NEET
 no_further_action_count,Indicator,,,,,api-only,Children in Need
 no_further_action_percent,Indicator,,,,,api-only,Children in Need
 not_completed_check_pupil_count,Indicator,,,,,api-only,Attainment - Key stage 2
@@ -1294,9 +1423,16 @@ not_in_need_percent,Indicator,,,,,api-only,Children in Need
 not_meeting_pupil_count,Indicator,,,,,api-only,Attainment - Key stage 2
 not_meeting_pupil_percent,Indicator,,,,,api-only,Attainment - Key stage 2
 participation_count,Indicator,,,,,api-only,Apprenticeships
+percent_of_neet,Indicator,,,,,api-only,NEET
 percentage,Indicator,,,,,api-only,Attainment - Key stage 4
 population_count,Indicator,,,,,api-only,General
+population_count_ci_plusminus,Indicator,,,,,api-only,NEET
+population_count_lower,Indicator,,,,,api-only,NEET
+population_count_upper,Indicator,,,,,api-only,NEET
 population_percent,Indicator,,,,,api-only,General
+population_percent_ci_plusminus,Indicator,,,,,api-only,NEET
+population_percent_lower,Indicator,,,,,api-only,NEET
+population_percent_upper,Indicator,,,,,api-only,NEET
 pre_ks_std_1_pupil_count,Indicator,,,,,api-only,Attainment - Key stage 2
 pre_ks_std_1_pupil_percent,Indicator,,,,,api-only,Attainment - Key stage 2
 pre_ks_std_2_pupil_count,Indicator,,,,,api-only,Attainment - Key stage 2
@@ -1350,13 +1486,16 @@ qual_entries_average,Indicator,,,,,api-only,Attainment - Key stage 4
 qual_entries_sum,Indicator,,,,,api-only,Attainment - Key stage 4
 qual_entries_without_discounting_average,Indicator,,,,,api-only,Attainment - Key stage 4
 qual_entries_without_discounting_sum,Indicator,,,,,api-only,Attainment - Key stage 4
-reference_date,Indicator,,,,,,Pupil attendance
+reference_date,Indicator,,,,,api-only,Pupil attendance
 referral_child_count,Indicator,,,,,api-only,Children in Need
 referral_count,Indicator,,,,,api-only,Children in Need
 rereferral_child_count,Indicator,,,,,api-only,Children in Need
 rereferral_child_percent,Indicator,,,,,api-only,Children in Need
 rereferral_count,Indicator,,,,,api-only,Children in Need
 rereferral_percent,Indicator,,,,,api-only,Children in Need
+sample_size_count,Indicator,,,,,api-only,NEET
+sao_order_issued_count,Indicator,,,,,api-only,Elective Home Education
+sao_order_revoked_count,Indicator,,,,,api-only,Elective Home Education
 scaled_scores_eligible_pupil_count,Indicator,,,,,api-only,Attainment - Key stage 2
 scaled_scores_total,Indicator,,,,,api-only,Attainment - Key stage 2
 school_all_count,Indicator,,,,,api-only,Pupil attendance
@@ -1365,8 +1504,9 @@ school_percent,Indicator,,,,,api-only,General
 school_submitted_count,Indicator,,,,,api-only,Pupil attendance
 sci_triple_entering_percent,Indicator,,,,,api-only,Attainment - Key stage 4
 sci_triple_entering_total,Indicator,,,,,api-only,Attainment - Key stage 4
-session_count,Indicator,,,,,,Pupil attendance
-session_percent,Indicator,,,,,,Pupil attendance
+section_437_notice_issued_count,Indicator,,,,,api-only,Elective Home Education
+session_count,Indicator,,,,,api-only,Pupil attendance
+session_percent,Indicator,,,,,api-only,Pupil attendance
 start_count,Indicator,,,,,api-only,Apprenticeships
 starts_percent,Indicator,,,,,api-only,Apprenticeships
 student_count,Indicator,,,,,api-only,General
@@ -1401,9 +1541,3 @@ working_below_pupil_count,Indicator,,,,,api-only,Attainment - Key stage 2
 working_below_pupil_percent,Indicator,,,,,api-only,Attainment - Key stage 2
 working_towards_pupil_count,Indicator,,,,,api-only,Attainment - Key stage 2
 working_towards_pupil_percent,Indicator,,,,,api-only,Attainment - Key stage 2
-child_count,Indicator,,,,,api-only,General
-child_percent,Indicator,,,,,api-only,General
-child_rate_per_100,Indicator,,,,,api-only,General
-section_437_notice_issued_count,Indicator,,,,,api-only,Elective Home Education
-sao_order_issued_count,Indicator,,,,,api-only,Elective Home Education
-sao_order_revoked_count,Indicator,,,,,api-only,Elective Home Education
