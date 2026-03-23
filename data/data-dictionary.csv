@@ -1,4 +1,7 @@
 ﻿col_name,col_type,filter_item,col_name_parent,filter_item_parent,cbds_code,item_error_flag,contexts
+absence_type,Filter,Persistent absence,,,,api-only,Pupil attendance
+absence_type,Filter,Severe absence,,,,api-only,Pupil attendance
+absence_type,Filter,Total pupils,,,,api-only,Pupil attendance
 age,Filter,16,,,,api-only,Personal characteristics
 age,Filter,17,,,,api-only,Personal characteristics
 age,Filter,18,,,,api-only,Personal characteristics
@@ -75,6 +78,9 @@ attendance_reason,Filter,Regulated performance (c1),attendance_type,Authorised,,
 attendance_reason,Filter,Religious observance (r),attendance_type,Authorised,,,Pupil attendance
 attendance_reason,Filter,Study leave (s),attendance_type,Authorised,,,Pupil attendance
 attendance_reason,Filter,Temporary reduced timetable (c2),attendance_type,Authorised,,,Pupil attendance
+attendance_reason,Filter,Total authorised reason sessions,attendance_type,Authorised,,,Pupil attendance
+attendance_reason,Filter,Total overall reason sessions,attendance_type,Overall absence,,,Pupil attendance
+attendance_reason,Filter,Total unauthorised reason sessions,attendance_type,Unauthorised,,,Pupil attendance
 attendance_reason,Filter,Transport not provided (y1),attendance_type,Management and legacy codes,,,Pupil attendance
 attendance_reason,Filter,Travel disruption (y2),attendance_type,Management and legacy codes,,,Pupil attendance
 attendance_reason,Filter,Unauthorised holiday (g),attendance_type,Unauthorised,,,Pupil attendance
@@ -744,6 +750,7 @@ mtc_score,Filter,24,,,,api-only,Attainment - Key stage 2
 mtc_score,Filter,25,,,,api-only,Attainment - Key stage 2
 mtc_score,Filter,Did not take check,,,,api-only,Attainment - Key stage 2
 phase_type_grouping,Filter,All schools,,,,api-only,Establishment characteristics
+phase_type_grouping,Filter,Special schools,,,,api-only,Establishment characteristics
 phase_type_grouping,Filter,State-funded primary,,,,api-only,Establishment characteristics
 phase_type_grouping,Filter,State-funded primary and secondary,,,,api-only,Establishment characteristics
 phase_type_grouping,Filter,State-funded secondary,,,,api-only,Establishment characteristics
@@ -1237,6 +1244,8 @@ engmath_entering_percent,Indicator,,,,,api-only,Attainment - Key stage 4
 engmath_entering_total,Indicator,,,,,api-only,Attainment - Key stage 4
 enrolment_count,Indicator,,,,,api-only,Apprenticeships
 enrolment_percent,Indicator,,,,,api-only,Apprenticeships
+enrolments_count,Indicator,,,,,api-only,Pupil attendance
+enrolments_percent,Indicator,,,,,api-only,Pupil attendance
 entries_count,Indicator,,,,,api-only,Attainment - Key stage 4
 establishment_count,Indicator,,,,,api-only,Attainment - Key stage 2
 expected_children_count,Indicator,,,,,api-only,Early years foundation stage profile results
