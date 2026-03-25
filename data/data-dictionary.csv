@@ -218,12 +218,12 @@ breakdown,Filter,Year 6,breakdown_topic,Year group,,api-only,Personal characteri
 breakdown,Filter,Year 7,breakdown_topic,Year group,,api-only,Personal characteristics
 breakdown,Filter,Year 8,breakdown_topic,Year group,,api-only,Personal characteristics
 breakdown,Filter,Year 9,breakdown_topic,Year group,,api-only,Personal characteristics
-cla_group,Filter,Children ceasing to be looked after during the year,,,,api-only,Children Looked After
-cla_group,Filter,Children looked after on 31 March,,,,api-only,Children Looked After
-cla_group,Filter,Children looked after on 31 March excluding unaccompanied asylum-seeking children,,,,api-only,Children Looked After
-cla_group,Filter,Children looked after on 31 March who were unaccompanied asylum-seeking children,,,,api-only,Children Looked After
-cla_group,Filter,Children looked after who were adopted during the year,,,,api-only,Children Looked After
-cla_group,Filter,Children starting to be looked after during the year,,,,api-only,Children Looked After
+cla_group,Filter,Children ceasing to be looked after during the year,,,,api-only,Children looked after
+cla_group,Filter,Children looked after on 31 March,,,,api-only,Children looked after
+cla_group,Filter,Children looked after on 31 March excluding unaccompanied asylum-seeking children,,,,api-only,Children looked after
+cla_group,Filter,Children looked after on 31 March who were unaccompanied asylum-seeking children,,,,api-only,Children looked after
+cla_group,Filter,Children looked after who were adopted during the year,,,,api-only,Children looked after
+cla_group,Filter,Children starting to be looked after during the year,,,,api-only,Children looked after
 disability_status,Filter,Disability,,,,api-only,Personal characteristics
 disability_status,Filter,No disability,,,,api-only,Personal characteristics
 disability_status,Filter,No known disability,,,,api-only,Personal characteristics
@@ -449,6 +449,7 @@ establishment_type_group,Filter,Total,,,,api-only,Establishment characteristics
 establishment_type_group,Filter,University technical college,,,,api-only,Establishment characteristics
 establishment_type_group,Filter,Voluntary aided school,,,,api-only,Establishment characteristics
 establishment_type_group,Filter,Voluntary controlled school,,,,api-only,Establishment characteristics
+ethnicity_major,Filter,All pupils,,,,api-only,Personal characteristics - Ethnicity
 ethnicity_major,Filter,Asian / Asian British,,,,any,Personal characteristics - Ethnicity
 ethnicity_major,Filter,Black / African / Caribbean / Black British,,,,any,Personal characteristics - Ethnicity
 ethnicity_major,Filter,Mixed / Multiple ethnic groups,,,,any,Personal characteristics - Ethnicity
@@ -749,11 +750,27 @@ mtc_score,Filter,23,,,,api-only,Attainment - Key stage 2
 mtc_score,Filter,24,,,,api-only,Attainment - Key stage 2
 mtc_score,Filter,25,,,,api-only,Attainment - Key stage 2
 mtc_score,Filter,Did not take check,,,,api-only,Attainment - Key stage 2
+period_of_care_length,Filter,All pupils,,,,api-only,Children looked after
+period_of_care_length,Filter,1. Less than 12 months (0-11 months looked after),,,,api-only,Children looked after
+period_of_care_length,Filter,2. 12 to 17 months inclusive (12-18 months looked after),,,,api-only,Children looked after
+period_of_care_length,Filter,3. 18 to 23 months inclusive (18 months - 2 years looked after),,,,api-only,Children looked after
+period_of_care_length,Filter,4. 24 to 35 months inclusive (2 years - 3 years looked after),,,,api-only,Children looked after
+period_of_care_length,Filter,5. 36 to 47 months inclusive (3 years - 4 years looked after),,,,api-only,Children looked after
+period_of_care_length,Filter,6. 48 to 59 months inclusive (4 years - 5 years looked after),,,,api-only,Children looked after
+period_of_care_length,Filter,7. 60 to 71 months inclusive (5 years - 6 years looked after),,,,api-only,Children looked after
+period_of_care_length,Filter,8. More than 71 months (6 years or more looked after),,,,api-only,Children looked after
 phase_type_grouping,Filter,All schools,,,,api-only,Establishment characteristics
 phase_type_grouping,Filter,Special schools,,,,api-only,Establishment characteristics
 phase_type_grouping,Filter,State-funded primary,,,,api-only,Establishment characteristics
 phase_type_grouping,Filter,State-funded primary and secondary,,,,api-only,Establishment characteristics
 phase_type_grouping,Filter,State-funded secondary,,,,api-only,Establishment characteristics
+placement,Filter,All pupils,,,,api-only,Children looked after
+placement,Filter,Foster placements,,,,api-only,Children looked after
+placement,Filter,Independent and semi-independent living arrangements / supported accommodation,,,,api-only,Children looked after
+placement,Filter,Other placements,,,,api-only,Children looked after
+placement,Filter,Placed for adoption,,,,api-only,Children looked after
+placement,Filter,Placed with parents or other person with parental responsibility,,,,api-only,Children looked after
+placement,Filter,Secure homes and children's homes,,,,api-only,Children looked after
 prior_attainment,Filter,High attainment at key stage 2,,,,api-only,Attainment
 prior_attainment,Filter,Low attainment at key stage 2,,,,api-only,Attainment
 prior_attainment,Filter,Mid attainment at key stage 2,,,,api-only,Attainment
@@ -845,6 +862,7 @@ sen_primary_need,Filter,"Speech, language and communication needs",,,SLCN,api-on
 sen_primary_need,Filter,Total,,,,api-only,Special educational needs
 sen_primary_need,Filter,Unknown,,,,api-only,Special educational needs
 sen_primary_need,Filter,Vision impairment,,,VI,api-only,Special educational needs
+sen_provision,Filter,All pupils,,,,api-only,Special educational needs
 sen_provision,Filter,All SEN provision,sen_status,Any special educational need,,api-only,Special educational needs
 sen_provision,Filter,All SEN provision,sen_status,Total,,api-only,Special educational needs
 sen_provision,Filter,All SEN provision,,,,api-only,Special educational needs
@@ -900,6 +918,22 @@ sex,Filter,Girls,,,,api-only,Personal characteristics
 sex,Filter,Male,,,,api-only,Personal characteristics
 sex,Filter,Other,,,,api-only,Personal characteristics
 sex,Filter,Total,,,,api-only,Personal characteristics
+social_care_group,Filter,All pupils comparison,,,,api-only,Children looked after
+social_care_group,Filter,CIN at 31 March,,,,api-only,Children looked after
+social_care_group,Filter,CIN at any point,,,,api-only,Children looked after
+social_care_group,Filter,CINO at 31 March,,,,api-only,Children looked after
+social_care_group,Filter,CINO at any point,,,,api-only,Children looked after
+social_care_group,Filter,CLA 12 months at 31 March,,,,api-only,Children looked after
+social_care_group,Filter,CLA at 31 March,,,,api-only,Children looked after
+social_care_group,Filter,CLA at any point,,,,api-only,Children looked after
+social_care_group,Filter,CLA less than 12 months at 31 March,,,,api-only,Children looked after
+social_care_group,Filter,CPPO at 31 March,,,,api-only,Children looked after
+social_care_group,Filter,CPPO at any point,,,,api-only,Children looked after
+social_care_group,Filter,Ever CIN - last 6 years,,,,api-only,Children looked after
+social_care_group,Filter,PLAA - Adoption (Official Statistics),,,,api-only,Children looked after
+social_care_group,Filter,PLAA - CAO (Official Statistics),,,,api-only,Children looked after
+social_care_group,Filter,PLAA - SGO (Official Statistics),,,,api-only,Children looked after
+social_care_group,Filter,PLAA - Total (Official Statistics),,,,api-only,Children looked after
 subject,Filter,All Subjects,,,,api-only,Attainment
 subject,Filter,Ancient History,,,,api-only,Attainment
 subject,Filter,Animal Care,,,,api-only,Attainment
@@ -1135,7 +1169,7 @@ below_interim_pre_ks_std_pupil_percent,Indicator,,,,,api-only,Attainment - Key s
 child_count,Indicator,,,,,api-only,General
 child_percent,Indicator,,,,,api-only,General
 child_rate_per_100,Indicator,,,,,api-only,General
-children_count,Indicator,,,,,api-only,Children Looked After
+children_count,Indicator,,,,,api-only,Children looked after
 children_percent,Indicator,,,,,api-only,Early years foundation stage profile results
 children_percent_change,Indicator,,,,,api-only,Early years foundation stage profile results
 comm_lang_lit_expected_children_count,Indicator,,,,,api-only,Early years foundation stage profile results
