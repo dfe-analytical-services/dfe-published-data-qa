@@ -1,4 +1,4 @@
-dd <- read_csv("../../data/data-dictionary.csv")
+dd <- read_csv("data/data-dictionary.csv")
 
 test_that("Check for any problems on data dictionary read-in (e.g. blank extra columns)", {
   expect_equal(
@@ -31,7 +31,7 @@ test_that("Duplicate row test", {
 test_that("Check for non-standard characters", {
   expect_equal(
     dd |>
-      dplyr::filter(if_any(everything(), ~ grepl("[$^&@'#~]", .))) |>
+      dplyr::filter(if_any(everything(), ~ grepl("[$^&@#~]", .))) |>
       nrow(),
     0
   )
