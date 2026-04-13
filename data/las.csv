@@ -140,10 +140,10 @@ E09000030,Tower Hamlets,01/01/2009,,E12000007,E09,London Boroughs,live,211
 E09000031,Waltham Forest,01/01/2009,,E12000007,E09,London Boroughs,live,320
 E09000032,Wandsworth,01/01/2009,,E12000007,E09,London Boroughs,live,212
 E09000033,Westminster,01/01/2009,,E12000007,E09,London Boroughs,live,213
-E10000001,Bedfordshire,01/01/2009,31/03/2009,E12000006,E10,Counties,terminated,x
+E10000001,Bedfordshire,01/01/2009,31/03/2009,E12000006,E10,Counties,terminated,820
 E10000002,Buckinghamshire,01/01/2009,31/03/2020,E12000008,E10,Counties,terminated,825
 E10000003,Cambridgeshire,01/01/2009,,E12000006,E10,Counties,live,873
-E10000004,Cheshire,01/01/2009,31/03/2009,E12000002,E10,Counties,terminated,x
+E10000004,Cheshire,01/01/2009,31/03/2009,E12000002,E10,Counties,terminated,875
 E10000005,Cornwall and Isles of Scilly,01/01/2009,31/03/2009,E12000009,E10,Counties,terminated,x
 E10000006,Cumbria,01/01/2009,31/03/2023,E12000002,E10,Counties,terminated,909
 E10000007,Derbyshire,01/01/2009,,E12000004,E10,Counties,live,830

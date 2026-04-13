@@ -19,7 +19,7 @@ E12000002,North West,889,Blackburn with Darwen,E06000008
 E12000002,North West,890,Blackpool,E06000009
 E12000002,North West,350,Bolton,E08000001
 E12000002,North West,351,Bury,E08000002
-E12000002,North West,x,Cheshire,E10000004
+E12000002,North West,875,Cheshire,E10000004
 E12000002,North West,895,Cheshire East,E06000049
 E12000002,North West,896,Cheshire West and Chester,E06000050
 E12000002,North West,909,Cumbria,E10000006
@@ -88,7 +88,7 @@ E12000005,West Midlands,937,Warwickshire,E10000031
 E12000005,West Midlands,336,Wolverhampton,E08000031
 E12000005,West Midlands,885,Worcestershire,E10000034
 E12000006,East of England,822,Bedford,E06000055
-E12000006,East of England,x,Bedfordshire,E10000001
+E12000006,East of England,820,Bedfordshire,E10000001
 E12000006,East of England,873,Cambridgeshire,E10000003
 E12000006,East of England,823,Central Bedfordshire,E06000056
 E12000006,East of England,881,Essex,E10000012
