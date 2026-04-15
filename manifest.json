@@ -4146,9 +4146,6 @@
     ".github/workflows/automatedTests.yaml": {
       "checksum": "2c619f84ca597caafd5b8e45c3da9fa4"
     },
-    ".github/workflows/create-trello-ticket.yaml": {
-      "checksum": "e4b949945c7e6405e56934b5909c2eec"
-    },
     ".github/workflows/deployShinyApps.yaml": {
       "checksum": "cbb244de755676662e7e129577146743"
     },
@@ -4156,7 +4153,7 @@
       "checksum": "c1d6b214017ea01fb7141a0b0e228e02"
     },
     ".Rprofile": {
-      "checksum": "b815ce1973aba7f9adba98580427f891"
+      "checksum": "11bcc9a103c930b1c381636ae75f5e8c"
     },
     "azure-pipelines-dev.yml": {
       "checksum": "f2c1e8a8feff9a0deb7eacf5a431c9ec"
