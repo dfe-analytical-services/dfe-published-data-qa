@@ -4385,7 +4385,7 @@
       "checksum": "c1d6b214017ea01fb7141a0b0e228e02"
     },
     ".Rprofile": {
-      "checksum": "460503da282689be1fdd46240930f7d0"
+      "checksum": "cef6ddc03272d307d9a8f5b4baf5b98c"
     },
     "azure-pipelines-dev.yml": {
       "checksum": "fc2ef843ff5024bcba25ff84eec05f4c"
@@ -5048,7 +5048,7 @@
       "checksum": "f5330238aae98d474c2366c093502fd5"
     },
     "tests/testthat/mainTests/variable_characteristic.csv": {
-      "checksum": "4542e0d4076aa35cd01f32c7e4bfdf45"
+      "checksum": "fcb9f6d7b8fba5bc3080190cecd1d0c5"
     },
     "tests/testthat/mainTests/variable_characteristic.meta.csv": {
       "checksum": "df80ff86dbbb685cbcb52c64abf418d1"
