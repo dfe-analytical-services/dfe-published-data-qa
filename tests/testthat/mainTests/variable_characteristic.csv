@@ -1,4 +1,4 @@
-"time_period","time_identifier","geographic_level","country_code","country_name","region_code","region_name","characteristic_group","characteristic","full_time_equivalent","headcount"
-202122,"Academic year","National","E92000001","England","","","Total","All pupils",358414.0751,396477.6467
-202122,"Academic year","National","E92000001","England","","","Sex","Male",65130.05804,69667.6847
-202122,"Academic year","National","E92000001","England","","","Sex","Female",37333.04064,40742.54933
+"time_period","time_identifier","geographic_level","country_code","country_name","characteristic_group","characteristic","full_time_equivalent","headcount"
+202122,"Academic year","National","E92000001","England","Total","All pupils",358414.0751,396477.6467
+202122,"Academic year","National","E92000001","England","Sex","Male",65130.05804,69667.6847
+202122,"Academic year","National","E92000001","England","Sex","Female",37333.04064,40742.54933
