@@ -7,4 +7,4 @@ sess_unauthorised_percent,Indicator,Unauthorised absence rate,Absence fields,£,
 enrolments_pa_10_exact,Indicator,Number of persistent absentees,Absence fields,pp,0,,
 enrolments_pa_10_exact_percent,Indicator,Percentage of persistent absentees,Absence fields,%,3,,
 example_id,Indicator,Example ID,Other,numberstring,,,
-school_type,Filter,School type,,,,Filter by school type,school_phase
+establishment_type_group,Filter,School type,,,,Filter by school type,education_phase
