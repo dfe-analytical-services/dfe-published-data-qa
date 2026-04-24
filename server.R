@@ -1034,12 +1034,10 @@ server <- function(input, output, session) {
 
           # get outlier stats
 
-          get_outliers <- function(
-            outlier_indicator_parameter,
-            threshold_setting,
-            ctime_parameter,
-            comptime_parameter
-          ) {
+          get_outliers <- function(outlier_indicator_parameter,
+                                   threshold_setting,
+                                   ctime_parameter,
+                                   comptime_parameter) {
             args <- expand.grid(
               meas = outlier_indicator_parameter,
               thresh = threshold_setting,
