@@ -4365,7 +4365,7 @@
       "checksum": "c1d6b214017ea01fb7141a0b0e228e02"
     },
     ".Rprofile": {
-      "checksum": "ee9cc53589856d1ae4752393d85b66d8"
+      "checksum": "8c4613fa8cfaba23fb49ca70c61a44a9"
     },
     "azure-pipelines-dev.yml": {
       "checksum": "f2c1e8a8feff9a0deb7eacf5a431c9ec"
@@ -4446,7 +4446,7 @@
       "checksum": "97ff9cd4161250488545e1bc4f91cca6"
     },
     "global.R": {
-      "checksum": "6bef86e167b47bbddb9c941397b5a684"
+      "checksum": "674c346f5b51266e49ebb0f24c99890a"
     },
     "google-analytics.html": {
       "checksum": "b5154a3fdf38d73d0194c2e37a2a5f47"
@@ -4476,7 +4476,7 @@
       "checksum": "bddfb7e28f586e9cdf4c4e736b4242fb"
     },
     "server.R": {
-      "checksum": "7e26d2faa470f592fbf0a3bb3086faaf"
+      "checksum": "a14f8d573a37ef080b240d13b1172510"
     },
     "tests/testthat.R": {
       "checksum": "935f216b013d0914cf23ab906e88f3a8"
@@ -4485,7 +4485,7 @@
       "checksum": "22ff3d638b5843f1a78622dd025b0718"
     },
     "tests/testthat/_snaps/UI-01_example_files/example_files-002.json": {
-      "checksum": "d64e3cde227aca4a7d2d396b53456b72"
+      "checksum": "5f099242dc0892faf8266ff135cf9150"
     },
     "tests/testthat/_snaps/UI-02_edge_cases/edge_cases-001.json": {
       "checksum": "5152edd9c29dc78704add265190def19"
@@ -4793,20 +4793,20 @@
     "tests/testthat/test-data/passes_everything.meta.csv": {
       "checksum": "355119e1d867c20485b520f506a32c4f"
     },
-    "tests/testthat/test-data/passes_everything_advisory.csv": {
-      "checksum": "7eb9c79ee5c04c18abb11bb27438d28c"
-    },
-    "tests/testthat/test-data/passes_everything_advisory.meta.csv": {
-      "checksum": "3913bd5cb03e7a559792ea44f96e6ea5"
-    },
     "tests/testthat/test-data/passes_everything_ancillary.csv": {
       "checksum": "1127d84ae4e7f59916cc65ba85ff1963"
     },
     "tests/testthat/test-data/passes_everything_ancillary.meta.csv": {
       "checksum": "1b34547d469fb22a2c364ecf244c1551"
     },
+    "tests/testthat/test-data/passes_everything_warning.csv": {
+      "checksum": "7eb9c79ee5c04c18abb11bb27438d28c"
+    },
+    "tests/testthat/test-data/passes_everything_warning.meta.csv": {
+      "checksum": "3913bd5cb03e7a559792ea44f96e6ea5"
+    },
     "tests/testthat/test-UI-01_example_files.R": {
-      "checksum": "d61c090b6f83a646c8ae903b2b75717f"
+      "checksum": "09a70169f478b40d16b90be36452bfd7"
     },
     "tests/testthat/test-UI-02_edge_cases.R": {
       "checksum": "2864650281b3d0c301bbc41c416bb732"

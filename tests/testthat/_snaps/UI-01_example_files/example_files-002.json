@@ -99,6 +99,14 @@
         "validation"
       ]
     },
+    "num_warning_tests": {
+      "message": "",
+      "call": "NULL",
+      "type": [
+        "shiny.silent.error",
+        "validation"
+      ]
+    },
     "passed_box": {
       "message": "",
       "call": "NULL",
@@ -157,6 +165,14 @@
       ]
     },
     "table_failed_tests": {
+      "message": "",
+      "call": "NULL",
+      "type": [
+        "shiny.silent.error",
+        "validation"
+      ]
+    },
+    "table_warning_tests": {
       "message": "",
       "call": "NULL",
       "type": [

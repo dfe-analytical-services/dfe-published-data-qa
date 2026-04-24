@@ -268,12 +268,12 @@ server <- function(input, output, session) {
             )
           )
 
-        #output$progress_stage <- renderImage(
+        # output$progress_stage <- renderImage(
         #  {
         #    screeningOutput$progress_stage
         #  },
         #  deleteFile = FALSE
-        #)
+        # )
 
         output$progress_message <- renderText({
           screeningOutput$progress_message
@@ -333,10 +333,6 @@ server <- function(input, output, session) {
           summarise_stats(passed_tests, "passed")
         })
 
-        output$sum_ignored_tests <- renderText({
-          summarise_stats(ignored_tests, "not applicable to the data")
-        })
-
         time_stamps$end_time <- Sys.time()
 
         output$time_taken <- renderText({
@@ -377,7 +373,7 @@ server <- function(input, output, session) {
           include.colnames = FALSE
         )
 
-        output$table_advisory_tests <- renderTable(
+        output$table_warning_tests <- renderTable(
           {
             filter(display_results, result == "WARNING") %>% select(message)
           },
@@ -732,7 +728,7 @@ server <- function(input, output, session) {
               } else {
                 return(
                   data$mainFile %>%
-                    select(filter) %>%
+                    select(all_of(filter)) %>%
                     distinct() %>%
                     arrange(filter)
                 )
@@ -1511,10 +1507,10 @@ server <- function(input, output, session) {
         output$sum_passed_tests <- NULL
         output$sum_ignored_tests <- NULL
         output$num_failed_tests <- NULL
-        output$num_advisory_tests <- NULL
+        output$num_warning_tests <- NULL
         output$all_tests <- NULL
         output$table_failed_tests <- NULL
-        output$table_advisory_tests <- NULL
+        output$table_warning_tests <- NULL
         output$table_all_tests <- NULL
 
         # set QA list objects to NULL

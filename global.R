@@ -84,7 +84,7 @@ fail_results_box <- function(message, table) {
   )
 }
 
-advisory_results_box <- function(message, table) {
+warning_results_box <- function(message, table) {
   div(
     div(
       class = "panel panel-warning",

@@ -23,16 +23,16 @@ test_that("Passes everything", {
   app$upload_file(metafile = "test-data/passes_everything.meta.csv")
   app$set_inputs(screenbutton = "click")
 
-  # Make sure it gets to the passed stage and no tests are ignored, advisory or failed
+  # Make sure it gets to the passed stage and no tests are ignored, warning or failed
   expect_equal(app$get_value(export = "progress_message"), "Passed")
   expect_equal(app$get_value(export = "failed"), 0)
   expect_equal(app$get_value(export = "warning"), 1)
 
   app$set_inputs(resetbutton = "click") # Reset app
 
-  # 3. Passes everything advisory
-  app$upload_file(datafile = "test-data/passes_everything_advisory.csv")
-  app$upload_file(metafile = "test-data/passes_everything_advisory.meta.csv")
+  # 3. Passes everything warning
+  app$upload_file(datafile = "test-data/passes_everything_warning.csv")
+  app$upload_file(metafile = "test-data/passes_everything_warning.meta.csv")
   app$set_inputs(screenbutton = "click")
 
   expect_equal(app$get_value(export = "progress_message"), "Passed")
@@ -140,7 +140,7 @@ test_that("Passes everything", {
       "meta_cols",
       "meta_size",
       "metafilename",
-      "num_advisory_tests",
+      "num_warning_tests",
       "num_failed_tests",
       "progress_stage",
       "showresults",
@@ -149,7 +149,7 @@ test_that("Passes everything", {
       "sum_ignored_tests",
       "sum_passed_tests",
       "summary_text",
-      "table_advisory_tests",
+      "table_warning_tests",
       "table_all_tests",
       "table_failed_tests",
       "testtime"
