@@ -34,6 +34,7 @@ shhh(library(shinyalert))
 shhh(library(shinydisconnect))
 shhh(library(praise))
 shhh(library(dfeR))
+shhh(library(eesyscreener))
 
 # Following are commented out as they are needed for CI / CD or commit hooks but not for running of app
 pigs_will_fly <- FALSE
@@ -43,17 +44,6 @@ if (pigs_will_fly == TRUE) {
   shhh(library(shinytest2))
   shhh(library(diffviewer))
 }
-
-# activeTestsInFile ---------------------------------------------------------------------------------
-# Extracting the active tests that are run against files
-
-activeTestsInFile <- function(file) {
-  trimws(gsub("\\(.* # active test", "", grep("(# active test)$", read_lines(file), value = TRUE)))
-}
-
-activeTests <- sapply(c("R/fileValidation.r", "R/preCheck1.r", "R/preCheck2.r", "R/mainTests.r"), activeTestsInFile, simplify = FALSE)
-
-numberActiveTests <- length(unlist(activeTests, use.names = FALSE))
 
 # Results boxes ----------------------------------------------------------------------------
 
