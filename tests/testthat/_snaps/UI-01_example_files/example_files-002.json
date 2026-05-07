@@ -132,14 +132,6 @@
         "validation"
       ]
     },
-    "sum_ignored_tests": {
-      "message": "",
-      "call": "NULL",
-      "type": [
-        "shiny.silent.error",
-        "validation"
-      ]
-    },
     "sum_passed_tests": {
       "message": "",
       "call": "NULL",

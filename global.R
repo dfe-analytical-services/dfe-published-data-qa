@@ -128,42 +128,6 @@ results_box <- function(message, table) {
   )
 }
 
-ancillary_box <- function() {
-  div(
-    div(
-      class = "panel panel-info",
-      div(
-        class = "panel-heading",
-        style = "color: white;font-size: 18px;font-style: bold;", # background-color: #38a1c1;
-        "This file should not be uploaded as a standard data file"
-      ),
-      div(
-        class = "panel-body",
-        style = "padding-left:27px",
-        "The data file only includes geographic levels that are going to be ignored by EES, see our  ",
-        a(href = "https://dfe-analytical-services.github.io/analysts-guide/statistics-production/ees.html#supporting-file-uploads", "guidance on uploading ancillary files", target = "_blank"),
-        " for more information on how to upload as an ancillary file instead of via the normal data route."
-      )
-    )
-  )
-}
-
-info_results_box <- function(message, table) {
-  div(
-    div(
-      class = "panel panel-info",
-      div(
-        class = "panel-heading",
-        style = "color: white;font-size: 18px;font-style: bold; ", # background-color: #e87421;
-        textOutput(message)
-      ),
-      div(
-        class = "panel-body",
-        tableOutput(table)
-      )
-    )
-  )
-}
 
 # summarise_stats ----------------------------------------------------------------------------
 # Summarising the counts of the results

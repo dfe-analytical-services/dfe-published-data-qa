@@ -54,6 +54,7 @@ test_that("Additional QA tabs", {
 
   # 8. Outlier check doesn't break with just indicator
   app$set_inputs(outlier_indicator_parameter = "school_count")
+  app$set_inputs(comptime_parameter = "201617")
   app$set_inputs(submit_outlier = "click")
 
   app$wait_for_idle(50) # this test seems weirdly flaky for unknown reasons

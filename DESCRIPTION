@@ -13,6 +13,6 @@ Imports:
     shiny,
     eesyscreener
 Suggests:
-    shinytest,
+    shinytest2,
     testthat,
     styler

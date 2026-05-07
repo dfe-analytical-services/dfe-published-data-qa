@@ -175,21 +175,6 @@ server <- function(input, output, session) {
       inputData <- values$datafile
       inputMeta <- values$metafile
 
-      data <- list(
-        mainFile = fread(
-          inputData$datapath,
-          encoding = "UTF-8",
-          na.strings = ""
-        )
-      )
-      meta <- list(
-        mainFile = fread(
-          inputMeta$datapath,
-          encoding = "UTF-8",
-          na.strings = ""
-        )
-      )
-
       # File info ---------------------------------------------------------------------------------------------------------
 
       isolate({
@@ -214,17 +199,23 @@ server <- function(input, output, session) {
           )
         })
 
-        # Size, rows and cols for files
+        # Size, rows and cols — use cheap reads so we don't parse the whole
+        # file before screening. select=1L reads only the first column.
+        data_rows_count <- nrow(fread(inputData$datapath, select = 1L))
+        data_cols_count <- ncol(fread(inputData$datapath, nrows = 0L))
+        meta_rows_count <- nrow(fread(inputMeta$datapath, select = 1L))
+        meta_cols_count <- ncol(fread(inputMeta$datapath, nrows = 0L))
+
         output$data_size <- renderText({
           paste0("Size - ", pretty_filesize(inputData$size))
         })
 
         output$data_rows <- renderText({
-          paste0("Rows - ", comma_sep(data$mainFile %>% nrow()))
+          paste0("Rows - ", comma_sep(data_rows_count))
         })
 
         output$data_cols <- renderText({
-          paste0("Columns - ", comma_sep(data$mainFile %>% ncol()))
+          paste0("Columns - ", comma_sep(data_cols_count))
         })
 
         output$meta_size <- renderText({
@@ -232,20 +223,37 @@ server <- function(input, output, session) {
         })
 
         output$meta_rows <- renderText({
-          paste0("Rows - ", comma_sep(meta$mainFile %>% nrow()))
+          paste0("Rows - ", comma_sep(meta_rows_count))
         })
 
         output$meta_cols <- renderText({
-          paste0("Columns - ", comma_sep(meta$mainFile %>% ncol()))
+          paste0("Columns - ", comma_sep(meta_cols_count))
         })
 
         # File validation ---------------------------------------------------------------------------------
 
-        screeningOutput <- screenFiles(
-          datapath = inputData$datapath,
-          metapath = inputMeta$datapath,
-          datafilename = inputData$name,
-          metafilename = inputMeta$name
+        screeningOutput <- tryCatch(
+          screenFiles(
+            datapath = inputData$datapath,
+            metapath = inputMeta$datapath,
+            datafilename = inputData$name,
+            metafilename = inputMeta$name
+          ),
+          error = function(e) {
+            list(
+              results = data.frame(
+                result = "FAIL",
+                message = paste("Screener encountered an unexpected error:", conditionMessage(e)),
+                stage = "Unknown",
+                check = "Internal error",
+                guidance_url = NA_character_,
+                stringsAsFactors = FALSE
+              ),
+              progress_message = "Screening failed due to an unexpected internal error",
+              passed = FALSE,
+              api_suitable = FALSE
+            )
+          }
         )
 
         all_results <- screeningOutput$results
@@ -267,13 +275,6 @@ server <- function(input, output, session) {
               )
             )
           )
-
-        # output$progress_stage <- renderImage(
-        #  {
-        #    screeningOutput$progress_stage
-        #  },
-        #  deleteFile = FALSE
-        # )
 
         output$progress_message <- renderText({
           screeningOutput$progress_message
@@ -389,15 +390,6 @@ server <- function(input, output, session) {
           include.colnames = FALSE
         )
 
-        output$table_info_tests <- renderTable(
-          {
-            filter(display_results, result == "PASS WITH NOTE") %>%
-              select(message, result)
-          },
-          sanitize.text.function = function(x) x,
-          include.colnames = FALSE
-        )
-
         # UI blocks (result dependent) ---------------------------------------------------------------------------------
 
         if (failed_tests != 0) {
@@ -430,6 +422,24 @@ server <- function(input, output, session) {
               " for more information."
             ),
             html = TRUE
+          )
+        }
+
+        # Read full files only when screening passed — used by trendy-tabs and QA sections
+        if (failed_tests == 0) {
+          data <- list(
+            mainFile = fread(
+              inputData$datapath,
+              encoding = "UTF-8",
+              na.strings = ""
+            )
+          )
+          meta <- list(
+            mainFile = fread(
+              inputMeta$datapath,
+              encoding = "UTF-8",
+              na.strings = ""
+            )
           )
         }
 
@@ -1493,17 +1503,14 @@ server <- function(input, output, session) {
         output$meta_size <- NULL
         output$meta_rows <- NULL
         output$meta_cols <- NULL
-        output$progress_stage <- NULL
         output$progress_message <- NULL
         output$failed_box <- NULL
         output$passed_box <- NULL
         output$warning_box <- NULL
-        output$ancillary_box <- NULL
         output$summary_text <- NULL
         output$sum_failed_tests <- NULL
         output$sum_combined_tests <- NULL
         output$sum_passed_tests <- NULL
-        output$sum_ignored_tests <- NULL
         output$num_failed_tests <- NULL
         output$num_warning_tests <- NULL
         output$all_tests <- NULL

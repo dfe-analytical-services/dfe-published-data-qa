@@ -177,8 +177,6 @@ fluidPage(
                   5,
                   style = "padding-left:20px;",
                   h4("Screening progress"),
-                  # tags$style("#progress_stage img {max-width: 100%; max-height: 100%}"),
-                  # imageOutput("progress_stage", height = "100%"),
                   hr(),
                   textOutput("testtime"),
                   br(),
@@ -187,7 +185,6 @@ fluidPage(
                   textOutput("sum_failed_tests"),
                   textOutput("sum_combined_tests"),
                   textOutput("sum_passed_tests"),
-                  textOutput("sum_ignored_tests"),
                   textOutput("time_taken"),
                   hr(),
                   div(
