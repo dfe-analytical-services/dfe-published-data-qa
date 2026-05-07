@@ -2427,40 +2427,6 @@
         "RemoteSha": "0.2.7"
       }
     },
-    "janitor": {
-      "Source": "CRAN",
-      "Repository": "https://packagemanager.posit.co/cran/latest",
-      "description": {
-        "Package": "janitor",
-        "Title": "Simple Tools for Examining and Cleaning Dirty Data",
-        "Version": "2.2.1",
-        "Authors@R": "c(person(\"Sam\", \"Firke\", email = \"samuel.firke@gmail.com\", role = c(\"aut\", \"cre\")),\n    person(\"Bill\", \"Denney\", email = \"wdenney@humanpredictions.com\", role = \"ctb\"),\n    person(\"Chris\", \"Haid\", email = \"chrishaid@gmail.com\", role = \"ctb\"),\n    person(\"Ryan\", \"Knight\", email = \"ryangknight@gmail.com\", role = \"ctb\"),\n    person(\"Malte\", \"Grosser\", email = \"malte.grosser@gmail.com\", role = \"ctb\"),\n    person(\"Jonathan\", \"Zadra\", email = \"jonathan.zadra@sorensonimpact.com\", role = \"ctb\"))",
-        "Description": "The main janitor functions can: perfectly format data.frame column\n    names; provide quick counts of variable combinations (i.e., frequency\n    tables and crosstabs); and explore duplicate records. Other janitor functions\n    nicely format the tabulation results. These tabulate-and-report functions\n    approximate popular features of SPSS and Microsoft Excel. This package\n    follows the principles of the \"tidyverse\" and works well with the pipe function\n    %>%. janitor was built with beginning-to-intermediate R users in mind and is\n    optimized for user-friendliness.",
-        "URL": "https://github.com/sfirke/janitor,\nhttps://sfirke.github.io/janitor/",
-        "BugReports": "https://github.com/sfirke/janitor/issues",
-        "Depends": "R (>= 3.1.2)",
-        "Imports": "dplyr (>= 1.0.0), hms, lifecycle, lubridate, magrittr, purrr,\nrlang, stringi, stringr, snakecase (>= 0.9.2), tidyselect (>=\n1.0.0), tidyr (>= 0.7.0)",
-        "License": "MIT + file LICENSE",
-        "RoxygenNote": "7.2.3",
-        "Suggests": "dbplyr, knitr, rmarkdown, RSQLite, sf, testthat (>= 3.0.0),\ntibble, tidygraph",
-        "VignetteBuilder": "knitr",
-        "Encoding": "UTF-8",
-        "Config/testthat/edition": "3",
-        "NeedsCompilation": "no",
-        "Packaged": "2024-12-22 15:53:13 UTC; sam",
-        "Author": "Sam Firke [aut, cre],\n  Bill Denney [ctb],\n  Chris Haid [ctb],\n  Ryan Knight [ctb],\n  Malte Grosser [ctb],\n  Jonathan Zadra [ctb]",
-        "Maintainer": "Sam Firke <samuel.firke@gmail.com>",
-        "Repository": "RSPM",
-        "Date/Publication": "2024-12-22 16:30:01 UTC",
-        "Built": "R 4.5.0; ; 2025-04-08 03:49:08 UTC; windows",
-        "RemoteType": "standard",
-        "RemotePkgRef": "janitor",
-        "RemoteRef": "janitor",
-        "RemoteRepos": "https://packagemanager.posit.co/cran/latest",
-        "RemotePkgPlatform": "i386+x86_64-w64-mingw32",
-        "RemoteSha": "2.2.1"
-      }
-    },
     "jose": {
       "Source": "CRAN",
       "Repository": "https://packagemanager.posit.co/cran/latest",
@@ -2735,49 +2701,6 @@
         "RemoteRepos": "https://packagemanager.posit.co/cran/latest",
         "RemotePkgPlatform": "i386+x86_64-w64-mingw32",
         "RemoteSha": "1.0.5"
-      }
-    },
-    "lubridate": {
-      "Source": "CRAN",
-      "Repository": "https://packagemanager.posit.co/cran/latest",
-      "description": {
-        "Type": "Package",
-        "Package": "lubridate",
-        "Title": "Make Dealing with Dates a Little Easier",
-        "Version": "1.9.4",
-        "Authors@R": "c(\n    person(\"Vitalie\", \"Spinu\", , \"spinuvit@gmail.com\", role = c(\"aut\", \"cre\")),\n    person(\"Garrett\", \"Grolemund\", role = \"aut\"),\n    person(\"Hadley\", \"Wickham\", role = \"aut\"),\n    person(\"Davis\", \"Vaughan\", role = \"ctb\"),\n    person(\"Ian\", \"Lyttle\", role = \"ctb\"),\n    person(\"Imanuel\", \"Costigan\", role = \"ctb\"),\n    person(\"Jason\", \"Law\", role = \"ctb\"),\n    person(\"Doug\", \"Mitarotonda\", role = \"ctb\"),\n    person(\"Joseph\", \"Larmarange\", role = \"ctb\"),\n    person(\"Jonathan\", \"Boiser\", role = \"ctb\"),\n    person(\"Chel Hee\", \"Lee\", role = \"ctb\")\n  )",
-        "Maintainer": "Vitalie Spinu <spinuvit@gmail.com>",
-        "Description": "Functions to work with date-times and time-spans: fast and\n    user friendly parsing of date-time data, extraction and updating of\n    components of a date-time (years, months, days, hours, minutes, and\n    seconds), algebraic manipulation on date-time and time-span objects.\n    The 'lubridate' package has a consistent and memorable syntax that\n    makes working with dates easy and fun.",
-        "License": "GPL (>= 2)",
-        "URL": "https://lubridate.tidyverse.org,\nhttps://github.com/tidyverse/lubridate",
-        "BugReports": "https://github.com/tidyverse/lubridate/issues",
-        "Depends": "methods, R (>= 3.2)",
-        "Imports": "generics, timechange (>= 0.3.0)",
-        "Suggests": "covr, knitr, rmarkdown, testthat (>= 2.1.0), vctrs (>= 0.6.5)",
-        "Enhances": "chron, data.table, timeDate, tis, zoo",
-        "VignetteBuilder": "knitr",
-        "Config/Needs/website": "tidyverse/tidytemplate",
-        "Config/testthat/edition": "3",
-        "Encoding": "UTF-8",
-        "LazyData": "true",
-        "RoxygenNote": "7.2.3",
-        "SystemRequirements": "C++11, A system with zoneinfo data (e.g.\n/usr/share/zoneinfo). On Windows the zoneinfo included with R\nis used.",
-        "Collate": "'Dates.r' 'POSIXt.r' 'util.r' 'parse.r' 'timespans.r'\n'intervals.r' 'difftimes.r' 'durations.r' 'periods.r'\n'accessors-date.R' 'accessors-day.r' 'accessors-dst.r'\n'accessors-hour.r' 'accessors-minute.r' 'accessors-month.r'\n'accessors-quarter.r' 'accessors-second.r' 'accessors-tz.r'\n'accessors-week.r' 'accessors-year.r' 'am-pm.r' 'time-zones.r'\n'numeric.r' 'coercion.r' 'constants.r' 'cyclic_encoding.r'\n'data.r' 'decimal-dates.r' 'deprecated.r' 'format_ISO8601.r'\n'guess.r' 'hidden.r' 'instants.r' 'leap-years.r'\n'ops-addition.r' 'ops-compare.r' 'ops-division.r'\n'ops-integer-division.r' 'ops-m+.r' 'ops-modulo.r'\n'ops-multiplication.r' 'ops-subtraction.r' 'package.r'\n'pretty.r' 'round.r' 'stamp.r' 'tzdir.R' 'update.r' 'vctrs.R'\n'zzz.R'",
-        "NeedsCompilation": "yes",
-        "Packaged": "2024-12-07 23:41:45 UTC; vitalie",
-        "Author": "Vitalie Spinu [aut, cre],\n  Garrett Grolemund [aut],\n  Hadley Wickham [aut],\n  Davis Vaughan [ctb],\n  Ian Lyttle [ctb],\n  Imanuel Costigan [ctb],\n  Jason Law [ctb],\n  Doug Mitarotonda [ctb],\n  Joseph Larmarange [ctb],\n  Jonathan Boiser [ctb],\n  Chel Hee Lee [ctb]",
-        "Repository": "RSPM",
-        "Date/Publication": "2024-12-08 12:10:02 UTC",
-        "Built": "R 4.5.3; x86_64-w64-mingw32; 2026-04-25 14:54:30 UTC; windows",
-        "Archs": "x64",
-        "RemotePkgRef": "lubridate@1.9.4",
-        "RemoteType": "standard",
-        "RemoteEtag": "\"891fd9836adc98369eec02b5c61e6bbb\"",
-        "RemotePackaged": "TRUE",
-        "RemoteRef": "lubridate",
-        "RemoteRepos": "https://packagemanager.posit.co/cran/latest",
-        "RemotePkgPlatform": "source",
-        "RemoteSha": "1.9.4"
       }
     },
     "magrittr": {
@@ -4027,40 +3950,6 @@
         "RemoteSha": "0.4.1"
       }
     },
-    "snakecase": {
-      "Source": "CRAN",
-      "Repository": "https://packagemanager.posit.co/cran/latest",
-      "description": {
-        "Package": "snakecase",
-        "Version": "0.11.1",
-        "Date": "2023-08-27",
-        "Title": "Convert Strings into any Case",
-        "Description": "A consistent, flexible and easy to use tool to parse and convert strings into cases like snake or camel among others.",
-        "Authors@R": "c(\n    person(\"Malte\", \"Grosser\", , \"malte.grosser@gmail.com\", role = c(\"aut\", \"cre\")))",
-        "Maintainer": "Malte Grosser <malte.grosser@gmail.com>",
-        "Depends": "R (>= 3.2)",
-        "Imports": "stringr, stringi",
-        "Suggests": "testthat, covr, tibble, purrrlyr, knitr, rmarkdown, magrittr",
-        "URL": "https://github.com/Tazinho/snakecase",
-        "BugReports": "https://github.com/Tazinho/snakecase/issues",
-        "Encoding": "UTF-8",
-        "License": "GPL-3",
-        "RoxygenNote": "6.1.1",
-        "VignetteBuilder": "knitr",
-        "NeedsCompilation": "no",
-        "Packaged": "2023-08-27 20:30:20 UTC; malte",
-        "Author": "Malte Grosser [aut, cre]",
-        "Repository": "RSPM",
-        "Date/Publication": "2023-08-27 22:50:09 UTC",
-        "Built": "R 4.5.0; ; 2025-12-02 12:40:54 UTC; windows",
-        "RemoteType": "standard",
-        "RemotePkgRef": "snakecase",
-        "RemoteRef": "snakecase",
-        "RemoteRepos": "https://packagemanager.posit.co/cran/latest",
-        "RemotePkgPlatform": "i386+x86_64-w64-mingw32",
-        "RemoteSha": "0.11.1"
-      }
-    },
     "snowflakeauth": {
       "Source": "CRAN",
       "Repository": "https://packagemanager.posit.co/cran/latest",
@@ -4461,42 +4350,6 @@
         "RemoteRepos": "https://packagemanager.posit.co/cran/latest",
         "RemotePkgPlatform": "i386+x86_64-w64-mingw32",
         "RemoteSha": "1.2.1"
-      }
-    },
-    "timechange": {
-      "Source": "CRAN",
-      "Repository": "https://packagemanager.posit.co/cran/latest",
-      "description": {
-        "Package": "timechange",
-        "Title": "Efficient Manipulation of Date-Times",
-        "Version": "0.3.0",
-        "Authors@R": "c(person(\"Vitalie\", \"Spinu\", email = \"spinuvit@gmail.com\", role = c(\"aut\", \"cre\")),\n             person(\"Google Inc.\", role = c(\"ctb\", \"cph\")))",
-        "Description": "Efficient routines for manipulation of date-time objects while\n   accounting for time-zones and daylight saving times. The package includes\n   utilities for updating of date-time components (year, month, day etc.),\n   modification of time-zones, rounding of date-times, period addition and\n   subtraction etc. Parts of the 'CCTZ' source code, released under the Apache\n   2.0 License, are included in this package. See\n   <https://github.com/google/cctz> for more details.",
-        "Depends": "R (>= 3.3)",
-        "License": "GPL (>= 3)",
-        "Encoding": "UTF-8",
-        "LinkingTo": "cpp11 (>= 0.2.7)",
-        "Suggests": "testthat (>= 0.7.1.99), knitr",
-        "SystemRequirements": "A system with zoneinfo data (e.g.\n/usr/share/zoneinfo) as well as a recent-enough C++11 compiler\n(such as g++-4.8 or later). On Windows the zoneinfo included\nwith R is used.",
-        "BugReports": "https://github.com/vspinu/timechange/issues",
-        "URL": "https://github.com/vspinu/timechange/",
-        "RoxygenNote": "7.2.1",
-        "NeedsCompilation": "yes",
-        "Packaged": "2024-01-18 08:57:24 UTC; vspinu",
-        "Author": "Vitalie Spinu [aut, cre],\n  Google Inc. [ctb, cph]",
-        "Maintainer": "Vitalie Spinu <spinuvit@gmail.com>",
-        "Repository": "RSPM",
-        "Date/Publication": "2024-01-18 09:20:02 UTC",
-        "Built": "R 4.5.3; x86_64-w64-mingw32; 2026-04-25 14:53:32 UTC; windows",
-        "Archs": "x64",
-        "RemotePkgRef": "timechange@0.3.0",
-        "RemoteType": "standard",
-        "RemoteEtag": "\"4d3a75c53ef88123c7e56b64a006ccc4\"",
-        "RemotePackaged": "TRUE",
-        "RemoteRef": "timechange",
-        "RemoteRepos": "https://packagemanager.posit.co/cran/latest",
-        "RemotePkgPlatform": "source",
-        "RemoteSha": "0.3.0"
       }
     },
     "tinytex": {
@@ -5081,7 +4934,7 @@
       "checksum": "c1d6b214017ea01fb7141a0b0e228e02"
     },
     ".Rprofile": {
-      "checksum": "2bb61f52990bbd93a668660ffcb8aff7"
+      "checksum": "3ffbad162f78806b546bdb58f1299074"
     },
     "azure-pipelines-dev.yml": {
       "checksum": "fc2ef843ff5024bcba25ff84eec05f4c"
@@ -5162,7 +5015,7 @@
       "checksum": "367ad4f765039d87aac9274a9d460e9f"
     },
     "global.R": {
-      "checksum": "44a7e978a1661dfd28c2097db780d339"
+      "checksum": "8e8bbc3bd1dd9cf7bc3c1c8f66d0e3c8"
     },
     "google-analytics.html": {
       "checksum": "b5154a3fdf38d73d0194c2e37a2a5f47"
@@ -5183,16 +5036,16 @@
       "checksum": "d6b8b38e20481a0d68d54d659d79900d"
     },
     "R/screenFiles.r": {
-      "checksum": "89c52fed4e8dae2b3cfa513974b8cde6"
+      "checksum": "d24d34c89236133c18c25a4613039240"
     },
     "README.md": {
       "checksum": "49f84962c930a31bd04b66f5ec0855e8"
     },
     "renv.lock": {
-      "checksum": "422f309a870db509d325d0638fcebe2b"
+      "checksum": "33ff05aa6d29434c037e31042aebedb9"
     },
     "server.R": {
-      "checksum": "292fbe3bffe7d4872a4a0a1bf1c19833"
+      "checksum": "4b3704c2751eff69eddc0ae2bd535f1a"
     },
     "tests/testthat.R": {
       "checksum": "12e9b09de5275bdc13bde6ae5a82f8b1"
@@ -5522,7 +5375,7 @@
       "checksum": "3913bd5cb03e7a559792ea44f96e6ea5"
     },
     "tests/testthat/test-UI-01_example_files.R": {
-      "checksum": "2e97ebb4d685da5ee63f795fef29b164"
+      "checksum": "70fc4079dd1b331148b6a8a6ec8e7cc5"
     },
     "tests/testthat/test-UI-02_edge_cases.R": {
       "checksum": "2864650281b3d0c301bbc41c416bb732"

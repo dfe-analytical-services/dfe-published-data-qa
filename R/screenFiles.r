@@ -18,7 +18,6 @@ screenFiles <- function(datapath, metapath, datafilename, metafilename) {
   list(
     results = out$results_table,
     progress_message = out$overall_stage,
-    passed = out$passed,
-    api_suitable = out$api_suitable
+    passed = out$passed
   )
 }

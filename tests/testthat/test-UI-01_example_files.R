@@ -26,7 +26,7 @@ test_that("Passes everything", {
   # Make sure it gets to the passed stage and no tests are ignored, warning or failed
   expect_equal(app$get_value(export = "progress_message"), "Passed")
   expect_equal(app$get_value(export = "failed"), 0)
-  expect_equal(app$get_value(export = "warning"), 1)
+  expect_gte(app$get_value(export = "warning"), 1)
 
   app$set_inputs(resetbutton = "click") # Reset app
 

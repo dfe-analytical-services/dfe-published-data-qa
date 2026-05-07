@@ -867,11 +867,8 @@ server <- function(input, output, session) {
               y <- data$mainFile %>%
                 filter(geographic_level %in% geographies) %>%
                 mutate(
-                  across(get(indicators), na_if, gssNAvcode),
-                  across(get(indicators), na_if, gssNApcode),
-                  across(get(indicators), na_if, gssSupcode),
-                  across(get(indicators), na_if, gssRndcode),
-                  across(get(indicators), as.numeric)
+                  across(all_of(indicators), ~ replace(.x, .x %in% gss_symbols, NA)),
+                  across(all_of(indicators), as.numeric)
                 ) %>%
                 select(time_period, indicators) %>%
                 group_by(time_period) %>%
@@ -1236,26 +1233,18 @@ server <- function(input, output, session) {
                 pull(col_name)
 
               ii <- input$geog_indicator_parameter # "number_of_pupils"
-              print(pf)
-              print(ii)
               y <- data$mainFile %>%
                 mutate(
-                  across(get(ii), na_if, gssNAvcode),
-                  across(get(ii), na_if, gssNApcode),
-                  across(get(ii), na_if, gssSupcode),
-                  across(get(ii), na_if, gssNAvcode),
-                  across(get(ii), as.numeric)
+                  across(all_of(ii), ~ replace(.x, .x %in% gss_symbols, NA)),
+                  across(all_of(ii), as.numeric)
                 )
-              print(y)
               y <- y %>%
                 summarise(
                   across(all_of(ii), sum),
                   .by = c(time_period, geographic_level, all_of(pf))
                 )
-              print(y)
               y <- y %>%
                 spread(key = geographic_level, value = ii)
-              print(y)
               return(y)
             }
           })

@@ -891,28 +891,6 @@
       ],
       "Hash": "0080607b4a1a7b28979aecef976d8bc2"
     },
-    "janitor": {
-      "Package": "janitor",
-      "Version": "2.2.1",
-      "Source": "Repository",
-      "Repository": "CRAN",
-      "Requirements": [
-        "R",
-        "dplyr",
-        "hms",
-        "lifecycle",
-        "lubridate",
-        "magrittr",
-        "purrr",
-        "rlang",
-        "snakecase",
-        "stringi",
-        "stringr",
-        "tidyr",
-        "tidyselect"
-      ],
-      "Hash": "64f308bf1fbf5f856cdf4b4c7c0ce51b"
-    },
     "jose": {
       "Package": "jose",
       "Version": "1.2.1",
@@ -1003,19 +981,6 @@
         "rlang"
       ],
       "Hash": "36dbfe4fba6c064db50a671a90297c85"
-    },
-    "lubridate": {
-      "Package": "lubridate",
-      "Version": "1.9.4",
-      "Source": "Repository",
-      "Repository": "CRAN",
-      "Requirements": [
-        "R",
-        "generics",
-        "methods",
-        "timechange"
-      ],
-      "Hash": "be38bc740fc51783a78edb5a157e4104"
     },
     "magrittr": {
       "Package": "magrittr",
@@ -1527,18 +1492,6 @@
       ],
       "Hash": "47a1efcc7baec6fc5299498b7f3fdb3e"
     },
-    "snakecase": {
-      "Package": "snakecase",
-      "Version": "0.11.1",
-      "Source": "Repository",
-      "Repository": "CRAN",
-      "Requirements": [
-        "R",
-        "stringi",
-        "stringr"
-      ],
-      "Hash": "58767e44739b76965332e8a4fe3f91f1"
-    },
     "snowflakeauth": {
       "Package": "snowflakeauth",
       "Version": "0.2.0",
@@ -1718,17 +1671,6 @@
         "withr"
       ],
       "Hash": "829f27b9c4919c16b593794a6344d6c0"
-    },
-    "timechange": {
-      "Package": "timechange",
-      "Version": "0.3.0",
-      "Source": "Repository",
-      "Repository": "RSPM",
-      "Requirements": [
-        "R",
-        "cpp11"
-      ],
-      "Hash": "c5f3c201b931cd6474d17d8700ccb1c8"
     },
     "tinytex": {
       "Package": "tinytex",
