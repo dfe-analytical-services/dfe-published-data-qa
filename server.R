@@ -201,10 +201,23 @@ server <- function(input, output, session) {
 
         # Size, rows and cols — use cheap reads so we don't parse the whole
         # file before screening. select=1L reads only the first column.
-        data_rows_count <- nrow(fread(inputData$datapath, select = 1L))
-        data_cols_count <- ncol(fread(inputData$datapath, nrows = 0L))
-        meta_rows_count <- nrow(fread(inputMeta$datapath, select = 1L))
-        meta_cols_count <- ncol(fread(inputMeta$datapath, nrows = 0L))
+        file_info <- tryCatch(
+          {
+            list(
+              data_rows = nrow(fread(inputData$datapath, select = 1L)),
+              data_cols = ncol(fread(inputData$datapath, nrows = 0L)),
+              meta_rows = nrow(fread(inputMeta$datapath, select = 1L)),
+              meta_cols = ncol(fread(inputMeta$datapath, nrows = 0L))
+            )
+          },
+          error = function(e) {
+            list(data_rows = NA, data_cols = NA, meta_rows = NA, meta_cols = NA)
+          }
+        )
+        data_rows_count <- file_info$data_rows
+        data_cols_count <- file_info$data_cols
+        meta_rows_count <- file_info$meta_rows
+        meta_cols_count <- file_info$meta_cols
 
         output$data_size <- renderText({
           paste0("Size - ", pretty_filesize(inputData$size))
@@ -292,8 +305,6 @@ server <- function(input, output, session) {
           filter(result == "WARNING") %>%
           nrow()
 
-        combined_tests <- warning_tests
-
         passed_tests <- all_results %>%
           filter(result %in% c("PASS")) %>%
           nrow()
@@ -327,7 +338,7 @@ server <- function(input, output, session) {
         })
 
         output$sum_combined_tests <- renderText({
-          summarise_stats(combined_tests, "with warnings or notes")
+          summarise_stats(warning_tests, "with warnings or notes")
         })
 
         output$sum_passed_tests <- renderText({

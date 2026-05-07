@@ -10,8 +10,13 @@ screenFiles <- function(datapath, metapath, datafilename, metafilename) {
     metafilename = metafilename
   )
 
+  stopifnot(
+    "eesyscreener::screen_csv()$results_table is missing expected columns" =
+      all(screener_result_cols %in% names(out$results_table))
+  )
+
   list(
-    results = out$results_table, # columns: result, message, stage, check, guidance_url
+    results = out$results_table,
     progress_message = out$overall_stage,
     passed = out$passed,
     api_suitable = out$api_suitable

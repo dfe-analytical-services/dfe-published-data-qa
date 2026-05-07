@@ -36,6 +36,10 @@ shhh(library(praise))
 shhh(library(dfeR))
 shhh(library(eesyscreener))
 
+# Expected columns returned by eesyscreener::screen_csv()$results_table.
+# Checked at runtime in screenFiles(); also used by the tryCatch fallback in server.R.
+screener_result_cols <- c("result", "message", "stage", "check", "guidance_url")
+
 # Following are commented out as they are needed for CI / CD or commit hooks but not for running of app
 pigs_will_fly <- FALSE
 if (pigs_will_fly == TRUE) {

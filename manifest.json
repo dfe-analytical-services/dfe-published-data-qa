@@ -5081,7 +5081,7 @@
       "checksum": "c1d6b214017ea01fb7141a0b0e228e02"
     },
     ".Rprofile": {
-      "checksum": "c603b01e3ad12bae4dde604217fc0144"
+      "checksum": "2bb61f52990bbd93a668660ffcb8aff7"
     },
     "azure-pipelines-dev.yml": {
       "checksum": "fc2ef843ff5024bcba25ff84eec05f4c"
@@ -5159,10 +5159,10 @@
       "checksum": "667c7343714869a4ad4884e217112f1f"
     },
     "DESCRIPTION": {
-      "checksum": "66b72d9ff74fa82b49e192c1953d6bbb"
+      "checksum": "367ad4f765039d87aac9274a9d460e9f"
     },
     "global.R": {
-      "checksum": "9594e39d40b94ab03a77c470ab913390"
+      "checksum": "44a7e978a1661dfd28c2097db780d339"
     },
     "google-analytics.html": {
       "checksum": "b5154a3fdf38d73d0194c2e37a2a5f47"
@@ -5183,7 +5183,7 @@
       "checksum": "d6b8b38e20481a0d68d54d659d79900d"
     },
     "R/screenFiles.r": {
-      "checksum": "324f8a2dd7c7e957e352124092875a58"
+      "checksum": "89c52fed4e8dae2b3cfa513974b8cde6"
     },
     "README.md": {
       "checksum": "49f84962c930a31bd04b66f5ec0855e8"
@@ -5192,7 +5192,7 @@
       "checksum": "422f309a870db509d325d0638fcebe2b"
     },
     "server.R": {
-      "checksum": "9088588b2866e7f0ad3e0841c38bb29c"
+      "checksum": "292fbe3bffe7d4872a4a0a1bf1c19833"
     },
     "tests/testthat.R": {
       "checksum": "12e9b09de5275bdc13bde6ae5a82f8b1"
@@ -5522,7 +5522,7 @@
       "checksum": "3913bd5cb03e7a559792ea44f96e6ea5"
     },
     "tests/testthat/test-UI-01_example_files.R": {
-      "checksum": "09a70169f478b40d16b90be36452bfd7"
+      "checksum": "2e97ebb4d685da5ee63f795fef29b164"
     },
     "tests/testthat/test-UI-02_edge_cases.R": {
       "checksum": "2864650281b3d0c301bbc41c416bb732"
