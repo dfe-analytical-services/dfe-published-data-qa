@@ -13,7 +13,6 @@ server <- function(input, output, session) {
     dataUploaded = FALSE,
     metaUploaded = FALSE,
     screenfailed = FALSE,
-    showadvisory = FALSE,
     correctDataType = TRUE,
     correctMetaType = TRUE,
     datafile = NULL,
@@ -38,13 +37,22 @@ server <- function(input, output, session) {
     values$metafile <- input$metafile
   })
 
-  observeEvent(input$datafile,
+  observeEvent(
+    input$datafile,
     {
       values$clear <- FALSE
-      values$correctDataType <- if_else(file_ext(input$datafile) == "csv", TRUE, FALSE)
+      values$correctDataType <- if_else(
+        file_ext(input$datafile) == "csv",
+        TRUE,
+        FALSE
+      )
       if (tail(values$correctDataType, n = 1) == FALSE) {
         values$dataUploaded <- FALSE
-        shinyFeedback::feedbackWarning("datafile", !values$correctDataType, "Data files must be in comma separated values format (.csv)")
+        shinyFeedback::feedbackWarning(
+          "datafile",
+          !values$correctDataType,
+          "Data files must be in comma separated values format (CSV)"
+        )
       } else {
         hideFeedback("datafile")
         values$dataUploaded <- TRUE
@@ -53,12 +61,21 @@ server <- function(input, output, session) {
     priority = 1000
   )
 
-  observeEvent(input$metafile,
+  observeEvent(
+    input$metafile,
     {
       values$clear <- FALSE
-      values$correctMetaType <- if_else(file_ext(input$metafile) == "csv", TRUE, FALSE)
+      values$correctMetaType <- if_else(
+        file_ext(input$metafile) == "csv",
+        TRUE,
+        FALSE
+      )
       if (tail(values$correctMetaType, n = 1) == FALSE) {
-        shinyFeedback::feedbackWarning("metafile", !values$correctMetaType, "Metadata files must be in comma separated values format (.csv)")
+        shinyFeedback::feedbackWarning(
+          "metafile",
+          !values$correctMetaType,
+          "Metadata files must be in comma separated values format (CSV)"
+        )
         values$metaUploaded <- FALSE
       } else {
         hideFeedback("metafile")
@@ -126,7 +143,8 @@ server <- function(input, output, session) {
     )
   })
 
-  observeEvent(input$screenbutton | values$proceed_with_screening,
+  observeEvent(
+    input$screenbutton | values$proceed_with_screening,
     {
       if (input$screenbutton == 0 && is.null(values$proceed_with_screening)) {
         # This prevents it running if no button was pressed to trigger it, required due to `ignoreInit = TRUE`
@@ -138,7 +156,12 @@ server <- function(input, output, session) {
       shinyjs::hideElement(id = "guidance")
 
       # Show loading screen ---------------------------------------------------------------------------------
-      shinyjs::showElement(id = "loading", anim = TRUE, animType = "fade", time = 1)
+      shinyjs::showElement(
+        id = "loading",
+        anim = TRUE,
+        animType = "fade",
+        time = 1
+      )
 
       values$shouldShow <- TRUE
 
@@ -151,9 +174,6 @@ server <- function(input, output, session) {
 
       inputData <- values$datafile
       inputMeta <- values$metafile
-
-      data <- readFile(inputData$datapath)
-      meta <- readFile(inputMeta$datapath)
 
       # File info ---------------------------------------------------------------------------------------------------------
 
@@ -172,20 +192,43 @@ server <- function(input, output, session) {
         attributes(dateTime)$tzone <- "Europe/London"
 
         output$testtime <- renderText({
-          paste0("Time - ", format(dateTime, "%H:%M:%S, %d %b %Y"), " (Europe/London)")
+          paste0(
+            "Time - ",
+            format(dateTime, "%H:%M:%S, %d %b %Y"),
+            " (Europe/London)"
+          )
         })
 
-        # Size, rows and cols for files
+        # Size, rows and cols — use cheap reads so we don't parse the whole
+        # file before screening. select=1L reads only the first column.
+        file_info <- tryCatch(
+          {
+            list(
+              data_rows = nrow(fread(inputData$datapath, select = 1L)),
+              data_cols = ncol(fread(inputData$datapath, nrows = 0L)),
+              meta_rows = nrow(fread(inputMeta$datapath, select = 1L)),
+              meta_cols = ncol(fread(inputMeta$datapath, nrows = 0L))
+            )
+          },
+          error = function(e) {
+            list(data_rows = NA, data_cols = NA, meta_rows = NA, meta_cols = NA)
+          }
+        )
+        data_rows_count <- file_info$data_rows
+        data_cols_count <- file_info$data_cols
+        meta_rows_count <- file_info$meta_rows
+        meta_cols_count <- file_info$meta_cols
+
         output$data_size <- renderText({
           paste0("Size - ", pretty_filesize(inputData$size))
         })
 
         output$data_rows <- renderText({
-          paste0("Rows - ", comma_sep(data$mainFile %>% nrow()))
+          paste0("Rows - ", comma_sep(data_rows_count))
         })
 
         output$data_cols <- renderText({
-          paste0("Columns - ", comma_sep(data$mainFile %>% ncol()))
+          paste0("Columns - ", comma_sep(data_cols_count))
         })
 
         output$meta_size <- renderText({
@@ -193,67 +236,78 @@ server <- function(input, output, session) {
         })
 
         output$meta_rows <- renderText({
-          paste0("Rows - ", comma_sep(meta$mainFile %>% nrow()))
+          paste0("Rows - ", comma_sep(meta_rows_count))
         })
 
         output$meta_cols <- renderText({
-          paste0("Columns - ", comma_sep(meta$mainFile %>% ncol()))
+          paste0("Columns - ", comma_sep(meta_cols_count))
         })
 
         # File validation ---------------------------------------------------------------------------------
 
-        screeningOutput <- screenFiles(
-          inputData$name, inputMeta$name,
-          data$fileSeparator, meta$fileSeparator,
-          data$fileCharacter, meta$fileCharacter,
-          data$mainFile, meta$mainFile
+        screeningOutput <- tryCatch(
+          screenFiles(
+            datapath = inputData$datapath,
+            metapath = inputMeta$datapath,
+            datafilename = inputData$name,
+            metafilename = inputMeta$name
+          ),
+          error = function(e) {
+            list(
+              results = data.frame(
+                result = "FAIL",
+                message = paste("Screener encountered an unexpected error:", conditionMessage(e)),
+                stage = "Unknown",
+                check = "Internal error",
+                guidance_url = NA_character_,
+                stringsAsFactors = FALSE
+              ),
+              progress_message = "Screening failed due to an unexpected internal error",
+              passed = FALSE,
+              api_suitable = FALSE
+            )
+          }
         )
 
         all_results <- screeningOutput$results
 
-        output$progress_stage <- renderImage(
-          {
-            screeningOutput$progress_stage
-          },
-          deleteFile = FALSE
-        )
+        display_results <- all_results %>%
+          mutate(
+            message = ifelse(
+              is.na(guidance_url) | guidance_url == "",
+              message,
+              paste0(
+                message,
+                " <a href='",
+                guidance_url,
+                "' target='_blank' rel='noopener noreferrer'>",
+                "(view guidance<span class='sr-only'> for ",
+                check,
+                "</span>)",
+                "</a>"
+              )
+            )
+          )
 
         output$progress_message <- renderText({
           screeningOutput$progress_message
         })
 
         # Summary stats ---------------------------------------------------------------------------------
-        # numberActiveTests created in global.r file
 
         run_tests <- all_results %>% nrow()
-
-        ignored_tests <- all_results %>%
-          filter(result == "IGNORE") %>%
-          nrow()
 
         failed_tests <- all_results %>%
           filter(result == "FAIL") %>%
           nrow()
 
-        advisory_tests <- all_results %>%
-          filter(result == "ADVISORY") %>%
+        warning_tests <- all_results %>%
+          filter(result == "WARNING") %>%
           nrow()
-
-        ancillary_tests <- all_results %>%
-          filter(result == "ANCILLARY") %>%
-          nrow()
-
-        info_tests <- all_results %>%
-          filter(result == "PASS WITH NOTE") %>%
-          nrow()
-
-        combined_tests <- advisory_tests + ancillary_tests + info_tests
 
         passed_tests <- all_results %>%
-          filter(result %in% c("PASS", "PASS WITH NOTE")) %>%
+          filter(result %in% c("PASS")) %>%
           nrow()
-
-        leftover_tests <- numberActiveTests - run_tests
 
         # Export these counts for use in tests
         exportTestValues(
@@ -263,17 +317,8 @@ server <- function(input, output, session) {
           failed = {
             failed_tests
           },
-          advisory = {
-            advisory_tests
-          },
-          ancillary = {
-            ancillary_tests
-          },
-          info = {
-            info_tests
-          },
-          ignored = {
-            ignored_tests
+          warning = {
+            warning_tests
           },
           progress_message = {
             screeningOutput$progress_message
@@ -281,7 +326,11 @@ server <- function(input, output, session) {
         )
 
         output$summary_text <- renderText({
-          paste0("Of all ", numberActiveTests, " tests, ", run_tests, " were successfully ran against the files, the results of these were:")
+          paste0(
+            "Of the ",
+            run_tests,
+            " tests run against the files, the results were:"
+          )
         })
 
         output$sum_failed_tests <- renderText({
@@ -289,15 +338,11 @@ server <- function(input, output, session) {
         })
 
         output$sum_combined_tests <- renderText({
-          summarise_stats(combined_tests, "with advisory notes")
+          summarise_stats(warning_tests, "with warnings or notes")
         })
 
         output$sum_passed_tests <- renderText({
           summarise_stats(passed_tests, "passed")
-        })
-
-        output$sum_ignored_tests <- renderText({
-          summarise_stats(ignored_tests, "not applicable to the data")
         })
 
         time_stamps$end_time <- Sys.time()
@@ -318,32 +363,31 @@ server <- function(input, output, session) {
           summarise_stats(failed_tests, "failed")
         })
 
-        output$num_advisory_tests <- renderText({
-          summarise_stats(advisory_tests, "with recommendations")
-        })
-
-        output$num_info_tests <- renderText({
-          summarise_stats(info_tests, "with information to note")
+        output$num_warning_tests <- renderText({
+          summarise_stats(warning_tests, "with warnings")
         })
 
         output$all_tests <- renderText({
-          paste0("Full breakdown of the ", run_tests, " tests that were ran against the files")
+          paste0(
+            "Full breakdown of the ",
+            run_tests,
+            " tests that were ran against the files"
+          )
         })
 
         # Main outputs for results ---------------------------------------------------------------------------------
 
         output$table_failed_tests <- renderTable(
           {
-            filter(all_results, result == "FAIL") %>% select(message)
+            filter(display_results, result == "FAIL") %>% select(message)
           },
           sanitize.text.function = function(x) x,
           include.colnames = FALSE
         )
 
-
-        output$table_advisory_tests <- renderTable(
+        output$table_warning_tests <- renderTable(
           {
-            filter(all_results, result == "ADVISORY") %>% select(message)
+            filter(display_results, result == "WARNING") %>% select(message)
           },
           sanitize.text.function = function(x) x,
           include.colnames = FALSE
@@ -351,15 +395,7 @@ server <- function(input, output, session) {
 
         output$table_all_tests <- renderTable(
           {
-            all_results %>% select(message, result)
-          },
-          sanitize.text.function = function(x) x,
-          include.colnames = FALSE
-        )
-
-        output$table_info_tests <- renderTable(
-          {
-            filter(all_results, result == "PASS WITH NOTE") %>% select(message, result)
+            display_results %>% select(message, result)
           },
           sanitize.text.function = function(x) x,
           include.colnames = FALSE
@@ -389,87 +425,144 @@ server <- function(input, output, session) {
             type = "success",
             tags$span(
               "Your files can now be uploaded to Explore Education Statistics, see our  ",
-              a(href = "https://dfe-analytical-services.github.io/analysts-guide/statistics-production/ees.html", "guidance on using EES", target = "_blank"),
+              a(
+                href = "https://dfe-analytical-services.github.io/analysts-guide/statistics-production/ees.html",
+                "guidance on using EES",
+                target = "_blank"
+              ),
               " for more information."
             ),
             html = TRUE
           )
         }
 
+        # Read full files only when screening passed — used by trendy-tabs and QA sections
+        if (failed_tests == 0) {
+          data <- list(
+            mainFile = fread(
+              inputData$datapath,
+              encoding = "UTF-8",
+              na.strings = ""
+            )
+          )
+          meta <- list(
+            mainFile = fread(
+              inputMeta$datapath,
+              encoding = "UTF-8",
+              na.strings = ""
+            )
+          )
+        }
+
         # Dynamic trendy-tabs,
         # Hide all QA tabs if any test fails
         if (failed_tests > 0) {
-          shinyjs::hide(selector = c(
-            "#trendy_tabs li a[data-value=previewTab]",
-            "#trendy_tabs li a[data-value=obUnitTab]",
-            "#trendy_tabs li a[data-value=indicatorsTab]",
-            "#trendy_tabs li a[data-value=outliersTab]",
-            "#trendy_tabs li a[data-value=geogTab]"
-          ))
-        } else if (failed_tests == 0 & data$mainFile %>%
-          select(geographic_level) %>%
-          distinct() %>%
-          nrow() > 1) {
-          shinyjs::show(selector = c(
-            "#trendy_tabs li a[data-value=previewTab]",
-            "#trendy_tabs li a[data-value=obUnitTab]",
-            "#trendy_tabs li a[data-value=indicatorsTab]",
-            "#trendy_tabs li a[data-value=outliersTab]",
-            "#trendy_tabs li a[data-value=geogTab]"
-          ))
-        }
-        # Hide geography and YoY tabs if one geog level and data not split by year
-        else if (failed_tests == 0 & data$mainFile %>%
-          select(geographic_level) %>%
-          distinct() %>%
-          nrow() == 1 &
-          data$mainFile %>%
-            select(time_identifier) %>%
-            filter(!time_identifier %in% c(six_digit_identifiers[5:7], four_digit_identifiers[1:2])) %>%
-            nrow() >= 1
+          shinyjs::hide(
+            selector = c(
+              "#trendy_tabs li a[data-value=previewTab]",
+              "#trendy_tabs li a[data-value=obUnitTab]",
+              "#trendy_tabs li a[data-value=indicatorsTab]",
+              "#trendy_tabs li a[data-value=outliersTab]",
+              "#trendy_tabs li a[data-value=geogTab]"
+            )
+          )
+        } else if (
+          failed_tests == 0 &
+            data$mainFile %>%
+              select(geographic_level) %>%
+              distinct() %>%
+              nrow() >
+              1
         ) {
-          shinyjs::show(selector = c(
-            "#trendy_tabs li a[data-value=previewTab]",
-            "#trendy_tabs li a[data-value=obUnitTab]",
-            "#trendy_tabs li a[data-value=indicatorsTab]"
-          ))
+          shinyjs::show(
+            selector = c(
+              "#trendy_tabs li a[data-value=previewTab]",
+              "#trendy_tabs li a[data-value=obUnitTab]",
+              "#trendy_tabs li a[data-value=indicatorsTab]",
+              "#trendy_tabs li a[data-value=outliersTab]",
+              "#trendy_tabs li a[data-value=geogTab]"
+            )
+          )
+        } else if (
+          failed_tests == 0 &
+            data$mainFile %>%
+              select(geographic_level) %>%
+              distinct() %>%
+              nrow() ==
+              1 &
+            data$mainFile %>%
+              select(time_identifier) %>%
+              filter(
+                !time_identifier %in%
+                  c(six_digit_identifiers[5:7], four_digit_identifiers[1:2])
+              ) %>%
+              nrow() >=
+              1
+        ) {
+          # Hide geography and YoY tabs if one geog level and data not split by year
+          shinyjs::show(
+            selector = c(
+              "#trendy_tabs li a[data-value=previewTab]",
+              "#trendy_tabs li a[data-value=obUnitTab]",
+              "#trendy_tabs li a[data-value=indicatorsTab]"
+            )
+          )
 
-          shinyjs::hide(selector = c(
-            "#trendy_tabs li a[data-value=geogTab]",
-            "#trendy_tabs li a[data-value=outliersTab]"
-          ))
-        }
-        # Hide geography tab if only one geography level
-        else if (failed_tests == 0 & data$mainFile %>%
-          select(geographic_level) %>%
-          distinct() %>%
-          nrow() == 1) {
-          shinyjs::show(selector = c(
-            "#trendy_tabs li a[data-value=previewTab]",
-            "#trendy_tabs li a[data-value=obUnitTab]",
-            "#trendy_tabs li a[data-value=indicatorsTab]",
-            "#trendy_tabs li a[data-value=outliersTab]"
-          ))
+          shinyjs::hide(
+            selector = c(
+              "#trendy_tabs li a[data-value=geogTab]",
+              "#trendy_tabs li a[data-value=outliersTab]"
+            )
+          )
+        } else if (
+          failed_tests == 0 &
+            data$mainFile %>%
+              select(geographic_level) %>%
+              distinct() %>%
+              nrow() ==
+              1
+        ) {
+          # Hide geography tab if only one geography level
+          shinyjs::show(
+            selector = c(
+              "#trendy_tabs li a[data-value=previewTab]",
+              "#trendy_tabs li a[data-value=obUnitTab]",
+              "#trendy_tabs li a[data-value=indicatorsTab]",
+              "#trendy_tabs li a[data-value=outliersTab]"
+            )
+          )
 
-          shinyjs::hide(selector = c(
-            "#trendy_tabs li a[data-value=geogTab]"
-          ))
-        }
-        # hide yoy changes if data is not split by year
-        else if (failed_tests == 0 & data$mainFile %>%
-          select(time_identifier) %>%
-          filter(!time_identifier %in% c(six_digit_identifiers[5:7], four_digit_identifiers[1:2])) %>%
-          nrow() >= 1) {
-          shinyjs::show(selector = c(
-            "#trendy_tabs li a[data-value=previewTab]",
-            "#trendy_tabs li a[data-value=obUnitTab]",
-            "#trendy_tabs li a[data-value=indicatorsTab]",
-            "#trendy_tabs li a[data-value=geogTab]"
-          ))
+          shinyjs::hide(
+            selector = c(
+              "#trendy_tabs li a[data-value=geogTab]"
+            )
+          )
+        } else if (
+          failed_tests == 0 &
+            data$mainFile %>%
+              select(time_identifier) %>%
+              filter(
+                !time_identifier %in%
+                  c(six_digit_identifiers[5:7], four_digit_identifiers[1:2])
+              ) %>%
+              nrow() >=
+              1
+        ) {
+          # hide yoy changes if data is not split by year
+          shinyjs::show(
+            selector = c(
+              "#trendy_tabs li a[data-value=previewTab]",
+              "#trendy_tabs li a[data-value=obUnitTab]",
+              "#trendy_tabs li a[data-value=indicatorsTab]",
+              "#trendy_tabs li a[data-value=geogTab]"
+            )
+          )
 
-          shinyjs::hide(selector = c(
-            "#trendy_tabs li a[data-value=outliersTab]"
-          ))
+          shinyjs::hide(
+            selector = c(
+              "#trendy_tabs li a[data-value=outliersTab]"
+            )
+          )
         } # else {
         #   shinyjs::hide(selector = c(
         #     "#trendy_tabs li a[data-value=previewTab]",
@@ -480,31 +573,14 @@ server <- function(input, output, session) {
         #   ))
         # }
 
-
-        if (advisory_tests != 0) {
-          output$advisory_box <- renderUI({
-            advisory_results_box(
-              message = "num_advisory_tests",
-              table = "table_advisory_tests"
+        if (warning_tests != 0) {
+          output$warning_box <- renderUI({
+            warning_results_box(
+              message = "num_warning_tests",
+              table = "table_warning_tests"
             )
           })
         }
-
-        if (info_tests != 0) {
-          output$info_box <- renderUI({
-            info_results_box(
-              message = "num_info_tests",
-              table = "table_info_tests"
-            )
-          })
-        }
-
-        if (ancillary_tests != 0) {
-          output$ancillary_box <- renderUI({
-            ancillary_box()
-          })
-        }
-
 
         ## QA code -----------------------------------------------------------------------------
 
@@ -527,7 +603,8 @@ server <- function(input, output, session) {
 
           # Metadata preview
           output$meta_table <- DT::renderDT({
-            datatable(meta$mainFile,
+            datatable(
+              meta$mainFile,
               rownames = FALSE,
               style = "bootstrap",
               class = "table-bordered",
@@ -547,7 +624,8 @@ server <- function(input, output, session) {
 
           # Data preview
           output$data_preview <- DT::renderDT({
-            datatable(data$mainFile,
+            datatable(
+              data$mainFile,
               rownames = FALSE,
               style = "bootstrap",
               class = "table-bordered",
@@ -565,7 +643,6 @@ server <- function(input, output, session) {
             )
           })
 
-
           # Geog / time permutations -----------------------------------------------------
 
           # output$geog_time_perms2 <- renderTable({
@@ -579,9 +656,14 @@ server <- function(input, output, session) {
             table <- data$mainFile %>%
               count(time_period, geographic_level) %>%
               mutate(n = replace(n, n > 0, "Y")) %>%
-              pivot_wider(names_from = time_period, values_from = n, values_fill = "N")
+              pivot_wider(
+                names_from = time_period,
+                values_from = n,
+                values_fill = "N"
+              )
 
-            datatable(table,
+            datatable(
+              table,
               rownames = FALSE,
               style = "bootstrap",
               class = "table-bordered",
@@ -637,7 +719,6 @@ server <- function(input, output, session) {
           # })
           #
 
-
           # Show filters and associated levels from the data -----------------------------
 
           showFilterLevels <- function(meta) {
@@ -651,22 +732,27 @@ server <- function(input, output, session) {
               dplyr::filter(!is.na(filter_grouping_column)) %>%
               select(col_name, filter_grouping_column)
 
-
             levelsTable <- function(filter) {
-              if (nrow(filter_groups) > 0 & filter %in% filter_groups$col_name) {
+              if (
+                nrow(filter_groups) > 0 & filter %in% filter_groups$col_name
+              ) {
                 filter_group <- filter_groups %>%
                   dplyr::filter(col_name == filter) %>%
                   pull(filter_grouping_column)
 
-                return(data$mainFile %>%
-                  select(all_of(c(filter_group, filter))) %>%
-                  distinct() %>%
-                  arrange(!!sym(filter_group), !!sym(filter)))
+                return(
+                  data$mainFile %>%
+                    select(all_of(c(filter_group, filter))) %>%
+                    distinct() %>%
+                    arrange(!!sym(filter_group), !!sym(filter))
+                )
               } else {
-                return(data$mainFile %>%
-                  select(filter) %>%
-                  distinct() %>%
-                  arrange(filter))
+                return(
+                  data$mainFile %>%
+                    select(all_of(filter)) %>%
+                    distinct() %>%
+                    arrange(filter)
+                )
               }
             }
 
@@ -681,34 +767,42 @@ server <- function(input, output, session) {
             if (length(myList) == 0) {
               "There are no filters in this file"
             } else {
-              tableList <- purrr::imap(myList, ~ {
-                tagList(
-                  h4(paste("Filter ", .y)),
-                  # tableOutput(outputId = paste0("table_", .y))
-                  DTOutput(outputId = paste0("table_", .y), width = "60%") %>% withSpinner()
-                )
-              })
-
-              purrr::iwalk(myList, ~ {
-                output_name <- paste0("table_", .y)
-                # output[[output_name]] <- renderTable(.x)
-
-                output[[output_name]] <- DT::renderDT(datatable(.x,
-                  rownames = FALSE,
-                  style = "bootstrap",
-                  class = "table-bordered",
-                  options = list(
-                    dom = "pt",
-                    ordering = F,
-                    # rowCallback = JS(rowCallback),
-                    initComplete = JS(
-                      "function(settings, json) {",
-                      "$(this.api().table().header()).css({'background-color': '#232628', 'color': '#c8c8c8'});",
-                      "}"
-                    )
+              tableList <- purrr::imap(
+                myList,
+                ~ {
+                  tagList(
+                    h4(paste("Filter ", .y)),
+                    # tableOutput(outputId = paste0("table_", .y))
+                    DTOutput(outputId = paste0("table_", .y), width = "60%") %>%
+                      withSpinner()
                   )
-                ))
-              })
+                }
+              )
+
+              purrr::iwalk(
+                myList,
+                ~ {
+                  output_name <- paste0("table_", .y)
+                  # output[[output_name]] <- renderTable(.x)
+
+                  output[[output_name]] <- DT::renderDT(datatable(
+                    .x,
+                    rownames = FALSE,
+                    style = "bootstrap",
+                    class = "table-bordered",
+                    options = list(
+                      dom = "pt",
+                      ordering = F,
+                      # rowCallback = JS(rowCallback),
+                      initComplete = JS(
+                        "function(settings, json) {",
+                        "$(this.api().table().header()).css({'background-color': '#232628', 'color': '#c8c8c8'});",
+                        "}"
+                      )
+                    )
+                  ))
+                }
+              )
 
               tagList(tableList)
             }
@@ -721,7 +815,8 @@ server <- function(input, output, session) {
               filter(col_type == "Indicator") %>%
               select(col_name, label)
 
-            datatable(table,
+            datatable(
+              table,
               rownames = FALSE,
               style = "bootstrap",
               class = "table-bordered",
@@ -741,28 +836,39 @@ server <- function(input, output, session) {
           # Create geographic level choice depending on what's available
 
           observe({
-            updateSelectInput(session, "geog_parameter", choices = data$mainFile %>% pull(geographic_level) %>% unique())
+            updateSelectInput(
+              session,
+              "geog_parameter",
+              choices = data$mainFile %>% pull(geographic_level) %>% unique()
+            )
           })
 
           # Create indicator choice depending on what's available
           observe({
-            updateSelectInput(session, "ind_parameter", choices = meta$mainFile %>% filter(col_type == "Indicator") %>% pull(col_name))
+            updateSelectInput(
+              session,
+              "ind_parameter",
+              choices = meta$mainFile %>%
+                filter(col_type == "Indicator") %>%
+                pull(col_name)
+            )
           })
 
           # Show summary stats table for an indicator
           showsumstats <- function(parameter, geog_parameter) {
-            args <- expand.grid(ind = parameter, geog = geog_parameter, stringsAsFactors = FALSE)
+            args <- expand.grid(
+              ind = parameter,
+              geog = geog_parameter,
+              stringsAsFactors = FALSE
+            )
             sumtable <- function(args) {
               indicators <- args[[1]]
               geographies <- args[[2]]
               y <- data$mainFile %>%
                 filter(geographic_level %in% geographies) %>%
                 mutate(
-                  across(get(indicators), na_if, gssNAvcode),
-                  across(get(indicators), na_if, gssNApcode),
-                  across(get(indicators), na_if, gssSupcode),
-                  across(get(indicators), na_if, gssRndcode),
-                  across(get(indicators), as.numeric)
+                  across(all_of(indicators), ~ replace(.x, .x %in% gss_symbols, NA)),
+                  across(all_of(indicators), as.numeric)
                 ) %>%
                 select(time_period, indicators) %>%
                 group_by(time_period) %>%
@@ -788,7 +894,11 @@ server <- function(input, output, session) {
                 mutate(Change = as.character(0))
 
               for (i in 1:nrow(y)) {
-                y[i, ncol(y)] <- (paste(y[i, 4:(ncol(y) - 1)], sep = "", collapse = ","))
+                y[i, ncol(y)] <- (paste(
+                  y[i, 4:(ncol(y) - 1)],
+                  sep = "",
+                  collapse = ","
+                ))
               }
 
               y$Change <- str_replace_all(y$Change, "x", "0")
@@ -800,7 +910,6 @@ server <- function(input, output, session) {
 
             return(output)
           }
-
 
           # create a list of tables - with one for each indicator summary
           theList <- eventReactive(input$submit, {
@@ -821,7 +930,9 @@ server <- function(input, output, session) {
               shinyFeedback::hideFeedback("geog_parameter")
             }
 
-            if (!is.null(input$ind_parameter) && !is.null(input$geog_parameter)) {
+            if (
+              !is.null(input$ind_parameter) && !is.null(input$geog_parameter)
+            ) {
               return(showsumstats(input$ind_parameter, input$geog_parameter))
             }
           })
@@ -831,44 +942,64 @@ server <- function(input, output, session) {
             output$table_list <- renderUI({
               req(theList())
 
-              t_list <- purrr::imap(theList(), ~ {
-                tagList(
-                  h4(.y),
-                  DTOutput(outputId = paste0("t_", .y), width = "100%")
-                )
-              })
+              t_list <- purrr::imap(
+                theList(),
+                ~ {
+                  tagList(
+                    h4(.y),
+                    DTOutput(outputId = paste0("t_", .y), width = "100%")
+                  )
+                }
+              )
 
-              purrr::iwalk(theList(), ~ {
-                output_name <- paste0("t_", .y)
+              purrr::iwalk(
+                theList(),
+                ~ {
+                  output_name <- paste0("t_", .y)
 
-                output[[output_name]] <- DT::renderDT(server = FALSE, {
-                  cd <- list(list(targets = ncol(.x) - 1, render = JS("function(data, type, full){ return '<span class=sparkSamples>' + data + '</span>' }")))
+                  output[[output_name]] <- DT::renderDT(server = FALSE, {
+                    cd <- list(list(
+                      targets = ncol(.x) - 1,
+                      render = JS(
+                        "function(data, type, full){ return '<span class=sparkSamples>' + data + '</span>' }"
+                      )
+                    ))
 
-                  cb <- JS(paste0("function (oSettings, json) {\n  $('.sparkSamples:not(:has(canvas))').sparkline('html', { type: 'line', lineColor: '#c8c8c8', fillColor: '#e87421', width: '200px', height: '40px'});\n}"), collapse = "")
+                    cb <- JS(
+                      paste0(
+                        "function (oSettings, json) {\n  $('.sparkSamples:not(:has(canvas))').sparkline('html', { type: 'line', lineColor: '#c8c8c8', fillColor: '#e87421', width: '200px', height: '40px'});\n}"
+                      ),
+                      collapse = ""
+                    )
 
-                  dt <- datatable(.x,
-                    rownames = FALSE,
-                    style = "bootstrap",
-                    class = "table-bordered",
-                    options = list(
-                      columnDefs = cd,
-                      fnDrawCallback = cb,
-                      rowCallback = JS(rowCallback),
-                      dom = "t",
-                      ordering = F,
-                      initComplete = JS(
-                        "function(settings, json) {",
-                        "$(this.api().table().header()).css({'background-color': '#232628', 'color': '#c8c8c8'});",
-                        "}"
+                    dt <- datatable(
+                      .x,
+                      rownames = FALSE,
+                      style = "bootstrap",
+                      class = "table-bordered",
+                      options = list(
+                        columnDefs = cd,
+                        fnDrawCallback = cb,
+                        rowCallback = JS(rowCallback),
+                        dom = "t",
+                        ordering = F,
+                        initComplete = JS(
+                          "function(settings, json) {",
+                          "$(this.api().table().header()).css({'background-color': '#232628', 'color': '#c8c8c8'});",
+                          "}"
+                        )
                       )
                     )
-                  )
 
-                  dt$dependencies <- append(dt$dependencies, htmlwidgets:::getDependency("sparkline"))
+                    dt$dependencies <- append(
+                      dt$dependencies,
+                      htmlwidgets:::getDependency("sparkline")
+                    )
 
-                  dt
-                })
-              })
+                    dt
+                  })
+                }
+              )
               tagList(t_list)
             })
           })
@@ -880,7 +1011,9 @@ server <- function(input, output, session) {
             selectInput(
               inputId = "outlier_indicator_parameter",
               label = "Choose indicator(s):",
-              choices = meta$mainFile %>% filter(col_type == "Indicator") %>% select(col_name),
+              choices = meta$mainFile %>%
+                filter(col_type == "Indicator") %>%
+                select(col_name),
               multiple = TRUE
             )
           })
@@ -890,7 +1023,10 @@ server <- function(input, output, session) {
             selectInput(
               inputId = "ctime_parameter",
               label = "Choose current time period:",
-              choices = data$mainFile %>% arrange(desc(time_period)) %>% pull(time_period) %>% unique(),
+              choices = data$mainFile %>%
+                arrange(desc(time_period)) %>%
+                pull(time_period) %>%
+                unique(),
               multiple = FALSE
             )
           })
@@ -900,16 +1036,33 @@ server <- function(input, output, session) {
             selectInput(
               inputId = "comptime_parameter",
               label = "Choose comparison time period:",
-              choices = data$mainFile %>% arrange(desc(time_period)) %>% pull(time_period) %>% unique(),
-              selected = data$mainFile %>% select(time_period) %>% arrange(desc(time_period)) %>% distinct() %>% slice(2) %>% pull(time_period),
+              choices = data$mainFile %>%
+                arrange(desc(time_period)) %>%
+                pull(time_period) %>%
+                unique(),
+              selected = data$mainFile %>%
+                select(time_period) %>%
+                arrange(desc(time_period)) %>%
+                distinct() %>%
+                slice(2) %>%
+                pull(time_period),
               multiple = FALSE
             )
           })
 
           # get outlier stats
 
-          get_outliers <- function(outlier_indicator_parameter, threshold_setting, ctime_parameter, comptime_parameter) {
-            args <- expand.grid(meas = outlier_indicator_parameter, thresh = threshold_setting, current = ctime_parameter, comparison = comptime_parameter, stringsAsFactors = FALSE)
+          get_outliers <- function(outlier_indicator_parameter,
+                                   threshold_setting,
+                                   ctime_parameter,
+                                   comptime_parameter) {
+            args <- expand.grid(
+              meas = outlier_indicator_parameter,
+              thresh = threshold_setting,
+              current = ctime_parameter,
+              comparison = comptime_parameter,
+              stringsAsFactors = FALSE
+            )
 
             # Get list of indicators
             indicators <- meta$mainFile %>%
@@ -922,18 +1075,50 @@ server <- function(input, output, session) {
               names()
 
             outliertable <- function(args) {
-              return(eval(parse(text = paste0("data$mainFile %>% group_by(time_period,geographic_level) %>%
-          mutate(", args[1], "== as.numeric(", args[1], ")) %>%
-          filter(time_period %in% c(", args[4], ",", args[3], ")) %>%
-          select(all_of(filters),", args[1], ") %>%
-          spread(time_period,", args[1], ") %>%
-          mutate(thresh_indicator_big = as.numeric(`", args[4], "`) * (1+(", args[2], "/100)),
-                 thresh_indicator_small = as.numeric(`", args[4], "`) * (1-(", args[2], "/100)),
-                 outlier_large = as.numeric(`", args[3], "`) >= thresh_indicator_big,
-                 outlier_small = as.numeric(`", args[3], "`) <= thresh_indicator_small) %>%
-          filter(as.numeric(`", args[3], "`) >= 5 | as.numeric(`", args[4], "`) >= 5) %>%
+              return(eval(parse(
+                text = paste0(
+                  "data$mainFile %>% group_by(time_period,geographic_level) %>%
+          mutate(",
+                  args[1],
+                  "== as.numeric(",
+                  args[1],
+                  ")) %>%
+          filter(time_period %in% c(",
+                  args[4],
+                  ",",
+                  args[3],
+                  ")) %>%
+          select(all_of(filters),",
+                  args[1],
+                  ") %>%
+          spread(time_period,",
+                  args[1],
+                  ") %>%
+          mutate(thresh_indicator_big = as.numeric(`",
+                  args[4],
+                  "`) * (1+(",
+                  args[2],
+                  "/100)),
+                 thresh_indicator_small = as.numeric(`",
+                  args[4],
+                  "`) * (1-(",
+                  args[2],
+                  "/100)),
+                 outlier_large = as.numeric(`",
+                  args[3],
+                  "`) >= thresh_indicator_big,
+                 outlier_small = as.numeric(`",
+                  args[3],
+                  "`) <= thresh_indicator_small) %>%
+          filter(as.numeric(`",
+                  args[3],
+                  "`) >= 5 | as.numeric(`",
+                  args[4],
+                  "`) >= 5) %>%
           filter(outlier_large == TRUE | outlier_small ==TRUE) %>%
-          select(-thresh_indicator_big,-thresh_indicator_small,-time_identifier,-outlier_large,-outlier_small)"))))
+          select(-thresh_indicator_big,-thresh_indicator_small,-time_identifier,-outlier_large,-outlier_small)"
+                )
+              )))
             }
 
             output <- apply(args, 1, outliertable)
@@ -955,7 +1140,12 @@ server <- function(input, output, session) {
                   text = "Please select two different time periods for comparison."
                 )
               } else {
-                return(get_outliers(input$outlier_indicator_parameter, input$threshold_setting, input$ctime_parameter, input$comptime_parameter))
+                return(get_outliers(
+                  input$outlier_indicator_parameter,
+                  input$threshold_setting,
+                  input$ctime_parameter,
+                  input$comptime_parameter
+                ))
               }
             }
           })
@@ -965,35 +1155,43 @@ server <- function(input, output, session) {
             output$table_outlier_list <- renderUI({
               req(theOutlierList())
 
-              to_list <- purrr::imap(theOutlierList(), ~ {
-                tagList(
-                  h4(.y),
-                  DTOutput(outputId = paste0("to_", .y), width = "100%") %>% withSpinner()
-                )
-              })
-
-              purrr::iwalk(theOutlierList(), ~ {
-                names <- paste0("to_", .y)
-                output[[names]] <- DT::renderDT(server = FALSE, {
-                  datatable(.x,
-                    rownames = FALSE,
-                    style = "bootstrap",
-                    extensions = "Buttons",
-                    class = "table-bordered",
-                    options = list(
-                      dom = "Bptl",
-                      buttons = c("csv", "copy", "colvis"),
-                      rowCallback = JS(rowCallback),
-                      initComplete = JS(
-                        "function(settings, json) {",
-                        "$(this.api().table().header()).css({'background-color': '#232628', 'color': '#c8c8c8'});",
-                        "}"
-                      ),
-                      scrollX = TRUE
-                    )
+              to_list <- purrr::imap(
+                theOutlierList(),
+                ~ {
+                  tagList(
+                    h4(.y),
+                    DTOutput(outputId = paste0("to_", .y), width = "100%") %>%
+                      withSpinner()
                   )
-                })
-              })
+                }
+              )
+
+              purrr::iwalk(
+                theOutlierList(),
+                ~ {
+                  names <- paste0("to_", .y)
+                  output[[names]] <- DT::renderDT(server = FALSE, {
+                    datatable(
+                      .x,
+                      rownames = FALSE,
+                      style = "bootstrap",
+                      extensions = "Buttons",
+                      class = "table-bordered",
+                      options = list(
+                        dom = "Bptl",
+                        buttons = c("csv", "copy", "colvis"),
+                        rowCallback = JS(rowCallback),
+                        initComplete = JS(
+                          "function(settings, json) {",
+                          "$(this.api().table().header()).css({'background-color': '#232628', 'color': '#c8c8c8'});",
+                          "}"
+                        ),
+                        scrollX = TRUE
+                      )
+                    )
+                  })
+                }
+              )
               tagList(to_list)
             })
           })
@@ -1005,7 +1203,9 @@ server <- function(input, output, session) {
             selectizeInput(
               inputId = "geog_indicator_parameter",
               label = "Choose indicator(s):",
-              choices = meta$mainFile %>% filter(col_type == "Indicator") %>% select(col_name),
+              choices = meta$mainFile %>%
+                filter(col_type == "Indicator") %>%
+                select(col_name),
               options = list(
                 placeholder = "Please select an indicator",
                 onInitialize = I('function() { this.setValue(""); }')
@@ -1033,26 +1233,18 @@ server <- function(input, output, session) {
                 pull(col_name)
 
               ii <- input$geog_indicator_parameter # "number_of_pupils"
-              print(pf)
-              print(ii)
               y <- data$mainFile %>%
                 mutate(
-                  across(get(ii), na_if, gssNAvcode),
-                  across(get(ii), na_if, gssNApcode),
-                  across(get(ii), na_if, gssSupcode),
-                  across(get(ii), na_if, gssNAvcode),
-                  across(get(ii), as.numeric)
+                  across(all_of(ii), ~ replace(.x, .x %in% gss_symbols, NA)),
+                  across(all_of(ii), as.numeric)
                 )
-              print(y)
               y <- y %>%
                 summarise(
                   across(all_of(ii), sum),
                   .by = c(time_period, geographic_level, all_of(pf))
                 )
-              print(y)
               y <- y %>%
                 spread(key = geographic_level, value = ii)
-              print(y)
               return(y)
             }
           })
@@ -1065,15 +1257,18 @@ server <- function(input, output, session) {
             check_geog <- function(dataset, id = c("time_period", all_of(pf))) {
               years <- dataset[, id]
               dataset[, id] <- NULL
-              dataset$match <- do.call(pmax, as.list(dataset)) == do.call(pmin, as.list(dataset))
+              dataset$match <- do.call(pmax, as.list(dataset)) ==
+                do.call(pmin, as.list(dataset))
               dataset[, id] <- years
               dataset <- dataset %>%
                 select(time_period, all_of(pf), everything()) %>%
-                mutate(match = case_when(
-                  match == TRUE ~ "MATCH",
-                  match == FALSE ~ "NO MATCH",
-                  TRUE ~ "MISSING TOTAL"
-                )) %>%
+                mutate(
+                  match = case_when(
+                    match == TRUE ~ "MATCH",
+                    match == FALSE ~ "NO MATCH",
+                    TRUE ~ "MISSING TOTAL"
+                  )
+                ) %>%
                 arrange(match(match, c("NO MATCH", "MISSING TOTAL", "MATCH")))
 
               return(dataset)
@@ -1084,8 +1279,8 @@ server <- function(input, output, session) {
 
               ttt <- check_geog(data_geog()) %>% as.data.frame()
 
-
-              datatable(ttt,
+              datatable(
+                ttt,
                 rownames = FALSE,
                 style = "bootstrap",
                 extensions = "Buttons",
@@ -1101,10 +1296,14 @@ server <- function(input, output, session) {
                   ),
                   scrollX = TRUE
                 )
-              ) %>% formatStyle(
-                "match",
-                backgroundColor = styleEqual(c("NO MATCH", "MISSING TOTAL", "MATCH"), c("#910000", "#e87421", "#30A104"))
-              )
+              ) %>%
+                formatStyle(
+                  "match",
+                  backgroundColor = styleEqual(
+                    c("NO MATCH", "MISSING TOTAL", "MATCH"),
+                    c("#910000", "#e87421", "#30A104")
+                  )
+                )
             })
 
             #
@@ -1153,9 +1352,15 @@ server <- function(input, output, session) {
               table() %>%
               as.data.frame() %>%
               filter(. %in% gss_symbols) %>%
-              mutate(Perc = round_five_up(Freq / total_indicator_count * 100, 1))
+              mutate(
+                Perc = round_five_up(Freq / total_indicator_count * 100, 1)
+              )
 
-            names(suppress_count) <- c("Symbol", "Frequency", "% of total cell count")
+            names(suppress_count) <- c(
+              "Symbol",
+              "Frequency",
+              "% of total cell count"
+            )
 
             symbol_expected <- data.frame(Symbol = gss_symbols)
 
@@ -1164,7 +1369,8 @@ server <- function(input, output, session) {
               mutate_all(~ replace(., is.na(.), 0))
 
             output$suppressed_cell_count_table <- DT::renderDT({
-              datatable(suppress_count,
+              datatable(
+                suppress_count,
                 rownames = FALSE,
                 style = "bootstrap",
                 class = "table-bordered",
@@ -1196,7 +1402,8 @@ server <- function(input, output, session) {
           )
         },
         content = function(fname) {
-          write.csv(apply(all_results %>% select(message, result), 2, as.character),
+          write.csv(
+            apply(all_results %>% select(message, result), 2, as.character),
             fname,
             row.names = FALSE
           )
@@ -1207,10 +1414,20 @@ server <- function(input, output, session) {
       shinyjs::hide(id = "loading")
 
       # Show results
-      shinyjs::showElement(id = "results", anim = TRUE, animType = "fade", time = 1.5)
+      shinyjs::showElement(
+        id = "results",
+        anim = TRUE,
+        animType = "fade",
+        time = 1.5
+      )
 
       # Show reset button
-      shinyjs::showElement(id = "reset_button", anim = TRUE, animType = "fade", time = 1.5)
+      shinyjs::showElement(
+        id = "reset_button",
+        anim = TRUE,
+        animType = "fade",
+        time = 1.5
+      )
 
       # Select the screening report tab panel
 
@@ -1225,7 +1442,8 @@ server <- function(input, output, session) {
     actionButton("resetbutton", "Reset page", width = "80%")
   })
 
-  observeEvent(input$resetbutton,
+  observeEvent(
+    input$resetbutton,
     {
       if (values$environment == "shinyapps") {
         # Completely reset the session, reload the app.
@@ -1285,22 +1503,19 @@ server <- function(input, output, session) {
         output$meta_size <- NULL
         output$meta_rows <- NULL
         output$meta_cols <- NULL
-        output$progress_stage <- NULL
         output$progress_message <- NULL
         output$failed_box <- NULL
         output$passed_box <- NULL
-        output$advisory_box <- NULL
-        output$ancillary_box <- NULL
+        output$warning_box <- NULL
         output$summary_text <- NULL
         output$sum_failed_tests <- NULL
         output$sum_combined_tests <- NULL
         output$sum_passed_tests <- NULL
-        output$sum_ignored_tests <- NULL
         output$num_failed_tests <- NULL
-        output$num_advisory_tests <- NULL
+        output$num_warning_tests <- NULL
         output$all_tests <- NULL
         output$table_failed_tests <- NULL
-        output$table_advisory_tests <- NULL
+        output$table_warning_tests <- NULL
         output$table_all_tests <- NULL
 
         # set QA list objects to NULL

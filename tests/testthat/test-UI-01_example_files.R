@@ -23,22 +23,21 @@ test_that("Passes everything", {
   app$upload_file(metafile = "test-data/passes_everything.meta.csv")
   app$set_inputs(screenbutton = "click")
 
-  # Make sure it gets to the passed stage and no tests are ignored, advisory or failed
-  expect_true(app$get_value(export = "progress_message") == "Made it to the full screening checks and passed")
-  expect_true(app$get_value(export = "failed") == 0)
-  expect_true(app$get_value(export = "advisory") == 0)
-  expect_true(app$get_value(export = "ignored") == 0)
+  # Make sure it gets to the passed stage and no tests are ignored, warning or failed
+  expect_equal(app$get_value(export = "progress_message"), "Passed")
+  expect_equal(app$get_value(export = "failed"), 0)
+  expect_gte(app$get_value(export = "warning"), 1)
 
   app$set_inputs(resetbutton = "click") # Reset app
 
-  # 3. Passes everything advisory
-  app$upload_file(datafile = "test-data/passes_everything_advisory.csv")
-  app$upload_file(metafile = "test-data/passes_everything_advisory.meta.csv")
+  # 3. Passes everything warning
+  app$upload_file(datafile = "test-data/passes_everything_warning.csv")
+  app$upload_file(metafile = "test-data/passes_everything_warning.meta.csv")
   app$set_inputs(screenbutton = "click")
 
-  expect_true(app$get_value(export = "progress_message") == "Made it to the full screening checks and passed")
-  expect_true(app$get_value(export = "failed") == 0)
-  expect_true(app$get_value(export = "advisory") > 0)
+  expect_equal(app$get_value(export = "progress_message"), "Passed")
+  expect_equal(app$get_value(export = "failed"), 0)
+  expect_true(app$get_value(export = "warning") > 0)
 
   app$set_inputs(resetbutton = "click") # Reset app
 
@@ -47,9 +46,11 @@ test_that("Passes everything", {
   app$upload_file(metafile = "test-data/passes_everything_ancillary.meta.csv")
   app$set_inputs(screenbutton = "click")
 
-  expect_true(app$get_value(export = "progress_message") == "Made it to the full screening checks and passed")
-  expect_true(app$get_value(export = "failed") == 0)
-  expect_true(app$get_value(export = "ancillary") > 0)
+  expect_equal(
+    app$get_value(export = "progress_message"),
+    "Check geography checks"
+  )
+  expect_equal(app$get_value(export = "failed"), 1)
 
   app$set_inputs(resetbutton = "click") # Reset app
 
@@ -58,8 +59,11 @@ test_that("Passes everything", {
   app$upload_file(metafile = "test-data/fails_file validation.meta.csv")
   app$set_inputs(screenbutton = "click")
 
-  expect_true(app$get_value(export = "progress_message") == "Failed at file validation stage, fix it then screen again")
-  expect_true(app$get_value(export = "failed") == 2)
+  expect_equal(
+    app$get_value(export = "progress_message"),
+    "filename checks"
+  )
+  expect_equal(app$get_value(export = "failed"), 2)
 
   app$set_inputs(resetbutton = "click") # Reset app
 
@@ -68,7 +72,10 @@ test_that("Passes everything", {
   app$upload_file(metafile = "test-data/fails_prescreening1.meta.csv")
   app$set_inputs(screenbutton = "click")
 
-  expect_true(app$get_value(export = "progress_message") == "Failed at pre-screening stage 1, fix it then screen again")
+  expect_equal(
+    app$get_value(export = "progress_message"),
+    "Precheck geography checks"
+  )
 
   app$set_inputs(resetbutton = "click") # Reset app
 
@@ -77,7 +84,10 @@ test_that("Passes everything", {
   app$upload_file(metafile = "test-data/fails_prescreening2.meta.csv")
   app$set_inputs(screenbutton = "click")
 
-  expect_true(app$get_value(export = "progress_message") == "Failed at pre-screening stage 2, fix it then screen again")
+  expect_equal(
+    app$get_value(export = "progress_message"),
+    "Check columns checks"
+  )
 
   app$set_inputs(resetbutton = "click") # Reset app
 
@@ -86,7 +96,10 @@ test_that("Passes everything", {
   app$upload_file(metafile = "test-data/fails_allchecks.meta.csv")
   app$set_inputs(screenbutton = "click")
 
-  expect_true(app$get_value(export = "progress_message") == "Made it to the full screening checks but failed")
+  expect_equal(
+    app$get_value(export = "progress_message"),
+    "Check time checks"
+  )
 
   app$set_inputs(resetbutton = "click") # Reset app
 
@@ -95,8 +108,10 @@ test_that("Passes everything", {
   app$upload_file(metafile = "test-data/fails_everything_ancillary.meta.csv")
   app$set_inputs(screenbutton = "click")
 
-  expect_true(app$get_value(export = "progress_message") == "Made it to the full screening checks but failed")
-  expect_true(app$get_value(export = "ancillary") > 0)
+  expect_equal(
+    app$get_value(export = "progress_message"),
+    "Check meta checks"
+  )
 
   app$set_inputs(resetbutton = "click") # Reset app
 
@@ -104,8 +119,38 @@ test_that("Passes everything", {
   app$set_inputs(resetbutton = "click")
 
   app$expect_values(
-    input = c("resetbutton", "screenbutton", "shinyjs-resettable-datafile", "shinyjs-resettable-metafile"),
-    output = c("advisory_box", "all_tests", "ancillary_box", "failed_box", "passed_box", "data_cols", "data_rows", "data_size", "datafilename", "file_exists", "meta_rows", "meta_cols", "meta_size", "metafilename", "num_advisory_tests", "num_failed_tests", "progress_stage", "showresults", "sum_combined_tests", "sum_failed_tests", "sum_ignored_tests", "sum_passed_tests", "summary_text", "table_advisory_tests", "table_all_tests", "table_failed_tests", "testtime"),
+    input = c(
+      "resetbutton",
+      "screenbutton",
+      "shinyjs-resettable-datafile",
+      "shinyjs-resettable-metafile"
+    ),
+    output = c(
+      "warning_box",
+      "all_tests",
+      "failed_box",
+      "passed_box",
+      "data_cols",
+      "data_rows",
+      "data_size",
+      "datafilename",
+      "file_exists",
+      "meta_rows",
+      "meta_cols",
+      "meta_size",
+      "metafilename",
+      "num_warning_tests",
+      "num_failed_tests",
+      "showresults",
+      "sum_combined_tests",
+      "sum_failed_tests",
+      "sum_passed_tests",
+      "summary_text",
+      "table_warning_tests",
+      "table_all_tests",
+      "table_failed_tests",
+      "testtime"
+    ),
     export = TRUE
   )
 })
