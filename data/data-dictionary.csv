@@ -1,4 +1,4 @@
-﻿col_name,col_type,filter_item,col_name_parent,filter_item_parent,cbds_code,item_error_flag,contexts
+col_name,col_type,filter_item,col_name_parent,filter_item_parent,cbds_code,item_error_flag,contexts
 absence_type,Filter,Persistent absence,,,,api-only,Pupil attendance
 absence_type,Filter,Severe absence,,,,api-only,Pupil attendance
 absence_type,Filter,Total pupils,,,,api-only,Pupil attendance
@@ -346,7 +346,7 @@ elgs_expected_number,Filter,16,,,,api-only,Early years foundation stage profile 
 elgs_expected_number,Filter,17,,,,api-only,Early years foundation stage profile results
 elgs_expected_number,Filter,Total,,,,api-only,Early years foundation stage profile results
 entitlement_type,Filter,Working parents,,,,api-only,Funded early education and childcare
-entitlement_type,Filter,Early learning for 2-year-olds,,,,api-only,Funded early education and childcare
+entitlement_type,Filter,Early learning for 2 year olds,,,,api-only,Funded early education and childcare
 entitlement_type,Filter,Universal,,,,api-only,Funded early education and childcare
 establishment_governance,Filter,Academy,,,CA,api-only,Establishment characteristics
 establishment_governance,Filter,City technology college,,,CT,api-only,Establishment characteristics
