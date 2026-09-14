@@ -1,4 +1,4 @@
-﻿col_name,col_type,filter_item,col_name_parent,filter_item_parent,cbds_code,item_error_flag,contexts
+col_name,col_type,filter_item,col_name_parent,filter_item_parent,cbds_code,item_error_flag,contexts
 absence_type,Filter,Persistent absence,,,,api-only,Pupil attendance
 absence_type,Filter,Severe absence,,,,api-only,Pupil attendance
 absence_type,Filter,Total pupils,,,,api-only,Pupil attendance
@@ -18,6 +18,12 @@ age,Filter,16 to 24,,,,api-only,Personal characteristics
 age,Filter,18 to 21,,,,api-only,Personal characteristics
 age,Filter,18 to 24,,,,api-only,Personal characteristics
 age,Filter,19 to 24,,,,api-only,Personal characteristics
+age,Filter,1 year,,,,api-only,Funded early education and childcare
+age,Filter,2 years,,,,api-only,Funded early education and childcare
+age,Filter,3 years,,,,api-only,Funded early education and childcare
+age,Filter,4 years,,,,api-only,Funded early education and childcare
+age,Filter,9 to 11 months,,,,api-only,Funded early education and childcare
+age,Filter,Total,,,,api-only,Funded early education and childcare
 age_group,Filter,19 to 24,age_youth_adult,19 plus,,api-only,Personal characteristics
 age_group,Filter,25 plus,age_youth_adult,19 plus,,api-only,Personal characteristics
 age_group,Filter,Total,age_youth_adult,19 plus,,api-only,Personal characteristics
@@ -339,6 +345,9 @@ elgs_expected_number,Filter,15,,,,api-only,Early years foundation stage profile 
 elgs_expected_number,Filter,16,,,,api-only,Early years foundation stage profile results
 elgs_expected_number,Filter,17,,,,api-only,Early years foundation stage profile results
 elgs_expected_number,Filter,Total,,,,api-only,Early years foundation stage profile results
+entitlement_type,Filter,Working parents,,,,api-only,Funded early education and childcare
+entitlement_type,Filter,Early learning for 2 year olds,,,,api-only,Funded early education and childcare
+entitlement_type,Filter,Universal,,,,api-only,Funded early education and childcare
 establishment_governance,Filter,Academy,,,CA,api-only,Establishment characteristics
 establishment_governance,Filter,City technology college,,,CT,api-only,Establishment characteristics
 establishment_governance,Filter,Community,,,CO,api-only,Establishment characteristics
@@ -778,14 +787,19 @@ prior_attainment,Filter,Total,,,,api-only,Attainment
 provider_type,Filter,All group-based providers,,,,api-only,Establishment characteristics
 provider_type,Filter,All school-based providers,,,,api-only,Establishment characteristics
 provider_type,Filter,Childminders,,,,api-only,Establishment characteristics
+provider_type,Filter,Childminders,provider_type_group,"Private, voluntary and independent providers",,api-only,Funded early education and childcare
 provider_type,Filter,Further education colleges,,,,api-only,Establishment characteristics
 provider_type,Filter,General FE college including tertiary,,,,api-only,Establishment characteristics
 provider_type,Filter,Higher education providers,,,,api-only,Establishment characteristics
+provider_type,Filter,Independent schools,provider_type_group,"Private, voluntary and independent providers",,api-only,Funded early education and childcare
 provider_type,Filter,Local authority,,,,api-only,Establishment characteristics
+provider_type,Filter,Local authority day nurseries,provider_type_group,"Private, voluntary and independent providers",,api-only,Funded early education and childcare
 provider_type,Filter,Maintained nursery schools,,,,api-only,Establishment characteristics
 provider_type,Filter,Nursery class childcare settings,,,,api-only,Establishment characteristics
 provider_type,Filter,Other,,,,api-only,Establishment characteristics
+provider_type,Filter,Other,provider_type_group,"Private, voluntary and independent providers",,api-only,Establishment characteristics
 provider_type,Filter,Other public funded (LAs and HE),,,,api-only,Establishment characteristics
+provider_type,Filter,Private and voluntary providers,provider_type_group,"Private, voluntary and independent providers",,api-only,Funded early education and childcare
 provider_type,Filter,Private group-based providers,,,,api-only,Establishment characteristics
 provider_type,Filter,Private sector public funded,,,,api-only,Establishment characteristics
 provider_type,Filter,Private training providers in the FE sector,,,,api-only,Establishment characteristics
@@ -793,7 +807,15 @@ provider_type,Filter,"School, college, LA and other unclassified group-based pro
 provider_type,Filter,Schools,,,,api-only,Establishment characteristics
 provider_type,Filter,Sixth form college,,,,api-only,Establishment characteristics
 provider_type,Filter,Special college,,,,api-only,Establishment characteristics
-provider_type,Filter,Total,,,,api-only,Establishment characteristics
+provider_type,Filter,Special schools,provider_type_group,State-funded schools,,api-only,Funded early education and childcare
+provider_type,Filter,State-funded governor-run,provider_type_group,"Private, voluntary and independent providers",,api-only,Funded early education and childcare
+provider_type,Filter,State-funded nursery schools,provider_type_group,State-funded schools,,api-only,Funded early education and childcare
+provider_type,Filter,State-funded primary schools,provider_type_group,State-funded schools,,api-only,Funded early education and childcare
+provider_type,Filter,State-funded secondary schools,provider_type_group,State-funded schools,,api-only,Funded early education and childcare
+provider_type,Filter,Total,,,,api-only,Funded early education and childcare
+provider_type,Filter,Total,provider_type_group,"Private, voluntary and independent providers",,api-only,Funded early education and childcare
+provider_type,Filter,Total,provider_type_group,State-funded schools,,api-only,Funded early education and childcare
+provider_type,Filter,Total,provider_type_group,Total,,api-only,Funded early education and childcare
 provider_type,Filter,Unknown,,,,api-only,Establishment characteristics
 provider_type,Filter,Voluntary group-based providers,,,,api-only,Establishment characteristics
 qualification_type,Filter,AS level,,,,api-only,Attainment
@@ -1107,6 +1129,9 @@ time_frame,Filter,Year to date,,,,api-only,Pupil attendance
 total_neet_net,Filter,NEET,,,,api-only,NEET
 total_neet_net,Filter,NET,,,,api-only,NEET
 total_neet_net,Filter,Total,,,,api-only,NEET
+year_group,Filter,Nursery,,,,api-only,Funded early education and childcare
+year_group,Filter,Reception,,,,api-only,Funded early education and childcare
+year_group,Filter,Total,,,,api-only,Funded early education and childcare
 years_open,Filter,1 year,,,,api-only,Establishment characteristics
 years_open,Filter,10 years,,,,api-only,Establishment characteristics
 years_open,Filter,11 years,,,,api-only,Establishment characteristics
@@ -1522,6 +1547,7 @@ progress8original_average,Indicator,,,,,api-only,Attainment - Key stage 4
 progress8original_lower_95_ci,Indicator,,,,,api-only,Attainment - Key stage 4
 progress8original_sum,Indicator,,,,,api-only,Attainment - Key stage 4
 progress8original_upper_95_ci,Indicator,,,,,api-only,Attainment - Key stage 4
+providers_count,Indicator,,,,,api-only,Funded early education and childcare
 pupil_count,Indicator,,,,,api-only,General
 pupil_percent,Indicator,,,,,api-only,General
 qual_covid_impacted_percent,Indicator,,,,,api-only,Attainment - Key stage 4
@@ -1533,6 +1559,7 @@ qual_entries_without_discounting_sum,Indicator,,,,,api-only,Attainment - Key sta
 reference_date,Indicator,,,,,api-only,Pupil attendance
 referral_child_count,Indicator,,,,,api-only,Children in Need
 referral_count,Indicator,,,,,api-only,Children in Need
+registered_children_count,Indicator,,,,,api-only,Funded early education and childcare
 rereferral_child_count,Indicator,,,,,api-only,Children in Need
 rereferral_child_percent,Indicator,,,,,api-only,Children in Need
 rereferral_count,Indicator,,,,,api-only,Children in Need
