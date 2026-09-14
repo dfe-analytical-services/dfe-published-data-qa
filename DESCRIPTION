@@ -10,8 +10,9 @@ Author: c(person(given = "Laura",
 License: MIT
 Type: Shiny
 Imports:
-    shiny
+    shiny,
+    eesyscreener (>= 0.3.1)
 Suggests:
-    shinytest,
+    shinytest2,
     testthat,
     styler

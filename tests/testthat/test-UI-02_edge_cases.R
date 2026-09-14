@@ -20,10 +20,7 @@ test_that("Edge cases", {
   app$upload_file(metafile = "test-data/date_format.meta.csv")
   app$set_inputs(screenbutton = "click")
 
-  expect_true(
-    app$get_value(export = "progress_message") ==
-      "Made it to the full screening checks and passed"
-  )
+  expect_equal(app$get_value(export = "progress_message"), "Passed")
 
   app$set_inputs(resetbutton = "click") # Reset app
 
@@ -32,11 +29,11 @@ test_that("Edge cases", {
   app$upload_file(metafile = "test-data/data_mandatory_cols.meta.csv")
   app$set_inputs(screenbutton = "click")
 
-  expect_true(
-    app$get_value(export = "progress_message") ==
-      "Failed at file validation stage, fix it then screen again"
+  expect_equal(
+    app$get_value(export = "progress_message"),
+    "Precheck columns checks"
   )
-  expect_true(app$get_value(export = "failed") == 1)
+  expect_equal(app$get_value(export = "failed"), 1)
 
   app$set_inputs(resetbutton = "click") # Reset app
 
@@ -45,10 +42,7 @@ test_that("Edge cases", {
   app$upload_file(metafile = "test-data/filter_groups_mix.meta.csv")
   app$set_inputs(screenbutton = "click")
 
-  expect_true(
-    app$get_value(export = "progress_message") ==
-      "Made it to the full screening checks and passed"
-  )
+  expect_equal(app$get_value(export = "progress_message"), "Passed")
 
   app$set_inputs(resetbutton = "click") # Reset app
 
@@ -57,11 +51,8 @@ test_that("Edge cases", {
   app$upload_file(metafile = "test-data/hyphen.meta.csv")
   app$set_inputs(screenbutton = "click")
 
-  expect_true(
-    app$get_value(export = "progress_message") ==
-      "Made it to the full screening checks and passed"
-  )
-  expect_true(app$get_value(export = "advisory") > 0)
+  expect_equal(app$get_value(export = "progress_message"), "Passed")
+  expect_true(app$get_value(export = "warning") > 0)
 
   # Extra check on the on the QA tabs
   # Doing in this script to reuse the hyphen file from the last test to save overall test time

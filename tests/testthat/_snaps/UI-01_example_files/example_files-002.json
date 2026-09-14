@@ -10,23 +10,7 @@
     }
   },
   "output": {
-    "advisory_box": {
-      "message": "",
-      "call": "NULL",
-      "type": [
-        "shiny.silent.error",
-        "validation"
-      ]
-    },
     "all_tests": {
-      "message": "",
-      "call": "NULL",
-      "type": [
-        "shiny.silent.error",
-        "validation"
-      ]
-    },
-    "ancillary_box": {
       "message": "",
       "call": "NULL",
       "type": [
@@ -107,14 +91,6 @@
         "validation"
       ]
     },
-    "num_advisory_tests": {
-      "message": "",
-      "call": "NULL",
-      "type": [
-        "shiny.silent.error",
-        "validation"
-      ]
-    },
     "num_failed_tests": {
       "message": "",
       "call": "NULL",
@@ -123,7 +99,7 @@
         "validation"
       ]
     },
-    "passed_box": {
+    "num_warning_tests": {
       "message": "",
       "call": "NULL",
       "type": [
@@ -131,7 +107,7 @@
         "validation"
       ]
     },
-    "progress_stage": {
+    "passed_box": {
       "message": "",
       "call": "NULL",
       "type": [
@@ -156,14 +132,6 @@
         "validation"
       ]
     },
-    "sum_ignored_tests": {
-      "message": "",
-      "call": "NULL",
-      "type": [
-        "shiny.silent.error",
-        "validation"
-      ]
-    },
     "sum_passed_tests": {
       "message": "",
       "call": "NULL",
@@ -173,14 +141,6 @@
       ]
     },
     "summary_text": {
-      "message": "",
-      "call": "NULL",
-      "type": [
-        "shiny.silent.error",
-        "validation"
-      ]
-    },
-    "table_advisory_tests": {
       "message": "",
       "call": "NULL",
       "type": [
@@ -204,7 +164,23 @@
         "validation"
       ]
     },
+    "table_warning_tests": {
+      "message": "",
+      "call": "NULL",
+      "type": [
+        "shiny.silent.error",
+        "validation"
+      ]
+    },
     "testtime": {
+      "message": "",
+      "call": "NULL",
+      "type": [
+        "shiny.silent.error",
+        "validation"
+      ]
+    },
+    "warning_box": {
       "message": "",
       "call": "NULL",
       "type": [
@@ -214,12 +190,9 @@
     }
   },
   "export": {
-    "advisory": 2,
-    "ancillary": 1,
     "failed": 1,
-    "ignored": 18,
-    "info": 0,
-    "passed": 71,
-    "progress_message": "Made it to the full screening checks but failed"
+    "passed": 35,
+    "progress_message": "Check meta checks",
+    "warning": 0
   }
 }
