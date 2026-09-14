@@ -4934,7 +4934,7 @@
       "checksum": "c1d6b214017ea01fb7141a0b0e228e02"
     },
     ".Rprofile": {
-      "checksum": "3ffbad162f78806b546bdb58f1299074"
+      "checksum": "48e666cb86d35bbf178f7bec7b9482b9"
     },
     "azure-pipelines-dev.yml": {
       "checksum": "fc2ef843ff5024bcba25ff84eec05f4c"
@@ -5039,7 +5039,7 @@
       "checksum": "d24d34c89236133c18c25a4613039240"
     },
     "README.md": {
-      "checksum": "49f84962c930a31bd04b66f5ec0855e8"
+      "checksum": "0615b3e25725fd7c4b1b73801227df81"
     },
     "renv.lock": {
       "checksum": "33ff05aa6d29434c037e31042aebedb9"
@@ -5397,24 +5397,6 @@
     },
     "www/duckWaddle.gif": {
       "checksum": "57615b8c0092a66c1d4058b1692955cc"
-    },
-    "www/progress_1.png": {
-      "checksum": "847b746e9241d9d02a7fc6fbd5529332"
-    },
-    "www/progress_2.png": {
-      "checksum": "36fd783cba1a222b15b0270a1a2dadb6"
-    },
-    "www/progress_3.png": {
-      "checksum": "933608fa5686f8037dfa2a06849e89db"
-    },
-    "www/progress_4.png": {
-      "checksum": "99121e9843174c67c777d99db2e582b8"
-    },
-    "www/progress_5.png": {
-      "checksum": "0f9a3c240fd9645ba1d10fc9f6428eed"
-    },
-    "www/progress_placeholder.png": {
-      "checksum": "847b746e9241d9d02a7fc6fbd5529332"
     },
     "www/screener_favicon.png": {
       "checksum": "8838f1b9f88708d79397d61d53d011f2"
