@@ -1,7 +1,7 @@
 {
   "version": 1,
   "locale": "en_GB",
-  "platform": "4.5.1",
+  "platform": "4.5.3",
   "metadata": {
     "appmode": "shiny",
     "primary_rmd": null,
@@ -807,7 +807,7 @@
         "Packaged": "2024-03-31 18:18:09 UTC; luke",
         "Repository": "CRAN",
         "Date/Publication": "2024-03-31 20:10:06 UTC",
-        "Built": "R 4.5.1; ; 2025-06-13 07:58:11 UTC; windows"
+        "Built": "R 4.5.3; ; 2026-03-11 08:55:50 UTC; windows"
       }
     },
     "commonmark": {
@@ -4359,7 +4359,7 @@
       "checksum": "c1d6b214017ea01fb7141a0b0e228e02"
     },
     ".Rprofile": {
-      "checksum": "c825fe39fe5bbaea5a64d13bb0d046d2"
+      "checksum": "29b49eafa788d712ee0298e347d33f8f"
     },
     "azure-pipelines-dev.yml": {
       "checksum": "fc2ef843ff5024bcba25ff84eec05f4c"
@@ -4377,7 +4377,7 @@
       "checksum": "31d565a819730736cbcf5a38959d3398"
     },
     "data/data-dictionary.csv": {
-      "checksum": "f22f75809a3331f74314fb322a444414"
+      "checksum": "76d7414bb7d2f3c4e0c03e0d6173d3dc"
     },
     "data/english_devolved_areas.csv": {
       "checksum": "391e91c38d772d55f98e54fbacfc3b9f"

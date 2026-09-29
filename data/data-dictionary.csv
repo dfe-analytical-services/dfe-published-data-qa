@@ -1612,3 +1612,7 @@ working_below_pupil_count,Indicator,,,,,api-only,Attainment - Key stage 2
 working_below_pupil_percent,Indicator,,,,,api-only,Attainment - Key stage 2
 working_towards_pupil_count,Indicator,,,,,api-only,Attainment - Key stage 2
 working_towards_pupil_percent,Indicator,,,,,api-only,Attainment - Key stage 2
+zero_elgs_gld_expected_children_count,Indicator,,,,,api-only,Early years foundation stage profile results
+zero_elgs_gld_expected_children_percent,Indicator,,,,,api-only,Early years foundation stage profile results
+zero_elgs_all_expected_children_count,Indicator,,,,,api-only,Early years foundation stage profile results
+zero_elgs_all_expected_children_percent,Indicator,,,,,api-only,Early years foundation stage profile results
