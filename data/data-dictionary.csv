@@ -922,17 +922,17 @@ sen_status,Filter,Total,,,,api-only,Special educational needs
 setting_prior_to_ehe,Filter,Academy,ehe_status,Started EHE during the year,,api-only,Elective Home Education
 setting_prior_to_ehe,Filter,Alternative provision,ehe_status,Started EHE during the year,,api-only,Elective Home Education
 setting_prior_to_ehe,Filter,Early years setting,ehe_status,Started EHE during the year,,api-only,Elective Home Education
-setting_prior_to_ehe,Filter,Elsewhere/Unknown,ehe_status,Started EHE during the year,,api-only,Elective Home Education
+setting_prior_to_ehe,Filter,Elsewhere / Unknown,ehe_status,Started EHE during the year,,api-only,Elective Home Education
 setting_prior_to_ehe,Filter,Free school,ehe_status,Started EHE during the year,,api-only,Elective Home Education
 setting_prior_to_ehe,Filter,Home educated outside the local authority,ehe_status,Started EHE during the year,,api-only,Elective Home Education
-setting_prior_to_ehe,Filter,Independent,ehe_status,Started EHE during the year,,api-only,Elective Home Education
-setting_prior_to_ehe,Filter,Local authority maintained,ehe_status,Started EHE during the year,,api-only,Elective Home Education
-setting_prior_to_ehe,Filter,No prior establishment,ehe_status,Started EHE during the year,,api-only,Elective Home Education
+setting_prior_to_ehe,Filter,Independent school,ehe_status,Started EHE during the year,,api-only,Elective Home Education
+setting_prior_to_ehe,Filter,Local authority maintained school,ehe_status,Started EHE during the year,,api-only,Elective Home Education
+setting_prior_to_ehe,Filter,"None, previously not of compulsory school age",ehe_status,Started EHE during the year,,api-only,Elective Home Education
 setting_prior_to_ehe,Filter,Pupil referral unit,ehe_status,Started EHE during the year,,api-only,Elective Home Education
-setting_prior_to_ehe,Filter,Special,ehe_status,Started EHE during the year,,api-only,Elective Home Education
+setting_prior_to_ehe,Filter,Special school,ehe_status,Started EHE during the year,,api-only,Elective Home Education
 setting_prior_to_ehe,Filter,Total,ehe_status,In EHE at any point during the year,,api-only,Elective Home Education
-setting_prior_to_ehe,Filter,Total,ehe_status,Left the local authority in EHE during the year,,api-only,Elective Home Education
-setting_prior_to_ehe,Filter,Total,ehe_status,Returned to EHE during the year,,api-only,Elective Home Education
+setting_prior_to_ehe,Filter,Total,ehe_status,EHE who left the local authority during the year,,api-only,Elective Home Education
+setting_prior_to_ehe,Filter,Total,ehe_status,Returned to school during the year,,api-only,Elective Home Education
 setting_prior_to_ehe,Filter,Total,ehe_status,Started EHE during the year,,api-only,Elective Home Education
 sex,Filter,Boys,,,,api-only,Personal characteristics
 sex,Filter,Female,,,,api-only,Personal characteristics
