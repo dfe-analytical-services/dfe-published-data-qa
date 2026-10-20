@@ -4325,7 +4325,7 @@
       "checksum": "b23064c6dcc54d7181a7fff2a1b30ecc"
     },
     ".Rprofile": {
-      "checksum": "74e84dbb701fb3a9831cabafbd8e84db"
+      "checksum": "94c9e0d709e1af8b130c39d683c6488f"
     },
     ".vscode/settings.json": {
       "checksum": "78cac614104e94eb0d04a78a6c1ec1f2"
@@ -4448,10 +4448,7 @@
       "checksum": "3824e397e0b583a9367e306830fccd72"
     },
     "tests/testthat/_snaps/UI-01_example_files/example_files-002.json": {
-      "checksum": "720cec07f688c9213625b93317df14f6"
-    },
-    "tests/testthat/_snaps/UI-01_example_files/example_files-002.new.json": {
-      "checksum": "8647af692d07569e7052e481ea5dc0a1"
+      "checksum": "4659f71e9c3e859c97de5dc21c97e56e"
     },
     "tests/testthat/_snaps/UI-02_edge_cases/edge_cases-001.json": {
       "checksum": "75228173459ba6f210f07e7ce363ab5e"
@@ -4772,7 +4769,7 @@
       "checksum": "3913bd5cb03e7a559792ea44f96e6ea5"
     },
     "tests/testthat/test-UI-01_example_files.R": {
-      "checksum": "70fc4079dd1b331148b6a8a6ec8e7cc5"
+      "checksum": "2906e760b0140c8aff245eddb24fb4f3"
     },
     "tests/testthat/test-UI-02_edge_cases.R": {
       "checksum": "323d13be5611c032355cc1dc3250d047"
