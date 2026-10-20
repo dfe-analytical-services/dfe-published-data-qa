@@ -42,8 +42,9 @@ potential_cols <- c(
 #'
 #' @return a data frame of a tidied lookup file
 tidy_downloaded_lookup <- function(
-    open_geography_file,
-    shorthand_lookup) {
+  open_geography_file,
+  shorthand_lookup
+) {
   # Read in the downloaded open geography file --------------------------------
   message("Reading in new data from: ", open_geography_file)
   new_data <- read_csv(open_geography_file, show_col_types = FALSE) %>%
@@ -56,13 +57,18 @@ tidy_downloaded_lookup <- function(
     filter(grepl(paste(open_geog_shorthands, collapse = "|"), .)) %>%
     # Remove the geog shorthands and CD / NM
     pull(.) %>%
-    str_remove_all(paste(c(open_geog_shorthands, "CD", "NM"), collapse = "|")) %>%
+    str_remove_all(paste(
+      c(open_geog_shorthands, "CD", "NM"),
+      collapse = "|"
+    )) %>%
     # Pull out the year
     unique()
 
   # Check there is only one year available ------------------------------------
   if (length(new_year) != 1) {
-    stop("There appears to be either zero or multiple years of data in the downloaded lookup, the function doesn't know which year to pick")
+    stop(
+      "There appears to be either zero or multiple years of data in the downloaded lookup, the function doesn't know which year to pick"
+    )
   }
 
   #' Function to rename columns using the shorthand_lookup table made in
@@ -170,8 +176,9 @@ tidy_downloaded_lookup <- function(
 #' @return message confirming if the CSV file has been successfully written
 
 write_updated_lookup <- function(
-    new_lookup,
-    lookup_filepath) {
+  new_lookup,
+  lookup_filepath
+) {
   # If a lookup file exists already read it in
   if (file.exists(lookup_filepath)) {
     message("Reading data from existing file: ", lookup_filepath)
@@ -211,7 +218,8 @@ write_updated_lookup <- function(
   sorting_cols <- names(updated_lookup %>% select(ends_with("_code")))
 
   # Order the file by year and then code columns
-  updated_lookup <- updated_lookup %>% arrange(desc(most_recent_year_included), !!!sorting_cols)
+  updated_lookup <- updated_lookup %>%
+    arrange(desc(most_recent_year_included), !!!sorting_cols)
 
   # Update the existing lookup
   message("Writing new lookup to: ", lookup_filepath)
@@ -221,7 +229,9 @@ write_updated_lookup <- function(
       message("...", lookup_filepath, " successfully written")
     },
     error = function(msg) {
-      message("Issue writing lookup file. Try looking at the code within the `write_updated_lookup()` function and running in the console separately.")
+      message(
+        "Issue writing lookup file. Try looking at the code within the `write_updated_lookup()` function and running in the console separately."
+      )
     }
   )
 }

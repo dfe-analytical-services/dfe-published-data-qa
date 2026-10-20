@@ -256,7 +256,10 @@ server <- function(input, output, session) {
             list(
               results = data.frame(
                 result = "FAIL",
-                message = paste("Screener encountered an unexpected error:", conditionMessage(e)),
+                message = paste(
+                  "Screener encountered an unexpected error:",
+                  conditionMessage(e)
+                ),
                 stage = "Unknown",
                 check = "Internal error",
                 guidance_url = NA_character_,
@@ -867,7 +870,10 @@ server <- function(input, output, session) {
               y <- data$mainFile %>%
                 filter(geographic_level %in% geographies) %>%
                 mutate(
-                  across(all_of(indicators), ~ replace(.x, .x %in% gss_symbols, NA)),
+                  across(
+                    all_of(indicators),
+                    ~ replace(.x, .x %in% gss_symbols, NA)
+                  ),
                   across(all_of(indicators), as.numeric)
                 ) %>%
                 select(time_period, indicators) %>%
@@ -1052,10 +1058,12 @@ server <- function(input, output, session) {
 
           # get outlier stats
 
-          get_outliers <- function(outlier_indicator_parameter,
-                                   threshold_setting,
-                                   ctime_parameter,
-                                   comptime_parameter) {
+          get_outliers <- function(
+            outlier_indicator_parameter,
+            threshold_setting,
+            ctime_parameter,
+            comptime_parameter
+          ) {
             args <- expand.grid(
               meas = outlier_indicator_parameter,
               thresh = threshold_setting,

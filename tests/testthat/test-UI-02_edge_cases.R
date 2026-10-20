@@ -58,6 +58,7 @@ test_that("Edge cases", {
   # Doing in this script to reuse the hyphen file from the last test to save overall test time
   # Geog tab (JSON 1)
   app$set_inputs(trendy_tabs = "geogTab")
+  app$wait_for_idle(500)
   app$set_inputs(geog_indicator_parameter = "full_time")
   app$set_inputs(submit_geographies = "click")
 
@@ -65,6 +66,7 @@ test_that("Edge cases", {
 
   # Filters in 'What's in this file' (JSON 2)
   app$set_inputs(trendy_tabs = "obUnitTab")
+  app$wait_for_idle(500)
 
   app$expect_values(output = "tables")
 })

@@ -1,6 +1,14 @@
 library(shinytest2)
 
-app <- AppDriver$new(name = "additional_qa", height = 846, width = 1445, load_timeout = 45 * 1000, timeout = 20 * 1000, wait = TRUE, expect_values_screenshot_args = FALSE)
+app <- AppDriver$new(
+  name = "additional_qa",
+  height = 846,
+  width = 1445,
+  load_timeout = 45 * 1000,
+  timeout = 20 * 1000,
+  wait = TRUE,
+  expect_values_screenshot_args = FALSE
+)
 
 # Wait until Shiny is not busy for 5ms
 app$wait_for_idle(5)
@@ -12,16 +20,25 @@ test_that("Additional QA tabs", {
   app$upload_file(metafile = "test-data/passes_everything.meta.csv")
   app$set_inputs(screenbutton = "click")
   app$set_inputs(trendy_tabs = "previewTab")
+  app$wait_for_idle(500)
 
   app$expect_values(output = c("meta_table", "data_preview"))
 
   # 2. Do the file info tables populate as expected
   app$set_inputs(trendy_tabs = "obUnitTab")
-
-  app$expect_values(output = c("geog_time_perms2", "tables", "indicators", "suppressed_cell_count_table"))
+  app$wait_for_idle(500)
+  app$expect_values(
+    output = c(
+      "geog_time_perms2",
+      "tables",
+      "indicators",
+      "suppressed_cell_count_table"
+    )
+  )
 
   # 3. Explore indicators doesn't break with no arguments
   app$set_inputs(trendy_tabs = "indicatorsTab")
+  app$wait_for_idle(500)
   app$set_inputs(submit = "click")
 
   app$expect_values(output = "table_list")
@@ -34,7 +51,14 @@ test_that("Additional QA tabs", {
 
   # 5. Explore indicators doesn't break with just geography
   app$set_inputs(ind_parameter = character(0))
-  app$set_inputs(geog_parameter = c("National", "Regional", "Local authority", "Local authority district"))
+  app$set_inputs(
+    geog_parameter = c(
+      "National",
+      "Regional",
+      "Local authority",
+      "Local authority district"
+    )
+  )
   app$set_inputs(submit = "click")
 
   app$expect_values(output = "table_list")
@@ -43,10 +67,13 @@ test_that("Additional QA tabs", {
   app$set_inputs(ind_parameter = c("school_count", "enrolment_count"))
   app$set_inputs(submit = "click")
 
-  app$expect_values(output = c("t_1", "t_2", "t_3", "t_4", "t_5", "t_6", "t_7", "t_8"))
+  app$expect_values(
+    output = c("t_1", "t_2", "t_3", "t_4", "t_5", "t_6", "t_7", "t_8")
+  )
 
   # 7. Outlier check doesn't break with no arguments
   app$set_inputs(trendy_tabs = "outliersTab")
+  app$wait_for_idle(500)
   app$set_inputs(comptime_parameter = "201718")
   app$set_inputs(submit_outlier = "click")
 
@@ -69,7 +96,9 @@ test_that("Additional QA tabs", {
   app$expect_values(output = "table_outlier_list")
 
   # 10. Outlier check runs as expected
-  app$set_inputs(outlier_indicator_parameter = c("school_count", "enrolment_count"))
+  app$set_inputs(
+    outlier_indicator_parameter = c("school_count", "enrolment_count")
+  )
   app$set_inputs(threshold_setting = 5)
   app$set_inputs(submit_outlier = "click")
 
@@ -79,6 +108,7 @@ test_that("Additional QA tabs", {
 
   # 11. Geography check runs as expected
   app$set_inputs(trendy_tabs = "geogTab")
+  app$wait_for_idle(500)
   app$set_inputs(geog_indicator_parameter = "school_count")
   app$set_inputs(submit_geographies = "click")
 

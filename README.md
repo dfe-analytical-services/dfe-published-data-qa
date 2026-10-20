@@ -104,9 +104,9 @@ In general all .r files will have a usable outline, so make use of that for navi
 
 ### Code styling
 
-The function `styler::style_dir()` should be used to tidy code according to tidyverse styling using the styler package. This function also helps to test the running of the code and for basic syntax errors such as missing commas and brackets.
+Code is formatted using [Air](https://posit-dev.github.io/air/). Install the Air extension for your editor (VS Code, Positron or RStudio) to format R files on save, or run `air format .` from the command line to format the whole repository.
 
-There is a GitHub action workflow that automatically runs this against PRs to ensure all code going into the main branch is styled appropriately.
+There is a GitHub action workflow that runs Air against PRs and suggests any formatting fixes, to ensure all code going into the main branch is formatted consistently.
 
 ---
 
