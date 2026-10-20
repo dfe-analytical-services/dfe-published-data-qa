@@ -876,7 +876,7 @@ server <- function(input, output, session) {
                   ),
                   across(all_of(indicators), as.numeric)
                 ) %>%
-                select(time_period, indicators) %>%
+                select(time_period, all_of(indicators)) %>%
                 group_by(time_period) %>%
                 summarise(
                   across(
@@ -1079,7 +1079,7 @@ server <- function(input, output, session) {
 
             # Get list of filters
             filters <- data$mainFile %>%
-              select(-indicators) %>%
+              select(-all_of(indicators)) %>%
               names()
 
             outliertable <- function(args) {
@@ -1262,7 +1262,7 @@ server <- function(input, output, session) {
               filter(col_type == "Filter") %>%
               pull(col_name)
 
-            check_geog <- function(dataset, id = c("time_period", all_of(pf))) {
+            check_geog <- function(dataset, id = c("time_period", pf)) {
               years <- dataset[, id]
               dataset[, id] <- NULL
               dataset$match <- do.call(pmax, as.list(dataset)) ==
