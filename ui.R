@@ -7,7 +7,6 @@ fluidPage(
     tags$title("DfE Data Screener")
   ),
 
-
   # Global ui calls and settings ------------------------------------------------------------------------------------
   theme = "acalat_theme.css",
   useShinyjs(),
@@ -43,7 +42,9 @@ fluidPage(
 
       # Application title -----------------------------------------------------------------------------------
       titlePanel(
-        div(HTML("DfE published data QA <h4>QA your data files before uploading to explore education statistics for publication</h4>")),
+        div(HTML(
+          "DfE published data QA <h4>QA your data files before uploading to explore education statistics for publication</h4>"
+        )),
       ),
 
       # Initial guidance text -----------------------------------------------------------------------------------
@@ -53,8 +54,17 @@ fluidPage(
           div(
             class = "panel-body",
             style = "padding-left:27px",
-            paste0("Currently this app works with files up to ", dfeR::pretty_filesize(max_file_size), ". If you have a file that is bigger than this, please contact us at "),
-            a(href = "mailto:explore.statistics@education.gov.uk", "explore.statistics@education.gov.uk", .noWS = "after"), ".",
+            paste0(
+              "Currently this app works with files up to ",
+              dfeR::pretty_filesize(max_file_size),
+              ". If you have a file that is bigger than this, please contact us at "
+            ),
+            a(
+              href = "mailto:explore.statistics@education.gov.uk",
+              "explore.statistics@education.gov.uk",
+              .noWS = "after"
+            ),
+            ".",
             br(),
             "This app is constantly being developed, please let us know if you have any suggestions to improve it. If you experience any issues, please take screenshots and email them to us with as much information as possible.",
           )
@@ -62,12 +72,23 @@ fluidPage(
         shinyjs::hidden(div(
           id = "guidance",
           "This app allows you to screen your data files against the Department’s ",
-          a(href = "https://dfe-analytical-services.github.io/analysts-guide/statistics-production/ud.html", "underlying data standards", target = "_blank", rel = "noopener noreferrer"),
+          a(
+            href = "https://dfe-analytical-services.github.io/analysts-guide/statistics-production/ud.html",
+            "underlying data standards",
+            target = "_blank",
+            rel = "noopener noreferrer"
+          ),
           "for Official and National statistical publications. You should make sure that any data files you intend to publish pass all of the data checks before uploading to Explore Education Statistics.",
           br(),
           br(),
           "The code for this app can be found on ",
-          a(href = "https://github.com/dfe-analytical-services/dfe-published-data-qa", "GitHub", target = "_blank", rel = "noopener noreferrer", .noWS = "after"),
+          a(
+            href = "https://github.com/dfe-analytical-services/dfe-published-data-qa",
+            "GitHub",
+            target = "_blank",
+            rel = "noopener noreferrer",
+            .noWS = "after"
+          ),
           ".",
           br(),
           br(),
@@ -86,7 +107,9 @@ fluidPage(
         # Top panel for data uploads -----------------------------------------------------------------------------------
 
         wellPanel(
-          tags$style(".shiny-file-input-progress {max-width: 99.8%; padding-left: 1px}"),
+          tags$style(
+            ".shiny-file-input-progress {max-width: 99.8%; padding-left: 1px}"
+          ),
           fluidRow(
             column(
               5,
@@ -106,8 +129,10 @@ fluidPage(
                 accept = ".csv"
               )
             ),
-            column(2,
-              align = "center", style = "margin-top: 25px;",
+            column(
+              2,
+              align = "center",
+              style = "margin-top: 25px;",
               # Only show buttons once files are added and remove button once results appear
               conditionalPanel(
                 condition = "output.file_exists == true && output.showresults == false",
@@ -127,8 +152,14 @@ fluidPage(
           # Loading screen that appears while tests are running -----------------------------------------------------------------------------------
           shinyjs::hidden(div(
             id = "loading",
-            h4("Tests are now running against the files, this may take a few minutes depending on the size of your data file.", align = "center"),
-            h4("Refresh the page if you wish to cancel the tests running.", align = "center"),
+            h4(
+              "Tests are now running against the files, this may take a few minutes depending on the size of your data file.",
+              align = "center"
+            ),
+            h4(
+              "Refresh the page if you wish to cancel the tests running.",
+              align = "center"
+            ),
             br(),
             HTML('<center><img src="duckWaddle.gif"></center>')
           )),
@@ -146,8 +177,6 @@ fluidPage(
                   5,
                   style = "padding-left:20px;",
                   h4("Screening progress"),
-                  tags$style("#progress_stage img {max-width: 100%; max-height: 100%}"),
-                  imageOutput("progress_stage", height = "100%"),
                   hr(),
                   textOutput("testtime"),
                   br(),
@@ -156,7 +185,6 @@ fluidPage(
                   textOutput("sum_failed_tests"),
                   textOutput("sum_combined_tests"),
                   textOutput("sum_passed_tests"),
-                  textOutput("sum_ignored_tests"),
                   textOutput("time_taken"),
                   hr(),
                   div(
@@ -187,16 +215,13 @@ fluidPage(
                   )
                 ),
 
-
                 # Individual check results tables -----------------------------------------------------------------------------------
 
                 column(
                   7,
-                  uiOutput("ancillary_box"),
                   uiOutput("passed_box"),
-                  uiOutput("info_box"),
                   uiOutput("failed_box"),
-                  uiOutput("advisory_box"),
+                  uiOutput("warning_box"),
                   results_box(
                     message = "all_tests",
                     table = "table_all_tests"
@@ -226,7 +251,9 @@ fluidPage(
                 fluidRow(
                   column(
                     3,
-                    tags$b("What combinations of geography and time are in the data"),
+                    tags$b(
+                      "What combinations of geography and time are in the data"
+                    ),
                     br(),
                     br(),
                     "This table lists all the permutations of geographic_level and time_period where at least one row of data exists",
@@ -239,7 +266,8 @@ fluidPage(
                   ),
                   column(
                     9,
-                    DTOutput("geog_time_perms2", width = "100%") %>% withSpinner()
+                    DTOutput("geog_time_perms2", width = "100%") %>%
+                      withSpinner()
                   )
                 ),
                 hr(),
@@ -359,7 +387,8 @@ fluidPage(
                       ),
                       column(
                         4,
-                        align = "left", style = "margin-top: 25px;",
+                        align = "left",
+                        style = "margin-top: 25px;",
                         actionButton(
                           inputId = "submit",
                           label = "Generate tables"
@@ -412,7 +441,8 @@ fluidPage(
                       ),
                       column(
                         4,
-                        align = "left", style = "margin-top: 25px;",
+                        align = "left",
+                        style = "margin-top: 25px;",
                         actionButton(
                           inputId = "submit_outlier",
                           label = "Generate tables"
@@ -470,7 +500,8 @@ fluidPage(
                       ),
                       column(
                         4,
-                        align = "left", style = "margin-top: 25px;",
+                        align = "left",
+                        style = "margin-top: 25px;",
                         actionButton(
                           inputId = "submit_geographies",
                           label = "Generate tables"

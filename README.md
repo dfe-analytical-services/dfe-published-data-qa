@@ -100,7 +100,7 @@ In general all .r files will have a usable outline, so make use of that for navi
 
 ### Debugging
 
-There is a debugging script (named as such) in the `R/manual_scripts` folder. This uses the functions `readFile()` and `screenFiles()` to allow you to debug what is happening by running the core screening functions in the console, useful if screening a particular file crashes the app in an unknown way. This also usually brings up the traceback in RStudio, which often helps to pin down the culprit line of code. It is commented out by default it isn't ran when loading the app.
+`screenFiles()` (in `R/screenFiles.r`) is a thin wrapper around `eesyscreener::screen_csv()`. To debug what's happening when screening a particular file crashes the app in an unknown way, call `eesyscreener::screen_csv(datapath, metapath, datafilename, metafilename)` directly in the console with the paths to the data and metadata files. This also usually brings up the traceback in RStudio, which often helps to pin down the culprit line of code.
 
 ### Code styling
 

@@ -11,17 +11,12 @@ options(shiny.sanitize.errors = TRUE)
 
 # Library calls ---------------------------------------------------------------------------------
 shhh <- suppressPackageStartupMessages # It's a library, so shhh!
-shhh(library(lubridate))
 shhh(library(shiny))
-shhh(library(janitor))
 shhh(library(dplyr))
 shhh(library(stringr))
 shhh(library(data.table))
 shhh(library(shinyjs))
 shhh(library(tools))
-shhh(library(readr))
-shhh(library(testthat))
-shhh(library(styler))
 shhh(library(tidyr))
 shhh(library(ggplot2))
 shhh(library(shinyFeedback))
@@ -32,8 +27,12 @@ shhh(library(sparkline))
 shhh(library(config))
 shhh(library(shinyalert))
 shhh(library(shinydisconnect))
-shhh(library(praise))
 shhh(library(dfeR))
+shhh(library(eesyscreener))
+
+# Expected columns returned by eesyscreener::screen_csv()$results_table.
+# Checked at runtime in screenFiles().
+screener_result_cols <- c("result", "message", "stage", "check", "guidance_url")
 
 # Following are commented out as they are needed for CI / CD or commit hooks but not for running of app
 pigs_will_fly <- FALSE
@@ -42,18 +41,8 @@ if (pigs_will_fly == TRUE) {
   shhh(library(git2r))
   shhh(library(shinytest2))
   shhh(library(diffviewer))
+  shhh(library(styler))
 }
-
-# activeTestsInFile ---------------------------------------------------------------------------------
-# Extracting the active tests that are run against files
-
-activeTestsInFile <- function(file) {
-  trimws(gsub("\\(.* # active test", "", grep("(# active test)$", read_lines(file), value = TRUE)))
-}
-
-activeTests <- sapply(c("R/fileValidation.r", "R/preCheck1.r", "R/preCheck2.r", "R/mainTests.r"), activeTestsInFile, simplify = FALSE)
-
-numberActiveTests <- length(unlist(activeTests, use.names = FALSE))
 
 # Results boxes ----------------------------------------------------------------------------
 
@@ -70,7 +59,11 @@ pass_results_box <- function() {
         class = "panel-body",
         style = "padding-left:27px",
         "Your files can now be uploaded to Explore Education Statistics, see our  ",
-        a(href = "https://dfe-analytical-services.github.io/analysts-guide/statistics-production/ees.html", "guidance on using EES", target = "_blank"),
+        a(
+          href = "https://dfe-analytical-services.github.io/analysts-guide/statistics-production/ees.html",
+          "guidance on using EES",
+          target = "_blank"
+        ),
         " for more information."
       )
     )
@@ -94,7 +87,7 @@ fail_results_box <- function(message, table) {
   )
 }
 
-advisory_results_box <- function(message, table) {
+warning_results_box <- function(message, table) {
   div(
     div(
       class = "panel panel-warning",
@@ -138,42 +131,6 @@ results_box <- function(message, table) {
   )
 }
 
-ancillary_box <- function() {
-  div(
-    div(
-      class = "panel panel-info",
-      div(
-        class = "panel-heading",
-        style = "color: white;font-size: 18px;font-style: bold;", # background-color: #38a1c1;
-        "This file should not be uploaded as a standard data file"
-      ),
-      div(
-        class = "panel-body",
-        style = "padding-left:27px",
-        "The data file only includes geographic levels that are going to be ignored by EES, see our  ",
-        a(href = "https://dfe-analytical-services.github.io/analysts-guide/statistics-production/ees.html#supporting-file-uploads", "guidance on uploading ancillary files", target = "_blank"),
-        " for more information on how to upload as an ancillary file instead of via the normal data route."
-      )
-    )
-  )
-}
-
-info_results_box <- function(message, table) {
-  div(
-    div(
-      class = "panel panel-info",
-      div(
-        class = "panel-heading",
-        style = "color: white;font-size: 18px;font-style: bold; ", # background-color: #e87421;
-        textOutput(message)
-      ),
-      div(
-        class = "panel-body",
-        tableOutput(table)
-      )
-    )
-  )
-}
 
 # summarise_stats ----------------------------------------------------------------------------
 # Summarising the counts of the results
@@ -210,15 +167,16 @@ options(spinner.size = .5)
 
 # disconnect duck ---------------------------------------------------------
 
-customDisconnectMessage <- function(refresh = "Refresh",
-                                    width = 450,
-                                    top = 50,
-                                    size = 22,
-                                    background = "white",
-                                    colour = "#ffffff", # "#444444",
-                                    overlayColour = "black",
-                                    overlayOpacity = 0.6,
-                                    refreshColour = "#337ab7") {
+customDisconnectMessage <- function(
+    refresh = "Refresh",
+    width = 450,
+    top = 50,
+    size = 22,
+    background = "white",
+    colour = "#ffffff", # "#444444",
+    overlayColour = "black",
+    overlayOpacity = 0.6,
+    refreshColour = "#337ab7") {
   checkmate::assert_string(refresh)
   checkmate::assert_numeric(size, lower = 0)
   checkmate::assert_string(background)
@@ -232,7 +190,10 @@ customDisconnectMessage <- function(refresh = "Refresh",
   } else if (is.numeric(width) && width >= 0) {
     width <- paste0(width, "px")
   } else {
-    stop("disconnectMessage: 'width' must be either an integer, or the string \"full\".", call. = FALSE)
+    stop(
+      "disconnectMessage: 'width' must be either an integer, or the string \"full\".",
+      call. = FALSE
+    )
   }
 
   if (top == "center") {
@@ -242,7 +203,10 @@ customDisconnectMessage <- function(refresh = "Refresh",
     top <- paste0(top, "px")
     ytransform <- "0"
   } else {
-    stop("disconnectMessage: 'top' must be either an integer, or the string \"center\".", call. = FALSE)
+    stop(
+      "disconnectMessage: 'top' must be either an integer, or the string \"center\".",
+      call. = FALSE
+    )
   }
 
   htmltools::tagList(
@@ -262,19 +226,26 @@ customDisconnectMessage <- function(refresh = "Refresh",
       htmltools::tags$div(
         id = "ss-connect-refresh",
         htmltools::tags$p("Something went wrong! Try refreshing the page."),
-        htmltools::tags$a(id = "ss-reload-link", href = "#", onclick = "window.location.reload(true);")
+        htmltools::tags$a(
+          id = "ss-reload-link",
+          href = "#",
+          onclick = "window.location.reload(true);"
+        )
       ),
       htmltools::tags$div(
         id = "ss-connect-image",
         style = "display: block !important;",
         htmltools::tags$img(id = "ss-reload-image", src = "builder-duck.PNG"),
-        htmltools::tags$p("If this persists, please contact explore.statistics@education.gov.uk with details of what you were trying to do.")
+        htmltools::tags$p(
+          "If this persists, please contact explore.statistics@education.gov.uk with details of what you were trying to do."
+        )
       )
     ),
     htmltools::tags$div(id = "ss-overlay", style = "display: none;"),
     htmltools::tags$head(htmltools::tags$style(
       glue::glue(
-        .open = "{{", .close = "}}",
+        .open = "{{",
+        .close = "}}",
 
         ## This hides the old message
         "#ss-connect-dialog { display: none !important; }", # rsconnect
