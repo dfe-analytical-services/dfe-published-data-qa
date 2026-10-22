@@ -13,12 +13,12 @@ jobs:
       GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
 
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
      
       - uses: r-lib/actions/setup-r@v2
         with:
           use-public-rspm: true
-          r-version: 4.4.1
+          r-version: 4.6.1
           
       - name: Install git2r dependencies
         run: sudo apt-get install -y libgit2-dev
@@ -29,13 +29,7 @@ jobs:
           install.packages("git2r")
           
       - uses: r-lib/actions/setup-renv@v2
-          
-      - name: Install rsconnect
-        shell: Rscript {0}
-        run: |
-          if (!requireNamespace("renv", quietly = TRUE)) install.packages("renv")
-          renv::install("rsconnect@0.8.29")
-          
+
       - name: Push to shinyApps.io
         run: >
           Rscript

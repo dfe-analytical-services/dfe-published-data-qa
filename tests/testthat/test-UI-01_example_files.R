@@ -107,6 +107,7 @@ test_that("Passes everything", {
   app$upload_file(datafile = "test-data/fails_everything_ancillary.csv")
   app$upload_file(metafile = "test-data/fails_everything_ancillary.meta.csv")
   app$set_inputs(screenbutton = "click")
+  app$wait_for_idle(500)
 
   expect_equal(
     app$get_value(export = "progress_message"),

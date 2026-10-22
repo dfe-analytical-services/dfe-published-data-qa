@@ -20,7 +20,10 @@ api_data_checker <- function(files, verbose = FALSE) {
   )
   for (file in files) {
     data <- vroom::vroom(file, show_col_types = FALSE)
-    meta <- vroom::vroom(gsub(".csv", ".meta.csv", file), show_col_types = FALSE)
+    meta <- vroom::vroom(
+      gsub(".csv", ".meta.csv", file),
+      show_col_types = FALSE
+    )
     message("Scanning ", file)
     if ("Filter" %in% meta$col_type) {
       filters <- meta |>
@@ -29,7 +32,10 @@ api_data_checker <- function(files, verbose = FALSE) {
       missing_filters <- filters |>
         dplyr::filter(!(col_name %in% names(data)))
       if (nrow(missing_filters) > 0) {
-        warning("Some filters found in the meta file are not present in the data file: ", paste(missing_filters$col_name, collapse = ", "))
+        warning(
+          "Some filters found in the meta file are not present in the data file: ",
+          paste(missing_filters$col_name, collapse = ", ")
+        )
         filters <- filters |>
           dplyr::filter((col_name %in% names(data)))
       }
@@ -47,7 +53,9 @@ api_data_checker <- function(files, verbose = FALSE) {
             dplyr::mutate(
               col_name_parent = paste0(filters$filter_grouping_column[i])
             ) |>
-            dplyr::rename(filter_item_parent = filters$filter_grouping_column[i])
+            dplyr::rename(
+              filter_item_parent = filters$filter_grouping_column[i]
+            )
         } else {
           filter_info <- filter_info |>
             dplyr::mutate(filter_item_parent = "", col_name_parent = "")
@@ -70,7 +78,9 @@ api_data_checker <- function(files, verbose = FALSE) {
     }
     entries <- entries |>
       dplyr::bind_rows(
-        meta |> dplyr::filter(col_type == "Indicator") |> dplyr::select(col_name, col_type)
+        meta |>
+          dplyr::filter(col_type == "Indicator") |>
+          dplyr::select(col_name, col_type)
       ) |>
       dplyr::mutate(across(everything(), ~ dplyr::if_else(is.na(.x), "", .x)))
   }
@@ -111,7 +121,10 @@ non_dd_rows <- function(listing) {
 
 col_name_validation <- function(listing) {
   too_long <- listing |>
-    dplyr::filter(stringr::str_length(col_name) > 50 | stringr::str_length(col_name_parent) > 50)
+    dplyr::filter(
+      stringr::str_length(col_name) > 50 |
+        stringr::str_length(col_name_parent) > 50
+    )
   if (nrow(too_long) > 0) {
     warning("Found col_names with too many chars")
     print(too_long)

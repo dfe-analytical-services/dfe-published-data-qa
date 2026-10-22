@@ -18,7 +18,6 @@ shhh(library(data.table))
 shhh(library(shinyjs))
 shhh(library(tools))
 shhh(library(tidyr))
-shhh(library(ggplot2))
 shhh(library(shinyFeedback))
 shhh(library(DT))
 shhh(library(shinyWidgets))
@@ -26,7 +25,6 @@ shhh(library(shinycssloaders))
 shhh(library(sparkline))
 shhh(library(config))
 shhh(library(shinyalert))
-shhh(library(shinydisconnect))
 shhh(library(dfeR))
 shhh(library(eesyscreener))
 
@@ -41,7 +39,6 @@ if (pigs_will_fly == TRUE) {
   shhh(library(git2r))
   shhh(library(shinytest2))
   shhh(library(diffviewer))
-  shhh(library(styler))
 }
 
 # Results boxes ----------------------------------------------------------------------------
@@ -168,15 +165,16 @@ options(spinner.size = .5)
 # disconnect duck ---------------------------------------------------------
 
 customDisconnectMessage <- function(
-    refresh = "Refresh",
-    width = 450,
-    top = 50,
-    size = 22,
-    background = "white",
-    colour = "#ffffff", # "#444444",
-    overlayColour = "black",
-    overlayOpacity = 0.6,
-    refreshColour = "#337ab7") {
+  refresh = "Refresh",
+  width = 450,
+  top = 50,
+  size = 22,
+  background = "white",
+  colour = "#ffffff", # "#444444",
+  overlayColour = "black",
+  overlayOpacity = 0.6,
+  refreshColour = "#337ab7"
+) {
   checkmate::assert_string(refresh)
   checkmate::assert_numeric(size, lower = 0)
   checkmate::assert_string(background)

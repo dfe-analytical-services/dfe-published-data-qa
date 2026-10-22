@@ -11,8 +11,9 @@ screenFiles <- function(datapath, metapath, datafilename, metafilename) {
   )
 
   stopifnot(
-    "eesyscreener::screen_csv()$results_table is missing expected columns" =
-      all(screener_result_cols %in% names(out$results_table))
+    "eesyscreener::screen_csv()$results_table is missing expected columns" = all(
+      screener_result_cols %in% names(out$results_table)
+    )
   )
 
   list(
